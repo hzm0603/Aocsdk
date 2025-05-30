@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass RingOfEarth_Projectile.RingOfEarth_Projectile_C
-// 0x0018 (0x05A8 - 0x0590)
+// 0x0018 (0x05B0 - 0x0598)
 class ARingOfEarth_Projectile_C final : public AAoCAbilityProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      Niagara;                                           // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Stalagmite;                                        // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      Niagara;                                           // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   stalagmite;                                        // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_RingOfEarth_Projectile(int32 EntryPoint);
@@ -42,10 +42,10 @@ public:
 	}
 };
 static_assert(alignof(ARingOfEarth_Projectile_C) == 0x000008, "Wrong alignment on ARingOfEarth_Projectile_C");
-static_assert(sizeof(ARingOfEarth_Projectile_C) == 0x0005A8, "Wrong size on ARingOfEarth_Projectile_C");
-static_assert(offsetof(ARingOfEarth_Projectile_C, UberGraphFrame) == 0x000590, "Member 'ARingOfEarth_Projectile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ARingOfEarth_Projectile_C, Niagara) == 0x000598, "Member 'ARingOfEarth_Projectile_C::Niagara' has a wrong offset!");
-static_assert(offsetof(ARingOfEarth_Projectile_C, Stalagmite) == 0x0005A0, "Member 'ARingOfEarth_Projectile_C::Stalagmite' has a wrong offset!");
+static_assert(sizeof(ARingOfEarth_Projectile_C) == 0x0005B0, "Wrong size on ARingOfEarth_Projectile_C");
+static_assert(offsetof(ARingOfEarth_Projectile_C, UberGraphFrame) == 0x000598, "Member 'ARingOfEarth_Projectile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ARingOfEarth_Projectile_C, Niagara) == 0x0005A0, "Member 'ARingOfEarth_Projectile_C::Niagara' has a wrong offset!");
+static_assert(offsetof(ARingOfEarth_Projectile_C, stalagmite) == 0x0005A8, "Member 'ARingOfEarth_Projectile_C::stalagmite' has a wrong offset!");
 
 }
 

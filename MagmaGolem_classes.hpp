@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MagmaGolem.MagmaGolem_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 #pragma pack(push, 0x1)
 class alignas(0x10) AMagmaGolem_C : public ACrystalGolem_C
 {
@@ -33,7 +33,7 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AMagmaGolem_C) == 0x000010, "Wrong alignment on AMagmaGolem_C");
-static_assert(sizeof(AMagmaGolem_C) == 0x001DA0, "Wrong size on AMagmaGolem_C");
+static_assert(sizeof(AMagmaGolem_C) == 0x001D60, "Wrong size on AMagmaGolem_C");
 
 }
 

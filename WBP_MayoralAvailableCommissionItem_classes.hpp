@@ -17,21 +17,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MayoralAvailableCommissionItem.WBP_MayoralAvailableCommissionItem_C
-// 0x0060 (0x1740 - 0x16E0)
+// 0x0030 (0x17E0 - 0x17B0)
 class UWBP_MayoralAvailableCommissionItem_C final : public UMayoralAvailableCommissionItem
 {
 public:
-	class UCommonBorder*                          B_AlternatingBG;                                   // 0x16E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 CommissionTypeIcon;                                // 0x16E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         CurrencyPanel;                                     // 0x16F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         ExpPanel;                                          // 0x16F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    LevelTextBlock;                                    // 0x1700(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           RewardsSection;                                    // 0x1708(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon;                           // 0x1710(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon_1;                         // 0x1718(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon_2;                         // 0x1720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon_3;                         // 0x1728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 xpIcon;                                            // 0x1730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          B_AlternatingBG;                                   // 0x17B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           RewardsSection;                                    // 0x17B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon;                           // 0x17C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon_1;                         // 0x17C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon_2;                         // 0x17D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon_3;                         // 0x17D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UCommonBorder* GetBorder();
@@ -47,18 +42,13 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MayoralAvailableCommissionItem_C) == 0x000010, "Wrong alignment on UWBP_MayoralAvailableCommissionItem_C");
-static_assert(sizeof(UWBP_MayoralAvailableCommissionItem_C) == 0x001740, "Wrong size on UWBP_MayoralAvailableCommissionItem_C");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, B_AlternatingBG) == 0x0016E0, "Member 'UWBP_MayoralAvailableCommissionItem_C::B_AlternatingBG' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, CommissionTypeIcon) == 0x0016E8, "Member 'UWBP_MayoralAvailableCommissionItem_C::CommissionTypeIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, CurrencyPanel) == 0x0016F0, "Member 'UWBP_MayoralAvailableCommissionItem_C::CurrencyPanel' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, ExpPanel) == 0x0016F8, "Member 'UWBP_MayoralAvailableCommissionItem_C::ExpPanel' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, LevelTextBlock) == 0x001700, "Member 'UWBP_MayoralAvailableCommissionItem_C::LevelTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, RewardsSection) == 0x001708, "Member 'UWBP_MayoralAvailableCommissionItem_C::RewardsSection' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, WBP_RewardContainerIcon) == 0x001710, "Member 'UWBP_MayoralAvailableCommissionItem_C::WBP_RewardContainerIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, WBP_RewardContainerIcon_1) == 0x001718, "Member 'UWBP_MayoralAvailableCommissionItem_C::WBP_RewardContainerIcon_1' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, WBP_RewardContainerIcon_2) == 0x001720, "Member 'UWBP_MayoralAvailableCommissionItem_C::WBP_RewardContainerIcon_2' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, WBP_RewardContainerIcon_3) == 0x001728, "Member 'UWBP_MayoralAvailableCommissionItem_C::WBP_RewardContainerIcon_3' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, xpIcon) == 0x001730, "Member 'UWBP_MayoralAvailableCommissionItem_C::xpIcon' has a wrong offset!");
+static_assert(sizeof(UWBP_MayoralAvailableCommissionItem_C) == 0x0017E0, "Wrong size on UWBP_MayoralAvailableCommissionItem_C");
+static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, B_AlternatingBG) == 0x0017B0, "Member 'UWBP_MayoralAvailableCommissionItem_C::B_AlternatingBG' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, RewardsSection) == 0x0017B8, "Member 'UWBP_MayoralAvailableCommissionItem_C::RewardsSection' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, WBP_RewardContainerIcon) == 0x0017C0, "Member 'UWBP_MayoralAvailableCommissionItem_C::WBP_RewardContainerIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, WBP_RewardContainerIcon_1) == 0x0017C8, "Member 'UWBP_MayoralAvailableCommissionItem_C::WBP_RewardContainerIcon_1' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, WBP_RewardContainerIcon_2) == 0x0017D0, "Member 'UWBP_MayoralAvailableCommissionItem_C::WBP_RewardContainerIcon_2' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralAvailableCommissionItem_C, WBP_RewardContainerIcon_3) == 0x0017D8, "Member 'UWBP_MayoralAvailableCommissionItem_C::WBP_RewardContainerIcon_3' has a wrong offset!");
 
 }
 

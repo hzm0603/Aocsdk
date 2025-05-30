@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CSB_Forsaken_Blades_Sergeant.CSB_Forsaken_Blades_Sergeant_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class ACSB_Forsaken_Blades_Sergeant_C final : public ABandit_Captain1_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACSB_Forsaken_Blades_Sergeant_C) == 0x000010, "Wrong alignment on ACSB_Forsaken_Blades_Sergeant_C");
-static_assert(sizeof(ACSB_Forsaken_Blades_Sergeant_C) == 0x001DD0, "Wrong size on ACSB_Forsaken_Blades_Sergeant_C");
+static_assert(sizeof(ACSB_Forsaken_Blades_Sergeant_C) == 0x001D90, "Wrong size on ACSB_Forsaken_Blades_Sergeant_C");
 
 }
 

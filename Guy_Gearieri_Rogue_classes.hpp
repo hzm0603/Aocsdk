@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Guy_Gearieri_Rogue.Guy_Gearieri_Rogue_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class AGuy_Gearieri_Rogue_C final : public ANode_NPC_Master_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AGuy_Gearieri_Rogue_C) == 0x000010, "Wrong alignment on AGuy_Gearieri_Rogue_C");
-static_assert(sizeof(AGuy_Gearieri_Rogue_C) == 0x001DD0, "Wrong size on AGuy_Gearieri_Rogue_C");
+static_assert(sizeof(AGuy_Gearieri_Rogue_C) == 0x001D90, "Wrong size on AGuy_Gearieri_Rogue_C");
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "AkAudio_structs.hpp"
 
 
@@ -33,7 +33,7 @@ public:
 	bool                                          FollowPlayerElevation;                             // 0x0371(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HiddenInGame;                                      // 0x0372(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_373[0x5];                                      // 0x0373(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                AKEmitterLocation;                                 // 0x0378(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                AkEmitterLocation;                                 // 0x0378(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                SplineCurveLocationClosertToPlayer;                // 0x0390(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        TimerLazy;                                         // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsLazy;                                            // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -46,6 +46,7 @@ public:
 	void GetDistanceToPlayerFromClosestSplinePoint(double* DistanceToPlayerFromClosestSplinePoint);
 	void GetPlayerControllerCameraRotation(struct FRotator* PlayerControllerCameraRotation);
 	class USplineComponent* GetSplineComponent();
+	class USceneComponent* GetSplineEmitterComponent();
 	void PostNodeInit();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
@@ -72,7 +73,7 @@ static_assert(offsetof(ABP_Audio_SplineFollowPlayer_C, AK_Event_Emitter) == 0x00
 static_assert(offsetof(ABP_Audio_SplineFollowPlayer_C, Debug) == 0x000370, "Member 'ABP_Audio_SplineFollowPlayer_C::Debug' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineFollowPlayer_C, FollowPlayerElevation) == 0x000371, "Member 'ABP_Audio_SplineFollowPlayer_C::FollowPlayerElevation' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineFollowPlayer_C, HiddenInGame) == 0x000372, "Member 'ABP_Audio_SplineFollowPlayer_C::HiddenInGame' has a wrong offset!");
-static_assert(offsetof(ABP_Audio_SplineFollowPlayer_C, AKEmitterLocation) == 0x000378, "Member 'ABP_Audio_SplineFollowPlayer_C::AKEmitterLocation' has a wrong offset!");
+static_assert(offsetof(ABP_Audio_SplineFollowPlayer_C, AkEmitterLocation) == 0x000378, "Member 'ABP_Audio_SplineFollowPlayer_C::AkEmitterLocation' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineFollowPlayer_C, SplineCurveLocationClosertToPlayer) == 0x000390, "Member 'ABP_Audio_SplineFollowPlayer_C::SplineCurveLocationClosertToPlayer' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineFollowPlayer_C, TimerLazy) == 0x0003A8, "Member 'ABP_Audio_SplineFollowPlayer_C::TimerLazy' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineFollowPlayer_C, IsLazy) == 0x0003B0, "Member 'ABP_Audio_SplineFollowPlayer_C::IsLazy' has a wrong offset!");

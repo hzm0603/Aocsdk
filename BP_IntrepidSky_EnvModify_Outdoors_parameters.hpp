@@ -19,452 +19,6 @@
 namespace SDK::Params
 {
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Clear Spline Settings In IntrepidSky
-// 0x0001 (0x0001 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky) == 0x000001, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky) == 0x000001, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors
-// 0x05B0 (0x05B0 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_AudioManager_C*                     K2Node_DynamicCast_AsBP_Audio_Manager;             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue; // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_FindLocationClosestToWorldLocation_ReturnValue; // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0138(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Normal_ReturnValue_1;                     // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Dot_VectorVector_ReturnValue;             // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerCharacter*                       CallFunc_GetActualPlayer_ReturnValue;              // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_BreakSoftObjectPath_PathString;           // 0x01A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_BreakSoftObjectPath_PathString_1;         // 0x01B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_BreakSoftObjectPath_PathString_2;         // 0x01C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue_1;                    // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue_2;                    // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x01DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x01DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x01DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x01DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x01DF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x01E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E3[0x5];                                      // 0x01E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x01F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x01F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x01F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x01F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F6[0x2];                                      // 0x01F6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerPawn_C*                          K2Node_DynamicCast_AsPlayer_Pawn;                  // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_12;                   // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0202(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_203[0x5];                                      // 0x0203(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UIntrepidMusicPlayer*                   CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_13;                   // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_14;                   // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue_1;                   // 0x0212(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_213[0x5];                                      // 0x0213(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UIntrepidMusicPlayer*                   CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_15;                   // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0221(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_222[0x6];                                      // 0x0222(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller_1;      // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0240(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FCalloutQueueInfo                      K2Node_MakeStruct_CalloutQueueInfo;                // 0x0250(0x0200)()
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsRunningOnClient_ReturnValue;            // 0x0458(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_459[0x3];                                      // 0x0459(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate;         // 0x045C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x046C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46D[0x3];                                      // 0x046D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0470(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_479[0x3];                                      // 0x0479(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate_1;       // 0x047C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate_2;       // 0x048C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_1;        // 0x04A0(0x0008)(NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate_3;       // 0x04A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_16;                   // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector_X_1;                          // 0x04C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y_1;                          // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z_1;                          // 0x04D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x04D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMax_ReturnValue_1;                       // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x04E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0500(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x0508(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0510(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0518(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0520(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x0528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMin_ReturnValue;                         // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_17;                   // 0x0538(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_539[0x7];                                      // 0x0539(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0540(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x0550(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_IntFloat_ReturnValue;            // 0x0558(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_IntFloat_ReturnValue_1;          // 0x0560(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0568(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0570(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0588(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMin_ReturnValue_1;                       // 0x0590(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0598(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A1[0x3];                                      // 0x05A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x05A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PPV_Blend_Blend_Weight_ImplicitCast;      // 0x05A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors) == 0x000008, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors) == 0x0005B0, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, EntryPoint) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_1) == 0x000005, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Not_PreBool_ReturnValue) == 0x000006, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_2) == 0x000007, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsServer_ReturnValue) == 0x000008, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Not_PreBool_ReturnValue_1) == 0x000009, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_HasAuthority_ReturnValue) == 0x00000A, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_3) == 0x00000B, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000010, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000018, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_4) == 0x000021, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_5) == 0x000022, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_AsBP_Audio_Manager) == 0x000028, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_AsBP_Audio_Manager' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue) == 0x000031, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_6) == 0x000032, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000038, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x000050, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue) == 0x000068, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FindLocationClosestToWorldLocation_ReturnValue) == 0x000080, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FindLocationClosestToWorldLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Normal_ReturnValue) == 0x000098, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0000B0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_Event_DeltaSeconds) == 0x0000C8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x0000D0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, Temp_bool_Has_Been_Initd_Variable) == 0x0000E8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Add_VectorVector_ReturnValue) == 0x0000F0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_X) == 0x000108, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_Y) == 0x000110, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_Z) == 0x000118, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000120, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_MakeVector_ReturnValue) == 0x000138, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Normal_ReturnValue_1) == 0x000150, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Normal_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Dot_VectorVector_ReturnValue) == 0x000168, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Dot_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000170, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Conv_BoolToDouble_ReturnValue) == 0x000178, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Conv_BoolToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetPlayerController_ReturnValue) == 0x000180, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000188, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_bSuccess_2) == 0x000190, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetActualPlayer_ReturnValue) == 0x000198, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetActualPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakSoftObjectPath_PathString) == 0x0001A0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakSoftObjectPath_PathString' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsEmpty_ReturnValue) == 0x0001B0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakSoftObjectPath_PathString_1) == 0x0001B8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakSoftObjectPath_PathString_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakSoftObjectPath_PathString_2) == 0x0001C8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakSoftObjectPath_PathString_2' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsEmpty_ReturnValue_1) == 0x0001D8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsEmpty_ReturnValue_2) == 0x0001D9, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsEmpty_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, Temp_bool_IsClosed_Variable) == 0x0001DA, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_1) == 0x0001DB, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_2) == 0x0001DC, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_3) == 0x0001DD, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_4) == 0x0001DE, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Not_PreBool_ReturnValue_2) == 0x0001DF, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_7) == 0x0001E0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0001E1, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, Temp_bool_Has_Been_Initd_Variable_1) == 0x0001E2, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FMax_ReturnValue) == 0x0001E8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_8) == 0x0001F0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_9) == 0x0001F1, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, Temp_bool_IsClosed_Variable_1) == 0x0001F2, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x0001F3, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_10) == 0x0001F4, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_11) == 0x0001F5, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_AsPlayer_Pawn) == 0x0001F8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_AsPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_bSuccess_3) == 0x000200, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_12) == 0x000201, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_HasAuthority_ReturnValue_1) == 0x000202, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000208, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_13) == 0x000210, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_14) == 0x000211, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsServer_ReturnValue_1) == 0x000212, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000218, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_15) == 0x000220, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Not_PreBool_ReturnValue_3) == 0x000221, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetPlayerController_ReturnValue_1) == 0x000228, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_AsAo_CPlayer_Controller_1) == 0x000230, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_AsAo_CPlayer_Controller_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_bSuccess_4) == 0x000238, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Conv_TextToString_ReturnValue) == 0x000240, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_MakeStruct_CalloutQueueInfo) == 0x000250, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_MakeStruct_CalloutQueueInfo' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000450, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsRunningOnClient_ReturnValue) == 0x000458, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsRunningOnClient_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, UniqueObjectNameForCooking_OutputDelegate) == 0x00045C, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_5) == 0x00046C, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000470, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_6) == 0x000478, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, UniqueObjectNameForCooking_OutputDelegate_1) == 0x00047C, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::UniqueObjectNameForCooking_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, UniqueObjectNameForCooking_OutputDelegate_2) == 0x00048C, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::UniqueObjectNameForCooking_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_K2_SetTimerDelegate_ReturnValue_1) == 0x0004A0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_K2_SetTimerDelegate_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, UniqueObjectNameForCooking_OutputDelegate_3) == 0x0004A8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::UniqueObjectNameForCooking_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_16) == 0x0004B8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_X_1) == 0x0004C0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_Y_1) == 0x0004C8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_Z_1) == 0x0004D0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0004D8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FMax_ReturnValue_1) == 0x0004E0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FMax_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_MakeVector_ReturnValue_1) == 0x0004E8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000500, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Vector_Distance_ReturnValue) == 0x000508, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FClamp_ReturnValue) == 0x000510, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000518, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000520, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FClamp_ReturnValue_1) == 0x000528, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FMin_ReturnValue) == 0x000530, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FMin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_17) == 0x000538, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_SelectFloat_ReturnValue) == 0x000540, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000548, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x000550, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Multiply_IntFloat_ReturnValue) == 0x000558, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Multiply_IntFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Multiply_IntFloat_ReturnValue_1) == 0x000560, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Multiply_IntFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x000568, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000570, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000588, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FMin_ReturnValue_1) == 0x000590, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FMin_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000598, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x0005A0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x0005A4, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_PPV_Blend_Blend_Weight_ImplicitCast) == 0x0005A8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_PPV_Blend_Blend_Weight_ImplicitCast' has a wrong offset!");
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.PPV Blend
-// 0x0700 (0x0700 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend final
-{
-public:
-	float                                         Blend_Weight;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Set_Enabled;                                       // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UIntrepidGameUserSettings*              CallFunc_GetIntrepidGameUserSettings_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetGlobalIlluminationQuality_ReturnValue; // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPostProcessSettings                   K2Node_Select_Default;                             // 0x0020(0x06E0)()
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend) == 0x000010, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend) == 0x000700, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, Blend_Weight) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::Blend_Weight' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, Set_Enabled) == 0x000004, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::Set_Enabled' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, CallFunc_IsValid_ReturnValue) == 0x000005, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, CallFunc_GetIntrepidGameUserSettings_ReturnValue) == 0x000008, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::CallFunc_GetIntrepidGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, Temp_bool_Variable) == 0x000010, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, CallFunc_GetGlobalIlluminationQuality_ReturnValue) == 0x000014, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::CallFunc_GetGlobalIlluminationQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000018, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, CallFunc_BooleanAND_ReturnValue) == 0x000019, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, K2Node_Select_Default) == 0x000020, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::K2Node_Select_Default' has a wrong offset!");
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.PreviewModifications
-// 0x00C0 (0x00C0 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0xE];                                        // 0x0002(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Temp_struct_Variable;                              // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextRenderComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x00A0(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class ABP_AudioManager_C*                     K2Node_DynamicCast_AsBP_Audio_Manager;             // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications) == 0x000010, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications) == 0x0000C0, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, Temp_struct_Variable) == 0x000010, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_IsValid_ReturnValue_2) == 0x000070, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_BooleanAND_ReturnValue) == 0x000071, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_AddComponent_ReturnValue) == 0x000078, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000080, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_IsValid_ReturnValue_3) == 0x000088, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000090, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, K2Node_DynamicCast_bSuccess) == 0x000098, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_K2_SetTimer_ReturnValue) == 0x0000A0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, K2Node_DynamicCast_AsBP_Audio_Manager) == 0x0000A8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::K2Node_DynamicCast_AsBP_Audio_Manager' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, K2Node_DynamicCast_bSuccess_1) == 0x0000B0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick) == 0x000004, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.RevertToWorldDefaults
-// 0x0038 (0x0038 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_AudioManager_C*                     K2Node_DynamicCast_AsBP_Audio_Manager;             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults) == 0x000008, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults) == 0x000038, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000008, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_BooleanAND_ReturnValue) == 0x000010, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000018, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, K2Node_DynamicCast_AsBP_Audio_Manager) == 0x000028, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::K2Node_DynamicCast_AsBP_Audio_Manager' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000031, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_2) == 0x000032, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_3) == 0x000033, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Master Value
-// 0x0008 (0x0008 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value final
-{
-public:
-	double                                        Master_Value_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value) == 0x000008, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value) == 0x000008, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value, Master_Value_0) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value::Master_Value_0' has a wrong offset!");
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Spline Settings In IntrepidSky
-// 0x0001 (0x0001 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky) == 0x000001, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky) == 0x000001, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Transition Value In IntrepidSky
-// 0x0008 (0x0008 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky) == 0x000008, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky) == 0x000008, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky, Value) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky::Value' has a wrong offset!");
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Start Previewing
-// 0x0001 (0x0001 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing final
-{
-public:
-	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing) == 0x000001, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing) == 0x000001, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing, CallFunc_IsWithEditor_ReturnValue) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Update Blending Editor Time
-// 0x0030 (0x0030 - 0x0000)
-struct BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time final
-{
-public:
-	struct FVector                                CallFunc_GetEditorCameraPosition_CameraLocation;   // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetEditorCameraPosition_CameraRotation;   // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time) == 0x000008, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time");
-static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time) == 0x000030, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time, CallFunc_GetEditorCameraPosition_CameraLocation) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time::CallFunc_GetEditorCameraPosition_CameraLocation' has a wrong offset!");
-static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time, CallFunc_GetEditorCameraPosition_CameraRotation) == 0x000018, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time::CallFunc_GetEditorCameraPosition_CameraRotation' has a wrong offset!");
-
 // Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.UserConstructionScript
 // 0x0580 (0x0580 - 0x0000)
 struct BP_IntrepidSky_EnvModify_Outdoors_C_UserConstructionScript final
@@ -746,6 +300,452 @@ static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_UserConstructionScrip
 static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_UserConstructionScript, CallFunc_GetRightVectorAtDistanceAlongSpline_Distance_ImplicitCast_1) == 0x000568, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_UserConstructionScript::CallFunc_GetRightVectorAtDistanceAlongSpline_Distance_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_UserConstructionScript, CallFunc_GetLocationAtDistanceAlongSpline_Distance_ImplicitCast_1) == 0x00056C, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_UserConstructionScript::CallFunc_GetLocationAtDistanceAlongSpline_Distance_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_UserConstructionScript, CallFunc_Less_DoubleDouble_B_ImplicitCast_1) == 0x000570, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_UserConstructionScript::CallFunc_Less_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Update Blending Editor Time
+// 0x0030 (0x0030 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time final
+{
+public:
+	struct FVector                                CallFunc_GetEditorCameraPosition_CameraLocation;   // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetEditorCameraPosition_CameraRotation;   // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time) == 0x000008, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time) == 0x000030, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time, CallFunc_GetEditorCameraPosition_CameraLocation) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time::CallFunc_GetEditorCameraPosition_CameraLocation' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time, CallFunc_GetEditorCameraPosition_CameraRotation) == 0x000018, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Update_Blending_Editor_Time::CallFunc_GetEditorCameraPosition_CameraRotation' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Start Previewing
+// 0x0001 (0x0001 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing final
+{
+public:
+	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing) == 0x000001, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing) == 0x000001, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing, CallFunc_IsWithEditor_ReturnValue) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Start_Previewing::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Transition Value In IntrepidSky
+// 0x0008 (0x0008 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky) == 0x000008, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky) == 0x000008, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky, Value) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky::Value' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Spline Settings In IntrepidSky
+// 0x0001 (0x0001 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky) == 0x000001, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky) == 0x000001, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Set_Spline_Settings_In_IntrepidSky::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Master Value
+// 0x0008 (0x0008 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value final
+{
+public:
+	double                                        Master_Value_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value) == 0x000008, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value) == 0x000008, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value, Master_Value_0) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value::Master_Value_0' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.RevertToWorldDefaults
+// 0x0038 (0x0038 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_AudioManager_C*                     K2Node_DynamicCast_AsBP_Audio_Manager;             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults) == 0x000008, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults) == 0x000038, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000008, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_BooleanAND_ReturnValue) == 0x000010, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000018, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, K2Node_DynamicCast_AsBP_Audio_Manager) == 0x000028, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::K2Node_DynamicCast_AsBP_Audio_Manager' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000031, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_2) == 0x000032, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_3) == 0x000033, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick) == 0x000004, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.PreviewModifications
+// 0x00C0 (0x00C0 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0xE];                                        // 0x0002(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Temp_struct_Variable;                              // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextRenderComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x00A0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class ABP_AudioManager_C*                     K2Node_DynamicCast_AsBP_Audio_Manager;             // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications) == 0x000010, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications) == 0x0000C0, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, Temp_struct_Variable) == 0x000010, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_IsValid_ReturnValue_2) == 0x000070, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_BooleanAND_ReturnValue) == 0x000071, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_AddComponent_ReturnValue) == 0x000078, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000080, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_IsValid_ReturnValue_3) == 0x000088, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000090, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, K2Node_DynamicCast_bSuccess) == 0x000098, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, CallFunc_K2_SetTimer_ReturnValue) == 0x0000A0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, K2Node_DynamicCast_AsBP_Audio_Manager) == 0x0000A8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::K2Node_DynamicCast_AsBP_Audio_Manager' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications, K2Node_DynamicCast_bSuccess_1) == 0x0000B0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PreviewModifications::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.PPV Blend
+// 0x0700 (0x0700 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend final
+{
+public:
+	float                                         Blend_Weight;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Set_Enabled;                                       // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UIntrepidGameUserSettings*              CallFunc_GetIntrepidGameUserSettings_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetGlobalIlluminationQuality_ReturnValue; // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPostProcessSettings                   K2Node_Select_Default;                             // 0x0020(0x06E0)()
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend) == 0x000010, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend) == 0x000700, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, Blend_Weight) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::Blend_Weight' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, Set_Enabled) == 0x000004, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::Set_Enabled' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, CallFunc_IsValid_ReturnValue) == 0x000005, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, CallFunc_GetIntrepidGameUserSettings_ReturnValue) == 0x000008, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::CallFunc_GetIntrepidGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, Temp_bool_Variable) == 0x000010, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, CallFunc_GetGlobalIlluminationQuality_ReturnValue) == 0x000014, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::CallFunc_GetGlobalIlluminationQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000018, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, CallFunc_BooleanAND_ReturnValue) == 0x000019, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend, K2Node_Select_Default) == 0x000020, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_PPV_Blend::K2Node_Select_Default' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors
+// 0x0550 (0x0550 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_AudioManager_C*                     K2Node_DynamicCast_AsBP_Audio_Manager;             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue; // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_FindLocationClosestToWorldLocation_ReturnValue; // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0138(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Normal_ReturnValue_1;                     // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Dot_VectorVector_ReturnValue;             // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerCharacter*                       CallFunc_GetActualPlayer_ReturnValue;              // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_BreakSoftObjectPath_PathString;           // 0x01A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_BreakSoftObjectPath_PathString_1;         // 0x01B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_BreakSoftObjectPath_PathString_2;         // 0x01C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue_1;                    // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue_2;                    // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x01DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x01DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x01DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x01DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x01DF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x01E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E3[0x5];                                      // 0x01E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x01F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x01F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x01F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x01F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F6[0x2];                                      // 0x01F6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerPawn_C*                          K2Node_DynamicCast_AsPlayer_Pawn;                  // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_12;                   // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0202(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_203[0x5];                                      // 0x0203(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UIntrepidMusicPlayer*                   CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_13;                   // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_14;                   // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue_1;                   // 0x0212(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_213[0x5];                                      // 0x0213(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UIntrepidMusicPlayer*                   CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_15;                   // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0221(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_222[0x6];                                      // 0x0222(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller_1;      // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0240(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FCalloutQueueInfo                      K2Node_MakeStruct_CalloutQueueInfo;                // 0x0250(0x01A0)()
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsRunningOnClient_ReturnValue;            // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3F9[0x3];                                      // 0x03F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate;         // 0x03FC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x040C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_40D[0x3];                                      // 0x040D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0410(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_419[0x3];                                      // 0x0419(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate_1;       // 0x041C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate_2;       // 0x042C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43C[0x4];                                      // 0x043C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_1;        // 0x0440(0x0008)(NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate_3;       // 0x0448(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_16;                   // 0x0458(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_459[0x7];                                      // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector_X_1;                          // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y_1;                          // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z_1;                          // 0x0470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0478(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMax_ReturnValue_1;                       // 0x0480(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0488(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x04A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x04A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x04B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x04C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMin_ReturnValue;                         // 0x04D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_17;                   // 0x04D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D9[0x7];                                      // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x04E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_IntFloat_ReturnValue;            // 0x04F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_IntFloat_ReturnValue_1;          // 0x0500(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0508(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0510(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMin_ReturnValue_1;                       // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0540(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_541[0x3];                                      // 0x0541(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x0544(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PPV_Blend_Blend_Weight_ImplicitCast;      // 0x0548(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors) == 0x000008, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors) == 0x000550, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, EntryPoint) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_1) == 0x000005, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Not_PreBool_ReturnValue) == 0x000006, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_2) == 0x000007, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsServer_ReturnValue) == 0x000008, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Not_PreBool_ReturnValue_1) == 0x000009, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_HasAuthority_ReturnValue) == 0x00000A, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_3) == 0x00000B, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000010, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000018, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_4) == 0x000021, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_5) == 0x000022, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_AsBP_Audio_Manager) == 0x000028, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_AsBP_Audio_Manager' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue) == 0x000031, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_6) == 0x000032, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000038, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x000050, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue) == 0x000068, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FindLocationClosestToWorldLocation_ReturnValue) == 0x000080, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FindLocationClosestToWorldLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Normal_ReturnValue) == 0x000098, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Normal_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0000B0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_Event_DeltaSeconds) == 0x0000C8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x0000D0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, Temp_bool_Has_Been_Initd_Variable) == 0x0000E8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Add_VectorVector_ReturnValue) == 0x0000F0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_X) == 0x000108, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_Y) == 0x000110, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_Z) == 0x000118, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000120, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_MakeVector_ReturnValue) == 0x000138, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Normal_ReturnValue_1) == 0x000150, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Normal_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Dot_VectorVector_ReturnValue) == 0x000168, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Dot_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000170, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Conv_BoolToDouble_ReturnValue) == 0x000178, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Conv_BoolToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetPlayerController_ReturnValue) == 0x000180, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000188, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_bSuccess_2) == 0x000190, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetActualPlayer_ReturnValue) == 0x000198, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetActualPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakSoftObjectPath_PathString) == 0x0001A0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakSoftObjectPath_PathString' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsEmpty_ReturnValue) == 0x0001B0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakSoftObjectPath_PathString_1) == 0x0001B8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakSoftObjectPath_PathString_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakSoftObjectPath_PathString_2) == 0x0001C8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakSoftObjectPath_PathString_2' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsEmpty_ReturnValue_1) == 0x0001D8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsEmpty_ReturnValue_2) == 0x0001D9, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsEmpty_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, Temp_bool_IsClosed_Variable) == 0x0001DA, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::Temp_bool_IsClosed_Variable' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_1) == 0x0001DB, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_2) == 0x0001DC, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_3) == 0x0001DD, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_4) == 0x0001DE, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Not_PreBool_ReturnValue_2) == 0x0001DF, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_7) == 0x0001E0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0001E1, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, Temp_bool_Has_Been_Initd_Variable_1) == 0x0001E2, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FMax_ReturnValue) == 0x0001E8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_8) == 0x0001F0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_9) == 0x0001F1, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, Temp_bool_IsClosed_Variable_1) == 0x0001F2, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x0001F3, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_10) == 0x0001F4, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_11) == 0x0001F5, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_AsPlayer_Pawn) == 0x0001F8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_AsPlayer_Pawn' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_bSuccess_3) == 0x000200, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_12) == 0x000201, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_HasAuthority_ReturnValue_1) == 0x000202, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000208, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_13) == 0x000210, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_14) == 0x000211, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_14' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsServer_ReturnValue_1) == 0x000212, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsServer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000218, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_15) == 0x000220, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_15' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Not_PreBool_ReturnValue_3) == 0x000221, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GetPlayerController_ReturnValue_1) == 0x000228, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GetPlayerController_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_AsAo_CPlayer_Controller_1) == 0x000230, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_AsAo_CPlayer_Controller_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_DynamicCast_bSuccess_4) == 0x000238, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Conv_TextToString_ReturnValue) == 0x000240, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, K2Node_MakeStruct_CalloutQueueInfo) == 0x000250, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::K2Node_MakeStruct_CalloutQueueInfo' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0003F0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsRunningOnClient_ReturnValue) == 0x0003F8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsRunningOnClient_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, UniqueObjectNameForCooking_OutputDelegate) == 0x0003FC, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_5) == 0x00040C, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000410, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BooleanAND_ReturnValue_6) == 0x000418, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, UniqueObjectNameForCooking_OutputDelegate_1) == 0x00041C, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::UniqueObjectNameForCooking_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, UniqueObjectNameForCooking_OutputDelegate_2) == 0x00042C, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::UniqueObjectNameForCooking_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_K2_SetTimerDelegate_ReturnValue_1) == 0x000440, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_K2_SetTimerDelegate_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, UniqueObjectNameForCooking_OutputDelegate_3) == 0x000448, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::UniqueObjectNameForCooking_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_16) == 0x000458, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_16' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_X_1) == 0x000460, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_Y_1) == 0x000468, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_BreakVector_Z_1) == 0x000470, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000478, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FMax_ReturnValue_1) == 0x000480, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FMax_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_MakeVector_ReturnValue_1) == 0x000488, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0004A0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Vector_Distance_ReturnValue) == 0x0004A8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FClamp_ReturnValue) == 0x0004B0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0004B8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0004C0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FClamp_ReturnValue_1) == 0x0004C8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FMin_ReturnValue) == 0x0004D0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FMin_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_IsValid_ReturnValue_17) == 0x0004D8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_IsValid_ReturnValue_17' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_SelectFloat_ReturnValue) == 0x0004E0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x0004E8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x0004F0, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Multiply_IntFloat_ReturnValue) == 0x0004F8, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Multiply_IntFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Multiply_IntFloat_ReturnValue_1) == 0x000500, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Multiply_IntFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x000508, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000510, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000528, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_FMin_ReturnValue_1) == 0x000530, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_FMin_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000538, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000540, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x000544, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors, CallFunc_PPV_Blend_Blend_Weight_ImplicitCast) == 0x000548, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors::CallFunc_PPV_Blend_Blend_Weight_ImplicitCast' has a wrong offset!");
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Clear Spline Settings In IntrepidSky
+// 0x0001 (0x0001 - 0x0000)
+struct BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky) == 0x000001, "Wrong alignment on BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky");
+static_assert(sizeof(BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky) == 0x000001, "Wrong size on BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky");
+static_assert(offsetof(BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_IntrepidSky_EnvModify_Outdoors_C_Clear_Spline_Settings_In_IntrepidSky::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 }
 

@@ -10,28 +10,28 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Wolf_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Spirit_Wolf.Spirit_Wolf_C
-// 0x0050 (0x1DE0 - 0x1D90)
+// 0x0050 (0x1DA0 - 0x1D50)
 #pragma pack(push, 0x1)
 class alignas(0x10) ASpirit_Wolf_C : public AWolf_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Spirit_Wolf_C;                      // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1D98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_Spirits_BodyFX;                                 // 0x1DA0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          StartFade;                                         // 0x1DA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DA9[0x7];                                     // 0x1DA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CurrentFade;                                       // 0x1DB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TargetFade;                                        // 0x1DB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FadeSpeed;                                         // 0x1DC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       BodyFade;                                          // 0x1DC8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Spirit_Wolf_C;                      // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_Spirits_BodyFX;                                 // 0x1D60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          StartFade;                                         // 0x1D68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D69[0x7];                                     // 0x1D69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CurrentFade;                                       // 0x1D70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TargetFade;                                        // 0x1D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FadeSpeed;                                         // 0x1D80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       BodyFade;                                          // 0x1D88(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_Spirit_Wolf(int32 EntryPoint);
@@ -50,15 +50,15 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(ASpirit_Wolf_C) == 0x000010, "Wrong alignment on ASpirit_Wolf_C");
-static_assert(sizeof(ASpirit_Wolf_C) == 0x001DE0, "Wrong size on ASpirit_Wolf_C");
-static_assert(offsetof(ASpirit_Wolf_C, UberGraphFrame_Spirit_Wolf_C) == 0x001D90, "Member 'ASpirit_Wolf_C::UberGraphFrame_Spirit_Wolf_C' has a wrong offset!");
-static_assert(offsetof(ASpirit_Wolf_C, Blackboard) == 0x001D98, "Member 'ASpirit_Wolf_C::Blackboard' has a wrong offset!");
-static_assert(offsetof(ASpirit_Wolf_C, NS_Spirits_BodyFX) == 0x001DA0, "Member 'ASpirit_Wolf_C::NS_Spirits_BodyFX' has a wrong offset!");
-static_assert(offsetof(ASpirit_Wolf_C, StartFade) == 0x001DA8, "Member 'ASpirit_Wolf_C::StartFade' has a wrong offset!");
-static_assert(offsetof(ASpirit_Wolf_C, CurrentFade) == 0x001DB0, "Member 'ASpirit_Wolf_C::CurrentFade' has a wrong offset!");
-static_assert(offsetof(ASpirit_Wolf_C, TargetFade) == 0x001DB8, "Member 'ASpirit_Wolf_C::TargetFade' has a wrong offset!");
-static_assert(offsetof(ASpirit_Wolf_C, FadeSpeed) == 0x001DC0, "Member 'ASpirit_Wolf_C::FadeSpeed' has a wrong offset!");
-static_assert(offsetof(ASpirit_Wolf_C, BodyFade) == 0x001DC8, "Member 'ASpirit_Wolf_C::BodyFade' has a wrong offset!");
+static_assert(sizeof(ASpirit_Wolf_C) == 0x001DA0, "Wrong size on ASpirit_Wolf_C");
+static_assert(offsetof(ASpirit_Wolf_C, UberGraphFrame_Spirit_Wolf_C) == 0x001D50, "Member 'ASpirit_Wolf_C::UberGraphFrame_Spirit_Wolf_C' has a wrong offset!");
+static_assert(offsetof(ASpirit_Wolf_C, Blackboard) == 0x001D58, "Member 'ASpirit_Wolf_C::Blackboard' has a wrong offset!");
+static_assert(offsetof(ASpirit_Wolf_C, NS_Spirits_BodyFX) == 0x001D60, "Member 'ASpirit_Wolf_C::NS_Spirits_BodyFX' has a wrong offset!");
+static_assert(offsetof(ASpirit_Wolf_C, StartFade) == 0x001D68, "Member 'ASpirit_Wolf_C::StartFade' has a wrong offset!");
+static_assert(offsetof(ASpirit_Wolf_C, CurrentFade) == 0x001D70, "Member 'ASpirit_Wolf_C::CurrentFade' has a wrong offset!");
+static_assert(offsetof(ASpirit_Wolf_C, TargetFade) == 0x001D78, "Member 'ASpirit_Wolf_C::TargetFade' has a wrong offset!");
+static_assert(offsetof(ASpirit_Wolf_C, FadeSpeed) == 0x001D80, "Member 'ASpirit_Wolf_C::FadeSpeed' has a wrong offset!");
+static_assert(offsetof(ASpirit_Wolf_C, BodyFade) == 0x001D88, "Member 'ASpirit_Wolf_C::BodyFade' has a wrong offset!");
 
 }
 

@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function STT_SetCharacterInteracting.STT_SetCharacterInteracting_C.ExecuteUbergraph_STT_SetCharacterInteracting
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USTT_SetCharacterInteracting_C::ExecuteUbergraph_STT_SetCharacterInteracting(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STT_SetCharacterInteracting_C", "ExecuteUbergraph_STT_SetCharacterInteracting");
-
-	Params::STT_SetCharacterInteracting_C_ExecuteUbergraph_STT_SetCharacterInteracting Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function STT_SetCharacterInteracting.STT_SetCharacterInteracting_C.ReceiveLatentEnterState
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void USTT_SetCharacterInteracting_C::ReceiveLatentEnterState(const struct FState
 	Params::STT_SetCharacterInteracting_C_ReceiveLatentEnterState Parms{};
 
 	Parms.Transition = std::move(Transition);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function STT_SetCharacterInteracting.STT_SetCharacterInteracting_C.ExecuteUbergraph_STT_SetCharacterInteracting
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USTT_SetCharacterInteracting_C::ExecuteUbergraph_STT_SetCharacterInteracting(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_SetCharacterInteracting_C", "ExecuteUbergraph_STT_SetCharacterInteracting");
+
+	Params::STT_SetCharacterInteracting_C_ExecuteUbergraph_STT_SetCharacterInteracting Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

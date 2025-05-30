@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Bandit_Performer_classes.hpp"
+#include "Bandit_Musician1_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Musician_Pirate.Bandit_Musician_Pirate_C
-// 0x0000 (0x1DB0 - 0x1DB0)
-class ABandit_Musician_Pirate_C final : public ABandit_Performer_C
+// 0x0000 (0x1D70 - 0x1D70)
+class ABandit_Musician_Pirate_C final : public ABandit_Musician1_C
 {
 public:
 	static class UClass* StaticClass()
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Musician_Pirate_C) == 0x000010, "Wrong alignment on ABandit_Musician_Pirate_C");
-static_assert(sizeof(ABandit_Musician_Pirate_C) == 0x001DB0, "Wrong size on ABandit_Musician_Pirate_C");
+static_assert(sizeof(ABandit_Musician_Pirate_C) == 0x001D70, "Wrong size on ABandit_Musician_Pirate_C");
 
 }
 

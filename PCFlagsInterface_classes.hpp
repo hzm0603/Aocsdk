@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PCFlagsInterface.PCFlagsInterface_C
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IPCFlagsInterface_C final : public IInterface
 {
 public:
@@ -34,8 +34,8 @@ public:
 		return GetDefaultObjImpl<IPCFlagsInterface_C>();
 	}
 };
-static_assert(alignof(IPCFlagsInterface_C) == 0x000008, "Wrong alignment on IPCFlagsInterface_C");
-static_assert(sizeof(IPCFlagsInterface_C) == 0x000048, "Wrong size on IPCFlagsInterface_C");
+static_assert(alignof(IPCFlagsInterface_C) == 0x000001, "Wrong alignment on IPCFlagsInterface_C");
+static_assert(sizeof(IPCFlagsInterface_C) == 0x000001, "Wrong size on IPCFlagsInterface_C");
 
 }
 

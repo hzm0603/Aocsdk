@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "ProxyTable_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Chooser_structs.hpp"
-#include "ProxyTable_structs.hpp"
 #include "StructUtils_structs.hpp"
 #include "Engine_classes.hpp"
 
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // Class ProxyTable.ChooserParameterProxyTable
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IChooserParameterProxyTable final : public IInterface
 {
 public:
@@ -35,8 +35,8 @@ public:
 		return GetDefaultObjImpl<IChooserParameterProxyTable>();
 	}
 };
-static_assert(alignof(IChooserParameterProxyTable) == 0x000008, "Wrong alignment on IChooserParameterProxyTable");
-static_assert(sizeof(IChooserParameterProxyTable) == 0x000048, "Wrong size on IChooserParameterProxyTable");
+static_assert(alignof(IChooserParameterProxyTable) == 0x000001, "Wrong alignment on IChooserParameterProxyTable");
+static_assert(sizeof(IChooserParameterProxyTable) == 0x000001, "Wrong size on IChooserParameterProxyTable");
 
 // Class ProxyTable.ProxyAsset
 // 0x0060 (0x00A8 - 0x0048)

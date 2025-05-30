@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Scorpion_Giant.Scorpion_Giant_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class AScorpion_Giant_C : public AScorpion_Base_C
 {
 public:
-	class AAoCAbilityLingeringEffect*             LastSandSwirl;                                     // 0x1D98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AAoCAbilityLingeringEffect*             LastSandSwirl;                                     // 0x1D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(AScorpion_Giant_C) == 0x000010, "Wrong alignment on AScorpion_Giant_C");
-static_assert(sizeof(AScorpion_Giant_C) == 0x001DA0, "Wrong size on AScorpion_Giant_C");
-static_assert(offsetof(AScorpion_Giant_C, LastSandSwirl) == 0x001D98, "Member 'AScorpion_Giant_C::LastSandSwirl' has a wrong offset!");
+static_assert(sizeof(AScorpion_Giant_C) == 0x001D60, "Wrong size on AScorpion_Giant_C");
+static_assert(offsetof(AScorpion_Giant_C, LastSandSwirl) == 0x001D58, "Member 'AScorpion_Giant_C::LastSandSwirl' has a wrong offset!");
 
 }
 

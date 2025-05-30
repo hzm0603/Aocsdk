@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EElderDragon_Fire_AirBehaviorStrategy_structs.hpp"
 #include "StateTreeModule_classes.hpp"
+#include "EElderDragon_Fire_AirBehaviorStrategy_structs.hpp"
 
 
 namespace SDK

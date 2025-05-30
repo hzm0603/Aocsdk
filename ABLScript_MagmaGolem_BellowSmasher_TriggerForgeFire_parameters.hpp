@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire.ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C.RunScript
-// 0x0B98 (0x0B98 - 0x0000)
+// 0x0BA0 (0x0BA0 - 0x0000)
 struct ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript final
 {
 public:
@@ -39,11 +39,11 @@ public:
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Temp_struct_Variable_2;                            // 0x00C0(0x0018)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FAbilityTargetingRecord                CallFunc_GetTargetingRecordById_ReturnValue;       // 0x00D8(0x0088)(ConstParm)
-	struct FAbilityHitRecord                      CallFunc_GetHitRecordById_ReturnValue;             // 0x0160(0x0A28)(ConstParm)
-	TArray<struct FHitInst>                       CallFunc_TriggerHitWithTargetingRecord_ReturnValue; // 0x0B88(0x0010)(ReferenceParm, ContainsInstancedReference)
+	struct FAbilityHitRecord                      CallFunc_GetHitRecordById_ReturnValue;             // 0x0160(0x0A30)(ConstParm)
+	TArray<struct FHitInst>                       CallFunc_TriggerHitWithTargetingRecord_ReturnValue; // 0x0B90(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
 static_assert(alignof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript) == 0x000008, "Wrong alignment on ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript");
-static_assert(sizeof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript) == 0x000B98, "Wrong size on ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript");
+static_assert(sizeof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript) == 0x000BA0, "Wrong size on ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript");
 static_assert(offsetof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript, Target) == 0x000000, "Member 'ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript::Target' has a wrong offset!");
 static_assert(offsetof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript, Instigator) == 0x000010, "Member 'ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript::Instigator' has a wrong offset!");
 static_assert(offsetof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript, Source) == 0x000020, "Member 'ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript::Source' has a wrong offset!");
@@ -59,7 +59,7 @@ static_assert(offsetof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_Run
 static_assert(offsetof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript, Temp_struct_Variable_2) == 0x0000C0, "Member 'ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript::Temp_struct_Variable_2' has a wrong offset!");
 static_assert(offsetof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript, CallFunc_GetTargetingRecordById_ReturnValue) == 0x0000D8, "Member 'ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript::CallFunc_GetTargetingRecordById_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript, CallFunc_GetHitRecordById_ReturnValue) == 0x000160, "Member 'ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript::CallFunc_GetHitRecordById_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript, CallFunc_TriggerHitWithTargetingRecord_ReturnValue) == 0x000B88, "Member 'ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript::CallFunc_TriggerHitWithTargetingRecord_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript, CallFunc_TriggerHitWithTargetingRecord_ReturnValue) == 0x000B90, "Member 'ABLScript_MagmaGolem_BellowSmasher_TriggerForgeFire_C_RunScript::CallFunc_TriggerHitWithTargetingRecord_ReturnValue' has a wrong offset!");
 
 }
 

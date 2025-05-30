@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Hunting_Base.Hunting_Base_C
-// 0x0000 (0x1D90 - 0x1D90)
+// 0x0000 (0x1D50 - 0x1D50)
 class AHunting_Base_C : public ANPCPawn_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AHunting_Base_C) == 0x000010, "Wrong alignment on AHunting_Base_C");
-static_assert(sizeof(AHunting_Base_C) == 0x001D90, "Wrong size on AHunting_Base_C");
+static_assert(sizeof(AHunting_Base_C) == 0x001D50, "Wrong size on AHunting_Base_C");
 
 }
 

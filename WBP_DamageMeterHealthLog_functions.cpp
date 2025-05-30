@@ -17,57 +17,119 @@
 namespace SDK
 {
 
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FString&                    SelectedItem                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// ESelectInfo                             SelectionType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateInstigators
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWBP_DamageMeterHealthLog_C::BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
+void UWBP_DamageMeterHealthLog_C::UpdateInstigators()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
-
-	Params::WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature Parms{};
-
-	Parms.SelectedItem = std::move(SelectedItem);
-	Parms.SelectionType = SelectionType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.ClearData
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_DamageMeterHealthLog_C::ClearData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "ClearData");
+		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "UpdateInstigators");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.ExecuteUbergraph_WBP_DamageMeterHealthLog
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateHoverText
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWBP_DamageMeterHealthLog_C::ExecuteUbergraph_WBP_DamageMeterHealthLog(int32 EntryPoint)
+void UWBP_DamageMeterHealthLog_C::UpdateHoverText()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "ExecuteUbergraph_WBP_DamageMeterHealthLog");
+		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "UpdateHoverText");
 
-	Params::WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateBars
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_DamageMeterHealthLog_C::UpdateBars()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "UpdateBars");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.TrimBars
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   needed                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_DamageMeterHealthLog_C::TrimBars(int32 needed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "TrimBars");
+
+	Params::WBP_DamageMeterHealthLog_C_TrimBars Parms{};
+
+	Parms.needed = needed;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_DamageMeterHealthLog_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "Tick");
+
+	Params::WBP_DamageMeterHealthLog_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.RebaseBars
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_DamageMeterHealthLog_C::RebaseBars()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "RebaseBars");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.Initialize
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_DamageMeter_C*               DamageMeter_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_DamageMeterHealthLog_C::Initialize(class UWBP_DamageMeter_C* DamageMeter_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "Initialize");
+
+	Params::WBP_DamageMeterHealthLog_C_Initialize Parms{};
+
+	Parms.DamageMeter_0 = DamageMeter_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -103,121 +165,59 @@ void UWBP_DamageMeterHealthLog_C::GetBarAtIndex(int32 Index_0, TArray<class UWBP
 }
 
 
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.ExecuteUbergraph_WBP_DamageMeterHealthLog
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UWBP_DamageMeter_C*               DamageMeter_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_DamageMeterHealthLog_C::Initialize(class UWBP_DamageMeter_C* DamageMeter_0)
+void UWBP_DamageMeterHealthLog_C::ExecuteUbergraph_WBP_DamageMeterHealthLog(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "Initialize");
+		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "ExecuteUbergraph_WBP_DamageMeterHealthLog");
 
-	Params::WBP_DamageMeterHealthLog_C_Initialize Parms{};
+	Params::WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog Parms{};
 
-	Parms.DamageMeter_0 = DamageMeter_0;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.RebaseBars
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.ClearData
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_DamageMeterHealthLog_C::RebaseBars()
+void UWBP_DamageMeterHealthLog_C::ClearData()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "RebaseBars");
+		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "ClearData");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    SelectedItem                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// ESelectInfo                             SelectionType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_DamageMeterHealthLog_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWBP_DamageMeterHealthLog_C::BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "Tick");
+		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
 
-	Params::WBP_DamageMeterHealthLog_C_Tick Parms{};
+	Params::WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+	Parms.SelectedItem = std::move(SelectedItem);
+	Parms.SelectionType = SelectionType;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.TrimBars
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   needed                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_DamageMeterHealthLog_C::TrimBars(int32 needed)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "TrimBars");
-
-	Params::WBP_DamageMeterHealthLog_C_TrimBars Parms{};
-
-	Parms.needed = needed;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateBars
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_DamageMeterHealthLog_C::UpdateBars()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "UpdateBars");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateHoverText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_DamageMeterHealthLog_C::UpdateHoverText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "UpdateHoverText");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateInstigators
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_DamageMeterHealthLog_C::UpdateInstigators()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamageMeterHealthLog_C", "UpdateInstigators");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

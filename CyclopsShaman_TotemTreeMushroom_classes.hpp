@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CyclopsShaman_TotemTreeMushroom.CyclopsShaman_TotemTreeMushroom_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ACyclopsShaman_TotemTreeMushroom_C final : public AMushroom_Base_C
 {
 public:
-	uint8                                         Pad_1DA4[0x4];                                     // 0x1DA4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D64[0x4];                                     // 0x1D64(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,8 +35,8 @@ public:
 	}
 };
 static_assert(alignof(ACyclopsShaman_TotemTreeMushroom_C) == 0x000010, "Wrong alignment on ACyclopsShaman_TotemTreeMushroom_C");
-static_assert(sizeof(ACyclopsShaman_TotemTreeMushroom_C) == 0x001DB0, "Wrong size on ACyclopsShaman_TotemTreeMushroom_C");
-static_assert(offsetof(ACyclopsShaman_TotemTreeMushroom_C, Blackboard) == 0x001DA8, "Member 'ACyclopsShaman_TotemTreeMushroom_C::Blackboard' has a wrong offset!");
+static_assert(sizeof(ACyclopsShaman_TotemTreeMushroom_C) == 0x001D70, "Wrong size on ACyclopsShaman_TotemTreeMushroom_C");
+static_assert(offsetof(ACyclopsShaman_TotemTreeMushroom_C, Blackboard) == 0x001D68, "Member 'ACyclopsShaman_TotemTreeMushroom_C::Blackboard' has a wrong offset!");
 
 }
 

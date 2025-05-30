@@ -77,9 +77,9 @@ void ABP_AOCHUD_C::NotifiesLoaded(const TArray<struct FAnimNotifyEvent>& AnimNot
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESpeedTypes&                            Speed                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double*                                 mult                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Mult                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_AOCHUD_C::Get_Speed_Mult(ESpeedTypes& Speed, double* mult)
+void ABP_AOCHUD_C::Get_Speed_Mult(ESpeedTypes& Speed, double* Mult)
 {
 	static class UFunction* Func = nullptr;
 
@@ -94,8 +94,8 @@ void ABP_AOCHUD_C::Get_Speed_Mult(ESpeedTypes& Speed, double* mult)
 
 	Speed = Parms.Speed;
 
-	if (mult != nullptr)
-		*mult = Parms.mult;
+	if (Mult != nullptr)
+		*Mult = Parms.Mult;
 }
 
 

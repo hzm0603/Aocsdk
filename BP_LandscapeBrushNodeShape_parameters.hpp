@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SNodeShape_structs.hpp"
 #include "SNodeRoadConnection_structs.hpp"
 #include "SNodeRiverConnection_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
-#include "SNodeShape_structs.hpp"
 
 
 namespace SDK::Params

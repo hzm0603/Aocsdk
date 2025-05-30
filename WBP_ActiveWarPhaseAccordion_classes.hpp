@@ -17,14 +17,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ActiveWarPhaseAccordion.WBP_ActiveWarPhaseAccordion_C
-// 0x0020 (0x0420 - 0x0400)
+// 0x0028 (0x0430 - 0x0408)
 class UWBP_ActiveWarPhaseAccordion_C final : public UActiveWarPhaseAccordion
 {
 public:
-	class UImage*                                 IMG_CompletedIcon;                                 // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNamedSlot*                             NamedSlot;                                         // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PhaseImage;                                        // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_CompletionLabel;                                // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_CompletedIcon;                                 // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNamedSlot*                             NamedSlot;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          PhaseAccordionBorder;                              // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PhaseImage;                                        // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_CompletionLabel;                                // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +38,12 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ActiveWarPhaseAccordion_C) == 0x000008, "Wrong alignment on UWBP_ActiveWarPhaseAccordion_C");
-static_assert(sizeof(UWBP_ActiveWarPhaseAccordion_C) == 0x000420, "Wrong size on UWBP_ActiveWarPhaseAccordion_C");
-static_assert(offsetof(UWBP_ActiveWarPhaseAccordion_C, IMG_CompletedIcon) == 0x000400, "Member 'UWBP_ActiveWarPhaseAccordion_C::IMG_CompletedIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_ActiveWarPhaseAccordion_C, NamedSlot) == 0x000408, "Member 'UWBP_ActiveWarPhaseAccordion_C::NamedSlot' has a wrong offset!");
-static_assert(offsetof(UWBP_ActiveWarPhaseAccordion_C, PhaseImage) == 0x000410, "Member 'UWBP_ActiveWarPhaseAccordion_C::PhaseImage' has a wrong offset!");
-static_assert(offsetof(UWBP_ActiveWarPhaseAccordion_C, TB_CompletionLabel) == 0x000418, "Member 'UWBP_ActiveWarPhaseAccordion_C::TB_CompletionLabel' has a wrong offset!");
+static_assert(sizeof(UWBP_ActiveWarPhaseAccordion_C) == 0x000430, "Wrong size on UWBP_ActiveWarPhaseAccordion_C");
+static_assert(offsetof(UWBP_ActiveWarPhaseAccordion_C, IMG_CompletedIcon) == 0x000408, "Member 'UWBP_ActiveWarPhaseAccordion_C::IMG_CompletedIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_ActiveWarPhaseAccordion_C, NamedSlot) == 0x000410, "Member 'UWBP_ActiveWarPhaseAccordion_C::NamedSlot' has a wrong offset!");
+static_assert(offsetof(UWBP_ActiveWarPhaseAccordion_C, PhaseAccordionBorder) == 0x000418, "Member 'UWBP_ActiveWarPhaseAccordion_C::PhaseAccordionBorder' has a wrong offset!");
+static_assert(offsetof(UWBP_ActiveWarPhaseAccordion_C, PhaseImage) == 0x000420, "Member 'UWBP_ActiveWarPhaseAccordion_C::PhaseImage' has a wrong offset!");
+static_assert(offsetof(UWBP_ActiveWarPhaseAccordion_C, TB_CompletionLabel) == 0x000428, "Member 'UWBP_ActiveWarPhaseAccordion_C::TB_CompletionLabel' has a wrong offset!");
 
 }
 

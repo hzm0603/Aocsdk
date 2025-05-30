@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function ElderDragon_Fire_FlameMinion.ElderDragon_Fire_FlameMinion_C.Absorbed
-// 0x0A78 (0x0A78 - 0x0000)
+// 0x0A80 (0x0A80 - 0x0000)
 struct ElderDragon_Fire_FlameMinion_C_Absorbed final
 {
 public:
@@ -25,20 +25,20 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ConstParm, ReferenceParm)
-	struct FAbilityHitRecord                      CallFunc_GetHitRecordById_ReturnValue;             // 0x0020(0x0A28)(ConstParm)
-	struct FHitHistory                            CallFunc_TriggerHitOnActors_HitHistory;            // 0x0A48(0x0018)(ContainsInstancedReference)
-	TArray<struct FHitInst>                       CallFunc_TriggerHitOnActors_ReturnValue;           // 0x0A60(0x0010)(ReferenceParm, ContainsInstancedReference)
-	bool                                          CallFunc_IntrepidHasAuthority_ReturnValue;         // 0x0A70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAbilityHitRecord                      CallFunc_GetHitRecordById_ReturnValue;             // 0x0020(0x0A30)(ConstParm)
+	struct FHitHistory                            CallFunc_TriggerHitOnActors_HitHistory;            // 0x0A50(0x0018)(ContainsInstancedReference)
+	TArray<struct FHitInst>                       CallFunc_TriggerHitOnActors_ReturnValue;           // 0x0A68(0x0010)(ReferenceParm, ContainsInstancedReference)
+	bool                                          CallFunc_IntrepidHasAuthority_ReturnValue;         // 0x0A78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ElderDragon_Fire_FlameMinion_C_Absorbed) == 0x000008, "Wrong alignment on ElderDragon_Fire_FlameMinion_C_Absorbed");
-static_assert(sizeof(ElderDragon_Fire_FlameMinion_C_Absorbed) == 0x000A78, "Wrong size on ElderDragon_Fire_FlameMinion_C_Absorbed");
+static_assert(sizeof(ElderDragon_Fire_FlameMinion_C_Absorbed) == 0x000A80, "Wrong size on ElderDragon_Fire_FlameMinion_C_Absorbed");
 static_assert(offsetof(ElderDragon_Fire_FlameMinion_C_Absorbed, Owner_Dragon) == 0x000000, "Member 'ElderDragon_Fire_FlameMinion_C_Absorbed::Owner_Dragon' has a wrong offset!");
 static_assert(offsetof(ElderDragon_Fire_FlameMinion_C_Absorbed, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'ElderDragon_Fire_FlameMinion_C_Absorbed::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ElderDragon_Fire_FlameMinion_C_Absorbed, K2Node_MakeArray_Array) == 0x000010, "Member 'ElderDragon_Fire_FlameMinion_C_Absorbed::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(ElderDragon_Fire_FlameMinion_C_Absorbed, CallFunc_GetHitRecordById_ReturnValue) == 0x000020, "Member 'ElderDragon_Fire_FlameMinion_C_Absorbed::CallFunc_GetHitRecordById_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ElderDragon_Fire_FlameMinion_C_Absorbed, CallFunc_TriggerHitOnActors_HitHistory) == 0x000A48, "Member 'ElderDragon_Fire_FlameMinion_C_Absorbed::CallFunc_TriggerHitOnActors_HitHistory' has a wrong offset!");
-static_assert(offsetof(ElderDragon_Fire_FlameMinion_C_Absorbed, CallFunc_TriggerHitOnActors_ReturnValue) == 0x000A60, "Member 'ElderDragon_Fire_FlameMinion_C_Absorbed::CallFunc_TriggerHitOnActors_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ElderDragon_Fire_FlameMinion_C_Absorbed, CallFunc_IntrepidHasAuthority_ReturnValue) == 0x000A70, "Member 'ElderDragon_Fire_FlameMinion_C_Absorbed::CallFunc_IntrepidHasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ElderDragon_Fire_FlameMinion_C_Absorbed, CallFunc_TriggerHitOnActors_HitHistory) == 0x000A50, "Member 'ElderDragon_Fire_FlameMinion_C_Absorbed::CallFunc_TriggerHitOnActors_HitHistory' has a wrong offset!");
+static_assert(offsetof(ElderDragon_Fire_FlameMinion_C_Absorbed, CallFunc_TriggerHitOnActors_ReturnValue) == 0x000A68, "Member 'ElderDragon_Fire_FlameMinion_C_Absorbed::CallFunc_TriggerHitOnActors_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ElderDragon_Fire_FlameMinion_C_Absorbed, CallFunc_IntrepidHasAuthority_ReturnValue) == 0x000A78, "Member 'ElderDragon_Fire_FlameMinion_C_Absorbed::CallFunc_IntrepidHasAuthority_ReturnValue' has a wrong offset!");
 
 // Function ElderDragon_Fire_FlameMinion.ElderDragon_Fire_FlameMinion_C.ExecuteUbergraph_ElderDragon_Fire_FlameMinion
 // 0x000C (0x000C - 0x0000)

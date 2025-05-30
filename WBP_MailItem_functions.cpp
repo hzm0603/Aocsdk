@@ -17,39 +17,19 @@
 namespace SDK
 {
 
-// Function WBP_MailItem.WBP_MailItem_C.GetButton
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAoCCommonButtonBase*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UAoCCommonButtonBase* UWBP_MailItem_C::GetButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MailItem_C", "GetButton");
-
-	Params::WBP_MailItem_C_GetButton Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WBP_MailItem.WBP_MailItem_C.GetButtonContainer
+// Function WBP_MailItem.WBP_MailItem_C.GetOddButtonStyle
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// TSubclassOf<class UCommonButtonStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
-class UPanelWidget* UWBP_MailItem_C::GetButtonContainer()
+TSubclassOf<class UCommonButtonStyle> UWBP_MailItem_C::GetOddButtonStyle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MailItem_C", "GetButtonContainer");
+		Func = Class->GetFunction("WBP_MailItem_C", "GetOddButtonStyle");
 
-	Params::WBP_MailItem_C_GetButtonContainer Parms{};
+	Params::WBP_MailItem_C_GetOddButtonStyle Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -77,19 +57,39 @@ TSubclassOf<class UCommonButtonStyle> UWBP_MailItem_C::GetEvenButtonStyle()
 }
 
 
-// Function WBP_MailItem.WBP_MailItem_C.GetOddButtonStyle
+// Function WBP_MailItem.WBP_MailItem_C.GetButtonContainer
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TSubclassOf<class UCommonButtonStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-TSubclassOf<class UCommonButtonStyle> UWBP_MailItem_C::GetOddButtonStyle()
+class UPanelWidget* UWBP_MailItem_C::GetButtonContainer()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MailItem_C", "GetOddButtonStyle");
+		Func = Class->GetFunction("WBP_MailItem_C", "GetButtonContainer");
 
-	Params::WBP_MailItem_C_GetOddButtonStyle Parms{};
+	Params::WBP_MailItem_C_GetButtonContainer Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_MailItem.WBP_MailItem_C.GetButton
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAoCCommonButtonBase*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UAoCCommonButtonBase* UWBP_MailItem_C::GetButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MailItem_C", "GetButton");
+
+	Params::WBP_MailItem_C_GetButton Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

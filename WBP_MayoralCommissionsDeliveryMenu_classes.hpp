@@ -23,11 +23,11 @@ class UWBP_MayoralCommissionsDeliveryMenu_C final : public UMayoralCommissionsDe
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_ScrollWindow_Gradient_C*           ScrollArea;                                        // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollArea;                                        // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_MayoralCommissionsDeliveryMenu(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_MayoralCommissionsDeliveryMenu(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

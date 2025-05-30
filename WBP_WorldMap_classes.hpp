@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_WorldMap.WBP_WorldMap_C
-// 0x0030 (0x1050 - 0x1020)
+// 0x0030 (0x1110 - 0x10E0)
 class UWBP_WorldMap_C final : public UWorldMap
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1020(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 DebugMarker;                                       // 0x1028(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                MainBorder;                                        // 0x1030(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           MainCanvas;                                        // 0x1038(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 MinimapImage;                                      // 0x1040(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           RetB_MapTiles;                                     // 0x1048(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x10E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 DebugMarker;                                       // 0x10E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                MainBorder;                                        // 0x10F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           MainCanvas;                                        // 0x10F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 MinimapImage;                                      // 0x1100(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           RetB_MapTiles;                                     // 0x1108(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_WorldMap(int32 EntryPoint);
 	void UpdateDebugText();
+	void ExecuteUbergraph_WBP_WorldMap(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -44,13 +44,13 @@ public:
 	}
 };
 static_assert(alignof(UWBP_WorldMap_C) == 0x000008, "Wrong alignment on UWBP_WorldMap_C");
-static_assert(sizeof(UWBP_WorldMap_C) == 0x001050, "Wrong size on UWBP_WorldMap_C");
-static_assert(offsetof(UWBP_WorldMap_C, UberGraphFrame) == 0x001020, "Member 'UWBP_WorldMap_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_WorldMap_C, DebugMarker) == 0x001028, "Member 'UWBP_WorldMap_C::DebugMarker' has a wrong offset!");
-static_assert(offsetof(UWBP_WorldMap_C, MainBorder) == 0x001030, "Member 'UWBP_WorldMap_C::MainBorder' has a wrong offset!");
-static_assert(offsetof(UWBP_WorldMap_C, MainCanvas) == 0x001038, "Member 'UWBP_WorldMap_C::MainCanvas' has a wrong offset!");
-static_assert(offsetof(UWBP_WorldMap_C, MinimapImage) == 0x001040, "Member 'UWBP_WorldMap_C::MinimapImage' has a wrong offset!");
-static_assert(offsetof(UWBP_WorldMap_C, RetB_MapTiles) == 0x001048, "Member 'UWBP_WorldMap_C::RetB_MapTiles' has a wrong offset!");
+static_assert(sizeof(UWBP_WorldMap_C) == 0x001110, "Wrong size on UWBP_WorldMap_C");
+static_assert(offsetof(UWBP_WorldMap_C, UberGraphFrame) == 0x0010E0, "Member 'UWBP_WorldMap_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_WorldMap_C, DebugMarker) == 0x0010E8, "Member 'UWBP_WorldMap_C::DebugMarker' has a wrong offset!");
+static_assert(offsetof(UWBP_WorldMap_C, MainBorder) == 0x0010F0, "Member 'UWBP_WorldMap_C::MainBorder' has a wrong offset!");
+static_assert(offsetof(UWBP_WorldMap_C, MainCanvas) == 0x0010F8, "Member 'UWBP_WorldMap_C::MainCanvas' has a wrong offset!");
+static_assert(offsetof(UWBP_WorldMap_C, MinimapImage) == 0x001100, "Member 'UWBP_WorldMap_C::MinimapImage' has a wrong offset!");
+static_assert(offsetof(UWBP_WorldMap_C, RetB_MapTiles) == 0x001108, "Member 'UWBP_WorldMap_C::RetB_MapTiles' has a wrong offset!");
 
 }
 

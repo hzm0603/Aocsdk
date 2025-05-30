@@ -32,9 +32,9 @@ public:
 	class UWBP_DeathSummaryItem_C*                WBP_DeathSummaryItem_5;                            // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	class UPanelWidget* GetBorderContainer();
-	TSubclassOf<class UCommonBorderStyle> GetEvenBorderStyle();
 	TSubclassOf<class UCommonBorderStyle> GetOddBorderStyle();
+	TSubclassOf<class UCommonBorderStyle> GetEvenBorderStyle();
+	class UPanelWidget* GetBorderContainer();
 
 public:
 	static class UClass* StaticClass()

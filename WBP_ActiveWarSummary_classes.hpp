@@ -17,14 +17,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ActiveWarSummary.WBP_ActiveWarSummary_C
-// 0x0020 (0x0340 - 0x0320)
+// 0x0030 (0x0350 - 0x0320)
 class UWBP_ActiveWarSummary_C final : public UActiveWarSummary
 {
 public:
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollWindow;                                      // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActiveWarPhaseItem_C*              WBP_ActiveWarePhaseItem;                           // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActiveWarPhaseItem_C*              WBP_ActiveWarePhaseItem_1;                         // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActiveWarPhaseItem_C*              WBP_ActiveWarePhaseItem_2;                         // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          HeaderBG;                                          // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollWindow;                                      // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          SiegeAlignmentBorder;                              // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveWarPhaseItem_C*              WBP_ActiveWarePhaseItem;                           // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveWarPhaseItem_C*              WBP_ActiveWarePhaseItem_1;                         // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveWarPhaseItem_C*              WBP_ActiveWarePhaseItem_2;                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +39,13 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ActiveWarSummary_C) == 0x000008, "Wrong alignment on UWBP_ActiveWarSummary_C");
-static_assert(sizeof(UWBP_ActiveWarSummary_C) == 0x000340, "Wrong size on UWBP_ActiveWarSummary_C");
-static_assert(offsetof(UWBP_ActiveWarSummary_C, ScrollWindow) == 0x000320, "Member 'UWBP_ActiveWarSummary_C::ScrollWindow' has a wrong offset!");
-static_assert(offsetof(UWBP_ActiveWarSummary_C, WBP_ActiveWarePhaseItem) == 0x000328, "Member 'UWBP_ActiveWarSummary_C::WBP_ActiveWarePhaseItem' has a wrong offset!");
-static_assert(offsetof(UWBP_ActiveWarSummary_C, WBP_ActiveWarePhaseItem_1) == 0x000330, "Member 'UWBP_ActiveWarSummary_C::WBP_ActiveWarePhaseItem_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ActiveWarSummary_C, WBP_ActiveWarePhaseItem_2) == 0x000338, "Member 'UWBP_ActiveWarSummary_C::WBP_ActiveWarePhaseItem_2' has a wrong offset!");
+static_assert(sizeof(UWBP_ActiveWarSummary_C) == 0x000350, "Wrong size on UWBP_ActiveWarSummary_C");
+static_assert(offsetof(UWBP_ActiveWarSummary_C, HeaderBG) == 0x000320, "Member 'UWBP_ActiveWarSummary_C::HeaderBG' has a wrong offset!");
+static_assert(offsetof(UWBP_ActiveWarSummary_C, ScrollWindow) == 0x000328, "Member 'UWBP_ActiveWarSummary_C::ScrollWindow' has a wrong offset!");
+static_assert(offsetof(UWBP_ActiveWarSummary_C, SiegeAlignmentBorder) == 0x000330, "Member 'UWBP_ActiveWarSummary_C::SiegeAlignmentBorder' has a wrong offset!");
+static_assert(offsetof(UWBP_ActiveWarSummary_C, WBP_ActiveWarePhaseItem) == 0x000338, "Member 'UWBP_ActiveWarSummary_C::WBP_ActiveWarePhaseItem' has a wrong offset!");
+static_assert(offsetof(UWBP_ActiveWarSummary_C, WBP_ActiveWarePhaseItem_1) == 0x000340, "Member 'UWBP_ActiveWarSummary_C::WBP_ActiveWarePhaseItem_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ActiveWarSummary_C, WBP_ActiveWarePhaseItem_2) == 0x000348, "Member 'UWBP_ActiveWarSummary_C::WBP_ActiveWarePhaseItem_2' has a wrong offset!");
 
 }
 

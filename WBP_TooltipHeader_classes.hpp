@@ -17,11 +17,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TooltipHeader.WBP_TooltipHeader_C
-// 0x0008 (0x0388 - 0x0380)
+// 0x0020 (0x03A0 - 0x0380)
 class UWBP_TooltipHeader_C final : public UTooltipHeader
 {
 public:
-	class UImage*                                 TooltipHeaderAccent;                               // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonIconButton_C*                    HelpButton;                                        // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    ItemGradeTextBlock;                                // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_MaterialSizePreview_C*             MaterialSizePreview;                               // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 TooltipHeaderAccent;                               // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +37,11 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TooltipHeader_C) == 0x000008, "Wrong alignment on UWBP_TooltipHeader_C");
-static_assert(sizeof(UWBP_TooltipHeader_C) == 0x000388, "Wrong size on UWBP_TooltipHeader_C");
-static_assert(offsetof(UWBP_TooltipHeader_C, TooltipHeaderAccent) == 0x000380, "Member 'UWBP_TooltipHeader_C::TooltipHeaderAccent' has a wrong offset!");
+static_assert(sizeof(UWBP_TooltipHeader_C) == 0x0003A0, "Wrong size on UWBP_TooltipHeader_C");
+static_assert(offsetof(UWBP_TooltipHeader_C, HelpButton) == 0x000380, "Member 'UWBP_TooltipHeader_C::HelpButton' has a wrong offset!");
+static_assert(offsetof(UWBP_TooltipHeader_C, ItemGradeTextBlock) == 0x000388, "Member 'UWBP_TooltipHeader_C::ItemGradeTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_TooltipHeader_C, MaterialSizePreview) == 0x000390, "Member 'UWBP_TooltipHeader_C::MaterialSizePreview' has a wrong offset!");
+static_assert(offsetof(UWBP_TooltipHeader_C, TooltipHeaderAccent) == 0x000398, "Member 'UWBP_TooltipHeader_C::TooltipHeaderAccent' has a wrong offset!");
 
 }
 

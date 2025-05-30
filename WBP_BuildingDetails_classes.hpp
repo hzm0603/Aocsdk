@@ -25,11 +25,11 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_WBP_BuildingDetails(int32 EntryPoint);
-	class UPanelWidget* GetBorderContainer();
-	TSubclassOf<class UCommonBorderStyle> GetEvenBorderStyle();
-	TSubclassOf<class UCommonBorderStyle> GetOddBorderStyle();
 	void PreConstruct(bool IsDesignTime);
+	TSubclassOf<class UCommonBorderStyle> GetOddBorderStyle();
+	TSubclassOf<class UCommonBorderStyle> GetEvenBorderStyle();
+	class UPanelWidget* GetBorderContainer();
+	void ExecuteUbergraph_WBP_BuildingDetails(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

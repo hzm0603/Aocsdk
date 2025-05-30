@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CSB_CasterBandit_Basic.CSB_CasterBandit_Basic_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ACSB_CasterBandit_Basic_C : public ABandit_Mage_Base_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACSB_CasterBandit_Basic_C) == 0x000010, "Wrong alignment on ACSB_CasterBandit_Basic_C");
-static_assert(sizeof(ACSB_CasterBandit_Basic_C) == 0x001DB0, "Wrong size on ACSB_CasterBandit_Basic_C");
+static_assert(sizeof(ACSB_CasterBandit_Basic_C) == 0x001D70, "Wrong size on ACSB_CasterBandit_Basic_C");
 
 }
 

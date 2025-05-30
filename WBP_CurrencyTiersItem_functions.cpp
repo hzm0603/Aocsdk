@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_CurrencyTiersItem.WBP_CurrencyTiersItem_C.ExecuteUbergraph_WBP_CurrencyTiersItem
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CurrencyTiersItem_C::ExecuteUbergraph_WBP_CurrencyTiersItem(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CurrencyTiersItem_C", "ExecuteUbergraph_WBP_CurrencyTiersItem");
-
-	Params::WBP_CurrencyTiersItem_C_ExecuteUbergraph_WBP_CurrencyTiersItem Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_CurrencyTiersItem.WBP_CurrencyTiersItem_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_CurrencyTiersItem_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_CurrencyTiersItem_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CurrencyTiersItem.WBP_CurrencyTiersItem_C.ExecuteUbergraph_WBP_CurrencyTiersItem
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CurrencyTiersItem_C::ExecuteUbergraph_WBP_CurrencyTiersItem(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CurrencyTiersItem_C", "ExecuteUbergraph_WBP_CurrencyTiersItem");
+
+	Params::WBP_CurrencyTiersItem_C_ExecuteUbergraph_WBP_CurrencyTiersItem Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

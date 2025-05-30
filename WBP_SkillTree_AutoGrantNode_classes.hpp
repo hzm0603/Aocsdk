@@ -17,11 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_SkillTree_AutoGrantNode.WBP_SkillTree_AutoGrantNode_C
-// 0x0008 (0x0650 - 0x0648)
+// 0x0010 (0x05E0 - 0x05D0)
 class UWBP_SkillTree_AutoGrantNode_C final : public UAutoGrantSkillTreeNode
 {
 public:
-	class UImage*                                 UnPurchasedImage;                                  // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HoverStateImage;                                   // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 UnPurchasedImage;                                  // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_SkillTree_AutoGrantNode_C) == 0x000008, "Wrong alignment on UWBP_SkillTree_AutoGrantNode_C");
-static_assert(sizeof(UWBP_SkillTree_AutoGrantNode_C) == 0x000650, "Wrong size on UWBP_SkillTree_AutoGrantNode_C");
-static_assert(offsetof(UWBP_SkillTree_AutoGrantNode_C, UnPurchasedImage) == 0x000648, "Member 'UWBP_SkillTree_AutoGrantNode_C::UnPurchasedImage' has a wrong offset!");
+static_assert(sizeof(UWBP_SkillTree_AutoGrantNode_C) == 0x0005E0, "Wrong size on UWBP_SkillTree_AutoGrantNode_C");
+static_assert(offsetof(UWBP_SkillTree_AutoGrantNode_C, HoverStateImage) == 0x0005D0, "Member 'UWBP_SkillTree_AutoGrantNode_C::HoverStateImage' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTree_AutoGrantNode_C, UnPurchasedImage) == 0x0005D8, "Member 'UWBP_SkillTree_AutoGrantNode_C::UnPurchasedImage' has a wrong offset!");
 
 }
 

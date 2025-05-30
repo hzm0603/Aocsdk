@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_Subaccordion_NodeRelationships.WBP_Subaccordion_NodeRelationships_C.GetBreadcrumbWidget
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWBP_Subaccordion_NodeRelationships_C::GetBreadcrumbWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Subaccordion_NodeRelationships_C", "GetBreadcrumbWidget");
-
-	Params::WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function WBP_Subaccordion_NodeRelationships.WBP_Subaccordion_NodeRelationships_C.GetButton
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -50,6 +30,26 @@ class UAoCCommonButtonBase* UWBP_Subaccordion_NodeRelationships_C::GetButton()
 		Func = Class->GetFunction("WBP_Subaccordion_NodeRelationships_C", "GetButton");
 
 	Params::WBP_Subaccordion_NodeRelationships_C_GetButton Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_Subaccordion_NodeRelationships.WBP_Subaccordion_NodeRelationships_C.GetBreadcrumbWidget
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_Subaccordion_NodeRelationships_C::GetBreadcrumbWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Subaccordion_NodeRelationships_C", "GetBreadcrumbWidget");
+
+	Params::WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

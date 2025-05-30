@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ISiegeWeaponDirver.ISiegeWeaponDirver_C
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IISiegeWeaponDirver_C final : public IInterface
 {
 public:
@@ -33,8 +33,8 @@ public:
 		return GetDefaultObjImpl<IISiegeWeaponDirver_C>();
 	}
 };
-static_assert(alignof(IISiegeWeaponDirver_C) == 0x000008, "Wrong alignment on IISiegeWeaponDirver_C");
-static_assert(sizeof(IISiegeWeaponDirver_C) == 0x000048, "Wrong size on IISiegeWeaponDirver_C");
+static_assert(alignof(IISiegeWeaponDirver_C) == 0x000001, "Wrong alignment on IISiegeWeaponDirver_C");
+static_assert(sizeof(IISiegeWeaponDirver_C) == 0x000001, "Wrong size on IISiegeWeaponDirver_C");
 
 }
 

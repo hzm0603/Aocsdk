@@ -18,11 +18,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_InteractItemHoverScreen.WBP_InteractItemHoverScreen_C
-// 0x0008 (0x0308 - 0x0300)
+// 0x0010 (0x0310 - 0x0300)
 class UWBP_InteractItemHoverScreen_C final : public UInteractableIndicator
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 AlertIcon;                                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_InteractItemHoverScreen(int32 EntryPoint);
@@ -38,8 +39,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_InteractItemHoverScreen_C) == 0x000008, "Wrong alignment on UWBP_InteractItemHoverScreen_C");
-static_assert(sizeof(UWBP_InteractItemHoverScreen_C) == 0x000308, "Wrong size on UWBP_InteractItemHoverScreen_C");
+static_assert(sizeof(UWBP_InteractItemHoverScreen_C) == 0x000310, "Wrong size on UWBP_InteractItemHoverScreen_C");
 static_assert(offsetof(UWBP_InteractItemHoverScreen_C, UberGraphFrame) == 0x000300, "Member 'UWBP_InteractItemHoverScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_InteractItemHoverScreen_C, AlertIcon) == 0x000308, "Member 'UWBP_InteractItemHoverScreen_C::AlertIcon' has a wrong offset!");
 
 }
 

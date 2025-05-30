@@ -18,16 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_EventTracker.WBP_EventTracker_C
-// 0x0030 (0x0468 - 0x0438)
+// 0x0040 (0x0470 - 0x0430)
 class UWBP_EventTracker_C final : public UEventTracker
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          B_RecoveryContainer;                               // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 BGVignette;                                        // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Separator;                                         // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Separator_1;                                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Separator_2;                                       // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VB_EventContent;                                   // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          HeaderBG;                                          // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonButton_C*                        NearbyEventsButton;                                // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Separator_1;                                       // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Separator_2;                                       // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VB_EventContent;                                   // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_EventTracker(int32 EntryPoint);
@@ -44,13 +46,15 @@ public:
 	}
 };
 static_assert(alignof(UWBP_EventTracker_C) == 0x000008, "Wrong alignment on UWBP_EventTracker_C");
-static_assert(sizeof(UWBP_EventTracker_C) == 0x000468, "Wrong size on UWBP_EventTracker_C");
-static_assert(offsetof(UWBP_EventTracker_C, UberGraphFrame) == 0x000438, "Member 'UWBP_EventTracker_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(UWBP_EventTracker_C) == 0x000470, "Wrong size on UWBP_EventTracker_C");
+static_assert(offsetof(UWBP_EventTracker_C, UberGraphFrame) == 0x000430, "Member 'UWBP_EventTracker_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_EventTracker_C, B_RecoveryContainer) == 0x000438, "Member 'UWBP_EventTracker_C::B_RecoveryContainer' has a wrong offset!");
 static_assert(offsetof(UWBP_EventTracker_C, BGVignette) == 0x000440, "Member 'UWBP_EventTracker_C::BGVignette' has a wrong offset!");
-static_assert(offsetof(UWBP_EventTracker_C, Separator) == 0x000448, "Member 'UWBP_EventTracker_C::Separator' has a wrong offset!");
-static_assert(offsetof(UWBP_EventTracker_C, Separator_1) == 0x000450, "Member 'UWBP_EventTracker_C::Separator_1' has a wrong offset!");
-static_assert(offsetof(UWBP_EventTracker_C, Separator_2) == 0x000458, "Member 'UWBP_EventTracker_C::Separator_2' has a wrong offset!");
-static_assert(offsetof(UWBP_EventTracker_C, VB_EventContent) == 0x000460, "Member 'UWBP_EventTracker_C::VB_EventContent' has a wrong offset!");
+static_assert(offsetof(UWBP_EventTracker_C, HeaderBG) == 0x000448, "Member 'UWBP_EventTracker_C::HeaderBG' has a wrong offset!");
+static_assert(offsetof(UWBP_EventTracker_C, NearbyEventsButton) == 0x000450, "Member 'UWBP_EventTracker_C::NearbyEventsButton' has a wrong offset!");
+static_assert(offsetof(UWBP_EventTracker_C, Separator_1) == 0x000458, "Member 'UWBP_EventTracker_C::Separator_1' has a wrong offset!");
+static_assert(offsetof(UWBP_EventTracker_C, Separator_2) == 0x000460, "Member 'UWBP_EventTracker_C::Separator_2' has a wrong offset!");
+static_assert(offsetof(UWBP_EventTracker_C, VB_EventContent) == 0x000468, "Member 'UWBP_EventTracker_C::VB_EventContent' has a wrong offset!");
 
 }
 

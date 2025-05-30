@@ -31,9 +31,9 @@ public:
 	double                                        Max_Draw_Disance;                                  // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_Ashes_MMO_InvisibleWall(int32 EntryPoint);
-	void ReceiveBeginPlay();
 	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_Ashes_MMO_InvisibleWall(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

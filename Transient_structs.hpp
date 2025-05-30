@@ -10,11 +10,130 @@
 
 #include "Basic.hpp"
 
+#include "DesignDataPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
+#include "E_FencePosition_structs.hpp"
 
 
 namespace SDK
 {
+
+// PropertyBag Transient.PropertyBag_13f89dfc15381aad
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_13f89dfc15381aad final
+{
+public:
+	int32                                         RandomStreamSeed;                                  // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DistanceThreshold;                                 // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AverageAngleThreshold;                             // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          FlipMeshes;                                        // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        PointIncrement;                                    // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PrioritizeSmallerAroundCurves;                     // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RandomizeOrder;                                    // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CloseLoop;                                         // 0x002A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseLandscape;                                      // 0x002B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseSecondMeshList;                                 // 0x002C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                SplineOffset;                                      // 0x0030(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DebrisOffset;                                      // 0x0048(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AffectedByExclusion;                               // 0x0060(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        One;                                               // 0x0068(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Zero;                                              // 0x0070(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SnapToGround;                                      // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        FenceZOffset;                                      // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FenceNoiseDensityThreshold;                        // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Stacks;                                            // 0x0090(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        StackSpacing;                                      // 0x0098(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PruneOverlappingDebris;                            // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Dilapidation;                                      // 0x00A8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         AlternateRowOffset;                                // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_FencePosition                               SplinePosition;                                    // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         DebrisSeed;                                        // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         FenceIndex;                                        // 0x00BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseSurfaceRotations;                               // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_13f89dfc15381aad) == 0x000008, "Wrong alignment on FPropertyBag_13f89dfc15381aad");
+static_assert(sizeof(FPropertyBag_13f89dfc15381aad) == 0x0000C8, "Wrong size on FPropertyBag_13f89dfc15381aad");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, RandomStreamSeed) == 0x000000, "Member 'FPropertyBag_13f89dfc15381aad::RandomStreamSeed' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, DistanceThreshold) == 0x000008, "Member 'FPropertyBag_13f89dfc15381aad::DistanceThreshold' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, AverageAngleThreshold) == 0x000010, "Member 'FPropertyBag_13f89dfc15381aad::AverageAngleThreshold' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, FlipMeshes) == 0x000018, "Member 'FPropertyBag_13f89dfc15381aad::FlipMeshes' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, PointIncrement) == 0x000020, "Member 'FPropertyBag_13f89dfc15381aad::PointIncrement' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, PrioritizeSmallerAroundCurves) == 0x000028, "Member 'FPropertyBag_13f89dfc15381aad::PrioritizeSmallerAroundCurves' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, RandomizeOrder) == 0x000029, "Member 'FPropertyBag_13f89dfc15381aad::RandomizeOrder' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, CloseLoop) == 0x00002A, "Member 'FPropertyBag_13f89dfc15381aad::CloseLoop' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, UseLandscape) == 0x00002B, "Member 'FPropertyBag_13f89dfc15381aad::UseLandscape' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, UseSecondMeshList) == 0x00002C, "Member 'FPropertyBag_13f89dfc15381aad::UseSecondMeshList' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, SplineOffset) == 0x000030, "Member 'FPropertyBag_13f89dfc15381aad::SplineOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, DebrisOffset) == 0x000048, "Member 'FPropertyBag_13f89dfc15381aad::DebrisOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, AffectedByExclusion) == 0x000060, "Member 'FPropertyBag_13f89dfc15381aad::AffectedByExclusion' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, One) == 0x000068, "Member 'FPropertyBag_13f89dfc15381aad::One' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, Zero) == 0x000070, "Member 'FPropertyBag_13f89dfc15381aad::Zero' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, SnapToGround) == 0x000078, "Member 'FPropertyBag_13f89dfc15381aad::SnapToGround' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, FenceZOffset) == 0x000080, "Member 'FPropertyBag_13f89dfc15381aad::FenceZOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, FenceNoiseDensityThreshold) == 0x000088, "Member 'FPropertyBag_13f89dfc15381aad::FenceNoiseDensityThreshold' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, Stacks) == 0x000090, "Member 'FPropertyBag_13f89dfc15381aad::Stacks' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, StackSpacing) == 0x000098, "Member 'FPropertyBag_13f89dfc15381aad::StackSpacing' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, PruneOverlappingDebris) == 0x0000A0, "Member 'FPropertyBag_13f89dfc15381aad::PruneOverlappingDebris' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, Dilapidation) == 0x0000A8, "Member 'FPropertyBag_13f89dfc15381aad::Dilapidation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, AlternateRowOffset) == 0x0000B0, "Member 'FPropertyBag_13f89dfc15381aad::AlternateRowOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, SplinePosition) == 0x0000B4, "Member 'FPropertyBag_13f89dfc15381aad::SplinePosition' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, DebrisSeed) == 0x0000B8, "Member 'FPropertyBag_13f89dfc15381aad::DebrisSeed' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, FenceIndex) == 0x0000BC, "Member 'FPropertyBag_13f89dfc15381aad::FenceIndex' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_13f89dfc15381aad, UseSurfaceRotations) == 0x0000C0, "Member 'FPropertyBag_13f89dfc15381aad::UseSurfaceRotations' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_ec866a9abcf8171c
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_ec866a9abcf8171c final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          HasDeathRoll;                                      // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasThrash;                                         // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_ec866a9abcf8171c) == 0x000008, "Wrong alignment on FPropertyBag_ec866a9abcf8171c");
+static_assert(sizeof(FPropertyBag_ec866a9abcf8171c) == 0x0000D0, "Wrong size on FPropertyBag_ec866a9abcf8171c");
+static_assert(offsetof(FPropertyBag_ec866a9abcf8171c, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_ec866a9abcf8171c::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ec866a9abcf8171c, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_ec866a9abcf8171c::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ec866a9abcf8171c, Wander_Delay) == 0x000010, "Member 'FPropertyBag_ec866a9abcf8171c::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ec866a9abcf8171c, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_ec866a9abcf8171c::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ec866a9abcf8171c, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_ec866a9abcf8171c::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ec866a9abcf8171c, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_ec866a9abcf8171c::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ec866a9abcf8171c, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_ec866a9abcf8171c::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ec866a9abcf8171c, HasDeathRoll) == 0x0000C8, "Member 'FPropertyBag_ec866a9abcf8171c::HasDeathRoll' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ec866a9abcf8171c, HasThrash) == 0x0000C9, "Member 'FPropertyBag_ec866a9abcf8171c::HasThrash' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_72ba434b60548c8e
+// 0x0020 (0x0020 - 0x0000)
+struct FPropertyBag_72ba434b60548c8e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_72ba434b60548c8e) == 0x000008, "Wrong alignment on FPropertyBag_72ba434b60548c8e");
+static_assert(sizeof(FPropertyBag_72ba434b60548c8e) == 0x000020, "Wrong size on FPropertyBag_72ba434b60548c8e");
+static_assert(offsetof(FPropertyBag_72ba434b60548c8e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_72ba434b60548c8e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_72ba434b60548c8e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_72ba434b60548c8e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_72ba434b60548c8e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_72ba434b60548c8e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_72ba434b60548c8e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_72ba434b60548c8e::Wander_DelayDeviation' has a wrong offset!");
 
 // PropertyBag Transient.PropertyBag_0
 // 0x0000 (0x0000 - 0x0000)
@@ -24,22 +143,160 @@ struct FPropertyBag_0 final
 static_assert(alignof(FPropertyBag_0) == 0x000001, "Wrong alignment on FPropertyBag_0");
 static_assert(sizeof(FPropertyBag_0) == 0x000001, "Wrong size on FPropertyBag_0");
 
-// PropertyBag Transient.PropertyBag_8f37cd1d381a6377
-// 0x0020 (0x0020 - 0x0000)
-struct FPropertyBag_8f37cd1d381a6377 final
+// PropertyBag Transient.PropertyBag_5f677c06d1da8b7a
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_5f677c06d1da8b7a final
 {
 public:
 	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          HasGuillotine;                                     // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RefreshRetract01;                                  // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RefreshRetract02;                                  // 0x00CA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FPropertyBag_8f37cd1d381a6377) == 0x000008, "Wrong alignment on FPropertyBag_8f37cd1d381a6377");
-static_assert(sizeof(FPropertyBag_8f37cd1d381a6377) == 0x000020, "Wrong size on FPropertyBag_8f37cd1d381a6377");
-static_assert(offsetof(FPropertyBag_8f37cd1d381a6377, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_8f37cd1d381a6377::Wander_RadiusMax' has a wrong offset!");
-static_assert(offsetof(FPropertyBag_8f37cd1d381a6377, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_8f37cd1d381a6377::Wander_RadiusMin' has a wrong offset!");
-static_assert(offsetof(FPropertyBag_8f37cd1d381a6377, Wander_Delay) == 0x000010, "Member 'FPropertyBag_8f37cd1d381a6377::Wander_Delay' has a wrong offset!");
-static_assert(offsetof(FPropertyBag_8f37cd1d381a6377, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_8f37cd1d381a6377::Wander_DelayDeviation' has a wrong offset!");
+static_assert(alignof(FPropertyBag_5f677c06d1da8b7a) == 0x000008, "Wrong alignment on FPropertyBag_5f677c06d1da8b7a");
+static_assert(sizeof(FPropertyBag_5f677c06d1da8b7a) == 0x0000D0, "Wrong size on FPropertyBag_5f677c06d1da8b7a");
+static_assert(offsetof(FPropertyBag_5f677c06d1da8b7a, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_5f677c06d1da8b7a::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5f677c06d1da8b7a, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_5f677c06d1da8b7a::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5f677c06d1da8b7a, Wander_Delay) == 0x000010, "Member 'FPropertyBag_5f677c06d1da8b7a::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5f677c06d1da8b7a, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_5f677c06d1da8b7a::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5f677c06d1da8b7a, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_5f677c06d1da8b7a::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5f677c06d1da8b7a, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_5f677c06d1da8b7a::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5f677c06d1da8b7a, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_5f677c06d1da8b7a::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5f677c06d1da8b7a, HasGuillotine) == 0x0000C8, "Member 'FPropertyBag_5f677c06d1da8b7a::HasGuillotine' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5f677c06d1da8b7a, RefreshRetract01) == 0x0000C9, "Member 'FPropertyBag_5f677c06d1da8b7a::RefreshRetract01' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5f677c06d1da8b7a, RefreshRetract02) == 0x0000CA, "Member 'FPropertyBag_5f677c06d1da8b7a::RefreshRetract02' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_527011c645635f49
+// 0x0168 (0x0168 - 0x0000)
+struct FPropertyBag_527011c645635f49 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	double                                        OrbitDistance;                                     // 0x00C8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           AmbientAnimationTags;                              // 0x00D0(0x0010)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x00E0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x00E8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x00F0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BiteRange;                                         // 0x00F8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PounceRange;                                       // 0x0100(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PounceSequenceMinRange;                            // 0x0108(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PounceSequenceMaxRange;                            // 0x0110(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanPounce;                                         // 0x0118(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanHowl;                                           // 0x0119(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanRageHowl;                                       // 0x011A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanGrowl;                                          // 0x011B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanArrowDash;                                      // 0x011C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSpiritAid;                                      // 0x011D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11E[0x2];                                      // 0x011E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCAbilityId                          Bite;                                              // 0x0120(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          Pounce;                                            // 0x0138(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          ArrowDash;                                         // 0x0150(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_527011c645635f49) == 0x000008, "Wrong alignment on FPropertyBag_527011c645635f49");
+static_assert(sizeof(FPropertyBag_527011c645635f49) == 0x000168, "Wrong size on FPropertyBag_527011c645635f49");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_527011c645635f49::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_527011c645635f49::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Wander_Delay) == 0x000010, "Member 'FPropertyBag_527011c645635f49::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_527011c645635f49::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_527011c645635f49::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_527011c645635f49::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_527011c645635f49::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, OrbitDistance) == 0x0000C8, "Member 'FPropertyBag_527011c645635f49::OrbitDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, AmbientAnimationTags) == 0x0000D0, "Member 'FPropertyBag_527011c645635f49::AmbientAnimationTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Idle_AmbientAnimDelay) == 0x0000E0, "Member 'FPropertyBag_527011c645635f49::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Idle_AmbientAnimDelayDeviation) == 0x0000E8, "Member 'FPropertyBag_527011c645635f49::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Idle_AmbientAnimCooldown) == 0x0000F0, "Member 'FPropertyBag_527011c645635f49::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, BiteRange) == 0x0000F8, "Member 'FPropertyBag_527011c645635f49::BiteRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, PounceRange) == 0x000100, "Member 'FPropertyBag_527011c645635f49::PounceRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, PounceSequenceMinRange) == 0x000108, "Member 'FPropertyBag_527011c645635f49::PounceSequenceMinRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, PounceSequenceMaxRange) == 0x000110, "Member 'FPropertyBag_527011c645635f49::PounceSequenceMaxRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, CanPounce) == 0x000118, "Member 'FPropertyBag_527011c645635f49::CanPounce' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, CanHowl) == 0x000119, "Member 'FPropertyBag_527011c645635f49::CanHowl' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, CanRageHowl) == 0x00011A, "Member 'FPropertyBag_527011c645635f49::CanRageHowl' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, CanGrowl) == 0x00011B, "Member 'FPropertyBag_527011c645635f49::CanGrowl' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, CanArrowDash) == 0x00011C, "Member 'FPropertyBag_527011c645635f49::CanArrowDash' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, CanSpiritAid) == 0x00011D, "Member 'FPropertyBag_527011c645635f49::CanSpiritAid' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Bite) == 0x000120, "Member 'FPropertyBag_527011c645635f49::Bite' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, Pounce) == 0x000138, "Member 'FPropertyBag_527011c645635f49::Pounce' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_527011c645635f49, ArrowDash) == 0x000150, "Member 'FPropertyBag_527011c645635f49::ArrowDash' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_3aeea5b17ee55e23
+// 0x00E8 (0x00E8 - 0x0000)
+struct FPropertyBag_3aeea5b17ee55e23 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanSpawnKids;                                      // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ArrivalDistance;                                   // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanMushroomMissile;                                // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0090(0x0050)(Edit)
+	bool                                          UseBlindSpores;                                    // 0x00E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseParalyzeSpores;                                 // 0x00E1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UsePoisonSpores;                                   // 0x00E2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ambush;                                            // 0x00E3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_3aeea5b17ee55e23) == 0x000008, "Wrong alignment on FPropertyBag_3aeea5b17ee55e23");
+static_assert(sizeof(FPropertyBag_3aeea5b17ee55e23) == 0x0000E8, "Wrong size on FPropertyBag_3aeea5b17ee55e23");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_3aeea5b17ee55e23::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_3aeea5b17ee55e23::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, Wander_Delay) == 0x000010, "Member 'FPropertyBag_3aeea5b17ee55e23::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_3aeea5b17ee55e23::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_3aeea5b17ee55e23::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_3aeea5b17ee55e23::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, CanSpawnKids) == 0x000078, "Member 'FPropertyBag_3aeea5b17ee55e23::CanSpawnKids' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, ArrivalDistance) == 0x000080, "Member 'FPropertyBag_3aeea5b17ee55e23::ArrivalDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, CanMushroomMissile) == 0x000088, "Member 'FPropertyBag_3aeea5b17ee55e23::CanMushroomMissile' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, Wander_SpeedMultiplier) == 0x000090, "Member 'FPropertyBag_3aeea5b17ee55e23::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, UseBlindSpores) == 0x0000E0, "Member 'FPropertyBag_3aeea5b17ee55e23::UseBlindSpores' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, UseParalyzeSpores) == 0x0000E1, "Member 'FPropertyBag_3aeea5b17ee55e23::UseParalyzeSpores' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, UsePoisonSpores) == 0x0000E2, "Member 'FPropertyBag_3aeea5b17ee55e23::UsePoisonSpores' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3aeea5b17ee55e23, Ambush) == 0x0000E3, "Member 'FPropertyBag_3aeea5b17ee55e23::Ambush' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4b0a544341f1f1e2
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_4b0a544341f1f1e2 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_4b0a544341f1f1e2) == 0x000008, "Wrong alignment on FPropertyBag_4b0a544341f1f1e2");
+static_assert(sizeof(FPropertyBag_4b0a544341f1f1e2) == 0x0000C8, "Wrong size on FPropertyBag_4b0a544341f1f1e2");
+static_assert(offsetof(FPropertyBag_4b0a544341f1f1e2, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_4b0a544341f1f1e2::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b0a544341f1f1e2, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_4b0a544341f1f1e2::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b0a544341f1f1e2, Wander_Delay) == 0x000010, "Member 'FPropertyBag_4b0a544341f1f1e2::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b0a544341f1f1e2, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_4b0a544341f1f1e2::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b0a544341f1f1e2, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_4b0a544341f1f1e2::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b0a544341f1f1e2, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_4b0a544341f1f1e2::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b0a544341f1f1e2, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_4b0a544341f1f1e2::Wander_SpeedMultiplier' has a wrong offset!");
 
 // ScriptStruct Transient.HoudiniEvent_SWC
 // 0x0048 (0x0048 - 0x0000)
@@ -68,6 +325,61 @@ static_assert(offsetof(FHoudiniEvent_SWC, LIFE) == 0x000030, "Member 'FHoudiniEv
 static_assert(offsetof(FHoudiniEvent_SWC, Color) == 0x000034, "Member 'FHoudiniEvent_SWC::Color' has a wrong offset!");
 static_assert(offsetof(FHoudiniEvent_SWC, Type) == 0x000044, "Member 'FHoudiniEvent_SWC::Type' has a wrong offset!");
 
+// PropertyBag Transient.PropertyBag_aa493a5d0cd2da6a
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_aa493a5d0cd2da6a final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          CanSmellofBlood;                                   // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanRepeatCourage;                                  // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_aa493a5d0cd2da6a) == 0x000008, "Wrong alignment on FPropertyBag_aa493a5d0cd2da6a");
+static_assert(sizeof(FPropertyBag_aa493a5d0cd2da6a) == 0x0000D0, "Wrong size on FPropertyBag_aa493a5d0cd2da6a");
+static_assert(offsetof(FPropertyBag_aa493a5d0cd2da6a, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_aa493a5d0cd2da6a::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aa493a5d0cd2da6a, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_aa493a5d0cd2da6a::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aa493a5d0cd2da6a, Wander_Delay) == 0x000010, "Member 'FPropertyBag_aa493a5d0cd2da6a::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aa493a5d0cd2da6a, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_aa493a5d0cd2da6a::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aa493a5d0cd2da6a, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_aa493a5d0cd2da6a::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aa493a5d0cd2da6a, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_aa493a5d0cd2da6a::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aa493a5d0cd2da6a, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_aa493a5d0cd2da6a::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aa493a5d0cd2da6a, CanSmellofBlood) == 0x0000C8, "Member 'FPropertyBag_aa493a5d0cd2da6a::CanSmellofBlood' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aa493a5d0cd2da6a, CanRepeatCourage) == 0x0000C9, "Member 'FPropertyBag_aa493a5d0cd2da6a::CanRepeatCourage' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_de055f17aada576b
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_de055f17aada576b final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          UnburyOnAggro;                                     // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_de055f17aada576b) == 0x000008, "Wrong alignment on FPropertyBag_de055f17aada576b");
+static_assert(sizeof(FPropertyBag_de055f17aada576b) == 0x0000D0, "Wrong size on FPropertyBag_de055f17aada576b");
+static_assert(offsetof(FPropertyBag_de055f17aada576b, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_de055f17aada576b::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_de055f17aada576b, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_de055f17aada576b::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_de055f17aada576b, Wander_Delay) == 0x000010, "Member 'FPropertyBag_de055f17aada576b::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_de055f17aada576b, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_de055f17aada576b::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_de055f17aada576b, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_de055f17aada576b::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_de055f17aada576b, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_de055f17aada576b::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_de055f17aada576b, UnburyOnAggro) == 0x000078, "Member 'FPropertyBag_de055f17aada576b::UnburyOnAggro' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_de055f17aada576b, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_de055f17aada576b::Wander_SpeedMultiplier' has a wrong offset!");
+
 // ScriptStruct Transient.ChaosDestructionEvent_SWC
 // 0x0044 (0x0044 - 0x0000)
 struct FChaosDestructionEvent_SWC final
@@ -94,6 +406,3903 @@ static_assert(offsetof(FChaosDestructionEvent_SWC, ExtentMax) == 0x000034, "Memb
 static_assert(offsetof(FChaosDestructionEvent_SWC, ParticleID) == 0x000038, "Member 'FChaosDestructionEvent_SWC::ParticleID' has a wrong offset!");
 static_assert(offsetof(FChaosDestructionEvent_SWC, Time) == 0x00003C, "Member 'FChaosDestructionEvent_SWC::Time' has a wrong offset!");
 static_assert(offsetof(FChaosDestructionEvent_SWC, Type) == 0x000040, "Member 'FChaosDestructionEvent_SWC::Type' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e48dc0b454ef185f
+// 0x00E0 (0x00E0 - 0x0000)
+struct FPropertyBag_e48dc0b454ef185f final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          CanSkull;                                          // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ambush;                                            // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Dormant;                                           // 0x00CA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB[0x5];                                       // 0x00CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MeleeDistance;                                     // 0x00D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanDuplicate;                                      // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_e48dc0b454ef185f) == 0x000008, "Wrong alignment on FPropertyBag_e48dc0b454ef185f");
+static_assert(sizeof(FPropertyBag_e48dc0b454ef185f) == 0x0000E0, "Wrong size on FPropertyBag_e48dc0b454ef185f");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_e48dc0b454ef185f::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_e48dc0b454ef185f::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, Wander_Delay) == 0x000010, "Member 'FPropertyBag_e48dc0b454ef185f::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_e48dc0b454ef185f::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_e48dc0b454ef185f::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_e48dc0b454ef185f::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_e48dc0b454ef185f::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, CanSkull) == 0x0000C8, "Member 'FPropertyBag_e48dc0b454ef185f::CanSkull' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, Ambush) == 0x0000C9, "Member 'FPropertyBag_e48dc0b454ef185f::Ambush' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, Dormant) == 0x0000CA, "Member 'FPropertyBag_e48dc0b454ef185f::Dormant' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, MeleeDistance) == 0x0000D0, "Member 'FPropertyBag_e48dc0b454ef185f::MeleeDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e48dc0b454ef185f, CanDuplicate) == 0x0000D8, "Member 'FPropertyBag_e48dc0b454ef185f::CanDuplicate' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_bdc0d003074d8353
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_bdc0d003074d8353 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          IsInvulnerable;                                    // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsTargetable;                                      // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsNameplateDrawn;                                  // 0x007A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_bdc0d003074d8353) == 0x000008, "Wrong alignment on FPropertyBag_bdc0d003074d8353");
+static_assert(sizeof(FPropertyBag_bdc0d003074d8353) == 0x0000D0, "Wrong size on FPropertyBag_bdc0d003074d8353");
+static_assert(offsetof(FPropertyBag_bdc0d003074d8353, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_bdc0d003074d8353::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bdc0d003074d8353, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_bdc0d003074d8353::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bdc0d003074d8353, Wander_Delay) == 0x000010, "Member 'FPropertyBag_bdc0d003074d8353::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bdc0d003074d8353, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_bdc0d003074d8353::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bdc0d003074d8353, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_bdc0d003074d8353::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bdc0d003074d8353, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_bdc0d003074d8353::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bdc0d003074d8353, IsInvulnerable) == 0x000078, "Member 'FPropertyBag_bdc0d003074d8353::IsInvulnerable' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bdc0d003074d8353, IsTargetable) == 0x000079, "Member 'FPropertyBag_bdc0d003074d8353::IsTargetable' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bdc0d003074d8353, IsNameplateDrawn) == 0x00007A, "Member 'FPropertyBag_bdc0d003074d8353::IsNameplateDrawn' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bdc0d003074d8353, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_bdc0d003074d8353::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_a4e45c02f2f25e78
+// 0x0078 (0x0078 - 0x0000)
+struct FPropertyBag_a4e45c02f2f25e78 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_a4e45c02f2f25e78) == 0x000008, "Wrong alignment on FPropertyBag_a4e45c02f2f25e78");
+static_assert(sizeof(FPropertyBag_a4e45c02f2f25e78) == 0x000078, "Wrong size on FPropertyBag_a4e45c02f2f25e78");
+static_assert(offsetof(FPropertyBag_a4e45c02f2f25e78, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_a4e45c02f2f25e78::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4e45c02f2f25e78, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_a4e45c02f2f25e78::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4e45c02f2f25e78, Wander_Delay) == 0x000010, "Member 'FPropertyBag_a4e45c02f2f25e78::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4e45c02f2f25e78, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_a4e45c02f2f25e78::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4e45c02f2f25e78, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_a4e45c02f2f25e78::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4e45c02f2f25e78, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_a4e45c02f2f25e78::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_a52cb2c844faa31e
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_a52cb2c844faa31e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_a52cb2c844faa31e) == 0x000008, "Wrong alignment on FPropertyBag_a52cb2c844faa31e");
+static_assert(sizeof(FPropertyBag_a52cb2c844faa31e) == 0x0000C8, "Wrong size on FPropertyBag_a52cb2c844faa31e");
+static_assert(offsetof(FPropertyBag_a52cb2c844faa31e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_a52cb2c844faa31e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a52cb2c844faa31e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_a52cb2c844faa31e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a52cb2c844faa31e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_a52cb2c844faa31e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a52cb2c844faa31e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_a52cb2c844faa31e::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a52cb2c844faa31e, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_a52cb2c844faa31e::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a52cb2c844faa31e, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_a52cb2c844faa31e::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a52cb2c844faa31e, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_a52cb2c844faa31e::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4482fabf999c2590
+// 0x00F0 (0x00F0 - 0x0000)
+struct FPropertyBag_4482fabf999c2590 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ambusher;                                          // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        AmbushAlertRadius;                                 // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RandomAmbushPose;                                  // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceAmbush01;                                     // 0x0031(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceAmbush02;                                     // 0x0032(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceAmbush03;                                     // 0x0033(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceAmbush04;                                     // 0x0034(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0035(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0038(0x0050)(Edit)
+	double                                        ChanceOnSpawn_ShieldEquipped;                      // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ChanceOnSpawn_SpiritOfTheUndying;                  // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ChanceOnSpawn_BlackLung;                           // 0x0098(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00A0(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_4482fabf999c2590) == 0x000008, "Wrong alignment on FPropertyBag_4482fabf999c2590");
+static_assert(sizeof(FPropertyBag_4482fabf999c2590) == 0x0000F0, "Wrong size on FPropertyBag_4482fabf999c2590");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_4482fabf999c2590::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_4482fabf999c2590::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, Wander_Delay) == 0x000010, "Member 'FPropertyBag_4482fabf999c2590::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_4482fabf999c2590::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, Ambusher) == 0x000020, "Member 'FPropertyBag_4482fabf999c2590::Ambusher' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, AmbushAlertRadius) == 0x000028, "Member 'FPropertyBag_4482fabf999c2590::AmbushAlertRadius' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, RandomAmbushPose) == 0x000030, "Member 'FPropertyBag_4482fabf999c2590::RandomAmbushPose' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, ForceAmbush01) == 0x000031, "Member 'FPropertyBag_4482fabf999c2590::ForceAmbush01' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, ForceAmbush02) == 0x000032, "Member 'FPropertyBag_4482fabf999c2590::ForceAmbush02' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, ForceAmbush03) == 0x000033, "Member 'FPropertyBag_4482fabf999c2590::ForceAmbush03' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, ForceAmbush04) == 0x000034, "Member 'FPropertyBag_4482fabf999c2590::ForceAmbush04' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, Patrol_RouteStrategy) == 0x000035, "Member 'FPropertyBag_4482fabf999c2590::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, Patrol_PathingSpeedMultiplier) == 0x000038, "Member 'FPropertyBag_4482fabf999c2590::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, ChanceOnSpawn_ShieldEquipped) == 0x000088, "Member 'FPropertyBag_4482fabf999c2590::ChanceOnSpawn_ShieldEquipped' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, ChanceOnSpawn_SpiritOfTheUndying) == 0x000090, "Member 'FPropertyBag_4482fabf999c2590::ChanceOnSpawn_SpiritOfTheUndying' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, ChanceOnSpawn_BlackLung) == 0x000098, "Member 'FPropertyBag_4482fabf999c2590::ChanceOnSpawn_BlackLung' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4482fabf999c2590, Wander_SpeedMultiplier) == 0x0000A0, "Member 'FPropertyBag_4482fabf999c2590::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_8b00b20962b0b04
+// 0x00B0 (0x00B0 - 0x0000)
+struct FPropertyBag_8b00b20962b0b04 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        MeleeDistance;                                     // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OrbitDistance;                                     // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OrbitStopDistance;                                 // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OrbitMinDuration;                                  // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeapDistance;                                      // 0x0098(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSandArmor;                                      // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanDeathExplosion;                                 // 0x00A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanAbsorption;                                     // 0x00A2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A3[0x5];                                       // 0x00A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TailStingChance;                                   // 0x00A8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_8b00b20962b0b04) == 0x000008, "Wrong alignment on FPropertyBag_8b00b20962b0b04");
+static_assert(sizeof(FPropertyBag_8b00b20962b0b04) == 0x0000B0, "Wrong size on FPropertyBag_8b00b20962b0b04");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_8b00b20962b0b04::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_8b00b20962b0b04::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, Wander_Delay) == 0x000010, "Member 'FPropertyBag_8b00b20962b0b04::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_8b00b20962b0b04::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_8b00b20962b0b04::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_8b00b20962b0b04::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, MeleeDistance) == 0x000078, "Member 'FPropertyBag_8b00b20962b0b04::MeleeDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, OrbitDistance) == 0x000080, "Member 'FPropertyBag_8b00b20962b0b04::OrbitDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, OrbitStopDistance) == 0x000088, "Member 'FPropertyBag_8b00b20962b0b04::OrbitStopDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, OrbitMinDuration) == 0x000090, "Member 'FPropertyBag_8b00b20962b0b04::OrbitMinDuration' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, LeapDistance) == 0x000098, "Member 'FPropertyBag_8b00b20962b0b04::LeapDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, CanSandArmor) == 0x0000A0, "Member 'FPropertyBag_8b00b20962b0b04::CanSandArmor' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, CanDeathExplosion) == 0x0000A1, "Member 'FPropertyBag_8b00b20962b0b04::CanDeathExplosion' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, CanAbsorption) == 0x0000A2, "Member 'FPropertyBag_8b00b20962b0b04::CanAbsorption' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b00b20962b0b04, TailStingChance) == 0x0000A8, "Member 'FPropertyBag_8b00b20962b0b04::TailStingChance' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_bb1aedd566133e63
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_bb1aedd566133e63 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0020(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0070(0x0050)(Edit)
+	bool                                          CanUseDisintegrate;                                // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseAntiMagicShield;                             // 0x00C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_bb1aedd566133e63) == 0x000008, "Wrong alignment on FPropertyBag_bb1aedd566133e63");
+static_assert(sizeof(FPropertyBag_bb1aedd566133e63) == 0x0000C8, "Wrong size on FPropertyBag_bb1aedd566133e63");
+static_assert(offsetof(FPropertyBag_bb1aedd566133e63, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_bb1aedd566133e63::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb1aedd566133e63, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_bb1aedd566133e63::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb1aedd566133e63, Wander_Delay) == 0x000010, "Member 'FPropertyBag_bb1aedd566133e63::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb1aedd566133e63, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_bb1aedd566133e63::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb1aedd566133e63, Patrol_PathingSpeedMultiplier) == 0x000020, "Member 'FPropertyBag_bb1aedd566133e63::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb1aedd566133e63, Wander_SpeedMultiplier) == 0x000070, "Member 'FPropertyBag_bb1aedd566133e63::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb1aedd566133e63, CanUseDisintegrate) == 0x0000C0, "Member 'FPropertyBag_bb1aedd566133e63::CanUseDisintegrate' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb1aedd566133e63, CanUseAntiMagicShield) == 0x0000C1, "Member 'FPropertyBag_bb1aedd566133e63::CanUseAntiMagicShield' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_94459745042fd975
+// 0x0180 (0x0180 - 0x0000)
+struct FPropertyBag_94459745042fd975 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          IsAmbusher;                                        // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Ambush_AlertRadius;                                // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0088(0x0050)(Edit)
+	bool                                          Spiritfire;                                        // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MeleeRange;                                        // 0x00E0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          Slam;                                              // 0x00E8(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          FireBreath;                                        // 0x0100(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          BurstingCharge_KindledFlame;                       // 0x0118(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          BurstingCharge;                                    // 0x0130(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          KindledFlame;                                      // 0x0148(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanKindledFlame;                                   // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        FlameBlastChance;                                  // 0x0168(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BurstingChargeChance;                              // 0x0170(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FireBreathChance;                                  // 0x0178(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_94459745042fd975) == 0x000008, "Wrong alignment on FPropertyBag_94459745042fd975");
+static_assert(sizeof(FPropertyBag_94459745042fd975) == 0x000180, "Wrong size on FPropertyBag_94459745042fd975");
+static_assert(offsetof(FPropertyBag_94459745042fd975, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_94459745042fd975::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_94459745042fd975::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, Wander_Delay) == 0x000010, "Member 'FPropertyBag_94459745042fd975::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_94459745042fd975::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_94459745042fd975::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_94459745042fd975::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, IsAmbusher) == 0x000078, "Member 'FPropertyBag_94459745042fd975::IsAmbusher' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, Ambush_AlertRadius) == 0x000080, "Member 'FPropertyBag_94459745042fd975::Ambush_AlertRadius' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, Wander_SpeedMultiplier) == 0x000088, "Member 'FPropertyBag_94459745042fd975::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, Spiritfire) == 0x0000D8, "Member 'FPropertyBag_94459745042fd975::Spiritfire' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, MeleeRange) == 0x0000E0, "Member 'FPropertyBag_94459745042fd975::MeleeRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, Slam) == 0x0000E8, "Member 'FPropertyBag_94459745042fd975::Slam' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, FireBreath) == 0x000100, "Member 'FPropertyBag_94459745042fd975::FireBreath' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, BurstingCharge_KindledFlame) == 0x000118, "Member 'FPropertyBag_94459745042fd975::BurstingCharge_KindledFlame' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, BurstingCharge) == 0x000130, "Member 'FPropertyBag_94459745042fd975::BurstingCharge' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, KindledFlame) == 0x000148, "Member 'FPropertyBag_94459745042fd975::KindledFlame' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, CanKindledFlame) == 0x000160, "Member 'FPropertyBag_94459745042fd975::CanKindledFlame' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, FlameBlastChance) == 0x000168, "Member 'FPropertyBag_94459745042fd975::FlameBlastChance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, BurstingChargeChance) == 0x000170, "Member 'FPropertyBag_94459745042fd975::BurstingChargeChance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_94459745042fd975, FireBreathChance) == 0x000178, "Member 'FPropertyBag_94459745042fd975::FireBreathChance' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e7b7ee323bbed05f
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_e7b7ee323bbed05f final
+{
+public:
+	bool                                          SpawnsSpiderlings;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEntangle;                                       // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasVenomSpray;                                     // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Wander_RadiusMax;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0030(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_e7b7ee323bbed05f) == 0x000008, "Wrong alignment on FPropertyBag_e7b7ee323bbed05f");
+static_assert(sizeof(FPropertyBag_e7b7ee323bbed05f) == 0x0000D0, "Wrong size on FPropertyBag_e7b7ee323bbed05f");
+static_assert(offsetof(FPropertyBag_e7b7ee323bbed05f, SpawnsSpiderlings) == 0x000000, "Member 'FPropertyBag_e7b7ee323bbed05f::SpawnsSpiderlings' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7b7ee323bbed05f, HasEntangle) == 0x000001, "Member 'FPropertyBag_e7b7ee323bbed05f::HasEntangle' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7b7ee323bbed05f, HasVenomSpray) == 0x000002, "Member 'FPropertyBag_e7b7ee323bbed05f::HasVenomSpray' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7b7ee323bbed05f, Wander_RadiusMax) == 0x000008, "Member 'FPropertyBag_e7b7ee323bbed05f::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7b7ee323bbed05f, Wander_RadiusMin) == 0x000010, "Member 'FPropertyBag_e7b7ee323bbed05f::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7b7ee323bbed05f, Wander_Delay) == 0x000018, "Member 'FPropertyBag_e7b7ee323bbed05f::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7b7ee323bbed05f, Wander_DelayDeviation) == 0x000020, "Member 'FPropertyBag_e7b7ee323bbed05f::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7b7ee323bbed05f, Patrol_RouteStrategy) == 0x000028, "Member 'FPropertyBag_e7b7ee323bbed05f::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7b7ee323bbed05f, Patrol_PathingSpeedMultiplier) == 0x000030, "Member 'FPropertyBag_e7b7ee323bbed05f::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7b7ee323bbed05f, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_e7b7ee323bbed05f::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_75a930cfb804044a
+// 0x0010 (0x0010 - 0x0000)
+struct FPropertyBag_75a930cfb804044a final
+{
+public:
+	double                                        WidthAdjustment;                                   // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        One;                                               // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_75a930cfb804044a) == 0x000008, "Wrong alignment on FPropertyBag_75a930cfb804044a");
+static_assert(sizeof(FPropertyBag_75a930cfb804044a) == 0x000010, "Wrong size on FPropertyBag_75a930cfb804044a");
+static_assert(offsetof(FPropertyBag_75a930cfb804044a, WidthAdjustment) == 0x000000, "Member 'FPropertyBag_75a930cfb804044a::WidthAdjustment' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_75a930cfb804044a, One) == 0x000008, "Member 'FPropertyBag_75a930cfb804044a::One' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4d5a961777a6fd59
+// 0x02C0 (0x02C0 - 0x0000)
+struct FPropertyBag_4d5a961777a6fd59 final
+{
+public:
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_A;                                    // 0x0000(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_B;                                    // 0x0028(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_C;                                    // 0x0050(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_D;                                    // 0x0078(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_E;                                    // 0x00A0(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_F;                                    // 0x00C8(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_G;                                    // 0x00F0(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_H;                                    // 0x0118(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_I;                                    // 0x0140(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_J;                                    // 0x0168(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_K;                                    // 0x0190(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_L;                                    // 0x01B8(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_M;                                    // 0x01E0(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_N;                                    // 0x0208(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_O;                                    // 0x0230(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_P;                                    // 0x0258(0x0028)(Edit, HasGetValueTypeHash)
+	bool                                          ShouldOverride;                                    // 0x0280(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Negative1;                                         // 0x0288(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ResourceIslandExtents;                             // 0x0290(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Zero;                                              // 0x0298(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29C[0x4];                                      // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        RoadWidthAdjustment;                               // 0x02A0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        One;                                               // 0x02A8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SpacingMulti;                                      // 0x02B0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ZExtent;                                           // 0x02B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_4d5a961777a6fd59) == 0x000008, "Wrong alignment on FPropertyBag_4d5a961777a6fd59");
+static_assert(sizeof(FPropertyBag_4d5a961777a6fd59) == 0x0002C0, "Wrong size on FPropertyBag_4d5a961777a6fd59");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_A) == 0x000000, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_A' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_B) == 0x000028, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_B' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_C) == 0x000050, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_C' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_D) == 0x000078, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_D' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_E) == 0x0000A0, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_E' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_F) == 0x0000C8, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_F' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_G) == 0x0000F0, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_G' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_H) == 0x000118, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_H' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_I) == 0x000140, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_I' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_J) == 0x000168, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_J' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_K) == 0x000190, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_K' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_L) == 0x0001B8, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_L' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_M) == 0x0001E0, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_M' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_N) == 0x000208, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_N' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_O) == 0x000230, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_O' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, FoliageAsset_P) == 0x000258, "Member 'FPropertyBag_4d5a961777a6fd59::FoliageAsset_P' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, ShouldOverride) == 0x000280, "Member 'FPropertyBag_4d5a961777a6fd59::ShouldOverride' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, Negative1) == 0x000288, "Member 'FPropertyBag_4d5a961777a6fd59::Negative1' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, ResourceIslandExtents) == 0x000290, "Member 'FPropertyBag_4d5a961777a6fd59::ResourceIslandExtents' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, Zero) == 0x000298, "Member 'FPropertyBag_4d5a961777a6fd59::Zero' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, RoadWidthAdjustment) == 0x0002A0, "Member 'FPropertyBag_4d5a961777a6fd59::RoadWidthAdjustment' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, One) == 0x0002A8, "Member 'FPropertyBag_4d5a961777a6fd59::One' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, SpacingMulti) == 0x0002B0, "Member 'FPropertyBag_4d5a961777a6fd59::SpacingMulti' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4d5a961777a6fd59, ZExtent) == 0x0002B8, "Member 'FPropertyBag_4d5a961777a6fd59::ZExtent' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_f76583cf2132df74
+// 0x0208 (0x0208 - 0x0000)
+struct FPropertyBag_f76583cf2132df74 final
+{
+public:
+	int32                                         LeftRandomStreamSeed;                              // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LeftDistanceThreshold;                             // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeftAverageAngleThreshold;                         // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftFlipMeshes;                                    // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LeftPointIncrement;                                // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftPrioritizeSmallerAroundCurves;                 // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftRandomizeOrder;                                // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftCloseLoop;                                     // 0x002A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftUseLandscape;                                  // 0x002B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RightRandomStreamSeed;                             // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightDistanceThreshold;                            // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightAverageAngleThreshold;                        // 0x0038(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RightFlipMeshes;                                   // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        RightPointIncrement;                               // 0x0048(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RightPrioritizeSmallerAroundCurves;                // 0x0050(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RightRandomizeOrder;                               // 0x0051(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RightCloseLoop;                                    // 0x0052(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RightUseLandscape;                                 // 0x0053(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TRUE_0;                                            // 0x0054(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LeftSplineOffset;                                  // 0x0058(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                RightSplineOffset;                                 // 0x0070(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LeftDebrisOffset;                                  // 0x0088(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                RightDebrisOffset;                                 // 0x00A0(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TerrainSeed;                                       // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TerrainDensity;                                    // 0x00C0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TerrainWidth;                                      // 0x00C8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TerrainZOffsetMin;                                 // 0x00D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        NegOne;                                            // 0x00D8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                TrackSpacingRange;                                 // 0x00E0(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TrackWidthVariation;                               // 0x00F8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GrassMeshDensity;                                  // 0x0100(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxTrackWidthScale;                                // 0x0108(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MinTrackWidthScale;                                // 0x0110(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                GrassScaleRange;                                   // 0x0118(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GrassZOffset;                                      // 0x0130(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GrassRandomRange;                                  // 0x0138(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftSnapToGround;                                  // 0x0140(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RightSnapToGround;                                 // 0x0141(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_142[0x6];                                      // 0x0142(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LeftFenceZOffset;                                  // 0x0148(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightFenceZOffset;                                 // 0x0150(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableTerrain;                                     // 0x0158(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        RightFenceDensityThreshold;                        // 0x0160(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeftFenceDensityThreshold;                         // 0x0168(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LeftStacks;                                        // 0x0170(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RightStacks;                                       // 0x0174(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeftStackSpacing;                                  // 0x0178(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightStackSpacing;                                 // 0x0180(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeftDilapidation;                                  // 0x0188(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightDilapidation;                                 // 0x0190(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftPruneOverlapDebris;                            // 0x0198(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RightPruneOverlapDebris;                           // 0x0199(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19A[0x2];                                      // 0x019A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         LeftAlternateRowOffset;                            // 0x019C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RightAlternateRowOffset;                           // 0x01A0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftAffectedByExclusion;                           // 0x01A4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RightAffectedByExclusion;                          // 0x01A5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GrassAffectedByExclusion;                          // 0x01A6(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_FencePosition                               LeftFencePosition;                                 // 0x01A7(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_FencePosition                               RightFencePosition;                                // 0x01A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        GrassRoadDensity;                                  // 0x01B0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 TerrainObject;                                     // 0x01B8(0x0028)(Edit, HasGetValueTypeHash)
+	double                                        TerrainZOffsetMax;                                 // 0x01E0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LeftDebrisSeed;                                    // 0x01E8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RightDebrisSeed;                                   // 0x01EC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableGrass;                                       // 0x01F0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F1[0x3];                                      // 0x01F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         GrassSeed;                                         // 0x01F4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SplineIndex;                                       // 0x01F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftGrass;                                         // 0x01FC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          MiddleGrass;                                       // 0x01FD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RightGrass;                                        // 0x01FE(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftDebrisUseSurfaceRotations;                     // 0x01FF(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RightDebrisUseSurfaceRotations;                    // 0x0200(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_f76583cf2132df74) == 0x000008, "Wrong alignment on FPropertyBag_f76583cf2132df74");
+static_assert(sizeof(FPropertyBag_f76583cf2132df74) == 0x000208, "Wrong size on FPropertyBag_f76583cf2132df74");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftRandomStreamSeed) == 0x000000, "Member 'FPropertyBag_f76583cf2132df74::LeftRandomStreamSeed' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftDistanceThreshold) == 0x000008, "Member 'FPropertyBag_f76583cf2132df74::LeftDistanceThreshold' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftAverageAngleThreshold) == 0x000010, "Member 'FPropertyBag_f76583cf2132df74::LeftAverageAngleThreshold' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftFlipMeshes) == 0x000018, "Member 'FPropertyBag_f76583cf2132df74::LeftFlipMeshes' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftPointIncrement) == 0x000020, "Member 'FPropertyBag_f76583cf2132df74::LeftPointIncrement' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftPrioritizeSmallerAroundCurves) == 0x000028, "Member 'FPropertyBag_f76583cf2132df74::LeftPrioritizeSmallerAroundCurves' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftRandomizeOrder) == 0x000029, "Member 'FPropertyBag_f76583cf2132df74::LeftRandomizeOrder' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftCloseLoop) == 0x00002A, "Member 'FPropertyBag_f76583cf2132df74::LeftCloseLoop' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftUseLandscape) == 0x00002B, "Member 'FPropertyBag_f76583cf2132df74::LeftUseLandscape' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightRandomStreamSeed) == 0x00002C, "Member 'FPropertyBag_f76583cf2132df74::RightRandomStreamSeed' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightDistanceThreshold) == 0x000030, "Member 'FPropertyBag_f76583cf2132df74::RightDistanceThreshold' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightAverageAngleThreshold) == 0x000038, "Member 'FPropertyBag_f76583cf2132df74::RightAverageAngleThreshold' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightFlipMeshes) == 0x000040, "Member 'FPropertyBag_f76583cf2132df74::RightFlipMeshes' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightPointIncrement) == 0x000048, "Member 'FPropertyBag_f76583cf2132df74::RightPointIncrement' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightPrioritizeSmallerAroundCurves) == 0x000050, "Member 'FPropertyBag_f76583cf2132df74::RightPrioritizeSmallerAroundCurves' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightRandomizeOrder) == 0x000051, "Member 'FPropertyBag_f76583cf2132df74::RightRandomizeOrder' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightCloseLoop) == 0x000052, "Member 'FPropertyBag_f76583cf2132df74::RightCloseLoop' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightUseLandscape) == 0x000053, "Member 'FPropertyBag_f76583cf2132df74::RightUseLandscape' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, TRUE_0) == 0x000054, "Member 'FPropertyBag_f76583cf2132df74::TRUE_0' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftSplineOffset) == 0x000058, "Member 'FPropertyBag_f76583cf2132df74::LeftSplineOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightSplineOffset) == 0x000070, "Member 'FPropertyBag_f76583cf2132df74::RightSplineOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftDebrisOffset) == 0x000088, "Member 'FPropertyBag_f76583cf2132df74::LeftDebrisOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightDebrisOffset) == 0x0000A0, "Member 'FPropertyBag_f76583cf2132df74::RightDebrisOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, TerrainSeed) == 0x0000B8, "Member 'FPropertyBag_f76583cf2132df74::TerrainSeed' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, TerrainDensity) == 0x0000C0, "Member 'FPropertyBag_f76583cf2132df74::TerrainDensity' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, TerrainWidth) == 0x0000C8, "Member 'FPropertyBag_f76583cf2132df74::TerrainWidth' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, TerrainZOffsetMin) == 0x0000D0, "Member 'FPropertyBag_f76583cf2132df74::TerrainZOffsetMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, NegOne) == 0x0000D8, "Member 'FPropertyBag_f76583cf2132df74::NegOne' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, TrackSpacingRange) == 0x0000E0, "Member 'FPropertyBag_f76583cf2132df74::TrackSpacingRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, TrackWidthVariation) == 0x0000F8, "Member 'FPropertyBag_f76583cf2132df74::TrackWidthVariation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, GrassMeshDensity) == 0x000100, "Member 'FPropertyBag_f76583cf2132df74::GrassMeshDensity' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, MaxTrackWidthScale) == 0x000108, "Member 'FPropertyBag_f76583cf2132df74::MaxTrackWidthScale' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, MinTrackWidthScale) == 0x000110, "Member 'FPropertyBag_f76583cf2132df74::MinTrackWidthScale' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, GrassScaleRange) == 0x000118, "Member 'FPropertyBag_f76583cf2132df74::GrassScaleRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, GrassZOffset) == 0x000130, "Member 'FPropertyBag_f76583cf2132df74::GrassZOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, GrassRandomRange) == 0x000138, "Member 'FPropertyBag_f76583cf2132df74::GrassRandomRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftSnapToGround) == 0x000140, "Member 'FPropertyBag_f76583cf2132df74::LeftSnapToGround' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightSnapToGround) == 0x000141, "Member 'FPropertyBag_f76583cf2132df74::RightSnapToGround' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftFenceZOffset) == 0x000148, "Member 'FPropertyBag_f76583cf2132df74::LeftFenceZOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightFenceZOffset) == 0x000150, "Member 'FPropertyBag_f76583cf2132df74::RightFenceZOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, EnableTerrain) == 0x000158, "Member 'FPropertyBag_f76583cf2132df74::EnableTerrain' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightFenceDensityThreshold) == 0x000160, "Member 'FPropertyBag_f76583cf2132df74::RightFenceDensityThreshold' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftFenceDensityThreshold) == 0x000168, "Member 'FPropertyBag_f76583cf2132df74::LeftFenceDensityThreshold' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftStacks) == 0x000170, "Member 'FPropertyBag_f76583cf2132df74::LeftStacks' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightStacks) == 0x000174, "Member 'FPropertyBag_f76583cf2132df74::RightStacks' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftStackSpacing) == 0x000178, "Member 'FPropertyBag_f76583cf2132df74::LeftStackSpacing' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightStackSpacing) == 0x000180, "Member 'FPropertyBag_f76583cf2132df74::RightStackSpacing' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftDilapidation) == 0x000188, "Member 'FPropertyBag_f76583cf2132df74::LeftDilapidation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightDilapidation) == 0x000190, "Member 'FPropertyBag_f76583cf2132df74::RightDilapidation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftPruneOverlapDebris) == 0x000198, "Member 'FPropertyBag_f76583cf2132df74::LeftPruneOverlapDebris' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightPruneOverlapDebris) == 0x000199, "Member 'FPropertyBag_f76583cf2132df74::RightPruneOverlapDebris' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftAlternateRowOffset) == 0x00019C, "Member 'FPropertyBag_f76583cf2132df74::LeftAlternateRowOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightAlternateRowOffset) == 0x0001A0, "Member 'FPropertyBag_f76583cf2132df74::RightAlternateRowOffset' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftAffectedByExclusion) == 0x0001A4, "Member 'FPropertyBag_f76583cf2132df74::LeftAffectedByExclusion' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightAffectedByExclusion) == 0x0001A5, "Member 'FPropertyBag_f76583cf2132df74::RightAffectedByExclusion' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, GrassAffectedByExclusion) == 0x0001A6, "Member 'FPropertyBag_f76583cf2132df74::GrassAffectedByExclusion' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftFencePosition) == 0x0001A7, "Member 'FPropertyBag_f76583cf2132df74::LeftFencePosition' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightFencePosition) == 0x0001A8, "Member 'FPropertyBag_f76583cf2132df74::RightFencePosition' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, GrassRoadDensity) == 0x0001B0, "Member 'FPropertyBag_f76583cf2132df74::GrassRoadDensity' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, TerrainObject) == 0x0001B8, "Member 'FPropertyBag_f76583cf2132df74::TerrainObject' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, TerrainZOffsetMax) == 0x0001E0, "Member 'FPropertyBag_f76583cf2132df74::TerrainZOffsetMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftDebrisSeed) == 0x0001E8, "Member 'FPropertyBag_f76583cf2132df74::LeftDebrisSeed' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightDebrisSeed) == 0x0001EC, "Member 'FPropertyBag_f76583cf2132df74::RightDebrisSeed' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, EnableGrass) == 0x0001F0, "Member 'FPropertyBag_f76583cf2132df74::EnableGrass' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, GrassSeed) == 0x0001F4, "Member 'FPropertyBag_f76583cf2132df74::GrassSeed' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, SplineIndex) == 0x0001F8, "Member 'FPropertyBag_f76583cf2132df74::SplineIndex' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftGrass) == 0x0001FC, "Member 'FPropertyBag_f76583cf2132df74::LeftGrass' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, MiddleGrass) == 0x0001FD, "Member 'FPropertyBag_f76583cf2132df74::MiddleGrass' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightGrass) == 0x0001FE, "Member 'FPropertyBag_f76583cf2132df74::RightGrass' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, LeftDebrisUseSurfaceRotations) == 0x0001FF, "Member 'FPropertyBag_f76583cf2132df74::LeftDebrisUseSurfaceRotations' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f76583cf2132df74, RightDebrisUseSurfaceRotations) == 0x000200, "Member 'FPropertyBag_f76583cf2132df74::RightDebrisUseSurfaceRotations' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_d6b8ed476504dea5
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_d6b8ed476504dea5 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	double                                        MeleeDistance;                                     // 0x00C8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_d6b8ed476504dea5) == 0x000008, "Wrong alignment on FPropertyBag_d6b8ed476504dea5");
+static_assert(sizeof(FPropertyBag_d6b8ed476504dea5) == 0x0000D0, "Wrong size on FPropertyBag_d6b8ed476504dea5");
+static_assert(offsetof(FPropertyBag_d6b8ed476504dea5, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_d6b8ed476504dea5::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d6b8ed476504dea5, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_d6b8ed476504dea5::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d6b8ed476504dea5, Wander_Delay) == 0x000010, "Member 'FPropertyBag_d6b8ed476504dea5::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d6b8ed476504dea5, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_d6b8ed476504dea5::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d6b8ed476504dea5, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_d6b8ed476504dea5::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d6b8ed476504dea5, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_d6b8ed476504dea5::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d6b8ed476504dea5, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_d6b8ed476504dea5::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d6b8ed476504dea5, MeleeDistance) == 0x0000C8, "Member 'FPropertyBag_d6b8ed476504dea5::MeleeDistance' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_a4c8fa833bf60efd
+// 0x00D8 (0x00D8 - 0x0000)
+struct FPropertyBag_a4c8fa833bf60efd final
+{
+public:
+	bool                                          SpawnsSpiderlings;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEntangle;                                       // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasVenomSpray;                                     // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasPounce;                                         // 0x0003(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Wander_RadiusMax;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0030(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+	bool                                          bDeathWeb;                                         // 0x00D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPoisonDeathWeb;                                   // 0x00D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_a4c8fa833bf60efd) == 0x000008, "Wrong alignment on FPropertyBag_a4c8fa833bf60efd");
+static_assert(sizeof(FPropertyBag_a4c8fa833bf60efd) == 0x0000D8, "Wrong size on FPropertyBag_a4c8fa833bf60efd");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, SpawnsSpiderlings) == 0x000000, "Member 'FPropertyBag_a4c8fa833bf60efd::SpawnsSpiderlings' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, HasEntangle) == 0x000001, "Member 'FPropertyBag_a4c8fa833bf60efd::HasEntangle' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, HasVenomSpray) == 0x000002, "Member 'FPropertyBag_a4c8fa833bf60efd::HasVenomSpray' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, HasPounce) == 0x000003, "Member 'FPropertyBag_a4c8fa833bf60efd::HasPounce' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, Wander_RadiusMax) == 0x000008, "Member 'FPropertyBag_a4c8fa833bf60efd::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, Wander_RadiusMin) == 0x000010, "Member 'FPropertyBag_a4c8fa833bf60efd::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, Wander_Delay) == 0x000018, "Member 'FPropertyBag_a4c8fa833bf60efd::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, Wander_DelayDeviation) == 0x000020, "Member 'FPropertyBag_a4c8fa833bf60efd::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, Patrol_RouteStrategy) == 0x000028, "Member 'FPropertyBag_a4c8fa833bf60efd::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, Patrol_PathingSpeedMultiplier) == 0x000030, "Member 'FPropertyBag_a4c8fa833bf60efd::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_a4c8fa833bf60efd::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, bDeathWeb) == 0x0000D0, "Member 'FPropertyBag_a4c8fa833bf60efd::bDeathWeb' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4c8fa833bf60efd, bPoisonDeathWeb) == 0x0000D1, "Member 'FPropertyBag_a4c8fa833bf60efd::bPoisonDeathWeb' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_addf548e05040356
+// 0x02D0 (0x02D0 - 0x0000)
+struct FPropertyBag_addf548e05040356 final
+{
+public:
+	double                                        Spacing;                                           // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_A;                                    // 0x0008(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_B;                                    // 0x0030(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_C;                                    // 0x0058(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_D;                                    // 0x0080(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_E;                                    // 0x00A8(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_F;                                    // 0x00D0(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_G;                                    // 0x00F8(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_H;                                    // 0x0120(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_I;                                    // 0x0148(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_J;                                    // 0x0170(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_K;                                    // 0x0198(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_L;                                    // 0x01C0(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_M;                                    // 0x01E8(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_N;                                    // 0x0210(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_O;                                    // 0x0238(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_P;                                    // 0x0260(0x0028)(Edit, HasGetValueTypeHash)
+	int32                                         Seed;                                              // 0x0288(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseInteriorPoints;                                 // 0x028C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_28D[0x3];                                      // 0x028D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PrimaryLandscapeLayer;                             // 0x0290(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 SecondaryLandscapeLayer;                           // 0x02A0(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          IsNodeGraph;                                       // 0x02B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BoundsOverride;                                    // 0x02B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Scarcity;                                          // 0x02C0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldOverride;                                    // 0x02C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_addf548e05040356) == 0x000008, "Wrong alignment on FPropertyBag_addf548e05040356");
+static_assert(sizeof(FPropertyBag_addf548e05040356) == 0x0002D0, "Wrong size on FPropertyBag_addf548e05040356");
+static_assert(offsetof(FPropertyBag_addf548e05040356, Spacing) == 0x000000, "Member 'FPropertyBag_addf548e05040356::Spacing' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_A) == 0x000008, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_A' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_B) == 0x000030, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_B' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_C) == 0x000058, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_C' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_D) == 0x000080, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_D' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_E) == 0x0000A8, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_E' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_F) == 0x0000D0, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_F' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_G) == 0x0000F8, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_G' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_H) == 0x000120, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_H' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_I) == 0x000148, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_I' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_J) == 0x000170, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_J' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_K) == 0x000198, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_K' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_L) == 0x0001C0, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_L' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_M) == 0x0001E8, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_M' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_N) == 0x000210, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_N' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_O) == 0x000238, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_O' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, FoliageAsset_P) == 0x000260, "Member 'FPropertyBag_addf548e05040356::FoliageAsset_P' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, Seed) == 0x000288, "Member 'FPropertyBag_addf548e05040356::Seed' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, UseInteriorPoints) == 0x00028C, "Member 'FPropertyBag_addf548e05040356::UseInteriorPoints' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, PrimaryLandscapeLayer) == 0x000290, "Member 'FPropertyBag_addf548e05040356::PrimaryLandscapeLayer' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, SecondaryLandscapeLayer) == 0x0002A0, "Member 'FPropertyBag_addf548e05040356::SecondaryLandscapeLayer' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, IsNodeGraph) == 0x0002B0, "Member 'FPropertyBag_addf548e05040356::IsNodeGraph' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, BoundsOverride) == 0x0002B8, "Member 'FPropertyBag_addf548e05040356::BoundsOverride' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, Scarcity) == 0x0002C0, "Member 'FPropertyBag_addf548e05040356::Scarcity' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_addf548e05040356, ShouldOverride) == 0x0002C8, "Member 'FPropertyBag_addf548e05040356::ShouldOverride' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_31a06dc1e4321c45
+// 0x00E0 (0x00E0 - 0x0000)
+struct FPropertyBag_31a06dc1e4321c45 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          CanSpawnOozling;                                   // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ambush;                                            // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Dormant;                                           // 0x00CA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB[0x5];                                       // 0x00CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MeleeDistance;                                     // 0x00D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OozlingSpawnCatapult;                              // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasBurningAura;                                    // 0x00D9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_31a06dc1e4321c45) == 0x000008, "Wrong alignment on FPropertyBag_31a06dc1e4321c45");
+static_assert(sizeof(FPropertyBag_31a06dc1e4321c45) == 0x0000E0, "Wrong size on FPropertyBag_31a06dc1e4321c45");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_31a06dc1e4321c45::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_31a06dc1e4321c45::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, Wander_Delay) == 0x000010, "Member 'FPropertyBag_31a06dc1e4321c45::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_31a06dc1e4321c45::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_31a06dc1e4321c45::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_31a06dc1e4321c45::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_31a06dc1e4321c45::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, CanSpawnOozling) == 0x0000C8, "Member 'FPropertyBag_31a06dc1e4321c45::CanSpawnOozling' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, Ambush) == 0x0000C9, "Member 'FPropertyBag_31a06dc1e4321c45::Ambush' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, Dormant) == 0x0000CA, "Member 'FPropertyBag_31a06dc1e4321c45::Dormant' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, MeleeDistance) == 0x0000D0, "Member 'FPropertyBag_31a06dc1e4321c45::MeleeDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, OozlingSpawnCatapult) == 0x0000D8, "Member 'FPropertyBag_31a06dc1e4321c45::OozlingSpawnCatapult' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_31a06dc1e4321c45, HasBurningAura) == 0x0000D9, "Member 'FPropertyBag_31a06dc1e4321c45::HasBurningAura' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_fb7298e5ac75c16
+// 0x00E8 (0x00E8 - 0x0000)
+struct FPropertyBag_fb7298e5ac75c16 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	double                                        MeleeRange;                                        // 0x00C8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SpecialAttackRange;                                // 0x00D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanAbsorption;                                     // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanWindofMagic;                                    // 0x00D9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanRingofApnea;                                    // 0x00DA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DB[0x5];                                       // 0x00DB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BlinkCooldown;                                     // 0x00E0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_fb7298e5ac75c16) == 0x000008, "Wrong alignment on FPropertyBag_fb7298e5ac75c16");
+static_assert(sizeof(FPropertyBag_fb7298e5ac75c16) == 0x0000E8, "Wrong size on FPropertyBag_fb7298e5ac75c16");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_fb7298e5ac75c16::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_fb7298e5ac75c16::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, Wander_Delay) == 0x000010, "Member 'FPropertyBag_fb7298e5ac75c16::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_fb7298e5ac75c16::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_fb7298e5ac75c16::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_fb7298e5ac75c16::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_fb7298e5ac75c16::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, MeleeRange) == 0x0000C8, "Member 'FPropertyBag_fb7298e5ac75c16::MeleeRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, SpecialAttackRange) == 0x0000D0, "Member 'FPropertyBag_fb7298e5ac75c16::SpecialAttackRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, CanAbsorption) == 0x0000D8, "Member 'FPropertyBag_fb7298e5ac75c16::CanAbsorption' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, CanWindofMagic) == 0x0000D9, "Member 'FPropertyBag_fb7298e5ac75c16::CanWindofMagic' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, CanRingofApnea) == 0x0000DA, "Member 'FPropertyBag_fb7298e5ac75c16::CanRingofApnea' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fb7298e5ac75c16, BlinkCooldown) == 0x0000E0, "Member 'FPropertyBag_fb7298e5ac75c16::BlinkCooldown' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_ce323a5f00a6ab31
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_ce323a5f00a6ab31 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          Advanced;                                          // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_ce323a5f00a6ab31) == 0x000008, "Wrong alignment on FPropertyBag_ce323a5f00a6ab31");
+static_assert(sizeof(FPropertyBag_ce323a5f00a6ab31) == 0x0000D0, "Wrong size on FPropertyBag_ce323a5f00a6ab31");
+static_assert(offsetof(FPropertyBag_ce323a5f00a6ab31, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_ce323a5f00a6ab31::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ce323a5f00a6ab31, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_ce323a5f00a6ab31::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ce323a5f00a6ab31, Wander_Delay) == 0x000010, "Member 'FPropertyBag_ce323a5f00a6ab31::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ce323a5f00a6ab31, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_ce323a5f00a6ab31::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ce323a5f00a6ab31, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_ce323a5f00a6ab31::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ce323a5f00a6ab31, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_ce323a5f00a6ab31::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ce323a5f00a6ab31, Advanced) == 0x000078, "Member 'FPropertyBag_ce323a5f00a6ab31::Advanced' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ce323a5f00a6ab31, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_ce323a5f00a6ab31::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_5226cf1b25b511d9
+// 0x0050 (0x0050 - 0x0000)
+struct FPropertyBag_5226cf1b25b511d9 final
+{
+public:
+	struct FSoftObjectPath                        SimpleInteractMontage;                             // 0x0000(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	struct FSoftObjectPath                        InteractFailedMontage;                             // 0x0020(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	double                                        DelayTimeForActionResponse;                        // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsDespawnable;                                    // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_5226cf1b25b511d9) == 0x000008, "Wrong alignment on FPropertyBag_5226cf1b25b511d9");
+static_assert(sizeof(FPropertyBag_5226cf1b25b511d9) == 0x000050, "Wrong size on FPropertyBag_5226cf1b25b511d9");
+static_assert(offsetof(FPropertyBag_5226cf1b25b511d9, SimpleInteractMontage) == 0x000000, "Member 'FPropertyBag_5226cf1b25b511d9::SimpleInteractMontage' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5226cf1b25b511d9, InteractFailedMontage) == 0x000020, "Member 'FPropertyBag_5226cf1b25b511d9::InteractFailedMontage' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5226cf1b25b511d9, DelayTimeForActionResponse) == 0x000040, "Member 'FPropertyBag_5226cf1b25b511d9::DelayTimeForActionResponse' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5226cf1b25b511d9, bIsDespawnable) == 0x000048, "Member 'FPropertyBag_5226cf1b25b511d9::bIsDespawnable' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4310ca726d8855e
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_4310ca726d8855e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          CrumblingDeath;                                    // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEarthsplitter;                                  // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasRockThrow;                                      // 0x00CA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasHaymaker;                                       // 0x00CB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_4310ca726d8855e) == 0x000008, "Wrong alignment on FPropertyBag_4310ca726d8855e");
+static_assert(sizeof(FPropertyBag_4310ca726d8855e) == 0x0000D0, "Wrong size on FPropertyBag_4310ca726d8855e");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_4310ca726d8855e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_4310ca726d8855e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_4310ca726d8855e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_4310ca726d8855e::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_4310ca726d8855e::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_4310ca726d8855e::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_4310ca726d8855e::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, CrumblingDeath) == 0x0000C8, "Member 'FPropertyBag_4310ca726d8855e::CrumblingDeath' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, HasEarthsplitter) == 0x0000C9, "Member 'FPropertyBag_4310ca726d8855e::HasEarthsplitter' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, HasRockThrow) == 0x0000CA, "Member 'FPropertyBag_4310ca726d8855e::HasRockThrow' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4310ca726d8855e, HasHaymaker) == 0x0000CB, "Member 'FPropertyBag_4310ca726d8855e::HasHaymaker' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_c338232a5ed9f94c
+// 0x00E8 (0x00E8 - 0x0000)
+struct FPropertyBag_c338232a5ed9f94c final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanSpawnKids;                                      // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ArrivalDistance;                                   // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanMushroomMissile;                                // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0090(0x0050)(Edit)
+	bool                                          UseBlindSpores;                                    // 0x00E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseParalyzeSpores;                                 // 0x00E1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UsePoisonSpores;                                   // 0x00E2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_c338232a5ed9f94c) == 0x000008, "Wrong alignment on FPropertyBag_c338232a5ed9f94c");
+static_assert(sizeof(FPropertyBag_c338232a5ed9f94c) == 0x0000E8, "Wrong size on FPropertyBag_c338232a5ed9f94c");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_c338232a5ed9f94c::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_c338232a5ed9f94c::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, Wander_Delay) == 0x000010, "Member 'FPropertyBag_c338232a5ed9f94c::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_c338232a5ed9f94c::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_c338232a5ed9f94c::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_c338232a5ed9f94c::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, CanSpawnKids) == 0x000078, "Member 'FPropertyBag_c338232a5ed9f94c::CanSpawnKids' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, ArrivalDistance) == 0x000080, "Member 'FPropertyBag_c338232a5ed9f94c::ArrivalDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, CanMushroomMissile) == 0x000088, "Member 'FPropertyBag_c338232a5ed9f94c::CanMushroomMissile' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, Wander_SpeedMultiplier) == 0x000090, "Member 'FPropertyBag_c338232a5ed9f94c::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, UseBlindSpores) == 0x0000E0, "Member 'FPropertyBag_c338232a5ed9f94c::UseBlindSpores' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, UseParalyzeSpores) == 0x0000E1, "Member 'FPropertyBag_c338232a5ed9f94c::UseParalyzeSpores' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c338232a5ed9f94c, UsePoisonSpores) == 0x0000E2, "Member 'FPropertyBag_c338232a5ed9f94c::UsePoisonSpores' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_dd93f57c70bcf99e
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_dd93f57c70bcf99e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          Spiritfire;                                        // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasFlameRush;                                      // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_dd93f57c70bcf99e) == 0x000008, "Wrong alignment on FPropertyBag_dd93f57c70bcf99e");
+static_assert(sizeof(FPropertyBag_dd93f57c70bcf99e) == 0x0000D0, "Wrong size on FPropertyBag_dd93f57c70bcf99e");
+static_assert(offsetof(FPropertyBag_dd93f57c70bcf99e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_dd93f57c70bcf99e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dd93f57c70bcf99e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_dd93f57c70bcf99e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dd93f57c70bcf99e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_dd93f57c70bcf99e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dd93f57c70bcf99e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_dd93f57c70bcf99e::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dd93f57c70bcf99e, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_dd93f57c70bcf99e::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dd93f57c70bcf99e, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_dd93f57c70bcf99e::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dd93f57c70bcf99e, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_dd93f57c70bcf99e::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dd93f57c70bcf99e, Spiritfire) == 0x0000C8, "Member 'FPropertyBag_dd93f57c70bcf99e::Spiritfire' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dd93f57c70bcf99e, HasFlameRush) == 0x0000C9, "Member 'FPropertyBag_dd93f57c70bcf99e::HasFlameRush' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_9d57f2b513841e91
+// 0x00E0 (0x00E0 - 0x0000)
+struct FPropertyBag_9d57f2b513841e91 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	struct FAoCAbilityId                          Courage;                                           // 0x00C8(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_9d57f2b513841e91) == 0x000008, "Wrong alignment on FPropertyBag_9d57f2b513841e91");
+static_assert(sizeof(FPropertyBag_9d57f2b513841e91) == 0x0000E0, "Wrong size on FPropertyBag_9d57f2b513841e91");
+static_assert(offsetof(FPropertyBag_9d57f2b513841e91, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_9d57f2b513841e91::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9d57f2b513841e91, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_9d57f2b513841e91::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9d57f2b513841e91, Wander_Delay) == 0x000010, "Member 'FPropertyBag_9d57f2b513841e91::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9d57f2b513841e91, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_9d57f2b513841e91::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9d57f2b513841e91, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_9d57f2b513841e91::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9d57f2b513841e91, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_9d57f2b513841e91::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9d57f2b513841e91, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_9d57f2b513841e91::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9d57f2b513841e91, Courage) == 0x0000C8, "Member 'FPropertyBag_9d57f2b513841e91::Courage' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_6835e54ad4b36184
+// 0x0020 (0x0020 - 0x0000)
+struct FPropertyBag_6835e54ad4b36184 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_6835e54ad4b36184) == 0x000008, "Wrong alignment on FPropertyBag_6835e54ad4b36184");
+static_assert(sizeof(FPropertyBag_6835e54ad4b36184) == 0x000020, "Wrong size on FPropertyBag_6835e54ad4b36184");
+static_assert(offsetof(FPropertyBag_6835e54ad4b36184, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_6835e54ad4b36184::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6835e54ad4b36184, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_6835e54ad4b36184::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6835e54ad4b36184, Wander_Delay) == 0x000010, "Member 'FPropertyBag_6835e54ad4b36184::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6835e54ad4b36184, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_6835e54ad4b36184::Wander_DelayDeviation' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_875e327020a17edd
+// 0x0080 (0x0080 - 0x0000)
+struct FPropertyBag_875e327020a17edd final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          IsInvulnerable;                                    // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsTargetable;                                      // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsNameplateDrawn;                                  // 0x007A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_875e327020a17edd) == 0x000008, "Wrong alignment on FPropertyBag_875e327020a17edd");
+static_assert(sizeof(FPropertyBag_875e327020a17edd) == 0x000080, "Wrong size on FPropertyBag_875e327020a17edd");
+static_assert(offsetof(FPropertyBag_875e327020a17edd, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_875e327020a17edd::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_875e327020a17edd, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_875e327020a17edd::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_875e327020a17edd, Wander_Delay) == 0x000010, "Member 'FPropertyBag_875e327020a17edd::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_875e327020a17edd, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_875e327020a17edd::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_875e327020a17edd, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_875e327020a17edd::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_875e327020a17edd, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_875e327020a17edd::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_875e327020a17edd, IsInvulnerable) == 0x000078, "Member 'FPropertyBag_875e327020a17edd::IsInvulnerable' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_875e327020a17edd, IsTargetable) == 0x000079, "Member 'FPropertyBag_875e327020a17edd::IsTargetable' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_875e327020a17edd, IsNameplateDrawn) == 0x00007A, "Member 'FPropertyBag_875e327020a17edd::IsNameplateDrawn' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_396e86cbdf7842ac
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_396e86cbdf7842ac final
+{
+public:
+	bool                                          SpawnsSpiderlings;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnsSpiderlingsOnDeath;                          // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEntangle;                                       // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasVenomSpray;                                     // 0x0003(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Wander_RadiusMax;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0030(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_396e86cbdf7842ac) == 0x000008, "Wrong alignment on FPropertyBag_396e86cbdf7842ac");
+static_assert(sizeof(FPropertyBag_396e86cbdf7842ac) == 0x0000D0, "Wrong size on FPropertyBag_396e86cbdf7842ac");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, SpawnsSpiderlings) == 0x000000, "Member 'FPropertyBag_396e86cbdf7842ac::SpawnsSpiderlings' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, SpawnsSpiderlingsOnDeath) == 0x000001, "Member 'FPropertyBag_396e86cbdf7842ac::SpawnsSpiderlingsOnDeath' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, HasEntangle) == 0x000002, "Member 'FPropertyBag_396e86cbdf7842ac::HasEntangle' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, HasVenomSpray) == 0x000003, "Member 'FPropertyBag_396e86cbdf7842ac::HasVenomSpray' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, Wander_RadiusMax) == 0x000008, "Member 'FPropertyBag_396e86cbdf7842ac::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, Wander_RadiusMin) == 0x000010, "Member 'FPropertyBag_396e86cbdf7842ac::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, Wander_Delay) == 0x000018, "Member 'FPropertyBag_396e86cbdf7842ac::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, Wander_DelayDeviation) == 0x000020, "Member 'FPropertyBag_396e86cbdf7842ac::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, Patrol_RouteStrategy) == 0x000028, "Member 'FPropertyBag_396e86cbdf7842ac::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, Patrol_PathingSpeedMultiplier) == 0x000030, "Member 'FPropertyBag_396e86cbdf7842ac::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_396e86cbdf7842ac, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_396e86cbdf7842ac::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_c294e3f243ab0ca
+// 0x0110 (0x0110 - 0x0000)
+struct FPropertyBag_c294e3f243ab0ca final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_c294e3f243ab0ca) == 0x000008, "Wrong alignment on FPropertyBag_c294e3f243ab0ca");
+static_assert(sizeof(FPropertyBag_c294e3f243ab0ca) == 0x000110, "Wrong size on FPropertyBag_c294e3f243ab0ca");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_c294e3f243ab0ca::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_c294e3f243ab0ca::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Wander_Delay) == 0x000010, "Member 'FPropertyBag_c294e3f243ab0ca::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_c294e3f243ab0ca::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_c294e3f243ab0ca::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_c294e3f243ab0ca::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_c294e3f243ab0ca::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_c294e3f243ab0ca::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_c294e3f243ab0ca::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_c294e3f243ab0ca::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, InteractableTags) == 0x0000A0, "Member 'FPropertyBag_c294e3f243ab0ca::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, InteractableNPCTags) == 0x0000B0, "Member 'FPropertyBag_c294e3f243ab0ca::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c294e3f243ab0ca, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_c294e3f243ab0ca::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_494f880a21f35499
+// 0x00A8 (0x00A8 - 0x0000)
+struct FPropertyBag_494f880a21f35499 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        MeleeDistance;                                     // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OrbitDistance;                                     // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OrbitStopDistance;                                 // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OrbitMinDuration;                                  // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeapDistance;                                      // 0x0098(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSandArmor;                                      // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_494f880a21f35499) == 0x000008, "Wrong alignment on FPropertyBag_494f880a21f35499");
+static_assert(sizeof(FPropertyBag_494f880a21f35499) == 0x0000A8, "Wrong size on FPropertyBag_494f880a21f35499");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_494f880a21f35499::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_494f880a21f35499::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, Wander_Delay) == 0x000010, "Member 'FPropertyBag_494f880a21f35499::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_494f880a21f35499::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_494f880a21f35499::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_494f880a21f35499::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, MeleeDistance) == 0x000078, "Member 'FPropertyBag_494f880a21f35499::MeleeDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, OrbitDistance) == 0x000080, "Member 'FPropertyBag_494f880a21f35499::OrbitDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, OrbitStopDistance) == 0x000088, "Member 'FPropertyBag_494f880a21f35499::OrbitStopDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, OrbitMinDuration) == 0x000090, "Member 'FPropertyBag_494f880a21f35499::OrbitMinDuration' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, LeapDistance) == 0x000098, "Member 'FPropertyBag_494f880a21f35499::LeapDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_494f880a21f35499, CanSandArmor) == 0x0000A0, "Member 'FPropertyBag_494f880a21f35499::CanSandArmor' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_f19a51081870295c
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_f19a51081870295c final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_f19a51081870295c) == 0x000008, "Wrong alignment on FPropertyBag_f19a51081870295c");
+static_assert(sizeof(FPropertyBag_f19a51081870295c) == 0x0000C8, "Wrong size on FPropertyBag_f19a51081870295c");
+static_assert(offsetof(FPropertyBag_f19a51081870295c, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_f19a51081870295c::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f19a51081870295c, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_f19a51081870295c::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f19a51081870295c, Wander_Delay) == 0x000010, "Member 'FPropertyBag_f19a51081870295c::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f19a51081870295c, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_f19a51081870295c::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f19a51081870295c, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_f19a51081870295c::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f19a51081870295c, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_f19a51081870295c::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f19a51081870295c, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_f19a51081870295c::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_caabbff44054c2c
+// 0x0078 (0x0078 - 0x0000)
+struct FPropertyBag_caabbff44054c2c final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_caabbff44054c2c) == 0x000008, "Wrong alignment on FPropertyBag_caabbff44054c2c");
+static_assert(sizeof(FPropertyBag_caabbff44054c2c) == 0x000078, "Wrong size on FPropertyBag_caabbff44054c2c");
+static_assert(offsetof(FPropertyBag_caabbff44054c2c, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_caabbff44054c2c::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_caabbff44054c2c, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_caabbff44054c2c::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_caabbff44054c2c, Wander_Delay) == 0x000010, "Member 'FPropertyBag_caabbff44054c2c::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_caabbff44054c2c, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_caabbff44054c2c::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_caabbff44054c2c, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_caabbff44054c2c::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_caabbff44054c2c, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_caabbff44054c2c::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_5c321ccec4edce96
+// 0x0080 (0x0080 - 0x0000)
+struct FPropertyBag_5c321ccec4edce96 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          PersistAfterLeash;                                 // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_5c321ccec4edce96) == 0x000008, "Wrong alignment on FPropertyBag_5c321ccec4edce96");
+static_assert(sizeof(FPropertyBag_5c321ccec4edce96) == 0x000080, "Wrong size on FPropertyBag_5c321ccec4edce96");
+static_assert(offsetof(FPropertyBag_5c321ccec4edce96, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_5c321ccec4edce96::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5c321ccec4edce96, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_5c321ccec4edce96::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5c321ccec4edce96, Wander_Delay) == 0x000010, "Member 'FPropertyBag_5c321ccec4edce96::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5c321ccec4edce96, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_5c321ccec4edce96::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5c321ccec4edce96, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_5c321ccec4edce96::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5c321ccec4edce96, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_5c321ccec4edce96::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5c321ccec4edce96, PersistAfterLeash) == 0x000078, "Member 'FPropertyBag_5c321ccec4edce96::PersistAfterLeash' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e8fea06c2312773f
+// 0x0130 (0x0130 - 0x0000)
+struct FPropertyBag_e8fea06c2312773f final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+	double                                        AttackRange;                                       // 0x0110(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AttackAngle;                                       // 0x0118(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MoveStopDis;                                       // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanLightningStrike;                                // 0x0128(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanConeofCold;                                     // 0x0129(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_e8fea06c2312773f) == 0x000008, "Wrong alignment on FPropertyBag_e8fea06c2312773f");
+static_assert(sizeof(FPropertyBag_e8fea06c2312773f) == 0x000130, "Wrong size on FPropertyBag_e8fea06c2312773f");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_e8fea06c2312773f::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_e8fea06c2312773f::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Wander_Delay) == 0x000010, "Member 'FPropertyBag_e8fea06c2312773f::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_e8fea06c2312773f::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_e8fea06c2312773f::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_e8fea06c2312773f::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_e8fea06c2312773f::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_e8fea06c2312773f::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_e8fea06c2312773f::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_e8fea06c2312773f::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, InteractableTags) == 0x0000A0, "Member 'FPropertyBag_e8fea06c2312773f::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, InteractableNPCTags) == 0x0000B0, "Member 'FPropertyBag_e8fea06c2312773f::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_e8fea06c2312773f::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, AttackRange) == 0x000110, "Member 'FPropertyBag_e8fea06c2312773f::AttackRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, AttackAngle) == 0x000118, "Member 'FPropertyBag_e8fea06c2312773f::AttackAngle' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, MoveStopDis) == 0x000120, "Member 'FPropertyBag_e8fea06c2312773f::MoveStopDis' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, CanLightningStrike) == 0x000128, "Member 'FPropertyBag_e8fea06c2312773f::CanLightningStrike' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8fea06c2312773f, CanConeofCold) == 0x000129, "Member 'FPropertyBag_e8fea06c2312773f::CanConeofCold' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_14280fdcce02d093
+// 0x00D8 (0x00D8 - 0x0000)
+struct FPropertyBag_14280fdcce02d093 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          UseRavage;                                         // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+	bool                                          CanEnragedRoar;                                    // 0x00D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_14280fdcce02d093) == 0x000008, "Wrong alignment on FPropertyBag_14280fdcce02d093");
+static_assert(sizeof(FPropertyBag_14280fdcce02d093) == 0x0000D8, "Wrong size on FPropertyBag_14280fdcce02d093");
+static_assert(offsetof(FPropertyBag_14280fdcce02d093, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_14280fdcce02d093::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_14280fdcce02d093, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_14280fdcce02d093::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_14280fdcce02d093, Wander_Delay) == 0x000010, "Member 'FPropertyBag_14280fdcce02d093::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_14280fdcce02d093, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_14280fdcce02d093::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_14280fdcce02d093, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_14280fdcce02d093::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_14280fdcce02d093, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_14280fdcce02d093::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_14280fdcce02d093, UseRavage) == 0x000078, "Member 'FPropertyBag_14280fdcce02d093::UseRavage' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_14280fdcce02d093, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_14280fdcce02d093::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_14280fdcce02d093, CanEnragedRoar) == 0x0000D0, "Member 'FPropertyBag_14280fdcce02d093::CanEnragedRoar' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e450f1bcf357c1cb
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_e450f1bcf357c1cb final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	double                                        MeleeRange;                                        // 0x00C8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_e450f1bcf357c1cb) == 0x000008, "Wrong alignment on FPropertyBag_e450f1bcf357c1cb");
+static_assert(sizeof(FPropertyBag_e450f1bcf357c1cb) == 0x0000D0, "Wrong size on FPropertyBag_e450f1bcf357c1cb");
+static_assert(offsetof(FPropertyBag_e450f1bcf357c1cb, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_e450f1bcf357c1cb::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e450f1bcf357c1cb, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_e450f1bcf357c1cb::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e450f1bcf357c1cb, Wander_Delay) == 0x000010, "Member 'FPropertyBag_e450f1bcf357c1cb::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e450f1bcf357c1cb, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_e450f1bcf357c1cb::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e450f1bcf357c1cb, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_e450f1bcf357c1cb::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e450f1bcf357c1cb, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_e450f1bcf357c1cb::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e450f1bcf357c1cb, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_e450f1bcf357c1cb::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e450f1bcf357c1cb, MeleeRange) == 0x0000C8, "Member 'FPropertyBag_e450f1bcf357c1cb::MeleeRange' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_f5e327c87bb77718
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_f5e327c87bb77718 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          HasGuillotine;                                     // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RefreshRetract01;                                  // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RefreshRetract02;                                  // 0x00CA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IncreaseAttackDistance;                            // 0x00CB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_f5e327c87bb77718) == 0x000008, "Wrong alignment on FPropertyBag_f5e327c87bb77718");
+static_assert(sizeof(FPropertyBag_f5e327c87bb77718) == 0x0000D0, "Wrong size on FPropertyBag_f5e327c87bb77718");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_f5e327c87bb77718::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_f5e327c87bb77718::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, Wander_Delay) == 0x000010, "Member 'FPropertyBag_f5e327c87bb77718::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_f5e327c87bb77718::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_f5e327c87bb77718::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_f5e327c87bb77718::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_f5e327c87bb77718::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, HasGuillotine) == 0x0000C8, "Member 'FPropertyBag_f5e327c87bb77718::HasGuillotine' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, RefreshRetract01) == 0x0000C9, "Member 'FPropertyBag_f5e327c87bb77718::RefreshRetract01' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, RefreshRetract02) == 0x0000CA, "Member 'FPropertyBag_f5e327c87bb77718::RefreshRetract02' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f5e327c87bb77718, IncreaseAttackDistance) == 0x0000CB, "Member 'FPropertyBag_f5e327c87bb77718::IncreaseAttackDistance' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_f83940a2f9f926f7
+// 0x00E0 (0x00E0 - 0x0000)
+struct FPropertyBag_f83940a2f9f926f7 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          CanStealth;                                        // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MeleeRange;                                        // 0x00D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StealthOrbitDis;                                   // 0x00D8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_f83940a2f9f926f7) == 0x000008, "Wrong alignment on FPropertyBag_f83940a2f9f926f7");
+static_assert(sizeof(FPropertyBag_f83940a2f9f926f7) == 0x0000E0, "Wrong size on FPropertyBag_f83940a2f9f926f7");
+static_assert(offsetof(FPropertyBag_f83940a2f9f926f7, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_f83940a2f9f926f7::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f83940a2f9f926f7, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_f83940a2f9f926f7::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f83940a2f9f926f7, Wander_Delay) == 0x000010, "Member 'FPropertyBag_f83940a2f9f926f7::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f83940a2f9f926f7, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_f83940a2f9f926f7::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f83940a2f9f926f7, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_f83940a2f9f926f7::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f83940a2f9f926f7, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_f83940a2f9f926f7::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f83940a2f9f926f7, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_f83940a2f9f926f7::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f83940a2f9f926f7, CanStealth) == 0x0000C8, "Member 'FPropertyBag_f83940a2f9f926f7::CanStealth' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f83940a2f9f926f7, MeleeRange) == 0x0000D0, "Member 'FPropertyBag_f83940a2f9f926f7::MeleeRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f83940a2f9f926f7, StealthOrbitDis) == 0x0000D8, "Member 'FPropertyBag_f83940a2f9f926f7::StealthOrbitDis' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_985e0986c4fcc9ba
+// 0x0070 (0x0070 - 0x0000)
+struct FPropertyBag_985e0986c4fcc9ba final
+{
+public:
+	struct FSoftObjectPath                        SimpleInteractMontage;                             // 0x0000(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	struct FSoftObjectPath                        InteractFailedMontage;                             // 0x0020(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	struct FSoftObjectPath                        SmashMontage;                                      // 0x0040(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	double                                        DelayTimeForActionResponse;                        // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsDespawnable;                                    // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_985e0986c4fcc9ba) == 0x000008, "Wrong alignment on FPropertyBag_985e0986c4fcc9ba");
+static_assert(sizeof(FPropertyBag_985e0986c4fcc9ba) == 0x000070, "Wrong size on FPropertyBag_985e0986c4fcc9ba");
+static_assert(offsetof(FPropertyBag_985e0986c4fcc9ba, SimpleInteractMontage) == 0x000000, "Member 'FPropertyBag_985e0986c4fcc9ba::SimpleInteractMontage' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_985e0986c4fcc9ba, InteractFailedMontage) == 0x000020, "Member 'FPropertyBag_985e0986c4fcc9ba::InteractFailedMontage' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_985e0986c4fcc9ba, SmashMontage) == 0x000040, "Member 'FPropertyBag_985e0986c4fcc9ba::SmashMontage' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_985e0986c4fcc9ba, DelayTimeForActionResponse) == 0x000060, "Member 'FPropertyBag_985e0986c4fcc9ba::DelayTimeForActionResponse' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_985e0986c4fcc9ba, bIsDespawnable) == 0x000068, "Member 'FPropertyBag_985e0986c4fcc9ba::bIsDespawnable' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_c677057b7aa778fd
+// 0x0078 (0x0078 - 0x0000)
+struct FPropertyBag_c677057b7aa778fd final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_c677057b7aa778fd) == 0x000008, "Wrong alignment on FPropertyBag_c677057b7aa778fd");
+static_assert(sizeof(FPropertyBag_c677057b7aa778fd) == 0x000078, "Wrong size on FPropertyBag_c677057b7aa778fd");
+static_assert(offsetof(FPropertyBag_c677057b7aa778fd, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_c677057b7aa778fd::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c677057b7aa778fd, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_c677057b7aa778fd::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c677057b7aa778fd, Wander_Delay) == 0x000010, "Member 'FPropertyBag_c677057b7aa778fd::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c677057b7aa778fd, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_c677057b7aa778fd::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c677057b7aa778fd, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_c677057b7aa778fd::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c677057b7aa778fd, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_c677057b7aa778fd::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_2281a8ecb99589d8
+// 0x00E0 (0x00E0 - 0x0000)
+struct FPropertyBag_2281a8ecb99589d8 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	double                                        MeleeRange;                                        // 0x00C8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SpecialAttackRange;                                // 0x00D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanAbsorption;                                     // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanPoisonCloud;                                    // 0x00D9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_2281a8ecb99589d8) == 0x000008, "Wrong alignment on FPropertyBag_2281a8ecb99589d8");
+static_assert(sizeof(FPropertyBag_2281a8ecb99589d8) == 0x0000E0, "Wrong size on FPropertyBag_2281a8ecb99589d8");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_2281a8ecb99589d8::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_2281a8ecb99589d8::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, Wander_Delay) == 0x000010, "Member 'FPropertyBag_2281a8ecb99589d8::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_2281a8ecb99589d8::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_2281a8ecb99589d8::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_2281a8ecb99589d8::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_2281a8ecb99589d8::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, MeleeRange) == 0x0000C8, "Member 'FPropertyBag_2281a8ecb99589d8::MeleeRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, SpecialAttackRange) == 0x0000D0, "Member 'FPropertyBag_2281a8ecb99589d8::SpecialAttackRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, CanAbsorption) == 0x0000D8, "Member 'FPropertyBag_2281a8ecb99589d8::CanAbsorption' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2281a8ecb99589d8, CanPoisonCloud) == 0x0000D9, "Member 'FPropertyBag_2281a8ecb99589d8::CanPoisonCloud' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_8accfe367a0d6da0
+// 0x0090 (0x0090 - 0x0000)
+struct FPropertyBag_8accfe367a0d6da0 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          IsAmbusher;                                        // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Ambush_AlertRadius;                                // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasRider;                                          // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_8accfe367a0d6da0) == 0x000008, "Wrong alignment on FPropertyBag_8accfe367a0d6da0");
+static_assert(sizeof(FPropertyBag_8accfe367a0d6da0) == 0x000090, "Wrong size on FPropertyBag_8accfe367a0d6da0");
+static_assert(offsetof(FPropertyBag_8accfe367a0d6da0, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_8accfe367a0d6da0::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8accfe367a0d6da0, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_8accfe367a0d6da0::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8accfe367a0d6da0, Wander_Delay) == 0x000010, "Member 'FPropertyBag_8accfe367a0d6da0::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8accfe367a0d6da0, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_8accfe367a0d6da0::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8accfe367a0d6da0, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_8accfe367a0d6da0::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8accfe367a0d6da0, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_8accfe367a0d6da0::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8accfe367a0d6da0, IsAmbusher) == 0x000078, "Member 'FPropertyBag_8accfe367a0d6da0::IsAmbusher' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8accfe367a0d6da0, Ambush_AlertRadius) == 0x000080, "Member 'FPropertyBag_8accfe367a0d6da0::Ambush_AlertRadius' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8accfe367a0d6da0, HasRider) == 0x000088, "Member 'FPropertyBag_8accfe367a0d6da0::HasRider' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_6c9926fe93f6c38d
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_6c9926fe93f6c38d final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_6c9926fe93f6c38d) == 0x000008, "Wrong alignment on FPropertyBag_6c9926fe93f6c38d");
+static_assert(sizeof(FPropertyBag_6c9926fe93f6c38d) == 0x0000C8, "Wrong size on FPropertyBag_6c9926fe93f6c38d");
+static_assert(offsetof(FPropertyBag_6c9926fe93f6c38d, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_6c9926fe93f6c38d::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6c9926fe93f6c38d, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_6c9926fe93f6c38d::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6c9926fe93f6c38d, Wander_Delay) == 0x000010, "Member 'FPropertyBag_6c9926fe93f6c38d::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6c9926fe93f6c38d, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_6c9926fe93f6c38d::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6c9926fe93f6c38d, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_6c9926fe93f6c38d::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6c9926fe93f6c38d, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_6c9926fe93f6c38d::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6c9926fe93f6c38d, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_6c9926fe93f6c38d::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_2b9bb47a71550c5d
+// 0x0128 (0x0128 - 0x0000)
+struct FPropertyBag_2b9bb47a71550c5d final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	double                                        OrbitDistance;                                     // 0x00C8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           AmbientAnimationTags;                              // 0x00D0(0x0010)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x00E0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x00E8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x00F0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BiteRange;                                         // 0x00F8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanPounce;                                         // 0x0100(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        PounceRange;                                       // 0x0108(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PounceSequenceMinRange;                            // 0x0110(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PounceSequenceMaxRange;                            // 0x0118(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanHowl;                                           // 0x0120(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanRageHowl;                                       // 0x0121(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanGrowl;                                          // 0x0122(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanArrowDash;                                      // 0x0123(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_2b9bb47a71550c5d) == 0x000008, "Wrong alignment on FPropertyBag_2b9bb47a71550c5d");
+static_assert(sizeof(FPropertyBag_2b9bb47a71550c5d) == 0x000128, "Wrong size on FPropertyBag_2b9bb47a71550c5d");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_2b9bb47a71550c5d::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_2b9bb47a71550c5d::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, Wander_Delay) == 0x000010, "Member 'FPropertyBag_2b9bb47a71550c5d::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_2b9bb47a71550c5d::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_2b9bb47a71550c5d::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_2b9bb47a71550c5d::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_2b9bb47a71550c5d::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, OrbitDistance) == 0x0000C8, "Member 'FPropertyBag_2b9bb47a71550c5d::OrbitDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, AmbientAnimationTags) == 0x0000D0, "Member 'FPropertyBag_2b9bb47a71550c5d::AmbientAnimationTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, Idle_AmbientAnimDelay) == 0x0000E0, "Member 'FPropertyBag_2b9bb47a71550c5d::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, Idle_AmbientAnimDelayDeviation) == 0x0000E8, "Member 'FPropertyBag_2b9bb47a71550c5d::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, Idle_AmbientAnimCooldown) == 0x0000F0, "Member 'FPropertyBag_2b9bb47a71550c5d::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, BiteRange) == 0x0000F8, "Member 'FPropertyBag_2b9bb47a71550c5d::BiteRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, CanPounce) == 0x000100, "Member 'FPropertyBag_2b9bb47a71550c5d::CanPounce' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, PounceRange) == 0x000108, "Member 'FPropertyBag_2b9bb47a71550c5d::PounceRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, PounceSequenceMinRange) == 0x000110, "Member 'FPropertyBag_2b9bb47a71550c5d::PounceSequenceMinRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, PounceSequenceMaxRange) == 0x000118, "Member 'FPropertyBag_2b9bb47a71550c5d::PounceSequenceMaxRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, CanHowl) == 0x000120, "Member 'FPropertyBag_2b9bb47a71550c5d::CanHowl' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, CanRageHowl) == 0x000121, "Member 'FPropertyBag_2b9bb47a71550c5d::CanRageHowl' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, CanGrowl) == 0x000122, "Member 'FPropertyBag_2b9bb47a71550c5d::CanGrowl' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2b9bb47a71550c5d, CanArrowDash) == 0x000123, "Member 'FPropertyBag_2b9bb47a71550c5d::CanArrowDash' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_c2f677a7494dda2c
+// 0x0008 (0x0008 - 0x0000)
+struct FPropertyBag_c2f677a7494dda2c final
+{
+public:
+	double                                        Duration;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_c2f677a7494dda2c) == 0x000008, "Wrong alignment on FPropertyBag_c2f677a7494dda2c");
+static_assert(sizeof(FPropertyBag_c2f677a7494dda2c) == 0x000008, "Wrong size on FPropertyBag_c2f677a7494dda2c");
+static_assert(offsetof(FPropertyBag_c2f677a7494dda2c, Duration) == 0x000000, "Member 'FPropertyBag_c2f677a7494dda2c::Duration' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4a5ec708b5fbbcfb
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_4a5ec708b5fbbcfb final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          UsePoisonSpores;                                   // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseBlindSpores;                                    // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseParalyzeSpores;                                 // 0x00CA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_4a5ec708b5fbbcfb) == 0x000008, "Wrong alignment on FPropertyBag_4a5ec708b5fbbcfb");
+static_assert(sizeof(FPropertyBag_4a5ec708b5fbbcfb) == 0x0000D0, "Wrong size on FPropertyBag_4a5ec708b5fbbcfb");
+static_assert(offsetof(FPropertyBag_4a5ec708b5fbbcfb, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_4a5ec708b5fbbcfb::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a5ec708b5fbbcfb, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_4a5ec708b5fbbcfb::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a5ec708b5fbbcfb, Wander_Delay) == 0x000010, "Member 'FPropertyBag_4a5ec708b5fbbcfb::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a5ec708b5fbbcfb, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_4a5ec708b5fbbcfb::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a5ec708b5fbbcfb, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_4a5ec708b5fbbcfb::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a5ec708b5fbbcfb, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_4a5ec708b5fbbcfb::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a5ec708b5fbbcfb, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_4a5ec708b5fbbcfb::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a5ec708b5fbbcfb, UsePoisonSpores) == 0x0000C8, "Member 'FPropertyBag_4a5ec708b5fbbcfb::UsePoisonSpores' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a5ec708b5fbbcfb, UseBlindSpores) == 0x0000C9, "Member 'FPropertyBag_4a5ec708b5fbbcfb::UseBlindSpores' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a5ec708b5fbbcfb, UseParalyzeSpores) == 0x0000CA, "Member 'FPropertyBag_4a5ec708b5fbbcfb::UseParalyzeSpores' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_dbbb7c4e6d7c42ee
+// 0x0080 (0x0080 - 0x0000)
+struct FPropertyBag_dbbb7c4e6d7c42ee final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanUseThrowMuck;                                   // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_dbbb7c4e6d7c42ee) == 0x000008, "Wrong alignment on FPropertyBag_dbbb7c4e6d7c42ee");
+static_assert(sizeof(FPropertyBag_dbbb7c4e6d7c42ee) == 0x000080, "Wrong size on FPropertyBag_dbbb7c4e6d7c42ee");
+static_assert(offsetof(FPropertyBag_dbbb7c4e6d7c42ee, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_dbbb7c4e6d7c42ee::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dbbb7c4e6d7c42ee, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_dbbb7c4e6d7c42ee::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dbbb7c4e6d7c42ee, Wander_Delay) == 0x000010, "Member 'FPropertyBag_dbbb7c4e6d7c42ee::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dbbb7c4e6d7c42ee, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_dbbb7c4e6d7c42ee::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dbbb7c4e6d7c42ee, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_dbbb7c4e6d7c42ee::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dbbb7c4e6d7c42ee, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_dbbb7c4e6d7c42ee::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_dbbb7c4e6d7c42ee, CanUseThrowMuck) == 0x000078, "Member 'FPropertyBag_dbbb7c4e6d7c42ee::CanUseThrowMuck' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_fddcff3c02f60102
+// 0x0078 (0x0078 - 0x0000)
+struct FPropertyBag_fddcff3c02f60102 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_fddcff3c02f60102) == 0x000008, "Wrong alignment on FPropertyBag_fddcff3c02f60102");
+static_assert(sizeof(FPropertyBag_fddcff3c02f60102) == 0x000078, "Wrong size on FPropertyBag_fddcff3c02f60102");
+static_assert(offsetof(FPropertyBag_fddcff3c02f60102, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_fddcff3c02f60102::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fddcff3c02f60102, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_fddcff3c02f60102::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fddcff3c02f60102, Wander_Delay) == 0x000010, "Member 'FPropertyBag_fddcff3c02f60102::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fddcff3c02f60102, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_fddcff3c02f60102::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fddcff3c02f60102, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_fddcff3c02f60102::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fddcff3c02f60102, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_fddcff3c02f60102::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_8055becda2f18fab
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_8055becda2f18fab final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_8055becda2f18fab) == 0x000008, "Wrong alignment on FPropertyBag_8055becda2f18fab");
+static_assert(sizeof(FPropertyBag_8055becda2f18fab) == 0x0000C8, "Wrong size on FPropertyBag_8055becda2f18fab");
+static_assert(offsetof(FPropertyBag_8055becda2f18fab, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_8055becda2f18fab::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8055becda2f18fab, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_8055becda2f18fab::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8055becda2f18fab, Wander_Delay) == 0x000010, "Member 'FPropertyBag_8055becda2f18fab::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8055becda2f18fab, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_8055becda2f18fab::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8055becda2f18fab, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_8055becda2f18fab::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8055becda2f18fab, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_8055becda2f18fab::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8055becda2f18fab, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_8055becda2f18fab::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_c2c16c7e1e0f8090
+// 0x0108 (0x0108 - 0x0000)
+struct FPropertyBag_c2c16c7e1e0f8090 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	TArray<class FName>                           AmbientAnimationTags;                              // 0x0078(0x0010)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0098(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x00A0(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00B0(0x0050)(Edit)
+	bool                                          CanUseTerritorialGrunt;                            // 0x0100(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseSideSlam;                                    // 0x0101(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_c2c16c7e1e0f8090) == 0x000008, "Wrong alignment on FPropertyBag_c2c16c7e1e0f8090");
+static_assert(sizeof(FPropertyBag_c2c16c7e1e0f8090) == 0x000108, "Wrong size on FPropertyBag_c2c16c7e1e0f8090");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_c2c16c7e1e0f8090::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_c2c16c7e1e0f8090::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Wander_Delay) == 0x000010, "Member 'FPropertyBag_c2c16c7e1e0f8090::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_c2c16c7e1e0f8090::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_c2c16c7e1e0f8090::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_c2c16c7e1e0f8090::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, AmbientAnimationTags) == 0x000078, "Member 'FPropertyBag_c2c16c7e1e0f8090::AmbientAnimationTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Idle_AmbientAnimDelay) == 0x000088, "Member 'FPropertyBag_c2c16c7e1e0f8090::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Idle_AmbientAnimDelayDeviation) == 0x000090, "Member 'FPropertyBag_c2c16c7e1e0f8090::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Idle_AmbientAnimCooldown) == 0x000098, "Member 'FPropertyBag_c2c16c7e1e0f8090::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Ambient_FallbackTagString) == 0x0000A0, "Member 'FPropertyBag_c2c16c7e1e0f8090::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, Wander_SpeedMultiplier) == 0x0000B0, "Member 'FPropertyBag_c2c16c7e1e0f8090::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, CanUseTerritorialGrunt) == 0x000100, "Member 'FPropertyBag_c2c16c7e1e0f8090::CanUseTerritorialGrunt' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c2c16c7e1e0f8090, CanUseSideSlam) == 0x000101, "Member 'FPropertyBag_c2c16c7e1e0f8090::CanUseSideSlam' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_f080cd1625cbd67
+// 0x00D8 (0x00D8 - 0x0000)
+struct FPropertyBag_f080cd1625cbd67 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          HasGuillotine;                                     // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RefreshRetract01;                                  // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RefreshRetract02;                                  // 0x00CA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB[0x5];                                       // 0x00CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        AttackDistance;                                    // 0x00D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_f080cd1625cbd67) == 0x000008, "Wrong alignment on FPropertyBag_f080cd1625cbd67");
+static_assert(sizeof(FPropertyBag_f080cd1625cbd67) == 0x0000D8, "Wrong size on FPropertyBag_f080cd1625cbd67");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_f080cd1625cbd67::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_f080cd1625cbd67::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, Wander_Delay) == 0x000010, "Member 'FPropertyBag_f080cd1625cbd67::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_f080cd1625cbd67::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_f080cd1625cbd67::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_f080cd1625cbd67::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_f080cd1625cbd67::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, HasGuillotine) == 0x0000C8, "Member 'FPropertyBag_f080cd1625cbd67::HasGuillotine' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, RefreshRetract01) == 0x0000C9, "Member 'FPropertyBag_f080cd1625cbd67::RefreshRetract01' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, RefreshRetract02) == 0x0000CA, "Member 'FPropertyBag_f080cd1625cbd67::RefreshRetract02' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f080cd1625cbd67, AttackDistance) == 0x0000D0, "Member 'FPropertyBag_f080cd1625cbd67::AttackDistance' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4ef4ae54ccc5a79a
+// 0x0020 (0x0020 - 0x0000)
+struct FPropertyBag_4ef4ae54ccc5a79a final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_4ef4ae54ccc5a79a) == 0x000008, "Wrong alignment on FPropertyBag_4ef4ae54ccc5a79a");
+static_assert(sizeof(FPropertyBag_4ef4ae54ccc5a79a) == 0x000020, "Wrong size on FPropertyBag_4ef4ae54ccc5a79a");
+static_assert(offsetof(FPropertyBag_4ef4ae54ccc5a79a, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_4ef4ae54ccc5a79a::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ef4ae54ccc5a79a, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_4ef4ae54ccc5a79a::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ef4ae54ccc5a79a, Wander_Delay) == 0x000010, "Member 'FPropertyBag_4ef4ae54ccc5a79a::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ef4ae54ccc5a79a, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_4ef4ae54ccc5a79a::Wander_DelayDeviation' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_5e5ef082b3a435b3
+// 0x0040 (0x0040 - 0x0000)
+struct FPropertyBag_5e5ef082b3a435b3 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                NewProperty;                                       // 0x0020(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Idling;                                            // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_5e5ef082b3a435b3) == 0x000008, "Wrong alignment on FPropertyBag_5e5ef082b3a435b3");
+static_assert(sizeof(FPropertyBag_5e5ef082b3a435b3) == 0x000040, "Wrong size on FPropertyBag_5e5ef082b3a435b3");
+static_assert(offsetof(FPropertyBag_5e5ef082b3a435b3, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_5e5ef082b3a435b3::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5e5ef082b3a435b3, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_5e5ef082b3a435b3::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5e5ef082b3a435b3, Wander_Delay) == 0x000010, "Member 'FPropertyBag_5e5ef082b3a435b3::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5e5ef082b3a435b3, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_5e5ef082b3a435b3::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5e5ef082b3a435b3, NewProperty) == 0x000020, "Member 'FPropertyBag_5e5ef082b3a435b3::NewProperty' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5e5ef082b3a435b3, Idling) == 0x000038, "Member 'FPropertyBag_5e5ef082b3a435b3::Idling' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4a7b85752aefda19
+// 0x0020 (0x0020 - 0x0000)
+struct FPropertyBag_4a7b85752aefda19 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_4a7b85752aefda19) == 0x000008, "Wrong alignment on FPropertyBag_4a7b85752aefda19");
+static_assert(sizeof(FPropertyBag_4a7b85752aefda19) == 0x000020, "Wrong size on FPropertyBag_4a7b85752aefda19");
+static_assert(offsetof(FPropertyBag_4a7b85752aefda19, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_4a7b85752aefda19::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a7b85752aefda19, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_4a7b85752aefda19::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a7b85752aefda19, Wander_Delay) == 0x000010, "Member 'FPropertyBag_4a7b85752aefda19::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4a7b85752aefda19, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_4a7b85752aefda19::Wander_DelayDeviation' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_c1ec44c0feec958a
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_c1ec44c0feec958a final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_c1ec44c0feec958a) == 0x000008, "Wrong alignment on FPropertyBag_c1ec44c0feec958a");
+static_assert(sizeof(FPropertyBag_c1ec44c0feec958a) == 0x0000C8, "Wrong size on FPropertyBag_c1ec44c0feec958a");
+static_assert(offsetof(FPropertyBag_c1ec44c0feec958a, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_c1ec44c0feec958a::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c1ec44c0feec958a, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_c1ec44c0feec958a::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c1ec44c0feec958a, Wander_Delay) == 0x000010, "Member 'FPropertyBag_c1ec44c0feec958a::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c1ec44c0feec958a, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_c1ec44c0feec958a::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c1ec44c0feec958a, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_c1ec44c0feec958a::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c1ec44c0feec958a, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_c1ec44c0feec958a::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c1ec44c0feec958a, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_c1ec44c0feec958a::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e6cae41a4e5a351f
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_e6cae41a4e5a351f final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          UnburyOnAggro;                                     // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_e6cae41a4e5a351f) == 0x000008, "Wrong alignment on FPropertyBag_e6cae41a4e5a351f");
+static_assert(sizeof(FPropertyBag_e6cae41a4e5a351f) == 0x0000D0, "Wrong size on FPropertyBag_e6cae41a4e5a351f");
+static_assert(offsetof(FPropertyBag_e6cae41a4e5a351f, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_e6cae41a4e5a351f::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6cae41a4e5a351f, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_e6cae41a4e5a351f::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6cae41a4e5a351f, Wander_Delay) == 0x000010, "Member 'FPropertyBag_e6cae41a4e5a351f::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6cae41a4e5a351f, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_e6cae41a4e5a351f::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6cae41a4e5a351f, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_e6cae41a4e5a351f::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6cae41a4e5a351f, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_e6cae41a4e5a351f::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6cae41a4e5a351f, UnburyOnAggro) == 0x000078, "Member 'FPropertyBag_e6cae41a4e5a351f::UnburyOnAggro' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6cae41a4e5a351f, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_e6cae41a4e5a351f::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_8ac121120d379fe1
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_8ac121120d379fe1 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_8ac121120d379fe1) == 0x000008, "Wrong alignment on FPropertyBag_8ac121120d379fe1");
+static_assert(sizeof(FPropertyBag_8ac121120d379fe1) == 0x0000C8, "Wrong size on FPropertyBag_8ac121120d379fe1");
+static_assert(offsetof(FPropertyBag_8ac121120d379fe1, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_8ac121120d379fe1::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8ac121120d379fe1, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_8ac121120d379fe1::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8ac121120d379fe1, Wander_Delay) == 0x000010, "Member 'FPropertyBag_8ac121120d379fe1::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8ac121120d379fe1, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_8ac121120d379fe1::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8ac121120d379fe1, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_8ac121120d379fe1::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8ac121120d379fe1, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_8ac121120d379fe1::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8ac121120d379fe1, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_8ac121120d379fe1::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_aecca8278ce7219a
+// 0x0120 (0x0120 - 0x0000)
+struct FPropertyBag_aecca8278ce7219a final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanFirePot;                                        // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanExtraBasicAttack;                               // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanTauntAndCounter;                                // 0x007A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Idle_AmbientAnimDelay;                             // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0098(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A8(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B8(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C8(0x0050)(Edit)
+	bool                                          CanSlash;                                          // 0x0118(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanCutlassBarrage;                                 // 0x0119(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_aecca8278ce7219a) == 0x000008, "Wrong alignment on FPropertyBag_aecca8278ce7219a");
+static_assert(sizeof(FPropertyBag_aecca8278ce7219a) == 0x000120, "Wrong size on FPropertyBag_aecca8278ce7219a");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_aecca8278ce7219a::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_aecca8278ce7219a::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Wander_Delay) == 0x000010, "Member 'FPropertyBag_aecca8278ce7219a::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_aecca8278ce7219a::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_aecca8278ce7219a::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_aecca8278ce7219a::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, CanFirePot) == 0x000078, "Member 'FPropertyBag_aecca8278ce7219a::CanFirePot' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, CanExtraBasicAttack) == 0x000079, "Member 'FPropertyBag_aecca8278ce7219a::CanExtraBasicAttack' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, CanTauntAndCounter) == 0x00007A, "Member 'FPropertyBag_aecca8278ce7219a::CanTauntAndCounter' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Idle_AmbientAnimDelay) == 0x000080, "Member 'FPropertyBag_aecca8278ce7219a::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Idle_AmbientAnimDelayDeviation) == 0x000088, "Member 'FPropertyBag_aecca8278ce7219a::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Idle_AmbientAnimCooldown) == 0x000090, "Member 'FPropertyBag_aecca8278ce7219a::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Ambient_FallbackTagString) == 0x000098, "Member 'FPropertyBag_aecca8278ce7219a::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, InteractableTags) == 0x0000A8, "Member 'FPropertyBag_aecca8278ce7219a::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, InteractableNPCTags) == 0x0000B8, "Member 'FPropertyBag_aecca8278ce7219a::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, Wander_SpeedMultiplier) == 0x0000C8, "Member 'FPropertyBag_aecca8278ce7219a::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, CanSlash) == 0x000118, "Member 'FPropertyBag_aecca8278ce7219a::CanSlash' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aecca8278ce7219a, CanCutlassBarrage) == 0x000119, "Member 'FPropertyBag_aecca8278ce7219a::CanCutlassBarrage' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_c3f24a717ae3ef64
+// 0x0188 (0x0188 - 0x0000)
+struct FPropertyBag_c3f24a717ae3ef64 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          IsAmbusher;                                        // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Ambush_AlertRadius;                                // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0088(0x0050)(Edit)
+	bool                                          Spiritfire;                                        // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MeleeRange;                                        // 0x00E0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          Slam;                                              // 0x00E8(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          FireBreath;                                        // 0x0100(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          BurstingCharge_KindledFlame;                       // 0x0118(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          BurstingCharge;                                    // 0x0130(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityId                          KindledFlame;                                      // 0x0148(0x0018)(Edit, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanKindledFlame;                                   // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        FlameBlastChance;                                  // 0x0168(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BurstingChargeChance;                              // 0x0170(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FireBreathChance;                                  // 0x0178(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanBurstingCharge;                                 // 0x0180(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_c3f24a717ae3ef64) == 0x000008, "Wrong alignment on FPropertyBag_c3f24a717ae3ef64");
+static_assert(sizeof(FPropertyBag_c3f24a717ae3ef64) == 0x000188, "Wrong size on FPropertyBag_c3f24a717ae3ef64");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_c3f24a717ae3ef64::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_c3f24a717ae3ef64::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, Wander_Delay) == 0x000010, "Member 'FPropertyBag_c3f24a717ae3ef64::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_c3f24a717ae3ef64::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_c3f24a717ae3ef64::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_c3f24a717ae3ef64::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, IsAmbusher) == 0x000078, "Member 'FPropertyBag_c3f24a717ae3ef64::IsAmbusher' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, Ambush_AlertRadius) == 0x000080, "Member 'FPropertyBag_c3f24a717ae3ef64::Ambush_AlertRadius' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, Wander_SpeedMultiplier) == 0x000088, "Member 'FPropertyBag_c3f24a717ae3ef64::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, Spiritfire) == 0x0000D8, "Member 'FPropertyBag_c3f24a717ae3ef64::Spiritfire' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, MeleeRange) == 0x0000E0, "Member 'FPropertyBag_c3f24a717ae3ef64::MeleeRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, Slam) == 0x0000E8, "Member 'FPropertyBag_c3f24a717ae3ef64::Slam' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, FireBreath) == 0x000100, "Member 'FPropertyBag_c3f24a717ae3ef64::FireBreath' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, BurstingCharge_KindledFlame) == 0x000118, "Member 'FPropertyBag_c3f24a717ae3ef64::BurstingCharge_KindledFlame' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, BurstingCharge) == 0x000130, "Member 'FPropertyBag_c3f24a717ae3ef64::BurstingCharge' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, KindledFlame) == 0x000148, "Member 'FPropertyBag_c3f24a717ae3ef64::KindledFlame' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, CanKindledFlame) == 0x000160, "Member 'FPropertyBag_c3f24a717ae3ef64::CanKindledFlame' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, FlameBlastChance) == 0x000168, "Member 'FPropertyBag_c3f24a717ae3ef64::FlameBlastChance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, BurstingChargeChance) == 0x000170, "Member 'FPropertyBag_c3f24a717ae3ef64::BurstingChargeChance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, FireBreathChance) == 0x000178, "Member 'FPropertyBag_c3f24a717ae3ef64::FireBreathChance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c3f24a717ae3ef64, CanBurstingCharge) == 0x000180, "Member 'FPropertyBag_c3f24a717ae3ef64::CanBurstingCharge' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_a1b5e3aa7ccde899
+// 0x00E0 (0x00E0 - 0x0000)
+struct FPropertyBag_a1b5e3aa7ccde899 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanSpawnKids;                                      // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ArrivalDistance;                                   // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanMushroomMissile;                                // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0090(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_a1b5e3aa7ccde899) == 0x000008, "Wrong alignment on FPropertyBag_a1b5e3aa7ccde899");
+static_assert(sizeof(FPropertyBag_a1b5e3aa7ccde899) == 0x0000E0, "Wrong size on FPropertyBag_a1b5e3aa7ccde899");
+static_assert(offsetof(FPropertyBag_a1b5e3aa7ccde899, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_a1b5e3aa7ccde899::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1b5e3aa7ccde899, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_a1b5e3aa7ccde899::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1b5e3aa7ccde899, Wander_Delay) == 0x000010, "Member 'FPropertyBag_a1b5e3aa7ccde899::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1b5e3aa7ccde899, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_a1b5e3aa7ccde899::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1b5e3aa7ccde899, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_a1b5e3aa7ccde899::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1b5e3aa7ccde899, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_a1b5e3aa7ccde899::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1b5e3aa7ccde899, CanSpawnKids) == 0x000078, "Member 'FPropertyBag_a1b5e3aa7ccde899::CanSpawnKids' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1b5e3aa7ccde899, ArrivalDistance) == 0x000080, "Member 'FPropertyBag_a1b5e3aa7ccde899::ArrivalDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1b5e3aa7ccde899, CanMushroomMissile) == 0x000088, "Member 'FPropertyBag_a1b5e3aa7ccde899::CanMushroomMissile' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1b5e3aa7ccde899, Wander_SpeedMultiplier) == 0x000090, "Member 'FPropertyBag_a1b5e3aa7ccde899::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4ec0e857438ab178
+// 0x0118 (0x0118 - 0x0000)
+struct FPropertyBag_4ec0e857438ab178 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x0090(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           AmbientAnimationTags;                              // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+	bool                                          CanUseAirstrike;                                   // 0x0110(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseBrinyShot;                                   // 0x0111(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseAnchoringShot;                               // 0x0112(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_4ec0e857438ab178) == 0x000008, "Wrong alignment on FPropertyBag_4ec0e857438ab178");
+static_assert(sizeof(FPropertyBag_4ec0e857438ab178) == 0x000118, "Wrong size on FPropertyBag_4ec0e857438ab178");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_4ec0e857438ab178::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_4ec0e857438ab178::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, Wander_Delay) == 0x000010, "Member 'FPropertyBag_4ec0e857438ab178::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_4ec0e857438ab178::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_4ec0e857438ab178::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_4ec0e857438ab178::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_4ec0e857438ab178::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_4ec0e857438ab178::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_4ec0e857438ab178::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, InteractableTags) == 0x000090, "Member 'FPropertyBag_4ec0e857438ab178::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, InteractableNPCTags) == 0x0000A0, "Member 'FPropertyBag_4ec0e857438ab178::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, AmbientAnimationTags) == 0x0000B0, "Member 'FPropertyBag_4ec0e857438ab178::AmbientAnimationTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_4ec0e857438ab178::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, CanUseAirstrike) == 0x000110, "Member 'FPropertyBag_4ec0e857438ab178::CanUseAirstrike' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, CanUseBrinyShot) == 0x000111, "Member 'FPropertyBag_4ec0e857438ab178::CanUseBrinyShot' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ec0e857438ab178, CanUseAnchoringShot) == 0x000112, "Member 'FPropertyBag_4ec0e857438ab178::CanUseAnchoringShot' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e2d4c0bf5bf5c1bd
+// 0x0088 (0x0088 - 0x0000)
+struct FPropertyBag_e2d4c0bf5bf5c1bd final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          Ambush;                                            // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        AmbushDistance;                                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_e2d4c0bf5bf5c1bd) == 0x000008, "Wrong alignment on FPropertyBag_e2d4c0bf5bf5c1bd");
+static_assert(sizeof(FPropertyBag_e2d4c0bf5bf5c1bd) == 0x000088, "Wrong size on FPropertyBag_e2d4c0bf5bf5c1bd");
+static_assert(offsetof(FPropertyBag_e2d4c0bf5bf5c1bd, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_e2d4c0bf5bf5c1bd::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e2d4c0bf5bf5c1bd, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_e2d4c0bf5bf5c1bd::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e2d4c0bf5bf5c1bd, Wander_Delay) == 0x000010, "Member 'FPropertyBag_e2d4c0bf5bf5c1bd::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e2d4c0bf5bf5c1bd, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_e2d4c0bf5bf5c1bd::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e2d4c0bf5bf5c1bd, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_e2d4c0bf5bf5c1bd::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e2d4c0bf5bf5c1bd, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_e2d4c0bf5bf5c1bd::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e2d4c0bf5bf5c1bd, Ambush) == 0x000078, "Member 'FPropertyBag_e2d4c0bf5bf5c1bd::Ambush' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e2d4c0bf5bf5c1bd, AmbushDistance) == 0x000080, "Member 'FPropertyBag_e2d4c0bf5bf5c1bd::AmbushDistance' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_1e342c910780572b
+// 0x00D8 (0x00D8 - 0x0000)
+struct FPropertyBag_1e342c910780572b final
+{
+public:
+	bool                                          SpawnsSpiderlings;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnsSpiderlingsOnDeath;                          // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEntangle;                                       // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasVenomSpray;                                     // 0x0003(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasPounce;                                         // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasBlindingSpray;                                  // 0x0005(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasBloodFeast;                                     // 0x0006(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Wander_RadiusMax;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0030(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+	bool                                          bDeathWeb;                                         // 0x00D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPoisonDeathWeb;                                   // 0x00D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_1e342c910780572b) == 0x000008, "Wrong alignment on FPropertyBag_1e342c910780572b");
+static_assert(sizeof(FPropertyBag_1e342c910780572b) == 0x0000D8, "Wrong size on FPropertyBag_1e342c910780572b");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, SpawnsSpiderlings) == 0x000000, "Member 'FPropertyBag_1e342c910780572b::SpawnsSpiderlings' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, SpawnsSpiderlingsOnDeath) == 0x000001, "Member 'FPropertyBag_1e342c910780572b::SpawnsSpiderlingsOnDeath' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, HasEntangle) == 0x000002, "Member 'FPropertyBag_1e342c910780572b::HasEntangle' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, HasVenomSpray) == 0x000003, "Member 'FPropertyBag_1e342c910780572b::HasVenomSpray' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, HasPounce) == 0x000004, "Member 'FPropertyBag_1e342c910780572b::HasPounce' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, HasBlindingSpray) == 0x000005, "Member 'FPropertyBag_1e342c910780572b::HasBlindingSpray' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, HasBloodFeast) == 0x000006, "Member 'FPropertyBag_1e342c910780572b::HasBloodFeast' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, Wander_RadiusMax) == 0x000008, "Member 'FPropertyBag_1e342c910780572b::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, Wander_RadiusMin) == 0x000010, "Member 'FPropertyBag_1e342c910780572b::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, Wander_Delay) == 0x000018, "Member 'FPropertyBag_1e342c910780572b::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, Wander_DelayDeviation) == 0x000020, "Member 'FPropertyBag_1e342c910780572b::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, Patrol_RouteStrategy) == 0x000028, "Member 'FPropertyBag_1e342c910780572b::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, Patrol_PathingSpeedMultiplier) == 0x000030, "Member 'FPropertyBag_1e342c910780572b::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_1e342c910780572b::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, bDeathWeb) == 0x0000D0, "Member 'FPropertyBag_1e342c910780572b::bDeathWeb' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_1e342c910780572b, bPoisonDeathWeb) == 0x0000D1, "Member 'FPropertyBag_1e342c910780572b::bPoisonDeathWeb' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_fa960d74ce1a6218
+// 0x00D8 (0x00D8 - 0x0000)
+struct FPropertyBag_fa960d74ce1a6218 final
+{
+public:
+	bool                                          SpawnsSpiderlings;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEntangle;                                       // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasVenomSpray;                                     // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasPounce;                                         // 0x0003(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Wander_RadiusMax;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0030(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+	bool                                          Ambush;                                            // 0x00D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDeathWeb;                                         // 0x00D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPoisonDeathWeb;                                   // 0x00D2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_fa960d74ce1a6218) == 0x000008, "Wrong alignment on FPropertyBag_fa960d74ce1a6218");
+static_assert(sizeof(FPropertyBag_fa960d74ce1a6218) == 0x0000D8, "Wrong size on FPropertyBag_fa960d74ce1a6218");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, SpawnsSpiderlings) == 0x000000, "Member 'FPropertyBag_fa960d74ce1a6218::SpawnsSpiderlings' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, HasEntangle) == 0x000001, "Member 'FPropertyBag_fa960d74ce1a6218::HasEntangle' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, HasVenomSpray) == 0x000002, "Member 'FPropertyBag_fa960d74ce1a6218::HasVenomSpray' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, HasPounce) == 0x000003, "Member 'FPropertyBag_fa960d74ce1a6218::HasPounce' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, Wander_RadiusMax) == 0x000008, "Member 'FPropertyBag_fa960d74ce1a6218::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, Wander_RadiusMin) == 0x000010, "Member 'FPropertyBag_fa960d74ce1a6218::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, Wander_Delay) == 0x000018, "Member 'FPropertyBag_fa960d74ce1a6218::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, Wander_DelayDeviation) == 0x000020, "Member 'FPropertyBag_fa960d74ce1a6218::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, Patrol_RouteStrategy) == 0x000028, "Member 'FPropertyBag_fa960d74ce1a6218::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, Patrol_PathingSpeedMultiplier) == 0x000030, "Member 'FPropertyBag_fa960d74ce1a6218::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_fa960d74ce1a6218::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, Ambush) == 0x0000D0, "Member 'FPropertyBag_fa960d74ce1a6218::Ambush' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, bDeathWeb) == 0x0000D1, "Member 'FPropertyBag_fa960d74ce1a6218::bDeathWeb' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa960d74ce1a6218, bPoisonDeathWeb) == 0x0000D2, "Member 'FPropertyBag_fa960d74ce1a6218::bPoisonDeathWeb' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_a51051beb91b0ca4
+// 0x00A8 (0x00A8 - 0x0000)
+struct FPropertyBag_a51051beb91b0ca4 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CanWaveBreak;                                      // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanDivineProtection;                               // 0x00A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanDivineWeapon;                                   // 0x00A2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanReliefTouch;                                    // 0x00A3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_a51051beb91b0ca4) == 0x000008, "Wrong alignment on FPropertyBag_a51051beb91b0ca4");
+static_assert(sizeof(FPropertyBag_a51051beb91b0ca4) == 0x0000A8, "Wrong size on FPropertyBag_a51051beb91b0ca4");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_a51051beb91b0ca4::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_a51051beb91b0ca4::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, Wander_Delay) == 0x000010, "Member 'FPropertyBag_a51051beb91b0ca4::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_a51051beb91b0ca4::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_a51051beb91b0ca4::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_a51051beb91b0ca4::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_a51051beb91b0ca4::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_a51051beb91b0ca4::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_a51051beb91b0ca4::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_a51051beb91b0ca4::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, CanWaveBreak) == 0x0000A0, "Member 'FPropertyBag_a51051beb91b0ca4::CanWaveBreak' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, CanDivineProtection) == 0x0000A1, "Member 'FPropertyBag_a51051beb91b0ca4::CanDivineProtection' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, CanDivineWeapon) == 0x0000A2, "Member 'FPropertyBag_a51051beb91b0ca4::CanDivineWeapon' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a51051beb91b0ca4, CanReliefTouch) == 0x0000A3, "Member 'FPropertyBag_a51051beb91b0ca4::CanReliefTouch' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_7852eaf69c9eecdd
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_7852eaf69c9eecdd final
+{
+public:
+	bool                                          SpawnsSpiderlings;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEntangle;                                       // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasVenomSpray;                                     // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Wander_RadiusMax;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0030(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_7852eaf69c9eecdd) == 0x000008, "Wrong alignment on FPropertyBag_7852eaf69c9eecdd");
+static_assert(sizeof(FPropertyBag_7852eaf69c9eecdd) == 0x0000D0, "Wrong size on FPropertyBag_7852eaf69c9eecdd");
+static_assert(offsetof(FPropertyBag_7852eaf69c9eecdd, SpawnsSpiderlings) == 0x000000, "Member 'FPropertyBag_7852eaf69c9eecdd::SpawnsSpiderlings' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7852eaf69c9eecdd, HasEntangle) == 0x000001, "Member 'FPropertyBag_7852eaf69c9eecdd::HasEntangle' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7852eaf69c9eecdd, HasVenomSpray) == 0x000002, "Member 'FPropertyBag_7852eaf69c9eecdd::HasVenomSpray' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7852eaf69c9eecdd, Wander_RadiusMax) == 0x000008, "Member 'FPropertyBag_7852eaf69c9eecdd::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7852eaf69c9eecdd, Wander_RadiusMin) == 0x000010, "Member 'FPropertyBag_7852eaf69c9eecdd::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7852eaf69c9eecdd, Wander_Delay) == 0x000018, "Member 'FPropertyBag_7852eaf69c9eecdd::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7852eaf69c9eecdd, Wander_DelayDeviation) == 0x000020, "Member 'FPropertyBag_7852eaf69c9eecdd::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7852eaf69c9eecdd, Patrol_RouteStrategy) == 0x000028, "Member 'FPropertyBag_7852eaf69c9eecdd::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7852eaf69c9eecdd, Patrol_PathingSpeedMultiplier) == 0x000030, "Member 'FPropertyBag_7852eaf69c9eecdd::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7852eaf69c9eecdd, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_7852eaf69c9eecdd::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_f388db6517fe9308
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_f388db6517fe9308 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_f388db6517fe9308) == 0x000008, "Wrong alignment on FPropertyBag_f388db6517fe9308");
+static_assert(sizeof(FPropertyBag_f388db6517fe9308) == 0x0000C8, "Wrong size on FPropertyBag_f388db6517fe9308");
+static_assert(offsetof(FPropertyBag_f388db6517fe9308, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_f388db6517fe9308::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f388db6517fe9308, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_f388db6517fe9308::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f388db6517fe9308, Wander_Delay) == 0x000010, "Member 'FPropertyBag_f388db6517fe9308::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f388db6517fe9308, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_f388db6517fe9308::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f388db6517fe9308, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_f388db6517fe9308::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f388db6517fe9308, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_f388db6517fe9308::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f388db6517fe9308, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_f388db6517fe9308::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_ea79a07310054946
+// 0x0090 (0x0090 - 0x0000)
+struct FPropertyBag_ea79a07310054946 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        MeleeDistance;                                     // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeapDistance;                                      // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanPoisonDart;                                     // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSandFlash;                                      // 0x0089(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSandArmor;                                      // 0x008A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSandSwirl;                                      // 0x008B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_ea79a07310054946) == 0x000008, "Wrong alignment on FPropertyBag_ea79a07310054946");
+static_assert(sizeof(FPropertyBag_ea79a07310054946) == 0x000090, "Wrong size on FPropertyBag_ea79a07310054946");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_ea79a07310054946::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_ea79a07310054946::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, Wander_Delay) == 0x000010, "Member 'FPropertyBag_ea79a07310054946::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_ea79a07310054946::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_ea79a07310054946::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_ea79a07310054946::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, MeleeDistance) == 0x000078, "Member 'FPropertyBag_ea79a07310054946::MeleeDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, LeapDistance) == 0x000080, "Member 'FPropertyBag_ea79a07310054946::LeapDistance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, CanPoisonDart) == 0x000088, "Member 'FPropertyBag_ea79a07310054946::CanPoisonDart' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, CanSandFlash) == 0x000089, "Member 'FPropertyBag_ea79a07310054946::CanSandFlash' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, CanSandArmor) == 0x00008A, "Member 'FPropertyBag_ea79a07310054946::CanSandArmor' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ea79a07310054946, CanSandSwirl) == 0x00008B, "Member 'FPropertyBag_ea79a07310054946::CanSandSwirl' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_f53de43aca8ec16f
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_f53de43aca8ec16f final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Deplay;                                     // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DeplayDeviation;                            // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          Ambush;                                            // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_f53de43aca8ec16f) == 0x000008, "Wrong alignment on FPropertyBag_f53de43aca8ec16f");
+static_assert(sizeof(FPropertyBag_f53de43aca8ec16f) == 0x0000D0, "Wrong size on FPropertyBag_f53de43aca8ec16f");
+static_assert(offsetof(FPropertyBag_f53de43aca8ec16f, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_f53de43aca8ec16f::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f53de43aca8ec16f, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_f53de43aca8ec16f::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f53de43aca8ec16f, Wander_Deplay) == 0x000010, "Member 'FPropertyBag_f53de43aca8ec16f::Wander_Deplay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f53de43aca8ec16f, Wander_DeplayDeviation) == 0x000018, "Member 'FPropertyBag_f53de43aca8ec16f::Wander_DeplayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f53de43aca8ec16f, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_f53de43aca8ec16f::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f53de43aca8ec16f, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_f53de43aca8ec16f::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f53de43aca8ec16f, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_f53de43aca8ec16f::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f53de43aca8ec16f, Ambush) == 0x0000C8, "Member 'FPropertyBag_f53de43aca8ec16f::Ambush' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4b1bf2088a4365fb
+// 0x0100 (0x0100 - 0x0000)
+struct FPropertyBag_4b1bf2088a4365fb final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          IsRangedHarasser;                                  // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                RangedHarasserTargetLocation;                      // 0x0080(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RangedHarasserDelay;                               // 0x0098(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RangedHarassTargetOffsetRadius;                    // 0x00A0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseAmbientInteractions;                         // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00B0(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_4b1bf2088a4365fb) == 0x000008, "Wrong alignment on FPropertyBag_4b1bf2088a4365fb");
+static_assert(sizeof(FPropertyBag_4b1bf2088a4365fb) == 0x000100, "Wrong size on FPropertyBag_4b1bf2088a4365fb");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_4b1bf2088a4365fb::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_4b1bf2088a4365fb::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, Wander_Delay) == 0x000010, "Member 'FPropertyBag_4b1bf2088a4365fb::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_4b1bf2088a4365fb::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_4b1bf2088a4365fb::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_4b1bf2088a4365fb::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, IsRangedHarasser) == 0x000078, "Member 'FPropertyBag_4b1bf2088a4365fb::IsRangedHarasser' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, RangedHarasserTargetLocation) == 0x000080, "Member 'FPropertyBag_4b1bf2088a4365fb::RangedHarasserTargetLocation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, RangedHarasserDelay) == 0x000098, "Member 'FPropertyBag_4b1bf2088a4365fb::RangedHarasserDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, RangedHarassTargetOffsetRadius) == 0x0000A0, "Member 'FPropertyBag_4b1bf2088a4365fb::RangedHarassTargetOffsetRadius' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, CanUseAmbientInteractions) == 0x0000A8, "Member 'FPropertyBag_4b1bf2088a4365fb::CanUseAmbientInteractions' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4b1bf2088a4365fb, Wander_SpeedMultiplier) == 0x0000B0, "Member 'FPropertyBag_4b1bf2088a4365fb::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_16b1f20e4a989fbb
+// 0x0001 (0x0001 - 0x0000)
+struct FPropertyBag_16b1f20e4a989fbb final
+{
+public:
+	bool                                          Sink;                                              // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_16b1f20e4a989fbb) == 0x000001, "Wrong alignment on FPropertyBag_16b1f20e4a989fbb");
+static_assert(sizeof(FPropertyBag_16b1f20e4a989fbb) == 0x000001, "Wrong size on FPropertyBag_16b1f20e4a989fbb");
+static_assert(offsetof(FPropertyBag_16b1f20e4a989fbb, Sink) == 0x000000, "Member 'FPropertyBag_16b1f20e4a989fbb::Sink' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_2a933dc29bec4510
+// 0x00C0 (0x00C0 - 0x0000)
+struct FPropertyBag_2a933dc29bec4510 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0020(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0070(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_2a933dc29bec4510) == 0x000008, "Wrong alignment on FPropertyBag_2a933dc29bec4510");
+static_assert(sizeof(FPropertyBag_2a933dc29bec4510) == 0x0000C0, "Wrong size on FPropertyBag_2a933dc29bec4510");
+static_assert(offsetof(FPropertyBag_2a933dc29bec4510, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_2a933dc29bec4510::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2a933dc29bec4510, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_2a933dc29bec4510::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2a933dc29bec4510, Wander_Delay) == 0x000010, "Member 'FPropertyBag_2a933dc29bec4510::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2a933dc29bec4510, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_2a933dc29bec4510::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2a933dc29bec4510, Patrol_PathingSpeedMultiplier) == 0x000020, "Member 'FPropertyBag_2a933dc29bec4510::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_2a933dc29bec4510, Wander_SpeedMultiplier) == 0x000070, "Member 'FPropertyBag_2a933dc29bec4510::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_ff5e268d2d77130a
+// 0x0001 (0x0001 - 0x0000)
+struct FPropertyBag_ff5e268d2d77130a final
+{
+public:
+	bool                                          Ambush;                                            // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_ff5e268d2d77130a) == 0x000001, "Wrong alignment on FPropertyBag_ff5e268d2d77130a");
+static_assert(sizeof(FPropertyBag_ff5e268d2d77130a) == 0x000001, "Wrong size on FPropertyBag_ff5e268d2d77130a");
+static_assert(offsetof(FPropertyBag_ff5e268d2d77130a, Ambush) == 0x000000, "Member 'FPropertyBag_ff5e268d2d77130a::Ambush' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_6f29f1ceaa60675e
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_6f29f1ceaa60675e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          CanSoulLink;                                       // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_6f29f1ceaa60675e) == 0x000008, "Wrong alignment on FPropertyBag_6f29f1ceaa60675e");
+static_assert(sizeof(FPropertyBag_6f29f1ceaa60675e) == 0x0000D0, "Wrong size on FPropertyBag_6f29f1ceaa60675e");
+static_assert(offsetof(FPropertyBag_6f29f1ceaa60675e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_6f29f1ceaa60675e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6f29f1ceaa60675e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_6f29f1ceaa60675e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6f29f1ceaa60675e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_6f29f1ceaa60675e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6f29f1ceaa60675e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_6f29f1ceaa60675e::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6f29f1ceaa60675e, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_6f29f1ceaa60675e::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6f29f1ceaa60675e, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_6f29f1ceaa60675e::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6f29f1ceaa60675e, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_6f29f1ceaa60675e::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6f29f1ceaa60675e, CanSoulLink) == 0x0000C8, "Member 'FPropertyBag_6f29f1ceaa60675e::CanSoulLink' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_8164c2d58ba5a229
+// 0x0078 (0x0078 - 0x0000)
+struct FPropertyBag_8164c2d58ba5a229 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnedByCyclops;                                  // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0021(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_8164c2d58ba5a229) == 0x000008, "Wrong alignment on FPropertyBag_8164c2d58ba5a229");
+static_assert(sizeof(FPropertyBag_8164c2d58ba5a229) == 0x000078, "Wrong size on FPropertyBag_8164c2d58ba5a229");
+static_assert(offsetof(FPropertyBag_8164c2d58ba5a229, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_8164c2d58ba5a229::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8164c2d58ba5a229, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_8164c2d58ba5a229::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8164c2d58ba5a229, Wander_Delay) == 0x000010, "Member 'FPropertyBag_8164c2d58ba5a229::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8164c2d58ba5a229, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_8164c2d58ba5a229::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8164c2d58ba5a229, SpawnedByCyclops) == 0x000020, "Member 'FPropertyBag_8164c2d58ba5a229::SpawnedByCyclops' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8164c2d58ba5a229, Patrol_RouteStrategy) == 0x000021, "Member 'FPropertyBag_8164c2d58ba5a229::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8164c2d58ba5a229, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_8164c2d58ba5a229::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_9a9db4224011464e
+// 0x0080 (0x0080 - 0x0000)
+struct FPropertyBag_9a9db4224011464e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanUsePumpedUp;                                    // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseSmack;                                       // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUsePummel;                                      // 0x007A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_9a9db4224011464e) == 0x000008, "Wrong alignment on FPropertyBag_9a9db4224011464e");
+static_assert(sizeof(FPropertyBag_9a9db4224011464e) == 0x000080, "Wrong size on FPropertyBag_9a9db4224011464e");
+static_assert(offsetof(FPropertyBag_9a9db4224011464e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_9a9db4224011464e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9a9db4224011464e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_9a9db4224011464e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9a9db4224011464e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_9a9db4224011464e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9a9db4224011464e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_9a9db4224011464e::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9a9db4224011464e, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_9a9db4224011464e::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9a9db4224011464e, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_9a9db4224011464e::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9a9db4224011464e, CanUsePumpedUp) == 0x000078, "Member 'FPropertyBag_9a9db4224011464e::CanUsePumpedUp' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9a9db4224011464e, CanUseSmack) == 0x000079, "Member 'FPropertyBag_9a9db4224011464e::CanUseSmack' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_9a9db4224011464e, CanUsePummel) == 0x00007A, "Member 'FPropertyBag_9a9db4224011464e::CanUsePummel' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_ae5bc613887bab01
+// 0x0078 (0x0078 - 0x0000)
+struct FPropertyBag_ae5bc613887bab01 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_ae5bc613887bab01) == 0x000008, "Wrong alignment on FPropertyBag_ae5bc613887bab01");
+static_assert(sizeof(FPropertyBag_ae5bc613887bab01) == 0x000078, "Wrong size on FPropertyBag_ae5bc613887bab01");
+static_assert(offsetof(FPropertyBag_ae5bc613887bab01, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_ae5bc613887bab01::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ae5bc613887bab01, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_ae5bc613887bab01::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ae5bc613887bab01, Wander_Delay) == 0x000010, "Member 'FPropertyBag_ae5bc613887bab01::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ae5bc613887bab01, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_ae5bc613887bab01::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ae5bc613887bab01, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_ae5bc613887bab01::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ae5bc613887bab01, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_ae5bc613887bab01::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_c39c8a2c7b66ba1b
+// 0x00A0 (0x00A0 - 0x0000)
+struct FPropertyBag_c39c8a2c7b66ba1b final
+{
+public:
+	double                                        CooldownafterSignificance;                         // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WhiteNoiseCooldown;                                // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Phase4WhiteNoiseCooldown;                          // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InitialCooldown;                                   // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FlamePatchCounterRadius;                           // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         FlamePatchMinNumber;                               // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         FlamePatchMaxNumber;                               // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RotationRate;                                      // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GroundBreathMinRange;                              // 0x0038(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GroundBreathMaxRange;                              // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GroundBreathOptimalDisMin;                         // 0x0048(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GroundBreathOptimalDisMax;                         // 0x0050(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GroundBreathChaseStopDis;                          // 0x0058(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BurstingFuryFlameThreatRange;                      // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BasicAttackRange;                                  // 0x0068(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BasicAttackRange_RM;                               // 0x0070(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ConeBreathSingleTargetMinScore;                    // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BurstingPounceMinRange;                            // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BurstingPounceMaxRange;                            // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TurnSpeedScale;                                    // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeashDistanceToCheck;                              // 0x0098(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_c39c8a2c7b66ba1b) == 0x000008, "Wrong alignment on FPropertyBag_c39c8a2c7b66ba1b");
+static_assert(sizeof(FPropertyBag_c39c8a2c7b66ba1b) == 0x0000A0, "Wrong size on FPropertyBag_c39c8a2c7b66ba1b");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, CooldownafterSignificance) == 0x000000, "Member 'FPropertyBag_c39c8a2c7b66ba1b::CooldownafterSignificance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, WhiteNoiseCooldown) == 0x000008, "Member 'FPropertyBag_c39c8a2c7b66ba1b::WhiteNoiseCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, Phase4WhiteNoiseCooldown) == 0x000010, "Member 'FPropertyBag_c39c8a2c7b66ba1b::Phase4WhiteNoiseCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, InitialCooldown) == 0x000018, "Member 'FPropertyBag_c39c8a2c7b66ba1b::InitialCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, FlamePatchCounterRadius) == 0x000020, "Member 'FPropertyBag_c39c8a2c7b66ba1b::FlamePatchCounterRadius' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, FlamePatchMinNumber) == 0x000028, "Member 'FPropertyBag_c39c8a2c7b66ba1b::FlamePatchMinNumber' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, FlamePatchMaxNumber) == 0x00002C, "Member 'FPropertyBag_c39c8a2c7b66ba1b::FlamePatchMaxNumber' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, RotationRate) == 0x000030, "Member 'FPropertyBag_c39c8a2c7b66ba1b::RotationRate' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, GroundBreathMinRange) == 0x000038, "Member 'FPropertyBag_c39c8a2c7b66ba1b::GroundBreathMinRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, GroundBreathMaxRange) == 0x000040, "Member 'FPropertyBag_c39c8a2c7b66ba1b::GroundBreathMaxRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, GroundBreathOptimalDisMin) == 0x000048, "Member 'FPropertyBag_c39c8a2c7b66ba1b::GroundBreathOptimalDisMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, GroundBreathOptimalDisMax) == 0x000050, "Member 'FPropertyBag_c39c8a2c7b66ba1b::GroundBreathOptimalDisMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, GroundBreathChaseStopDis) == 0x000058, "Member 'FPropertyBag_c39c8a2c7b66ba1b::GroundBreathChaseStopDis' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, BurstingFuryFlameThreatRange) == 0x000060, "Member 'FPropertyBag_c39c8a2c7b66ba1b::BurstingFuryFlameThreatRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, BasicAttackRange) == 0x000068, "Member 'FPropertyBag_c39c8a2c7b66ba1b::BasicAttackRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, BasicAttackRange_RM) == 0x000070, "Member 'FPropertyBag_c39c8a2c7b66ba1b::BasicAttackRange_RM' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, ConeBreathSingleTargetMinScore) == 0x000078, "Member 'FPropertyBag_c39c8a2c7b66ba1b::ConeBreathSingleTargetMinScore' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, BurstingPounceMinRange) == 0x000080, "Member 'FPropertyBag_c39c8a2c7b66ba1b::BurstingPounceMinRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, BurstingPounceMaxRange) == 0x000088, "Member 'FPropertyBag_c39c8a2c7b66ba1b::BurstingPounceMaxRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, TurnSpeedScale) == 0x000090, "Member 'FPropertyBag_c39c8a2c7b66ba1b::TurnSpeedScale' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c39c8a2c7b66ba1b, LeashDistanceToCheck) == 0x000098, "Member 'FPropertyBag_c39c8a2c7b66ba1b::LeashDistanceToCheck' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_edd2be0d796e6d73
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_edd2be0d796e6d73 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_edd2be0d796e6d73) == 0x000008, "Wrong alignment on FPropertyBag_edd2be0d796e6d73");
+static_assert(sizeof(FPropertyBag_edd2be0d796e6d73) == 0x0000C8, "Wrong size on FPropertyBag_edd2be0d796e6d73");
+static_assert(offsetof(FPropertyBag_edd2be0d796e6d73, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_edd2be0d796e6d73::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_edd2be0d796e6d73, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_edd2be0d796e6d73::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_edd2be0d796e6d73, Wander_Delay) == 0x000010, "Member 'FPropertyBag_edd2be0d796e6d73::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_edd2be0d796e6d73, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_edd2be0d796e6d73::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_edd2be0d796e6d73, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_edd2be0d796e6d73::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_edd2be0d796e6d73, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_edd2be0d796e6d73::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_edd2be0d796e6d73, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_edd2be0d796e6d73::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_7d8e2b4fdbde3147
+// 0x00A8 (0x00A8 - 0x0000)
+struct FPropertyBag_7d8e2b4fdbde3147 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasPoisonBubble;                                   // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0021(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          IsRangedHarasser;                                  // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                RangedHarasserTargetLocation;                      // 0x0080(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RangedHarasserDelay;                               // 0x0098(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RangedHarassTargetOffsetRadius;                    // 0x00A0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_7d8e2b4fdbde3147) == 0x000008, "Wrong alignment on FPropertyBag_7d8e2b4fdbde3147");
+static_assert(sizeof(FPropertyBag_7d8e2b4fdbde3147) == 0x0000A8, "Wrong size on FPropertyBag_7d8e2b4fdbde3147");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_7d8e2b4fdbde3147::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_7d8e2b4fdbde3147::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, Wander_Delay) == 0x000010, "Member 'FPropertyBag_7d8e2b4fdbde3147::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_7d8e2b4fdbde3147::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, HasPoisonBubble) == 0x000020, "Member 'FPropertyBag_7d8e2b4fdbde3147::HasPoisonBubble' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, Patrol_RouteStrategy) == 0x000021, "Member 'FPropertyBag_7d8e2b4fdbde3147::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_7d8e2b4fdbde3147::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, IsRangedHarasser) == 0x000078, "Member 'FPropertyBag_7d8e2b4fdbde3147::IsRangedHarasser' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, RangedHarasserTargetLocation) == 0x000080, "Member 'FPropertyBag_7d8e2b4fdbde3147::RangedHarasserTargetLocation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, RangedHarasserDelay) == 0x000098, "Member 'FPropertyBag_7d8e2b4fdbde3147::RangedHarasserDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7d8e2b4fdbde3147, RangedHarassTargetOffsetRadius) == 0x0000A0, "Member 'FPropertyBag_7d8e2b4fdbde3147::RangedHarassTargetOffsetRadius' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_d41cb04b4c4823f0
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_d41cb04b4c4823f0 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnRaven;                                        // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnDog;                                          // 0x0021(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0022(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	int32                                         SummonRank;                                        // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnCrab;                                         // 0x00CC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnGaintCrab;                                    // 0x00CD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_d41cb04b4c4823f0) == 0x000008, "Wrong alignment on FPropertyBag_d41cb04b4c4823f0");
+static_assert(sizeof(FPropertyBag_d41cb04b4c4823f0) == 0x0000D0, "Wrong size on FPropertyBag_d41cb04b4c4823f0");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_d41cb04b4c4823f0::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_d41cb04b4c4823f0::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, Wander_Delay) == 0x000010, "Member 'FPropertyBag_d41cb04b4c4823f0::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_d41cb04b4c4823f0::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, SpawnRaven) == 0x000020, "Member 'FPropertyBag_d41cb04b4c4823f0::SpawnRaven' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, SpawnDog) == 0x000021, "Member 'FPropertyBag_d41cb04b4c4823f0::SpawnDog' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, Patrol_RouteStrategy) == 0x000022, "Member 'FPropertyBag_d41cb04b4c4823f0::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_d41cb04b4c4823f0::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_d41cb04b4c4823f0::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, SummonRank) == 0x0000C8, "Member 'FPropertyBag_d41cb04b4c4823f0::SummonRank' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, SpawnCrab) == 0x0000CC, "Member 'FPropertyBag_d41cb04b4c4823f0::SpawnCrab' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_d41cb04b4c4823f0, SpawnGaintCrab) == 0x0000CD, "Member 'FPropertyBag_d41cb04b4c4823f0::SpawnGaintCrab' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_18904068e544ff7d
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_18904068e544ff7d final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnRaven;                                        // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnDog;                                          // 0x0021(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0022(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	int32                                         SummonRank;                                        // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_18904068e544ff7d) == 0x000008, "Wrong alignment on FPropertyBag_18904068e544ff7d");
+static_assert(sizeof(FPropertyBag_18904068e544ff7d) == 0x0000D0, "Wrong size on FPropertyBag_18904068e544ff7d");
+static_assert(offsetof(FPropertyBag_18904068e544ff7d, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_18904068e544ff7d::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_18904068e544ff7d, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_18904068e544ff7d::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_18904068e544ff7d, Wander_Delay) == 0x000010, "Member 'FPropertyBag_18904068e544ff7d::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_18904068e544ff7d, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_18904068e544ff7d::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_18904068e544ff7d, SpawnRaven) == 0x000020, "Member 'FPropertyBag_18904068e544ff7d::SpawnRaven' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_18904068e544ff7d, SpawnDog) == 0x000021, "Member 'FPropertyBag_18904068e544ff7d::SpawnDog' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_18904068e544ff7d, Patrol_RouteStrategy) == 0x000022, "Member 'FPropertyBag_18904068e544ff7d::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_18904068e544ff7d, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_18904068e544ff7d::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_18904068e544ff7d, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_18904068e544ff7d::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_18904068e544ff7d, SummonRank) == 0x0000C8, "Member 'FPropertyBag_18904068e544ff7d::SummonRank' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_aed13d730447ebe
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_aed13d730447ebe final
+{
+public:
+	double                                        WanderRadiusMax;                                   // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WanderRadiusMin;                                   // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_aed13d730447ebe) == 0x000008, "Wrong alignment on FPropertyBag_aed13d730447ebe");
+static_assert(sizeof(FPropertyBag_aed13d730447ebe) == 0x0000C8, "Wrong size on FPropertyBag_aed13d730447ebe");
+static_assert(offsetof(FPropertyBag_aed13d730447ebe, WanderRadiusMax) == 0x000000, "Member 'FPropertyBag_aed13d730447ebe::WanderRadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aed13d730447ebe, WanderRadiusMin) == 0x000008, "Member 'FPropertyBag_aed13d730447ebe::WanderRadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aed13d730447ebe, Wander_Delay) == 0x000010, "Member 'FPropertyBag_aed13d730447ebe::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aed13d730447ebe, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_aed13d730447ebe::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aed13d730447ebe, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_aed13d730447ebe::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aed13d730447ebe, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_aed13d730447ebe::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_aed13d730447ebe, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_aed13d730447ebe::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_40b7948d9b224b8e
+// 0x0118 (0x0118 - 0x0000)
+struct FPropertyBag_40b7948d9b224b8e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanPlaySongs;                                      // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanPlayForeboding;                                 // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseDiscordance;                                 // 0x007A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Idle_AmbientAnimDelay;                             // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0098(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A8(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B8(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C8(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_40b7948d9b224b8e) == 0x000008, "Wrong alignment on FPropertyBag_40b7948d9b224b8e");
+static_assert(sizeof(FPropertyBag_40b7948d9b224b8e) == 0x000118, "Wrong size on FPropertyBag_40b7948d9b224b8e");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_40b7948d9b224b8e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_40b7948d9b224b8e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_40b7948d9b224b8e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_40b7948d9b224b8e::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_40b7948d9b224b8e::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_40b7948d9b224b8e::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, CanPlaySongs) == 0x000078, "Member 'FPropertyBag_40b7948d9b224b8e::CanPlaySongs' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, CanPlayForeboding) == 0x000079, "Member 'FPropertyBag_40b7948d9b224b8e::CanPlayForeboding' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, CanUseDiscordance) == 0x00007A, "Member 'FPropertyBag_40b7948d9b224b8e::CanUseDiscordance' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Idle_AmbientAnimDelay) == 0x000080, "Member 'FPropertyBag_40b7948d9b224b8e::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Idle_AmbientAnimDelayDeviation) == 0x000088, "Member 'FPropertyBag_40b7948d9b224b8e::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Idle_AmbientAnimCooldown) == 0x000090, "Member 'FPropertyBag_40b7948d9b224b8e::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Ambient_FallbackTagString) == 0x000098, "Member 'FPropertyBag_40b7948d9b224b8e::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, InteractableTags) == 0x0000A8, "Member 'FPropertyBag_40b7948d9b224b8e::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, InteractableNPCTags) == 0x0000B8, "Member 'FPropertyBag_40b7948d9b224b8e::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_40b7948d9b224b8e, Wander_SpeedMultiplier) == 0x0000C8, "Member 'FPropertyBag_40b7948d9b224b8e::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_7502d640753ee82e
+// 0x0080 (0x0080 - 0x0000)
+struct FPropertyBag_7502d640753ee82e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          IsChaplain;                                        // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_7502d640753ee82e) == 0x000008, "Wrong alignment on FPropertyBag_7502d640753ee82e");
+static_assert(sizeof(FPropertyBag_7502d640753ee82e) == 0x000080, "Wrong size on FPropertyBag_7502d640753ee82e");
+static_assert(offsetof(FPropertyBag_7502d640753ee82e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_7502d640753ee82e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7502d640753ee82e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_7502d640753ee82e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7502d640753ee82e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_7502d640753ee82e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7502d640753ee82e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_7502d640753ee82e::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7502d640753ee82e, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_7502d640753ee82e::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7502d640753ee82e, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_7502d640753ee82e::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7502d640753ee82e, IsChaplain) == 0x000078, "Member 'FPropertyBag_7502d640753ee82e::IsChaplain' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_bb63a68afc83de76
+// 0x0118 (0x0118 - 0x0000)
+struct FPropertyBag_bb63a68afc83de76 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x0090(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           AmbientAnimationTags;                              // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+	bool                                          CanUseAirstrike;                                   // 0x0110(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseLightningShot;                               // 0x0111(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_bb63a68afc83de76) == 0x000008, "Wrong alignment on FPropertyBag_bb63a68afc83de76");
+static_assert(sizeof(FPropertyBag_bb63a68afc83de76) == 0x000118, "Wrong size on FPropertyBag_bb63a68afc83de76");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_bb63a68afc83de76::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_bb63a68afc83de76::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, Wander_Delay) == 0x000010, "Member 'FPropertyBag_bb63a68afc83de76::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_bb63a68afc83de76::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_bb63a68afc83de76::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_bb63a68afc83de76::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_bb63a68afc83de76::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_bb63a68afc83de76::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_bb63a68afc83de76::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, InteractableTags) == 0x000090, "Member 'FPropertyBag_bb63a68afc83de76::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, InteractableNPCTags) == 0x0000A0, "Member 'FPropertyBag_bb63a68afc83de76::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, AmbientAnimationTags) == 0x0000B0, "Member 'FPropertyBag_bb63a68afc83de76::AmbientAnimationTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_bb63a68afc83de76::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, CanUseAirstrike) == 0x000110, "Member 'FPropertyBag_bb63a68afc83de76::CanUseAirstrike' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_bb63a68afc83de76, CanUseLightningShot) == 0x000111, "Member 'FPropertyBag_bb63a68afc83de76::CanUseLightningShot' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_cb9ccf38ee342097
+// 0x0080 (0x0080 - 0x0000)
+struct FPropertyBag_cb9ccf38ee342097 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          HasVenomSpray;                                     // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_cb9ccf38ee342097) == 0x000008, "Wrong alignment on FPropertyBag_cb9ccf38ee342097");
+static_assert(sizeof(FPropertyBag_cb9ccf38ee342097) == 0x000080, "Wrong size on FPropertyBag_cb9ccf38ee342097");
+static_assert(offsetof(FPropertyBag_cb9ccf38ee342097, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_cb9ccf38ee342097::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb9ccf38ee342097, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_cb9ccf38ee342097::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb9ccf38ee342097, Wander_Delay) == 0x000010, "Member 'FPropertyBag_cb9ccf38ee342097::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb9ccf38ee342097, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_cb9ccf38ee342097::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb9ccf38ee342097, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_cb9ccf38ee342097::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb9ccf38ee342097, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_cb9ccf38ee342097::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb9ccf38ee342097, HasVenomSpray) == 0x000078, "Member 'FPropertyBag_cb9ccf38ee342097::HasVenomSpray' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_3ab0d5b49d7fff4
+// 0x0118 (0x0118 - 0x0000)
+struct FPropertyBag_3ab0d5b49d7fff4 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+	bool                                          CanSlash;                                          // 0x0110(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_3ab0d5b49d7fff4) == 0x000008, "Wrong alignment on FPropertyBag_3ab0d5b49d7fff4");
+static_assert(sizeof(FPropertyBag_3ab0d5b49d7fff4) == 0x000118, "Wrong size on FPropertyBag_3ab0d5b49d7fff4");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_3ab0d5b49d7fff4::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_3ab0d5b49d7fff4::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Wander_Delay) == 0x000010, "Member 'FPropertyBag_3ab0d5b49d7fff4::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_3ab0d5b49d7fff4::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_3ab0d5b49d7fff4::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_3ab0d5b49d7fff4::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_3ab0d5b49d7fff4::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_3ab0d5b49d7fff4::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_3ab0d5b49d7fff4::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_3ab0d5b49d7fff4::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, InteractableTags) == 0x0000A0, "Member 'FPropertyBag_3ab0d5b49d7fff4::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, InteractableNPCTags) == 0x0000B0, "Member 'FPropertyBag_3ab0d5b49d7fff4::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_3ab0d5b49d7fff4::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_3ab0d5b49d7fff4, CanSlash) == 0x000110, "Member 'FPropertyBag_3ab0d5b49d7fff4::CanSlash' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_a05584ebbfb2eac8
+// 0x0110 (0x0110 - 0x0000)
+struct FPropertyBag_a05584ebbfb2eac8 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_a05584ebbfb2eac8) == 0x000008, "Wrong alignment on FPropertyBag_a05584ebbfb2eac8");
+static_assert(sizeof(FPropertyBag_a05584ebbfb2eac8) == 0x000110, "Wrong size on FPropertyBag_a05584ebbfb2eac8");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_a05584ebbfb2eac8::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_a05584ebbfb2eac8::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Wander_Delay) == 0x000010, "Member 'FPropertyBag_a05584ebbfb2eac8::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_a05584ebbfb2eac8::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_a05584ebbfb2eac8::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_a05584ebbfb2eac8::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_a05584ebbfb2eac8::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_a05584ebbfb2eac8::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_a05584ebbfb2eac8::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_a05584ebbfb2eac8::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, InteractableTags) == 0x0000A0, "Member 'FPropertyBag_a05584ebbfb2eac8::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, InteractableNPCTags) == 0x0000B0, "Member 'FPropertyBag_a05584ebbfb2eac8::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a05584ebbfb2eac8, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_a05584ebbfb2eac8::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_39b44f6cc5e76c59
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_39b44f6cc5e76c59 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          HasDeathRoll;                                      // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasThrash;                                         // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasScaleBreak;                                     // 0x00CA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_39b44f6cc5e76c59) == 0x000008, "Wrong alignment on FPropertyBag_39b44f6cc5e76c59");
+static_assert(sizeof(FPropertyBag_39b44f6cc5e76c59) == 0x0000D0, "Wrong size on FPropertyBag_39b44f6cc5e76c59");
+static_assert(offsetof(FPropertyBag_39b44f6cc5e76c59, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_39b44f6cc5e76c59::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_39b44f6cc5e76c59, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_39b44f6cc5e76c59::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_39b44f6cc5e76c59, Wander_Delay) == 0x000010, "Member 'FPropertyBag_39b44f6cc5e76c59::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_39b44f6cc5e76c59, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_39b44f6cc5e76c59::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_39b44f6cc5e76c59, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_39b44f6cc5e76c59::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_39b44f6cc5e76c59, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_39b44f6cc5e76c59::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_39b44f6cc5e76c59, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_39b44f6cc5e76c59::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_39b44f6cc5e76c59, HasDeathRoll) == 0x0000C8, "Member 'FPropertyBag_39b44f6cc5e76c59::HasDeathRoll' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_39b44f6cc5e76c59, HasThrash) == 0x0000C9, "Member 'FPropertyBag_39b44f6cc5e76c59::HasThrash' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_39b44f6cc5e76c59, HasScaleBreak) == 0x0000CA, "Member 'FPropertyBag_39b44f6cc5e76c59::HasScaleBreak' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4e74998689331f37
+// 0x0080 (0x0080 - 0x0000)
+struct FPropertyBag_4e74998689331f37 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          HasEnvenom;                                        // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasBolas;                                          // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasCamouflage;                                     // 0x007A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_4e74998689331f37) == 0x000008, "Wrong alignment on FPropertyBag_4e74998689331f37");
+static_assert(sizeof(FPropertyBag_4e74998689331f37) == 0x000080, "Wrong size on FPropertyBag_4e74998689331f37");
+static_assert(offsetof(FPropertyBag_4e74998689331f37, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_4e74998689331f37::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4e74998689331f37, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_4e74998689331f37::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4e74998689331f37, Wander_Delay) == 0x000010, "Member 'FPropertyBag_4e74998689331f37::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4e74998689331f37, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_4e74998689331f37::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4e74998689331f37, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_4e74998689331f37::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4e74998689331f37, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_4e74998689331f37::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4e74998689331f37, HasEnvenom) == 0x000078, "Member 'FPropertyBag_4e74998689331f37::HasEnvenom' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4e74998689331f37, HasBolas) == 0x000079, "Member 'FPropertyBag_4e74998689331f37::HasBolas' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4e74998689331f37, HasCamouflage) == 0x00007A, "Member 'FPropertyBag_4e74998689331f37::HasCamouflage' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_c976516d0a927d2e
+// 0x00E0 (0x00E0 - 0x0000)
+struct FPropertyBag_c976516d0a927d2e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEnrage;                                         // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        OverheadSlash_WaitTime;                            // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OverheadSlash_Cooldown;                            // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0040(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0090(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_c976516d0a927d2e) == 0x000008, "Wrong alignment on FPropertyBag_c976516d0a927d2e");
+static_assert(sizeof(FPropertyBag_c976516d0a927d2e) == 0x0000E0, "Wrong size on FPropertyBag_c976516d0a927d2e");
+static_assert(offsetof(FPropertyBag_c976516d0a927d2e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_c976516d0a927d2e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c976516d0a927d2e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_c976516d0a927d2e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c976516d0a927d2e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_c976516d0a927d2e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c976516d0a927d2e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_c976516d0a927d2e::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c976516d0a927d2e, HasEnrage) == 0x000020, "Member 'FPropertyBag_c976516d0a927d2e::HasEnrage' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c976516d0a927d2e, OverheadSlash_WaitTime) == 0x000028, "Member 'FPropertyBag_c976516d0a927d2e::OverheadSlash_WaitTime' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c976516d0a927d2e, OverheadSlash_Cooldown) == 0x000030, "Member 'FPropertyBag_c976516d0a927d2e::OverheadSlash_Cooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c976516d0a927d2e, Patrol_RouteStrategy) == 0x000038, "Member 'FPropertyBag_c976516d0a927d2e::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c976516d0a927d2e, Patrol_PathingSpeedMultiplier) == 0x000040, "Member 'FPropertyBag_c976516d0a927d2e::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c976516d0a927d2e, Wander_SpeedMultiplier) == 0x000090, "Member 'FPropertyBag_c976516d0a927d2e::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_62654d6ae6d78482
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_62654d6ae6d78482 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_62654d6ae6d78482) == 0x000008, "Wrong alignment on FPropertyBag_62654d6ae6d78482");
+static_assert(sizeof(FPropertyBag_62654d6ae6d78482) == 0x0000C8, "Wrong size on FPropertyBag_62654d6ae6d78482");
+static_assert(offsetof(FPropertyBag_62654d6ae6d78482, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_62654d6ae6d78482::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_62654d6ae6d78482, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_62654d6ae6d78482::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_62654d6ae6d78482, Wander_Delay) == 0x000010, "Member 'FPropertyBag_62654d6ae6d78482::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_62654d6ae6d78482, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_62654d6ae6d78482::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_62654d6ae6d78482, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_62654d6ae6d78482::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_62654d6ae6d78482, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_62654d6ae6d78482::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_62654d6ae6d78482, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_62654d6ae6d78482::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_c105525fda129eba
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPropertyBag_c105525fda129eba final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_c105525fda129eba) == 0x000008, "Wrong alignment on FPropertyBag_c105525fda129eba");
+static_assert(sizeof(FPropertyBag_c105525fda129eba) == 0x0000C8, "Wrong size on FPropertyBag_c105525fda129eba");
+static_assert(offsetof(FPropertyBag_c105525fda129eba, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_c105525fda129eba::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c105525fda129eba, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_c105525fda129eba::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c105525fda129eba, Wander_Delay) == 0x000010, "Member 'FPropertyBag_c105525fda129eba::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c105525fda129eba, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_c105525fda129eba::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c105525fda129eba, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_c105525fda129eba::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c105525fda129eba, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_c105525fda129eba::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_c105525fda129eba, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_c105525fda129eba::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_a4fada0a74c12c6b
+// 0x0080 (0x0080 - 0x0000)
+struct FPropertyBag_a4fada0a74c12c6b final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanUsePumpedUp;                                    // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseLeap;                                        // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUsePowerfulSmack;                               // 0x007A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUsePummel;                                      // 0x007B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_a4fada0a74c12c6b) == 0x000008, "Wrong alignment on FPropertyBag_a4fada0a74c12c6b");
+static_assert(sizeof(FPropertyBag_a4fada0a74c12c6b) == 0x000080, "Wrong size on FPropertyBag_a4fada0a74c12c6b");
+static_assert(offsetof(FPropertyBag_a4fada0a74c12c6b, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_a4fada0a74c12c6b::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4fada0a74c12c6b, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_a4fada0a74c12c6b::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4fada0a74c12c6b, Wander_Delay) == 0x000010, "Member 'FPropertyBag_a4fada0a74c12c6b::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4fada0a74c12c6b, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_a4fada0a74c12c6b::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4fada0a74c12c6b, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_a4fada0a74c12c6b::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4fada0a74c12c6b, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_a4fada0a74c12c6b::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4fada0a74c12c6b, CanUsePumpedUp) == 0x000078, "Member 'FPropertyBag_a4fada0a74c12c6b::CanUsePumpedUp' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4fada0a74c12c6b, CanUseLeap) == 0x000079, "Member 'FPropertyBag_a4fada0a74c12c6b::CanUseLeap' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4fada0a74c12c6b, CanUsePowerfulSmack) == 0x00007A, "Member 'FPropertyBag_a4fada0a74c12c6b::CanUsePowerfulSmack' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a4fada0a74c12c6b, CanUsePummel) == 0x00007B, "Member 'FPropertyBag_a4fada0a74c12c6b::CanUsePummel' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_43d7fac5c787a3f8
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_43d7fac5c787a3f8 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          HasWaterCannon;                                    // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_43d7fac5c787a3f8) == 0x000008, "Wrong alignment on FPropertyBag_43d7fac5c787a3f8");
+static_assert(sizeof(FPropertyBag_43d7fac5c787a3f8) == 0x0000D0, "Wrong size on FPropertyBag_43d7fac5c787a3f8");
+static_assert(offsetof(FPropertyBag_43d7fac5c787a3f8, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_43d7fac5c787a3f8::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_43d7fac5c787a3f8, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_43d7fac5c787a3f8::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_43d7fac5c787a3f8, Wander_Delay) == 0x000010, "Member 'FPropertyBag_43d7fac5c787a3f8::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_43d7fac5c787a3f8, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_43d7fac5c787a3f8::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_43d7fac5c787a3f8, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_43d7fac5c787a3f8::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_43d7fac5c787a3f8, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_43d7fac5c787a3f8::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_43d7fac5c787a3f8, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_43d7fac5c787a3f8::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_43d7fac5c787a3f8, HasWaterCannon) == 0x0000C8, "Member 'FPropertyBag_43d7fac5c787a3f8::HasWaterCannon' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e7f98266a831f3f8
+// 0x0078 (0x0078 - 0x0000)
+struct FPropertyBag_e7f98266a831f3f8 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_e7f98266a831f3f8) == 0x000008, "Wrong alignment on FPropertyBag_e7f98266a831f3f8");
+static_assert(sizeof(FPropertyBag_e7f98266a831f3f8) == 0x000078, "Wrong size on FPropertyBag_e7f98266a831f3f8");
+static_assert(offsetof(FPropertyBag_e7f98266a831f3f8, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_e7f98266a831f3f8::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7f98266a831f3f8, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_e7f98266a831f3f8::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7f98266a831f3f8, Wander_Delay) == 0x000010, "Member 'FPropertyBag_e7f98266a831f3f8::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7f98266a831f3f8, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_e7f98266a831f3f8::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7f98266a831f3f8, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_e7f98266a831f3f8::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e7f98266a831f3f8, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_e7f98266a831f3f8::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_8fc174682d37d3bd
+// 0x0118 (0x0118 - 0x0000)
+struct FPropertyBag_8fc174682d37d3bd final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanTomahawk;                                       // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanExtraBasicAttack;                               // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanTaunt;                                          // 0x007A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Idle_AmbientAnimDelay;                             // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0098(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A8(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B8(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C8(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_8fc174682d37d3bd) == 0x000008, "Wrong alignment on FPropertyBag_8fc174682d37d3bd");
+static_assert(sizeof(FPropertyBag_8fc174682d37d3bd) == 0x000118, "Wrong size on FPropertyBag_8fc174682d37d3bd");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_8fc174682d37d3bd::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_8fc174682d37d3bd::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Wander_Delay) == 0x000010, "Member 'FPropertyBag_8fc174682d37d3bd::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_8fc174682d37d3bd::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_8fc174682d37d3bd::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_8fc174682d37d3bd::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, CanTomahawk) == 0x000078, "Member 'FPropertyBag_8fc174682d37d3bd::CanTomahawk' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, CanExtraBasicAttack) == 0x000079, "Member 'FPropertyBag_8fc174682d37d3bd::CanExtraBasicAttack' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, CanTaunt) == 0x00007A, "Member 'FPropertyBag_8fc174682d37d3bd::CanTaunt' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Idle_AmbientAnimDelay) == 0x000080, "Member 'FPropertyBag_8fc174682d37d3bd::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Idle_AmbientAnimDelayDeviation) == 0x000088, "Member 'FPropertyBag_8fc174682d37d3bd::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Idle_AmbientAnimCooldown) == 0x000090, "Member 'FPropertyBag_8fc174682d37d3bd::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Ambient_FallbackTagString) == 0x000098, "Member 'FPropertyBag_8fc174682d37d3bd::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, InteractableTags) == 0x0000A8, "Member 'FPropertyBag_8fc174682d37d3bd::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, InteractableNPCTags) == 0x0000B8, "Member 'FPropertyBag_8fc174682d37d3bd::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8fc174682d37d3bd, Wander_SpeedMultiplier) == 0x0000C8, "Member 'FPropertyBag_8fc174682d37d3bd::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_f9c141bdc80ccdae
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPropertyBag_f9c141bdc80ccdae final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0078(0x0050)(Edit)
+	bool                                          LaunchJaw;                                         // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BleedingAttacks;                                   // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ViceGrip;                                          // 0x00CA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_f9c141bdc80ccdae) == 0x000008, "Wrong alignment on FPropertyBag_f9c141bdc80ccdae");
+static_assert(sizeof(FPropertyBag_f9c141bdc80ccdae) == 0x0000D0, "Wrong size on FPropertyBag_f9c141bdc80ccdae");
+static_assert(offsetof(FPropertyBag_f9c141bdc80ccdae, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_f9c141bdc80ccdae::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f9c141bdc80ccdae, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_f9c141bdc80ccdae::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f9c141bdc80ccdae, Wander_Delay) == 0x000010, "Member 'FPropertyBag_f9c141bdc80ccdae::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f9c141bdc80ccdae, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_f9c141bdc80ccdae::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f9c141bdc80ccdae, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_f9c141bdc80ccdae::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f9c141bdc80ccdae, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_f9c141bdc80ccdae::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f9c141bdc80ccdae, Wander_SpeedMultiplier) == 0x000078, "Member 'FPropertyBag_f9c141bdc80ccdae::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f9c141bdc80ccdae, LaunchJaw) == 0x0000C8, "Member 'FPropertyBag_f9c141bdc80ccdae::LaunchJaw' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f9c141bdc80ccdae, BleedingAttacks) == 0x0000C9, "Member 'FPropertyBag_f9c141bdc80ccdae::BleedingAttacks' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_f9c141bdc80ccdae, ViceGrip) == 0x0000CA, "Member 'FPropertyBag_f9c141bdc80ccdae::ViceGrip' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e72f3edb4512bc2a
+// 0x0118 (0x0118 - 0x0000)
+struct FPropertyBag_e72f3edb4512bc2a final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CanWaveBreak;                                      // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanDivineProtection;                               // 0x00A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanDivineWeapon;                                   // 0x00A2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanReliefTouch;                                    // 0x00A3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           InteractableTags;                                  // 0x00A8(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B8(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C8(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_e72f3edb4512bc2a) == 0x000008, "Wrong alignment on FPropertyBag_e72f3edb4512bc2a");
+static_assert(sizeof(FPropertyBag_e72f3edb4512bc2a) == 0x000118, "Wrong size on FPropertyBag_e72f3edb4512bc2a");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_e72f3edb4512bc2a::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_e72f3edb4512bc2a::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Wander_Delay) == 0x000010, "Member 'FPropertyBag_e72f3edb4512bc2a::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_e72f3edb4512bc2a::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_e72f3edb4512bc2a::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_e72f3edb4512bc2a::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_e72f3edb4512bc2a::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_e72f3edb4512bc2a::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_e72f3edb4512bc2a::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_e72f3edb4512bc2a::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, CanWaveBreak) == 0x0000A0, "Member 'FPropertyBag_e72f3edb4512bc2a::CanWaveBreak' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, CanDivineProtection) == 0x0000A1, "Member 'FPropertyBag_e72f3edb4512bc2a::CanDivineProtection' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, CanDivineWeapon) == 0x0000A2, "Member 'FPropertyBag_e72f3edb4512bc2a::CanDivineWeapon' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, CanReliefTouch) == 0x0000A3, "Member 'FPropertyBag_e72f3edb4512bc2a::CanReliefTouch' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, InteractableTags) == 0x0000A8, "Member 'FPropertyBag_e72f3edb4512bc2a::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, InteractableNPCTags) == 0x0000B8, "Member 'FPropertyBag_e72f3edb4512bc2a::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e72f3edb4512bc2a, Wander_SpeedMultiplier) == 0x0000C8, "Member 'FPropertyBag_e72f3edb4512bc2a::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_b27e396a6d93f146
+// 0x0138 (0x0138 - 0x0000)
+struct FPropertyBag_b27e396a6d93f146 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+	double                                        RangedAttackRange;                                 // 0x0110(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MoveStopDis;                                       // 0x0118(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FlameBurstRange;                                   // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AttackAngle;                                       // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanFlameBurst;                                     // 0x0130(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanFireBoltCombo;                                  // 0x0131(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanFrenzy;                                         // 0x0132(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanPotion;                                         // 0x0133(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanLaser;                                          // 0x0134(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_b27e396a6d93f146) == 0x000008, "Wrong alignment on FPropertyBag_b27e396a6d93f146");
+static_assert(sizeof(FPropertyBag_b27e396a6d93f146) == 0x000138, "Wrong size on FPropertyBag_b27e396a6d93f146");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_b27e396a6d93f146::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_b27e396a6d93f146::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Wander_Delay) == 0x000010, "Member 'FPropertyBag_b27e396a6d93f146::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_b27e396a6d93f146::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_b27e396a6d93f146::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_b27e396a6d93f146::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_b27e396a6d93f146::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_b27e396a6d93f146::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_b27e396a6d93f146::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_b27e396a6d93f146::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, InteractableTags) == 0x0000A0, "Member 'FPropertyBag_b27e396a6d93f146::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, InteractableNPCTags) == 0x0000B0, "Member 'FPropertyBag_b27e396a6d93f146::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_b27e396a6d93f146::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, RangedAttackRange) == 0x000110, "Member 'FPropertyBag_b27e396a6d93f146::RangedAttackRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, MoveStopDis) == 0x000118, "Member 'FPropertyBag_b27e396a6d93f146::MoveStopDis' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, FlameBurstRange) == 0x000120, "Member 'FPropertyBag_b27e396a6d93f146::FlameBurstRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, AttackAngle) == 0x000128, "Member 'FPropertyBag_b27e396a6d93f146::AttackAngle' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, CanFlameBurst) == 0x000130, "Member 'FPropertyBag_b27e396a6d93f146::CanFlameBurst' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, CanFireBoltCombo) == 0x000131, "Member 'FPropertyBag_b27e396a6d93f146::CanFireBoltCombo' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, CanFrenzy) == 0x000132, "Member 'FPropertyBag_b27e396a6d93f146::CanFrenzy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, CanPotion) == 0x000133, "Member 'FPropertyBag_b27e396a6d93f146::CanPotion' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_b27e396a6d93f146, CanLaser) == 0x000134, "Member 'FPropertyBag_b27e396a6d93f146::CanLaser' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_a5559df8fcbc0494
+// 0x0138 (0x0138 - 0x0000)
+struct FPropertyBag_a5559df8fcbc0494 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+	double                                        RangedAttackRange;                                 // 0x0110(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MoveStopDis;                                       // 0x0118(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FlameBurstRange;                                   // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AttackAngle;                                       // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanFlameBurst;                                     // 0x0130(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanFireBoltCombo;                                  // 0x0131(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanFrenzy;                                         // 0x0132(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanPotion;                                         // 0x0133(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_a5559df8fcbc0494) == 0x000008, "Wrong alignment on FPropertyBag_a5559df8fcbc0494");
+static_assert(sizeof(FPropertyBag_a5559df8fcbc0494) == 0x000138, "Wrong size on FPropertyBag_a5559df8fcbc0494");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_a5559df8fcbc0494::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_a5559df8fcbc0494::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Wander_Delay) == 0x000010, "Member 'FPropertyBag_a5559df8fcbc0494::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_a5559df8fcbc0494::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_a5559df8fcbc0494::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_a5559df8fcbc0494::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_a5559df8fcbc0494::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_a5559df8fcbc0494::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_a5559df8fcbc0494::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_a5559df8fcbc0494::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, InteractableTags) == 0x0000A0, "Member 'FPropertyBag_a5559df8fcbc0494::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, InteractableNPCTags) == 0x0000B0, "Member 'FPropertyBag_a5559df8fcbc0494::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_a5559df8fcbc0494::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, RangedAttackRange) == 0x000110, "Member 'FPropertyBag_a5559df8fcbc0494::RangedAttackRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, MoveStopDis) == 0x000118, "Member 'FPropertyBag_a5559df8fcbc0494::MoveStopDis' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, FlameBurstRange) == 0x000120, "Member 'FPropertyBag_a5559df8fcbc0494::FlameBurstRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, AttackAngle) == 0x000128, "Member 'FPropertyBag_a5559df8fcbc0494::AttackAngle' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, CanFlameBurst) == 0x000130, "Member 'FPropertyBag_a5559df8fcbc0494::CanFlameBurst' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, CanFireBoltCombo) == 0x000131, "Member 'FPropertyBag_a5559df8fcbc0494::CanFireBoltCombo' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, CanFrenzy) == 0x000132, "Member 'FPropertyBag_a5559df8fcbc0494::CanFrenzy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a5559df8fcbc0494, CanPotion) == 0x000133, "Member 'FPropertyBag_a5559df8fcbc0494::CanPotion' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_274b6cb94a1317d3
+// 0x0120 (0x0120 - 0x0000)
+struct FPropertyBag_274b6cb94a1317d3 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanTomahawk;                                       // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanExtraBasicAttack;                               // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanTaunt;                                          // 0x007A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Idle_AmbientAnimDelay;                             // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0098(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A8(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B8(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C8(0x0050)(Edit)
+	bool                                          CanSlash;                                          // 0x0118(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_274b6cb94a1317d3) == 0x000008, "Wrong alignment on FPropertyBag_274b6cb94a1317d3");
+static_assert(sizeof(FPropertyBag_274b6cb94a1317d3) == 0x000120, "Wrong size on FPropertyBag_274b6cb94a1317d3");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_274b6cb94a1317d3::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_274b6cb94a1317d3::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Wander_Delay) == 0x000010, "Member 'FPropertyBag_274b6cb94a1317d3::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_274b6cb94a1317d3::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_274b6cb94a1317d3::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_274b6cb94a1317d3::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, CanTomahawk) == 0x000078, "Member 'FPropertyBag_274b6cb94a1317d3::CanTomahawk' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, CanExtraBasicAttack) == 0x000079, "Member 'FPropertyBag_274b6cb94a1317d3::CanExtraBasicAttack' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, CanTaunt) == 0x00007A, "Member 'FPropertyBag_274b6cb94a1317d3::CanTaunt' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Idle_AmbientAnimDelay) == 0x000080, "Member 'FPropertyBag_274b6cb94a1317d3::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Idle_AmbientAnimDelayDeviation) == 0x000088, "Member 'FPropertyBag_274b6cb94a1317d3::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Idle_AmbientAnimCooldown) == 0x000090, "Member 'FPropertyBag_274b6cb94a1317d3::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Ambient_FallbackTagString) == 0x000098, "Member 'FPropertyBag_274b6cb94a1317d3::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, InteractableTags) == 0x0000A8, "Member 'FPropertyBag_274b6cb94a1317d3::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, InteractableNPCTags) == 0x0000B8, "Member 'FPropertyBag_274b6cb94a1317d3::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, Wander_SpeedMultiplier) == 0x0000C8, "Member 'FPropertyBag_274b6cb94a1317d3::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_274b6cb94a1317d3, CanSlash) == 0x000118, "Member 'FPropertyBag_274b6cb94a1317d3::CanSlash' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_fa51368673f272bb
+// 0x0138 (0x0138 - 0x0000)
+struct FPropertyBag_fa51368673f272bb final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+	double                                        RangedAttackRange;                                 // 0x0110(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MoveStopDis;                                       // 0x0118(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FlameBurstRange;                                   // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AttackAngle;                                       // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanFlameBurst;                                     // 0x0130(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanFireBoltCombo;                                  // 0x0131(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanFrenzy;                                         // 0x0132(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanPotion;                                         // 0x0133(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanLaser;                                          // 0x0134(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSacrifice;                                      // 0x0135(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_fa51368673f272bb) == 0x000008, "Wrong alignment on FPropertyBag_fa51368673f272bb");
+static_assert(sizeof(FPropertyBag_fa51368673f272bb) == 0x000138, "Wrong size on FPropertyBag_fa51368673f272bb");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_fa51368673f272bb::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_fa51368673f272bb::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Wander_Delay) == 0x000010, "Member 'FPropertyBag_fa51368673f272bb::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_fa51368673f272bb::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_fa51368673f272bb::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_fa51368673f272bb::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_fa51368673f272bb::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_fa51368673f272bb::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_fa51368673f272bb::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_fa51368673f272bb::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, InteractableTags) == 0x0000A0, "Member 'FPropertyBag_fa51368673f272bb::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, InteractableNPCTags) == 0x0000B0, "Member 'FPropertyBag_fa51368673f272bb::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_fa51368673f272bb::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, RangedAttackRange) == 0x000110, "Member 'FPropertyBag_fa51368673f272bb::RangedAttackRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, MoveStopDis) == 0x000118, "Member 'FPropertyBag_fa51368673f272bb::MoveStopDis' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, FlameBurstRange) == 0x000120, "Member 'FPropertyBag_fa51368673f272bb::FlameBurstRange' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, AttackAngle) == 0x000128, "Member 'FPropertyBag_fa51368673f272bb::AttackAngle' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, CanFlameBurst) == 0x000130, "Member 'FPropertyBag_fa51368673f272bb::CanFlameBurst' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, CanFireBoltCombo) == 0x000131, "Member 'FPropertyBag_fa51368673f272bb::CanFireBoltCombo' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, CanFrenzy) == 0x000132, "Member 'FPropertyBag_fa51368673f272bb::CanFrenzy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, CanPotion) == 0x000133, "Member 'FPropertyBag_fa51368673f272bb::CanPotion' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, CanLaser) == 0x000134, "Member 'FPropertyBag_fa51368673f272bb::CanLaser' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_fa51368673f272bb, CanSacrifice) == 0x000135, "Member 'FPropertyBag_fa51368673f272bb::CanSacrifice' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_6802260b7dae50a3
+// 0x0110 (0x0110 - 0x0000)
+struct FPropertyBag_6802260b7dae50a3 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	TArray<class FName>                           AmbientAnimationTags;                              // 0x0078(0x0010)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0098(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x00A0(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          HasArmoredShell;                                   // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00B8(0x0050)(Edit)
+	bool                                          CanUseRearWing;                                    // 0x0108(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseWingBlast;                                   // 0x0109(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseSubsonics;                                   // 0x010A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseFlameSpray;                                  // 0x010B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_6802260b7dae50a3) == 0x000008, "Wrong alignment on FPropertyBag_6802260b7dae50a3");
+static_assert(sizeof(FPropertyBag_6802260b7dae50a3) == 0x000110, "Wrong size on FPropertyBag_6802260b7dae50a3");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_6802260b7dae50a3::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_6802260b7dae50a3::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Wander_Delay) == 0x000010, "Member 'FPropertyBag_6802260b7dae50a3::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_6802260b7dae50a3::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_6802260b7dae50a3::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_6802260b7dae50a3::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, AmbientAnimationTags) == 0x000078, "Member 'FPropertyBag_6802260b7dae50a3::AmbientAnimationTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Idle_AmbientAnimDelay) == 0x000088, "Member 'FPropertyBag_6802260b7dae50a3::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Idle_AmbientAnimDelayDeviation) == 0x000090, "Member 'FPropertyBag_6802260b7dae50a3::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Idle_AmbientAnimCooldown) == 0x000098, "Member 'FPropertyBag_6802260b7dae50a3::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Ambient_FallbackTagString) == 0x0000A0, "Member 'FPropertyBag_6802260b7dae50a3::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, HasArmoredShell) == 0x0000B0, "Member 'FPropertyBag_6802260b7dae50a3::HasArmoredShell' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, Wander_SpeedMultiplier) == 0x0000B8, "Member 'FPropertyBag_6802260b7dae50a3::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, CanUseRearWing) == 0x000108, "Member 'FPropertyBag_6802260b7dae50a3::CanUseRearWing' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, CanUseWingBlast) == 0x000109, "Member 'FPropertyBag_6802260b7dae50a3::CanUseWingBlast' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, CanUseSubsonics) == 0x00010A, "Member 'FPropertyBag_6802260b7dae50a3::CanUseSubsonics' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6802260b7dae50a3, CanUseFlameSpray) == 0x00010B, "Member 'FPropertyBag_6802260b7dae50a3::CanUseFlameSpray' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4cc56c180a1486d4
+// 0x0290 (0x0290 - 0x0000)
+struct FPropertyBag_4cc56c180a1486d4 final
+{
+public:
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_A;                                    // 0x0000(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_B;                                    // 0x0028(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_C;                                    // 0x0050(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_D;                                    // 0x0078(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_E;                                    // 0x00A0(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_F;                                    // 0x00C8(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_G;                                    // 0x00F0(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_H;                                    // 0x0118(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_I;                                    // 0x0140(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_J;                                    // 0x0168(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_K;                                    // 0x0190(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_L;                                    // 0x01B8(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_M;                                    // 0x01E0(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_N;                                    // 0x0208(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_O;                                    // 0x0230(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_P;                                    // 0x0258(0x0028)(Edit, HasGetValueTypeHash)
+	bool                                          ShouldOverride;                                    // 0x0280(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        RoadWidthAdjustment;                               // 0x0288(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_4cc56c180a1486d4) == 0x000008, "Wrong alignment on FPropertyBag_4cc56c180a1486d4");
+static_assert(sizeof(FPropertyBag_4cc56c180a1486d4) == 0x000290, "Wrong size on FPropertyBag_4cc56c180a1486d4");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_A) == 0x000000, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_A' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_B) == 0x000028, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_B' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_C) == 0x000050, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_C' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_D) == 0x000078, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_D' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_E) == 0x0000A0, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_E' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_F) == 0x0000C8, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_F' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_G) == 0x0000F0, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_G' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_H) == 0x000118, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_H' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_I) == 0x000140, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_I' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_J) == 0x000168, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_J' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_K) == 0x000190, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_K' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_L) == 0x0001B8, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_L' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_M) == 0x0001E0, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_M' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_N) == 0x000208, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_N' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_O) == 0x000230, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_O' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, FoliageAsset_P) == 0x000258, "Member 'FPropertyBag_4cc56c180a1486d4::FoliageAsset_P' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, ShouldOverride) == 0x000280, "Member 'FPropertyBag_4cc56c180a1486d4::ShouldOverride' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4cc56c180a1486d4, RoadWidthAdjustment) == 0x000288, "Member 'FPropertyBag_4cc56c180a1486d4::RoadWidthAdjustment' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e6dedd126415ac1a
+// 0x0140 (0x0140 - 0x0000)
+struct FPropertyBag_e6dedd126415ac1a final
+{
+public:
+	double                                        Spacing;                                           // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_A;                                    // 0x0008(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_B;                                    // 0x0030(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_C;                                    // 0x0058(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_D;                                    // 0x0080(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_E;                                    // 0x00A8(0x0028)(Edit, HasGetValueTypeHash)
+	TSoftObjectPtr<class UStaticMesh>             FoliageAsset_F;                                    // 0x00D0(0x0028)(Edit, HasGetValueTypeHash)
+	int32                                         Seed;                                              // 0x00F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseInteriorPoints;                                 // 0x00FC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FD[0x3];                                       // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PrimaryLandscapeLayer;                             // 0x0100(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 SecondaryLandscapeLayer;                           // 0x0110(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	double                                        BoundsOverride;                                    // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Scarcity;                                          // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldOverride;                                    // 0x0130(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        RoadWidthAdjustment;                               // 0x0138(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_e6dedd126415ac1a) == 0x000008, "Wrong alignment on FPropertyBag_e6dedd126415ac1a");
+static_assert(sizeof(FPropertyBag_e6dedd126415ac1a) == 0x000140, "Wrong size on FPropertyBag_e6dedd126415ac1a");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, Spacing) == 0x000000, "Member 'FPropertyBag_e6dedd126415ac1a::Spacing' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, FoliageAsset_A) == 0x000008, "Member 'FPropertyBag_e6dedd126415ac1a::FoliageAsset_A' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, FoliageAsset_B) == 0x000030, "Member 'FPropertyBag_e6dedd126415ac1a::FoliageAsset_B' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, FoliageAsset_C) == 0x000058, "Member 'FPropertyBag_e6dedd126415ac1a::FoliageAsset_C' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, FoliageAsset_D) == 0x000080, "Member 'FPropertyBag_e6dedd126415ac1a::FoliageAsset_D' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, FoliageAsset_E) == 0x0000A8, "Member 'FPropertyBag_e6dedd126415ac1a::FoliageAsset_E' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, FoliageAsset_F) == 0x0000D0, "Member 'FPropertyBag_e6dedd126415ac1a::FoliageAsset_F' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, Seed) == 0x0000F8, "Member 'FPropertyBag_e6dedd126415ac1a::Seed' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, UseInteriorPoints) == 0x0000FC, "Member 'FPropertyBag_e6dedd126415ac1a::UseInteriorPoints' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, PrimaryLandscapeLayer) == 0x000100, "Member 'FPropertyBag_e6dedd126415ac1a::PrimaryLandscapeLayer' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, SecondaryLandscapeLayer) == 0x000110, "Member 'FPropertyBag_e6dedd126415ac1a::SecondaryLandscapeLayer' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, BoundsOverride) == 0x000120, "Member 'FPropertyBag_e6dedd126415ac1a::BoundsOverride' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, Scarcity) == 0x000128, "Member 'FPropertyBag_e6dedd126415ac1a::Scarcity' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, ShouldOverride) == 0x000130, "Member 'FPropertyBag_e6dedd126415ac1a::ShouldOverride' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6dedd126415ac1a, RoadWidthAdjustment) == 0x000138, "Member 'FPropertyBag_e6dedd126415ac1a::RoadWidthAdjustment' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_a1c275d00891a3a5
+// 0x0128 (0x0128 - 0x0000)
+struct FPropertyBag_a1c275d00891a3a5 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x0090(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           AmbientAnimationTags;                              // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0110(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CanBrutalCleave;                                   // 0x0120(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanWhirlwind;                                      // 0x0121(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanAdditionalAttack;                               // 0x0122(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanPotion;                                         // 0x0123(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_a1c275d00891a3a5) == 0x000008, "Wrong alignment on FPropertyBag_a1c275d00891a3a5");
+static_assert(sizeof(FPropertyBag_a1c275d00891a3a5) == 0x000128, "Wrong size on FPropertyBag_a1c275d00891a3a5");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_a1c275d00891a3a5::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_a1c275d00891a3a5::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Wander_Delay) == 0x000010, "Member 'FPropertyBag_a1c275d00891a3a5::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_a1c275d00891a3a5::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_a1c275d00891a3a5::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_a1c275d00891a3a5::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_a1c275d00891a3a5::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_a1c275d00891a3a5::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_a1c275d00891a3a5::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, InteractableTags) == 0x000090, "Member 'FPropertyBag_a1c275d00891a3a5::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, InteractableNPCTags) == 0x0000A0, "Member 'FPropertyBag_a1c275d00891a3a5::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, AmbientAnimationTags) == 0x0000B0, "Member 'FPropertyBag_a1c275d00891a3a5::AmbientAnimationTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_a1c275d00891a3a5::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, Ambient_FallbackTagString) == 0x000110, "Member 'FPropertyBag_a1c275d00891a3a5::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, CanBrutalCleave) == 0x000120, "Member 'FPropertyBag_a1c275d00891a3a5::CanBrutalCleave' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, CanWhirlwind) == 0x000121, "Member 'FPropertyBag_a1c275d00891a3a5::CanWhirlwind' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, CanAdditionalAttack) == 0x000122, "Member 'FPropertyBag_a1c275d00891a3a5::CanAdditionalAttack' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_a1c275d00891a3a5, CanPotion) == 0x000123, "Member 'FPropertyBag_a1c275d00891a3a5::CanPotion' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_cb7e3deaa7073a92
+// 0x0098 (0x0098 - 0x0000)
+struct FPropertyBag_cb7e3deaa7073a92 final
+{
+public:
+	bool                                          Ambusher;                                          // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Wander_RadiusMax;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0030(0x0050)(Edit)
+	double                                        ChanceOnSpawn_SpiritOfTheUndying;                  // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ChanceOnSpawn_BlackLung;                           // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSoulExtraction;                                 // 0x0090(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanRainOfBones;                                    // 0x0091(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_cb7e3deaa7073a92) == 0x000008, "Wrong alignment on FPropertyBag_cb7e3deaa7073a92");
+static_assert(sizeof(FPropertyBag_cb7e3deaa7073a92) == 0x000098, "Wrong size on FPropertyBag_cb7e3deaa7073a92");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, Ambusher) == 0x000000, "Member 'FPropertyBag_cb7e3deaa7073a92::Ambusher' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, Wander_RadiusMax) == 0x000008, "Member 'FPropertyBag_cb7e3deaa7073a92::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, Wander_RadiusMin) == 0x000010, "Member 'FPropertyBag_cb7e3deaa7073a92::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, Wander_Delay) == 0x000018, "Member 'FPropertyBag_cb7e3deaa7073a92::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, Wander_DelayDeviation) == 0x000020, "Member 'FPropertyBag_cb7e3deaa7073a92::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, Patrol_RouteStrategy) == 0x000028, "Member 'FPropertyBag_cb7e3deaa7073a92::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, Patrol_PathingSpeedMultiplier) == 0x000030, "Member 'FPropertyBag_cb7e3deaa7073a92::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, ChanceOnSpawn_SpiritOfTheUndying) == 0x000080, "Member 'FPropertyBag_cb7e3deaa7073a92::ChanceOnSpawn_SpiritOfTheUndying' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, ChanceOnSpawn_BlackLung) == 0x000088, "Member 'FPropertyBag_cb7e3deaa7073a92::ChanceOnSpawn_BlackLung' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, CanSoulExtraction) == 0x000090, "Member 'FPropertyBag_cb7e3deaa7073a92::CanSoulExtraction' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_cb7e3deaa7073a92, CanRainOfBones) == 0x000091, "Member 'FPropertyBag_cb7e3deaa7073a92::CanRainOfBones' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_ab7556d0b6cfd3fc
+// 0x00A8 (0x00A8 - 0x0000)
+struct FPropertyBag_ab7556d0b6cfd3fc final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          CanUseSacrifice;                                   // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Idle_AmbientAnimDelay;                             // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           AmbientAnimationTags;                              // 0x0098(0x0010)(Edit)
+};
+static_assert(alignof(FPropertyBag_ab7556d0b6cfd3fc) == 0x000008, "Wrong alignment on FPropertyBag_ab7556d0b6cfd3fc");
+static_assert(sizeof(FPropertyBag_ab7556d0b6cfd3fc) == 0x0000A8, "Wrong size on FPropertyBag_ab7556d0b6cfd3fc");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_ab7556d0b6cfd3fc::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_ab7556d0b6cfd3fc::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, Wander_Delay) == 0x000010, "Member 'FPropertyBag_ab7556d0b6cfd3fc::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_ab7556d0b6cfd3fc::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_ab7556d0b6cfd3fc::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_ab7556d0b6cfd3fc::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, CanUseSacrifice) == 0x000078, "Member 'FPropertyBag_ab7556d0b6cfd3fc::CanUseSacrifice' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, Idle_AmbientAnimDelay) == 0x000080, "Member 'FPropertyBag_ab7556d0b6cfd3fc::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, Idle_AmbientAnimDelayDeviation) == 0x000088, "Member 'FPropertyBag_ab7556d0b6cfd3fc::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, Idle_AmbientAnimCooldown) == 0x000090, "Member 'FPropertyBag_ab7556d0b6cfd3fc::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_ab7556d0b6cfd3fc, AmbientAnimationTags) == 0x000098, "Member 'FPropertyBag_ab7556d0b6cfd3fc::AmbientAnimationTags' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_5633da900044bd5f
+// 0x00E8 (0x00E8 - 0x0000)
+struct FPropertyBag_5633da900044bd5f final
+{
+public:
+	bool                                          Ambusher;                                          // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Wander_RadiusMax;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0030(0x0050)(Edit)
+	double                                        ChanceOnSpawn_SpiritOfTheUndying;                  // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ChanceOnSpawn_BlackLung;                           // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSoulExtraction;                                 // 0x0090(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanRainOfBones;                                    // 0x0091(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0098(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_5633da900044bd5f) == 0x000008, "Wrong alignment on FPropertyBag_5633da900044bd5f");
+static_assert(sizeof(FPropertyBag_5633da900044bd5f) == 0x0000E8, "Wrong size on FPropertyBag_5633da900044bd5f");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, Ambusher) == 0x000000, "Member 'FPropertyBag_5633da900044bd5f::Ambusher' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, Wander_RadiusMax) == 0x000008, "Member 'FPropertyBag_5633da900044bd5f::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, Wander_RadiusMin) == 0x000010, "Member 'FPropertyBag_5633da900044bd5f::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, Wander_Delay) == 0x000018, "Member 'FPropertyBag_5633da900044bd5f::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, Wander_DelayDeviation) == 0x000020, "Member 'FPropertyBag_5633da900044bd5f::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, Patrol_RouteStrategy) == 0x000028, "Member 'FPropertyBag_5633da900044bd5f::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, Patrol_PathingSpeedMultiplier) == 0x000030, "Member 'FPropertyBag_5633da900044bd5f::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, ChanceOnSpawn_SpiritOfTheUndying) == 0x000080, "Member 'FPropertyBag_5633da900044bd5f::ChanceOnSpawn_SpiritOfTheUndying' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, ChanceOnSpawn_BlackLung) == 0x000088, "Member 'FPropertyBag_5633da900044bd5f::ChanceOnSpawn_BlackLung' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, CanSoulExtraction) == 0x000090, "Member 'FPropertyBag_5633da900044bd5f::CanSoulExtraction' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, CanRainOfBones) == 0x000091, "Member 'FPropertyBag_5633da900044bd5f::CanRainOfBones' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_5633da900044bd5f, Wander_SpeedMultiplier) == 0x000098, "Member 'FPropertyBag_5633da900044bd5f::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e8e4e3ddac06eefd
+// 0x0090 (0x0090 - 0x0000)
+struct FPropertyBag_e8e4e3ddac06eefd final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ambusher;                                          // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        AmbushAlertRadius;                                 // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RandomAmbushPose;                                  // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceAmbush01;                                     // 0x0031(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceAmbush02;                                     // 0x0032(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceAmbush03;                                     // 0x0033(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceAmbush04;                                     // 0x0034(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0035(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0038(0x0050)(Edit)
+	bool                                          HasShieldEquipped;                                 // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasSpiritOfTheUndying;                             // 0x0089(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasBlackLung;                                      // 0x008A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_e8e4e3ddac06eefd) == 0x000008, "Wrong alignment on FPropertyBag_e8e4e3ddac06eefd");
+static_assert(sizeof(FPropertyBag_e8e4e3ddac06eefd) == 0x000090, "Wrong size on FPropertyBag_e8e4e3ddac06eefd");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_e8e4e3ddac06eefd::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_e8e4e3ddac06eefd::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, Wander_Delay) == 0x000010, "Member 'FPropertyBag_e8e4e3ddac06eefd::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_e8e4e3ddac06eefd::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, Ambusher) == 0x000020, "Member 'FPropertyBag_e8e4e3ddac06eefd::Ambusher' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, AmbushAlertRadius) == 0x000028, "Member 'FPropertyBag_e8e4e3ddac06eefd::AmbushAlertRadius' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, RandomAmbushPose) == 0x000030, "Member 'FPropertyBag_e8e4e3ddac06eefd::RandomAmbushPose' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, ForceAmbush01) == 0x000031, "Member 'FPropertyBag_e8e4e3ddac06eefd::ForceAmbush01' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, ForceAmbush02) == 0x000032, "Member 'FPropertyBag_e8e4e3ddac06eefd::ForceAmbush02' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, ForceAmbush03) == 0x000033, "Member 'FPropertyBag_e8e4e3ddac06eefd::ForceAmbush03' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, ForceAmbush04) == 0x000034, "Member 'FPropertyBag_e8e4e3ddac06eefd::ForceAmbush04' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, Patrol_RouteStrategy) == 0x000035, "Member 'FPropertyBag_e8e4e3ddac06eefd::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, Patrol_PathingSpeedMultiplier) == 0x000038, "Member 'FPropertyBag_e8e4e3ddac06eefd::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, HasShieldEquipped) == 0x000088, "Member 'FPropertyBag_e8e4e3ddac06eefd::HasShieldEquipped' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, HasSpiritOfTheUndying) == 0x000089, "Member 'FPropertyBag_e8e4e3ddac06eefd::HasSpiritOfTheUndying' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e8e4e3ddac06eefd, HasBlackLung) == 0x00008A, "Member 'FPropertyBag_e8e4e3ddac06eefd::HasBlackLung' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_e6190ea26d8ab72e
+// 0x00D8 (0x00D8 - 0x0000)
+struct FPropertyBag_e6190ea26d8ab72e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          UnburyOnAggro;                                     // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+	bool                                          CanAnger;                                          // 0x00D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanVomit;                                          // 0x00D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanDeathPlague;                                    // 0x00D2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_e6190ea26d8ab72e) == 0x000008, "Wrong alignment on FPropertyBag_e6190ea26d8ab72e");
+static_assert(sizeof(FPropertyBag_e6190ea26d8ab72e) == 0x0000D8, "Wrong size on FPropertyBag_e6190ea26d8ab72e");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_e6190ea26d8ab72e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_e6190ea26d8ab72e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_e6190ea26d8ab72e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_e6190ea26d8ab72e::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_e6190ea26d8ab72e::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_e6190ea26d8ab72e::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, UnburyOnAggro) == 0x000078, "Member 'FPropertyBag_e6190ea26d8ab72e::UnburyOnAggro' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_e6190ea26d8ab72e::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, CanAnger) == 0x0000D0, "Member 'FPropertyBag_e6190ea26d8ab72e::CanAnger' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, CanVomit) == 0x0000D1, "Member 'FPropertyBag_e6190ea26d8ab72e::CanVomit' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_e6190ea26d8ab72e, CanDeathPlague) == 0x0000D2, "Member 'FPropertyBag_e6190ea26d8ab72e::CanDeathPlague' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_4ca4685945e7e8c5
+// 0x00D8 (0x00D8 - 0x0000)
+struct FPropertyBag_4ca4685945e7e8c5 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	bool                                          UnburyOnAggro;                                     // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x0080(0x0050)(Edit)
+	bool                                          CanAnger;                                          // 0x00D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanVomit;                                          // 0x00D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanDeathPlague;                                    // 0x00D2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanBarrage;                                        // 0x00D3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_4ca4685945e7e8c5) == 0x000008, "Wrong alignment on FPropertyBag_4ca4685945e7e8c5");
+static_assert(sizeof(FPropertyBag_4ca4685945e7e8c5) == 0x0000D8, "Wrong size on FPropertyBag_4ca4685945e7e8c5");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_4ca4685945e7e8c5::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_4ca4685945e7e8c5::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, Wander_Delay) == 0x000010, "Member 'FPropertyBag_4ca4685945e7e8c5::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_4ca4685945e7e8c5::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_4ca4685945e7e8c5::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_4ca4685945e7e8c5::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, UnburyOnAggro) == 0x000078, "Member 'FPropertyBag_4ca4685945e7e8c5::UnburyOnAggro' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, Wander_SpeedMultiplier) == 0x000080, "Member 'FPropertyBag_4ca4685945e7e8c5::Wander_SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, CanAnger) == 0x0000D0, "Member 'FPropertyBag_4ca4685945e7e8c5::CanAnger' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, CanVomit) == 0x0000D1, "Member 'FPropertyBag_4ca4685945e7e8c5::CanVomit' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, CanDeathPlague) == 0x0000D2, "Member 'FPropertyBag_4ca4685945e7e8c5::CanDeathPlague' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_4ca4685945e7e8c5, CanBarrage) == 0x0000D3, "Member 'FPropertyBag_4ca4685945e7e8c5::CanBarrage' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_8b9295045203837c
+// 0x0078 (0x0078 - 0x0000)
+struct FPropertyBag_8b9295045203837c final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_8b9295045203837c) == 0x000008, "Wrong alignment on FPropertyBag_8b9295045203837c");
+static_assert(sizeof(FPropertyBag_8b9295045203837c) == 0x000078, "Wrong size on FPropertyBag_8b9295045203837c");
+static_assert(offsetof(FPropertyBag_8b9295045203837c, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_8b9295045203837c::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b9295045203837c, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_8b9295045203837c::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b9295045203837c, Wander_Delay) == 0x000010, "Member 'FPropertyBag_8b9295045203837c::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b9295045203837c, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_8b9295045203837c::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b9295045203837c, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_8b9295045203837c::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_8b9295045203837c, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_8b9295045203837c::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_6d868c91c7899b0e
+// 0x0110 (0x0110 - 0x0000)
+struct FPropertyBag_6d868c91c7899b0e final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_6d868c91c7899b0e) == 0x000008, "Wrong alignment on FPropertyBag_6d868c91c7899b0e");
+static_assert(sizeof(FPropertyBag_6d868c91c7899b0e) == 0x000110, "Wrong size on FPropertyBag_6d868c91c7899b0e");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_6d868c91c7899b0e::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_6d868c91c7899b0e::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Wander_Delay) == 0x000010, "Member 'FPropertyBag_6d868c91c7899b0e::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_6d868c91c7899b0e::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_6d868c91c7899b0e::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_6d868c91c7899b0e::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_6d868c91c7899b0e::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_6d868c91c7899b0e::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_6d868c91c7899b0e::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_6d868c91c7899b0e::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, InteractableTags) == 0x0000A0, "Member 'FPropertyBag_6d868c91c7899b0e::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, InteractableNPCTags) == 0x0000B0, "Member 'FPropertyBag_6d868c91c7899b0e::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_6d868c91c7899b0e, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_6d868c91c7899b0e::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_65f835b4ee2a47bc
+// 0x0068 (0x0068 - 0x0000)
+struct FPropertyBag_65f835b4ee2a47bc final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x0020(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x0030(0x0010)(Edit)
+	TArray<class FName>                           AmbientAnimationTags;                              // 0x0040(0x0010)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0050(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0058(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_65f835b4ee2a47bc) == 0x000008, "Wrong alignment on FPropertyBag_65f835b4ee2a47bc");
+static_assert(sizeof(FPropertyBag_65f835b4ee2a47bc) == 0x000068, "Wrong size on FPropertyBag_65f835b4ee2a47bc");
+static_assert(offsetof(FPropertyBag_65f835b4ee2a47bc, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_65f835b4ee2a47bc::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_65f835b4ee2a47bc, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_65f835b4ee2a47bc::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_65f835b4ee2a47bc, Wander_Delay) == 0x000010, "Member 'FPropertyBag_65f835b4ee2a47bc::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_65f835b4ee2a47bc, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_65f835b4ee2a47bc::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_65f835b4ee2a47bc, InteractableTags) == 0x000020, "Member 'FPropertyBag_65f835b4ee2a47bc::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_65f835b4ee2a47bc, InteractableNPCTags) == 0x000030, "Member 'FPropertyBag_65f835b4ee2a47bc::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_65f835b4ee2a47bc, AmbientAnimationTags) == 0x000040, "Member 'FPropertyBag_65f835b4ee2a47bc::AmbientAnimationTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_65f835b4ee2a47bc, Idle_AmbientAnimDelay) == 0x000050, "Member 'FPropertyBag_65f835b4ee2a47bc::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_65f835b4ee2a47bc, Idle_AmbientAnimDelayDeviation) == 0x000058, "Member 'FPropertyBag_65f835b4ee2a47bc::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_65f835b4ee2a47bc, Idle_AmbientAnimCooldown) == 0x000060, "Member 'FPropertyBag_65f835b4ee2a47bc::Idle_AmbientAnimCooldown' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_52909bd9daf93a13
+// 0x0110 (0x0110 - 0x0000)
+struct FPropertyBag_52909bd9daf93a13 final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENpcAIPatrolRouteStrategy                     Patrol_RouteStrategy;                              // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCExpression                         Patrol_PathingSpeedMultiplier;                     // 0x0028(0x0050)(Edit)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Ambient_FallbackTagString;                         // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x00A0(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x00B0(0x0010)(Edit)
+	struct FAoCExpression                         Wander_SpeedMultiplier;                            // 0x00C0(0x0050)(Edit)
+};
+static_assert(alignof(FPropertyBag_52909bd9daf93a13) == 0x000008, "Wrong alignment on FPropertyBag_52909bd9daf93a13");
+static_assert(sizeof(FPropertyBag_52909bd9daf93a13) == 0x000110, "Wrong size on FPropertyBag_52909bd9daf93a13");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_52909bd9daf93a13::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_52909bd9daf93a13::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Wander_Delay) == 0x000010, "Member 'FPropertyBag_52909bd9daf93a13::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_52909bd9daf93a13::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Patrol_RouteStrategy) == 0x000020, "Member 'FPropertyBag_52909bd9daf93a13::Patrol_RouteStrategy' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Patrol_PathingSpeedMultiplier) == 0x000028, "Member 'FPropertyBag_52909bd9daf93a13::Patrol_PathingSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Idle_AmbientAnimDelay) == 0x000078, "Member 'FPropertyBag_52909bd9daf93a13::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Idle_AmbientAnimDelayDeviation) == 0x000080, "Member 'FPropertyBag_52909bd9daf93a13::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Idle_AmbientAnimCooldown) == 0x000088, "Member 'FPropertyBag_52909bd9daf93a13::Idle_AmbientAnimCooldown' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Ambient_FallbackTagString) == 0x000090, "Member 'FPropertyBag_52909bd9daf93a13::Ambient_FallbackTagString' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, InteractableTags) == 0x0000A0, "Member 'FPropertyBag_52909bd9daf93a13::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, InteractableNPCTags) == 0x0000B0, "Member 'FPropertyBag_52909bd9daf93a13::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_52909bd9daf93a13, Wander_SpeedMultiplier) == 0x0000C0, "Member 'FPropertyBag_52909bd9daf93a13::Wander_SpeedMultiplier' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_7c559b646022101c
+// 0x0020 (0x0020 - 0x0000)
+struct FPropertyBag_7c559b646022101c final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_7c559b646022101c) == 0x000008, "Wrong alignment on FPropertyBag_7c559b646022101c");
+static_assert(sizeof(FPropertyBag_7c559b646022101c) == 0x000020, "Wrong size on FPropertyBag_7c559b646022101c");
+static_assert(offsetof(FPropertyBag_7c559b646022101c, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_7c559b646022101c::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7c559b646022101c, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_7c559b646022101c::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7c559b646022101c, Wander_Delay) == 0x000010, "Member 'FPropertyBag_7c559b646022101c::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_7c559b646022101c, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_7c559b646022101c::Wander_DelayDeviation' has a wrong offset!");
+
+// PropertyBag Transient.PropertyBag_755273296739cfda
+// 0x0068 (0x0068 - 0x0000)
+struct FPropertyBag_755273296739cfda final
+{
+public:
+	double                                        Wander_RadiusMax;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_RadiusMin;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_Delay;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wander_DelayDeviation;                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelay;                             // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Idle_AmbientAnimDelayDeviation;                    // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           InteractableTags;                                  // 0x0030(0x0010)(Edit)
+	TArray<class FName>                           InteractableNPCTags;                               // 0x0040(0x0010)(Edit)
+	TArray<class FName>                           AmbientAnimationTags;                              // 0x0050(0x0010)(Edit)
+	double                                        Idle_AmbientAnimCooldown;                          // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FPropertyBag_755273296739cfda) == 0x000008, "Wrong alignment on FPropertyBag_755273296739cfda");
+static_assert(sizeof(FPropertyBag_755273296739cfda) == 0x000068, "Wrong size on FPropertyBag_755273296739cfda");
+static_assert(offsetof(FPropertyBag_755273296739cfda, Wander_RadiusMax) == 0x000000, "Member 'FPropertyBag_755273296739cfda::Wander_RadiusMax' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_755273296739cfda, Wander_RadiusMin) == 0x000008, "Member 'FPropertyBag_755273296739cfda::Wander_RadiusMin' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_755273296739cfda, Wander_Delay) == 0x000010, "Member 'FPropertyBag_755273296739cfda::Wander_Delay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_755273296739cfda, Wander_DelayDeviation) == 0x000018, "Member 'FPropertyBag_755273296739cfda::Wander_DelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_755273296739cfda, Idle_AmbientAnimDelay) == 0x000020, "Member 'FPropertyBag_755273296739cfda::Idle_AmbientAnimDelay' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_755273296739cfda, Idle_AmbientAnimDelayDeviation) == 0x000028, "Member 'FPropertyBag_755273296739cfda::Idle_AmbientAnimDelayDeviation' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_755273296739cfda, InteractableTags) == 0x000030, "Member 'FPropertyBag_755273296739cfda::InteractableTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_755273296739cfda, InteractableNPCTags) == 0x000040, "Member 'FPropertyBag_755273296739cfda::InteractableNPCTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_755273296739cfda, AmbientAnimationTags) == 0x000050, "Member 'FPropertyBag_755273296739cfda::AmbientAnimationTags' has a wrong offset!");
+static_assert(offsetof(FPropertyBag_755273296739cfda, Idle_AmbientAnimCooldown) == 0x000060, "Member 'FPropertyBag_755273296739cfda::Idle_AmbientAnimCooldown' has a wrong offset!");
 
 }
 

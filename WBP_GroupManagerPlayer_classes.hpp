@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_GroupManagerPlayer.WBP_GroupManagerPlayer_C
-// 0x0000 (0x16D0 - 0x16D0)
+// 0x0000 (0x1720 - 0x1720)
 class UWBP_GroupManagerPlayer_C final : public UGroupManagerPlayer
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_GroupManagerPlayer_C) == 0x000010, "Wrong alignment on UWBP_GroupManagerPlayer_C");
-static_assert(sizeof(UWBP_GroupManagerPlayer_C) == 0x0016D0, "Wrong size on UWBP_GroupManagerPlayer_C");
+static_assert(sizeof(UWBP_GroupManagerPlayer_C) == 0x001720, "Wrong size on UWBP_GroupManagerPlayer_C");
 
 }
 

@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter.STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick) == 0x000004, "Wrong alignment on STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick");
+static_assert(sizeof(STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick) == 0x000004, "Wrong size on STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick");
+static_assert(offsetof(STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick, DeltaTime) == 0x000000, "Member 'STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick::DeltaTime' has a wrong offset!");
+
 // Function STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter.STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C.ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter
 // 0x00E0 (0x00E0 - 0x0000)
 struct STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter final
@@ -64,17 +75,6 @@ static_assert(offsetof(STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter
 static_assert(offsetof(STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter, CallFunc_K2_GetActorLocation_ReturnValue) == 0x0000A8, "Member 'STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter, CallFunc_Add_VectorVector_ReturnValue) == 0x0000C0, "Member 'STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter, CallFunc_IsValid_ReturnValue) == 0x0000D8, "Member 'STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter.STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick final
-{
-public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick) == 0x000004, "Wrong alignment on STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick");
-static_assert(sizeof(STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick) == 0x000004, "Wrong size on STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick");
-static_assert(offsetof(STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick, DeltaTime) == 0x000000, "Member 'STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick::DeltaTime' has a wrong offset!");
 
 }
 

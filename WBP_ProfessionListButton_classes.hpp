@@ -25,8 +25,8 @@ public:
 	class UWBP_RangedExperienceBar_C*             WBP_RangedExperienceBar;                           // 0x1798(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	class UWidget* GetBreadcrumbWidget();
 	class UAoCCommonButtonBase* GetButton();
+	class UWidget* GetBreadcrumbWidget();
 
 public:
 	static class UClass* StaticClass()

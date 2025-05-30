@@ -17,16 +17,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_SummonCaravanMenu.WBP_SummonCaravanMenu_C
-// 0x0030 (0x0380 - 0x0350)
+// 0x0030 (0x0388 - 0x0358)
 class UWBP_SummonCaravanMenu_C final : public USummonCaravanMenu
 {
 public:
-	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem;                             // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem_1;                           // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem_2;                           // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem_3;                           // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem_4;                           // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem_5;                           // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem;                             // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem_1;                           // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem_2;                           // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem_3;                           // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem_4;                           // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SummonCaravanItem_C*               WBP_SummonCaravanItem_5;                           // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,13 +39,13 @@ public:
 	}
 };
 static_assert(alignof(UWBP_SummonCaravanMenu_C) == 0x000008, "Wrong alignment on UWBP_SummonCaravanMenu_C");
-static_assert(sizeof(UWBP_SummonCaravanMenu_C) == 0x000380, "Wrong size on UWBP_SummonCaravanMenu_C");
-static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem) == 0x000350, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem' has a wrong offset!");
-static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem_1) == 0x000358, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem_1' has a wrong offset!");
-static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem_2) == 0x000360, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem_2' has a wrong offset!");
-static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem_3) == 0x000368, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem_3' has a wrong offset!");
-static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem_4) == 0x000370, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem_4' has a wrong offset!");
-static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem_5) == 0x000378, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem_5' has a wrong offset!");
+static_assert(sizeof(UWBP_SummonCaravanMenu_C) == 0x000388, "Wrong size on UWBP_SummonCaravanMenu_C");
+static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem) == 0x000358, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem' has a wrong offset!");
+static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem_1) == 0x000360, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem_1' has a wrong offset!");
+static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem_2) == 0x000368, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem_2' has a wrong offset!");
+static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem_3) == 0x000370, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem_3' has a wrong offset!");
+static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem_4) == 0x000378, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem_4' has a wrong offset!");
+static_assert(offsetof(UWBP_SummonCaravanMenu_C, WBP_SummonCaravanItem_5) == 0x000380, "Member 'UWBP_SummonCaravanMenu_C::WBP_SummonCaravanItem_5' has a wrong offset!");
 
 }
 

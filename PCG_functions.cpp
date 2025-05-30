@@ -45,8 +45,8 @@ TArray<class FName> UPCGMetadataSettingsBase::GetOutputDataFromPinOptions() cons
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.CopyAndFixLast
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertyInputSelectorSelector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UPCGData*                         InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGAttributePropertyInputSelector&Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGData*                   InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FPCGAttributePropertyInputSelectorReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
 struct FPCGAttributePropertyInputSelector UPCGAttributePropertySelectorBlueprintHelpers::CopyAndFixLast(const struct FPCGAttributePropertyInputSelector& Selector, const class UPCGData* InData)
@@ -75,8 +75,8 @@ struct FPCGAttributePropertyInputSelector UPCGAttributePropertySelectorBlueprint
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.CopyAndFixSource
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertyOutputSelectorSelector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FPCGAttributePropertyInputSelectorInSelector                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGAttributePropertyOutputSelector&Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGAttributePropertyInputSelector&InSelector                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FPCGAttributePropertyOutputSelectorReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
 struct FPCGAttributePropertyOutputSelector UPCGAttributePropertySelectorBlueprintHelpers::CopyAndFixSource(const struct FPCGAttributePropertyOutputSelector& Selector, const struct FPCGAttributePropertyInputSelector& InSelector)
@@ -105,7 +105,7 @@ struct FPCGAttributePropertyOutputSelector UPCGAttributePropertySelectorBlueprin
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetAttributeName
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertySelector    Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGAttributePropertySelector&Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FName UPCGAttributePropertySelectorBlueprintHelpers::GetAttributeName(const struct FPCGAttributePropertySelector& Selector)
@@ -133,7 +133,7 @@ class FName UPCGAttributePropertySelectorBlueprintHelpers::GetAttributeName(cons
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetExtraNames
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertySelector    Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGAttributePropertySelector&Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // const TArray<class FString>             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 const TArray<class FString> UPCGAttributePropertySelectorBlueprintHelpers::GetExtraNames(const struct FPCGAttributePropertySelector& Selector)
@@ -161,7 +161,7 @@ const TArray<class FString> UPCGAttributePropertySelectorBlueprintHelpers::GetEx
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetExtraProperty
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertySelector    Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGAttributePropertySelector&Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EPCGExtraProperties                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 EPCGExtraProperties UPCGAttributePropertySelectorBlueprintHelpers::GetExtraProperty(const struct FPCGAttributePropertySelector& Selector)
@@ -189,7 +189,7 @@ EPCGExtraProperties UPCGAttributePropertySelectorBlueprintHelpers::GetExtraPrope
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetName
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertySelector    Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGAttributePropertySelector&Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FName UPCGAttributePropertySelectorBlueprintHelpers::GetName(const struct FPCGAttributePropertySelector& Selector)
@@ -217,7 +217,7 @@ class FName UPCGAttributePropertySelectorBlueprintHelpers::GetName(const struct 
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetPointProperty
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertySelector    Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGAttributePropertySelector&Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EPCGPointProperties                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 EPCGPointProperties UPCGAttributePropertySelectorBlueprintHelpers::GetPointProperty(const struct FPCGAttributePropertySelector& Selector)
@@ -245,7 +245,7 @@ EPCGPointProperties UPCGAttributePropertySelectorBlueprintHelpers::GetPointPrope
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetSelection
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertySelector    Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGAttributePropertySelector&Selector                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EPCGAttributePropertySelection          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 EPCGAttributePropertySelection UPCGAttributePropertySelectorBlueprintHelpers::GetSelection(const struct FPCGAttributePropertySelector& Selector)
@@ -273,7 +273,7 @@ EPCGAttributePropertySelection UPCGAttributePropertySelectorBlueprintHelpers::Ge
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetAttributeName
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertySelector    Selector                                               (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGAttributePropertySelector&   Selector                                               (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class FName                             InAttributeName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -305,7 +305,7 @@ bool UPCGAttributePropertySelectorBlueprintHelpers::SetAttributeName(struct FPCG
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetExtraProperty
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertySelector    Selector                                               (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGAttributePropertySelector&   Selector                                               (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EPCGExtraProperties                     InExtraProperty                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -337,7 +337,7 @@ bool UPCGAttributePropertySelectorBlueprintHelpers::SetExtraProperty(struct FPCG
 // Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetPointProperty
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGAttributePropertySelector    Selector                                               (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGAttributePropertySelector&   Selector                                               (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EPCGPointProperties                     InPointProperty                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -394,8 +394,8 @@ class UPCGMetadata* UPCGSpatialData::CreateEmptyMetadata()
 // Function PCG.PCGSpatialData.InitializeFromData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGSpatialData*                  InSource                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     InMetadataParentOverride                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InSource                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InMetadataParentOverride                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bInheritMetadata                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bInheritAttributes                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -500,7 +500,7 @@ struct FBox UPCGSpatialData::GetBounds() const
 // Function PCG.PCGSpatialData.GetDensityAtPosition
 // (Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                          InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float UPCGSpatialData::GetDensityAtPosition(const struct FVector& InPosition) const
@@ -628,7 +628,7 @@ bool UPCGSpatialData::HasNonTrivialTransform() const
 // Function PCG.PCGSpatialData.IntersectWith
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPCGSpatialData*                  InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGIntersectionData*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGIntersectionData* UPCGSpatialData::IntersectWith(const class UPCGSpatialData* InOther) const
@@ -656,8 +656,8 @@ class UPCGIntersectionData* UPCGSpatialData::IntersectWith(const class UPCGSpati
 // Function PCG.PCGSpatialData.ProjectOn
 // (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPCGSpatialData*                  InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGProjectionParams             InParams                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGProjectionParams&      InParams                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UPCGSpatialData*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGSpatialData* UPCGSpatialData::ProjectOn(const class UPCGSpatialData* InOther, const struct FPCGProjectionParams& InParams) const
@@ -686,10 +686,10 @@ class UPCGSpatialData* UPCGSpatialData::ProjectOn(const class UPCGSpatialData* I
 // Function PCG.PCGSpatialData.ProjectPoint
 // (Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FTransform                       InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBox                             InBounds                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// struct FPCGProjectionParams             InParams                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FBox&                      InBounds                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGProjectionParams&      InParams                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGPoint*                       OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     OutMetadata                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -724,9 +724,9 @@ bool UPCGSpatialData::ProjectPoint(const struct FTransform& InTransform, const s
 // Function PCG.PCGSpatialData.SamplePoint
 // (Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FTransform                       Transform                                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBox                             Bounds                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTransform&                Transform                                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FBox&                      Bounds                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint*                       OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     OutMetadata                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -760,7 +760,7 @@ bool UPCGSpatialData::SamplePoint(const struct FTransform& Transform, const stru
 // Function PCG.PCGSpatialData.Subtract
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPCGSpatialData*                  InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGDifferenceData*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGDifferenceData* UPCGSpatialData::Subtract(const class UPCGSpatialData* InOther) const
@@ -813,7 +813,7 @@ const class UPCGPointData* UPCGSpatialData::ToPointData() const
 // Function PCG.PCGSpatialData.ToPointDataWithContext
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPCGContext                      Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // const class UPCGPointData*              ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 const class UPCGPointData* UPCGSpatialData::ToPointDataWithContext(struct FPCGContext& Context) const
@@ -843,7 +843,7 @@ const class UPCGPointData* UPCGSpatialData::ToPointDataWithContext(struct FPCGCo
 // Function PCG.PCGSpatialData.UnionWith
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPCGSpatialData*                  InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGUnionData*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGUnionData* UPCGSpatialData::UnionWith(const class UPCGSpatialData* InOther) const
@@ -871,9 +871,9 @@ class UPCGUnionData* UPCGSpatialData::UnionWith(const class UPCGSpatialData* InO
 // Function PCG.PCGMatchAndSetBase.MatchAndSet
 // (Native, Event, Public, HasOutParams, BlueprintEvent, Const)
 // Parameters:
-// struct FPCGContext                      Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UPCGPointMatchAndSetSettings*     InSettings                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    InPointData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGPointMatchAndSetSettings*InSettings                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InPointData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGPointData*                    OutPointData                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMatchAndSetBase::MatchAndSet(struct FPCGContext& Context, const class UPCGPointMatchAndSetSettings* InSettings, const class UPCGPointData* InPointData, class UPCGPointData* OutPointData) const
@@ -904,7 +904,7 @@ void UPCGMatchAndSetBase::MatchAndSet(struct FPCGContext& Context, const class U
 // Function PCG.PCGMatchAndSetBase.ValidatePreconditions
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UPCGPointData*                    InPointData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InPointData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPCGMatchAndSetBase::ValidatePreconditions(const class UPCGPointData* InPointData) const
@@ -933,7 +933,7 @@ bool UPCGMatchAndSetBase::ValidatePreconditions(const class UPCGPointData* InPoi
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPCGGraphParametersHelpers::GetBoolParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -963,7 +963,7 @@ bool UPCGGraphParametersHelpers::GetBoolParameter(class UPCGGraphInstance* Graph
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 uint8 UPCGGraphParametersHelpers::GetByteParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -993,7 +993,7 @@ uint8 UPCGGraphParametersHelpers::GetByteParameter(class UPCGGraphInstance* Grap
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 double UPCGGraphParametersHelpers::GetDoubleParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1023,7 +1023,7 @@ double UPCGGraphParametersHelpers::GetDoubleParameter(class UPCGGraphInstance* G
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float UPCGGraphParametersHelpers::GetFloatParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1053,7 +1053,7 @@ float UPCGGraphParametersHelpers::GetFloatParameter(class UPCGGraphInstance* Gra
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 UPCGGraphParametersHelpers::GetInt32Parameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1083,7 +1083,7 @@ int32 UPCGGraphParametersHelpers::GetInt32Parameter(class UPCGGraphInstance* Gra
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int64 UPCGGraphParametersHelpers::GetInt64Parameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1113,7 +1113,7 @@ int64 UPCGGraphParametersHelpers::GetInt64Parameter(class UPCGGraphInstance* Gra
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FName UPCGGraphParametersHelpers::GetNameParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1143,7 +1143,7 @@ class FName UPCGGraphParametersHelpers::GetNameParameter(class UPCGGraphInstance
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FRotator UPCGGraphParametersHelpers::GetRotatorParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1173,7 +1173,7 @@ struct FRotator UPCGGraphParametersHelpers::GetRotatorParameter(class UPCGGraphI
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSoftClassPtr<class UClass>             ReturnValue                                            (Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TSoftClassPtr<class UClass> UPCGGraphParametersHelpers::GetSoftClassParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1203,7 +1203,7 @@ TSoftClassPtr<class UClass> UPCGGraphParametersHelpers::GetSoftClassParameter(cl
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSoftObjectPtr<class UObject>           ReturnValue                                            (Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TSoftObjectPtr<class UObject> UPCGGraphParametersHelpers::GetSoftObjectParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1233,7 +1233,7 @@ TSoftObjectPtr<class UObject> UPCGGraphParametersHelpers::GetSoftObjectParameter
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FString UPCGGraphParametersHelpers::GetStringParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1263,7 +1263,7 @@ class FString UPCGGraphParametersHelpers::GetStringParameter(class UPCGGraphInst
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FTransform UPCGGraphParametersHelpers::GetTransformParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1293,7 +1293,7 @@ struct FTransform UPCGGraphParametersHelpers::GetTransformParameter(class UPCGGr
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FVector UPCGGraphParametersHelpers::GetVectorParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1323,7 +1323,7 @@ struct FVector UPCGGraphParametersHelpers::GetVectorParameter(class UPCGGraphIns
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPCGGraphParametersHelpers::IsOverridden(class UPCGGraphInstance* GraphInstance, const class FName Name_0)
@@ -1353,8 +1353,8 @@ bool UPCGGraphParametersHelpers::IsOverridden(class UPCGGraphInstance* GraphInst
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bValue                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bValue                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetBoolParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const bool bValue)
 {
@@ -1382,8 +1382,8 @@ void UPCGGraphParametersHelpers::SetBoolParameter(class UPCGGraphInstance* Graph
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const uint8                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetByteParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const uint8 Value)
 {
@@ -1411,8 +1411,8 @@ void UPCGGraphParametersHelpers::SetByteParameter(class UPCGGraphInstance* Graph
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const double                            Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetDoubleParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const double Value)
 {
@@ -1440,9 +1440,9 @@ void UPCGGraphParametersHelpers::SetDoubleParameter(class UPCGGraphInstance* Gra
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UEnum*                            Enum                                                   (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UEnum*                      Enum                                                   (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const uint8                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetEnumParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const class UEnum* Enum, const uint8 Value)
 {
@@ -1471,8 +1471,8 @@ void UPCGGraphParametersHelpers::SetEnumParameter(class UPCGGraphInstance* Graph
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetFloatParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const float Value)
 {
@@ -1500,8 +1500,8 @@ void UPCGGraphParametersHelpers::SetFloatParameter(class UPCGGraphInstance* Grap
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetInt32Parameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const int32 Value)
 {
@@ -1529,8 +1529,8 @@ void UPCGGraphParametersHelpers::SetInt32Parameter(class UPCGGraphInstance* Grap
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int64                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetInt64Parameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const int64 Value)
 {
@@ -1558,8 +1558,8 @@ void UPCGGraphParametersHelpers::SetInt64Parameter(class UPCGGraphInstance* Grap
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetNameParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const class FName Value)
 {
@@ -1587,8 +1587,8 @@ void UPCGGraphParametersHelpers::SetNameParameter(class UPCGGraphInstance* Graph
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator                         Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetRotatorParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const struct FRotator& Value)
 {
@@ -1616,8 +1616,8 @@ void UPCGGraphParametersHelpers::SetRotatorParameter(class UPCGGraphInstance* Gr
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSoftClassPtr<class UClass>             Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TSoftClassPtr<class UClass>&      Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetSoftClassParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const TSoftClassPtr<class UClass>& Value)
 {
@@ -1645,8 +1645,8 @@ void UPCGGraphParametersHelpers::SetSoftClassParameter(class UPCGGraphInstance* 
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSoftObjectPtr<class UObject>           Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TSoftObjectPtr<class UObject>&    Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetSoftObjectParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const TSoftObjectPtr<class UObject>& Value)
 {
@@ -1674,8 +1674,8 @@ void UPCGGraphParametersHelpers::SetSoftObjectParameter(class UPCGGraphInstance*
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetStringParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const class FString& Value)
 {
@@ -1703,8 +1703,8 @@ void UPCGGraphParametersHelpers::SetStringParameter(class UPCGGraphInstance* Gra
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetTransformParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const struct FTransform& Value)
 {
@@ -1732,8 +1732,8 @@ void UPCGGraphParametersHelpers::SetTransformParameter(class UPCGGraphInstance* 
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UPCGGraphInstance*                GraphInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGGraphParametersHelpers::SetVectorParameter(class UPCGGraphInstance* GraphInstance, const class FName Name_0, const struct FVector& Value)
 {
@@ -2037,9 +2037,9 @@ const class UPCGGraph* UPCGGraphInterface::GetConstPCGGraph() const
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UPCGNode*                         From                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             FromPinLabel                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      FromPinLabel                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGNode*                         To                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             ToPinLabel                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      ToPinLabel                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGNode*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGNode* UPCGGraph::AddEdge(class UPCGNode* From, const class FName& FromPinLabel, class UPCGNode* To, const class FName& ToPinLabel)
@@ -2071,7 +2071,7 @@ class UPCGNode* UPCGGraph::AddEdge(class UPCGNode* From, const class FName& From
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UPCGSettings*                     InSettings                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGSettings*                     DefaultNodeSettings                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGSettings**                    DefaultNodeSettings                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGNode*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGNode* UPCGGraph::AddNodeCopy(class UPCGSettings* InSettings, class UPCGSettings** DefaultNodeSettings)
@@ -2131,7 +2131,7 @@ class UPCGNode* UPCGGraph::AddNodeInstance(class UPCGSettings* InSettings)
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class UPCGSettings>         InSettingsClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGSettings*                     DefaultNodeSettings                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGSettings**                    DefaultNodeSettings                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGNode*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGNode* UPCGGraph::AddNodeOfType(TSubclassOf<class UPCGSettings> InSettingsClass, class UPCGSettings** DefaultNodeSettings)
@@ -2163,9 +2163,9 @@ class UPCGNode* UPCGGraph::AddNodeOfType(TSubclassOf<class UPCGSettings> InSetti
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UPCGNode*                         From                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             FromLabel                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      FromLabel                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGNode*                         To                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             ToLabel                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      ToLabel                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPCGGraph::RemoveEdge(class UPCGNode* From, const class FName& FromLabel, class UPCGNode* To, const class FName& ToLabel)
@@ -2271,11 +2271,11 @@ class UPCGNode* UPCGGraph::GetOutputNode() const
 // Function PCG.PCGMetadata.AccumulatePointWeightedAttributes
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     InMetaData                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InMetaData                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Weight                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetNonInterpolableAttributes                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        OutPoint                                               (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       OutPoint                                               (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::AccumulatePointWeightedAttributes(const struct FPCGPoint& InPoint, const class UPCGMetadata* InMetaData, float Weight, bool bSetNonInterpolableAttributes, struct FPCGPoint& OutPoint)
 {
@@ -2307,11 +2307,11 @@ void UPCGMetadata::AccumulatePointWeightedAttributes(const struct FPCGPoint& InP
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Weight                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetNonInterpolableAttributes                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   TargetKey                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   OutKey                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64*                                  OutKey                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::AccumulateWeightedAttributesByKey(int64 Key, const class UPCGMetadata* MetaData, float Weight, bool bSetNonInterpolableAttributes, int64 TargetKey, int64* OutKey)
 {
@@ -2343,7 +2343,7 @@ void UPCGMetadata::AccumulateWeightedAttributesByKey(int64 Key, const class UPCG
 // Function PCG.PCGMetadata.AddAttribute
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGMetadata*                     InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::AddAttribute(const class UPCGMetadata* InOther, class FName AttributeName)
@@ -2370,7 +2370,7 @@ void UPCGMetadata::AddAttribute(const class UPCGMetadata* InOther, class FName A
 // Function PCG.PCGMetadata.AddAttributes
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGMetadata*                     InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::AddAttributes(const class UPCGMetadata* InOther)
 {
@@ -2395,8 +2395,8 @@ void UPCGMetadata::AddAttributes(const class UPCGMetadata* InOther)
 // Function PCG.PCGMetadata.AddAttributesFiltered
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UPCGMetadata*                     InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSet<class FName>                       InFilteredAttributes                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TSet<class FName>&                InFilteredAttributes                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EPCGMetadataFilterMode                  InFilterMode                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::AddAttributesFiltered(const class UPCGMetadata* InOther, const TSet<class FName>& InFilteredAttributes, EPCGMetadataFilterMode InFilterMode)
@@ -2477,7 +2477,7 @@ void UPCGMetadata::ClearAttribute(class FName AttributeToClear)
 // Function PCG.PCGMetadata.CopyAttribute
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGMetadata*                     InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeToCopy                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             NewAttributeName                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2506,7 +2506,7 @@ void UPCGMetadata::CopyAttribute(const class UPCGMetadata* InOther, class FName 
 // Function PCG.PCGMetadata.CopyAttributes
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGMetadata*                     InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InOther                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::CopyAttributes(const class UPCGMetadata* InOther)
 {
@@ -2750,7 +2750,7 @@ void UPCGMetadata::CreateNameAttribute(class FName AttributeName, class FName De
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FQuat                            DefaultValue                                           (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FQuat&                     DefaultValue                                           (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bAllowsInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bOverrideParent                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2781,7 +2781,7 @@ void UPCGMetadata::CreateQuatAttribute(class FName AttributeName, const struct F
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator                         DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FRotator&                  DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    bAllowsInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bOverrideParent                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2812,7 +2812,7 @@ void UPCGMetadata::CreateRotatorAttribute(class FName AttributeName, const struc
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           DefaultValue                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    DefaultValue                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bAllowsInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bOverrideParent                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2843,7 +2843,7 @@ void UPCGMetadata::CreateStringAttribute(class FName AttributeName, const class 
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       DefaultValue                                           (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                DefaultValue                                           (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bAllowsInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bOverrideParent                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2874,7 +2874,7 @@ void UPCGMetadata::CreateTransformAttribute(class FName AttributeName, const str
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bAllowsInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bOverrideParent                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2905,7 +2905,7 @@ void UPCGMetadata::CreateVector2Attribute(class FName AttributeName, const struc
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector4                         DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector4&                  DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bAllowsInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bOverrideParent                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2936,7 +2936,7 @@ void UPCGMetadata::CreateVector4Attribute(class FName AttributeName, const struc
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bAllowsInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bOverrideParent                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3010,7 +3010,7 @@ void UPCGMetadata::Flatten()
 // Function PCG.PCGMetadata.Initialize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGMetadata*                     InParent                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InParent                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::Initialize(const class UPCGMetadata* InParent)
 {
@@ -3035,7 +3035,7 @@ void UPCGMetadata::Initialize(const class UPCGMetadata* InParent)
 // Function PCG.PCGMetadata.InitializeAsCopy
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGMetadata*                     InMetadataToCopy                                       (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InMetadataToCopy                                       (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::InitializeAsCopy(const class UPCGMetadata* InMetadataToCopy)
 {
@@ -3060,8 +3060,8 @@ void UPCGMetadata::InitializeAsCopy(const class UPCGMetadata* InMetadataToCopy)
 // Function PCG.PCGMetadata.InitializeAsCopyWithAttributeFilter
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UPCGMetadata*                     InMetadataToCopy                                       (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSet<class FName>                       InFilteredAttributes                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InMetadataToCopy                                       (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TSet<class FName>&                InFilteredAttributes                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EPCGMetadataFilterMode                  InFilterMode                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::InitializeAsCopyWithAttributeFilter(const class UPCGMetadata* InMetadataToCopy, const TSet<class FName>& InFilteredAttributes, EPCGMetadataFilterMode InFilterMode)
@@ -3089,8 +3089,8 @@ void UPCGMetadata::InitializeAsCopyWithAttributeFilter(const class UPCGMetadata*
 // Function PCG.PCGMetadata.InitializeWithAttributeFilter
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UPCGMetadata*                     InParent                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSet<class FName>                       InFilteredAttributes                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InParent                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TSet<class FName>&                InFilteredAttributes                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EPCGMetadataFilterMode                  InFilterMode                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::InitializeWithAttributeFilter(const class UPCGMetadata* InParent, const TSet<class FName>& InFilteredAttributes, EPCGMetadataFilterMode InFilterMode)
@@ -3119,12 +3119,12 @@ void UPCGMetadata::InitializeWithAttributeFilter(const class UPCGMetadata* InPar
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int64                                   KeyA                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetadataA                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetadataA                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   KeyB                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetadataB                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetadataB                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   TargetKey                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EPCGMetadataOp                          Op                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   OutKey                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64*                                  OutKey                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::MergeAttributesByKey(int64 KeyA, const class UPCGMetadata* MetadataA, int64 KeyB, const class UPCGMetadata* MetadataB, int64 TargetKey, EPCGMetadataOp Op, int64* OutKey)
 {
@@ -3157,11 +3157,11 @@ void UPCGMetadata::MergeAttributesByKey(int64 KeyA, const class UPCGMetadata* Me
 // Function PCG.PCGMetadata.MergePointAttributes
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        PointA                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetadataA                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        PointB                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetadataB                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        TargetPoint                                            (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 PointA                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetadataA                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 PointB                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetadataB                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       TargetPoint                                            (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // EPCGMetadataOp                          Op                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::MergePointAttributes(const struct FPCGPoint& PointA, const class UPCGMetadata* MetadataA, const struct FPCGPoint& PointB, const class UPCGMetadata* MetadataB, struct FPCGPoint& TargetPoint, EPCGMetadataOp Op)
@@ -3224,7 +3224,7 @@ bool UPCGMetadata::RenameAttribute(class FName AttributeToRename, class FName Ne
 // Function PCG.PCGMetadata.ResetPointWeightedAttributes
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint*                       OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::ResetPointWeightedAttributes(struct FPCGPoint* OutPoint)
 {
@@ -3251,7 +3251,7 @@ void UPCGMetadata::ResetPointWeightedAttributes(struct FPCGPoint* OutPoint)
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int64                                   TargetKey                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   OutKey                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64*                                  OutKey                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::ResetWeightedAttributesByKey(int64 TargetKey, int64* OutKey)
 {
@@ -3280,9 +3280,9 @@ void UPCGMetadata::ResetWeightedAttributesByKey(int64 TargetKey, int64* OutKey)
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     InMetaData                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InMetaData                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   TargetKey                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   OutKey                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64*                                  OutKey                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::SetAttributesByKey(int64 Key, const class UPCGMetadata* InMetaData, int64 TargetKey, int64* OutKey)
 {
@@ -3312,9 +3312,9 @@ void UPCGMetadata::SetAttributesByKey(int64 Key, const class UPCGMetadata* InMet
 // Function PCG.PCGMetadata.SetPointAttributes
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        OutPoint                                               (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       OutPoint                                               (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::SetPointAttributes(const struct FPCGPoint& Point, const class UPCGMetadata* MetaData, struct FPCGPoint& OutPoint)
 {
@@ -3343,8 +3343,8 @@ void UPCGMetadata::SetPointAttributes(const struct FPCGPoint& Point, const class
 // Function PCG.PCGMetadata.GetAttributes
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<class FName>                     AttributeNames                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// TArray<EPCGMetadataTypes>               AttributeTypes                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class FName>*                    AttributeNames                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<EPCGMetadataTypes>*              AttributeTypes                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
 void UPCGMetadata::GetAttributes(TArray<class FName>* AttributeNames, TArray<EPCGMetadataTypes>* AttributeTypes) const
 {
@@ -3401,7 +3401,7 @@ bool UPCGMetadata::HasAttribute(class FName AttributeName) const
 // Function PCG.PCGMetadata.HasCommonAttributes
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPCGMetadata*                     InMetaData                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InMetaData                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPCGMetadata::HasCommonAttributes(const class UPCGMetadata* InMetaData) const
@@ -3430,7 +3430,7 @@ bool UPCGMetadata::HasCommonAttributes(const class UPCGMetadata* InMetaData) con
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UTextureRenderTarget2D*           InRenderTarget                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGRenderTargetData::Initialize(class UTextureRenderTarget2D* InRenderTarget, const struct FTransform& InTransform)
 {
@@ -3456,12 +3456,12 @@ void UPCGRenderTargetData::Initialize(class UTextureRenderTarget2D* InRenderTarg
 // Function PCG.PCGBlueprintPinHelpers.BreakPinProperty
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FPCGPinProperties                PinProperty                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class FName                             Label                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAllowMultipleData                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAllowMultipleConnections                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAdvancedPin                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EPCGExclusiveDataType                   AllowedType                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPinProperties&         PinProperty                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class FName*                            Label                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bAllowMultipleData                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bAllowMultipleConnections                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bAdvancedPin                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EPCGExclusiveDataType*                  AllowedType                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintPinHelpers::BreakPinProperty(const struct FPCGPinProperties& PinProperty, class FName* Label, bool* bAllowMultipleData, bool* bAllowMultipleConnections, bool* bAdvancedPin, EPCGExclusiveDataType* AllowedType)
 {
@@ -3537,7 +3537,7 @@ struct FPCGPinProperties UPCGBlueprintPinHelpers::MakePinProperty(class FName La
 // Function PCG.PCGDifferenceData.AddDifference
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGSpatialData*                  InDifference                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InDifference                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGDifferenceData::AddDifference(const class UPCGSpatialData* InDifference)
 {
@@ -3562,7 +3562,7 @@ void UPCGDifferenceData::AddDifference(const class UPCGSpatialData* InDifference
 // Function PCG.PCGDifferenceData.Initialize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGSpatialData*                  InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGDifferenceData::Initialize(const class UPCGSpatialData* InData)
 {
@@ -3612,8 +3612,8 @@ void UPCGDifferenceData::SetDensityFunction(EPCGDifferenceDensityFunction InDens
 // Function PCG.PCGIntersectionData.Initialize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGSpatialData*                  InA                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGSpatialData*                  InB                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InA                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InB                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGIntersectionData::Initialize(const class UPCGSpatialData* InA, const class UPCGSpatialData* InB)
 {
@@ -3639,8 +3639,8 @@ void UPCGIntersectionData::Initialize(const class UPCGSpatialData* InA, const cl
 // Function PCG.PCGPointData.CopyPointsFrom
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UPCGPointData*                    InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<int32>                           InDataIndices                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    InDataIndices                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UPCGPointData::CopyPointsFrom(const class UPCGPointData* InData, const TArray<int32>& InDataIndices)
 {
@@ -3666,7 +3666,7 @@ void UPCGPointData::CopyPointsFrom(const class UPCGPointData* InData, const TArr
 // Function PCG.PCGPointData.SetPoints
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<struct FPCGPoint>                InPoints                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FPCGPoint>&         InPoints                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UPCGPointData::SetPoints(const TArray<struct FPCGPoint>& InPoints)
 {
@@ -3745,7 +3745,7 @@ const TArray<struct FPCGPoint> UPCGPointData::GetPoints() const
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UTexture2D*                       InTexture                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGTextureData::Initialize(class UTexture2D* InTexture, const struct FTransform& InTransform)
 {
@@ -3771,7 +3771,7 @@ void UPCGTextureData::Initialize(class UTexture2D* InTexture, const struct FTran
 // Function PCG.PCGUnionData.AddData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGSpatialData*                  InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGUnionData::AddData(const class UPCGSpatialData* InData)
 {
@@ -3796,8 +3796,8 @@ void UPCGUnionData::AddData(const class UPCGSpatialData* InData)
 // Function PCG.PCGUnionData.Initialize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPCGSpatialData*                  InA                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGSpatialData*                  InB                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InA                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InB                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGUnionData::Initialize(const class UPCGSpatialData* InA, const class UPCGSpatialData* InB)
 {
@@ -3823,7 +3823,7 @@ void UPCGUnionData::Initialize(const class UPCGSpatialData* InA, const class UPC
 // Function PCG.PCGBlueprintElement.ApplyPreconfiguredSettings
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FPCGPreConfiguredSettingsInfo    InPreconfigureInfo                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGPreConfiguredSettingsInfo&InPreconfigureInfo                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintElement::ApplyPreconfiguredSettings(const struct FPCGPreConfiguredSettingsInfo& InPreconfigureInfo)
 {
@@ -3843,8 +3843,8 @@ void UPCGBlueprintElement::ApplyPreconfiguredSettings(const struct FPCGPreConfig
 // Function PCG.PCGBlueprintElement.Execute
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPCGDataCollection               Input                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FPCGDataCollection               Output                                                 (Parm, OutParm, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        Input                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGDataCollection*              Output                                                 (Parm, OutParm, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintElement::Execute(const struct FPCGDataCollection& Input, struct FPCGDataCollection* Output)
 {
@@ -3867,9 +3867,9 @@ void UPCGBlueprintElement::Execute(const struct FPCGDataCollection& Input, struc
 // Function PCG.PCGBlueprintElement.ExecuteWithContext
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FPCGContext                      InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FPCGDataCollection               Input                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FPCGDataCollection               Output                                                 (Parm, OutParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        Input                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGDataCollection*              Output                                                 (Parm, OutParm, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintElement::ExecuteWithContext(struct FPCGContext& InContext, const struct FPCGDataCollection& Input, struct FPCGDataCollection* Output)
 {
@@ -3976,7 +3976,7 @@ struct FPCGContext UPCGBlueprintElement::GetContext() const
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             InPinLabel                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPinProperties                OutFoundPin                                            (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPinProperties*               OutFoundPin                                            (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPCGBlueprintElement::GetInputPinByLabel(class FName InPinLabel, struct FPCGPinProperties* OutFoundPin) const
@@ -4033,7 +4033,7 @@ TArray<struct FPCGPinProperties> UPCGBlueprintElement::GetInputPins() const
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             InPinLabel                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPinProperties                OutFoundPin                                            (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPinProperties*               OutFoundPin                                            (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPCGBlueprintElement::GetOutputPinByLabel(class FName InPinLabel, struct FPCGPinProperties* OutFoundPin) const
@@ -4089,7 +4089,7 @@ TArray<struct FPCGPinProperties> UPCGBlueprintElement::GetOutputPins() const
 // Function PCG.PCGBlueprintElement.GetRandomStream
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, Const)
 // Parameters:
-// struct FPCGContext                      InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FRandomStream                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FRandomStream UPCGBlueprintElement::GetRandomStream(struct FPCGContext& InContext) const
@@ -4119,7 +4119,7 @@ struct FRandomStream UPCGBlueprintElement::GetRandomStream(struct FPCGContext& I
 // Function PCG.PCGBlueprintElement.GetSeed
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPCGContext                      InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 UPCGBlueprintElement::GetSeed(struct FPCGContext& InContext) const
@@ -4174,11 +4174,11 @@ bool UPCGBlueprintElement::IsCacheableOverride() const
 // Function PCG.PCGBlueprintElement.IterationLoop
 // (Final, Native, Public, HasOutParams, BlueprintCallable, Const)
 // Parameters:
-// struct FPCGContext                      InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // int64                                   NumIterations                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    OutData                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGSpatialData*                  OptionalA                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGSpatialData*                  OptionalB                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGPointData**                   OutData                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            OptionalA                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            OptionalB                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGPointData*                    OptionalOutData                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintElement::IterationLoop(struct FPCGContext& InContext, int64 NumIterations, class UPCGPointData** OutData, const class UPCGSpatialData* OptionalA, const class UPCGSpatialData* OptionalB, class UPCGPointData* OptionalOutData) const
@@ -4213,11 +4213,11 @@ void UPCGBlueprintElement::IterationLoop(struct FPCGContext& InContext, int64 Nu
 // Function PCG.PCGBlueprintElement.IterationLoopBody
 // (Event, Public, HasOutParams, BlueprintEvent, Const)
 // Parameters:
-// struct FPCGContext                      InContext                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGContext&               InContext                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // int64                                   Iteration                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGSpatialData*                  InA                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGSpatialData*                  InB                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InA                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InB                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGPoint*                       OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     OutMetadata                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4248,10 +4248,10 @@ bool UPCGBlueprintElement::IterationLoopBody(const struct FPCGContext& InContext
 // Function PCG.PCGBlueprintElement.NestedLoop
 // (Final, Native, Public, HasOutParams, BlueprintCallable, Const)
 // Parameters:
-// struct FPCGContext                      InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    InOuterData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    InInnerData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    OutData                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InOuterData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InInnerData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGPointData**                   OutData                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGPointData*                    OptionalOutData                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintElement::NestedLoop(struct FPCGContext& InContext, const class UPCGPointData* InOuterData, const class UPCGPointData* InInnerData, class UPCGPointData** OutData, class UPCGPointData* OptionalOutData) const
@@ -4285,12 +4285,12 @@ void UPCGBlueprintElement::NestedLoop(struct FPCGContext& InContext, const class
 // Function PCG.PCGBlueprintElement.NestedLoopBody
 // (Event, Public, HasOutParams, BlueprintEvent, Const)
 // Parameters:
-// struct FPCGContext                      InContext                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    InOuterData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    InInnerData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        InOuterPoint                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        InInnerPoint                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGContext&               InContext                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InOuterData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InInnerData                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 InOuterPoint                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 InInnerPoint                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint*                       OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     OutMetadata                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4397,9 +4397,9 @@ EPCGSettingsType UPCGBlueprintElement::NodeTypeOverride() const
 // Function PCG.PCGBlueprintElement.PointLoop
 // (Final, Native, Public, HasOutParams, BlueprintCallable, Const)
 // Parameters:
-// struct FPCGContext                      InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    OutData                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGPointData**                   OutData                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGPointData*                    OptionalOutData                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintElement::PointLoop(struct FPCGContext& InContext, const class UPCGPointData* InData, class UPCGPointData** OutData, class UPCGPointData* OptionalOutData) const
@@ -4432,10 +4432,10 @@ void UPCGBlueprintElement::PointLoop(struct FPCGContext& InContext, const class 
 // Function PCG.PCGBlueprintElement.PointLoopBody
 // (Event, Public, HasOutParams, BlueprintEvent, Const)
 // Parameters:
-// struct FPCGContext                      InContext                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGContext&               InContext                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint*                       OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     OutMetadata                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4465,9 +4465,9 @@ bool UPCGBlueprintElement::PointLoopBody(const struct FPCGContext& InContext, co
 // Function PCG.PCGBlueprintElement.VariableLoop
 // (Final, Native, Public, HasOutParams, BlueprintCallable, Const)
 // Parameters:
-// struct FPCGContext                      InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    OutData                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     InContext                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGPointData**                   OutData                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGPointData*                    OptionalOutData                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintElement::VariableLoop(struct FPCGContext& InContext, const class UPCGPointData* InData, class UPCGPointData** OutData, class UPCGPointData* OptionalOutData) const
@@ -4500,9 +4500,9 @@ void UPCGBlueprintElement::VariableLoop(struct FPCGContext& InContext, const cla
 // Function PCG.PCGBlueprintElement.VariableLoopBody
 // (Event, Public, HasOutParams, BlueprintEvent, Const)
 // Parameters:
-// struct FPCGContext                      InContext                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UPCGPointData*                    InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGContext&               InContext                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGPointData*              InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     OutMetadata                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPCGPoint>                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -4530,7 +4530,7 @@ TArray<struct FPCGPoint> UPCGBlueprintElement::VariableLoopBody(const struct FPC
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class UPCGBlueprintElement> InElementType                                          (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGBlueprintElement*             ElementInstance                                        (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGBlueprintElement**            ElementInstance                                        (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintSettings::SetElementType(TSubclassOf<class UPCGBlueprintElement> InElementType, class UPCGBlueprintElement** ElementInstance)
 {
@@ -4772,7 +4772,7 @@ void UPCGStaticMeshSpawnerSettings::SetMeshSelectorType(TSubclassOf<class UPCGMe
 // Function PCG.PCGPartitionActor.GetLocalComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPCGComponent*                    OriginalComponent                                      (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGComponent*              OriginalComponent                                      (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGComponent*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGComponent* APCGPartitionActor::GetLocalComponent(const class UPCGComponent* OriginalComponent) const
@@ -4800,7 +4800,7 @@ class UPCGComponent* APCGPartitionActor::GetLocalComponent(const class UPCGCompo
 // Function PCG.PCGPartitionActor.GetOriginalComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPCGComponent*                    LocalComponent                                         (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGComponent*              LocalComponent                                         (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGComponent*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGComponent* APCGPartitionActor::GetOriginalComponent(const class UPCGComponent* LocalComponent) const
@@ -4828,7 +4828,7 @@ class UPCGComponent* APCGPartitionActor::GetOriginalComponent(const class UPCGCo
 // Function PCG.PCGBlueprintHelpers.ComputeSeedFromPosition
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                          InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 UPCGBlueprintHelpers::ComputeSeedFromPosition(const struct FVector& InPosition)
@@ -4916,7 +4916,7 @@ struct FBox UPCGBlueprintHelpers::GetActorBoundsPCG(class AActor* InActor, bool 
 // Function PCG.PCGBlueprintHelpers.GetActorData
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGContext                      Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UPCGData*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGData* UPCGBlueprintHelpers::GetActorData(struct FPCGContext& Context)
@@ -4976,7 +4976,7 @@ struct FBox UPCGBlueprintHelpers::GetActorLocalBoundsPCG(class AActor* InActor, 
 // Function PCG.PCGBlueprintHelpers.GetComponent
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGContext                      Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UPCGComponent*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGComponent* UPCGBlueprintHelpers::GetComponent(struct FPCGContext& Context)
@@ -5006,7 +5006,7 @@ class UPCGComponent* UPCGBlueprintHelpers::GetComponent(struct FPCGContext& Cont
 // Function PCG.PCGBlueprintHelpers.GetExtents
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FVector UPCGBlueprintHelpers::GetExtents(const struct FPCGPoint& InPoint)
@@ -5034,7 +5034,7 @@ struct FVector UPCGBlueprintHelpers::GetExtents(const struct FPCGPoint& InPoint)
 // Function PCG.PCGBlueprintHelpers.GetInputData
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGContext                      Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UPCGData*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGData* UPCGBlueprintHelpers::GetInputData(struct FPCGContext& Context)
@@ -5065,7 +5065,7 @@ class UPCGData* UPCGBlueprintHelpers::GetInputData(struct FPCGContext& Context)
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPCGLandscapeLayerWeight> ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FPCGLandscapeLayerWeight> UPCGBlueprintHelpers::GetInterpolatedPCGLandscapeLayerWeights(class UObject* WorldContextObject, const struct FVector& Location)
@@ -5094,7 +5094,7 @@ TArray<struct FPCGLandscapeLayerWeight> UPCGBlueprintHelpers::GetInterpolatedPCG
 // Function PCG.PCGBlueprintHelpers.GetLocalCenter
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FVector UPCGBlueprintHelpers::GetLocalCenter(const struct FPCGPoint& InPoint)
@@ -5122,7 +5122,7 @@ struct FVector UPCGBlueprintHelpers::GetLocalCenter(const struct FPCGPoint& InPo
 // Function PCG.PCGBlueprintHelpers.GetOriginalComponent
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGContext                      Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UPCGComponent*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGComponent* UPCGBlueprintHelpers::GetOriginalComponent(struct FPCGContext& Context)
@@ -5152,9 +5152,9 @@ class UPCGComponent* UPCGBlueprintHelpers::GetOriginalComponent(struct FPCGConte
 // Function PCG.PCGBlueprintHelpers.GetRandomStream
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGSettings*                     OptionalSettings                                       (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGComponent*                    OptionalComponent                                      (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGSettings*               OptionalSettings                                       (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGComponent*              OptionalComponent                                      (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRandomStream                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FRandomStream UPCGBlueprintHelpers::GetRandomStream(const struct FPCGPoint& InPoint, const class UPCGSettings* OptionalSettings, const class UPCGComponent* OptionalComponent)
@@ -5184,7 +5184,7 @@ struct FRandomStream UPCGBlueprintHelpers::GetRandomStream(const struct FPCGPoin
 // Function PCG.PCGBlueprintHelpers.GetSettings
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGContext                      Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // const class UPCGSettings*               ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 const class UPCGSettings* UPCGBlueprintHelpers::GetSettings(struct FPCGContext& Context)
@@ -5214,7 +5214,7 @@ const class UPCGSettings* UPCGBlueprintHelpers::GetSettings(struct FPCGContext& 
 // Function PCG.PCGBlueprintHelpers.GetTargetActor
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGContext                      Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UPCGSpatialData*                  SpatialData                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5246,7 +5246,7 @@ class AActor* UPCGBlueprintHelpers::GetTargetActor(struct FPCGContext& Context, 
 // Function PCG.PCGBlueprintHelpers.GetTaskId
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGContext                      Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGContext&                     Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int64 UPCGBlueprintHelpers::GetTaskId(struct FPCGContext& Context)
@@ -5276,7 +5276,7 @@ int64 UPCGBlueprintHelpers::GetTaskId(struct FPCGContext& Context)
 // Function PCG.PCGBlueprintHelpers.GetTransformedBounds
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FBox UPCGBlueprintHelpers::GetTransformedBounds(const struct FPCGPoint& InPoint)
@@ -5304,8 +5304,8 @@ struct FBox UPCGBlueprintHelpers::GetTransformedBounds(const struct FPCGPoint& I
 // Function PCG.PCGBlueprintHelpers.SetExtents
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        InPoint                                                (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FVector                          InExtents                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       InPoint                                                (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FVector&                   InExtents                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintHelpers::SetExtents(struct FPCGPoint& InPoint, const struct FVector& InExtents)
 {
@@ -5333,8 +5333,8 @@ void UPCGBlueprintHelpers::SetExtents(struct FPCGPoint& InPoint, const struct FV
 // Function PCG.PCGBlueprintHelpers.SetLocalCenter
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        InPoint                                                (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FVector                          InLocalCenter                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       InPoint                                                (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FVector&                   InLocalCenter                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintHelpers::SetLocalCenter(struct FPCGPoint& InPoint, const struct FVector& InLocalCenter)
 {
@@ -5362,7 +5362,7 @@ void UPCGBlueprintHelpers::SetLocalCenter(struct FPCGPoint& InPoint, const struc
 // Function PCG.PCGBlueprintHelpers.SetSeedFromPosition
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        InPoint                                                (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       InPoint                                                (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UPCGBlueprintHelpers::SetSeedFromPosition(struct FPCGPoint& InPoint)
 {
@@ -5390,7 +5390,7 @@ void UPCGBlueprintHelpers::SetSeedFromPosition(struct FPCGPoint& InPoint)
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   TypeId                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPackedCustomData             OutPackedCustomData                                    (Parm, OutParm, NativeAccessSpecifierPublic)
+// struct FPCGPackedCustomData*            OutPackedCustomData                                    (Parm, OutParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPCGInstanceDataPackerBase::AddTypeToPacking(int32 TypeId, struct FPCGPackedCustomData* OutPackedCustomData) const
@@ -5421,10 +5421,10 @@ bool UPCGInstanceDataPackerBase::AddTypeToPacking(int32 TypeId, struct FPCGPacke
 // Function PCG.PCGInstanceDataPackerBase.PackCustomDataFromAttributes
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPCGMeshInstanceList             InstanceList                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FName>                     AttributeNames                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FPCGPackedCustomData             OutPackedCustomData                                    (Parm, OutParm, NativeAccessSpecifierPublic)
+// const struct FPCGMeshInstanceList&      InstanceList                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              AttributeNames                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGPackedCustomData*            OutPackedCustomData                                    (Parm, OutParm, NativeAccessSpecifierPublic)
 
 void UPCGInstanceDataPackerBase::PackCustomDataFromAttributes(const struct FPCGMeshInstanceList& InstanceList, const class UPCGMetadata* MetaData, const TArray<class FName>& AttributeNames, struct FPCGPackedCustomData* OutPackedCustomData) const
 {
@@ -5454,10 +5454,10 @@ void UPCGInstanceDataPackerBase::PackCustomDataFromAttributes(const struct FPCGM
 // Function PCG.PCGInstanceDataPackerBase.PackInstances
 // (Native, Event, Public, HasOutParams, BlueprintEvent, Const)
 // Parameters:
-// struct FPCGContext                      Context                                                (Parm, OutParm, NativeAccessSpecifierPublic)
-// class UPCGSpatialData*                  InSpatialData                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGMeshInstanceList             InstanceList                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FPCGPackedCustomData             OutPackedCustomData                                    (Parm, OutParm, NativeAccessSpecifierPublic)
+// struct FPCGContext*                     Context                                                (Parm, OutParm, NativeAccessSpecifierPublic)
+// const class UPCGSpatialData*            InSpatialData                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGMeshInstanceList&      InstanceList                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPCGPackedCustomData*            OutPackedCustomData                                    (Parm, OutParm, NativeAccessSpecifierPublic)
 
 void UPCGInstanceDataPackerBase::PackInstances(struct FPCGContext* Context, const class UPCGSpatialData* InSpatialData, const struct FPCGMeshInstanceList& InstanceList, struct FPCGPackedCustomData* OutPackedCustomData) const
 {
@@ -5489,10 +5489,10 @@ void UPCGInstanceDataPackerBase::PackInstances(struct FPCGContext* Context, cons
 // Function PCG.PCGMetadataAccessorHelpers.CopyPoint
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 InPoint                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint*                       OutPoint                                               (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    bCopyMetadata                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     InMetaData                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               InMetaData                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     OutMetadata                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::CopyPoint(const struct FPCGPoint& InPoint, struct FPCGPoint* OutPoint, bool bCopyMetadata, const class UPCGMetadata* InMetaData, class UPCGMetadata* OutMetadata)
@@ -5524,8 +5524,8 @@ void UPCGMetadataAccessorHelpers::CopyPoint(const struct FPCGPoint& InPoint, str
 // Function PCG.PCGMetadataAccessorHelpers.GetBoolAttribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5557,7 +5557,7 @@ bool UPCGMetadataAccessorHelpers::GetBoolAttribute(const struct FPCGPoint& Point
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5588,8 +5588,8 @@ bool UPCGMetadataAccessorHelpers::GetBoolAttributeByMetadataKey(int64 Key, const
 // Function PCG.PCGMetadataAccessorHelpers.GetDoubleAttribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5621,7 +5621,7 @@ double UPCGMetadataAccessorHelpers::GetDoubleAttribute(const struct FPCGPoint& P
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5652,8 +5652,8 @@ double UPCGMetadataAccessorHelpers::GetDoubleAttributeByMetadataKey(int64 Key, c
 // Function PCG.PCGMetadataAccessorHelpers.GetFloatAttribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5685,7 +5685,7 @@ float UPCGMetadataAccessorHelpers::GetFloatAttribute(const struct FPCGPoint& Poi
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5716,8 +5716,8 @@ float UPCGMetadataAccessorHelpers::GetFloatAttributeByMetadataKey(int64 Key, con
 // Function PCG.PCGMetadataAccessorHelpers.GetInteger32Attribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5749,7 +5749,7 @@ int32 UPCGMetadataAccessorHelpers::GetInteger32Attribute(const struct FPCGPoint&
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5780,8 +5780,8 @@ int32 UPCGMetadataAccessorHelpers::GetInteger32AttributeByMetadataKey(int64 Key,
 // Function PCG.PCGMetadataAccessorHelpers.GetInteger64Attribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5813,7 +5813,7 @@ int64 UPCGMetadataAccessorHelpers::GetInteger64Attribute(const struct FPCGPoint&
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5844,8 +5844,8 @@ int64 UPCGMetadataAccessorHelpers::GetInteger64AttributeByMetadataKey(int64 Key,
 // Function PCG.PCGMetadataAccessorHelpers.GetNameAttribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5876,8 +5876,8 @@ class FName UPCGMetadataAccessorHelpers::GetNameAttribute(const struct FPCGPoint
 // Function PCG.PCGMetadataAccessorHelpers.GetQuatAttribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5909,7 +5909,7 @@ struct FQuat UPCGMetadataAccessorHelpers::GetQuatAttribute(const struct FPCGPoin
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5940,8 +5940,8 @@ struct FQuat UPCGMetadataAccessorHelpers::GetQuatAttributeByMetadataKey(int64 Ke
 // Function PCG.PCGMetadataAccessorHelpers.GetRotatorAttribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -5973,7 +5973,7 @@ struct FRotator UPCGMetadataAccessorHelpers::GetRotatorAttribute(const struct FP
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -6004,8 +6004,8 @@ struct FRotator UPCGMetadataAccessorHelpers::GetRotatorAttributeByMetadataKey(in
 // Function PCG.PCGMetadataAccessorHelpers.GetStringAttribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6037,7 +6037,7 @@ class FString UPCGMetadataAccessorHelpers::GetStringAttribute(const struct FPCGP
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6068,8 +6068,8 @@ class FString UPCGMetadataAccessorHelpers::GetStringAttributeByMetadataKey(int64
 // Function PCG.PCGMetadataAccessorHelpers.GetTransformAttribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6101,7 +6101,7 @@ struct FTransform UPCGMetadataAccessorHelpers::GetTransformAttribute(const struc
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6132,8 +6132,8 @@ struct FTransform UPCGMetadataAccessorHelpers::GetTransformAttributeByMetadataKe
 // Function PCG.PCGMetadataAccessorHelpers.GetVector2Attribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6165,7 +6165,7 @@ struct FVector2D UPCGMetadataAccessorHelpers::GetVector2Attribute(const struct F
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6196,8 +6196,8 @@ struct FVector2D UPCGMetadataAccessorHelpers::GetVector2AttributeByMetadataKey(i
 // Function PCG.PCGMetadataAccessorHelpers.GetVector4Attribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6229,7 +6229,7 @@ struct FVector4 UPCGMetadataAccessorHelpers::GetVector4Attribute(const struct FP
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6260,8 +6260,8 @@ struct FVector4 UPCGMetadataAccessorHelpers::GetVector4AttributeByMetadataKey(in
 // Function PCG.PCGMetadataAccessorHelpers.GetVectorAttribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6293,7 +6293,7 @@ struct FVector UPCGMetadataAccessorHelpers::GetVectorAttribute(const struct FPCG
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6324,8 +6324,8 @@ struct FVector UPCGMetadataAccessorHelpers::GetVectorAttributeByMetadataKey(int6
 // Function PCG.PCGMetadataAccessorHelpers.HasAttributeSet
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 Point                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6357,7 +6357,7 @@ bool UPCGMetadataAccessorHelpers::HasAttributeSet(const struct FPCGPoint& Point,
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // int64                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               MetaData                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6388,10 +6388,10 @@ bool UPCGMetadataAccessorHelpers::HasAttributeSetByMetadataKey(int64 Key, const 
 // Function PCG.PCGMetadataAccessorHelpers.InitializeMetadata
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        ParentPoint                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UPCGMetadata*                     ParentMetadata                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGPoint&                 ParentPoint                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPCGMetadata*               ParentMetadata                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::InitializeMetadata(struct FPCGPoint& Point, class UPCGMetadata* MetaData, const struct FPCGPoint& ParentPoint, const class UPCGMetadata* ParentMetadata)
 {
@@ -6421,10 +6421,10 @@ void UPCGMetadataAccessorHelpers::InitializeMetadata(struct FPCGPoint& Point, cl
 // Function PCG.PCGMetadataAccessorHelpers.SetAttributeFromPropertyByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                          Object                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    Object                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6459,7 +6459,7 @@ bool UPCGMetadataAccessorHelpers::SetAttributeFromPropertyByMetadataKey(int64& K
 // Function PCG.PCGMetadataAccessorHelpers.SetBoolAttribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6492,7 +6492,7 @@ void UPCGMetadataAccessorHelpers::SetBoolAttribute(struct FPCGPoint& Point, clas
 // Function PCG.PCGMetadataAccessorHelpers.SetBoolAttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6525,7 +6525,7 @@ void UPCGMetadataAccessorHelpers::SetBoolAttributeByMetadataKey(int64& Key, clas
 // Function PCG.PCGMetadataAccessorHelpers.SetDoubleAttribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6558,7 +6558,7 @@ void UPCGMetadataAccessorHelpers::SetDoubleAttribute(struct FPCGPoint& Point, cl
 // Function PCG.PCGMetadataAccessorHelpers.SetDoubleAttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6591,7 +6591,7 @@ void UPCGMetadataAccessorHelpers::SetDoubleAttributeByMetadataKey(int64& Key, cl
 // Function PCG.PCGMetadataAccessorHelpers.SetFloatAttribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6624,7 +6624,7 @@ void UPCGMetadataAccessorHelpers::SetFloatAttribute(struct FPCGPoint& Point, cla
 // Function PCG.PCGMetadataAccessorHelpers.SetFloatAttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6657,7 +6657,7 @@ void UPCGMetadataAccessorHelpers::SetFloatAttributeByMetadataKey(int64& Key, cla
 // Function PCG.PCGMetadataAccessorHelpers.SetInteger32Attribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6690,7 +6690,7 @@ void UPCGMetadataAccessorHelpers::SetInteger32Attribute(struct FPCGPoint& Point,
 // Function PCG.PCGMetadataAccessorHelpers.SetInteger32AttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6723,7 +6723,7 @@ void UPCGMetadataAccessorHelpers::SetInteger32AttributeByMetadataKey(int64& Key,
 // Function PCG.PCGMetadataAccessorHelpers.SetInteger64Attribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6756,7 +6756,7 @@ void UPCGMetadataAccessorHelpers::SetInteger64Attribute(struct FPCGPoint& Point,
 // Function PCG.PCGMetadataAccessorHelpers.SetInteger64AttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6789,10 +6789,10 @@ void UPCGMetadataAccessorHelpers::SetInteger64AttributeByMetadataKey(int64& Key,
 // Function PCG.PCGMetadataAccessorHelpers.SetNameAttribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetNameAttribute(struct FPCGPoint& Point, class UPCGMetadata* MetaData, class FName AttributeName, const class FName& Value)
 {
@@ -6822,10 +6822,10 @@ void UPCGMetadataAccessorHelpers::SetNameAttribute(struct FPCGPoint& Point, clas
 // Function PCG.PCGMetadataAccessorHelpers.SetQuatAttribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FQuat                            Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FQuat&                     Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetQuatAttribute(struct FPCGPoint& Point, class UPCGMetadata* MetaData, class FName AttributeName, const struct FQuat& Value)
 {
@@ -6855,10 +6855,10 @@ void UPCGMetadataAccessorHelpers::SetQuatAttribute(struct FPCGPoint& Point, clas
 // Function PCG.PCGMetadataAccessorHelpers.SetQuatAttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FQuat                            Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FQuat&                     Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetQuatAttributeByMetadataKey(int64& Key, class UPCGMetadata* MetaData, class FName AttributeName, const struct FQuat& Value)
 {
@@ -6888,10 +6888,10 @@ void UPCGMetadataAccessorHelpers::SetQuatAttributeByMetadataKey(int64& Key, clas
 // Function PCG.PCGMetadataAccessorHelpers.SetRotatorAttribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator                         Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetRotatorAttribute(struct FPCGPoint& Point, class UPCGMetadata* MetaData, class FName AttributeName, const struct FRotator& Value)
 {
@@ -6921,10 +6921,10 @@ void UPCGMetadataAccessorHelpers::SetRotatorAttribute(struct FPCGPoint& Point, c
 // Function PCG.PCGMetadataAccessorHelpers.SetRotatorAttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator                         Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetRotatorAttributeByMetadataKey(int64& Key, class UPCGMetadata* MetaData, class FName AttributeName, const struct FRotator& Value)
 {
@@ -6954,10 +6954,10 @@ void UPCGMetadataAccessorHelpers::SetRotatorAttributeByMetadataKey(int64& Key, c
 // Function PCG.PCGMetadataAccessorHelpers.SetStringAttribute
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetStringAttribute(struct FPCGPoint& Point, class UPCGMetadata* MetaData, class FName AttributeName, const class FString& Value)
 {
@@ -6987,10 +6987,10 @@ void UPCGMetadataAccessorHelpers::SetStringAttribute(struct FPCGPoint& Point, cl
 // Function PCG.PCGMetadataAccessorHelpers.SetStringAttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetStringAttributeByMetadataKey(int64& Key, class UPCGMetadata* MetaData, class FName AttributeName, const class FString& Value)
 {
@@ -7020,10 +7020,10 @@ void UPCGMetadataAccessorHelpers::SetStringAttributeByMetadataKey(int64& Key, cl
 // Function PCG.PCGMetadataAccessorHelpers.SetTransformAttribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetTransformAttribute(struct FPCGPoint& Point, class UPCGMetadata* MetaData, class FName AttributeName, const struct FTransform& Value)
 {
@@ -7053,10 +7053,10 @@ void UPCGMetadataAccessorHelpers::SetTransformAttribute(struct FPCGPoint& Point,
 // Function PCG.PCGMetadataAccessorHelpers.SetTransformAttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetTransformAttributeByMetadataKey(int64& Key, class UPCGMetadata* MetaData, class FName AttributeName, const struct FTransform& Value)
 {
@@ -7086,10 +7086,10 @@ void UPCGMetadataAccessorHelpers::SetTransformAttributeByMetadataKey(int64& Key,
 // Function PCG.PCGMetadataAccessorHelpers.SetVector2Attribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetVector2Attribute(struct FPCGPoint& Point, class UPCGMetadata* MetaData, class FName AttributeName, const struct FVector2D& Value)
 {
@@ -7119,10 +7119,10 @@ void UPCGMetadataAccessorHelpers::SetVector2Attribute(struct FPCGPoint& Point, c
 // Function PCG.PCGMetadataAccessorHelpers.SetVector2AttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetVector2AttributeByMetadataKey(int64& Key, class UPCGMetadata* MetaData, class FName AttributeName, const struct FVector2D& Value)
 {
@@ -7152,10 +7152,10 @@ void UPCGMetadataAccessorHelpers::SetVector2AttributeByMetadataKey(int64& Key, c
 // Function PCG.PCGMetadataAccessorHelpers.SetVector4Attribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector4                         Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector4&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetVector4Attribute(struct FPCGPoint& Point, class UPCGMetadata* MetaData, class FName AttributeName, const struct FVector4& Value)
 {
@@ -7185,10 +7185,10 @@ void UPCGMetadataAccessorHelpers::SetVector4Attribute(struct FPCGPoint& Point, c
 // Function PCG.PCGMetadataAccessorHelpers.SetVector4AttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector4                         Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector4&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetVector4AttributeByMetadataKey(int64& Key, class UPCGMetadata* MetaData, class FName AttributeName, const struct FVector4& Value)
 {
@@ -7218,10 +7218,10 @@ void UPCGMetadataAccessorHelpers::SetVector4AttributeByMetadataKey(int64& Key, c
 // Function PCG.PCGMetadataAccessorHelpers.SetVectorAttribute
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPCGPoint                        Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FPCGPoint&                       Point                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetVectorAttribute(struct FPCGPoint& Point, class UPCGMetadata* MetaData, class FName AttributeName, const struct FVector& Value)
 {
@@ -7251,10 +7251,10 @@ void UPCGMetadataAccessorHelpers::SetVectorAttribute(struct FPCGPoint& Point, cl
 // Function PCG.PCGMetadataAccessorHelpers.SetVectorAttributeByMetadataKey
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// int64                                   Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64&                                  Key                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGMetadata*                     MetaData                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPCGMetadataAccessorHelpers::SetVectorAttributeByMetadataKey(int64& Key, class UPCGMetadata* MetaData, class FName AttributeName, const struct FVector& Value)
 {
@@ -7284,10 +7284,10 @@ void UPCGMetadataAccessorHelpers::SetVectorAttributeByMetadataKey(int64& Key, cl
 // Function PCG.PCGDataFunctionLibrary.AddToCollection
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UPCGData*                         InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGDataCollection&              InCollection                                           (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGData*                   InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             InPinLabel                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>                   InTags                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            InTags                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 
 void UPCGDataFunctionLibrary::AddToCollection(struct FPCGDataCollection& InCollection, const class UPCGData* InData, class FName InPinLabel, const TArray<class FString>& InTags)
 {
@@ -7317,7 +7317,7 @@ void UPCGDataFunctionLibrary::AddToCollection(struct FPCGDataCollection& InColle
 // Function PCG.PCGDataFunctionLibrary.GetAllSettings
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // TArray<struct FPCGTaggedData>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetAllSettings(const struct FPCGDataCollection& InCollection)
@@ -7345,7 +7345,7 @@ TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetAllSettings(const stru
 // Function PCG.PCGDataFunctionLibrary.GetInputs
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // TArray<struct FPCGTaggedData>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetInputs(const struct FPCGDataCollection& InCollection)
@@ -7373,8 +7373,8 @@ TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetInputs(const struct FP
 // Function PCG.PCGDataFunctionLibrary.GetInputsByPinLabel
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class FName                             InPinLabel                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FName                       InPinLabel                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPCGTaggedData>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetInputsByPinLabel(const struct FPCGDataCollection& InCollection, const class FName InPinLabel)
@@ -7403,8 +7403,8 @@ TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetInputsByPinLabel(const
 // Function PCG.PCGDataFunctionLibrary.GetInputsByTag
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class FString                           InTag                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    InTag                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPCGTaggedData>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetInputsByTag(const struct FPCGDataCollection& InCollection, const class FString& InTag)
@@ -7433,7 +7433,7 @@ TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetInputsByTag(const stru
 // Function PCG.PCGDataFunctionLibrary.GetParams
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // TArray<struct FPCGTaggedData>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetParams(const struct FPCGDataCollection& InCollection)
@@ -7461,8 +7461,8 @@ TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetParams(const struct FP
 // Function PCG.PCGDataFunctionLibrary.GetParamsByPinLabel
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class FName                             InPinLabel                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FName                       InPinLabel                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPCGTaggedData>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetParamsByPinLabel(const struct FPCGDataCollection& InCollection, const class FName InPinLabel)
@@ -7491,8 +7491,8 @@ TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetParamsByPinLabel(const
 // Function PCG.PCGDataFunctionLibrary.GetParamsByTag
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class FString                           InTag                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    InTag                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPCGTaggedData>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetParamsByTag(const struct FPCGDataCollection& InCollection, const class FString& InTag)
@@ -7521,8 +7521,8 @@ TArray<struct FPCGTaggedData> UPCGDataFunctionLibrary::GetParamsByTag(const stru
 // Function PCG.PCGDataFunctionLibrary.GetTypedInputs
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FPCGTaggedData>           OutTaggedData                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FPCGTaggedData>*          OutTaggedData                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TSubclassOf<class UPCGData>             InDataTypeClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UPCGData*>                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -7555,9 +7555,9 @@ TArray<class UPCGData*> UPCGDataFunctionLibrary::GetTypedInputs(const struct FPC
 // Function PCG.PCGDataFunctionLibrary.GetTypedInputsByPin
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FPCGPinProperties                InPin                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// TArray<struct FPCGTaggedData>           OutTaggedData                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGPinProperties&         InPin                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// TArray<struct FPCGTaggedData>*          OutTaggedData                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TSubclassOf<class UPCGData>             InDataTypeClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UPCGData*>                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -7591,9 +7591,9 @@ TArray<class UPCGData*> UPCGDataFunctionLibrary::GetTypedInputsByPin(const struc
 // Function PCG.PCGDataFunctionLibrary.GetTypedInputsByPinLabel
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class FName                             InPinLabel                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FPCGTaggedData>           OutTaggedData                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<struct FPCGTaggedData>*          OutTaggedData                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TSubclassOf<class UPCGData>             InDataTypeClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UPCGData*>                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -7627,9 +7627,9 @@ TArray<class UPCGData*> UPCGDataFunctionLibrary::GetTypedInputsByPinLabel(const 
 // Function PCG.PCGDataFunctionLibrary.GetTypedInputsByTag
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPCGDataCollection               InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class FString                           InTag                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FPCGTaggedData>           OutTaggedData                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const struct FPCGDataCollection&        InCollection                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    InTag                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FPCGTaggedData>*          OutTaggedData                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TSubclassOf<class UPCGData>             InDataTypeClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UPCGData*>                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -7663,7 +7663,7 @@ TArray<class UPCGData*> UPCGDataFunctionLibrary::GetTypedInputsByTag(const struc
 // Function PCG.PCGParamData.FindOrAddMetadataKey
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FName                             InName                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InName                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int64 UPCGParamData::FindOrAddMetadataKey(const class FName& InName)
@@ -7769,7 +7769,7 @@ class UPCGParamData* UPCGParamData::FilterParamsByKey(int64 InKey) const
 // Function PCG.PCGParamData.FilterParamsByName
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FName                             InName                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InName                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPCGParamData*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPCGParamData* UPCGParamData::FilterParamsByName(const class FName& InName) const
@@ -7797,7 +7797,7 @@ class UPCGParamData* UPCGParamData::FilterParamsByName(const class FName& InName
 // Function PCG.PCGParamData.FindMetadataKey
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FName                             InName                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InName                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int64 UPCGParamData::FindMetadataKey(const class FName& InName) const
@@ -7825,7 +7825,7 @@ int64 UPCGParamData::FindMetadataKey(const class FName& InName) const
 // Function PCG.PCGPin.SetToolTip
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FText                             InTooltip                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FText&                      InTooltip                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UPCGPin::SetToolTip(const class FText& InTooltip)
 {
@@ -7875,8 +7875,8 @@ class FText UPCGPin::GetTooltip() const
 // Function PCG.PCGDeterminismTestBlueprintBase.ExecuteTest
 // (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UPCGNode*                         InPCGNode                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FDeterminismTestResult           InOutTestResult                                        (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UPCGNode*                   InPCGNode                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FDeterminismTestResult&          InOutTestResult                                        (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UPCGDeterminismTestBlueprintBase::ExecuteTest(const class UPCGNode* InPCGNode, struct FDeterminismTestResult& InOutTestResult)
 {

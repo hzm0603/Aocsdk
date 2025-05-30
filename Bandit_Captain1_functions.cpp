@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function Bandit_Captain1.Bandit_Captain1_C.ExecuteUbergraph_Bandit_Captain1
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABandit_Captain1_C::ExecuteUbergraph_Bandit_Captain1(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Bandit_Captain1_C", "ExecuteUbergraph_Bandit_Captain1");
-
-	Params::Bandit_Captain1_C_ExecuteUbergraph_Bandit_Captain1 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function Bandit_Captain1.Bandit_Captain1_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void ABandit_Captain1_C::ReceiveTick(float DeltaSeconds)
 	Params::Bandit_Captain1_C_ReceiveTick Parms{};
 
 	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Bandit_Captain1.Bandit_Captain1_C.ExecuteUbergraph_Bandit_Captain1
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABandit_Captain1_C::ExecuteUbergraph_Bandit_Captain1(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Bandit_Captain1_C", "ExecuteUbergraph_Bandit_Captain1");
+
+	Params::Bandit_Captain1_C_ExecuteUbergraph_Bandit_Captain1 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

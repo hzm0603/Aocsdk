@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Node_Guard_Ranged_M.Node_Guard_Ranged_M_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class ANode_Guard_Ranged_M_C final : public ANode_NPC_Master_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ANode_Guard_Ranged_M_C) == 0x000010, "Wrong alignment on ANode_Guard_Ranged_M_C");
-static_assert(sizeof(ANode_Guard_Ranged_M_C) == 0x001DD0, "Wrong size on ANode_Guard_Ranged_M_C");
+static_assert(sizeof(ANode_Guard_Ranged_M_C) == 0x001D90, "Wrong size on ANode_Guard_Ranged_M_C");
 
 }
 

@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // ScriptStruct NPC_Spider_Mini_AnimBP.NPC_Spider_Mini_AnimBP_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x01E8 - 0x01E8)
+// 0x0000 (0x0208 - 0x0208)
 struct NPC_Spider_Mini_AnimBP::FAnimBlueprintGeneratedConstantData : public NPC_Spider_AnimBP::FAnimBlueprintGeneratedConstantData
 {
 };
 static_assert(alignof(NPC_Spider_Mini_AnimBP::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on NPC_Spider_Mini_AnimBP::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(NPC_Spider_Mini_AnimBP::FAnimBlueprintGeneratedConstantData) == 0x0001E8, "Wrong size on NPC_Spider_Mini_AnimBP::FAnimBlueprintGeneratedConstantData");
+static_assert(sizeof(NPC_Spider_Mini_AnimBP::FAnimBlueprintGeneratedConstantData) == 0x000208, "Wrong size on NPC_Spider_Mini_AnimBP::FAnimBlueprintGeneratedConstantData");
 
 }
 

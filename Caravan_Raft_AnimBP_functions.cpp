@@ -20,7 +20,7 @@ namespace SDK
 // Function Caravan_Raft_AnimBP.Caravan_Raft_AnimBP_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
 void UCaravan_Raft_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {

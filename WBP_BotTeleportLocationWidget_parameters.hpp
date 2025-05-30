@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_BotTeleportLocationWidget.WBP_BotTeleportLocationWidget_C.SetData
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_BotTeleportLocationWidget_C_SetData final
+{
+public:
+	struct FBotTeleportLocation                   InData;                                            // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(WBP_BotTeleportLocationWidget_C_SetData) == 0x000008, "Wrong alignment on WBP_BotTeleportLocationWidget_C_SetData");
+static_assert(sizeof(WBP_BotTeleportLocationWidget_C_SetData) == 0x000028, "Wrong size on WBP_BotTeleportLocationWidget_C_SetData");
+static_assert(offsetof(WBP_BotTeleportLocationWidget_C_SetData, InData) == 0x000000, "Member 'WBP_BotTeleportLocationWidget_C_SetData::InData' has a wrong offset!");
+
 // Function WBP_BotTeleportLocationWidget.WBP_BotTeleportLocationWidget_C.ExecuteUbergraph_WBP_BotTeleportLocationWidget
 // 0x0088 (0x0088 - 0x0000)
 struct WBP_BotTeleportLocationWidget_C_ExecuteUbergraph_WBP_BotTeleportLocationWidget final
@@ -42,17 +53,6 @@ static_assert(offsetof(WBP_BotTeleportLocationWidget_C_ExecuteUbergraph_WBP_BotT
 static_assert(offsetof(WBP_BotTeleportLocationWidget_C_ExecuteUbergraph_WBP_BotTeleportLocationWidget, K2Node_DynamicCast_AsAo_CPlayer_Controller_BP) == 0x000050, "Member 'WBP_BotTeleportLocationWidget_C_ExecuteUbergraph_WBP_BotTeleportLocationWidget::K2Node_DynamicCast_AsAo_CPlayer_Controller_BP' has a wrong offset!");
 static_assert(offsetof(WBP_BotTeleportLocationWidget_C_ExecuteUbergraph_WBP_BotTeleportLocationWidget, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'WBP_BotTeleportLocationWidget_C_ExecuteUbergraph_WBP_BotTeleportLocationWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WBP_BotTeleportLocationWidget_C_ExecuteUbergraph_WBP_BotTeleportLocationWidget, K2Node_CustomEvent_InData) == 0x000060, "Member 'WBP_BotTeleportLocationWidget_C_ExecuteUbergraph_WBP_BotTeleportLocationWidget::K2Node_CustomEvent_InData' has a wrong offset!");
-
-// Function WBP_BotTeleportLocationWidget.WBP_BotTeleportLocationWidget_C.SetData
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_BotTeleportLocationWidget_C_SetData final
-{
-public:
-	struct FBotTeleportLocation                   InData;                                            // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(WBP_BotTeleportLocationWidget_C_SetData) == 0x000008, "Wrong alignment on WBP_BotTeleportLocationWidget_C_SetData");
-static_assert(sizeof(WBP_BotTeleportLocationWidget_C_SetData) == 0x000028, "Wrong size on WBP_BotTeleportLocationWidget_C_SetData");
-static_assert(offsetof(WBP_BotTeleportLocationWidget_C_SetData, InData) == 0x000000, "Member 'WBP_BotTeleportLocationWidget_C_SetData::InData' has a wrong offset!");
 
 }
 

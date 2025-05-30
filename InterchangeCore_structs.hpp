@@ -125,8 +125,8 @@ struct FInterchangePipelinePropertyStates final
 {
 public:
 	bool                                          bLocked;                                           // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInterchangePipelinePropertyStatePerContext ImportStates;                                      // 0x0001(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FInterchangePipelinePropertyStatePerContext ReimportStates;                                    // 0x0002(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInterchangePipelinePropertyStatePerContext ImportStates;                                 // 0x0001(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInterchangePipelinePropertyStatePerContext ReimportStates;                               // 0x0002(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FInterchangePipelinePropertyStates) == 0x000001, "Wrong alignment on FInterchangePipelinePropertyStates");
 static_assert(sizeof(FInterchangePipelinePropertyStates) == 0x000003, "Wrong size on FInterchangePipelinePropertyStates");

@@ -11,103 +11,28 @@
 #include "Basic.hpp"
 
 #include "StateTreeModule_structs.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ExecuteUbergraph_STT_ReleaseHeldAbilities
-// 0x0098 (0x0098 - 0x0000)
-struct STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities final
+// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReleaseHeldAbilitiesOnOuter
+// 0x0020 (0x0020 - 0x0000)
+struct STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStateTreeTransitionResult             K2Node_Event_Transition;                           // 0x0004(0x002E)(ConstParm, NoDestructor)
-	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0034(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0048(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaTime;                            // 0x0054(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_GetOuterObject_ReturnValue;               // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ReleaseHeldAbilities_Succeeded;           // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character;               // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLockedInAnimation_ReturnValue;          // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x007B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ReleaseHeldAbilities_Succeeded_1;         // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x007D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EStateTreeRunStatus                           K2Node_Event_CompletionStatus;                     // 0x007E(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7F[0x1];                                       // 0x007F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStateTreeActiveStates                 K2Node_Event_CompletedActiveStates;                // 0x0080(0x0012)(ConstParm, NoDestructor)
-	uint8                                         Pad_92[0x2];                                       // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EStateTreeRunStatus                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_GetOuterObject_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities) == 0x000008, "Wrong alignment on STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities");
-static_assert(sizeof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities) == 0x000098, "Wrong size on STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, EntryPoint) == 0x000000, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::EntryPoint' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_Event_Transition) == 0x000004, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_Event_Transition' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_CreateDelegate_OutputDelegate) == 0x000034, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000048, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000050, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_Event_DeltaTime) == 0x000054, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_Not_PreBool_ReturnValue) == 0x000058, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_BooleanOR_ReturnValue) == 0x000059, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_GetOuterObject_ReturnValue) == 0x000060, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_GetOuterObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_ReleaseHeldAbilities_Succeeded) == 0x000068, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_ReleaseHeldAbilities_Succeeded' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_DynamicCast_AsBase_Character) == 0x000070, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_DynamicCast_AsBase_Character' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_BooleanAND_ReturnValue) == 0x000079, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_IsLockedInAnimation_ReturnValue) == 0x00007A, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_IsLockedInAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_Not_PreBool_ReturnValue_1) == 0x00007B, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_ReleaseHeldAbilities_Succeeded_1) == 0x00007C, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_ReleaseHeldAbilities_Succeeded_1' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_BooleanAND_ReturnValue_1) == 0x00007D, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_Event_CompletionStatus) == 0x00007E, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_Event_CompletionStatus' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_Event_CompletedActiveStates) == 0x000080, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_Event_CompletedActiveStates' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x000094, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
-
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReceiveLatentEnterState
-// 0x002E (0x002E - 0x0000)
-struct STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState final
-{
-public:
-	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-};
-static_assert(alignof(STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState");
-static_assert(sizeof(STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
-
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReceiveLatentTick
-// 0x0004 (0x0004 - 0x0000)
-struct STT_ReleaseHeldAbilities_C_ReceiveLatentTick final
-{
-public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(STT_ReleaseHeldAbilities_C_ReceiveLatentTick) == 0x000004, "Wrong alignment on STT_ReleaseHeldAbilities_C_ReceiveLatentTick");
-static_assert(sizeof(STT_ReleaseHeldAbilities_C_ReceiveLatentTick) == 0x000004, "Wrong size on STT_ReleaseHeldAbilities_C_ReceiveLatentTick");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReceiveLatentTick, DeltaTime) == 0x000000, "Member 'STT_ReleaseHeldAbilities_C_ReceiveLatentTick::DeltaTime' has a wrong offset!");
-
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReceiveStateCompleted
-// 0x0014 (0x0014 - 0x0000)
-struct STT_ReleaseHeldAbilities_C_ReceiveStateCompleted final
-{
-public:
-	EStateTreeRunStatus                           CompletionStatus;                                  // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x1];                                        // 0x0001(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStateTreeActiveStates                 CompletedActiveStates;                             // 0x0002(0x0012)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-static_assert(alignof(STT_ReleaseHeldAbilities_C_ReceiveStateCompleted) == 0x000002, "Wrong alignment on STT_ReleaseHeldAbilities_C_ReceiveStateCompleted");
-static_assert(sizeof(STT_ReleaseHeldAbilities_C_ReceiveStateCompleted) == 0x000014, "Wrong size on STT_ReleaseHeldAbilities_C_ReceiveStateCompleted");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReceiveStateCompleted, CompletionStatus) == 0x000000, "Member 'STT_ReleaseHeldAbilities_C_ReceiveStateCompleted::CompletionStatus' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReceiveStateCompleted, CompletedActiveStates) == 0x000002, "Member 'STT_ReleaseHeldAbilities_C_ReceiveStateCompleted::CompletedActiveStates' has a wrong offset!");
+static_assert(alignof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter) == 0x000008, "Wrong alignment on STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter");
+static_assert(sizeof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter) == 0x000020, "Wrong size on STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter, ReturnValue) == 0x000000, "Member 'STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter::ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter, CallFunc_GetOuterObject_ReturnValue) == 0x000008, "Member 'STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter::CallFunc_GetOuterObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter, K2Node_DynamicCast_AsBase_Character) == 0x000010, "Member 'STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter::K2Node_DynamicCast_AsBase_Character' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReleaseHeldAbilities
 // 0x0020 (0x0020 - 0x0000)
@@ -127,23 +52,76 @@ static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilities, CallFunc
 static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilities, K2Node_DynamicCast_AsBase_Character) == 0x000010, "Member 'STT_ReleaseHeldAbilities_C_ReleaseHeldAbilities::K2Node_DynamicCast_AsBase_Character' has a wrong offset!");
 static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilities, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'STT_ReleaseHeldAbilities_C_ReleaseHeldAbilities::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReleaseHeldAbilitiesOnOuter
-// 0x0020 (0x0020 - 0x0000)
-struct STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter final
+// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReceiveLatentTick
+// 0x0004 (0x0004 - 0x0000)
+struct STT_ReleaseHeldAbilities_C_ReceiveLatentTick final
 {
 public:
-	EStateTreeRunStatus                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_GetOuterObject_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter) == 0x000008, "Wrong alignment on STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter");
-static_assert(sizeof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter) == 0x000020, "Wrong size on STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter, ReturnValue) == 0x000000, "Member 'STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter::ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter, CallFunc_GetOuterObject_ReturnValue) == 0x000008, "Member 'STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter::CallFunc_GetOuterObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter, K2Node_DynamicCast_AsBase_Character) == 0x000010, "Member 'STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter::K2Node_DynamicCast_AsBase_Character' has a wrong offset!");
-static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(STT_ReleaseHeldAbilities_C_ReceiveLatentTick) == 0x000004, "Wrong alignment on STT_ReleaseHeldAbilities_C_ReceiveLatentTick");
+static_assert(sizeof(STT_ReleaseHeldAbilities_C_ReceiveLatentTick) == 0x000004, "Wrong size on STT_ReleaseHeldAbilities_C_ReceiveLatentTick");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReceiveLatentTick, DeltaTime) == 0x000000, "Member 'STT_ReleaseHeldAbilities_C_ReceiveLatentTick::DeltaTime' has a wrong offset!");
+
+// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReceiveLatentEnterState
+// 0x002E (0x002E - 0x0000)
+struct STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState final
+{
+public:
+	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+};
+static_assert(alignof(STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState");
+static_assert(sizeof(STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
+
+// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ExecuteUbergraph_STT_ReleaseHeldAbilities
+// 0x0070 (0x0070 - 0x0000)
+struct STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStateTreeTransitionResult             K2Node_Event_Transition;                           // 0x0004(0x002E)(ConstParm, NoDestructor)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaTime;                            // 0x0034(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ReleaseHeldAbilities_Succeeded;           // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B[0x5];                                       // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_GetOuterObject_ReturnValue;               // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character;               // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLockedInAnimation_ReturnValue;          // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ReleaseHeldAbilities_Succeeded_1;         // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities) == 0x000008, "Wrong alignment on STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities");
+static_assert(sizeof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities) == 0x000070, "Wrong size on STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, EntryPoint) == 0x000000, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::EntryPoint' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_Event_Transition) == 0x000004, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_Event_Transition' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000032, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_Event_DeltaTime) == 0x000034, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_Event_DeltaTime' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_Not_PreBool_ReturnValue) == 0x000038, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_BooleanOR_ReturnValue) == 0x000039, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_ReleaseHeldAbilities_Succeeded) == 0x00003A, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_ReleaseHeldAbilities_Succeeded' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_GetOuterObject_ReturnValue) == 0x000040, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_GetOuterObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_DynamicCast_AsBase_Character) == 0x000048, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_DynamicCast_AsBase_Character' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_BooleanAND_ReturnValue) == 0x000051, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_IsLockedInAnimation_ReturnValue) == 0x000052, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_IsLockedInAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_Not_PreBool_ReturnValue_1) == 0x000053, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_ReleaseHeldAbilities_Succeeded_1) == 0x000054, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_ReleaseHeldAbilities_Succeeded_1' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_BooleanAND_ReturnValue_1) == 0x000055, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000058, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000060, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x000068, "Member 'STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
 
 }
 

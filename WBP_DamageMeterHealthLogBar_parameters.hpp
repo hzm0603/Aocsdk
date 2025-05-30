@@ -17,19 +17,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_DamageMeterHealthLogBar.WBP_DamageMeterHealthLogBar_C.ExecuteUbergraph_WBP_DamageMeterHealthLogBar
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar) == 0x000004, "Wrong alignment on WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar");
-static_assert(sizeof(WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar) == 0x000008, "Wrong size on WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar");
-static_assert(offsetof(WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar, EntryPoint) == 0x000000, "Member 'WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000004, "Member 'WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-
 // Function WBP_DamageMeterHealthLogBar.WBP_DamageMeterHealthLogBar_C.OnMouseButtonDown
 // 0x0168 (0x0168 - 0x0000)
 struct WBP_DamageMeterHealthLogBar_C_OnMouseButtonDown final
@@ -44,6 +31,19 @@ static_assert(sizeof(WBP_DamageMeterHealthLogBar_C_OnMouseButtonDown) == 0x00016
 static_assert(offsetof(WBP_DamageMeterHealthLogBar_C_OnMouseButtonDown, MyGeometry) == 0x000000, "Member 'WBP_DamageMeterHealthLogBar_C_OnMouseButtonDown::MyGeometry' has a wrong offset!");
 static_assert(offsetof(WBP_DamageMeterHealthLogBar_C_OnMouseButtonDown, MouseEvent) == 0x000038, "Member 'WBP_DamageMeterHealthLogBar_C_OnMouseButtonDown::MouseEvent' has a wrong offset!");
 static_assert(offsetof(WBP_DamageMeterHealthLogBar_C_OnMouseButtonDown, ReturnValue) == 0x0000B0, "Member 'WBP_DamageMeterHealthLogBar_C_OnMouseButtonDown::ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeterHealthLogBar.WBP_DamageMeterHealthLogBar_C.ExecuteUbergraph_WBP_DamageMeterHealthLogBar
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar) == 0x000004, "Wrong alignment on WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar");
+static_assert(sizeof(WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar) == 0x000008, "Wrong size on WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar");
+static_assert(offsetof(WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar, EntryPoint) == 0x000000, "Member 'WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000004, "Member 'WBP_DamageMeterHealthLogBar_C_ExecuteUbergraph_WBP_DamageMeterHealthLogBar::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

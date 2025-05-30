@@ -19,14 +19,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Ranger_TripTrap_Projectile_Bp.Ranger_TripTrap_Projectile_Bp_C
-// 0x0030 (0x05C0 - 0x0590)
+// 0x0030 (0x05C8 - 0x0598)
 class ARanger_TripTrap_Projectile_Bp_C final : public AAoCAbilityProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USphereComponent*                       GroundCollider;                                    // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Saved_Relative_Rotation;                           // 0x05A0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Gate;                                              // 0x05B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USphereComponent*                       GroundCollider;                                    // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Saved_Relative_Rotation;                           // 0x05A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Gate;                                              // 0x05C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Ranger_TripTrap_Projectile_Bp(int32 EntryPoint);
@@ -46,11 +46,11 @@ public:
 	}
 };
 static_assert(alignof(ARanger_TripTrap_Projectile_Bp_C) == 0x000008, "Wrong alignment on ARanger_TripTrap_Projectile_Bp_C");
-static_assert(sizeof(ARanger_TripTrap_Projectile_Bp_C) == 0x0005C0, "Wrong size on ARanger_TripTrap_Projectile_Bp_C");
-static_assert(offsetof(ARanger_TripTrap_Projectile_Bp_C, UberGraphFrame) == 0x000590, "Member 'ARanger_TripTrap_Projectile_Bp_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ARanger_TripTrap_Projectile_Bp_C, GroundCollider) == 0x000598, "Member 'ARanger_TripTrap_Projectile_Bp_C::GroundCollider' has a wrong offset!");
-static_assert(offsetof(ARanger_TripTrap_Projectile_Bp_C, Saved_Relative_Rotation) == 0x0005A0, "Member 'ARanger_TripTrap_Projectile_Bp_C::Saved_Relative_Rotation' has a wrong offset!");
-static_assert(offsetof(ARanger_TripTrap_Projectile_Bp_C, Gate) == 0x0005B8, "Member 'ARanger_TripTrap_Projectile_Bp_C::Gate' has a wrong offset!");
+static_assert(sizeof(ARanger_TripTrap_Projectile_Bp_C) == 0x0005C8, "Wrong size on ARanger_TripTrap_Projectile_Bp_C");
+static_assert(offsetof(ARanger_TripTrap_Projectile_Bp_C, UberGraphFrame) == 0x000598, "Member 'ARanger_TripTrap_Projectile_Bp_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ARanger_TripTrap_Projectile_Bp_C, GroundCollider) == 0x0005A0, "Member 'ARanger_TripTrap_Projectile_Bp_C::GroundCollider' has a wrong offset!");
+static_assert(offsetof(ARanger_TripTrap_Projectile_Bp_C, Saved_Relative_Rotation) == 0x0005A8, "Member 'ARanger_TripTrap_Projectile_Bp_C::Saved_Relative_Rotation' has a wrong offset!");
+static_assert(offsetof(ARanger_TripTrap_Projectile_Bp_C, Gate) == 0x0005C0, "Member 'ARanger_TripTrap_Projectile_Bp_C::Gate' has a wrong offset!");
 
 }
 

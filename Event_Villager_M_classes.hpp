@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Event_Villager_M.Event_Villager_M_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class AEvent_Villager_M_C final : public ANode_Villager_M_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AEvent_Villager_M_C) == 0x000010, "Wrong alignment on AEvent_Villager_M_C");
-static_assert(sizeof(AEvent_Villager_M_C) == 0x001DD0, "Wrong size on AEvent_Villager_M_C");
+static_assert(sizeof(AEvent_Villager_M_C) == 0x001D90, "Wrong size on AEvent_Villager_M_C");
 
 }
 

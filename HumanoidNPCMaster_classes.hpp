@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass HumanoidNPCMaster.HumanoidNPCMaster_C
-// 0x0020 (0x1DB0 - 0x1D90)
+// 0x0020 (0x1D70 - 0x1D50)
 #pragma pack(push, 0x1)
 class alignas(0x10) AHumanoidNPCMaster_C : public ANPCPawn_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_HumanoidNPCMaster_C;                // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class FString                                 Name_0;                                            // 0x1D98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_HumanoidNPCMaster_C;                // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class FString                                 Name_0;                                            // 0x1D58(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_HumanoidNPCMaster(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_HumanoidNPCMaster(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -42,9 +42,9 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AHumanoidNPCMaster_C) == 0x000010, "Wrong alignment on AHumanoidNPCMaster_C");
-static_assert(sizeof(AHumanoidNPCMaster_C) == 0x001DB0, "Wrong size on AHumanoidNPCMaster_C");
-static_assert(offsetof(AHumanoidNPCMaster_C, UberGraphFrame_HumanoidNPCMaster_C) == 0x001D90, "Member 'AHumanoidNPCMaster_C::UberGraphFrame_HumanoidNPCMaster_C' has a wrong offset!");
-static_assert(offsetof(AHumanoidNPCMaster_C, Name_0) == 0x001D98, "Member 'AHumanoidNPCMaster_C::Name_0' has a wrong offset!");
+static_assert(sizeof(AHumanoidNPCMaster_C) == 0x001D70, "Wrong size on AHumanoidNPCMaster_C");
+static_assert(offsetof(AHumanoidNPCMaster_C, UberGraphFrame_HumanoidNPCMaster_C) == 0x001D50, "Member 'AHumanoidNPCMaster_C::UberGraphFrame_HumanoidNPCMaster_C' has a wrong offset!");
+static_assert(offsetof(AHumanoidNPCMaster_C, Name_0) == 0x001D58, "Member 'AHumanoidNPCMaster_C::Name_0' has a wrong offset!");
 
 }
 

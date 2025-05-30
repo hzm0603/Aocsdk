@@ -1090,7 +1090,7 @@ public:
 	bool                                          bNativeTests;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseBlueprintDeterminismTest;                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UPCGDeterminismTestBlueprintBase> DeterminismTestBlueprint;                          // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UPCGDeterminismTestBlueprintBase> DeterminismTestBlueprint;                    // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPCGDeterminismSettings) == 0x000008, "Wrong alignment on FPCGDeterminismSettings");
 static_assert(sizeof(FPCGDeterminismSettings) == 0x000010, "Wrong size on FPCGDeterminismSettings");

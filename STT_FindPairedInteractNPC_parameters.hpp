@@ -17,21 +17,16 @@
 namespace SDK::Params
 {
 
-// Function STT_FindPairedInteractNPC.STT_FindPairedInteractNPC_C.ExecuteUbergraph_STT_FindPairedInteractNPC
-// 0x0034 (0x0034 - 0x0000)
-struct STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC final
+// Function STT_FindPairedInteractNPC.STT_FindPairedInteractNPC_C.ReceiveLatentEnterState
+// 0x002E (0x002E - 0x0000)
+struct STT_FindPairedInteractNPC_C_ReceiveLatentEnterState final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x1];                                        // 0x0005(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStateTreeTransitionResult             K2Node_Event_Transition;                           // 0x0006(0x002E)(ConstParm, NoDestructor)
+	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 };
-static_assert(alignof(STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC) == 0x000004, "Wrong alignment on STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC");
-static_assert(sizeof(STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC) == 0x000034, "Wrong size on STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC");
-static_assert(offsetof(STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC, EntryPoint) == 0x000000, "Member 'STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC::EntryPoint' has a wrong offset!");
-static_assert(offsetof(STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC, K2Node_Event_Transition) == 0x000006, "Member 'STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC::K2Node_Event_Transition' has a wrong offset!");
+static_assert(alignof(STT_FindPairedInteractNPC_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_FindPairedInteractNPC_C_ReceiveLatentEnterState");
+static_assert(sizeof(STT_FindPairedInteractNPC_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_FindPairedInteractNPC_C_ReceiveLatentEnterState");
+static_assert(offsetof(STT_FindPairedInteractNPC_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_FindPairedInteractNPC_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
 
 // Function STT_FindPairedInteractNPC.STT_FindPairedInteractNPC_C.FindInteractableCharacterWithTag
 // 0x00D8 (0x00D8 - 0x0000)
@@ -124,16 +119,21 @@ static_assert(offsetof(STT_FindPairedInteractNPC_C_FindInteractableCharacterWith
 static_assert(offsetof(STT_FindPairedInteractNPC_C_FindInteractableCharacterWithTag, K2Node_VariableSet_ClosestDistance_ImplicitCast) == 0x0000C8, "Member 'STT_FindPairedInteractNPC_C_FindInteractableCharacterWithTag::K2Node_VariableSet_ClosestDistance_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(STT_FindPairedInteractNPC_C_FindInteractableCharacterWithTag, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x0000D0, "Member 'STT_FindPairedInteractNPC_C_FindInteractableCharacterWithTag::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
-// Function STT_FindPairedInteractNPC.STT_FindPairedInteractNPC_C.ReceiveLatentEnterState
-// 0x002E (0x002E - 0x0000)
-struct STT_FindPairedInteractNPC_C_ReceiveLatentEnterState final
+// Function STT_FindPairedInteractNPC.STT_FindPairedInteractNPC_C.ExecuteUbergraph_STT_FindPairedInteractNPC
+// 0x0034 (0x0034 - 0x0000)
+struct STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC final
 {
 public:
-	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x1];                                        // 0x0005(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStateTreeTransitionResult             K2Node_Event_Transition;                           // 0x0006(0x002E)(ConstParm, NoDestructor)
 };
-static_assert(alignof(STT_FindPairedInteractNPC_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_FindPairedInteractNPC_C_ReceiveLatentEnterState");
-static_assert(sizeof(STT_FindPairedInteractNPC_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_FindPairedInteractNPC_C_ReceiveLatentEnterState");
-static_assert(offsetof(STT_FindPairedInteractNPC_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_FindPairedInteractNPC_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
+static_assert(alignof(STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC) == 0x000004, "Wrong alignment on STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC");
+static_assert(sizeof(STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC) == 0x000034, "Wrong size on STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC");
+static_assert(offsetof(STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC, EntryPoint) == 0x000000, "Member 'STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC::EntryPoint' has a wrong offset!");
+static_assert(offsetof(STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC, K2Node_Event_Transition) == 0x000006, "Member 'STT_FindPairedInteractNPC_C_ExecuteUbergraph_STT_FindPairedInteractNPC::K2Node_Event_Transition' has a wrong offset!");
 
 }
 

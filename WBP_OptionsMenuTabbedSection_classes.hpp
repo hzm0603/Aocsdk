@@ -17,12 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_OptionsMenuTabbedSection.WBP_OptionsMenuTabbedSection_C
-// 0x0048 (0x0400 - 0x03B8)
+// 0x0040 (0x0400 - 0x03C0)
 class UWBP_OptionsMenuTabbedSection_C final : public UMultiTabWrapBox
 {
 public:
-	class UIntrepidVerticalBox*                   ScrollingContent;                                  // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollWindow;                                      // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIntrepidVerticalBox*                   ScrollingContent;                                  // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_CommonDropDownRow_C*               WBP_CommonDropDownRow;                             // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_CommonDropDownRow_C*               WBP_CommonDropDownRow_1;                           // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_CommonDropDownRow_C*               WBP_CommonDropDownRow_2;                           // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -43,8 +42,7 @@ public:
 };
 static_assert(alignof(UWBP_OptionsMenuTabbedSection_C) == 0x000008, "Wrong alignment on UWBP_OptionsMenuTabbedSection_C");
 static_assert(sizeof(UWBP_OptionsMenuTabbedSection_C) == 0x000400, "Wrong size on UWBP_OptionsMenuTabbedSection_C");
-static_assert(offsetof(UWBP_OptionsMenuTabbedSection_C, ScrollingContent) == 0x0003B8, "Member 'UWBP_OptionsMenuTabbedSection_C::ScrollingContent' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionsMenuTabbedSection_C, ScrollWindow) == 0x0003C0, "Member 'UWBP_OptionsMenuTabbedSection_C::ScrollWindow' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionsMenuTabbedSection_C, ScrollingContent) == 0x0003C0, "Member 'UWBP_OptionsMenuTabbedSection_C::ScrollingContent' has a wrong offset!");
 static_assert(offsetof(UWBP_OptionsMenuTabbedSection_C, WBP_CommonDropDownRow) == 0x0003C8, "Member 'UWBP_OptionsMenuTabbedSection_C::WBP_CommonDropDownRow' has a wrong offset!");
 static_assert(offsetof(UWBP_OptionsMenuTabbedSection_C, WBP_CommonDropDownRow_1) == 0x0003D0, "Member 'UWBP_OptionsMenuTabbedSection_C::WBP_CommonDropDownRow_1' has a wrong offset!");
 static_assert(offsetof(UWBP_OptionsMenuTabbedSection_C, WBP_CommonDropDownRow_2) == 0x0003D8, "Member 'UWBP_OptionsMenuTabbedSection_C::WBP_CommonDropDownRow_2' has a wrong offset!");

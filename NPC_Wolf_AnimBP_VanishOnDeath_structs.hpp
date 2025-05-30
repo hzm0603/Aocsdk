@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // ScriptStruct NPC_Wolf_AnimBP_VanishOnDeath.NPC_Wolf_AnimBP_VanishOnDeath_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x01D0 - 0x01D0)
+// 0x0000 (0x01F0 - 0x01F0)
 struct NPC_Wolf_AnimBP_VanishOnDeath::FAnimBlueprintGeneratedConstantData final : public NPC_Wolf_AnimBP::FAnimBlueprintGeneratedConstantData
 {
 };
 static_assert(alignof(NPC_Wolf_AnimBP_VanishOnDeath::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on NPC_Wolf_AnimBP_VanishOnDeath::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(NPC_Wolf_AnimBP_VanishOnDeath::FAnimBlueprintGeneratedConstantData) == 0x0001D0, "Wrong size on NPC_Wolf_AnimBP_VanishOnDeath::FAnimBlueprintGeneratedConstantData");
+static_assert(sizeof(NPC_Wolf_AnimBP_VanishOnDeath::FAnimBlueprintGeneratedConstantData) == 0x0001F0, "Wrong size on NPC_Wolf_AnimBP_VanishOnDeath::FAnimBlueprintGeneratedConstantData");
 
 }
 

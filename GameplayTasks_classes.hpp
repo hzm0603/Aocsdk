@@ -51,7 +51,7 @@ static_assert(offsetof(UGameplayTask, ResourceOverlapPolicy) == 0x00005A, "Membe
 static_assert(offsetof(UGameplayTask, ChildTask) == 0x000080, "Member 'UGameplayTask::ChildTask' has a wrong offset!");
 
 // Class GameplayTasks.GameplayTaskOwnerInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IGameplayTaskOwnerInterface final : public IInterface
 {
 public:
@@ -64,8 +64,8 @@ public:
 		return GetDefaultObjImpl<IGameplayTaskOwnerInterface>();
 	}
 };
-static_assert(alignof(IGameplayTaskOwnerInterface) == 0x000008, "Wrong alignment on IGameplayTaskOwnerInterface");
-static_assert(sizeof(IGameplayTaskOwnerInterface) == 0x000048, "Wrong size on IGameplayTaskOwnerInterface");
+static_assert(alignof(IGameplayTaskOwnerInterface) == 0x000001, "Wrong alignment on IGameplayTaskOwnerInterface");
+static_assert(sizeof(IGameplayTaskOwnerInterface) == 0x000001, "Wrong size on IGameplayTaskOwnerInterface");
 
 // Class GameplayTasks.GameplayTaskResource
 // 0x0010 (0x0058 - 0x0048)
@@ -103,7 +103,7 @@ public:
 	uint8                                         Pad_120[0x10];                                     // 0x0120(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UGameplayTask*>                  TickingTasks;                                      // 0x0130(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TArray<class UGameplayTask*>                  KnownTasks;                                        // 0x0140(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(const struct FGameplayResourceSet& NewlyClaimed, const struct FGameplayResourceSet& FreshlyReleased)> OnClaimedResourcesChange;                          // 0x0150(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FGameplayResourceSet& NewlyClaimed, const struct FGameplayResourceSet& FreshlyReleased)> OnClaimedResourcesChange; // 0x0150(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	TArray<class UGameplayTask*>                  SimulatedTasks;                                    // 0x0160(0x0010)(Net, ZeroConstructor, RepNotify, UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:
@@ -155,8 +155,8 @@ static_assert(sizeof(UGameplayTask_ClaimResource) == 0x000088, "Wrong size on UG
 class UGameplayTask_SpawnActor final : public UGameplayTask
 {
 public:
-	TMulticastInlineDelegate<void(class AActor* SpawnedActor)> Success;                                           // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AActor* SpawnedActor)> DidNotSpawn;                                       // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AActor* SpawnedActor)> Success;                              // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AActor* SpawnedActor)> DidNotSpawn;                          // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A8[0x30];                                      // 0x00A8(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class AActor>                     ClassToSpawn;                                      // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 

@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_ActiveBuyOrders.WBP_ActiveBuyOrders_C.ExecuteUbergraph_WBP_ActiveBuyOrders
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ActiveBuyOrders_C::ExecuteUbergraph_WBP_ActiveBuyOrders(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ActiveBuyOrders_C", "ExecuteUbergraph_WBP_ActiveBuyOrders");
-
-	Params::WBP_ActiveBuyOrders_C_ExecuteUbergraph_WBP_ActiveBuyOrders Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ActiveBuyOrders.WBP_ActiveBuyOrders_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_ActiveBuyOrders_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_ActiveBuyOrders_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ActiveBuyOrders.WBP_ActiveBuyOrders_C.ExecuteUbergraph_WBP_ActiveBuyOrders
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ActiveBuyOrders_C::ExecuteUbergraph_WBP_ActiveBuyOrders(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ActiveBuyOrders_C", "ExecuteUbergraph_WBP_ActiveBuyOrders");
+
+	Params::WBP_ActiveBuyOrders_C_ExecuteUbergraph_WBP_ActiveBuyOrders Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

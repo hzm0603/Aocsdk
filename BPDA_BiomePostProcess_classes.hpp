@@ -23,7 +23,7 @@ namespace SDK
 class UBPDA_BiomePostProcess_C final : public UPrimaryDataAsset
 {
 public:
-	TMap<EBiomeType, struct FSTRUCT_PostProcessDefaultSettings> Color_Grade_Defualts;                              // 0x0050(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<EBiomeType, struct FSTRUCT_PostProcessDefaultSettings> Color_Grade_Defualts;                // 0x0050(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	static class UClass* StaticClass()

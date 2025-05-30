@@ -10,61 +10,147 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ENUM_SunPosition_structs.hpp"
+#include "Engine_structs.hpp"
+#include "STRUCT_LightTypeDefaults_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.Add Mesh
-// 0x0048 (0x0048 - 0x0000)
+// 0x0590 (0x0590 - 0x0000)
 struct BP_MasterLightActor_C_Add_Mesh final
 {
 public:
-	bool                                          NewLocalVar_1;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   NewLocalVar_0;                                     // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue_1;              // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_1;               // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             MainAttachTRANS;                                   // 0x0000(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             SupportAttachTRANS;                                // 0x0060(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasSupportMesh;                                    // 0x00C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NewLocalVar_1;                                     // 0x00C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMeshComponent*                   NewLocalVar_0;                                     // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x00E0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15A[0x6];                                      // 0x015A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0160(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_1;              // 0x0230(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_GetAllSocketNames_ReturnValue;            // 0x0290(0x0010)(ReferenceParm)
+	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x02A0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x0308(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x03F0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0450(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0460(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_461[0x3];                                      // 0x0461(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0464(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0468(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_469[0x7];                                      // 0x0469(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           CallFunc_GetAllSocketNames_ReturnValue_1;          // 0x0470(0x0010)(ReferenceParm)
+	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x0480(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue_1;         // 0x0490(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x04F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x04F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue_1;                   // 0x0508(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0509(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x050A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue_1;              // 0x050B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_1;       // 0x050C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_50D[0x3];                                      // 0x050D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_2;              // 0x0510(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0570(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_571[0x7];                                      // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_2;                         // 0x0578(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0580(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0584(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0585(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_586[0x2];                                      // 0x0586(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_1;               // 0x0588(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MasterLightActor_C_Add_Mesh) == 0x000008, "Wrong alignment on BP_MasterLightActor_C_Add_Mesh");
-static_assert(sizeof(BP_MasterLightActor_C_Add_Mesh) == 0x000048, "Wrong size on BP_MasterLightActor_C_Add_Mesh");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, NewLocalVar_1) == 0x000000, "Member 'BP_MasterLightActor_C_Add_Mesh::NewLocalVar_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, NewLocalVar_0) == 0x000008, "Member 'BP_MasterLightActor_C_Add_Mesh::NewLocalVar_0' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_MasterLightActor_C_Add_Mesh::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'BP_MasterLightActor_C_Add_Mesh::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_SetStaticMesh_ReturnValue) == 0x000019, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Add_IntInt_ReturnValue) == 0x00001C, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_IsValid_ReturnValue_1) == 0x000020, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_IsValid_ReturnValue_2) == 0x000021, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_SetStaticMesh_ReturnValue_1) == 0x000022, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_SetStaticMesh_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Less_IntInt_ReturnValue) == 0x000034, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_IsValid_ReturnValue_3) == 0x000035, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_AddComponent_ReturnValue) == 0x000038, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_AddComponent_ReturnValue_1) == 0x000040, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_AddComponent_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(BP_MasterLightActor_C_Add_Mesh) == 0x000010, "Wrong alignment on BP_MasterLightActor_C_Add_Mesh");
+static_assert(sizeof(BP_MasterLightActor_C_Add_Mesh) == 0x000590, "Wrong size on BP_MasterLightActor_C_Add_Mesh");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, MainAttachTRANS) == 0x000000, "Member 'BP_MasterLightActor_C_Add_Mesh::MainAttachTRANS' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, SupportAttachTRANS) == 0x000060, "Member 'BP_MasterLightActor_C_Add_Mesh::SupportAttachTRANS' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, HasSupportMesh) == 0x0000C0, "Member 'BP_MasterLightActor_C_Add_Mesh::HasSupportMesh' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, NewLocalVar_1) == 0x0000C1, "Member 'BP_MasterLightActor_C_Add_Mesh::NewLocalVar_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, NewLocalVar_0) == 0x0000C8, "Member 'BP_MasterLightActor_C_Add_Mesh::NewLocalVar_0' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, Temp_int_Array_Index_Variable) == 0x0000D0, "Member 'BP_MasterLightActor_C_Add_Mesh::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, Temp_int_Loop_Counter_Variable) == 0x0000D4, "Member 'BP_MasterLightActor_C_Add_Mesh::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Add_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_MakeTransform_ReturnValue) == 0x0000E0, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, Temp_int_Array_Index_Variable_1) == 0x000140, "Member 'BP_MasterLightActor_C_Add_Mesh::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, Temp_int_Loop_Counter_Variable_1) == 0x000144, "Member 'BP_MasterLightActor_C_Add_Mesh::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Add_IntInt_ReturnValue_1) == 0x000148, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, Temp_int_Array_Index_Variable_2) == 0x00014C, "Member 'BP_MasterLightActor_C_Add_Mesh::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, Temp_int_Loop_Counter_Variable_2) == 0x000150, "Member 'BP_MasterLightActor_C_Add_Mesh::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Add_IntInt_ReturnValue_2) == 0x000154, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_IsValid_ReturnValue) == 0x000158, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_SetStaticMesh_ReturnValue) == 0x000159, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_AddComponent_ReturnValue) == 0x000160, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000168, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_BreakTransform_Location) == 0x000170, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_BreakTransform_Rotation) == 0x000188, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_BreakTransform_Scale) == 0x0001A0, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_BreakTransform_Location_1) == 0x0001B8, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_BreakTransform_Location_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_BreakTransform_Rotation_1) == 0x0001D0, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_BreakTransform_Scale_1) == 0x0001E8, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_ComposeRotators_ReturnValue) == 0x000200, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000218, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_MakeTransform_ReturnValue_1) == 0x000230, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_MakeTransform_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_GetAllSocketNames_ReturnValue) == 0x000290, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_GetAllSocketNames_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_ComposeTransforms_ReturnValue) == 0x0002A0, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_ComposeTransforms_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Array_Get_Item) == 0x000300, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x000308, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_GetSocketTransform_ReturnValue) == 0x0003F0, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Conv_NameToString_ReturnValue) == 0x000450, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Contains_ReturnValue) == 0x000460, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Array_Length_ReturnValue) == 0x000464, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Less_IntInt_ReturnValue) == 0x000468, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_GetAllSocketNames_ReturnValue_1) == 0x000470, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_GetAllSocketNames_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Array_Get_Item_1) == 0x000480, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Array_Length_ReturnValue_1) == 0x000488, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_GetSocketTransform_ReturnValue_1) == 0x000490, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_GetSocketTransform_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Less_IntInt_ReturnValue_1) == 0x0004F0, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Conv_NameToString_ReturnValue_1) == 0x0004F8, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Contains_ReturnValue_1) == 0x000508, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Contains_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_IsValid_ReturnValue_1) == 0x000509, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_IsValid_ReturnValue_2) == 0x00050A, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_SetStaticMesh_ReturnValue_1) == 0x00050B, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_SetStaticMesh_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_K2_AttachToComponent_ReturnValue_1) == 0x00050C, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_K2_AttachToComponent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_MakeTransform_ReturnValue_2) == 0x000510, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_MakeTransform_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_IsValid_ReturnValue_3) == 0x000570, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Array_Get_Item_2) == 0x000578, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Array_Length_ReturnValue_2) == 0x000580, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_Less_IntInt_ReturnValue_2) == 0x000584, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_IsValid_ReturnValue_4) == 0x000585, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Mesh, CallFunc_AddComponent_ReturnValue_1) == 0x000588, "Member 'BP_MasterLightActor_C_Add_Mesh::CallFunc_AddComponent_ReturnValue_1' has a wrong offset!");
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.Add Plane Emissive
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x0210 (0x0210 - 0x0000)
 struct BP_MasterLightActor_C_Add_Plane_Emissive final
 {
 public:
@@ -72,434 +158,905 @@ public:
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue_1;              // 0x0060(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBoxComponent*                          CallFunc_AddComponent_ReturnValue;                 // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UArrowComponent*                        CallFunc_AddComponent_ReturnValue_1;               // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_1;       // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D3[0x5];                                       // 0x00D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_2;               // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_ColorTempToRGB_Return_Color;              // 0x00D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_LinearColorLinearColor_ReturnValue; // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0xF];                                       // 0x00E1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_Array_Get_Item;                           // 0x00F0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_1;       // 0x0152(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_153[0x1];                                      // 0x0153(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakColor_R;                             // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_G;                             // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_B;                             // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_A;                             // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2;  // 0x0172(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0173(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_175[0xB];                                      // 0x0175(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x0180(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_2;               // 0x01E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_ColorTempToRGB_Temp_ImplicitCast;         // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast; // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_1; // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_2; // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MasterLightActor_C_Add_Plane_Emissive) == 0x000010, "Wrong alignment on BP_MasterLightActor_C_Add_Plane_Emissive");
-static_assert(sizeof(BP_MasterLightActor_C_Add_Plane_Emissive) == 0x0000F0, "Wrong size on BP_MasterLightActor_C_Add_Plane_Emissive");
+static_assert(sizeof(BP_MasterLightActor_C_Add_Plane_Emissive) == 0x000210, "Wrong size on BP_MasterLightActor_C_Add_Plane_Emissive");
 static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_MakeTransform_ReturnValue) == 0x000000, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_MakeTransform_ReturnValue_1) == 0x000060, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_MakeTransform_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_AddComponent_ReturnValue) == 0x0000C0, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_AddComponent_ReturnValue_1) == 0x0000C8, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_AddComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_IsWithEditor_ReturnValue) == 0x0000D0, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_K2_AttachToComponent_ReturnValue) == 0x0000D1, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_K2_AttachToComponent_ReturnValue_1) == 0x0000D2, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_K2_AttachToComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0000D8, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_AddComponent_ReturnValue_2) == 0x0000E0, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_AddComponent_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_ColorTempToRGB_Return_Color) == 0x0000D0, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_ColorTempToRGB_Return_Color' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_EqualEqual_LinearColorLinearColor_ReturnValue) == 0x0000E0, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_EqualEqual_LinearColorLinearColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_Array_Get_Item) == 0x0000F0, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_IsWithEditor_ReturnValue) == 0x000150, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000151, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_K2_AttachToComponent_ReturnValue_1) == 0x000152, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_K2_AttachToComponent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_BreakColor_R) == 0x000154, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_BreakColor_R' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_BreakColor_G) == 0x000158, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_BreakColor_G' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_BreakColor_B) == 0x00015C, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_BreakColor_B' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_BreakColor_A) == 0x000160, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_BreakColor_A' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000168, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000170, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1) == 0x000171, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2) == 0x000172, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_BooleanOR_ReturnValue) == 0x000173, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_BooleanOR_ReturnValue_1) == 0x000174, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_ComposeTransforms_ReturnValue) == 0x000180, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_ComposeTransforms_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_AddComponent_ReturnValue_2) == 0x0001E0, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_AddComponent_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_ColorTempToRGB_Temp_ImplicitCast) == 0x0001E8, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_ColorTempToRGB_Temp_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0001F0, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast) == 0x0001F8, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_1) == 0x000200, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Plane_Emissive, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_2) == 0x000208, "Member 'BP_MasterLightActor_C_Add_Plane_Emissive::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.Add Point
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x03B0 (0x03B0 - 0x0000)
 struct BP_MasterLightActor_C_Add_Point final
 {
 public:
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x00C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x0138(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0170(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0180(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Temp_object_Variable;                              // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     Temp_object_Variable_1;                            // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     K2Node_Select_Default;                             // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_1; // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_2; // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_3; // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_AdjustLightTransForWidgetOffset_ReturnValue; // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_94[0xC];                                       // 0x0094(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_Array_Get_Item;                           // 0x00A0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0100(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0110(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B8[0x8];                                      // 0x01B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x01C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x0238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x0250(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0270(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_282[0x6];                                      // 0x0282(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_AddLocalTransform_SweepHitResult;      // 0x0288(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class UMaterialInterface*                     Temp_object_Variable;                              // 0x0370(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     Temp_object_Variable_1;                            // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     K2Node_Select_Default;                             // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0390(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_1; // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_2; // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_3; // 0x03A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MasterLightActor_C_Add_Point) == 0x000010, "Wrong alignment on BP_MasterLightActor_C_Add_Point");
-static_assert(sizeof(BP_MasterLightActor_C_Add_Point) == 0x0001D0, "Wrong size on BP_MasterLightActor_C_Add_Point");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000000, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000008, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_GetTransform_ReturnValue) == 0x000010, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Location) == 0x000070, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Rotation) == 0x000088, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Scale) == 0x0000A0, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_ComposeTransforms_ReturnValue) == 0x0000C0, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_ComposeTransforms_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Location_1) == 0x000120, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Rotation_1) == 0x000138, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Scale_1) == 0x000150, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Vector_Distance_ReturnValue) == 0x000168, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000170, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_AddComponent_ReturnValue) == 0x000180, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_IsValid_ReturnValue) == 0x000188, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, Temp_object_Variable) == 0x000190, "Member 'BP_MasterLightActor_C_Add_Point::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, Temp_object_Variable_1) == 0x000198, "Member 'BP_MasterLightActor_C_Add_Point::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, Temp_bool_Variable) == 0x0001A0, "Member 'BP_MasterLightActor_C_Add_Point::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, K2Node_Select_Default) == 0x0001A8, "Member 'BP_MasterLightActor_C_Add_Point::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x0001B0, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0001B8, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_SetScalarParameterValue_Value_ImplicitCast_1) == 0x0001BC, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_SetScalarParameterValue_Value_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_SetScalarParameterValue_Value_ImplicitCast_2) == 0x0001C0, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_SetScalarParameterValue_Value_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_SetScalarParameterValue_Value_ImplicitCast_3) == 0x0001C4, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_SetScalarParameterValue_Value_ImplicitCast_3' has a wrong offset!");
+static_assert(sizeof(BP_MasterLightActor_C_Add_Point) == 0x0003B0, "Wrong size on BP_MasterLightActor_C_Add_Point");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Array_Add_ReturnValue) == 0x000000, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_AdjustLightTransForWidgetOffset_ReturnValue) == 0x000010, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_AdjustLightTransForWidgetOffset_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000078, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000080, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, Temp_int_Loop_Counter_Variable) == 0x000084, "Member 'BP_MasterLightActor_C_Add_Point::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Less_IntInt_ReturnValue) == 0x000088, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Add_IntInt_ReturnValue) == 0x00008C, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, Temp_int_Array_Index_Variable) == 0x000090, "Member 'BP_MasterLightActor_C_Add_Point::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Array_Get_Item) == 0x0000A0, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_AddComponent_ReturnValue) == 0x000100, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_GetTransform_ReturnValue) == 0x000110, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Location) == 0x000170, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Rotation) == 0x000188, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Scale) == 0x0001A0, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_ComposeTransforms_ReturnValue) == 0x0001C0, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_ComposeTransforms_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Location_1) == 0x000220, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Location_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Rotation_1) == 0x000238, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_BreakTransform_Scale_1) == 0x000250, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Vector_Distance_ReturnValue) == 0x000268, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000270, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_IsValid_ReturnValue) == 0x000280, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000281, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_K2_AddLocalTransform_SweepHitResult) == 0x000288, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_K2_AddLocalTransform_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, Temp_object_Variable) == 0x000370, "Member 'BP_MasterLightActor_C_Add_Point::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, Temp_object_Variable_1) == 0x000378, "Member 'BP_MasterLightActor_C_Add_Point::Temp_object_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, Temp_bool_Variable) == 0x000380, "Member 'BP_MasterLightActor_C_Add_Point::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, K2Node_Select_Default) == 0x000388, "Member 'BP_MasterLightActor_C_Add_Point::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000390, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000398, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_SetScalarParameterValue_Value_ImplicitCast_1) == 0x00039C, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_SetScalarParameterValue_Value_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_SetScalarParameterValue_Value_ImplicitCast_2) == 0x0003A0, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_SetScalarParameterValue_Value_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Point, CallFunc_SetScalarParameterValue_Value_ImplicitCast_3) == 0x0003A4, "Member 'BP_MasterLightActor_C_Add_Point::CallFunc_SetScalarParameterValue_Value_ImplicitCast_3' has a wrong offset!");
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.Add Sperical Emissive
-// 0x0080 (0x0080 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct BP_MasterLightActor_C_Add_Sperical_Emissive final
 {
 public:
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0000(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       CallFunc_AddComponent_ReturnValue;                 // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_1;               // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Local_Color_From_Temp;                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             Temp_struct_Variable;                              // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       CallFunc_AddComponent_ReturnValue;                 // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_ColorTempToRGB_Return_Color;              // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_ColorTempToRGB_Return_Color_1;            // 0x008C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9E[0x2];                                       // 0x009E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakColor_R;                             // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_G;                             // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_B;                             // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_A;                             // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2;  // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_Check_if_Color_Overridden_Color;          // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Check_if_Color_Overridden_Color_1;        // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_Array_Get_Item;                           // 0x00E0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_1;       // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0xF];                                      // 0x0141(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x0150(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_1;               // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_ColorTempToRGB_Temp_ImplicitCast;         // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_ColorTempToRGB_Temp_ImplicitCast_1;       // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast; // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_1; // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_2; // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MasterLightActor_C_Add_Sperical_Emissive) == 0x000010, "Wrong alignment on BP_MasterLightActor_C_Add_Sperical_Emissive");
-static_assert(sizeof(BP_MasterLightActor_C_Add_Sperical_Emissive) == 0x000080, "Wrong size on BP_MasterLightActor_C_Add_Sperical_Emissive");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_MakeTransform_ReturnValue) == 0x000000, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_AddComponent_ReturnValue) == 0x000060, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_IsWithEditor_ReturnValue) == 0x000068, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000069, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_AddComponent_ReturnValue_1) == 0x000070, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_AddComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000078, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(sizeof(BP_MasterLightActor_C_Add_Sperical_Emissive) == 0x000200, "Wrong size on BP_MasterLightActor_C_Add_Sperical_Emissive");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, Local_Color_From_Temp) == 0x000000, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::Local_Color_From_Temp' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, Temp_struct_Variable) == 0x000010, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_AddComponent_ReturnValue) == 0x000070, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_ColorTempToRGB_Return_Color) == 0x000078, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_ColorTempToRGB_Return_Color' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_IsValid_ReturnValue) == 0x000088, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_ColorTempToRGB_Return_Color_1) == 0x00008C, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_ColorTempToRGB_Return_Color_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_IsValid_ReturnValue_1) == 0x00009C, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_K2_AttachToComponent_ReturnValue) == 0x00009D, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_BreakColor_R) == 0x0000A0, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_BreakColor_R' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_BreakColor_G) == 0x0000A4, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_BreakColor_G' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_BreakColor_B) == 0x0000A8, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_BreakColor_B' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_BreakColor_A) == 0x0000AC, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_BreakColor_A' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x0000B0, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1) == 0x0000B1, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2) == 0x0000B2, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_BooleanOR_ReturnValue) == 0x0000B3, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_BooleanOR_ReturnValue_1) == 0x0000B4, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_Check_if_Color_Overridden_Color) == 0x0000B8, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_Check_if_Color_Overridden_Color' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_Check_if_Color_Overridden_Color_1) == 0x0000C8, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_Check_if_Color_Overridden_Color_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_Array_Get_Item) == 0x0000E0, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_K2_AttachToComponent_ReturnValue_1) == 0x000140, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_K2_AttachToComponent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_ComposeTransforms_ReturnValue) == 0x000150, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_ComposeTransforms_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0001B0, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_AddComponent_ReturnValue_1) == 0x0001B8, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_AddComponent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_IsWithEditor_ReturnValue) == 0x0001C0, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0001C8, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_ColorTempToRGB_Temp_ImplicitCast) == 0x0001D0, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_ColorTempToRGB_Temp_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_ColorTempToRGB_Temp_ImplicitCast_1) == 0x0001D8, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_ColorTempToRGB_Temp_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0001E0, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast) == 0x0001E8, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_1) == 0x0001F0, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Sperical_Emissive, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_2) == 0x0001F8, "Member 'BP_MasterLightActor_C_Add_Sperical_Emissive::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.Add Spot
-// 0x0020 (0x0020 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct BP_MasterLightActor_C_Add_Spot final
 {
 public:
-	class USpotLightComponent*                    CallFunc_AddComponent_ReturnValue;                 // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_AdjustLightTransForWidgetOffset_ReturnValue; // 0x0000(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_Array_Get_Item;                           // 0x0080(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    CallFunc_AddComponent_ReturnValue;                 // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_AddLocalTransform_SweepHitResult;      // 0x00F0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MasterLightActor_C_Add_Spot) == 0x000008, "Wrong alignment on BP_MasterLightActor_C_Add_Spot");
-static_assert(sizeof(BP_MasterLightActor_C_Add_Spot) == 0x000020, "Wrong size on BP_MasterLightActor_C_Add_Spot");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_AddComponent_ReturnValue) == 0x000000, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000008, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000018, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(alignof(BP_MasterLightActor_C_Add_Spot) == 0x000010, "Wrong alignment on BP_MasterLightActor_C_Add_Spot");
+static_assert(sizeof(BP_MasterLightActor_C_Add_Spot) == 0x0001E0, "Wrong size on BP_MasterLightActor_C_Add_Spot");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_AdjustLightTransForWidgetOffset_ReturnValue) == 0x000000, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_AdjustLightTransForWidgetOffset_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_Array_Length_ReturnValue) == 0x000060, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000068, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, Temp_int_Loop_Counter_Variable) == 0x000070, "Member 'BP_MasterLightActor_C_Add_Spot::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_Less_IntInt_ReturnValue) == 0x000074, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000075, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_Add_IntInt_ReturnValue) == 0x000078, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, Temp_int_Array_Index_Variable) == 0x00007C, "Member 'BP_MasterLightActor_C_Add_Spot::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_Array_Get_Item) == 0x000080, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_AddComponent_ReturnValue) == 0x0000E0, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_K2_AttachToComponent_ReturnValue) == 0x0000E8, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_K2_AddLocalTransform_SweepHitResult) == 0x0000F0, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_K2_AddLocalTransform_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_Spot, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0001D8, "Member 'BP_MasterLightActor_C_Add_Spot::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.Add VFX Components
-// 0x0030 (0x0030 - 0x0000)
+// 0x0180 (0x0180 - 0x0000)
 struct BP_MasterLightActor_C_Add_VFX_Components final
 {
 public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraComponent*                      CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraComponent*                      CallFunc_AddComponent_ReturnValue;                 // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_AdjustLightTransForWidgetOffset_ReturnValue; // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraComponent*                      CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8E[0x2];                                       // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_94[0xC];                                       // 0x0094(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_Array_Get_Item_1;                         // 0x00A0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0xF];                                      // 0x0101(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x0110(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_AddComponent_ReturnValue;                 // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_1;       // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MasterLightActor_C_Add_VFX_Components) == 0x000008, "Wrong alignment on BP_MasterLightActor_C_Add_VFX_Components");
-static_assert(sizeof(BP_MasterLightActor_C_Add_VFX_Components) == 0x000030, "Wrong size on BP_MasterLightActor_C_Add_VFX_Components");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_MasterLightActor_C_Add_VFX_Components::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_MasterLightActor_C_Add_VFX_Components::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Array_Get_Item) == 0x000010, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Less_IntInt_ReturnValue) == 0x00001C, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_AddComponent_ReturnValue) == 0x000020, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Array_Add_ReturnValue) == 0x000028, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_IsValid_ReturnValue) == 0x00002C, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_MasterLightActor_C_Add_VFX_Components) == 0x000010, "Wrong alignment on BP_MasterLightActor_C_Add_VFX_Components");
+static_assert(sizeof(BP_MasterLightActor_C_Add_VFX_Components) == 0x000180, "Wrong size on BP_MasterLightActor_C_Add_VFX_Components");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, Temp_int_Loop_Counter_Variable) == 0x000000, "Member 'BP_MasterLightActor_C_Add_VFX_Components::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Add_IntInt_ReturnValue) == 0x000004, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_MasterLightActor_C_Add_VFX_Components::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_AdjustLightTransForWidgetOffset_ReturnValue) == 0x000010, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_AdjustLightTransForWidgetOffset_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, Temp_int_Loop_Counter_Variable_1) == 0x000070, "Member 'BP_MasterLightActor_C_Add_VFX_Components::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Array_Length_ReturnValue) == 0x000074, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Add_IntInt_ReturnValue_1) == 0x000078, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Less_IntInt_ReturnValue) == 0x00007C, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Array_Get_Item) == 0x000080, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Array_Length_ReturnValue_1) == 0x000088, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_K2_AttachToComponent_ReturnValue) == 0x00008C, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Less_IntInt_ReturnValue_1) == 0x00008D, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, Temp_int_Array_Index_Variable_1) == 0x000090, "Member 'BP_MasterLightActor_C_Add_VFX_Components::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Array_Get_Item_1) == 0x0000A0, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_IsValid_ReturnValue) == 0x000100, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_ComposeTransforms_ReturnValue) == 0x000110, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_ComposeTransforms_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_AddComponent_ReturnValue) == 0x000170, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_Array_Add_ReturnValue) == 0x000178, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components, CallFunc_K2_AttachToComponent_ReturnValue_1) == 0x00017C, "Member 'BP_MasterLightActor_C_Add_VFX_Components::CallFunc_K2_AttachToComponent_ReturnValue_1' has a wrong offset!");
 
-// Function BP_MasterLightActor.BP_MasterLightActor_C.Add VFX Components at Sockets
-// 0x0130 (0x0130 - 0x0000)
-struct BP_MasterLightActor_C_Add_VFX_Components_at_Sockets final
+// Function BP_MasterLightActor.BP_MasterLightActor_C.AdjustLightTransForWidgetOffset
+// 0x01B0 (0x01B0 - 0x0000)
+struct BP_MasterLightActor_C_AdjustLightTransForWidgetOffset final
 {
 public:
-	int32                                         VFX_Socket_Count;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           CallFunc_GetAllSocketNames_ReturnValue;            // 0x0028(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x003C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45[0xB];                                       // 0x0045(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x0050(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x00B0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      CallFunc_AddComponent_ReturnValue;                 // 0x0120(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             InTransform;                                       // 0x0000(0x0060)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Z;                                                 // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0070(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0100(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_148[0x8];                                      // 0x0148(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0150(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets) == 0x000010, "Wrong alignment on BP_MasterLightActor_C_Add_VFX_Components_at_Sockets");
-static_assert(sizeof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets) == 0x000130, "Wrong size on BP_MasterLightActor_C_Add_VFX_Components_at_Sockets");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, VFX_Socket_Count) == 0x000000, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::VFX_Socket_Count' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_Add_IntInt_ReturnValue_1) == 0x000010, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, Temp_int_Variable) == 0x000014, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_Array_Get_Item) == 0x000018, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_GetAllSocketNames_ReturnValue) == 0x000028, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_GetAllSocketNames_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_Array_Get_Item_1) == 0x00003C, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_Less_IntInt_ReturnValue) == 0x000044, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_GetSocketTransform_ReturnValue) == 0x000050, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_ComposeTransforms_ReturnValue) == 0x0000B0, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_ComposeTransforms_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_Conv_NameToString_ReturnValue) == 0x000110, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_AddComponent_ReturnValue) == 0x000120, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_Contains_ReturnValue) == 0x000128, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Add_VFX_Components_at_Sockets, CallFunc_Array_Add_ReturnValue) == 0x00012C, "Member 'BP_MasterLightActor_C_Add_VFX_Components_at_Sockets::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset) == 0x000010, "Wrong alignment on BP_MasterLightActor_C_AdjustLightTransForWidgetOffset");
+static_assert(sizeof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset) == 0x0001B0, "Wrong size on BP_MasterLightActor_C_AdjustLightTransForWidgetOffset");
+static_assert(offsetof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset, InTransform) == 0x000000, "Member 'BP_MasterLightActor_C_AdjustLightTransForWidgetOffset::InTransform' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset, Z) == 0x000060, "Member 'BP_MasterLightActor_C_AdjustLightTransForWidgetOffset::Z' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset, ReturnValue) == 0x000070, "Member 'BP_MasterLightActor_C_AdjustLightTransForWidgetOffset::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset, CallFunc_BreakTransform_Location) == 0x0000D0, "Member 'BP_MasterLightActor_C_AdjustLightTransForWidgetOffset::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset, CallFunc_BreakTransform_Rotation) == 0x0000E8, "Member 'BP_MasterLightActor_C_AdjustLightTransForWidgetOffset::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset, CallFunc_BreakTransform_Scale) == 0x000100, "Member 'BP_MasterLightActor_C_AdjustLightTransForWidgetOffset::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset, CallFunc_MakeVector_ReturnValue) == 0x000118, "Member 'BP_MasterLightActor_C_AdjustLightTransForWidgetOffset::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000130, "Member 'BP_MasterLightActor_C_AdjustLightTransForWidgetOffset::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_AdjustLightTransForWidgetOffset, CallFunc_MakeTransform_ReturnValue) == 0x000150, "Member 'BP_MasterLightActor_C_AdjustLightTransForWidgetOffset::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Check If AKEvent Is Overridden
+// 0x0028 (0x0028 - 0x0000)
+struct BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden final
+{
+public:
+	class UAkAudioEvent*                          Instance;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkAudioEvent*                          Default;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkAudioEvent*                          Color;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkAudioEvent*                          Local_Instance;                                    // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden) == 0x000008, "Wrong alignment on BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden");
+static_assert(sizeof(BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden) == 0x000028, "Wrong size on BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden");
+static_assert(offsetof(BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden, Instance) == 0x000000, "Member 'BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden::Instance' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden, Default) == 0x000008, "Member 'BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden::Default' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden, Color) == 0x000010, "Member 'BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden::Color' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden, Local_Instance) == 0x000018, "Member 'BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden::Local_Instance' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000020, "Member 'BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Check if AKSwitch Is Overriden
+// 0x0028 (0x0028 - 0x0000)
+struct BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden final
+{
+public:
+	class UAkSwitchValue*                         Instance;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkSwitchValue*                         Default;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkSwitchValue*                         Color;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkSwitchValue*                         Local_Instance;                                    // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden) == 0x000008, "Wrong alignment on BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden");
+static_assert(sizeof(BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden) == 0x000028, "Wrong size on BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden, Instance) == 0x000000, "Member 'BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden::Instance' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden, Default) == 0x000008, "Member 'BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden::Default' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden, Color) == 0x000010, "Member 'BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden::Color' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden, Local_Instance) == 0x000018, "Member 'BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden::Local_Instance' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000020, "Member 'BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Check if Color Overridden
+// 0x0044 (0x0044 - 0x0000)
+struct BP_MasterLightActor_C_Check_if_Color_Overridden final
+{
+public:
+	struct FLinearColor                           Instance;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Default;                                           // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Color;                                             // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Local_Instance;                                    // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_LinearColorLinearColor_ReturnValue; // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_LinearColorLinearColor_ReturnValue_1; // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MasterLightActor_C_Check_if_Color_Overridden) == 0x000004, "Wrong alignment on BP_MasterLightActor_C_Check_if_Color_Overridden");
+static_assert(sizeof(BP_MasterLightActor_C_Check_if_Color_Overridden) == 0x000044, "Wrong size on BP_MasterLightActor_C_Check_if_Color_Overridden");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Color_Overridden, Instance) == 0x000000, "Member 'BP_MasterLightActor_C_Check_if_Color_Overridden::Instance' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Color_Overridden, Default) == 0x000010, "Member 'BP_MasterLightActor_C_Check_if_Color_Overridden::Default' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Color_Overridden, Color) == 0x000020, "Member 'BP_MasterLightActor_C_Check_if_Color_Overridden::Color' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Color_Overridden, Local_Instance) == 0x000030, "Member 'BP_MasterLightActor_C_Check_if_Color_Overridden::Local_Instance' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Color_Overridden, CallFunc_EqualEqual_LinearColorLinearColor_ReturnValue) == 0x000040, "Member 'BP_MasterLightActor_C_Check_if_Color_Overridden::CallFunc_EqualEqual_LinearColorLinearColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Color_Overridden, CallFunc_EqualEqual_LinearColorLinearColor_ReturnValue_1) == 0x000041, "Member 'BP_MasterLightActor_C_Check_if_Color_Overridden::CallFunc_EqualEqual_LinearColorLinearColor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Color_Overridden, CallFunc_BooleanOR_ReturnValue) == 0x000042, "Member 'BP_MasterLightActor_C_Check_if_Color_Overridden::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Check if Float Overridden
+// 0x0028 (0x0028 - 0x0000)
+struct BP_MasterLightActor_C_Check_if_Float_Overridden final
+{
+public:
+	double                                        Instance;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Default;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        float_0;                                           // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Local_Instance;                                    // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue_1;    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MasterLightActor_C_Check_if_Float_Overridden) == 0x000008, "Wrong alignment on BP_MasterLightActor_C_Check_if_Float_Overridden");
+static_assert(sizeof(BP_MasterLightActor_C_Check_if_Float_Overridden) == 0x000028, "Wrong size on BP_MasterLightActor_C_Check_if_Float_Overridden");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Float_Overridden, Instance) == 0x000000, "Member 'BP_MasterLightActor_C_Check_if_Float_Overridden::Instance' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Float_Overridden, Default) == 0x000008, "Member 'BP_MasterLightActor_C_Check_if_Float_Overridden::Default' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Float_Overridden, float_0) == 0x000010, "Member 'BP_MasterLightActor_C_Check_if_Float_Overridden::float_0' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Float_Overridden, Local_Instance) == 0x000018, "Member 'BP_MasterLightActor_C_Check_if_Float_Overridden::Local_Instance' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Float_Overridden, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000020, "Member 'BP_MasterLightActor_C_Check_if_Float_Overridden::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Float_Overridden, CallFunc_EqualEqual_DoubleDouble_ReturnValue_1) == 0x000021, "Member 'BP_MasterLightActor_C_Check_if_Float_Overridden::CallFunc_EqualEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_Float_Overridden, CallFunc_BooleanOR_ReturnValue) == 0x000022, "Member 'BP_MasterLightActor_C_Check_if_Float_Overridden::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Check if VFX Is Overridden
+// 0x0028 (0x0028 - 0x0000)
+struct BP_MasterLightActor_C_Check_if_VFX_Is_Overridden final
+{
+public:
+	class UNiagaraSystem*                         Instance;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         Default;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         VFX;                                               // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         Local_Instance;                                    // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MasterLightActor_C_Check_if_VFX_Is_Overridden) == 0x000008, "Wrong alignment on BP_MasterLightActor_C_Check_if_VFX_Is_Overridden");
+static_assert(sizeof(BP_MasterLightActor_C_Check_if_VFX_Is_Overridden) == 0x000028, "Wrong size on BP_MasterLightActor_C_Check_if_VFX_Is_Overridden");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_VFX_Is_Overridden, Instance) == 0x000000, "Member 'BP_MasterLightActor_C_Check_if_VFX_Is_Overridden::Instance' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_VFX_Is_Overridden, Default) == 0x000008, "Member 'BP_MasterLightActor_C_Check_if_VFX_Is_Overridden::Default' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_VFX_Is_Overridden, VFX) == 0x000010, "Member 'BP_MasterLightActor_C_Check_if_VFX_Is_Overridden::VFX' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_VFX_Is_Overridden, Local_Instance) == 0x000018, "Member 'BP_MasterLightActor_C_Check_if_VFX_Is_Overridden::Local_Instance' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_VFX_Is_Overridden, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000020, "Member 'BP_MasterLightActor_C_Check_if_VFX_Is_Overridden::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Check_if_VFX_Is_Overridden, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'BP_MasterLightActor_C_Check_if_VFX_Is_Overridden::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.ExecuteUbergraph_BP_MasterLightActor
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x01E8 (0x01E8 - 0x0000)
 struct BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FCeil_ReturnValue;                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Temp_real_Variable;                                // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_real_Variable;                                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Temp_real_Variable_1;                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_SunPosition                              Temp_byte_Variable;                                // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_real_Variable_2;                              // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_1;                               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_SunPosition                              Temp_byte_Variable;                                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_real_Variable_2;                              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Temp_real_Variable_3;                              // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_SunPosition                              Temp_byte_Variable_1;                              // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_real_Variable_4;                              // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	ENUM_SunPosition                              Temp_byte_Variable_1;                              // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate;         // 0x0094(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_LinearColorLerp_ReturnValue;              // 0x00A4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_LinearColorLerp_ReturnValue_1;            // 0x00B4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x00C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_LinearColorLerp_ReturnValue;              // 0x0094(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_LinearColorLerp_ReturnValue_1;            // 0x00A4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x00B6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky_1;     // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_real_Variable_4;                              // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky_1;  // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FD[0x3];                                       // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Temp_real_Variable_5;                              // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraComponent*                      CallFunc_Array_Get_Item_1;                         // 0x0108(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Default;                             // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_real_Variable_6;                              // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FCeil_ReturnValue_1;                      // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default_1;                           // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky_1;  // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate;         // 0x00F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0105(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0106(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_107[0x1];                                      // 0x0107(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_real_Variable_5;                              // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraComponent*                      CallFunc_Array_Get_Item_1;                         // 0x0110(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default;                             // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_AddActorToMultiPosEvent_ReturnValue;      // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_real_Variable_7;                              // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Default_2;                           // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SignOfFloat_ReturnValue;                  // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_B_ImplicitCast;                      // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast;   // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Lerp_B_ImplicitCast_1;                    // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_LinearColorLerp_Alpha_ImplicitCast;       // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast_1; // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_LinearColorLerp_Alpha_ImplicitCast_1;     // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FCeil_ReturnValue;                        // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default_1;                           // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_real_Variable_6;                              // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_real_Variable_7;                              // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AddActorToMultiPosEvent_ReturnValue;      // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_2;                           // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SignOfFloat_ReturnValue;                  // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FCeil_ReturnValue_1;                      // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_185[0x3];                                      // 0x0185(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_B_ImplicitCast;                      // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast;   // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_1; // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_A_ImplicitCast;               // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast;    // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_Transition_Alpha_ImplicitCast;  // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_B_ImplicitCast_1;                    // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_LinearColorLerp_Alpha_ImplicitCast;       // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast_1; // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_LinearColorLerp_Alpha_ImplicitCast_1;     // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_1; // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_A_ImplicitCast;               // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast;    // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_VariableSet_Transition_Alpha_ImplicitCast;  // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor) == 0x000008, "Wrong alignment on BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor");
-static_assert(sizeof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor) == 0x0001D0, "Wrong size on BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor");
+static_assert(sizeof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor) == 0x0001E8, "Wrong size on BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, EntryPoint) == 0x000000, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_FCeil_ReturnValue) == 0x000004, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_FCeil_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Conv_IntToBool_ReturnValue) == 0x000008, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable) == 0x00000C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable) == 0x000004, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Variable) == 0x000008, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_bool_Variable) == 0x00000C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_bool_Variable_1) == 0x00000D, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_bool_Variable_1' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_1) == 0x000010, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Variable) == 0x000014, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_bool_Variable) == 0x000018, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_bool_Variable_1) == 0x000019, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_IsValid_ReturnValue) == 0x00001A, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_byte_Variable) == 0x00001B, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Variable_1) == 0x00001C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Less_IntInt_ReturnValue) == 0x000024, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_bool_Has_Been_Initd_Variable) == 0x000025, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Array_Index_Variable) == 0x000028, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Loop_Counter_Variable) == 0x00002C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Add_IntInt_ReturnValue_1) == 0x000030, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Array_Index_Variable_1) == 0x000034, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_2) == 0x000038, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_Event_DeltaSeconds) == 0x00003C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_IsValid_ReturnValue) == 0x000014, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Variable_1) == 0x000018, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Add_IntInt_ReturnValue) == 0x00001C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_byte_Variable) == 0x000021, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Array_Index_Variable) == 0x000024, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Add_IntInt_ReturnValue_1) == 0x00002C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Array_Index_Variable_1) == 0x000030, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_2) == 0x000034, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_Event_DeltaSeconds) == 0x000038, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000040, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000048, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_3) == 0x000054, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_3' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_IsValid_ReturnValue_1) == 0x000058, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_byte_Variable_1) == 0x000059, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_4) == 0x00005C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_4' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000060, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_IsValid_ReturnValue_2) == 0x000068, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_byte_Variable_1) == 0x000068, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_IsValid_ReturnValue_2) == 0x000069, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Lerp_ReturnValue) == 0x000070, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Lerp_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000078, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Loop_Counter_Variable_1) == 0x00007C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Add_IntInt_ReturnValue_2) == 0x000080, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Lerp_ReturnValue_1) == 0x000088, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000090, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, UniqueObjectNameForCooking_OutputDelegate) == 0x000094, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_LinearColorLerp_ReturnValue) == 0x0000A4, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_LinearColorLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_LinearColorLerp_ReturnValue_1) == 0x0000B4, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_LinearColorLerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_BooleanOR_ReturnValue) == 0x0000C4, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_BooleanOR_ReturnValue_1) == 0x0000C5, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_BooleanOR_ReturnValue_2) == 0x0000C6, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_BooleanAND_ReturnValue) == 0x0000C7, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Array_Get_Item) == 0x0000C8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Array_Length_ReturnValue) == 0x0000D0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000D4, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Lerp_ReturnValue_1) == 0x000080, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_int_Loop_Counter_Variable_1) == 0x000088, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x00008C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Add_IntInt_ReturnValue_2) == 0x000090, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_LinearColorLerp_ReturnValue) == 0x000094, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_LinearColorLerp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_LinearColorLerp_ReturnValue_1) == 0x0000A4, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_LinearColorLerp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_BooleanOR_ReturnValue) == 0x0000B4, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_BooleanOR_ReturnValue_1) == 0x0000B5, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_BooleanOR_ReturnValue_2) == 0x0000B6, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_BooleanAND_ReturnValue) == 0x0000B7, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_bool_Has_Been_Initd_Variable) == 0x0000B8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Array_Get_Item) == 0x0000C0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_IsValid_ReturnValue_3) == 0x0000C8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Array_Length_ReturnValue) == 0x0000CC, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000D0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0000D8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_GetIntrepidSkyInstance_IntrepidSky_1) == 0x0000E0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_GetIntrepidSkyInstance_IntrepidSky_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_4) == 0x0000E8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky_1) == 0x0000F0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_DynamicCast_bSuccess_1) == 0x0000F8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_IsDedicatedServer_ReturnValue) == 0x0000F9, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Not_PreBool_ReturnValue) == 0x0000FA, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_bool_IsClosed_Variable) == 0x0000FB, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_BooleanAND_ReturnValue_1) == 0x0000FC, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_5) == 0x000100, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Array_Get_Item_1) == 0x000108, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Array_Length_ReturnValue_1) == 0x000110, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_Select_Default) == 0x000114, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Less_IntInt_ReturnValue_2) == 0x000118, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SelectFloat_ReturnValue) == 0x000120, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_6) == 0x000128, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_6' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_FCeil_ReturnValue_1) == 0x00012C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_FCeil_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_Select_Default_1) == 0x000130, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_AddActorToMultiPosEvent_ReturnValue) == 0x000134, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_AddActorToMultiPosEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_7) == 0x000138, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_7' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_Select_Default_2) == 0x00013C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000140, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SignOfFloat_ReturnValue) == 0x000148, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SignOfFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Abs_ReturnValue) == 0x000150, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000158, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000160, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000168, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000170, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Lerp_B_ImplicitCast) == 0x000178, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Lerp_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SetIntensity_NewIntensity_ImplicitCast) == 0x000180, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SetIntensity_NewIntensity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Lerp_B_ImplicitCast_1) == 0x000188, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Lerp_B_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_LinearColorLerp_Alpha_ImplicitCast) == 0x000190, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_LinearColorLerp_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SetIntensity_NewIntensity_ImplicitCast_1) == 0x000194, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SetIntensity_NewIntensity_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_LinearColorLerp_Alpha_ImplicitCast_1) == 0x000198, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_LinearColorLerp_Alpha_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0001A0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0001A8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SetScalarParameterValue_Value_ImplicitCast_1) == 0x0001AC, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SetScalarParameterValue_Value_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SelectFloat_A_ImplicitCast) == 0x0001B0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SelectFloat_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SetVariableFloat_InValue_ImplicitCast) == 0x0001B8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SetVariableFloat_InValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_VariableSet_Transition_Alpha_ImplicitCast) == 0x0001C0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_VariableSet_Transition_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0001C8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky_1) == 0x0000E8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_DynamicCast_bSuccess_1) == 0x0000F0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, UniqueObjectNameForCooking_OutputDelegate) == 0x0000F4, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_IsDedicatedServer_ReturnValue) == 0x000104, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Not_PreBool_ReturnValue) == 0x000105, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_BooleanAND_ReturnValue_1) == 0x000106, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_5) == 0x000108, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_5' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Array_Get_Item_1) == 0x000110, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Array_Length_ReturnValue_1) == 0x000118, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_Select_Default) == 0x00011C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Less_IntInt_ReturnValue_2) == 0x000120, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SelectFloat_ReturnValue) == 0x000128, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_bool_IsClosed_Variable) == 0x000130, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_bool_IsClosed_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_FCeil_ReturnValue) == 0x000134, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_FCeil_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_Select_Default_1) == 0x000138, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_6) == 0x00013C, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_6' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, Temp_real_Variable_7) == 0x000140, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::Temp_real_Variable_7' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_AddActorToMultiPosEvent_ReturnValue) == 0x000144, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_AddActorToMultiPosEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_Select_Default_2) == 0x000148, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000150, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SignOfFloat_ReturnValue) == 0x000158, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SignOfFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Abs_ReturnValue) == 0x000160, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000168, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000170, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000178, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_FCeil_ReturnValue_1) == 0x000180, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_FCeil_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Conv_IntToBool_ReturnValue) == 0x000184, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000188, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Lerp_B_ImplicitCast) == 0x000190, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Lerp_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SetIntensity_NewIntensity_ImplicitCast) == 0x000198, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SetIntensity_NewIntensity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Lerp_B_ImplicitCast_1) == 0x0001A0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Lerp_B_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_LinearColorLerp_Alpha_ImplicitCast) == 0x0001A8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_LinearColorLerp_Alpha_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SetIntensity_NewIntensity_ImplicitCast_1) == 0x0001AC, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SetIntensity_NewIntensity_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_LinearColorLerp_Alpha_ImplicitCast_1) == 0x0001B0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_LinearColorLerp_Alpha_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0001B8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0001C0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SetScalarParameterValue_Value_ImplicitCast_1) == 0x0001C4, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SetScalarParameterValue_Value_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SelectFloat_A_ImplicitCast) == 0x0001C8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SelectFloat_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_SetVariableFloat_InValue_ImplicitCast) == 0x0001D0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_SetVariableFloat_InValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, K2Node_VariableSet_Transition_Alpha_ImplicitCast) == 0x0001D8, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::K2Node_VariableSet_Transition_Alpha_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0001E0, "Member 'BP_MasterLightActor_C_ExecuteUbergraph_BP_MasterLightActor::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
-// Function BP_MasterLightActor.BP_MasterLightActor_C.Get Light Socket Transform
-// 0x0120 (0x0120 - 0x0000)
-struct BP_MasterLightActor_C_Get_Light_Socket_Transform final
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Get Socket Transform
+// 0x0240 (0x0240 - 0x0000)
+struct BP_MasterLightActor_C_Get_Socket_Transform final
 {
 public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_TransformTransform_ReturnValue; // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           CallFunc_GetAllSocketNames_ReturnValue;            // 0x0078(0x0010)(ReferenceParm)
-	class FName                                   CallFunc_Array_Get_Item;                           // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_94[0xC];                                       // 0x0094(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x00A0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FTransform>                     K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ReferenceParm)
+	TArray<struct FTransform>                     K2Node_MakeArray_Array_1;                          // 0x0080(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           CallFunc_GetAllSocketNames_ReturnValue;            // 0x0098(0x0010)(ReferenceParm)
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B4[0xC];                                       // 0x00B4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x00C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue_1;         // 0x0130(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue_2;         // 0x0190(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_2;            // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x01F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue_1;                   // 0x0219(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21A[0x6];                                      // 0x021A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_2;          // 0x0220(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue_2;                   // 0x0234(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MasterLightActor_C_Get_Light_Socket_Transform) == 0x000010, "Wrong alignment on BP_MasterLightActor_C_Get_Light_Socket_Transform");
-static_assert(sizeof(BP_MasterLightActor_C_Get_Light_Socket_Transform) == 0x000120, "Wrong size on BP_MasterLightActor_C_Get_Light_Socket_Transform");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, CallFunc_MakeTransform_ReturnValue) == 0x000010, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, CallFunc_EqualEqual_TransformTransform_ReturnValue) == 0x000070, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::CallFunc_EqualEqual_TransformTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, CallFunc_GetAllSocketNames_ReturnValue) == 0x000078, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::CallFunc_GetAllSocketNames_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, CallFunc_Array_Get_Item) == 0x000088, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, CallFunc_Array_Length_ReturnValue) == 0x000090, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, CallFunc_GetSocketTransform_ReturnValue) == 0x0000A0, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, CallFunc_Less_IntInt_ReturnValue) == 0x000100, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, CallFunc_Conv_NameToString_ReturnValue) == 0x000108, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Get_Light_Socket_Transform, CallFunc_Contains_ReturnValue) == 0x000118, "Member 'BP_MasterLightActor_C_Get_Light_Socket_Transform::CallFunc_Contains_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_MasterLightActor_C_Get_Socket_Transform) == 0x000010, "Wrong alignment on BP_MasterLightActor_C_Get_Socket_Transform");
+static_assert(sizeof(BP_MasterLightActor_C_Get_Socket_Transform) == 0x000240, "Wrong size on BP_MasterLightActor_C_Get_Socket_Transform");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_MakeTransform_ReturnValue) == 0x000010, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, K2Node_MakeArray_Array) == 0x000070, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, K2Node_MakeArray_Array_1) == 0x000080, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, Temp_int_Loop_Counter_Variable) == 0x000090, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_IsValid_ReturnValue) == 0x000094, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_GetAllSocketNames_ReturnValue) == 0x000098, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_GetAllSocketNames_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Array_Get_Item) == 0x0000A8, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Array_Length_ReturnValue) == 0x0000B0, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_GetSocketTransform_ReturnValue) == 0x0000C0, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Less_IntInt_ReturnValue) == 0x000120, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Array_AddUnique_ReturnValue) == 0x000124, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_GetSocketTransform_ReturnValue_1) == 0x000130, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_GetSocketTransform_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_GetSocketTransform_ReturnValue_2) == 0x000190, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_GetSocketTransform_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Array_AddUnique_ReturnValue_1) == 0x0001F0, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Array_AddUnique_ReturnValue_2) == 0x0001F4, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Array_AddUnique_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Conv_NameToString_ReturnValue) == 0x0001F8, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000208, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Contains_ReturnValue) == 0x000218, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Contains_ReturnValue_1) == 0x000219, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Contains_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Conv_NameToString_ReturnValue_2) == 0x000220, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Conv_NameToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Add_IntInt_ReturnValue) == 0x000230, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_Get_Socket_Transform, CallFunc_Contains_ReturnValue_2) == 0x000234, "Member 'BP_MasterLightActor_C_Get_Socket_Transform::CallFunc_Contains_ReturnValue_2' has a wrong offset!");
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.InitializeDefaults
+// 0x03D8 (0x03D8 - 0x0000)
+struct BP_MasterLightActor_C_InitializeDefaults final
+{
+public:
+	struct FLinearColor                           CallFunc_ColorTempToRGB_Return_Color;              // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_LightTypeDefaults              CallFunc_GetDataTableRowFromName_OutRow;           // 0x0028(0x0138)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TSoftObjectPtr<class UAkSwitchValue>>  CallFunc_Map_Values_Values;                        // 0x0168(0x0010)(ReferenceParm)
+	TArray<TSoftObjectPtr<class UAkAudioEvent>>   CallFunc_Map_Keys_Keys;                            // 0x0178(0x0010)(ReferenceParm)
+	TSoftObjectPtr<class UAkSwitchValue>          CallFunc_Array_Get_Item;                           // 0x0188(0x0028)(HasGetValueTypeHash)
+	TSoftObjectPtr<class UAkAudioEvent>           CallFunc_Array_Get_Item_1;                         // 0x01B0(0x0028)(HasGetValueTypeHash)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_1;         // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EA[0x6];                                      // 0x01EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkAudioEvent*                          K2Node_DynamicCast_AsAk_Audio_Event;               // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkSwitchValue*                         K2Node_DynamicCast_AsAk_Switch_Value;              // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkAudioEvent*                          CallFunc_Check_If_AKEvent_Is_Overridden_Color;     // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkSwitchValue*                         CallFunc_Check_if_AKSwitch_Is_Overriden_Color;     // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_1; // 0x0221(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_222[0x6];                                      // 0x0222(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_2;         // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_2; // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_232[0x6];                                      // 0x0232(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraSystem*                         K2Node_DynamicCast_AsNiagara_System;               // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraSystem*                         CallFunc_Check_if_VFX_Is_Overridden_VFX;           // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float;          // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_1;        // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_2;        // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_3;        // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Check_if_Color_Overridden_Color;          // 0x0270(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_4;        // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_5;        // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_6;        // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_7;        // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_8;        // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_9;        // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_10;       // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_11;       // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_12;       // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Check_if_Color_Overridden_Color_1;        // 0x02C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Check_if_Color_Overridden_Color_2;        // 0x02D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_13;       // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_14;       // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Float_15;       // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_ColorTempToRGB_Temp_ImplicitCast;         // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast; // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_1; // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_2; // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_3; // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_4; // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_5; // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_6; // 0x0338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_7; // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_8; // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_9; // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_10; // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_11; // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_12; // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_13; // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_14; // 0x0378(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_15; // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Source_Radius_ImplicitCast; // 0x0388(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Soft_Source_Radius_ImplicitCast; // 0x038C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Max_Distance_Fade_Range_ImplicitCast; // 0x0390(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Max_Draw_Distance_ImplicitCast; // 0x0394(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Light_Falloff_Exponent_ImplicitCast; // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Volumetric_Scattering_ImplicitCast; // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Temperature_ImplicitCast;  // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Outer_Cone_Angle_ImplicitCast; // 0x03A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Inner_Cone_Angle_ImplicitCast; // 0x03A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Attenuation_Radius_ImplicitCast; // 0x03AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Spot_Intensity_ImplicitCast;    // 0x03B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Point_Source_Radius_ImplicitCast; // 0x03B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Point_Soft_Source_Radius_ImplicitCast; // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Point_Max_Distance_Fade_Range_ImplicitCast; // 0x03BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Point_Max_Draw_Distance_ImplicitCast; // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Point_Light_Falloff_Exponent_ImplicitCast; // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Point_Volumetric_Scattering_ImplicitCast; // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Point_Temperature_ImplicitCast; // 0x03CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Point_Attenuation_Radius_ImplicitCast; // 0x03D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Point_Light_Intensity_ImplicitCast; // 0x03D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MasterLightActor_C_InitializeDefaults) == 0x000008, "Wrong alignment on BP_MasterLightActor_C_InitializeDefaults");
+static_assert(sizeof(BP_MasterLightActor_C_InitializeDefaults) == 0x0003D8, "Wrong size on BP_MasterLightActor_C_InitializeDefaults");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_ColorTempToRGB_Return_Color) == 0x000000, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_ColorTempToRGB_Return_Color' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000010, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Conv_StringToName_ReturnValue) == 0x000020, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_GetDataTableRowFromName_OutRow) == 0x000028, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000160, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Map_Values_Values) == 0x000168, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Map_Values_Values' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Map_Keys_Keys) == 0x000178, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Array_Get_Item) == 0x000188, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Array_Get_Item_1) == 0x0001B0, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x0001D8, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_LoadAsset_Blocking_ReturnValue_1) == 0x0001E0, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_LoadAsset_Blocking_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_IsValid_ReturnValue) == 0x0001E8, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_IsValid_ReturnValue_1) == 0x0001E9, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_DynamicCast_AsAk_Audio_Event) == 0x0001F0, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_DynamicCast_AsAk_Audio_Event' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_DynamicCast_bSuccess) == 0x0001F8, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_DynamicCast_AsAk_Switch_Value) == 0x000200, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_DynamicCast_AsAk_Switch_Value' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_DynamicCast_bSuccess_1) == 0x000208, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_If_AKEvent_Is_Overridden_Color) == 0x000210, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_If_AKEvent_Is_Overridden_Color' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_AKSwitch_Is_Overriden_Color) == 0x000218, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_AKSwitch_Is_Overriden_Color' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000220, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_IsValidSoftObjectReference_ReturnValue_1) == 0x000221, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_IsValidSoftObjectReference_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_LoadAsset_Blocking_ReturnValue_2) == 0x000228, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_LoadAsset_Blocking_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_IsValidSoftObjectReference_ReturnValue_2) == 0x000230, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_IsValidSoftObjectReference_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_IsValid_ReturnValue_2) == 0x000231, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_DynamicCast_AsNiagara_System) == 0x000238, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_DynamicCast_AsNiagara_System' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_DynamicCast_bSuccess_2) == 0x000240, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_VFX_Is_Overridden_VFX) == 0x000248, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_VFX_Is_Overridden_VFX' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float) == 0x000250, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_1) == 0x000258, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_2) == 0x000260, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_3) == 0x000268, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_3' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Color_Overridden_Color) == 0x000270, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Color_Overridden_Color' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_4) == 0x000280, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_4' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_5) == 0x000288, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_5' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_6) == 0x000290, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_6' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_7) == 0x000298, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_7' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_8) == 0x0002A0, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_8' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_9) == 0x0002A8, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_9' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_10) == 0x0002B0, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_10' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_11) == 0x0002B8, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_11' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_12) == 0x0002C0, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_12' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Color_Overridden_Color_1) == 0x0002C8, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Color_Overridden_Color_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Color_Overridden_Color_2) == 0x0002D8, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Color_Overridden_Color_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_13) == 0x0002E8, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_13' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_14) == 0x0002F0, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_14' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Float_15) == 0x0002F8, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Float_15' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_ColorTempToRGB_Temp_ImplicitCast) == 0x000300, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_ColorTempToRGB_Temp_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast) == 0x000308, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_1) == 0x000310, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_2) == 0x000318, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_3) == 0x000320, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_4) == 0x000328, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_4' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_5) == 0x000330, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_5' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_6) == 0x000338, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_6' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_7) == 0x000340, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_7' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_8) == 0x000348, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_8' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_9) == 0x000350, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_9' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_10) == 0x000358, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_10' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_11) == 0x000360, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_11' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_12) == 0x000368, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_12' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_13) == 0x000370, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_13' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_14) == 0x000378, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_14' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_15) == 0x000380, "Member 'BP_MasterLightActor_C_InitializeDefaults::CallFunc_Check_if_Float_Overridden_Instance_ImplicitCast_15' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Source_Radius_ImplicitCast) == 0x000388, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Source_Radius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Soft_Source_Radius_ImplicitCast) == 0x00038C, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Soft_Source_Radius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Max_Distance_Fade_Range_ImplicitCast) == 0x000390, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Max_Distance_Fade_Range_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Max_Draw_Distance_ImplicitCast) == 0x000394, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Max_Draw_Distance_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Light_Falloff_Exponent_ImplicitCast) == 0x000398, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Light_Falloff_Exponent_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Volumetric_Scattering_ImplicitCast) == 0x00039C, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Volumetric_Scattering_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Temperature_ImplicitCast) == 0x0003A0, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Temperature_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Outer_Cone_Angle_ImplicitCast) == 0x0003A4, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Outer_Cone_Angle_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Inner_Cone_Angle_ImplicitCast) == 0x0003A8, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Inner_Cone_Angle_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Attenuation_Radius_ImplicitCast) == 0x0003AC, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Attenuation_Radius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Spot_Intensity_ImplicitCast) == 0x0003B0, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Spot_Intensity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Point_Source_Radius_ImplicitCast) == 0x0003B4, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Point_Source_Radius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Point_Soft_Source_Radius_ImplicitCast) == 0x0003B8, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Point_Soft_Source_Radius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Point_Max_Distance_Fade_Range_ImplicitCast) == 0x0003BC, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Point_Max_Distance_Fade_Range_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Point_Max_Draw_Distance_ImplicitCast) == 0x0003C0, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Point_Max_Draw_Distance_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Point_Light_Falloff_Exponent_ImplicitCast) == 0x0003C4, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Point_Light_Falloff_Exponent_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Point_Volumetric_Scattering_ImplicitCast) == 0x0003C8, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Point_Volumetric_Scattering_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Point_Temperature_ImplicitCast) == 0x0003CC, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Point_Temperature_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Point_Attenuation_Radius_ImplicitCast) == 0x0003D0, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Point_Attenuation_Radius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_InitializeDefaults, K2Node_VariableSet_Point_Light_Intensity_ImplicitCast) == 0x0003D4, "Member 'BP_MasterLightActor_C_InitializeDefaults::K2Node_VariableSet_Point_Light_Intensity_ImplicitCast' has a wrong offset!");
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.Make DMIs from Mesh Materials
 // 0x00A8 (0x00A8 - 0x0000)
@@ -550,17 +1107,29 @@ static_assert(offsetof(BP_MasterLightActor_C_Make_DMIs_from_Mesh_Materials, Call
 static_assert(offsetof(BP_MasterLightActor_C_Make_DMIs_from_Mesh_Materials, CallFunc_Array_Add_ReturnValue_2) == 0x0000A0, "Member 'BP_MasterLightActor_C_Make_DMIs_from_Mesh_Materials::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.OnConstruct
-// 0x0002 (0x0002 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct BP_MasterLightActor_C_OnConstruct final
 {
 public:
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MasterLightActor_C_OnConstruct) == 0x000001, "Wrong alignment on BP_MasterLightActor_C_OnConstruct");
-static_assert(sizeof(BP_MasterLightActor_C_OnConstruct) == 0x000002, "Wrong size on BP_MasterLightActor_C_OnConstruct");
-static_assert(offsetof(BP_MasterLightActor_C_OnConstruct, CallFunc_IsDedicatedServer_ReturnValue) == 0x000000, "Member 'BP_MasterLightActor_C_OnConstruct::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_OnConstruct, CallFunc_IsWithEditor_ReturnValue) == 0x000001, "Member 'BP_MasterLightActor_C_OnConstruct::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
+static_assert(sizeof(BP_MasterLightActor_C_OnConstruct) == 0x000008, "Wrong size on BP_MasterLightActor_C_OnConstruct");
+static_assert(offsetof(BP_MasterLightActor_C_OnConstruct, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_MasterLightActor_C_OnConstruct::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_OnConstruct, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_MasterLightActor_C_OnConstruct::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_OnConstruct, CallFunc_IsValid_ReturnValue_2) == 0x000002, "Member 'BP_MasterLightActor_C_OnConstruct::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_OnConstruct, CallFunc_IsValid_ReturnValue_3) == 0x000003, "Member 'BP_MasterLightActor_C_OnConstruct::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_OnConstruct, CallFunc_IsValid_ReturnValue_4) == 0x000004, "Member 'BP_MasterLightActor_C_OnConstruct::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_OnConstruct, CallFunc_IsValid_ReturnValue_5) == 0x000005, "Member 'BP_MasterLightActor_C_OnConstruct::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_OnConstruct, CallFunc_IsDedicatedServer_ReturnValue) == 0x000006, "Member 'BP_MasterLightActor_C_OnConstruct::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightActor_C_OnConstruct, CallFunc_IsWithEditor_ReturnValue) == 0x000007, "Member 'BP_MasterLightActor_C_OnConstruct::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -572,66 +1141,6 @@ public:
 static_assert(alignof(BP_MasterLightActor_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_MasterLightActor_C_ReceiveTick");
 static_assert(sizeof(BP_MasterLightActor_C_ReceiveTick) == 0x000004, "Wrong size on BP_MasterLightActor_C_ReceiveTick");
 static_assert(offsetof(BP_MasterLightActor_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_MasterLightActor_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_MasterLightActor.BP_MasterLightActor_C.Resize Socketed VFX Array
-// 0x0080 (0x0080 - 0x0000)
-struct BP_MasterLightActor_C_Resize_Socketed_VFX_Array final
-{
-public:
-	int32                                         NumVFXSockets;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_2;                               // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           CallFunc_GetAllSocketNames_ReturnValue;            // 0x0028(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Array_Get_Item;                           // 0x003C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UNiagaraSystem*                   Temp_object_Variable;                              // 0x0060(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array) == 0x000008, "Wrong alignment on BP_MasterLightActor_C_Resize_Socketed_VFX_Array");
-static_assert(sizeof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array) == 0x000080, "Wrong size on BP_MasterLightActor_C_Resize_Socketed_VFX_Array");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, NumVFXSockets) == 0x000000, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::NumVFXSockets' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, Temp_int_Variable) == 0x000004, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, Temp_int_Variable_1) == 0x000010, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Add_IntInt_ReturnValue_1) == 0x000014, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Subtract_IntInt_ReturnValue) == 0x000018, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_LessEqual_IntInt_ReturnValue) == 0x00001C, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x00001D, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, Temp_int_Variable_2) == 0x000020, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_GetAllSocketNames_ReturnValue) == 0x000028, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_GetAllSocketNames_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Add_IntInt_ReturnValue_2) == 0x000038, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Array_Get_Item) == 0x00003C, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Conv_NameToString_ReturnValue) == 0x000048, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Contains_ReturnValue) == 0x00005C, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, Temp_object_Variable) == 0x000060, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Array_Add_ReturnValue) == 0x000068, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, Temp_int_Loop_Counter_Variable) == 0x00006C, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Array_Length_ReturnValue_1) == 0x000070, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Less_IntInt_ReturnValue) == 0x000074, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x000078, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightActor_C_Resize_Socketed_VFX_Array, CallFunc_Add_IntInt_ReturnValue_3) == 0x00007C, "Member 'BP_MasterLightActor_C_Resize_Socketed_VFX_Array::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
 
 }
 

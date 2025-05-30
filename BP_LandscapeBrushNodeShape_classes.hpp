@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "SNodePositionLevel_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ENodeShapes_structs.hpp"
 #include "SNodeShape_structs.hpp"
-#include "SNodePositionLevel_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Skill_ToolTip.WBP_Skill_ToolTip_C
-// 0x0000 (0x0EF0 - 0x0EF0)
+// 0x0000 (0x1790 - 0x1790)
 class UWBP_Skill_ToolTip_C final : public USkillToolTipWidget
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_Skill_ToolTip_C) == 0x000010, "Wrong alignment on UWBP_Skill_ToolTip_C");
-static_assert(sizeof(UWBP_Skill_ToolTip_C) == 0x000EF0, "Wrong size on UWBP_Skill_ToolTip_C");
+static_assert(sizeof(UWBP_Skill_ToolTip_C) == 0x001790, "Wrong size on UWBP_Skill_ToolTip_C");
 
 }
 

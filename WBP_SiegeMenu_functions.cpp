@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_SiegeMenu.WBP_SiegeMenu_C.ExecuteUbergraph_WBP_SiegeMenu
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SiegeMenu_C::ExecuteUbergraph_WBP_SiegeMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SiegeMenu_C", "ExecuteUbergraph_WBP_SiegeMenu");
-
-	Params::WBP_SiegeMenu_C_ExecuteUbergraph_WBP_SiegeMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_SiegeMenu.WBP_SiegeMenu_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_SiegeMenu_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_SiegeMenu_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SiegeMenu.WBP_SiegeMenu_C.ExecuteUbergraph_WBP_SiegeMenu
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SiegeMenu_C::ExecuteUbergraph_WBP_SiegeMenu(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SiegeMenu_C", "ExecuteUbergraph_WBP_SiegeMenu");
+
+	Params::WBP_SiegeMenu_C_ExecuteUbergraph_WBP_SiegeMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

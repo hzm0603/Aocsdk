@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "InterchangeNodes_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -1032,6 +1032,62 @@ static_assert(alignof(InterchangeLightNode_GetCustomIntensityUnits) == 0x000001,
 static_assert(sizeof(InterchangeLightNode_GetCustomIntensityUnits) == 0x000002, "Wrong size on InterchangeLightNode_GetCustomIntensityUnits");
 static_assert(offsetof(InterchangeLightNode_GetCustomIntensityUnits, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_GetCustomIntensityUnits::AttributeValue' has a wrong offset!");
 static_assert(offsetof(InterchangeLightNode_GetCustomIntensityUnits, ReturnValue) == 0x000001, "Member 'InterchangeLightNode_GetCustomIntensityUnits::ReturnValue' has a wrong offset!");
+
+// Function InterchangeNodes.InterchangeShaderNode.SetCustomShaderType
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeShaderNode_SetCustomShaderType final
+{
+public:
+	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeShaderNode_SetCustomShaderType) == 0x000008, "Wrong alignment on InterchangeShaderNode_SetCustomShaderType");
+static_assert(sizeof(InterchangeShaderNode_SetCustomShaderType) == 0x000018, "Wrong size on InterchangeShaderNode_SetCustomShaderType");
+static_assert(offsetof(InterchangeShaderNode_SetCustomShaderType, AttributeValue) == 0x000000, "Member 'InterchangeShaderNode_SetCustomShaderType::AttributeValue' has a wrong offset!");
+static_assert(offsetof(InterchangeShaderNode_SetCustomShaderType, ReturnValue) == 0x000010, "Member 'InterchangeShaderNode_SetCustomShaderType::ReturnValue' has a wrong offset!");
+
+// Function InterchangeNodes.InterchangeShaderNode.GetCustomShaderType
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeShaderNode_GetCustomShaderType final
+{
+public:
+	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeShaderNode_GetCustomShaderType) == 0x000008, "Wrong alignment on InterchangeShaderNode_GetCustomShaderType");
+static_assert(sizeof(InterchangeShaderNode_GetCustomShaderType) == 0x000018, "Wrong size on InterchangeShaderNode_GetCustomShaderType");
+static_assert(offsetof(InterchangeShaderNode_GetCustomShaderType, AttributeValue) == 0x000000, "Member 'InterchangeShaderNode_GetCustomShaderType::AttributeValue' has a wrong offset!");
+static_assert(offsetof(InterchangeShaderNode_GetCustomShaderType, ReturnValue) == 0x000010, "Member 'InterchangeShaderNode_GetCustomShaderType::ReturnValue' has a wrong offset!");
+
+// Function InterchangeNodes.InterchangeFunctionCallShaderNode.SetCustomMaterialFunction
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeFunctionCallShaderNode_SetCustomMaterialFunction final
+{
+public:
+	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction) == 0x000008, "Wrong alignment on InterchangeFunctionCallShaderNode_SetCustomMaterialFunction");
+static_assert(sizeof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction) == 0x000018, "Wrong size on InterchangeFunctionCallShaderNode_SetCustomMaterialFunction");
+static_assert(offsetof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction, AttributeValue) == 0x000000, "Member 'InterchangeFunctionCallShaderNode_SetCustomMaterialFunction::AttributeValue' has a wrong offset!");
+static_assert(offsetof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction, ReturnValue) == 0x000010, "Member 'InterchangeFunctionCallShaderNode_SetCustomMaterialFunction::ReturnValue' has a wrong offset!");
+
+// Function InterchangeNodes.InterchangeFunctionCallShaderNode.GetCustomMaterialFunction
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeFunctionCallShaderNode_GetCustomMaterialFunction final
+{
+public:
+	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction) == 0x000008, "Wrong alignment on InterchangeFunctionCallShaderNode_GetCustomMaterialFunction");
+static_assert(sizeof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction) == 0x000018, "Wrong size on InterchangeFunctionCallShaderNode_GetCustomMaterialFunction");
+static_assert(offsetof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction, AttributeValue) == 0x000000, "Member 'InterchangeFunctionCallShaderNode_GetCustomMaterialFunction::AttributeValue' has a wrong offset!");
+static_assert(offsetof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction, ReturnValue) == 0x000010, "Member 'InterchangeFunctionCallShaderNode_GetCustomMaterialFunction::ReturnValue' has a wrong offset!");
 
 // Function InterchangeNodes.InterchangePointLightNode.SetCustomLightFalloffExponent
 // 0x0008 (0x0008 - 0x0000)
@@ -2776,62 +2832,6 @@ static_assert(alignof(InterchangeShaderPortsAPI_MakeInputValueKey) == 0x000008, 
 static_assert(sizeof(InterchangeShaderPortsAPI_MakeInputValueKey) == 0x000020, "Wrong size on InterchangeShaderPortsAPI_MakeInputValueKey");
 static_assert(offsetof(InterchangeShaderPortsAPI_MakeInputValueKey, InputName) == 0x000000, "Member 'InterchangeShaderPortsAPI_MakeInputValueKey::InputName' has a wrong offset!");
 static_assert(offsetof(InterchangeShaderPortsAPI_MakeInputValueKey, ReturnValue) == 0x000010, "Member 'InterchangeShaderPortsAPI_MakeInputValueKey::ReturnValue' has a wrong offset!");
-
-// Function InterchangeNodes.InterchangeShaderNode.SetCustomShaderType
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeShaderNode_SetCustomShaderType final
-{
-public:
-	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeShaderNode_SetCustomShaderType) == 0x000008, "Wrong alignment on InterchangeShaderNode_SetCustomShaderType");
-static_assert(sizeof(InterchangeShaderNode_SetCustomShaderType) == 0x000018, "Wrong size on InterchangeShaderNode_SetCustomShaderType");
-static_assert(offsetof(InterchangeShaderNode_SetCustomShaderType, AttributeValue) == 0x000000, "Member 'InterchangeShaderNode_SetCustomShaderType::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_SetCustomShaderType, ReturnValue) == 0x000010, "Member 'InterchangeShaderNode_SetCustomShaderType::ReturnValue' has a wrong offset!");
-
-// Function InterchangeNodes.InterchangeShaderNode.GetCustomShaderType
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeShaderNode_GetCustomShaderType final
-{
-public:
-	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeShaderNode_GetCustomShaderType) == 0x000008, "Wrong alignment on InterchangeShaderNode_GetCustomShaderType");
-static_assert(sizeof(InterchangeShaderNode_GetCustomShaderType) == 0x000018, "Wrong size on InterchangeShaderNode_GetCustomShaderType");
-static_assert(offsetof(InterchangeShaderNode_GetCustomShaderType, AttributeValue) == 0x000000, "Member 'InterchangeShaderNode_GetCustomShaderType::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_GetCustomShaderType, ReturnValue) == 0x000010, "Member 'InterchangeShaderNode_GetCustomShaderType::ReturnValue' has a wrong offset!");
-
-// Function InterchangeNodes.InterchangeFunctionCallShaderNode.SetCustomMaterialFunction
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeFunctionCallShaderNode_SetCustomMaterialFunction final
-{
-public:
-	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction) == 0x000008, "Wrong alignment on InterchangeFunctionCallShaderNode_SetCustomMaterialFunction");
-static_assert(sizeof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction) == 0x000018, "Wrong size on InterchangeFunctionCallShaderNode_SetCustomMaterialFunction");
-static_assert(offsetof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction, AttributeValue) == 0x000000, "Member 'InterchangeFunctionCallShaderNode_SetCustomMaterialFunction::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction, ReturnValue) == 0x000010, "Member 'InterchangeFunctionCallShaderNode_SetCustomMaterialFunction::ReturnValue' has a wrong offset!");
-
-// Function InterchangeNodes.InterchangeFunctionCallShaderNode.GetCustomMaterialFunction
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeFunctionCallShaderNode_GetCustomMaterialFunction final
-{
-public:
-	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction) == 0x000008, "Wrong alignment on InterchangeFunctionCallShaderNode_GetCustomMaterialFunction");
-static_assert(sizeof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction) == 0x000018, "Wrong size on InterchangeFunctionCallShaderNode_GetCustomMaterialFunction");
-static_assert(offsetof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction, AttributeValue) == 0x000000, "Member 'InterchangeFunctionCallShaderNode_GetCustomMaterialFunction::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction, ReturnValue) == 0x000010, "Member 'InterchangeFunctionCallShaderNode_GetCustomMaterialFunction::ReturnValue' has a wrong offset!");
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.SetCustomIsAShaderFunction
 // 0x0002 (0x0002 - 0x0000)

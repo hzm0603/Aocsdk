@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "GameSystemsPlugin_structs.hpp"
 #include "PCG_structs.hpp"
 #include "PCG_classes.hpp"
-#include "E_FencePosition_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_FencePosition_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass IterateMeshesAlongSpline.IterateMeshesAlongSpline_C
-// 0x0288 (0x0310 - 0x0088)
+// 0x02F8 (0x0380 - 0x0088)
 class UIterateMeshesAlongSpline_C final : public UPCGBlueprintElement
 {
 public:
@@ -48,28 +48,31 @@ public:
 	int32                                         Random_Stream_Seed;                                // 0x0100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESplineCoordinateSpace                        Coordinate_Space;                                  // 0x0104(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_105[0xB];                                      // 0x0105(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAoCSplineMeshEntry                    Override_First_Mesh;                               // 0x0110(0x00D0)(Edit, BlueprintVisible)
-	struct FAoCSplineMeshEntry                    Override_Last_Mesh;                                // 0x01E0(0x00D0)(Edit, BlueprintVisible)
-	bool                                          Close_Loop;                                        // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B1[0x3];                                      // 0x02B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Mesh_Entry_Starting_Index;                         // 0x02B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Mesh_Attribute_Name;                               // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AddStringAttribute;                                // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUseSecondMeshList;                                // 0x02C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C2[0x6];                                      // 0x02C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAoCSplineMeshEntry>            Incoming_Fence_Objects;                            // 0x02C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         Stacks;                                            // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Stack_Spacing;                                     // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Failsafe;                                          // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Failsafe_Limit;                                    // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Stop_Debug;                                        // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F1[0x3];                                      // 0x02F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Alternate_Row_Offset;                              // 0x02F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Dilapidation;                                      // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Dilapidation_Level;                                // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Reverse_Spline_Direction;                          // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_FencePosition                               Spline_Position;                                   // 0x0309(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAoCSplineMeshEntry                    Override_First_Mesh;                               // 0x0110(0x0100)(Edit, BlueprintVisible)
+	struct FAoCSplineMeshEntry                    Override_Last_Mesh;                                // 0x0210(0x0100)(Edit, BlueprintVisible)
+	bool                                          Close_Loop;                                        // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_311[0x3];                                      // 0x0311(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Mesh_Entry_Starting_Index;                         // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Mesh_Attribute_Name;                               // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AddStringAttribute;                                // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseSecondMeshList;                                // 0x0321(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_322[0x6];                                      // 0x0322(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAoCSplineMeshEntry>            Incoming_Fence_Objects;                            // 0x0328(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         Stacks;                                            // 0x0338(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Stack_Spacing;                                     // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Failsafe;                                          // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Failsafe_Limit;                                    // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Stop_Debug;                                        // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_351[0x3];                                      // 0x0351(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Alternate_Row_Offset;                              // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Dilapidation;                                      // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Dilapidation_Level;                                // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Reverse_Spline_Direction;                          // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_FencePosition                               Spline_Position;                                   // 0x0369(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36A[0x2];                                      // 0x036A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Fence_Data_Index;                                  // 0x036C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Use_Road_Decals;                                   // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Assign_Length(const struct FAoCSplineMeshEntry& Entry, const struct FRandomStream& Stream, double* Total_Length, double* Scaled_Mesh_Length, double* Scale, float* Random_Padding, float* Random_Scale);
@@ -94,7 +97,7 @@ public:
 	}
 };
 static_assert(alignof(UIterateMeshesAlongSpline_C) == 0x000010, "Wrong alignment on UIterateMeshesAlongSpline_C");
-static_assert(sizeof(UIterateMeshesAlongSpline_C) == 0x000310, "Wrong size on UIterateMeshesAlongSpline_C");
+static_assert(sizeof(UIterateMeshesAlongSpline_C) == 0x000380, "Wrong size on UIterateMeshesAlongSpline_C");
 static_assert(offsetof(UIterateMeshesAlongSpline_C, Owner) == 0x000088, "Member 'UIterateMeshesAlongSpline_C::Owner' has a wrong offset!");
 static_assert(offsetof(UIterateMeshesAlongSpline_C, Spatial_Data) == 0x000090, "Member 'UIterateMeshesAlongSpline_C::Spatial_Data' has a wrong offset!");
 static_assert(offsetof(UIterateMeshesAlongSpline_C, Out_Points) == 0x000098, "Member 'UIterateMeshesAlongSpline_C::Out_Points' has a wrong offset!");
@@ -115,23 +118,25 @@ static_assert(offsetof(UIterateMeshesAlongSpline_C, Randomize) == 0x0000FD, "Mem
 static_assert(offsetof(UIterateMeshesAlongSpline_C, Random_Stream_Seed) == 0x000100, "Member 'UIterateMeshesAlongSpline_C::Random_Stream_Seed' has a wrong offset!");
 static_assert(offsetof(UIterateMeshesAlongSpline_C, Coordinate_Space) == 0x000104, "Member 'UIterateMeshesAlongSpline_C::Coordinate_Space' has a wrong offset!");
 static_assert(offsetof(UIterateMeshesAlongSpline_C, Override_First_Mesh) == 0x000110, "Member 'UIterateMeshesAlongSpline_C::Override_First_Mesh' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Override_Last_Mesh) == 0x0001E0, "Member 'UIterateMeshesAlongSpline_C::Override_Last_Mesh' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Close_Loop) == 0x0002B0, "Member 'UIterateMeshesAlongSpline_C::Close_Loop' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Mesh_Entry_Starting_Index) == 0x0002B4, "Member 'UIterateMeshesAlongSpline_C::Mesh_Entry_Starting_Index' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Mesh_Attribute_Name) == 0x0002B8, "Member 'UIterateMeshesAlongSpline_C::Mesh_Attribute_Name' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, AddStringAttribute) == 0x0002C0, "Member 'UIterateMeshesAlongSpline_C::AddStringAttribute' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, bUseSecondMeshList) == 0x0002C1, "Member 'UIterateMeshesAlongSpline_C::bUseSecondMeshList' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Incoming_Fence_Objects) == 0x0002C8, "Member 'UIterateMeshesAlongSpline_C::Incoming_Fence_Objects' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Stacks) == 0x0002D8, "Member 'UIterateMeshesAlongSpline_C::Stacks' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Stack_Spacing) == 0x0002E0, "Member 'UIterateMeshesAlongSpline_C::Stack_Spacing' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Failsafe) == 0x0002E8, "Member 'UIterateMeshesAlongSpline_C::Failsafe' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Failsafe_Limit) == 0x0002EC, "Member 'UIterateMeshesAlongSpline_C::Failsafe_Limit' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Stop_Debug) == 0x0002F0, "Member 'UIterateMeshesAlongSpline_C::Stop_Debug' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Alternate_Row_Offset) == 0x0002F4, "Member 'UIterateMeshesAlongSpline_C::Alternate_Row_Offset' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Dilapidation) == 0x0002F8, "Member 'UIterateMeshesAlongSpline_C::Dilapidation' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Dilapidation_Level) == 0x000300, "Member 'UIterateMeshesAlongSpline_C::Dilapidation_Level' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Reverse_Spline_Direction) == 0x000308, "Member 'UIterateMeshesAlongSpline_C::Reverse_Spline_Direction' has a wrong offset!");
-static_assert(offsetof(UIterateMeshesAlongSpline_C, Spline_Position) == 0x000309, "Member 'UIterateMeshesAlongSpline_C::Spline_Position' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Override_Last_Mesh) == 0x000210, "Member 'UIterateMeshesAlongSpline_C::Override_Last_Mesh' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Close_Loop) == 0x000310, "Member 'UIterateMeshesAlongSpline_C::Close_Loop' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Mesh_Entry_Starting_Index) == 0x000314, "Member 'UIterateMeshesAlongSpline_C::Mesh_Entry_Starting_Index' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Mesh_Attribute_Name) == 0x000318, "Member 'UIterateMeshesAlongSpline_C::Mesh_Attribute_Name' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, AddStringAttribute) == 0x000320, "Member 'UIterateMeshesAlongSpline_C::AddStringAttribute' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, bUseSecondMeshList) == 0x000321, "Member 'UIterateMeshesAlongSpline_C::bUseSecondMeshList' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Incoming_Fence_Objects) == 0x000328, "Member 'UIterateMeshesAlongSpline_C::Incoming_Fence_Objects' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Stacks) == 0x000338, "Member 'UIterateMeshesAlongSpline_C::Stacks' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Stack_Spacing) == 0x000340, "Member 'UIterateMeshesAlongSpline_C::Stack_Spacing' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Failsafe) == 0x000348, "Member 'UIterateMeshesAlongSpline_C::Failsafe' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Failsafe_Limit) == 0x00034C, "Member 'UIterateMeshesAlongSpline_C::Failsafe_Limit' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Stop_Debug) == 0x000350, "Member 'UIterateMeshesAlongSpline_C::Stop_Debug' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Alternate_Row_Offset) == 0x000354, "Member 'UIterateMeshesAlongSpline_C::Alternate_Row_Offset' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Dilapidation) == 0x000358, "Member 'UIterateMeshesAlongSpline_C::Dilapidation' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Dilapidation_Level) == 0x000360, "Member 'UIterateMeshesAlongSpline_C::Dilapidation_Level' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Reverse_Spline_Direction) == 0x000368, "Member 'UIterateMeshesAlongSpline_C::Reverse_Spline_Direction' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Spline_Position) == 0x000369, "Member 'UIterateMeshesAlongSpline_C::Spline_Position' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Fence_Data_Index) == 0x00036C, "Member 'UIterateMeshesAlongSpline_C::Fence_Data_Index' has a wrong offset!");
+static_assert(offsetof(UIterateMeshesAlongSpline_C, Use_Road_Decals) == 0x000370, "Member 'UIterateMeshesAlongSpline_C::Use_Road_Decals' has a wrong offset!");
 
 }
 

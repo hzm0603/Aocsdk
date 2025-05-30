@@ -57,8 +57,8 @@ static_assert(offsetof(AInstancedFoliageActor, FoliageActorGuid) == 0x0003A8, "M
 class alignas(0x10) UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStaticMeshComponent
 {
 public:
-	TMulticastInlineDelegate<void(int32 InstanceIndex, float Damage, class AController* InstigatedBy, const struct FVector& HitLocation, const struct FVector& ShotFromDirection, class UDamageType* DamageType, class AActor* DamageCauser)> OnInstanceTakePointDamage;                         // 0x0970(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(TArray<int32>& Instances, TArray<float>& Damages, class AController* InstigatedBy, const struct FVector& Origin, float MaxRadius, class UDamageType* DamageType, class AActor* DamageCauser)> OnInstanceTakeRadialDamage;                        // 0x0980(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 InstanceIndex, float Damage, class AController* InstigatedBy, const struct FVector& HitLocation, const struct FVector& ShotFromDirection, const class UDamageType* DamageType, class AActor* DamageCauser)> OnInstanceTakePointDamage; // 0x0970(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<int32>& Instances, const TArray<float>& Damages, class AController* InstigatedBy, const struct FVector& Origin, float MaxRadius, const class UDamageType* DamageType, class AActor* DamageCauser)> OnInstanceTakeRadialDamage; // 0x0980(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                          bEnableDiscardOnLoad;                              // 0x0990(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_991[0x3];                                      // 0x0991(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   DDERecordName;                                     // 0x0994(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -354,7 +354,7 @@ public:
 	bool                                          bShouldAttachToBaseComponent;                      // 0x0520(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bStaticMeshOnly;                                   // 0x0521(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_522[0x6];                                      // 0x0522(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UFoliageInstancedStaticMeshComponent> StaticMeshOnlyComponentClass;                      // 0x0528(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UFoliageInstancedStaticMeshComponent> StaticMeshOnlyComponentClass;            // 0x0528(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -381,7 +381,7 @@ public:
 	class UStaticMesh*                            Mesh;                                              // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UMaterialInterface*>             OverrideMaterials;                                 // 0x0520(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class UMaterialInterface*>             NaniteOverrideMaterials;                           // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
-	TSubclassOf<class UFoliageInstancedStaticMeshComponent> ComponentClass;                                    // 0x0540(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UFoliageInstancedStaticMeshComponent> ComponentClass;                          // 0x0540(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -407,7 +407,7 @@ class UGatherableFISMC : public UAOCFoliageInstancedStaticMeshComponent
 public:
 	TArray<struct FFoliageInstanceData>           FoliageInstanceData;                               // 0x09D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9E0[0x8];                                      // 0x09E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UHierarchicalInstancedStaticMeshComponent*> FISMCLookup;                                       // 0x09E8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UHierarchicalInstancedStaticMeshComponent*> FISMCLookup;                            // 0x09E8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	TMap<class FName, EFoliageState>              FoliageStateLookup;                                // 0x09F8(0x0050)(NativeAccessSpecifierPublic)
 	TMap<EFoliageState, struct FInstanceOIData>   PerInstanceOIData;                                 // 0x0A48(0x0050)(NativeAccessSpecifierPublic)
 	TMap<int32, struct FRuntimeSkeletalMeshData>  SkeletalMeshRuntimeData;                           // 0x0A98(0x0050)(NativeAccessSpecifierPublic)
@@ -424,7 +424,7 @@ public:
 	float                                         GatherableAngle;                                   // 0x0C04(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CollisionRadius;                                   // 0x0C08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C0C[0x4];                                      // 0x0C0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<EFoliageState, struct FFoliageInstanceStateData> FoliageInstanceStateData;                          // 0x0C10(0x0050)(NativeAccessSpecifierPublic)
+	TMap<EFoliageState, struct FFoliageInstanceStateData> FoliageInstanceStateData;                  // 0x0C10(0x0050)(NativeAccessSpecifierPublic)
 	float                                         SkeletalMeshRevertDuration;                        // 0x0C60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C64[0x1C];                                     // 0x0C64(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -511,8 +511,8 @@ public:
 	int64                                         RecordId;                                          // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFoliageState                                 PaintState;                                        // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<EFoliageState, class UHierarchicalInstancedStaticMeshComponent*> ProxyFISMCLookup;                                  // 0x0138(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	TMap<uint16, struct FFoliageInstanceProxyData> OriginalInstanceProxyDataLookup;                   // 0x0188(0x0050)(NativeAccessSpecifierPublic)
+	TMap<EFoliageState, class UHierarchicalInstancedStaticMeshComponent*> ProxyFISMCLookup;          // 0x0138(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<uint16, struct FFoliageInstanceProxyData> OriginalInstanceProxyDataLookup;                  // 0x0188(0x0050)(NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D8[0x8];                                      // 0x01D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFMapuint16FInstancedFoliageState      IndexedStates;                                     // 0x01E0(0x01F0)(Net, RepNotify, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_3D0[0x10];                                     // 0x03D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -551,8 +551,8 @@ static_assert(offsetof(UIntrepidFoliageStateComponent, IndexedStates) == 0x0001E
 class UIntrepidFoliageSystem final : public UIntrepidSystem
 {
 public:
-	TMap<class FName, TWeakObjectPtr<class AInstancedFoliageActor>> FoliageActorLookup;                                // 0x00A0(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
-	TMap<class FName, TWeakObjectPtr<class AIntrepidStateIFA>> FoliageStateActorLookup;                           // 0x00F0(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<class FName, TWeakObjectPtr<class AInstancedFoliageActor>> FoliageActorLookup;              // 0x00A0(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<class FName, TWeakObjectPtr<class AIntrepidStateIFA>> FoliageStateActorLookup;              // 0x00F0(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
 	uint8                                         Pad_140[0x58];                                     // 0x0140(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -575,7 +575,7 @@ static_assert(offsetof(UIntrepidFoliageSystem, FoliageStateActorLookup) == 0x000
 class AIntrepidStateIFA final : public AActor
 {
 public:
-	TMap<class FName, class UIntrepidFoliageStateComponent*> FoliageStateComponentLookup;                       // 0x0348(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<class FName, class UIntrepidFoliageStateComponent*> FoliageStateComponentLookup;            // 0x0348(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	class FName                                   FoliageName;                                       // 0x0398(0x0008)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        RuntimeNetCullDistance;                            // 0x03A0(0x0008)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -756,7 +756,7 @@ public:
 	TArray<struct FFoliageTypeObject>             FoliageTypes;                                      // 0x0060(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
 	bool                                          bUseOverrideFoliageTerrainMaterials;               // 0x0070(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TSoftObjectPtr<class UMaterialInterface>> OverrideFoliageTerrainMaterials;                   // 0x0078(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<TSoftObjectPtr<class UMaterialInterface>> OverrideFoliageTerrainMaterials;                // 0x0078(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_88[0x18];                                      // 0x0088(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

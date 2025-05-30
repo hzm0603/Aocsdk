@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BanditRaider_RareSpawn_VanguardRowan.BanditRaider_RareSpawn_VanguardRowan_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ABanditRaider_RareSpawn_VanguardRowan_C final : public ABandit_Raider3_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABanditRaider_RareSpawn_VanguardRowan_C) == 0x000010, "Wrong alignment on ABanditRaider_RareSpawn_VanguardRowan_C");
-static_assert(sizeof(ABanditRaider_RareSpawn_VanguardRowan_C) == 0x001DB0, "Wrong size on ABanditRaider_RareSpawn_VanguardRowan_C");
+static_assert(sizeof(ABanditRaider_RareSpawn_VanguardRowan_C) == 0x001D70, "Wrong size on ABanditRaider_RareSpawn_VanguardRowan_C");
 
 }
 

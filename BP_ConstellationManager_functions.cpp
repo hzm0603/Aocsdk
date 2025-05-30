@@ -20,7 +20,7 @@ namespace SDK
 // Function BP_ConstellationManager.BP_ConstellationManager_C.Rotate Constellations
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FRotator                         New_Rotation                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FRotator&                  New_Rotation                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // double                                  Normalized_Sunrise                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_ConstellationManager_C::Rotate_Constellations(const struct FRotator& New_Rotation, double Normalized_Sunrise)

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_PC_MNT_Hippogriff.ABP_PC_MNT_Hippogriff_C
-// 0x0000 (0x8C50 - 0x8C50)
+// 0x0000 (0x8C60 - 0x8C60)
 class UABP_PC_MNT_Hippogriff_C final : public UABP_PC_MNT_Gryphon_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UABP_PC_MNT_Hippogriff_C) == 0x000010, "Wrong alignment on UABP_PC_MNT_Hippogriff_C");
-static_assert(sizeof(UABP_PC_MNT_Hippogriff_C) == 0x008C50, "Wrong size on UABP_PC_MNT_Hippogriff_C");
+static_assert(sizeof(UABP_PC_MNT_Hippogriff_C) == 0x008C60, "Wrong size on UABP_PC_MNT_Hippogriff_C");
 
 }
 

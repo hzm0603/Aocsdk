@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function Cultist.Cultist_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ACultist_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Cultist_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Cultist.Cultist_C.ExecuteUbergraph_Cultist
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void ACultist_C::ExecuteUbergraph_Cultist(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Cultist.Cultist_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ACultist_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Cultist_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

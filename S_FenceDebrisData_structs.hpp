@@ -23,13 +23,15 @@ struct FS_FenceDebrisData final
 public:
 	int32                                         Seed_10_7121454F4048D7A8A6CF3EB927645BB1;          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          PruneOverlappingDebris_7_315FF82C4FB462E0900EAD9094DAFA2B; // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          UseSurfaceRotations_13_6B8147924C5AB8398E6580A1003F4290; // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAoCSplineDebrisEntry>          DebrisObjects_3_283423B042F7638871FEB19C75026C13;  // 0x0008(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FS_FenceDebrisData) == 0x000008, "Wrong alignment on FS_FenceDebrisData");
 static_assert(sizeof(FS_FenceDebrisData) == 0x000018, "Wrong size on FS_FenceDebrisData");
 static_assert(offsetof(FS_FenceDebrisData, Seed_10_7121454F4048D7A8A6CF3EB927645BB1) == 0x000000, "Member 'FS_FenceDebrisData::Seed_10_7121454F4048D7A8A6CF3EB927645BB1' has a wrong offset!");
 static_assert(offsetof(FS_FenceDebrisData, PruneOverlappingDebris_7_315FF82C4FB462E0900EAD9094DAFA2B) == 0x000004, "Member 'FS_FenceDebrisData::PruneOverlappingDebris_7_315FF82C4FB462E0900EAD9094DAFA2B' has a wrong offset!");
+static_assert(offsetof(FS_FenceDebrisData, UseSurfaceRotations_13_6B8147924C5AB8398E6580A1003F4290) == 0x000005, "Member 'FS_FenceDebrisData::UseSurfaceRotations_13_6B8147924C5AB8398E6580A1003F4290' has a wrong offset!");
 static_assert(offsetof(FS_FenceDebrisData, DebrisObjects_3_283423B042F7638871FEB19C75026C13) == 0x000008, "Member 'FS_FenceDebrisData::DebrisObjects_3_283423B042F7638871FEB19C75026C13' has a wrong offset!");
 
 }

@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function AoCGameStateBP.AoCGameStateBP_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct AoCGameStateBP_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(AoCGameStateBP_C_ReceiveTick) == 0x000004, "Wrong alignment on AoCGameStateBP_C_ReceiveTick");
+static_assert(sizeof(AoCGameStateBP_C_ReceiveTick) == 0x000004, "Wrong size on AoCGameStateBP_C_ReceiveTick");
+static_assert(offsetof(AoCGameStateBP_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'AoCGameStateBP_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
 // Function AoCGameStateBP.AoCGameStateBP_C.ExecuteUbergraph_AoCGameStateBP
 // 0x0008 (0x0008 - 0x0000)
 struct AoCGameStateBP_C_ExecuteUbergraph_AoCGameStateBP final
@@ -26,17 +37,6 @@ static_assert(alignof(AoCGameStateBP_C_ExecuteUbergraph_AoCGameStateBP) == 0x000
 static_assert(sizeof(AoCGameStateBP_C_ExecuteUbergraph_AoCGameStateBP) == 0x000008, "Wrong size on AoCGameStateBP_C_ExecuteUbergraph_AoCGameStateBP");
 static_assert(offsetof(AoCGameStateBP_C_ExecuteUbergraph_AoCGameStateBP, EntryPoint) == 0x000000, "Member 'AoCGameStateBP_C_ExecuteUbergraph_AoCGameStateBP::EntryPoint' has a wrong offset!");
 static_assert(offsetof(AoCGameStateBP_C_ExecuteUbergraph_AoCGameStateBP, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'AoCGameStateBP_C_ExecuteUbergraph_AoCGameStateBP::K2Node_Event_DeltaSeconds' has a wrong offset!");
-
-// Function AoCGameStateBP.AoCGameStateBP_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct AoCGameStateBP_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(AoCGameStateBP_C_ReceiveTick) == 0x000004, "Wrong alignment on AoCGameStateBP_C_ReceiveTick");
-static_assert(sizeof(AoCGameStateBP_C_ReceiveTick) == 0x000004, "Wrong size on AoCGameStateBP_C_ReceiveTick");
-static_assert(offsetof(AoCGameStateBP_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'AoCGameStateBP_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 }
 

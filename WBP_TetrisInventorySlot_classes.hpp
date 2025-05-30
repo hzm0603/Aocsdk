@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TetrisInventorySlot.WBP_TetrisInventorySlot_C
-// 0x0010 (0x0430 - 0x0420)
+// 0x0010 (0x0580 - 0x0570)
 class UWBP_TetrisInventorySlot_C final : public UTetrisInventorySlot
 {
 public:
-	class UImage*                                 IMG_SlotPaddingShadow;                             // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMenuAnchor*                            SplitStackAnchor;                                  // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_SlotPaddingShadow;                             // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuAnchor*                            SplitStackAnchor;                                  // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TetrisInventorySlot_C) == 0x000008, "Wrong alignment on UWBP_TetrisInventorySlot_C");
-static_assert(sizeof(UWBP_TetrisInventorySlot_C) == 0x000430, "Wrong size on UWBP_TetrisInventorySlot_C");
-static_assert(offsetof(UWBP_TetrisInventorySlot_C, IMG_SlotPaddingShadow) == 0x000420, "Member 'UWBP_TetrisInventorySlot_C::IMG_SlotPaddingShadow' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisInventorySlot_C, SplitStackAnchor) == 0x000428, "Member 'UWBP_TetrisInventorySlot_C::SplitStackAnchor' has a wrong offset!");
+static_assert(sizeof(UWBP_TetrisInventorySlot_C) == 0x000580, "Wrong size on UWBP_TetrisInventorySlot_C");
+static_assert(offsetof(UWBP_TetrisInventorySlot_C, IMG_SlotPaddingShadow) == 0x000570, "Member 'UWBP_TetrisInventorySlot_C::IMG_SlotPaddingShadow' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisInventorySlot_C, SplitStackAnchor) == 0x000578, "Member 'UWBP_TetrisInventorySlot_C::SplitStackAnchor' has a wrong offset!");
 
 }
 

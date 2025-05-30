@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "StateTreeModule_structs.hpp"
-#include "GameSystemsPlugin_structs.hpp"
 #include "AIModule_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
 
 
 namespace SDK::Params

@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TetrisInventory.WBP_TetrisInventory_C
-// 0x0008 (0x0410 - 0x0408)
+// 0x0008 (0x03D0 - 0x03C8)
 class UWBP_TetrisInventory_C final : public UTetrisInventory
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_WBP_TetrisInventory(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_TetrisInventory(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -39,8 +39,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TetrisInventory_C) == 0x000008, "Wrong alignment on UWBP_TetrisInventory_C");
-static_assert(sizeof(UWBP_TetrisInventory_C) == 0x000410, "Wrong size on UWBP_TetrisInventory_C");
-static_assert(offsetof(UWBP_TetrisInventory_C, UberGraphFrame) == 0x000408, "Member 'UWBP_TetrisInventory_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(UWBP_TetrisInventory_C) == 0x0003D0, "Wrong size on UWBP_TetrisInventory_C");
+static_assert(offsetof(UWBP_TetrisInventory_C, UberGraphFrame) == 0x0003C8, "Member 'UWBP_TetrisInventory_C::UberGraphFrame' has a wrong offset!");
 
 }
 

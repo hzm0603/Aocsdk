@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass HumanoidMonsterMaster.HumanoidMonsterMaster_C
-// 0x0010 (0x1DA0 - 0x1D90)
+// 0x0010 (0x1D60 - 0x1D50)
 class AHumanoidMonsterMaster_C : public ANPCPawn_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_HumanoidMonsterMaster_C;            // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	EWeaponAnimSet                                Weapon_0_0;                                        // 0x1D98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_HumanoidMonsterMaster_C;            // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	EWeaponAnimSet                                Weapon_0_0;                                        // 0x1D58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_HumanoidMonsterMaster(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()
@@ -41,9 +41,9 @@ public:
 	}
 };
 static_assert(alignof(AHumanoidMonsterMaster_C) == 0x000010, "Wrong alignment on AHumanoidMonsterMaster_C");
-static_assert(sizeof(AHumanoidMonsterMaster_C) == 0x001DA0, "Wrong size on AHumanoidMonsterMaster_C");
-static_assert(offsetof(AHumanoidMonsterMaster_C, UberGraphFrame_HumanoidMonsterMaster_C) == 0x001D90, "Member 'AHumanoidMonsterMaster_C::UberGraphFrame_HumanoidMonsterMaster_C' has a wrong offset!");
-static_assert(offsetof(AHumanoidMonsterMaster_C, Weapon_0_0) == 0x001D98, "Member 'AHumanoidMonsterMaster_C::Weapon_0_0' has a wrong offset!");
+static_assert(sizeof(AHumanoidMonsterMaster_C) == 0x001D60, "Wrong size on AHumanoidMonsterMaster_C");
+static_assert(offsetof(AHumanoidMonsterMaster_C, UberGraphFrame_HumanoidMonsterMaster_C) == 0x001D50, "Member 'AHumanoidMonsterMaster_C::UberGraphFrame_HumanoidMonsterMaster_C' has a wrong offset!");
+static_assert(offsetof(AHumanoidMonsterMaster_C, Weapon_0_0) == 0x001D58, "Member 'AHumanoidMonsterMaster_C::Weapon_0_0' has a wrong offset!");
 
 }
 

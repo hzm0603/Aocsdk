@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ABLScript_Elderdragon_Fire_FlamePillarSummon.ABLScript_Elderdragon_Fire_FlamePillarSummon_C
-// 0x0020 (0x1088 - 0x1068)
+// 0x0020 (0x1090 - 0x1070)
 class UABLScript_Elderdragon_Fire_FlamePillarSummon_C final : public UAoCNotifyBlueprint
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1068(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        Summon_Range;                                      // 0x1070(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Flame_Pillar_Class;                                // 0x1078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AElderDragon_Fire_C*                    Agent;                                             // 0x1080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1070(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        Summon_Range;                                      // 0x1078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Flame_Pillar_Class;                                // 0x1080(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AElderDragon_Fire_C*                    Agent;                                             // 0x1088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ABLScript_Elderdragon_Fire_FlamePillarSummon(int32 EntryPoint);
@@ -42,11 +42,11 @@ public:
 	}
 };
 static_assert(alignof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C) == 0x000008, "Wrong alignment on UABLScript_Elderdragon_Fire_FlamePillarSummon_C");
-static_assert(sizeof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C) == 0x001088, "Wrong size on UABLScript_Elderdragon_Fire_FlamePillarSummon_C");
-static_assert(offsetof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C, UberGraphFrame) == 0x001068, "Member 'UABLScript_Elderdragon_Fire_FlamePillarSummon_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C, Summon_Range) == 0x001070, "Member 'UABLScript_Elderdragon_Fire_FlamePillarSummon_C::Summon_Range' has a wrong offset!");
-static_assert(offsetof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C, Flame_Pillar_Class) == 0x001078, "Member 'UABLScript_Elderdragon_Fire_FlamePillarSummon_C::Flame_Pillar_Class' has a wrong offset!");
-static_assert(offsetof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C, Agent) == 0x001080, "Member 'UABLScript_Elderdragon_Fire_FlamePillarSummon_C::Agent' has a wrong offset!");
+static_assert(sizeof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C) == 0x001090, "Wrong size on UABLScript_Elderdragon_Fire_FlamePillarSummon_C");
+static_assert(offsetof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C, UberGraphFrame) == 0x001070, "Member 'UABLScript_Elderdragon_Fire_FlamePillarSummon_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C, Summon_Range) == 0x001078, "Member 'UABLScript_Elderdragon_Fire_FlamePillarSummon_C::Summon_Range' has a wrong offset!");
+static_assert(offsetof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C, Flame_Pillar_Class) == 0x001080, "Member 'UABLScript_Elderdragon_Fire_FlamePillarSummon_C::Flame_Pillar_Class' has a wrong offset!");
+static_assert(offsetof(UABLScript_Elderdragon_Fire_FlamePillarSummon_C, Agent) == 0x001088, "Member 'UABLScript_Elderdragon_Fire_FlamePillarSummon_C::Agent' has a wrong offset!");
 
 }
 

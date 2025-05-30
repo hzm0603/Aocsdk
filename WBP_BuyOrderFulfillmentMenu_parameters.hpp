@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_BuyOrderFulfillmentMenu.WBP_BuyOrderFulfillmentMenu_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BuyOrderFulfillmentMenu_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_BuyOrderFulfillmentMenu_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_BuyOrderFulfillmentMenu_C_PreConstruct");
+static_assert(sizeof(WBP_BuyOrderFulfillmentMenu_C_PreConstruct) == 0x000001, "Wrong size on WBP_BuyOrderFulfillmentMenu_C_PreConstruct");
+static_assert(offsetof(WBP_BuyOrderFulfillmentMenu_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_BuyOrderFulfillmentMenu_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WBP_BuyOrderFulfillmentMenu.WBP_BuyOrderFulfillmentMenu_C.ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu
 // 0x0028 (0x0028 - 0x0000)
 struct WBP_BuyOrderFulfillmentMenu_C_ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu final
@@ -43,17 +54,6 @@ static_assert(offsetof(WBP_BuyOrderFulfillmentMenu_C_ExecuteUbergraph_WBP_BuyOrd
 static_assert(offsetof(WBP_BuyOrderFulfillmentMenu_C_ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu, CallFunc_HasAnyChildren_ReturnValue) == 0x00001C, "Member 'WBP_BuyOrderFulfillmentMenu_C_ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu::CallFunc_HasAnyChildren_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuyOrderFulfillmentMenu_C_ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu, CallFunc_IsValid_ReturnValue) == 0x00001D, "Member 'WBP_BuyOrderFulfillmentMenu_C_ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuyOrderFulfillmentMenu_C_ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu, CallFunc_AddChild_ReturnValue) == 0x000020, "Member 'WBP_BuyOrderFulfillmentMenu_C_ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-
-// Function WBP_BuyOrderFulfillmentMenu.WBP_BuyOrderFulfillmentMenu_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_BuyOrderFulfillmentMenu_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_BuyOrderFulfillmentMenu_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_BuyOrderFulfillmentMenu_C_PreConstruct");
-static_assert(sizeof(WBP_BuyOrderFulfillmentMenu_C_PreConstruct) == 0x000001, "Wrong size on WBP_BuyOrderFulfillmentMenu_C_PreConstruct");
-static_assert(offsetof(WBP_BuyOrderFulfillmentMenu_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_BuyOrderFulfillmentMenu_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

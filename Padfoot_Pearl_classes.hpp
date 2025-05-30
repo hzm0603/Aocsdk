@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Padfoot_Pearl.Padfoot_Pearl_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class APadfoot_Pearl_C final : public ABandit_Rogue_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(APadfoot_Pearl_C) == 0x000010, "Wrong alignment on APadfoot_Pearl_C");
-static_assert(sizeof(APadfoot_Pearl_C) == 0x001DB0, "Wrong size on APadfoot_Pearl_C");
+static_assert(sizeof(APadfoot_Pearl_C) == 0x001D70, "Wrong size on APadfoot_Pearl_C");
 
 }
 

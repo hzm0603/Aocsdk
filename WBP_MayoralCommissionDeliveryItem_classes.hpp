@@ -18,17 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MayoralCommissionDeliveryItem.WBP_MayoralCommissionDeliveryItem_C
-// 0x0018 (0x03F0 - 0x03D8)
+// 0x0018 (0x03C8 - 0x03B0)
 class UWBP_MayoralCommissionDeliveryItem_C final : public UMayoralCommissionDeliveryItem
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAoCCommonTextBlock*                    TB_CollectRewardsLabel;                            // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_CompleteLabel;                                  // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAoCCommonTextBlock*                    TB_CollectRewardsLabel;                            // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_CompleteLabel;                                  // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_MayoralCommissionDeliveryItem(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	TSubclassOf<class UCommonBorderStyle> GetOddBorderStyle();
+	TSubclassOf<class UCommonBorderStyle> GetEvenBorderStyle();
+	class UPanelWidget* GetBorderContainer();
+	void ExecuteUbergraph_WBP_MayoralCommissionDeliveryItem(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,10 +44,10 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MayoralCommissionDeliveryItem_C) == 0x000008, "Wrong alignment on UWBP_MayoralCommissionDeliveryItem_C");
-static_assert(sizeof(UWBP_MayoralCommissionDeliveryItem_C) == 0x0003F0, "Wrong size on UWBP_MayoralCommissionDeliveryItem_C");
-static_assert(offsetof(UWBP_MayoralCommissionDeliveryItem_C, UberGraphFrame) == 0x0003D8, "Member 'UWBP_MayoralCommissionDeliveryItem_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionDeliveryItem_C, TB_CollectRewardsLabel) == 0x0003E0, "Member 'UWBP_MayoralCommissionDeliveryItem_C::TB_CollectRewardsLabel' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionDeliveryItem_C, TB_CompleteLabel) == 0x0003E8, "Member 'UWBP_MayoralCommissionDeliveryItem_C::TB_CompleteLabel' has a wrong offset!");
+static_assert(sizeof(UWBP_MayoralCommissionDeliveryItem_C) == 0x0003C8, "Wrong size on UWBP_MayoralCommissionDeliveryItem_C");
+static_assert(offsetof(UWBP_MayoralCommissionDeliveryItem_C, UberGraphFrame) == 0x0003B0, "Member 'UWBP_MayoralCommissionDeliveryItem_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionDeliveryItem_C, TB_CollectRewardsLabel) == 0x0003B8, "Member 'UWBP_MayoralCommissionDeliveryItem_C::TB_CollectRewardsLabel' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionDeliveryItem_C, TB_CompleteLabel) == 0x0003C0, "Member 'UWBP_MayoralCommissionDeliveryItem_C::TB_CompleteLabel' has a wrong offset!");
 
 }
 

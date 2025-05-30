@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass AshenHaunt_Base.AshenHaunt_Base_C
-// 0x0010 (0x1DA0 - 0x1D90)
+// 0x0010 (0x1D60 - 0x1D50)
 class AAshenHaunt_Base_C : public ANPCPawn_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_AshenHaunt_Base_C;                  // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                 WeaponMesh;                                        // 0x1D98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_AshenHaunt_Base_C;                  // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                 WeaponMesh;                                        // 0x1D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_AshenHaunt_Base(int32 EntryPoint);
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(AAshenHaunt_Base_C) == 0x000010, "Wrong alignment on AAshenHaunt_Base_C");
-static_assert(sizeof(AAshenHaunt_Base_C) == 0x001DA0, "Wrong size on AAshenHaunt_Base_C");
-static_assert(offsetof(AAshenHaunt_Base_C, UberGraphFrame_AshenHaunt_Base_C) == 0x001D90, "Member 'AAshenHaunt_Base_C::UberGraphFrame_AshenHaunt_Base_C' has a wrong offset!");
-static_assert(offsetof(AAshenHaunt_Base_C, WeaponMesh) == 0x001D98, "Member 'AAshenHaunt_Base_C::WeaponMesh' has a wrong offset!");
+static_assert(sizeof(AAshenHaunt_Base_C) == 0x001D60, "Wrong size on AAshenHaunt_Base_C");
+static_assert(offsetof(AAshenHaunt_Base_C, UberGraphFrame_AshenHaunt_Base_C) == 0x001D50, "Member 'AAshenHaunt_Base_C::UberGraphFrame_AshenHaunt_Base_C' has a wrong offset!");
+static_assert(offsetof(AAshenHaunt_Base_C, WeaponMesh) == 0x001D58, "Member 'AAshenHaunt_Base_C::WeaponMesh' has a wrong offset!");
 
 }
 

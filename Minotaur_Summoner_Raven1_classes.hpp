@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Minotaur_Summoner_Raven1.Minotaur_Summoner_Raven1_C
-// 0x0000 (0x1DE0 - 0x1DE0)
+// 0x0000 (0x1DA0 - 0x1DA0)
 class AMinotaur_Summoner_Raven1_C : public AMinotaur_Summoner_Raven_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AMinotaur_Summoner_Raven1_C) == 0x000010, "Wrong alignment on AMinotaur_Summoner_Raven1_C");
-static_assert(sizeof(AMinotaur_Summoner_Raven1_C) == 0x001DE0, "Wrong size on AMinotaur_Summoner_Raven1_C");
+static_assert(sizeof(AMinotaur_Summoner_Raven1_C) == 0x001DA0, "Wrong size on AMinotaur_Summoner_Raven1_C");
 
 }
 

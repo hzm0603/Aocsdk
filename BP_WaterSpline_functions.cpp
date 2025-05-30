@@ -56,8 +56,8 @@ void ABP_WaterSpline_C::Align_Edge_Spline(class USplineComponent* Spline_0)
 // Parameters:
 // class UDynamicMeshComponent*            Dynamic_Mesh                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UMaterialInterface*               Material                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FString                           Asset_Tag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class UStaticMesh*                      Out_SM                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Asset_Tag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UStaticMesh**                     Out_SM                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterSpline_C::Bake_Mesh(class UDynamicMeshComponent* Dynamic_Mesh, class UMaterialInterface* Material, const class FString& Asset_Tag, class UStaticMesh** Out_SM)
 {
@@ -136,10 +136,10 @@ void ABP_WaterSpline_C::Bake_Water_Meshes()
 // Function BP_WaterSpline.BP_WaterSpline_C.Build Display Mesh
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FVector2D>                PolylineVerts                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FTransform>               SweepPath                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<double>                          U                                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<double>                          V                                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FVector2D>&               PolylineVerts                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FTransform>&              SweepPath                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<double>&                         U                                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<double>&                         V                                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void ABP_WaterSpline_C::Build_Display_Mesh(TArray<struct FVector2D>& PolylineVerts, TArray<struct FTransform>& SweepPath, TArray<double>& U, TArray<double>& V)
 {
@@ -169,8 +169,8 @@ void ABP_WaterSpline_C::Build_Display_Mesh(TArray<struct FVector2D>& PolylineVer
 // Parameters:
 // double                                  Width                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Divisions                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FVector2D>                Positions_0                                            (Parm, OutParm)
-// TArray<double>                          UVs_0                                                  (Parm, OutParm)
+// TArray<struct FVector2D>*               Positions_0                                            (Parm, OutParm)
+// TArray<double>*                         UVs_0                                                  (Parm, OutParm)
 
 void ABP_WaterSpline_C::Build_Profile_for_Spline(double Width, int32 Divisions, TArray<struct FVector2D>* Positions_0, TArray<double>* UVs_0)
 {
@@ -197,9 +197,9 @@ void ABP_WaterSpline_C::Build_Profile_for_Spline(double Width, int32 Divisions, 
 // Function BP_WaterSpline.BP_WaterSpline_C.Check if Mesh Asset Exists
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Asset_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    Exists_                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UStaticMesh*                      Return_Mesh                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Asset_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool*                                   Exists_                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UStaticMesh**                     Return_Mesh                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterSpline_C::Check_if_Mesh_Asset_Exists(const class FString& Asset_Name, bool* Exists_, class UStaticMesh** Return_Mesh)
 {
@@ -225,7 +225,7 @@ void ABP_WaterSpline_C::Check_if_Mesh_Asset_Exists(const class FString& Asset_Na
 // Function BP_WaterSpline.BP_WaterSpline_C.CheckInvalidateMeshes
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Invalidated_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Invalidated_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterSpline_C::CheckInvalidateMeshes(bool* Invalidated_0)
 {
@@ -334,8 +334,8 @@ void ABP_WaterSpline_C::Fix_Up_Meshes()
 // Function BP_WaterSpline.BP_WaterSpline_C.Get Current at Location
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          World_Location                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        Current_Velocity                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   World_Location                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D*                       Current_Velocity                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterSpline_C::Get_Current_at_Location(const struct FVector& World_Location, struct FVector2D* Current_Velocity)
 {
@@ -358,10 +358,10 @@ void ABP_WaterSpline_C::Get_Current_at_Location(const struct FVector& World_Loca
 // Function BP_WaterSpline.BP_WaterSpline_C.Get Samples From Spline
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USplineComponent*                 Spline_0                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const class USplineComponent*           Spline_0                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // double                                  Spacing                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FTransform>               Frames_0                                               (Parm, OutParm)
-// TArray<double>                          FrameTimes                                             (Parm, OutParm)
+// TArray<struct FTransform>*              Frames_0                                               (Parm, OutParm)
+// TArray<double>*                         FrameTimes                                             (Parm, OutParm)
 
 void ABP_WaterSpline_C::Get_Samples_From_Spline(const class USplineComponent* Spline_0, double Spacing, TArray<struct FTransform>* Frames_0, TArray<double>* FrameTimes)
 {
@@ -389,8 +389,8 @@ void ABP_WaterSpline_C::Get_Samples_From_Spline(const class USplineComponent* Sp
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USplineComponent*                 Spline_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          LocalPosition                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          SplineDir                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   LocalPosition                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         SplineDir                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterSpline_C::Get_Spline_Dir_From_Local_Position(class USplineComponent* Spline_0, const struct FVector& LocalPosition, struct FVector* SplineDir)
 {
@@ -414,7 +414,7 @@ void ABP_WaterSpline_C::Get_Spline_Dir_From_Local_Position(class USplineComponen
 // Function BP_WaterSpline.BP_WaterSpline_C.GetControlledPawnLocation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FVector                          ControlledPawnLocation                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         ControlledPawnLocation                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterSpline_C::GetControlledPawnLocation(struct FVector* ControlledPawnLocation)
 {
@@ -435,7 +435,7 @@ void ABP_WaterSpline_C::GetControlledPawnLocation(struct FVector* ControlledPawn
 // Function BP_WaterSpline.BP_WaterSpline_C.GetPlayerControllerCameraRotation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FRotator                         PlayerControllerCameraRotation                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FRotator*                        PlayerControllerCameraRotation                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_WaterSpline_C::GetPlayerControllerCameraRotation(struct FRotator* PlayerControllerCameraRotation)
 {
@@ -510,12 +510,12 @@ void ABP_WaterSpline_C::Init_Padded_Spline()
 // Function BP_WaterSpline.BP_WaterSpline_C.Intersect Lines
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D                        P0                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        P1                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        P2                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        P3                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        Intersection_Point                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Intersected_                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 P0                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 P1                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 P2                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 P3                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D*                       Intersection_Point                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Intersected_                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterSpline_C::Intersect_Lines(const struct FVector2D& P0, const struct FVector2D& P1, const struct FVector2D& P2, const struct FVector2D& P3, struct FVector2D* Intersection_Point, bool* Intersected_)
 {
@@ -668,7 +668,7 @@ void ABP_WaterSpline_C::RenderingMinimap(bool Rendering)
 // Parameters:
 // class UStaticMesh*                      Mesh                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UStaticMeshComponent*             Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UStaticMesh*                      Var                                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class UStaticMesh*&                     Var                                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterSpline_C::Setup_StaticMesh(class UStaticMesh* Mesh, class UStaticMeshComponent* Component, class UStaticMesh*& Var)
 {
@@ -735,7 +735,7 @@ void ABP_WaterSpline_C::Snap_Spline_To_Spline()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  R                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Out                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Out                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterSpline_C::UnwindRadians(double R, double* Out)
 {

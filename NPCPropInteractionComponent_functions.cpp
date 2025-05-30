@@ -17,55 +17,113 @@
 namespace SDK
 {
 
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.CheckInteractPointCooldowns
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UNPCPropInteractionComponent_C::CheckInteractPointCooldowns()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NPCPropInteractionComponent_C", "CheckInteractPointCooldowns");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.ExecuteUbergraph_NPCPropInteractionComponent
-// (Final, UbergraphFunction, HasDefaults)
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.StartInteraction
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InteractIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InteractionLengtrh                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UNPCPropInteractionComponent_C::ExecuteUbergraph_NPCPropInteractionComponent(int32 EntryPoint)
+void UNPCPropInteractionComponent_C::StartInteraction(int32 InteractIndex, double InteractionLengtrh)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("NPCPropInteractionComponent_C", "ExecuteUbergraph_NPCPropInteractionComponent");
+		Func = Class->GetFunction("NPCPropInteractionComponent_C", "StartInteraction");
 
-	Params::NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent Parms{};
+	Params::NPCPropInteractionComponent_C_StartInteraction Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InteractIndex = InteractIndex;
+	Parms.InteractionLengtrh = InteractionLengtrh;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.FinishInteraction
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   TransformIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UNPCPropInteractionComponent_C::FinishInteraction(int32 TransformIndex)
+void UNPCPropInteractionComponent_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("NPCPropInteractionComponent_C", "FinishInteraction");
+		Func = Class->GetFunction("NPCPropInteractionComponent_C", "ReceiveTick");
 
-	Params::NPCPropInteractionComponent_C_FinishInteraction Parms{};
+	Params::NPCPropInteractionComponent_C_ReceiveTick Parms{};
 
-	Parms.TransformIndex = TransformIndex;
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UNPCPropInteractionComponent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NPCPropInteractionComponent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.OnOverlapEnd
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UNPCPropInteractionComponent_C::OnOverlapEnd(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NPCPropInteractionComponent_C", "OnOverlapEnd");
+
+	Params::NPCPropInteractionComponent_C_OnOverlapEnd Parms{};
+
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.OnOverlapBegin
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void UNPCPropInteractionComponent_C::OnOverlapBegin(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NPCPropInteractionComponent_C", "OnOverlapBegin");
+
+	Params::NPCPropInteractionComponent_C_OnOverlapBegin Parms{};
+
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+	Parms.bFromSweep = bFromSweep;
+	Parms.SweepResult = std::move(SweepResult);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -103,115 +161,57 @@ void UNPCPropInteractionComponent_C::GetOpenInteractionPoint(class AActor* Inter
 }
 
 
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.OnOverlapBegin
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void UNPCPropInteractionComponent_C::OnOverlapBegin(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NPCPropInteractionComponent_C", "OnOverlapBegin");
-
-	Params::NPCPropInteractionComponent_C_OnOverlapBegin Parms{};
-
-	Parms.OverlappedComponent = OverlappedComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.OtherBodyIndex = OtherBodyIndex;
-	Parms.bFromSweep = bFromSweep;
-	Parms.SweepResult = std::move(SweepResult);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.OnOverlapEnd
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UNPCPropInteractionComponent_C::OnOverlapEnd(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NPCPropInteractionComponent_C", "OnOverlapEnd");
-
-	Params::NPCPropInteractionComponent_C_OnOverlapEnd Parms{};
-
-	Parms.OverlappedComponent = OverlappedComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.OtherBodyIndex = OtherBodyIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UNPCPropInteractionComponent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NPCPropInteractionComponent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UNPCPropInteractionComponent_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NPCPropInteractionComponent_C", "ReceiveTick");
-
-	Params::NPCPropInteractionComponent_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.StartInteraction
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.FinishInteraction
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InteractIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InteractionLengtrh                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TransformIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UNPCPropInteractionComponent_C::StartInteraction(int32 InteractIndex, double InteractionLengtrh)
+void UNPCPropInteractionComponent_C::FinishInteraction(int32 TransformIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("NPCPropInteractionComponent_C", "StartInteraction");
+		Func = Class->GetFunction("NPCPropInteractionComponent_C", "FinishInteraction");
 
-	Params::NPCPropInteractionComponent_C_StartInteraction Parms{};
+	Params::NPCPropInteractionComponent_C_FinishInteraction Parms{};
 
-	Parms.InteractIndex = InteractIndex;
-	Parms.InteractionLengtrh = InteractionLengtrh;
+	Parms.TransformIndex = TransformIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.ExecuteUbergraph_NPCPropInteractionComponent
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UNPCPropInteractionComponent_C::ExecuteUbergraph_NPCPropInteractionComponent(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NPCPropInteractionComponent_C", "ExecuteUbergraph_NPCPropInteractionComponent");
+
+	Params::NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.CheckInteractPointCooldowns
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UNPCPropInteractionComponent_C::CheckInteractPointCooldowns()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NPCPropInteractionComponent_C", "CheckInteractPointCooldowns");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

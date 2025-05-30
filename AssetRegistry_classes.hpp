@@ -51,7 +51,7 @@ static_assert(alignof(UAssetRegistryHelpers) == 0x000008, "Wrong alignment on UA
 static_assert(sizeof(UAssetRegistryHelpers) == 0x000048, "Wrong size on UAssetRegistryHelpers");
 
 // Class AssetRegistry.AssetRegistry
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IAssetRegistry final : public IInterface
 {
 public:
@@ -94,8 +94,8 @@ public:
 		return GetDefaultObjImpl<IAssetRegistry>();
 	}
 };
-static_assert(alignof(IAssetRegistry) == 0x000008, "Wrong alignment on IAssetRegistry");
-static_assert(sizeof(IAssetRegistry) == 0x000048, "Wrong size on IAssetRegistry");
+static_assert(alignof(IAssetRegistry) == 0x000001, "Wrong alignment on IAssetRegistry");
+static_assert(sizeof(IAssetRegistry) == 0x000001, "Wrong size on IAssetRegistry");
 
 // Class AssetRegistry.AssetRegistryImpl
 // 0x0D50 (0x0D98 - 0x0048)

@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "AnimationCore_structs.hpp"
-#include "PBIK_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "ControlRig_classes.hpp"
 #include "RigVM_structs.hpp"
 #include "RigVM_classes.hpp"
+#include "PBIK_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -163,32 +163,32 @@ public:
 	struct FQuat                                  RigVMModel___RigVMFunction_MathTransformMake_Rotation__Const; // 0x0520(0x0020)(Edit, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                RigVMModel___RigVMFunction_MathTransformMake_Scale__Const; // 0x0540(0x0018)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_558[0x8];                                      // 0x0558(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_3_Settings__Const;       // 0x0560(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_3_Settings__Const; // 0x0560(0x00D0)(Edit, EditConst, NonTransactional)
 	struct FRigElementKey                         RigVMModel___SpawnControl_2_2_Parent__Const;       // 0x0630(0x000C)(Edit, EditConst, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class FName                                   RigVMModel___SpawnControl_2_2_Name__Const;         // 0x063C(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_644[0xC];                                      // 0x0644(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             RigVMModel___SpawnControl_2_2_OffsetTransform__Const; // 0x0650(0x0060)(Edit, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                RigVMModel___Add_B__Const;                         // 0x06B0(0x0018)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6C8[0x8];                                      // 0x06C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_2_2_Settings__Const;     // 0x06D0(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_2_2_Settings__Const; // 0x06D0(0x00D0)(Edit, EditConst, NonTransactional)
 	class FName                                   RigVMModel___SpawnControl_Name__Const;             // 0x07A0(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7A8[0x8];                                      // 0x07A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_Settings__Const;         // 0x07B0(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_Settings__Const; // 0x07B0(0x00D0)(Edit, EditConst, NonTransactional)
 	class FName                                   RigVMModel___SpawnControl_1_Name__Const;           // 0x0880(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	ERigVMTransformSpace                          RigVMModel___SpawnControl_1_OffsetSpace__Const;    // 0x0888(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_889[0x7];                                      // 0x0889(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_1_Settings__Const;       // 0x0890(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_1_Settings__Const; // 0x0890(0x00D0)(Edit, EditConst, NonTransactional)
 	class FName                                   RigVMModel___SpawnControl_1_1_Name__Const;         // 0x0960(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_968[0x8];                                      // 0x0968(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_1_1_Settings__Const;     // 0x0970(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_1_1_Settings__Const; // 0x0970(0x00D0)(Edit, EditConst, NonTransactional)
 	class FName                                   RigVMModel___SpawnControl_1_1_1_Name__Const;       // 0x0A40(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FRigElementKey                         RigVMModel___GetTransform_9_Item__Const;           // 0x0A48(0x000C)(Edit, EditConst, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A54[0xC];                                      // 0x0A54(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_1_1_1_Settings__Const;   // 0x0A60(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_1_1_1_Settings__Const; // 0x0A60(0x00D0)(Edit, EditConst, NonTransactional)
 	class FName                                   RigVMModel___SpawnControl_1_1_2_Name__Const;       // 0x0B30(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class FName                                   RigVMModel___SpawnControl_1_1_2_1_Name__Const;     // 0x0B38(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_2_Settings__Const;       // 0x0B40(0x00D0)(Edit, EditConst, NonTransactional)
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_2_1_Settings__Const;     // 0x0C10(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_2_Settings__Const; // 0x0B40(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_2_1_Settings__Const; // 0x0C10(0x00D0)(Edit, EditConst, NonTransactional)
 	TArray<struct FRigElementKey>                 RigVMModel___RigUnit_ItemArray_Items__Const;       // 0x0CE0(0x0010)(Edit, EditConst, NonTransactional)
 
 public:
@@ -583,7 +583,7 @@ public:
 	struct FTransform                             RigVMModel___GetTransform_1_Transform;             // 0x15F0(0x0060)(Edit, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FCachedRigElement>              RigVMModel___GetTransform_1_CachedIndex;           // 0x1650(0x0010)(Edit, EditConst, NonTransactional)
 	struct FTransform                             RigVMModel___SpawnControl_2_InitialValue__IO;      // 0x1660(0x0060)(Edit, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_2_Settings__IO;          // 0x16C0(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_2_Settings__IO;  // 0x16C0(0x00D0)(Edit, EditConst, NonTransactional)
 	class FName                                   RigVMModel___Concat_1_Result;                      // 0x1790(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FRigElementKey                         RigVMModel___SpawnControl_2_1_Item;                // 0x1798(0x000C)(Edit, EditConst, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_17A4[0xC];                                     // 0x17A4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])

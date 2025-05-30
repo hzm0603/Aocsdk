@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MarketplaceMenu.WBP_MarketplaceMenu_C
-// 0x0008 (0x0650 - 0x0648)
+// 0x0008 (0x0680 - 0x0678)
 class UWBP_MarketplaceMenu_C final : public UMarketplaceMenu
 {
 public:
-	class UHorizontalBox*                         BuySellTabsBox;                                    // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         BuySellTabsBox;                                    // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MarketplaceMenu_C) == 0x000008, "Wrong alignment on UWBP_MarketplaceMenu_C");
-static_assert(sizeof(UWBP_MarketplaceMenu_C) == 0x000650, "Wrong size on UWBP_MarketplaceMenu_C");
-static_assert(offsetof(UWBP_MarketplaceMenu_C, BuySellTabsBox) == 0x000648, "Member 'UWBP_MarketplaceMenu_C::BuySellTabsBox' has a wrong offset!");
+static_assert(sizeof(UWBP_MarketplaceMenu_C) == 0x000680, "Wrong size on UWBP_MarketplaceMenu_C");
+static_assert(offsetof(UWBP_MarketplaceMenu_C, BuySellTabsBox) == 0x000678, "Member 'UWBP_MarketplaceMenu_C::BuySellTabsBox' has a wrong offset!");
 
 }
 

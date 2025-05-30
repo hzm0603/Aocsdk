@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_SkillSocketTooltipChoice.WBP_SkillSocketTooltipChoice_C.ExecuteUbergraph_WBP_SkillSocketTooltipChoice
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SkillSocketTooltipChoice_C::ExecuteUbergraph_WBP_SkillSocketTooltipChoice(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SkillSocketTooltipChoice_C", "ExecuteUbergraph_WBP_SkillSocketTooltipChoice");
-
-	Params::WBP_SkillSocketTooltipChoice_C_ExecuteUbergraph_WBP_SkillSocketTooltipChoice Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_SkillSocketTooltipChoice.WBP_SkillSocketTooltipChoice_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_SkillSocketTooltipChoice_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_SkillSocketTooltipChoice_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SkillSocketTooltipChoice.WBP_SkillSocketTooltipChoice_C.ExecuteUbergraph_WBP_SkillSocketTooltipChoice
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SkillSocketTooltipChoice_C::ExecuteUbergraph_WBP_SkillSocketTooltipChoice(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SkillSocketTooltipChoice_C", "ExecuteUbergraph_WBP_SkillSocketTooltipChoice");
+
+	Params::WBP_SkillSocketTooltipChoice_C_ExecuteUbergraph_WBP_SkillSocketTooltipChoice Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

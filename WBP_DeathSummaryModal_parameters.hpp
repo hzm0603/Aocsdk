@@ -14,16 +14,16 @@
 namespace SDK::Params
 {
 
-// Function WBP_DeathSummaryModal.WBP_DeathSummaryModal_C.GetBorderContainer
+// Function WBP_DeathSummaryModal.WBP_DeathSummaryModal_C.GetOddBorderStyle
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_DeathSummaryModal_C_GetBorderContainer final
+struct WBP_DeathSummaryModal_C_GetOddBorderStyle final
 {
 public:
-	class UPanelWidget*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TSubclassOf<class UCommonBorderStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_DeathSummaryModal_C_GetBorderContainer) == 0x000008, "Wrong alignment on WBP_DeathSummaryModal_C_GetBorderContainer");
-static_assert(sizeof(WBP_DeathSummaryModal_C_GetBorderContainer) == 0x000008, "Wrong size on WBP_DeathSummaryModal_C_GetBorderContainer");
-static_assert(offsetof(WBP_DeathSummaryModal_C_GetBorderContainer, ReturnValue) == 0x000000, "Member 'WBP_DeathSummaryModal_C_GetBorderContainer::ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_DeathSummaryModal_C_GetOddBorderStyle) == 0x000008, "Wrong alignment on WBP_DeathSummaryModal_C_GetOddBorderStyle");
+static_assert(sizeof(WBP_DeathSummaryModal_C_GetOddBorderStyle) == 0x000008, "Wrong size on WBP_DeathSummaryModal_C_GetOddBorderStyle");
+static_assert(offsetof(WBP_DeathSummaryModal_C_GetOddBorderStyle, ReturnValue) == 0x000000, "Member 'WBP_DeathSummaryModal_C_GetOddBorderStyle::ReturnValue' has a wrong offset!");
 
 // Function WBP_DeathSummaryModal.WBP_DeathSummaryModal_C.GetEvenBorderStyle
 // 0x0008 (0x0008 - 0x0000)
@@ -36,16 +36,16 @@ static_assert(alignof(WBP_DeathSummaryModal_C_GetEvenBorderStyle) == 0x000008, "
 static_assert(sizeof(WBP_DeathSummaryModal_C_GetEvenBorderStyle) == 0x000008, "Wrong size on WBP_DeathSummaryModal_C_GetEvenBorderStyle");
 static_assert(offsetof(WBP_DeathSummaryModal_C_GetEvenBorderStyle, ReturnValue) == 0x000000, "Member 'WBP_DeathSummaryModal_C_GetEvenBorderStyle::ReturnValue' has a wrong offset!");
 
-// Function WBP_DeathSummaryModal.WBP_DeathSummaryModal_C.GetOddBorderStyle
+// Function WBP_DeathSummaryModal.WBP_DeathSummaryModal_C.GetBorderContainer
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_DeathSummaryModal_C_GetOddBorderStyle final
+struct WBP_DeathSummaryModal_C_GetBorderContainer final
 {
 public:
-	TSubclassOf<class UCommonBorderStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UPanelWidget*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_DeathSummaryModal_C_GetOddBorderStyle) == 0x000008, "Wrong alignment on WBP_DeathSummaryModal_C_GetOddBorderStyle");
-static_assert(sizeof(WBP_DeathSummaryModal_C_GetOddBorderStyle) == 0x000008, "Wrong size on WBP_DeathSummaryModal_C_GetOddBorderStyle");
-static_assert(offsetof(WBP_DeathSummaryModal_C_GetOddBorderStyle, ReturnValue) == 0x000000, "Member 'WBP_DeathSummaryModal_C_GetOddBorderStyle::ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_DeathSummaryModal_C_GetBorderContainer) == 0x000008, "Wrong alignment on WBP_DeathSummaryModal_C_GetBorderContainer");
+static_assert(sizeof(WBP_DeathSummaryModal_C_GetBorderContainer) == 0x000008, "Wrong size on WBP_DeathSummaryModal_C_GetBorderContainer");
+static_assert(offsetof(WBP_DeathSummaryModal_C_GetBorderContainer, ReturnValue) == 0x000000, "Member 'WBP_DeathSummaryModal_C_GetBorderContainer::ReturnValue' has a wrong offset!");
 
 }
 

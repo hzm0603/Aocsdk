@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Defector_Fighter.Defector_Fighter_C
-// 0x0010 (0x1DC0 - 0x1DB0)
+// 0x0010 (0x1D80 - 0x1D70)
 class ADefector_Fighter_C final : public ABandit_Melee_Base_C
 {
 public:
-	class USkeletalMeshComponent*                 WeaponR;                                           // 0x1DB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 WeaponR;                                           // 0x1D70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ADefector_Fighter_C) == 0x000010, "Wrong alignment on ADefector_Fighter_C");
-static_assert(sizeof(ADefector_Fighter_C) == 0x001DC0, "Wrong size on ADefector_Fighter_C");
-static_assert(offsetof(ADefector_Fighter_C, WeaponR) == 0x001DB0, "Member 'ADefector_Fighter_C::WeaponR' has a wrong offset!");
+static_assert(sizeof(ADefector_Fighter_C) == 0x001D80, "Wrong size on ADefector_Fighter_C");
+static_assert(offsetof(ADefector_Fighter_C, WeaponR) == 0x001D70, "Member 'ADefector_Fighter_C::WeaponR' has a wrong offset!");
 
 }
 

@@ -10,20 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "WBP_GradientBarBase_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_BreathGradientBar.WBP_BreathGradientBar_C
-// 0x0010 (0x0340 - 0x0330)
+// 0x0018 (0x0348 - 0x0330)
 class UWBP_BreathGradientBar_C final : public UWBP_GradientBarBase_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UImage*                                 Fill;                                              // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_43;                                          // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -40,9 +41,10 @@ public:
 	}
 };
 static_assert(alignof(UWBP_BreathGradientBar_C) == 0x000008, "Wrong alignment on UWBP_BreathGradientBar_C");
-static_assert(sizeof(UWBP_BreathGradientBar_C) == 0x000340, "Wrong size on UWBP_BreathGradientBar_C");
+static_assert(sizeof(UWBP_BreathGradientBar_C) == 0x000348, "Wrong size on UWBP_BreathGradientBar_C");
 static_assert(offsetof(UWBP_BreathGradientBar_C, UberGraphFrame) == 0x000330, "Member 'UWBP_BreathGradientBar_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_BreathGradientBar_C, Fill) == 0x000338, "Member 'UWBP_BreathGradientBar_C::Fill' has a wrong offset!");
+static_assert(offsetof(UWBP_BreathGradientBar_C, Image_43) == 0x000340, "Member 'UWBP_BreathGradientBar_C::Image_43' has a wrong offset!");
 
 }
 

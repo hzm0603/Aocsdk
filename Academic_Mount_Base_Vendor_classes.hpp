@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Academic_Mount_Base_Vendor.Academic_Mount_Base_Vendor_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class AAcademic_Mount_Base_Vendor_C final : public AHumanoidNPCMaster_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AAcademic_Mount_Base_Vendor_C) == 0x000010, "Wrong alignment on AAcademic_Mount_Base_Vendor_C");
-static_assert(sizeof(AAcademic_Mount_Base_Vendor_C) == 0x001DB0, "Wrong size on AAcademic_Mount_Base_Vendor_C");
+static_assert(sizeof(AAcademic_Mount_Base_Vendor_C) == 0x001D70, "Wrong size on AAcademic_Mount_Base_Vendor_C");
 
 }
 

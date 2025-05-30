@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_NodeInventory.WBP_NodeInventory_C
-// 0x0008 (0x03B8 - 0x03B0)
+// 0x0008 (0x03D0 - 0x03C8)
 class UWBP_NodeInventory_C final : public UNodeInventory
 {
 public:
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   NodeInventoryScrollArea;                           // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   NodeInventoryScrollArea;                           // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_NodeInventory_C) == 0x000008, "Wrong alignment on UWBP_NodeInventory_C");
-static_assert(sizeof(UWBP_NodeInventory_C) == 0x0003B8, "Wrong size on UWBP_NodeInventory_C");
-static_assert(offsetof(UWBP_NodeInventory_C, NodeInventoryScrollArea) == 0x0003B0, "Member 'UWBP_NodeInventory_C::NodeInventoryScrollArea' has a wrong offset!");
+static_assert(sizeof(UWBP_NodeInventory_C) == 0x0003D0, "Wrong size on UWBP_NodeInventory_C");
+static_assert(offsetof(UWBP_NodeInventory_C, NodeInventoryScrollArea) == 0x0003C8, "Member 'UWBP_NodeInventory_C::NodeInventoryScrollArea' has a wrong offset!");
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "StateTreeModule_classes.hpp"
 
 
@@ -29,8 +29,8 @@ public:
 	struct FVector                                SmashBellowLocation;                               // 0x0080(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter(int32 EntryPoint);
 	void ReceiveTick(const float DeltaTime);
+	void ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

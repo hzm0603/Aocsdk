@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Cultist15_LowlandApostate.Cultist15_LowlandApostate_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class ACultist15_LowlandApostate_C final : public ACultist_Base_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACultist15_LowlandApostate_C) == 0x000010, "Wrong alignment on ACultist15_LowlandApostate_C");
-static_assert(sizeof(ACultist15_LowlandApostate_C) == 0x001DD0, "Wrong size on ACultist15_LowlandApostate_C");
+static_assert(sizeof(ACultist15_LowlandApostate_C) == 0x001D90, "Wrong size on ACultist15_LowlandApostate_C");
 
 }
 

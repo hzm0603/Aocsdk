@@ -85,8 +85,8 @@ static_assert(alignof(UReverbPluginSourceSettingsBase) == 0x000008, "Wrong align
 static_assert(sizeof(UReverbPluginSourceSettingsBase) == 0x000048, "Wrong size on UReverbPluginSourceSettingsBase");
 
 // Class AudioExtensions.AudioParameterControllerInterface
-// 0x0000 (0x0048 - 0x0048)
-class IAudioParameterControllerInterface : public IInterface
+// 0x0000 (0x0000 - 0x0000)
+class IAudioParameterControllerInterface final : public IInterface
 {
 public:
 	void ResetParameters();
@@ -113,8 +113,8 @@ public:
 		return GetDefaultObjImpl<IAudioParameterControllerInterface>();
 	}
 };
-static_assert(alignof(IAudioParameterControllerInterface) == 0x000008, "Wrong alignment on IAudioParameterControllerInterface");
-static_assert(sizeof(IAudioParameterControllerInterface) == 0x000048, "Wrong size on IAudioParameterControllerInterface");
+static_assert(alignof(IAudioParameterControllerInterface) == 0x000001, "Wrong alignment on IAudioParameterControllerInterface");
+static_assert(sizeof(IAudioParameterControllerInterface) == 0x000001, "Wrong size on IAudioParameterControllerInterface");
 
 // Class AudioExtensions.AudioCodecEncoderSettings
 // 0x0008 (0x0050 - 0x0048)

@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_NotificationsGrid.WBP_NotificationsGrid_C.ExecuteUbergraph_WBP_NotificationsGrid
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_NotificationsGrid_C::ExecuteUbergraph_WBP_NotificationsGrid(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NotificationsGrid_C", "ExecuteUbergraph_WBP_NotificationsGrid");
-
-	Params::WBP_NotificationsGrid_C_ExecuteUbergraph_WBP_NotificationsGrid Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_NotificationsGrid.WBP_NotificationsGrid_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_NotificationsGrid_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_NotificationsGrid_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NotificationsGrid.WBP_NotificationsGrid_C.ExecuteUbergraph_WBP_NotificationsGrid
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_NotificationsGrid_C::ExecuteUbergraph_WBP_NotificationsGrid(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NotificationsGrid_C", "ExecuteUbergraph_WBP_NotificationsGrid");
+
+	Params::WBP_NotificationsGrid_C_ExecuteUbergraph_WBP_NotificationsGrid Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

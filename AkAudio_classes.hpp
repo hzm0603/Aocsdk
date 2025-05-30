@@ -223,9 +223,9 @@ static_assert(sizeof(UAkPlatformInitializationSettingsBase) == 0x000048, "Wrong 
 class UAkTVOSInitializationSettings final : public UAkPlatformInitializationSettingsBase
 {
 public:
-	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                             // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkAudioSession                        AudioSession;                                      // 0x00F8(0x0010)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0108(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                   // 0x0108(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkTVOSAdvancedInitializationSettings  AdvancedSettings;                                  // 0x0128(0x0040)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
@@ -394,9 +394,9 @@ static_assert(sizeof(UAkWin64PlatformInfo) == 0x000090, "Wrong size on UAkWin64P
 class UAkAndroidInitializationSettings final : public UAkPlatformInitializationSettingsBase
 {
 public:
-	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkAndroidAdvancedInitializationSettings AdvancedSettings;                                  // 0x0118(0x0040)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                             // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                   // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkAndroidAdvancedInitializationSettings AdvancedSettings;                                // 0x0118(0x0040)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
 	void MigrateMultiCoreRendering(bool NewValue);
@@ -723,9 +723,9 @@ static_assert(sizeof(UAkAudioInputComponent) == 0x000530, "Wrong size on UAkAudi
 class UAkWinGDKInitializationSettings : public UAkPlatformInitializationSettingsBase
 {
 public:
-	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkWinGDKAdvancedInitializationSettings AdvancedSettings;                                  // 0x0118(0x0040)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                             // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                   // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkWinGDKAdvancedInitializationSettings AdvancedSettings;                                 // 0x0118(0x0040)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
 	void MigrateMultiCoreRendering(bool NewValue);
@@ -1259,7 +1259,7 @@ public:
 	int32                                         LOD;                                               // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WeldingThreshold;                                  // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class UMaterialInterface*, struct FAkGeometrySurfaceOverride> StaticMeshSurfaceOverride;                         // 0x0318(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class UMaterialInterface*, struct FAkGeometrySurfaceOverride> StaticMeshSurfaceOverride;    // 0x0318(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FAkGeometrySurfaceOverride             CollisionMeshSurfaceOverride;                      // 0x0368(0x0018)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bEnableDiffraction;                                // 0x0380(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableDiffractionOnBoundaryEdges;                 // 0x0381(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1311,9 +1311,9 @@ static_assert(offsetof(UAkGeometryComponent, SurfaceAreas) == 0x000430, "Member 
 class UAkLinuxInitializationSettings final : public UAkPlatformInitializationSettingsBase
 {
 public:
-	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;                                  // 0x0118(0x0038)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                             // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                   // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;                 // 0x0118(0x0038)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
 	void MigrateMultiCoreRendering(bool NewValue);
@@ -1361,9 +1361,9 @@ static_assert(offsetof(UAkInitBank, InitBankCookedData) == 0x000070, "Member 'UA
 class UAkIOSInitializationSettings final : public UAkPlatformInitializationSettingsBase
 {
 public:
-	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                             // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkAudioSession                        AudioSession;                                      // 0x00F8(0x0010)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0108(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                   // 0x0108(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkIOSAdvancedInitializationSettings   AdvancedSettings;                                  // 0x0128(0x0040)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
@@ -1483,9 +1483,9 @@ static_assert(offsetof(UAkLateReverbComponent, AuxBusManual) == 0x000328, "Membe
 class UAkLinuxArm64InitializationSettings final : public UAkPlatformInitializationSettingsBase
 {
 public:
-	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;                                  // 0x0118(0x0038)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                             // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                   // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;                 // 0x0118(0x0038)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
 	void MigrateMultiCoreRendering(bool NewValue);
@@ -1545,8 +1545,8 @@ static_assert(sizeof(UAkLinuxPlatformInfo) == 0x000090, "Wrong size on UAkLinuxP
 class UAkMacInitializationSettings final : public UAkPlatformInitializationSettingsBase
 {
 public:
-	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                             // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                   // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkMacAdvancedInitializationSettings   AdvancedSettings;                                  // 0x0118(0x0040)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
@@ -1626,7 +1626,7 @@ public:
 	ECollisionChannel                             DefaultOcclusionCollisionChannel;                  // 0x00A4(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECollisionChannel                             DefaultFitToGeometryCollisionChannel;              // 0x00A5(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A6[0x2];                                       // 0x00A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<TSoftObjectPtr<class UPhysicalMaterial>, struct FAkGeometrySurfacePropertiesToMap> AkGeometryMap;                                     // 0x00A8(0x0050)(Config, NativeAccessSpecifierPublic)
+	TMap<TSoftObjectPtr<class UPhysicalMaterial>, struct FAkGeometrySurfacePropertiesToMap> AkGeometryMap; // 0x00A8(0x0050)(Config, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UAkAcousticTexture>      DefaultAcousticTexture;                            // 0x00F8(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DefaultTransmissionLoss;                           // 0x0120(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -1643,7 +1643,7 @@ public:
 	TSoftObjectPtr<class UAkRtpc>                 DecayEstimateRTPC;                                 // 0x0250(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UAkRtpc>                 TimeToFirstReflectionRTPC;                         // 0x0278(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UAkAudioEvent>           AudioInputEvent;                                   // 0x02A0(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<struct FGuid, struct FAkAcousticTextureParams> AcousticTextureParamsMap;                          // 0x02C8(0x0050)(Config, Deprecated, NativeAccessSpecifierPublic)
+	TMap<struct FGuid, struct FAkAcousticTextureParams> AcousticTextureParamsMap;                    // 0x02C8(0x0050)(Config, Deprecated, NativeAccessSpecifierPublic)
 	bool                                          SplitSwitchContainerMedia;                         // 0x0318(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          SplitMediaPerFolder;                               // 0x0319(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          UseEventBasedPackaging;                            // 0x031A(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1938,9 +1938,9 @@ static_assert(sizeof(UAkTVOSPlatformInfo) == 0x000090, "Wrong size on UAkTVOSPla
 class UAkWindowsInitializationSettings final : public UAkPlatformInitializationSettingsBase
 {
 public:
-	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkWindowsAdvancedInitializationSettings AdvancedSettings;                                  // 0x0118(0x0040)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                             // 0x0048(0x00B0)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                   // 0x00F8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkWindowsAdvancedInitializationSettings AdvancedSettings;                                // 0x0118(0x0040)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
 	void MigrateMultiCoreRendering(bool NewValue);
@@ -2071,7 +2071,7 @@ class UMovieSceneWwiseGameParameterSection final : public UMovieSceneSection
 public:
 	class UAkRtpc*                                GameParameter;                                     // 0x0110(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FRichCurve                             FloatCurve;                                        // 0x0118(0x0080)(Protected, NativeAccessSpecifierProtected)
-	struct FMovieSceneFloatChannelSerializationHelper FloatChannelSerializationHelper;                   // 0x0198(0x0030)(Protected, NativeAccessSpecifierProtected)
+	struct FMovieSceneFloatChannelSerializationHelper FloatChannelSerializationHelper;               // 0x0198(0x0030)(Protected, NativeAccessSpecifierProtected)
 	struct FMovieSceneFloatChannel                GameParameterChannel;                              // 0x01C8(0x0110)(Protected, NativeAccessSpecifierProtected)
 
 public:
@@ -2116,7 +2116,7 @@ static_assert(sizeof(UMovieSceneWwiseGameParameterTrack) == 0x0000D8, "Wrong siz
 class UPostEventAsync final : public UBlueprintAsyncActionBase
 {
 public:
-	TMulticastInlineDelegate<void(int32 PlayingID)> Completed;                                         // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 PlayingID)> Completed;                                       // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_60[0x48];                                      // 0x0060(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2143,7 +2143,7 @@ static_assert(offsetof(UPostEventAsync, Completed) == 0x000050, "Member 'UPostEv
 class UPostEventAtLocationAsync final : public UBlueprintAsyncActionBase
 {
 public:
-	TMulticastInlineDelegate<void(int32 PlayingID)> Completed;                                         // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 PlayingID)> Completed;                                       // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_60[0x58];                                      // 0x0060(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

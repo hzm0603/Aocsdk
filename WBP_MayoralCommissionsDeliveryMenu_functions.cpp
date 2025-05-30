@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_MayoralCommissionsDeliveryMenu.WBP_MayoralCommissionsDeliveryMenu_C.ExecuteUbergraph_WBP_MayoralCommissionsDeliveryMenu
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_MayoralCommissionsDeliveryMenu_C::ExecuteUbergraph_WBP_MayoralCommissionsDeliveryMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MayoralCommissionsDeliveryMenu_C", "ExecuteUbergraph_WBP_MayoralCommissionsDeliveryMenu");
-
-	Params::WBP_MayoralCommissionsDeliveryMenu_C_ExecuteUbergraph_WBP_MayoralCommissionsDeliveryMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_MayoralCommissionsDeliveryMenu.WBP_MayoralCommissionsDeliveryMenu_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_MayoralCommissionsDeliveryMenu_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_MayoralCommissionsDeliveryMenu_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_MayoralCommissionsDeliveryMenu.WBP_MayoralCommissionsDeliveryMenu_C.ExecuteUbergraph_WBP_MayoralCommissionsDeliveryMenu
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_MayoralCommissionsDeliveryMenu_C::ExecuteUbergraph_WBP_MayoralCommissionsDeliveryMenu(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MayoralCommissionsDeliveryMenu_C", "ExecuteUbergraph_WBP_MayoralCommissionsDeliveryMenu");
+
+	Params::WBP_MayoralCommissionsDeliveryMenu_C_ExecuteUbergraph_WBP_MayoralCommissionsDeliveryMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -20,10 +20,10 @@ namespace SDK
 // Function Agones.AgonesComponent.Allocate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::Allocate(TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::Allocate(TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -66,7 +66,7 @@ void UAgonesComponent::Connect()
 // Function Agones.AgonesComponent.ConnectSuccess
 // (Final, Native, Private)
 // Parameters:
-// struct FGameServerResponse              GameServerResponse                                     (Parm, NativeAccessSpecifierPublic)
+// const struct FGameServerResponse&       GameServerResponse                                     (Parm, NativeAccessSpecifierPublic)
 
 void UAgonesComponent::ConnectSuccess(const struct FGameServerResponse& GameServerResponse)
 {
@@ -91,10 +91,10 @@ void UAgonesComponent::ConnectSuccess(const struct FGameServerResponse& GameServ
 // Function Agones.AgonesComponent.GameServer
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(struct FGameServerResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FGameServerResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::GameServer(TDelegate<void(struct FGameServerResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::GameServer(TDelegate<void(const struct FGameServerResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -118,10 +118,10 @@ void UAgonesComponent::GameServer(TDelegate<void(struct FGameServerResponse& Res
 // Function Agones.AgonesComponent.GetConnectedPlayers
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(struct FConnectedPlayersResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FConnectedPlayersResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::GetConnectedPlayers(TDelegate<void(struct FConnectedPlayersResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::GetConnectedPlayers(TDelegate<void(const struct FConnectedPlayersResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -145,10 +145,10 @@ void UAgonesComponent::GetConnectedPlayers(TDelegate<void(struct FConnectedPlaye
 // Function Agones.AgonesComponent.GetPlayerCapacity
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(struct FCountResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FCountResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::GetPlayerCapacity(TDelegate<void(struct FCountResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::GetPlayerCapacity(TDelegate<void(const struct FCountResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -172,10 +172,10 @@ void UAgonesComponent::GetPlayerCapacity(TDelegate<void(struct FCountResponse& R
 // Function Agones.AgonesComponent.GetPlayerCount
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(struct FCountResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FCountResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::GetPlayerCount(TDelegate<void(struct FCountResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::GetPlayerCount(TDelegate<void(const struct FCountResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -199,10 +199,10 @@ void UAgonesComponent::GetPlayerCount(TDelegate<void(struct FCountResponse& Resp
 // Function Agones.AgonesComponent.Health
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::Health(TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::Health(TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -251,11 +251,11 @@ void UAgonesComponent::HealthPing(float RateSeconds)
 // Function Agones.AgonesComponent.IsPlayerConnected
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           PlayerId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FConnectedResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PlayerId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FConnectedResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::IsPlayerConnected(const class FString& PlayerId, TDelegate<void(struct FConnectedResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::IsPlayerConnected(const class FString& PlayerId, TDelegate<void(const struct FConnectedResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -280,11 +280,11 @@ void UAgonesComponent::IsPlayerConnected(const class FString& PlayerId, TDelegat
 // Function Agones.AgonesComponent.PlayerConnect
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           PlayerId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FConnectedResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PlayerId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FConnectedResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::PlayerConnect(const class FString& PlayerId, TDelegate<void(struct FConnectedResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::PlayerConnect(const class FString& PlayerId, TDelegate<void(const struct FConnectedResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -309,11 +309,11 @@ void UAgonesComponent::PlayerConnect(const class FString& PlayerId, TDelegate<vo
 // Function Agones.AgonesComponent.PlayerDisconnect
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           PlayerId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FDisconnectResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PlayerId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FDisconnectResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::PlayerDisconnect(const class FString& PlayerId, TDelegate<void(struct FDisconnectResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::PlayerDisconnect(const class FString& PlayerId, TDelegate<void(const struct FDisconnectResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -338,10 +338,10 @@ void UAgonesComponent::PlayerDisconnect(const class FString& PlayerId, TDelegate
 // Function Agones.AgonesComponent.Ready
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::Ready(TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::Ready(TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -366,10 +366,10 @@ void UAgonesComponent::Ready(TDelegate<void(struct FEmptyResponse& Response)> Su
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // int64                                   Seconds                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::Reserve(int64 Seconds, TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::Reserve(int64 Seconds, TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -394,12 +394,12 @@ void UAgonesComponent::Reserve(int64 Seconds, TDelegate<void(struct FEmptyRespon
 // Function Agones.AgonesComponent.SetAnnotation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::SetAnnotation(const class FString& Key, const class FString& Value, TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::SetAnnotation(const class FString& Key, const class FString& Value, TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -425,12 +425,12 @@ void UAgonesComponent::SetAnnotation(const class FString& Key, const class FStri
 // Function Agones.AgonesComponent.SetLabel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::SetLabel(const class FString& Key, const class FString& Value, TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::SetLabel(const class FString& Key, const class FString& Value, TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -457,10 +457,10 @@ void UAgonesComponent::SetLabel(const class FString& Key, const class FString& V
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // int64                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::SetPlayerCapacity(int64 Count, TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::SetPlayerCapacity(int64 Count, TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -485,10 +485,10 @@ void UAgonesComponent::SetPlayerCapacity(int64 Count, TDelegate<void(struct FEmp
 // Function Agones.AgonesComponent.Shutdown
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FEmptyResponse& Response)>SuccessDelegate                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FAgonesError& Error)>ErrorDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::Shutdown(TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate)
+void UAgonesComponent::Shutdown(TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -512,9 +512,9 @@ void UAgonesComponent::Shutdown(TDelegate<void(struct FEmptyResponse& Response)>
 // Function Agones.AgonesComponent.WatchGameServer
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(struct FGameServerResponse& Response)>WatchDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FGameServerResponse& Response)>WatchDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAgonesComponent::WatchGameServer(TDelegate<void(struct FGameServerResponse& Response)> WatchDelegate)
+void UAgonesComponent::WatchGameServer(TDelegate<void(const struct FGameServerResponse& Response)> WatchDelegate)
 {
 	static class UFunction* Func = nullptr;
 

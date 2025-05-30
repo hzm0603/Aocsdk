@@ -20,13 +20,13 @@ namespace SDK
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.(CLF) CycleBlending
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        I_F                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        I_B                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        I_LF                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        I_LB                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        I_RF                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        I_RB                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        _CLF__CycleBlending_0                                  (Parm, OutParm, NoDestructor)
+// const struct FPoseLink&                 I_F                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 I_B                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 I_LF                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 I_LB                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 I_RF                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 I_RB                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       _CLF__CycleBlending_0                                  (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::_CLF__CycleBlending(const struct FPoseLink& I_F, const struct FPoseLink& I_B, const struct FPoseLink& I_LF, const struct FPoseLink& I_LB, const struct FPoseLink& I_RF, const struct FPoseLink& I_RB, struct FPoseLink* _CLF__CycleBlending_0)
 {
@@ -54,14 +54,14 @@ void UABP_AoC_Simple_C::_CLF__CycleBlending(const struct FPoseLink& I_F, const s
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.(N) CycleBlending
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        F                                                      (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        B                                                      (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        LF                                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        LB                                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        RF                                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        RB                                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        Sprint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        _N__CycleBlending_0                                    (Parm, OutParm, NoDestructor)
+// const struct FPoseLink&                 F                                                      (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 B                                                      (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 LF                                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 LB                                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 RF                                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 RB                                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 Sprint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       _N__CycleBlending_0                                    (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::_N__CycleBlending(const struct FPoseLink& F, const struct FPoseLink& B, const struct FPoseLink& LF, const struct FPoseLink& LB, const struct FPoseLink& RF, const struct FPoseLink& RB, const struct FPoseLink& Sprint, struct FPoseLink* _N__CycleBlending_0)
 {
@@ -90,13 +90,13 @@ void UABP_AoC_Simple_C::_N__CycleBlending(const struct FPoseLink& F, const struc
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.(S) SwimBlending
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        I_F                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        I_B                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        I_LF                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        I_LB                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        I_RF                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        I_RB                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        _S__SwimBlending_0                                     (Parm, OutParm, NoDestructor)
+// const struct FPoseLink&                 I_F                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 I_B                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 I_LF                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 I_LB                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 I_RF                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 I_RB                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       _S__SwimBlending_0                                     (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::_S__SwimBlending(const struct FPoseLink& I_F, const struct FPoseLink& I_B, const struct FPoseLink& I_LF, const struct FPoseLink& I_LB, const struct FPoseLink& I_RF, const struct FPoseLink& I_RB, struct FPoseLink* _S__SwimBlending_0)
 {
@@ -124,7 +124,7 @@ void UABP_AoC_Simple_C::_S__SwimBlending(const struct FPoseLink& I_F, const stru
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.AimOffsetBehaviors
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        AimOffsetBehaviors_0                                   (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       AimOffsetBehaviors_0                                   (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::AimOffsetBehaviors(struct FPoseLink* AimOffsetBehaviors_0)
 {
@@ -145,7 +145,7 @@ void UABP_AoC_Simple_C::AimOffsetBehaviors(struct FPoseLink* AimOffsetBehaviors_
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
@@ -460,7 +460,7 @@ void UABP_AoC_Simple_C::AnimNotify_StopTransition()
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.BaseLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        BaseLayer_0                                            (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       BaseLayer_0                                            (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::BaseLayer(struct FPoseLink* BaseLayer_0)
 {
@@ -481,7 +481,7 @@ void UABP_AoC_Simple_C::BaseLayer(struct FPoseLink* BaseLayer_0)
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.BasePoses
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        BasePoses_0                                            (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       BasePoses_0                                            (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::BasePoses(struct FPoseLink* BasePoses_0)
 {
@@ -522,8 +522,8 @@ void UABP_AoC_Simple_C::ExecuteUbergraph_ABP_AoC_Simple(int32 EntryPoint)
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.FootIK
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        FootIK_0                                               (Parm, OutParm, NoDestructor)
+// const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       FootIK_0                                               (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::FootIK(const struct FPoseLink& InPose, struct FPoseLink* FootIK_0)
 {
@@ -546,8 +546,8 @@ void UABP_AoC_Simple_C::FootIK(const struct FPoseLink& InPose, struct FPoseLink*
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.HandIK
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        InputPose                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        HandIK_0                                               (Parm, OutParm, NoDestructor)
+// const struct FPoseLink&                 InputPose                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       HandIK_0                                               (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::HandIK(const struct FPoseLink& InputPose, struct FPoseLink* HandIK_0)
 {
@@ -570,10 +570,10 @@ void UABP_AoC_Simple_C::HandIK(const struct FPoseLink& InputPose, struct FPoseLi
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.LayerBleding
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        BaseLayerInput                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        OverlayLayerInput                                      (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        BasePosesInput                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        LayerBleding_0                                         (Parm, OutParm, NoDestructor)
+// const struct FPoseLink&                 BaseLayerInput                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 OverlayLayerInput                                      (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 BasePosesInput                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       LayerBleding_0                                         (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::LayerBleding(const struct FPoseLink& BaseLayerInput, const struct FPoseLink& OverlayLayerInput, const struct FPoseLink& BasePosesInput, struct FPoseLink* LayerBleding_0)
 {
@@ -598,7 +598,7 @@ void UABP_AoC_Simple_C::LayerBleding(const struct FPoseLink& BaseLayerInput, con
 // Function ABP_AoC_Simple.ABP_AoC_Simple_C.OverlayLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        OverlayLayer_0                                         (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       OverlayLayer_0                                         (Parm, OutParm, NoDestructor)
 
 void UABP_AoC_Simple_C::OverlayLayer(struct FPoseLink* OverlayLayer_0)
 {

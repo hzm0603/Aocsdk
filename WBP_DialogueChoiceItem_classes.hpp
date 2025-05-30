@@ -17,13 +17,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_DialogueChoiceItem.WBP_DialogueChoiceItem_C
-// 0x0020 (0x03E8 - 0x03C8)
+// 0x0028 (0x03F0 - 0x03C8)
 class UWBP_DialogueChoiceItem_C final : public UDialogueChoiceItem
 {
 public:
-	class UImage*                                 IconBG;                                            // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int64                                         ChoiceId;                                          // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(int64 ChoiceId)> DialogChoiceSelected;                             // 0x03D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UImage*                                 DemotePromoteIcon;                                 // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IconBG;                                            // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int64                                         ChoiceId;                                          // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(int64 ChoiceId)> DialogChoiceSelected;                             // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	static class UClass* StaticClass()
@@ -36,10 +37,11 @@ public:
 	}
 };
 static_assert(alignof(UWBP_DialogueChoiceItem_C) == 0x000008, "Wrong alignment on UWBP_DialogueChoiceItem_C");
-static_assert(sizeof(UWBP_DialogueChoiceItem_C) == 0x0003E8, "Wrong size on UWBP_DialogueChoiceItem_C");
-static_assert(offsetof(UWBP_DialogueChoiceItem_C, IconBG) == 0x0003C8, "Member 'UWBP_DialogueChoiceItem_C::IconBG' has a wrong offset!");
-static_assert(offsetof(UWBP_DialogueChoiceItem_C, ChoiceId) == 0x0003D0, "Member 'UWBP_DialogueChoiceItem_C::ChoiceId' has a wrong offset!");
-static_assert(offsetof(UWBP_DialogueChoiceItem_C, DialogChoiceSelected) == 0x0003D8, "Member 'UWBP_DialogueChoiceItem_C::DialogChoiceSelected' has a wrong offset!");
+static_assert(sizeof(UWBP_DialogueChoiceItem_C) == 0x0003F0, "Wrong size on UWBP_DialogueChoiceItem_C");
+static_assert(offsetof(UWBP_DialogueChoiceItem_C, DemotePromoteIcon) == 0x0003C8, "Member 'UWBP_DialogueChoiceItem_C::DemotePromoteIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_DialogueChoiceItem_C, IconBG) == 0x0003D0, "Member 'UWBP_DialogueChoiceItem_C::IconBG' has a wrong offset!");
+static_assert(offsetof(UWBP_DialogueChoiceItem_C, ChoiceId) == 0x0003D8, "Member 'UWBP_DialogueChoiceItem_C::ChoiceId' has a wrong offset!");
+static_assert(offsetof(UWBP_DialogueChoiceItem_C, DialogChoiceSelected) == 0x0003E0, "Member 'UWBP_DialogueChoiceItem_C::DialogChoiceSelected' has a wrong offset!");
 
 }
 

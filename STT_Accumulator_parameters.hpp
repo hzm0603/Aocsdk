@@ -17,6 +17,128 @@
 namespace SDK::Params
 {
 
+// Function STT_Accumulator.STT_Accumulator_C.Accumulate
+// 0x0008 (0x0008 - 0x0000)
+struct STT_Accumulator_C_Accumulate final
+{
+public:
+	double                                        DeltaTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(STT_Accumulator_C_Accumulate) == 0x000008, "Wrong alignment on STT_Accumulator_C_Accumulate");
+static_assert(sizeof(STT_Accumulator_C_Accumulate) == 0x000008, "Wrong size on STT_Accumulator_C_Accumulate");
+static_assert(offsetof(STT_Accumulator_C_Accumulate, DeltaTime) == 0x000000, "Member 'STT_Accumulator_C_Accumulate::DeltaTime' has a wrong offset!");
+
+// Function STT_Accumulator.STT_Accumulator_C.ChargeAccumulator
+// 0x0010 (0x0010 - 0x0000)
+struct STT_Accumulator_C_ChargeAccumulator final
+{
+public:
+	class FName                                   Identifier_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Number;                                            // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ResetAccumulator;                                  // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReRoll;                                            // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(STT_Accumulator_C_ChargeAccumulator) == 0x000004, "Wrong alignment on STT_Accumulator_C_ChargeAccumulator");
+static_assert(sizeof(STT_Accumulator_C_ChargeAccumulator) == 0x000010, "Wrong size on STT_Accumulator_C_ChargeAccumulator");
+static_assert(offsetof(STT_Accumulator_C_ChargeAccumulator, Identifier_0) == 0x000000, "Member 'STT_Accumulator_C_ChargeAccumulator::Identifier_0' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ChargeAccumulator, Number) == 0x000008, "Member 'STT_Accumulator_C_ChargeAccumulator::Number' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ChargeAccumulator, ResetAccumulator) == 0x00000C, "Member 'STT_Accumulator_C_ChargeAccumulator::ResetAccumulator' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ChargeAccumulator, ReRoll) == 0x00000D, "Member 'STT_Accumulator_C_ChargeAccumulator::ReRoll' has a wrong offset!");
+
+// Function STT_Accumulator.STT_Accumulator_C.ExecuteUbergraph_STT_Accumulator
+// 0x00C0 (0x00C0 - 0x0000)
+struct STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(double TargetValue, bool Permanent)> UniqueObjectNameForCooking_OutputDelegate;   // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName Identifier, int32 Number, bool ResetAccumulator, bool ReRoll)> UniqueObjectNameForCooking_OutputDelegate_1; // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaTime;                            // 0x0024(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStateTreeTransitionResult             K2Node_Event_Transition_1;                         // 0x0028(0x002E)(ConstParm, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0056(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_57[0x1];                                       // 0x0057(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   K2Node_CustomEvent_Identifier;                     // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_Number;                         // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_ResetAccumulator;               // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_ReRoll;                         // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStateTreeTransitionResult             K2Node_Event_Transition;                           // 0x0066(0x002E)(ConstParm, NoDestructor)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_TargetValue;                    // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_Permanent;                      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Accumulate_DeltaTime_ImplicitCast;        // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator) == 0x000008, "Wrong alignment on STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator");
+static_assert(sizeof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator) == 0x0000C0, "Wrong size on STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, EntryPoint) == 0x000000, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::EntryPoint' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, UniqueObjectNameForCooking_OutputDelegate) == 0x000004, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, UniqueObjectNameForCooking_OutputDelegate_1) == 0x000014, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::UniqueObjectNameForCooking_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_Event_DeltaTime) == 0x000024, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_Event_DeltaTime' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_Event_Transition_1) == 0x000028, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_Event_Transition_1' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, CallFunc_IsValid_ReturnValue) == 0x000056, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_CustomEvent_Identifier) == 0x000058, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_CustomEvent_Identifier' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_CustomEvent_Number) == 0x000060, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_CustomEvent_Number' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_CustomEvent_ResetAccumulator) == 0x000064, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_CustomEvent_ResetAccumulator' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_CustomEvent_ReRoll) == 0x000065, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_CustomEvent_ReRoll' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_Event_Transition) == 0x000066, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_Event_Transition' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, CallFunc_Add_IntInt_ReturnValue) == 0x000094, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000098, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, CallFunc_Clamp_ReturnValue) == 0x00009C, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::CallFunc_Clamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_CustomEvent_TargetValue) == 0x0000A0, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_CustomEvent_TargetValue' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_CustomEvent_Permanent) == 0x0000A8, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_CustomEvent_Permanent' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000B0, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, CallFunc_Accumulate_DeltaTime_ImplicitCast) == 0x0000B8, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::CallFunc_Accumulate_DeltaTime_ImplicitCast' has a wrong offset!");
+
+// Function STT_Accumulator.STT_Accumulator_C.ReceiveExitState
+// 0x002E (0x002E - 0x0000)
+struct STT_Accumulator_C_ReceiveExitState final
+{
+public:
+	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+};
+static_assert(alignof(STT_Accumulator_C_ReceiveExitState) == 0x000002, "Wrong alignment on STT_Accumulator_C_ReceiveExitState");
+static_assert(sizeof(STT_Accumulator_C_ReceiveExitState) == 0x00002E, "Wrong size on STT_Accumulator_C_ReceiveExitState");
+static_assert(offsetof(STT_Accumulator_C_ReceiveExitState, Transition) == 0x000000, "Member 'STT_Accumulator_C_ReceiveExitState::Transition' has a wrong offset!");
+
+// Function STT_Accumulator.STT_Accumulator_C.ReceiveLatentEnterState
+// 0x002E (0x002E - 0x0000)
+struct STT_Accumulator_C_ReceiveLatentEnterState final
+{
+public:
+	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+};
+static_assert(alignof(STT_Accumulator_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_Accumulator_C_ReceiveLatentEnterState");
+static_assert(sizeof(STT_Accumulator_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_Accumulator_C_ReceiveLatentEnterState");
+static_assert(offsetof(STT_Accumulator_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_Accumulator_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
+
+// Function STT_Accumulator.STT_Accumulator_C.ReceiveLatentTick
+// 0x0004 (0x0004 - 0x0000)
+struct STT_Accumulator_C_ReceiveLatentTick final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(STT_Accumulator_C_ReceiveLatentTick) == 0x000004, "Wrong alignment on STT_Accumulator_C_ReceiveLatentTick");
+static_assert(sizeof(STT_Accumulator_C_ReceiveLatentTick) == 0x000004, "Wrong size on STT_Accumulator_C_ReceiveLatentTick");
+static_assert(offsetof(STT_Accumulator_C_ReceiveLatentTick, DeltaTime) == 0x000000, "Member 'STT_Accumulator_C_ReceiveLatentTick::DeltaTime' has a wrong offset!");
+
+// Function STT_Accumulator.STT_Accumulator_C.SetAccumulatorTarget
+// 0x0010 (0x0010 - 0x0000)
+struct STT_Accumulator_C_SetAccumulatorTarget final
+{
+public:
+	double                                        TargetValue_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Permanent;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(STT_Accumulator_C_SetAccumulatorTarget) == 0x000008, "Wrong alignment on STT_Accumulator_C_SetAccumulatorTarget");
+static_assert(sizeof(STT_Accumulator_C_SetAccumulatorTarget) == 0x000010, "Wrong size on STT_Accumulator_C_SetAccumulatorTarget");
+static_assert(offsetof(STT_Accumulator_C_SetAccumulatorTarget, TargetValue_0) == 0x000000, "Member 'STT_Accumulator_C_SetAccumulatorTarget::TargetValue_0' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_SetAccumulatorTarget, Permanent) == 0x000008, "Member 'STT_Accumulator_C_SetAccumulatorTarget::Permanent' has a wrong offset!");
+
 // Function STT_Accumulator.STT_Accumulator_C.SetTargetValue
 // 0x00D0 (0x00D0 - 0x0000)
 struct STT_Accumulator_C_SetTargetValue final
@@ -30,88 +152,35 @@ static_assert(sizeof(STT_Accumulator_C_SetTargetValue) == 0x0000D0, "Wrong size 
 static_assert(offsetof(STT_Accumulator_C_SetTargetValue, CallFunc_EvaluateExpression_ReturnValue) == 0x000000, "Member 'STT_Accumulator_C_SetTargetValue::CallFunc_EvaluateExpression_ReturnValue' has a wrong offset!");
 static_assert(offsetof(STT_Accumulator_C_SetTargetValue, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000C8, "Member 'STT_Accumulator_C_SetTargetValue::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 
-// Function STT_Accumulator.STT_Accumulator_C.Reset
-// 0x0008 (0x0008 - 0x0000)
-struct STT_Accumulator_C_Reset final
+// Function STT_Accumulator.STT_Accumulator_C.StoreChargeToBBVar
+// 0x0010 (0x0010 - 0x0000)
+struct STT_Accumulator_C_StoreChargeToBBVar final
 {
 public:
-	class FName                                   Identifier_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   CallFunc_GetBlackboard_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(STT_Accumulator_C_Reset) == 0x000004, "Wrong alignment on STT_Accumulator_C_Reset");
-static_assert(sizeof(STT_Accumulator_C_Reset) == 0x000008, "Wrong size on STT_Accumulator_C_Reset");
-static_assert(offsetof(STT_Accumulator_C_Reset, Identifier_0) == 0x000000, "Member 'STT_Accumulator_C_Reset::Identifier_0' has a wrong offset!");
+static_assert(alignof(STT_Accumulator_C_StoreChargeToBBVar) == 0x000008, "Wrong alignment on STT_Accumulator_C_StoreChargeToBBVar");
+static_assert(sizeof(STT_Accumulator_C_StoreChargeToBBVar) == 0x000010, "Wrong size on STT_Accumulator_C_StoreChargeToBBVar");
+static_assert(offsetof(STT_Accumulator_C_StoreChargeToBBVar, CallFunc_GetBlackboard_ReturnValue) == 0x000000, "Member 'STT_Accumulator_C_StoreChargeToBBVar::CallFunc_GetBlackboard_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_StoreChargeToBBVar, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'STT_Accumulator_C_StoreChargeToBBVar::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
-// Function STT_Accumulator.STT_Accumulator_C.ReceiveLatentTick
-// 0x0004 (0x0004 - 0x0000)
-struct STT_Accumulator_C_ReceiveLatentTick final
+// Function STT_Accumulator.STT_Accumulator_C.UpdateCharge
+// 0x0018 (0x0018 - 0x0000)
+struct STT_Accumulator_C_UpdateCharge final
 {
 public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Min_ReturnValue;                          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(STT_Accumulator_C_ReceiveLatentTick) == 0x000004, "Wrong alignment on STT_Accumulator_C_ReceiveLatentTick");
-static_assert(sizeof(STT_Accumulator_C_ReceiveLatentTick) == 0x000004, "Wrong size on STT_Accumulator_C_ReceiveLatentTick");
-static_assert(offsetof(STT_Accumulator_C_ReceiveLatentTick, DeltaTime) == 0x000000, "Member 'STT_Accumulator_C_ReceiveLatentTick::DeltaTime' has a wrong offset!");
-
-// Function STT_Accumulator.STT_Accumulator_C.ReceiveLatentEnterState
-// 0x002E (0x002E - 0x0000)
-struct STT_Accumulator_C_ReceiveLatentEnterState final
-{
-public:
-	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-};
-static_assert(alignof(STT_Accumulator_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_Accumulator_C_ReceiveLatentEnterState");
-static_assert(sizeof(STT_Accumulator_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_Accumulator_C_ReceiveLatentEnterState");
-static_assert(offsetof(STT_Accumulator_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_Accumulator_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
-
-// Function STT_Accumulator.STT_Accumulator_C.ReceiveExitState
-// 0x002E (0x002E - 0x0000)
-struct STT_Accumulator_C_ReceiveExitState final
-{
-public:
-	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-};
-static_assert(alignof(STT_Accumulator_C_ReceiveExitState) == 0x000002, "Wrong alignment on STT_Accumulator_C_ReceiveExitState");
-static_assert(sizeof(STT_Accumulator_C_ReceiveExitState) == 0x00002E, "Wrong size on STT_Accumulator_C_ReceiveExitState");
-static_assert(offsetof(STT_Accumulator_C_ReceiveExitState, Transition) == 0x000000, "Member 'STT_Accumulator_C_ReceiveExitState::Transition' has a wrong offset!");
-
-// Function STT_Accumulator.STT_Accumulator_C.ExecuteUbergraph_STT_Accumulator
-// 0x0090 (0x0090 - 0x0000)
-struct STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName Identifier)>       UniqueObjectNameForCooking_OutputDelegate;         // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FStateTreeTransitionResult             K2Node_Event_Transition_1;                         // 0x0014(0x002E)(ConstParm, NoDestructor)
-	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_CustomEvent_Identifier;                     // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaTime;                            // 0x0050(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStateTreeTransitionResult             K2Node_Event_Transition;                           // 0x0054(0x002E)(ConstParm, NoDestructor)
-	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Accumulate_DeltaTime_ImplicitCast;        // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator) == 0x000008, "Wrong alignment on STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator");
-static_assert(sizeof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator) == 0x000090, "Wrong size on STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator");
-static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, EntryPoint) == 0x000000, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, UniqueObjectNameForCooking_OutputDelegate) == 0x000004, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_Event_Transition_1) == 0x000014, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_Event_Transition_1' has a wrong offset!");
-static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_CustomEvent_Identifier) == 0x000044, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_CustomEvent_Identifier' has a wrong offset!");
-static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, CallFunc_EqualEqual_NameName_ReturnValue) == 0x00004C, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_Event_DeltaTime) == 0x000050, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, K2Node_Event_Transition) == 0x000054, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::K2Node_Event_Transition' has a wrong offset!");
-static_assert(offsetof(STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator, CallFunc_Accumulate_DeltaTime_ImplicitCast) == 0x000088, "Member 'STT_Accumulator_C_ExecuteUbergraph_STT_Accumulator::CallFunc_Accumulate_DeltaTime_ImplicitCast' has a wrong offset!");
-
-// Function STT_Accumulator.STT_Accumulator_C.Accumulate
-// 0x0008 (0x0008 - 0x0000)
-struct STT_Accumulator_C_Accumulate final
-{
-public:
-	double                                        DeltaTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(STT_Accumulator_C_Accumulate) == 0x000008, "Wrong alignment on STT_Accumulator_C_Accumulate");
-static_assert(sizeof(STT_Accumulator_C_Accumulate) == 0x000008, "Wrong size on STT_Accumulator_C_Accumulate");
-static_assert(offsetof(STT_Accumulator_C_Accumulate, DeltaTime) == 0x000000, "Member 'STT_Accumulator_C_Accumulate::DeltaTime' has a wrong offset!");
+static_assert(alignof(STT_Accumulator_C_UpdateCharge) == 0x000008, "Wrong alignment on STT_Accumulator_C_UpdateCharge");
+static_assert(sizeof(STT_Accumulator_C_UpdateCharge) == 0x000018, "Wrong size on STT_Accumulator_C_UpdateCharge");
+static_assert(offsetof(STT_Accumulator_C_UpdateCharge, CallFunc_Add_IntInt_ReturnValue) == 0x000000, "Member 'STT_Accumulator_C_UpdateCharge::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_UpdateCharge, CallFunc_Min_ReturnValue) == 0x000004, "Member 'STT_Accumulator_C_UpdateCharge::CallFunc_Min_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_UpdateCharge, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000008, "Member 'STT_Accumulator_C_UpdateCharge::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_Accumulator_C_UpdateCharge, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000010, "Member 'STT_Accumulator_C_UpdateCharge::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
 
 }
 

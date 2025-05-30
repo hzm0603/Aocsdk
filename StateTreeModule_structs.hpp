@@ -501,7 +501,7 @@ static_assert(offsetof(FStateTreeConditionBase, EvaluationMode) == 0x00001A, "Me
 struct FStateTreeBlueprintConditionWrapper final : public FStateTreeConditionBase
 {
 public:
-	TSubclassOf<class UStateTreeConditionBlueprintBase> ConditionClass;                                    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UStateTreeConditionBlueprintBase> ConditionClass;                              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FStateTreeBlueprintConditionWrapper) == 0x000008, "Wrong alignment on FStateTreeBlueprintConditionWrapper");
 static_assert(sizeof(FStateTreeBlueprintConditionWrapper) == 0x000028, "Wrong size on FStateTreeBlueprintConditionWrapper");
@@ -520,7 +520,7 @@ static_assert(sizeof(FStateTreeEvaluatorBase) == 0x000018, "Wrong size on FState
 struct FStateTreeBlueprintEvaluatorWrapper final : public FStateTreeEvaluatorBase
 {
 public:
-	TSubclassOf<class UStateTreeEvaluatorBlueprintBase> EvaluatorClass;                                    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UStateTreeEvaluatorBlueprintBase> EvaluatorClass;                              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FStateTreeBlueprintEvaluatorWrapper) == 0x000008, "Wrong alignment on FStateTreeBlueprintEvaluatorWrapper");
 static_assert(sizeof(FStateTreeBlueprintEvaluatorWrapper) == 0x000020, "Wrong size on FStateTreeBlueprintEvaluatorWrapper");
@@ -543,7 +543,7 @@ static_assert(sizeof(FStateTreeTaskBase) == 0x000020, "Wrong size on FStateTreeT
 struct FStateTreeBlueprintTaskWrapper final : public FStateTreeTaskBase
 {
 public:
-	TSubclassOf<class UStateTreeTaskBlueprintBase> TaskClass;                                         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UStateTreeTaskBlueprintBase> TaskClass;                                        // 0x0020(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FStateTreeBlueprintTaskWrapper) == 0x000008, "Wrong alignment on FStateTreeBlueprintTaskWrapper");
 static_assert(sizeof(FStateTreeBlueprintTaskWrapper) == 0x000028, "Wrong size on FStateTreeBlueprintTaskWrapper");

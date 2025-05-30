@@ -10,24 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "HumanoidMonsterMaster_classes.hpp"
 #include "Engine_structs.hpp"
+#include "HumanoidMonsterMaster_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Melee_Base.Bandit_Melee_Base_C
-// 0x0010 (0x1DB0 - 0x1DA0)
+// 0x0010 (0x1D70 - 0x1D60)
 class ABandit_Melee_Base_C : public AHumanoidMonsterMaster_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Bandit_Melee_Base_C;                // 0x1DA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMapRegistrationComponentBP_C*          MapRegistrationComponentBP1;                       // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Bandit_Melee_Base_C;                // 0x1D60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMapRegistrationComponentBP_C*          MapRegistrationComponentBP1;                       // 0x1D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_Bandit_Melee_Base(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_Bandit_Melee_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Melee_Base_C) == 0x000010, "Wrong alignment on ABandit_Melee_Base_C");
-static_assert(sizeof(ABandit_Melee_Base_C) == 0x001DB0, "Wrong size on ABandit_Melee_Base_C");
-static_assert(offsetof(ABandit_Melee_Base_C, UberGraphFrame_Bandit_Melee_Base_C) == 0x001DA0, "Member 'ABandit_Melee_Base_C::UberGraphFrame_Bandit_Melee_Base_C' has a wrong offset!");
-static_assert(offsetof(ABandit_Melee_Base_C, MapRegistrationComponentBP1) == 0x001DA8, "Member 'ABandit_Melee_Base_C::MapRegistrationComponentBP1' has a wrong offset!");
+static_assert(sizeof(ABandit_Melee_Base_C) == 0x001D70, "Wrong size on ABandit_Melee_Base_C");
+static_assert(offsetof(ABandit_Melee_Base_C, UberGraphFrame_Bandit_Melee_Base_C) == 0x001D60, "Member 'ABandit_Melee_Base_C::UberGraphFrame_Bandit_Melee_Base_C' has a wrong offset!");
+static_assert(offsetof(ABandit_Melee_Base_C, MapRegistrationComponentBP1) == 0x001D68, "Member 'ABandit_Melee_Base_C::MapRegistrationComponentBP1' has a wrong offset!");
 
 }
 

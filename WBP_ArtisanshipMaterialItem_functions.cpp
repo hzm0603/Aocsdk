@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_ArtisanshipMaterialItem.WBP_ArtisanshipMaterialItem_C.ExecuteUbergraph_WBP_ArtisanshipMaterialItem
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ArtisanshipMaterialItem_C::ExecuteUbergraph_WBP_ArtisanshipMaterialItem(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ArtisanshipMaterialItem_C", "ExecuteUbergraph_WBP_ArtisanshipMaterialItem");
-
-	Params::WBP_ArtisanshipMaterialItem_C_ExecuteUbergraph_WBP_ArtisanshipMaterialItem Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ArtisanshipMaterialItem.WBP_ArtisanshipMaterialItem_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,46 @@ void UWBP_ArtisanshipMaterialItem_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_ArtisanshipMaterialItem_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ArtisanshipMaterialItem.WBP_ArtisanshipMaterialItem_C.GetBorder
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UCommonBorder*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UCommonBorder* UWBP_ArtisanshipMaterialItem_C::GetBorder()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ArtisanshipMaterialItem_C", "GetBorder");
+
+	Params::WBP_ArtisanshipMaterialItem_C_GetBorder Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_ArtisanshipMaterialItem.WBP_ArtisanshipMaterialItem_C.ExecuteUbergraph_WBP_ArtisanshipMaterialItem
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ArtisanshipMaterialItem_C::ExecuteUbergraph_WBP_ArtisanshipMaterialItem(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ArtisanshipMaterialItem_C", "ExecuteUbergraph_WBP_ArtisanshipMaterialItem");
+
+	Params::WBP_ArtisanshipMaterialItem_C_ExecuteUbergraph_WBP_ArtisanshipMaterialItem Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -20,8 +20,8 @@ namespace SDK
 // Function StateTreeModule.StateTreeNodeBlueprintBase.RequestTransition
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FStateTreeStateLink              TargetState                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EStateTreeTransitionPriority            Priority                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FStateTreeStateLink&       TargetState                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const EStateTreeTransitionPriority      Priority                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UStateTreeNodeBlueprintBase::RequestTransition(const struct FStateTreeStateLink& TargetState, const EStateTreeTransitionPriority Priority)
 {
@@ -47,7 +47,7 @@ void UStateTreeNodeBlueprintBase::RequestTransition(const struct FStateTreeState
 // Function StateTreeModule.StateTreeNodeBlueprintBase.SendEvent
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FStateTreeEvent                  Event                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FStateTreeEvent&           Event                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UStateTreeNodeBlueprintBase::SendEvent(const struct FStateTreeEvent& Event)
 {
@@ -92,7 +92,7 @@ bool UStateTreeConditionBlueprintBase::ReceiveTestCondition() const
 // Function StateTreeModule.StateTreeEvaluatorBlueprintBase.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                                   DeltaTime                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             DeltaTime                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UStateTreeEvaluatorBlueprintBase::ReceiveTick(const float DeltaTime)
 {
@@ -140,7 +140,7 @@ void UStateTreeEvaluatorBlueprintBase::ReceiveTreeStop()
 // Function StateTreeModule.StateTreeTaskBlueprintBase.FinishTask
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                                    bSucceeded                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bSucceeded                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UStateTreeTaskBlueprintBase::FinishTask(const bool bSucceeded)
 {
@@ -184,7 +184,7 @@ void UStateTreeTaskBlueprintBase::OnTaskPooled()
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveEnterState
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FStateTreeTransitionResult       Transition                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // EStateTreeRunStatus                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 EStateTreeRunStatus UStateTreeTaskBlueprintBase::ReceiveEnterState(const struct FStateTreeTransitionResult& Transition)
@@ -207,7 +207,7 @@ EStateTreeRunStatus UStateTreeTaskBlueprintBase::ReceiveEnterState(const struct 
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveExitState
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FStateTreeTransitionResult       Transition                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UStateTreeTaskBlueprintBase::ReceiveExitState(const struct FStateTreeTransitionResult& Transition)
 {
@@ -227,7 +227,7 @@ void UStateTreeTaskBlueprintBase::ReceiveExitState(const struct FStateTreeTransi
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveLatentEnterState
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FStateTreeTransitionResult       Transition                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UStateTreeTaskBlueprintBase::ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition)
 {
@@ -247,7 +247,7 @@ void UStateTreeTaskBlueprintBase::ReceiveLatentEnterState(const struct FStateTre
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveLatentTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                                   DeltaTime                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             DeltaTime                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UStateTreeTaskBlueprintBase::ReceiveLatentTick(const float DeltaTime)
 {
@@ -267,8 +267,8 @@ void UStateTreeTaskBlueprintBase::ReceiveLatentTick(const float DeltaTime)
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveStateCompleted
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// EStateTreeRunStatus                     CompletionStatus                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FStateTreeActiveStates           CompletedActiveStates                                  (ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const EStateTreeRunStatus               CompletionStatus                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FStateTreeActiveStates&    CompletedActiveStates                                  (ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UStateTreeTaskBlueprintBase::ReceiveStateCompleted(const EStateTreeRunStatus CompletionStatus, const struct FStateTreeActiveStates& CompletedActiveStates)
 {
@@ -289,7 +289,7 @@ void UStateTreeTaskBlueprintBase::ReceiveStateCompleted(const EStateTreeRunStatu
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                                   DeltaTime                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             DeltaTime                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EStateTreeRunStatus                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 EStateTreeRunStatus UStateTreeTaskBlueprintBase::ReceiveTick(const float DeltaTime)

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass SK_Mushroom_Kid_AnimBP_Child.SK_Mushroom_Kid_AnimBP_Child_C
-// 0x0000 (0x3950 - 0x3950)
+// 0x0000 (0x3880 - 0x3880)
 class USK_Mushroom_Kid_AnimBP_Child_C final : public USK_Mushroom_AnimBP_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(USK_Mushroom_Kid_AnimBP_Child_C) == 0x000010, "Wrong alignment on USK_Mushroom_Kid_AnimBP_Child_C");
-static_assert(sizeof(USK_Mushroom_Kid_AnimBP_Child_C) == 0x003950, "Wrong size on USK_Mushroom_Kid_AnimBP_Child_C");
+static_assert(sizeof(USK_Mushroom_Kid_AnimBP_Child_C) == 0x003880, "Wrong size on USK_Mushroom_Kid_AnimBP_Child_C");
 
 }
 

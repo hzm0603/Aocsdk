@@ -14,6 +14,28 @@
 namespace SDK::Params
 {
 
+// Function WBP_CommodityTooltip.WBP_CommodityTooltip_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_CommodityTooltip_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_CommodityTooltip_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_CommodityTooltip_C_PreConstruct");
+static_assert(sizeof(WBP_CommodityTooltip_C_PreConstruct) == 0x000001, "Wrong size on WBP_CommodityTooltip_C_PreConstruct");
+static_assert(offsetof(WBP_CommodityTooltip_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_CommodityTooltip_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_CommodityTooltip.WBP_CommodityTooltip_C.GetBorder
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_CommodityTooltip_C_GetBorder final
+{
+public:
+	class UCommonBorder*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_CommodityTooltip_C_GetBorder) == 0x000008, "Wrong alignment on WBP_CommodityTooltip_C_GetBorder");
+static_assert(sizeof(WBP_CommodityTooltip_C_GetBorder) == 0x000008, "Wrong size on WBP_CommodityTooltip_C_GetBorder");
+static_assert(offsetof(WBP_CommodityTooltip_C_GetBorder, ReturnValue) == 0x000000, "Member 'WBP_CommodityTooltip_C_GetBorder::ReturnValue' has a wrong offset!");
+
 // Function WBP_CommodityTooltip.WBP_CommodityTooltip_C.ExecuteUbergraph_WBP_CommodityTooltip
 // 0x0038 (0x0038 - 0x0000)
 struct WBP_CommodityTooltip_C_ExecuteUbergraph_WBP_CommodityTooltip final
@@ -44,28 +66,6 @@ static_assert(offsetof(WBP_CommodityTooltip_C_ExecuteUbergraph_WBP_CommodityTool
 static_assert(offsetof(WBP_CommodityTooltip_C_ExecuteUbergraph_WBP_CommodityTooltip, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000028, "Member 'WBP_CommodityTooltip_C_ExecuteUbergraph_WBP_CommodityTooltip::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_CommodityTooltip_C_ExecuteUbergraph_WBP_CommodityTooltip, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'WBP_CommodityTooltip_C_ExecuteUbergraph_WBP_CommodityTooltip::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_CommodityTooltip_C_ExecuteUbergraph_WBP_CommodityTooltip, K2Node_Event_IsDesignTime) == 0x000030, "Member 'WBP_CommodityTooltip_C_ExecuteUbergraph_WBP_CommodityTooltip::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WBP_CommodityTooltip.WBP_CommodityTooltip_C.GetBorder
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_CommodityTooltip_C_GetBorder final
-{
-public:
-	class UCommonBorder*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_CommodityTooltip_C_GetBorder) == 0x000008, "Wrong alignment on WBP_CommodityTooltip_C_GetBorder");
-static_assert(sizeof(WBP_CommodityTooltip_C_GetBorder) == 0x000008, "Wrong size on WBP_CommodityTooltip_C_GetBorder");
-static_assert(offsetof(WBP_CommodityTooltip_C_GetBorder, ReturnValue) == 0x000000, "Member 'WBP_CommodityTooltip_C_GetBorder::ReturnValue' has a wrong offset!");
-
-// Function WBP_CommodityTooltip.WBP_CommodityTooltip_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_CommodityTooltip_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_CommodityTooltip_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_CommodityTooltip_C_PreConstruct");
-static_assert(sizeof(WBP_CommodityTooltip_C_PreConstruct) == 0x000001, "Wrong size on WBP_CommodityTooltip_C_PreConstruct");
-static_assert(offsetof(WBP_CommodityTooltip_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_CommodityTooltip_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

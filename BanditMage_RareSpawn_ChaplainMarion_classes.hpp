@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BanditMage_RareSpawn_ChaplainMarion.BanditMage_RareSpawn_ChaplainMarion_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ABanditMage_RareSpawn_ChaplainMarion_C final : public ABandit_Arsonist3_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABanditMage_RareSpawn_ChaplainMarion_C) == 0x000010, "Wrong alignment on ABanditMage_RareSpawn_ChaplainMarion_C");
-static_assert(sizeof(ABanditMage_RareSpawn_ChaplainMarion_C) == 0x001DB0, "Wrong size on ABanditMage_RareSpawn_ChaplainMarion_C");
+static_assert(sizeof(ABanditMage_RareSpawn_ChaplainMarion_C) == 0x001D70, "Wrong size on ABanditMage_RareSpawn_ChaplainMarion_C");
 
 }
 

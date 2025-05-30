@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function Ashes_MMO_InvisibleWall.Ashes_MMO_InvisibleWall_C.ExecuteUbergraph_Ashes_MMO_InvisibleWall
-// 0x0004 (0x0004 - 0x0000)
-struct Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall) == 0x000004, "Wrong alignment on Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall");
-static_assert(sizeof(Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall) == 0x000004, "Wrong size on Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall");
-static_assert(offsetof(Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall, EntryPoint) == 0x000000, "Member 'Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall::EntryPoint' has a wrong offset!");
-
 // Function Ashes_MMO_InvisibleWall.Ashes_MMO_InvisibleWall_C.UserConstructionScript
 // 0x0520 (0x0520 - 0x0000)
 struct Ashes_MMO_InvisibleWall_C_UserConstructionScript final
@@ -189,6 +178,17 @@ static_assert(offsetof(Ashes_MMO_InvisibleWall_C_UserConstructionScript, CallFun
 static_assert(offsetof(Ashes_MMO_InvisibleWall_C_UserConstructionScript, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x000508, "Member 'Ashes_MMO_InvisibleWall_C_UserConstructionScript::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(Ashes_MMO_InvisibleWall_C_UserConstructionScript, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000510, "Member 'Ashes_MMO_InvisibleWall_C_UserConstructionScript::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(Ashes_MMO_InvisibleWall_C_UserConstructionScript, CallFunc_GetTransformAtDistanceAlongSpline_Distance_ImplicitCast) == 0x000518, "Member 'Ashes_MMO_InvisibleWall_C_UserConstructionScript::CallFunc_GetTransformAtDistanceAlongSpline_Distance_ImplicitCast' has a wrong offset!");
+
+// Function Ashes_MMO_InvisibleWall.Ashes_MMO_InvisibleWall_C.ExecuteUbergraph_Ashes_MMO_InvisibleWall
+// 0x0004 (0x0004 - 0x0000)
+struct Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall) == 0x000004, "Wrong alignment on Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall");
+static_assert(sizeof(Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall) == 0x000004, "Wrong size on Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall");
+static_assert(offsetof(Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall, EntryPoint) == 0x000000, "Member 'Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall::EntryPoint' has a wrong offset!");
 
 }
 

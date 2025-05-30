@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_SkillTree.WBP_SkillTree_C.ExecuteUbergraph_WBP_SkillTree
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SkillTree_C::ExecuteUbergraph_WBP_SkillTree(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SkillTree_C", "ExecuteUbergraph_WBP_SkillTree");
-
-	Params::WBP_SkillTree_C_ExecuteUbergraph_WBP_SkillTree Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_SkillTree.WBP_SkillTree_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_SkillTree_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_SkillTree_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SkillTree.WBP_SkillTree_C.ExecuteUbergraph_WBP_SkillTree
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SkillTree_C::ExecuteUbergraph_WBP_SkillTree(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SkillTree_C", "ExecuteUbergraph_WBP_SkillTree");
+
+	Params::WBP_SkillTree_C_ExecuteUbergraph_WBP_SkillTree Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

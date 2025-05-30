@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass FlameElemental_AnimBP.FlameElemental_AnimBP_C
-// 0x0000 (0x3EB0 - 0x3EB0)
+// 0x0000 (0x3EC0 - 0x3EC0)
 class UFlameElemental_AnimBP_C final : public UAnimatedArmor_Mage_AnimBP_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UFlameElemental_AnimBP_C) == 0x000010, "Wrong alignment on UFlameElemental_AnimBP_C");
-static_assert(sizeof(UFlameElemental_AnimBP_C) == 0x003EB0, "Wrong size on UFlameElemental_AnimBP_C");
+static_assert(sizeof(UFlameElemental_AnimBP_C) == 0x003EC0, "Wrong size on UFlameElemental_AnimBP_C");
 
 }
 

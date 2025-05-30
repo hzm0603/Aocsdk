@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "EAIUtilityScoringScheme_structs.hpp"
 #include "Engine_structs.hpp"
 #include "DesignDataPlugin_structs.hpp"
-#include "EAIUtilityScoringScheme_structs.hpp"
 #include "StateTreeModule_classes.hpp"
 
 

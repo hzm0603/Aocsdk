@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_BuyOrderFulfillmentMenu.WBP_BuyOrderFulfillmentMenu_C.ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_BuyOrderFulfillmentMenu_C::ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BuyOrderFulfillmentMenu_C", "ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu");
-
-	Params::WBP_BuyOrderFulfillmentMenu_C_ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_BuyOrderFulfillmentMenu.WBP_BuyOrderFulfillmentMenu_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_BuyOrderFulfillmentMenu_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_BuyOrderFulfillmentMenu_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BuyOrderFulfillmentMenu.WBP_BuyOrderFulfillmentMenu_C.ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_BuyOrderFulfillmentMenu_C::ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BuyOrderFulfillmentMenu_C", "ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu");
+
+	Params::WBP_BuyOrderFulfillmentMenu_C_ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

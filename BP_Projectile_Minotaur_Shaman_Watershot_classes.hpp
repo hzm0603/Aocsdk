@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Projectile_Minotaur_Shaman_Watershot.BP_Projectile_Minotaur_Shaman_Watershot_C
-// 0x0000 (0x0590 - 0x0590)
+// 0x0000 (0x0598 - 0x0598)
 class ABP_Projectile_Minotaur_Shaman_Watershot_C final : public AAoCAbilityProjectile
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_Projectile_Minotaur_Shaman_Watershot_C) == 0x000008, "Wrong alignment on ABP_Projectile_Minotaur_Shaman_Watershot_C");
-static_assert(sizeof(ABP_Projectile_Minotaur_Shaman_Watershot_C) == 0x000590, "Wrong size on ABP_Projectile_Minotaur_Shaman_Watershot_C");
+static_assert(sizeof(ABP_Projectile_Minotaur_Shaman_Watershot_C) == 0x000598, "Wrong size on ABP_Projectile_Minotaur_Shaman_Watershot_C");
 
 }
 

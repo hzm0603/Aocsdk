@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "STRUCT_GlobalAtmosphereOutput_Skylight_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_Sun_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_ExponentialHeightFog_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_Moon_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_Skylight_structs.hpp"
 #include "STRUCT_GlobalAtmosphereOutput_SkyAtmosphere_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_Sun_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_Moon_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_ExponentialHeightFog_structs.hpp"
 #include "STRUCT_GlobalAtmosphereOutput_structs.hpp"
 #include "STRUCT_CloudParameters_structs.hpp"
 
@@ -41,9 +41,9 @@ public:
 	double                                        Sun_Dot_Up;                                        // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_GlobalAtmosphereOutput_Sun     Sun_Struct;                                        // 0x0398(0x0088)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_GlobalAtmosphereOutput_Moon    Moon_Struct;                                       // 0x0420(0x0088)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphere Sky_Atmosphere_Struct;                             // 0x04A8(0x0090)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_Skylight Skylight_Struct;                                   // 0x0538(0x0048)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFog Exp_Height_Fog_Struct;                             // 0x0580(0x00F8)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphere Sky_Atmosphere_Struct;                       // 0x04A8(0x0090)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_Skylight Skylight_Struct;                                  // 0x0538(0x0048)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFog Exp_Height_Fog_Struct;                // 0x0580(0x00F8)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               Skydome_MID;                                       // 0x0678(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         Rotation_X;                                        // 0x0680(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Rotation_Y;                                        // 0x0684(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

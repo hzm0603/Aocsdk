@@ -10,17 +10,18 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "S_IntersectionSetDressingData_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LandscapeBrushRoadIntersection.BP_LandscapeBrushRoadIntersection_C
-// 0x01D8 (0x0528 - 0x0350)
+// 0x0218 (0x0568 - 0x0350)
 class ABP_LandscapeBrushRoadIntersection_C final : public ALandscapeBrushBaseActor
 {
 public:
@@ -60,11 +61,20 @@ public:
 	uint8                                         Pad_509[0x7];                                      // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FLoadedRoadBaseAppearance>      BaseAppearances;                                   // 0x0510(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          Can_Adjust_Endpoint_Positions;                     // 0x0520(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_521[0x7];                                      // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UPCGComponent*>                  Active_PCG_Comps;                                  // 0x0528(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FS_IntersectionSetDressingData         Intersection_SD_Data;                              // 0x0538(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          Show_Middle_Path;                                  // 0x0548(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_549[0x7];                                      // 0x0549(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UDecalComponent*>                Decal_Array;                                       // 0x0550(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UMaterialInterface*                     Middle_Decal;                                      // 0x0560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Add_Base_Visible_Spline_Meshes();
 	void Add_Grass_Hiding_Spline_Meshes();
+	void Add_Middle_Path_Decals();
 	void Adjust_Connected_Road_Endpoints();
+	void Apply_Set_Dressing();
 	void Assign_By_Proximity();
 	void Assign_By_Proximity_Array(TArray<class ABP_LandscapeBrushRoad_C*>& Road_Actors);
 	void Build_Intersection();
@@ -74,6 +84,7 @@ public:
 	void Capture_Minimap_Internal(bool Is_Capturing, double Height_Offset, double Width_Scale);
 	void Capture_Off();
 	void Capture_On();
+	void Clear_All_PCG_Data();
 	void disable();
 	void Disable_Auto_Update_Terrain_for_Self_and_Connected();
 	void EditorAssignByProximityNative();
@@ -92,6 +103,7 @@ public:
 	void Update_Base_Visible_Spline_Meshes();
 	void Update_Grass_Hiding_Spline_Meshes();
 	void Update_Intersection();
+	void Update_PCG_Data();
 	void UserConstructionScript();
 
 public:
@@ -105,7 +117,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_LandscapeBrushRoadIntersection_C) == 0x000008, "Wrong alignment on ABP_LandscapeBrushRoadIntersection_C");
-static_assert(sizeof(ABP_LandscapeBrushRoadIntersection_C) == 0x000528, "Wrong size on ABP_LandscapeBrushRoadIntersection_C");
+static_assert(sizeof(ABP_LandscapeBrushRoadIntersection_C) == 0x000568, "Wrong size on ABP_LandscapeBrushRoadIntersection_C");
 static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, UberGraphFrame) == 0x000350, "Member 'ABP_LandscapeBrushRoadIntersection_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, Billboard) == 0x000358, "Member 'ABP_LandscapeBrushRoadIntersection_C::Billboard' has a wrong offset!");
 static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, Splines) == 0x000360, "Member 'ABP_LandscapeBrushRoadIntersection_C::Splines' has a wrong offset!");
@@ -139,6 +151,11 @@ static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, Road_For_Minimap_Ma
 static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, IsIntersectionInitializedAtRuntime) == 0x000508, "Member 'ABP_LandscapeBrushRoadIntersection_C::IsIntersectionInitializedAtRuntime' has a wrong offset!");
 static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, BaseAppearances) == 0x000510, "Member 'ABP_LandscapeBrushRoadIntersection_C::BaseAppearances' has a wrong offset!");
 static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, Can_Adjust_Endpoint_Positions) == 0x000520, "Member 'ABP_LandscapeBrushRoadIntersection_C::Can_Adjust_Endpoint_Positions' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, Active_PCG_Comps) == 0x000528, "Member 'ABP_LandscapeBrushRoadIntersection_C::Active_PCG_Comps' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, Intersection_SD_Data) == 0x000538, "Member 'ABP_LandscapeBrushRoadIntersection_C::Intersection_SD_Data' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, Show_Middle_Path) == 0x000548, "Member 'ABP_LandscapeBrushRoadIntersection_C::Show_Middle_Path' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, Decal_Array) == 0x000550, "Member 'ABP_LandscapeBrushRoadIntersection_C::Decal_Array' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoadIntersection_C, Middle_Decal) == 0x000560, "Member 'ABP_LandscapeBrushRoadIntersection_C::Middle_Decal' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GoblinDog3.GoblinDog3_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class AGoblinDog3_C final : public AGoblinDog_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AGoblinDog3_C) == 0x000010, "Wrong alignment on AGoblinDog3_C");
-static_assert(sizeof(AGoblinDog3_C) == 0x001DA0, "Wrong size on AGoblinDog3_C");
+static_assert(sizeof(AGoblinDog3_C) == 0x001D60, "Wrong size on AGoblinDog3_C");
 
 }
 

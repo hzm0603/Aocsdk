@@ -20,22 +20,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AOCHUD.BP_AOCHUD_C
-// 0x0050 (0x1918 - 0x18C8)
+// 0x0050 (0x1A70 - 0x1A20)
 class ABP_AOCHUD_C final : public AAoCHUDBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x18C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x18D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           Tax_Tag;                                           // 0x18D8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CastTimeText;                                      // 0x18E0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   AnimEndText;                                       // 0x18F8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        DynamicCastDuration;                               // 0x1910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1A20(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x1A28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Tax_Tag;                                           // 0x1A30(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CastTimeText;                                      // 0x1A38(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   AnimEndText;                                       // 0x1A50(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        DynamicCastDuration;                               // 0x1A68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SetCastTimeBP(class UTextBlock* TextBlock, const struct FAoCAbilityRecord& AbilityRecord);
 	void ReceiveBeginPlay();
 	void NotifiesLoaded(const TArray<struct FAnimNotifyEvent>& AnimNotifyEvents);
-	void Get_Speed_Mult(ESpeedTypes& Speed, double* mult);
+	void Get_Speed_Mult(ESpeedTypes& Speed, double* Mult);
 	void ExecuteUbergraph_BP_AOCHUD(int32 EntryPoint);
 
 public:
@@ -49,13 +49,13 @@ public:
 	}
 };
 static_assert(alignof(ABP_AOCHUD_C) == 0x000008, "Wrong alignment on ABP_AOCHUD_C");
-static_assert(sizeof(ABP_AOCHUD_C) == 0x001918, "Wrong size on ABP_AOCHUD_C");
-static_assert(offsetof(ABP_AOCHUD_C, UberGraphFrame) == 0x0018C8, "Member 'ABP_AOCHUD_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_AOCHUD_C, DefaultSceneRoot) == 0x0018D0, "Member 'ABP_AOCHUD_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_AOCHUD_C, Tax_Tag) == 0x0018D8, "Member 'ABP_AOCHUD_C::Tax_Tag' has a wrong offset!");
-static_assert(offsetof(ABP_AOCHUD_C, CastTimeText) == 0x0018E0, "Member 'ABP_AOCHUD_C::CastTimeText' has a wrong offset!");
-static_assert(offsetof(ABP_AOCHUD_C, AnimEndText) == 0x0018F8, "Member 'ABP_AOCHUD_C::AnimEndText' has a wrong offset!");
-static_assert(offsetof(ABP_AOCHUD_C, DynamicCastDuration) == 0x001910, "Member 'ABP_AOCHUD_C::DynamicCastDuration' has a wrong offset!");
+static_assert(sizeof(ABP_AOCHUD_C) == 0x001A70, "Wrong size on ABP_AOCHUD_C");
+static_assert(offsetof(ABP_AOCHUD_C, UberGraphFrame) == 0x001A20, "Member 'ABP_AOCHUD_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_AOCHUD_C, DefaultSceneRoot) == 0x001A28, "Member 'ABP_AOCHUD_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_AOCHUD_C, Tax_Tag) == 0x001A30, "Member 'ABP_AOCHUD_C::Tax_Tag' has a wrong offset!");
+static_assert(offsetof(ABP_AOCHUD_C, CastTimeText) == 0x001A38, "Member 'ABP_AOCHUD_C::CastTimeText' has a wrong offset!");
+static_assert(offsetof(ABP_AOCHUD_C, AnimEndText) == 0x001A50, "Member 'ABP_AOCHUD_C::AnimEndText' has a wrong offset!");
+static_assert(offsetof(ABP_AOCHUD_C, DynamicCastDuration) == 0x001A68, "Member 'ABP_AOCHUD_C::DynamicCastDuration' has a wrong offset!");
 
 }
 

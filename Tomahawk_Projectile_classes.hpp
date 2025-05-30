@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Tomahawk_Projectile.Tomahawk_Projectile_C
-// 0x0038 (0x05C8 - 0x0590)
+// 0x0038 (0x05D0 - 0x0598)
 class ATomahawk_Projectile_C final : public AAoCAbilityProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      Niagara1;                                          // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      Niagara;                                           // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   TomahawkMesh;                                      // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Saved_Relative_Rotation;                           // 0x05B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      Niagara1;                                          // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      Niagara;                                           // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   TomahawkMesh;                                      // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Saved_Relative_Rotation;                           // 0x05B8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_Tomahawk_Projectile(int32 EntryPoint);
@@ -46,12 +46,12 @@ public:
 	}
 };
 static_assert(alignof(ATomahawk_Projectile_C) == 0x000008, "Wrong alignment on ATomahawk_Projectile_C");
-static_assert(sizeof(ATomahawk_Projectile_C) == 0x0005C8, "Wrong size on ATomahawk_Projectile_C");
-static_assert(offsetof(ATomahawk_Projectile_C, UberGraphFrame) == 0x000590, "Member 'ATomahawk_Projectile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATomahawk_Projectile_C, Niagara1) == 0x000598, "Member 'ATomahawk_Projectile_C::Niagara1' has a wrong offset!");
-static_assert(offsetof(ATomahawk_Projectile_C, Niagara) == 0x0005A0, "Member 'ATomahawk_Projectile_C::Niagara' has a wrong offset!");
-static_assert(offsetof(ATomahawk_Projectile_C, TomahawkMesh) == 0x0005A8, "Member 'ATomahawk_Projectile_C::TomahawkMesh' has a wrong offset!");
-static_assert(offsetof(ATomahawk_Projectile_C, Saved_Relative_Rotation) == 0x0005B0, "Member 'ATomahawk_Projectile_C::Saved_Relative_Rotation' has a wrong offset!");
+static_assert(sizeof(ATomahawk_Projectile_C) == 0x0005D0, "Wrong size on ATomahawk_Projectile_C");
+static_assert(offsetof(ATomahawk_Projectile_C, UberGraphFrame) == 0x000598, "Member 'ATomahawk_Projectile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ATomahawk_Projectile_C, Niagara1) == 0x0005A0, "Member 'ATomahawk_Projectile_C::Niagara1' has a wrong offset!");
+static_assert(offsetof(ATomahawk_Projectile_C, Niagara) == 0x0005A8, "Member 'ATomahawk_Projectile_C::Niagara' has a wrong offset!");
+static_assert(offsetof(ATomahawk_Projectile_C, TomahawkMesh) == 0x0005B0, "Member 'ATomahawk_Projectile_C::TomahawkMesh' has a wrong offset!");
+static_assert(offsetof(ATomahawk_Projectile_C, Saved_Relative_Rotation) == 0x0005B8, "Member 'ATomahawk_Projectile_C::Saved_Relative_Rotation' has a wrong offset!");
 
 }
 

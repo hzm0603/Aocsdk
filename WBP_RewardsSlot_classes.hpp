@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_RewardsSlot.WBP_RewardsSlot_C
-// 0x0000 (0x03C8 - 0x03C8)
+// 0x0000 (0x03F0 - 0x03F0)
 class UWBP_RewardsSlot_C final : public URewardSlot
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_RewardsSlot_C) == 0x000008, "Wrong alignment on UWBP_RewardsSlot_C");
-static_assert(sizeof(UWBP_RewardsSlot_C) == 0x0003C8, "Wrong size on UWBP_RewardsSlot_C");
+static_assert(sizeof(UWBP_RewardsSlot_C) == 0x0003F0, "Wrong size on UWBP_RewardsSlot_C");
 
 }
 

@@ -26,8 +26,8 @@ public:
 	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WBP_ScrollWindow_NoFrameNoPadding_C_0;             // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_CommissionRewardsSummary(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_CommissionRewardsSummary(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

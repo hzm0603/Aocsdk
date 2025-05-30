@@ -40,6 +40,8 @@ public:
 	class UPCGMetadata*                           MetaData;                                          // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class USplineComponent*                       Spline;                                            // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	ESplineCoordinateSpace                        Coordinate_Space;                                  // 0x0150(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Spline_Index;                                      // 0x0154(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteWithContext(struct FPCGContext& InContext, const struct FPCGDataCollection& Input, struct FPCGDataCollection* Output);
@@ -72,6 +74,7 @@ static_assert(offsetof(USplineDebris_C, In_Debris_Objects) == 0x000130, "Member 
 static_assert(offsetof(USplineDebris_C, MetaData) == 0x000140, "Member 'USplineDebris_C::MetaData' has a wrong offset!");
 static_assert(offsetof(USplineDebris_C, Spline) == 0x000148, "Member 'USplineDebris_C::Spline' has a wrong offset!");
 static_assert(offsetof(USplineDebris_C, Coordinate_Space) == 0x000150, "Member 'USplineDebris_C::Coordinate_Space' has a wrong offset!");
+static_assert(offsetof(USplineDebris_C, Spline_Index) == 0x000154, "Member 'USplineDebris_C::Spline_Index' has a wrong offset!");
 
 }
 

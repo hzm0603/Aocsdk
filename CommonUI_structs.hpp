@@ -78,24 +78,13 @@ enum class ETransitionCurve : uint8
 	ETransitionCurve_MAX                     = 7,
 };
 
-// ScriptStruct CommonUI.UIInputConfig
-// 0x0005 (0x0005 - 0x0000)
-struct FUIInputConfig final
+// ScriptStruct CommonUI.UITag
+// 0x0000 (0x0008 - 0x0008)
+struct FUITag : public FGameplayTag
 {
-public:
-	bool                                          bIgnoreMoveInput;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreLookInput;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECommonInputMode                              InputMode;                                         // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EMouseCaptureMode                             MouseCaptureMode;                                  // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHideCursorDuringViewportCapture;                  // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FUIInputConfig) == 0x000001, "Wrong alignment on FUIInputConfig");
-static_assert(sizeof(FUIInputConfig) == 0x000005, "Wrong size on FUIInputConfig");
-static_assert(offsetof(FUIInputConfig, bIgnoreMoveInput) == 0x000000, "Member 'FUIInputConfig::bIgnoreMoveInput' has a wrong offset!");
-static_assert(offsetof(FUIInputConfig, bIgnoreLookInput) == 0x000001, "Member 'FUIInputConfig::bIgnoreLookInput' has a wrong offset!");
-static_assert(offsetof(FUIInputConfig, InputMode) == 0x000002, "Member 'FUIInputConfig::InputMode' has a wrong offset!");
-static_assert(offsetof(FUIInputConfig, MouseCaptureMode) == 0x000003, "Member 'FUIInputConfig::MouseCaptureMode' has a wrong offset!");
-static_assert(offsetof(FUIInputConfig, bHideCursorDuringViewportCapture) == 0x000004, "Member 'FUIInputConfig::bHideCursorDuringViewportCapture' has a wrong offset!");
+static_assert(alignof(FUITag) == 0x000004, "Wrong alignment on FUITag");
+static_assert(sizeof(FUITag) == 0x000008, "Wrong size on FUITag");
 
 // ScriptStruct CommonUI.CommonNumberFormattingOptions
 // 0x0014 (0x0014 - 0x0000)
@@ -135,6 +124,33 @@ static_assert(offsetof(FCommonRegisteredTabInfo, TabIndex) == 0x000000, "Member 
 static_assert(offsetof(FCommonRegisteredTabInfo, TabButton) == 0x000008, "Member 'FCommonRegisteredTabInfo::TabButton' has a wrong offset!");
 static_assert(offsetof(FCommonRegisteredTabInfo, ContentInstance) == 0x000010, "Member 'FCommonRegisteredTabInfo::ContentInstance' has a wrong offset!");
 
+// ScriptStruct CommonUI.UIActionTag
+// 0x0000 (0x0008 - 0x0008)
+struct FUIActionTag final : public FUITag
+{
+};
+static_assert(alignof(FUIActionTag) == 0x000004, "Wrong alignment on FUIActionTag");
+static_assert(sizeof(FUIActionTag) == 0x000008, "Wrong size on FUIActionTag");
+
+// ScriptStruct CommonUI.UIInputConfig
+// 0x0005 (0x0005 - 0x0000)
+struct FUIInputConfig final
+{
+public:
+	bool                                          bIgnoreMoveInput;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreLookInput;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECommonInputMode                              InputMode;                                         // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EMouseCaptureMode                             MouseCaptureMode;                                  // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHideCursorDuringViewportCapture;                  // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+};
+static_assert(alignof(FUIInputConfig) == 0x000001, "Wrong alignment on FUIInputConfig");
+static_assert(sizeof(FUIInputConfig) == 0x000005, "Wrong size on FUIInputConfig");
+static_assert(offsetof(FUIInputConfig, bIgnoreMoveInput) == 0x000000, "Member 'FUIInputConfig::bIgnoreMoveInput' has a wrong offset!");
+static_assert(offsetof(FUIInputConfig, bIgnoreLookInput) == 0x000001, "Member 'FUIInputConfig::bIgnoreLookInput' has a wrong offset!");
+static_assert(offsetof(FUIInputConfig, InputMode) == 0x000002, "Member 'FUIInputConfig::InputMode' has a wrong offset!");
+static_assert(offsetof(FUIInputConfig, MouseCaptureMode) == 0x000003, "Member 'FUIInputConfig::MouseCaptureMode' has a wrong offset!");
+static_assert(offsetof(FUIInputConfig, bHideCursorDuringViewportCapture) == 0x000004, "Member 'FUIInputConfig::bHideCursorDuringViewportCapture' has a wrong offset!");
+
 // ScriptStruct CommonUI.CommonInputActionHandlerData
 // 0x0020 (0x0020 - 0x0000)
 struct FCommonInputActionHandlerData final
@@ -148,22 +164,6 @@ static_assert(alignof(FCommonInputActionHandlerData) == 0x000008, "Wrong alignme
 static_assert(sizeof(FCommonInputActionHandlerData) == 0x000020, "Wrong size on FCommonInputActionHandlerData");
 static_assert(offsetof(FCommonInputActionHandlerData, InputActionRow) == 0x000000, "Member 'FCommonInputActionHandlerData::InputActionRow' has a wrong offset!");
 static_assert(offsetof(FCommonInputActionHandlerData, State) == 0x000010, "Member 'FCommonInputActionHandlerData::State' has a wrong offset!");
-
-// ScriptStruct CommonUI.UITag
-// 0x0000 (0x0008 - 0x0008)
-struct FUITag : public FGameplayTag
-{
-};
-static_assert(alignof(FUITag) == 0x000004, "Wrong alignment on FUITag");
-static_assert(sizeof(FUITag) == 0x000008, "Wrong size on FUITag");
-
-// ScriptStruct CommonUI.UIActionTag
-// 0x0000 (0x0008 - 0x0008)
-struct FUIActionTag final : public FUITag
-{
-};
-static_assert(alignof(FUIActionTag) == 0x000004, "Wrong alignment on FUIActionTag");
-static_assert(sizeof(FUIActionTag) == 0x000008, "Wrong size on FUIActionTag");
 
 // ScriptStruct CommonUI.CommonButtonStyleOptionalSlateSound
 // 0x0028 (0x0028 - 0x0000)
@@ -228,7 +228,7 @@ public:
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCommonInputTypeInfo                   KeyboardInputTypeInfo;                             // 0x0040(0x0100)(Edit, Protected, NativeAccessSpecifierProtected)
 	struct FCommonInputTypeInfo                   DefaultGamepadInputTypeInfo;                       // 0x0140(0x0100)(Edit, Protected, NativeAccessSpecifierProtected)
-	TMap<class FName, struct FCommonInputTypeInfo> GamepadInputOverrides;                             // 0x0240(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FCommonInputTypeInfo> GamepadInputOverrides;                            // 0x0240(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
 	struct FCommonInputTypeInfo                   TouchInputTypeInfo;                                // 0x0290(0x0100)(Edit, Protected, NativeAccessSpecifierProtected)
 };
 static_assert(alignof(FCommonInputActionDataBase) == 0x000010, "Wrong alignment on FCommonInputActionDataBase");

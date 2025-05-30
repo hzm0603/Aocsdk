@@ -83,7 +83,7 @@ void APlayerPawn_C::DamageFlinchBP(TSubclassOf<class UDamageType> DamageType)
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ANPCPawn_C*                       NPC                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FString                           Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
 void APlayerPawn_C::DialogueServerEvent(class ANPCPawn_C* NPC, const class FString& Tag)
 {
@@ -222,7 +222,7 @@ void APlayerPawn_C::GapCloseCameraLagEnd__UpdateFunc()
 // Function PlayerPawn.PlayerPawn_C.GetCameraManager
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AAoCCameraManager*                CameraManager                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AAoCCameraManager**               CameraManager                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void APlayerPawn_C::GetCameraManager(class AAoCCameraManager** CameraManager)
 {
@@ -243,7 +243,7 @@ void APlayerPawn_C::GetCameraManager(class AAoCCameraManager** CameraManager)
 // Function PlayerPawn.PlayerPawn_C.GetDrivenSiegeWeapon
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USiegeWeaponComponent*            SiegeWeaponComponent                                   (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class USiegeWeaponComponent**           SiegeWeaponComponent                                   (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 void APlayerPawn_C::GetDrivenSiegeWeapon(class USiegeWeaponComponent** SiegeWeaponComponent)
 {
@@ -494,7 +494,7 @@ void APlayerPawn_C::OnReviveBP(class ABaseCharacter* Target, float RevHealthPerc
 // Function PlayerPawn.PlayerPawn_C.OnSetLastDeathLocationBP
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FVector                          Location                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Location                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void APlayerPawn_C::OnSetLastDeathLocationBP(const struct FVector& Location)
 {
@@ -603,7 +603,7 @@ void APlayerPawn_C::OnUpdateQuestSidebar()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             FlagName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void APlayerPawn_C::PCFlag_Clear(class FName FlagName, bool* Success)
 {
@@ -627,7 +627,7 @@ void APlayerPawn_C::PCFlag_Clear(class FName FlagName, bool* Success)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             FlagName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void APlayerPawn_C::PCFlag_Set(class FName FlagName, bool* Success)
 {

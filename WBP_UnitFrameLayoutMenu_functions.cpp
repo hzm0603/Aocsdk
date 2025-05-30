@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_UnitFrameLayoutMenu.WBP_UnitFrameLayoutMenu_C.DisplayUndoDebugTextBP
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const TArray<struct FHudElementState>&  CachedStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_UnitFrameLayoutMenu_C::DisplayUndoDebugTextBP(const TArray<struct FHudElementState>& CachedStates)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UnitFrameLayoutMenu_C", "DisplayUndoDebugTextBP");
-
-	Params::WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP Parms{};
-
-	Parms.CachedStates = std::move(CachedStates);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_UnitFrameLayoutMenu.WBP_UnitFrameLayoutMenu_C.ExecuteUbergraph_WBP_UnitFrameLayoutMenu
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_UnitFrameLayoutMenu_C::ExecuteUbergraph_WBP_UnitFrameLayoutMenu(int32 
 	Params::WBP_UnitFrameLayoutMenu_C_ExecuteUbergraph_WBP_UnitFrameLayoutMenu Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UnitFrameLayoutMenu.WBP_UnitFrameLayoutMenu_C.DisplayUndoDebugTextBP
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const TArray<struct FHudElementState>&  CachedStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_UnitFrameLayoutMenu_C::DisplayUndoDebugTextBP(const TArray<struct FHudElementState>& CachedStates)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UnitFrameLayoutMenu_C", "DisplayUndoDebugTextBP");
+
+	Params::WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP Parms{};
+
+	Parms.CachedStates = std::move(CachedStates);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

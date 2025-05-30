@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Class MetasoundFrontend.MetaSoundDocumentInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IMetaSoundDocumentInterface final : public IInterface
 {
 public:
@@ -31,8 +31,8 @@ public:
 		return GetDefaultObjImpl<IMetaSoundDocumentInterface>();
 	}
 };
-static_assert(alignof(IMetaSoundDocumentInterface) == 0x000008, "Wrong alignment on IMetaSoundDocumentInterface");
-static_assert(sizeof(IMetaSoundDocumentInterface) == 0x000048, "Wrong size on IMetaSoundDocumentInterface");
+static_assert(alignof(IMetaSoundDocumentInterface) == 0x000001, "Wrong alignment on IMetaSoundDocumentInterface");
+static_assert(sizeof(IMetaSoundDocumentInterface) == 0x000001, "Wrong size on IMetaSoundDocumentInterface");
 
 // Class MetasoundFrontend.MetasoundParameterPack
 // 0x0018 (0x0060 - 0x0048)

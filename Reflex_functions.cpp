@@ -170,7 +170,7 @@ float UReflexBlueprintLibrary::GetRenderLatencyInMs()
 // Function Reflex.ReflexBlueprintLibrary.SetFlashIndicatorEnabled
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                                    bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UReflexBlueprintLibrary::SetFlashIndicatorEnabled(const bool bEnabled)
 {
@@ -195,7 +195,7 @@ void UReflexBlueprintLibrary::SetFlashIndicatorEnabled(const bool bEnabled)
 // Function Reflex.ReflexBlueprintLibrary.SetReflexMode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// EReflexMode                             Mode                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EReflexMode                       Mode                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UReflexBlueprintLibrary::SetReflexMode(const EReflexMode Mode)
 {

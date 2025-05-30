@@ -13,9 +13,9 @@
 #include "AudioMixer_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "MediaAssets_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "MediaAssets_structs.hpp"
 
 
 namespace SDK
@@ -29,8 +29,8 @@ public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              OnEndReached;                                      // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnMediaClosed;                                     // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& OpenedUrl)> OnMediaOpened;                                     // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& FailedUrl)> OnMediaOpenFailed;                                 // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& OpenedUrl)> OnMediaOpened;                    // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& FailedUrl)> OnMediaOpenFailed;                // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnPlaybackResumed;                                 // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnPlaybackSuspended;                               // 0x00A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnSeekCompleted;                                   // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -169,7 +169,7 @@ static_assert(offsetof(UMediaPlayer, ViewRotation) == 0x000120, "Member 'UMediaP
 static_assert(offsetof(UMediaPlayer, PlayerGuid) == 0x000160, "Member 'UMediaPlayer::PlayerGuid' has a wrong offset!");
 
 // Class MediaAssets.MediaSourceRendererInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IMediaSourceRendererInterface final : public IInterface
 {
 public:
@@ -182,8 +182,8 @@ public:
 		return GetDefaultObjImpl<IMediaSourceRendererInterface>();
 	}
 };
-static_assert(alignof(IMediaSourceRendererInterface) == 0x000008, "Wrong alignment on IMediaSourceRendererInterface");
-static_assert(sizeof(IMediaSourceRendererInterface) == 0x000048, "Wrong size on IMediaSourceRendererInterface");
+static_assert(alignof(IMediaSourceRendererInterface) == 0x000001, "Wrong alignment on IMediaSourceRendererInterface");
+static_assert(sizeof(IMediaSourceRendererInterface) == 0x000001, "Wrong size on IMediaSourceRendererInterface");
 
 // Class MediaAssets.MediaTexture
 // 0x00E0 (0x02D0 - 0x01F0)
@@ -367,7 +367,7 @@ static_assert(offsetof(UMediaTimeStampInfo, Time) == 0x000048, "Member 'UMediaTi
 static_assert(offsetof(UMediaTimeStampInfo, SequenceIndex) == 0x000050, "Member 'UMediaTimeStampInfo::SequenceIndex' has a wrong offset!");
 
 // Class MediaAssets.MediaPlayerProxyInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IMediaPlayerProxyInterface final : public IInterface
 {
 public:
@@ -380,8 +380,8 @@ public:
 		return GetDefaultObjImpl<IMediaPlayerProxyInterface>();
 	}
 };
-static_assert(alignof(IMediaPlayerProxyInterface) == 0x000008, "Wrong alignment on IMediaPlayerProxyInterface");
-static_assert(sizeof(IMediaPlayerProxyInterface) == 0x000048, "Wrong size on IMediaPlayerProxyInterface");
+static_assert(alignof(IMediaPlayerProxyInterface) == 0x000001, "Wrong alignment on IMediaPlayerProxyInterface");
+static_assert(sizeof(IMediaPlayerProxyInterface) == 0x000001, "Wrong size on IMediaPlayerProxyInterface");
 
 // Class MediaAssets.MediaPlaylist
 // 0x0010 (0x0058 - 0x0048)

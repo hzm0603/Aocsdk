@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ServiceBuilding_Stoneworks_Mining_Vendor.ServiceBuilding_Stoneworks_Mining_Vendor_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class AServiceBuilding_Stoneworks_Mining_Vendor_C final : public ANode_NPC_Master_C
 {
 public:
-	class UAoCNodePlotComponent*                  AoCNodePlot;                                       // 0x1DC8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAoCNodePlotComponent*                  AoCNodePlot;                                       // 0x1D88(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(AServiceBuilding_Stoneworks_Mining_Vendor_C) == 0x000010, "Wrong alignment on AServiceBuilding_Stoneworks_Mining_Vendor_C");
-static_assert(sizeof(AServiceBuilding_Stoneworks_Mining_Vendor_C) == 0x001DD0, "Wrong size on AServiceBuilding_Stoneworks_Mining_Vendor_C");
-static_assert(offsetof(AServiceBuilding_Stoneworks_Mining_Vendor_C, AoCNodePlot) == 0x001DC8, "Member 'AServiceBuilding_Stoneworks_Mining_Vendor_C::AoCNodePlot' has a wrong offset!");
+static_assert(sizeof(AServiceBuilding_Stoneworks_Mining_Vendor_C) == 0x001D90, "Wrong size on AServiceBuilding_Stoneworks_Mining_Vendor_C");
+static_assert(offsetof(AServiceBuilding_Stoneworks_Mining_Vendor_C, AoCNodePlot) == 0x001D88, "Member 'AServiceBuilding_Stoneworks_Mining_Vendor_C::AoCNodePlot' has a wrong offset!");
 
 }
 

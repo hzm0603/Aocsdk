@@ -27,7 +27,7 @@ namespace SDK
 // int32                                   Rain_Days                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Chance_Of_Rain                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Humidity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_SingularClimateData      StructOut                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_SingularClimateData*     StructOut                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Adds_Random_to_Todays_Climate(double Degrees_High, double Degrees_Low, double Precipitation_Amount, int32 Sunshine_Hours, int32 Rain_Days, double Chance_Of_Rain, double Humidity, struct FSTRUCT_SingularClimateData* StructOut)
 {
@@ -57,7 +57,7 @@ void ABP_BiomeManager_C::Adds_Random_to_Todays_Climate(double Degrees_High, doub
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // EBiomes                                 Biome_In                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             Row_Name_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName*                            Row_Name_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Biome_to_Row_Name(EBiomes Biome_In, class FName* Row_Name_0)
 {
@@ -80,15 +80,15 @@ void ABP_BiomeManager_C::Biome_to_Row_Name(EBiomes Biome_In, class FName* Row_Na
 // Function BP_BiomeManager.BP_BiomeManager_C.Blend Biome Data
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D                        Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Time_Input                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   CURRENT_Global_Struct_0                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&CURRENT_Global_Struct_0                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // double                                  Normalized_Year_In                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TMap<class FName, struct FSTRUCT_SingularClimateData>Biome_Climate_Map                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FSTRUCT_SingularClimateData      Current_Biome_Climate                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   Global                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// EBiomes                                 Current_Biome_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_SingularClimateData      Current_Biome_Climate_Out                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TMap<class FName, struct FSTRUCT_SingularClimateData>&Biome_Climate_Map                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FSTRUCT_SingularClimateData&Current_Biome_Climate                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_GlobalAtmosphereOutput*  Global                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// EBiomes*                                Current_Biome_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_SingularClimateData*     Current_Biome_Climate_Out                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Blend_Biome_Data(const struct FVector2D& Location, double Time_Input, const struct FSTRUCT_GlobalAtmosphereOutput& CURRENT_Global_Struct_0, double Normalized_Year_In, const TMap<class FName, struct FSTRUCT_SingularClimateData>& Biome_Climate_Map, const struct FSTRUCT_SingularClimateData& Current_Biome_Climate, struct FSTRUCT_GlobalAtmosphereOutput* Global, EBiomes* Current_Biome_0, struct FSTRUCT_SingularClimateData* Current_Biome_Climate_Out)
 {
@@ -123,8 +123,8 @@ void ABP_BiomeManager_C::Blend_Biome_Data(const struct FVector2D& Location, doub
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                                    Condition                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     A                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     B                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              A                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              B                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   ALPHA                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -174,9 +174,9 @@ int32 ABP_BiomeManager_C::Determine_Month(double In_Year)
 // Function BP_BiomeManager.BP_BiomeManager_C.Do Math - Color
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FLinearColor                     Default__C_                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TMap<uint8, struct FLinearColor>        Colors                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FLinearColor                     Return__C_                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              Default__C_                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TMap<uint8, struct FLinearColor>& Colors                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FLinearColor*                    Return__C_                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Do_Math___Color(const struct FLinearColor& Default__C_, const TMap<uint8, struct FLinearColor>& Colors, struct FLinearColor* Return__C_)
 {
@@ -201,8 +201,8 @@ void ABP_BiomeManager_C::Do_Math___Color(const struct FLinearColor& Default__C_,
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // double                                  Default_Input__F_                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TMap<uint8, double>                     Floats                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-// double                                  Return__F_                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TMap<uint8, double>&              Floats                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// double*                                 Return__F_                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Do_Math___Float(double Default_Input__F_, const TMap<uint8, double>& Floats, double* Return__F_)
 {
@@ -276,8 +276,8 @@ double ABP_BiomeManager_C::Float_Lerp_Bool(bool Condition, double A, double B, d
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // EBiomes                                 Biome_In                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TMap<class FName, struct FSTRUCT_SingularClimateData>TargetMap                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FSTRUCT_SingularClimateData      OVERRIDE_Singular_Day_Climate                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TMap<class FName, struct FSTRUCT_SingularClimateData>&TargetMap                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FSTRUCT_SingularClimateData*     OVERRIDE_Singular_Day_Climate                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Get_Climate_For_Biome(EBiomes Biome_In, const TMap<class FName, struct FSTRUCT_SingularClimateData>& TargetMap, struct FSTRUCT_SingularClimateData* OVERRIDE_Singular_Day_Climate)
 {
@@ -305,8 +305,8 @@ void ABP_BiomeManager_C::Get_Climate_For_Biome(EBiomes Biome_In, const TMap<clas
 // EBiomes                                 Green_Category_Name_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EBiomes                                 Blue_Category_Name_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EBiomes                                 Alpha_Category_Name_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBiomes                                 Current_Biome_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Amount_0                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomes*                                Current_Biome_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Amount_0                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Get_Current_Biome(EBiomes Red_Category_Name_0, EBiomes Green_Category_Name_0, EBiomes Blue_Category_Name_0, EBiomes Alpha_Category_Name_0, EBiomes* Current_Biome_0, double* Amount_0)
 {
@@ -337,9 +337,9 @@ void ABP_BiomeManager_C::Get_Current_Biome(EBiomes Red_Category_Name_0, EBiomes 
 // Parameters:
 // double                                  Time_Input                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EBiomes                                 Biome_In                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   OVERRIDE_Global_Struct_0                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalOverrideAndBool    OVERRIDE_Global_Struct_BOOL_0                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_GlobalAtmosphereOutput*  OVERRIDE_Global_Struct_0                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_GlobalOverrideAndBool*   OVERRIDE_Global_Struct_BOOL_0                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Get_Override_For_Biome(double Time_Input, EBiomes Biome_In, const struct FSTRUCT_GlobalAtmosphereOutput& STRUCT_GlobalAtmosphereOutput, struct FSTRUCT_GlobalAtmosphereOutput* OVERRIDE_Global_Struct_0, struct FSTRUCT_GlobalOverrideAndBool* OVERRIDE_Global_Struct_BOOL_0)
 {
@@ -368,7 +368,7 @@ void ABP_BiomeManager_C::Get_Override_For_Biome(double Time_Input, EBiomes Biome
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   In_Month                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TMap<class FName, struct FSTRUCT_SingularClimateData>Climate_Single_Day_0                                   (Parm, OutParm)
+// TMap<class FName, struct FSTRUCT_SingularClimateData>*Climate_Single_Day_0                                   (Parm, OutParm)
 
 void ABP_BiomeManager_C::INIT_Biome_Data_Tables(int32 In_Month, TMap<class FName, struct FSTRUCT_SingularClimateData>* Climate_Single_Day_0)
 {
@@ -392,9 +392,9 @@ void ABP_BiomeManager_C::INIT_Biome_Data_Tables(int32 In_Month, TMap<class FName
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  ALPHA                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_SingularClimateData      Current_Biome_Climate                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_SingularClimateData      OVERRIDE_Climate_Data                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_SingularClimateData      Current_Biome_Climate_Out                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_SingularClimateData&Current_Biome_Climate                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_SingularClimateData&OVERRIDE_Climate_Data                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_SingularClimateData*     Current_Biome_Climate_Out                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::LERP_Climate_Data(double ALPHA, const struct FSTRUCT_SingularClimateData& Current_Biome_Climate, const struct FSTRUCT_SingularClimateData& OVERRIDE_Climate_Data, struct FSTRUCT_SingularClimateData* Current_Biome_Climate_Out)
 {
@@ -420,10 +420,10 @@ void ABP_BiomeManager_C::LERP_Climate_Data(double ALPHA, const struct FSTRUCT_Si
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   ALPHA                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   Current_Global_Settings_Struct                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   Override_Global_Settings_Struct                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalOverrideAndBool    Current_Override_BOOL_Struct                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   CURRENT_Global_Struct_0                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&Current_Global_Settings_Struct                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&Override_Global_Settings_Struct                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalOverrideAndBool&Current_Override_BOOL_Struct                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_GlobalAtmosphereOutput*  CURRENT_Global_Struct_0                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::LERP_Structs__F_(float ALPHA, const struct FSTRUCT_GlobalAtmosphereOutput& Current_Global_Settings_Struct, const struct FSTRUCT_GlobalAtmosphereOutput& Override_Global_Settings_Struct, const struct FSTRUCT_GlobalOverrideAndBool& Current_Override_BOOL_Struct, struct FSTRUCT_GlobalAtmosphereOutput* CURRENT_Global_Struct_0)
 {
@@ -449,19 +449,19 @@ void ABP_BiomeManager_C::LERP_Structs__F_(float ALPHA, const struct FSTRUCT_Glob
 // Function BP_BiomeManager.BP_BiomeManager_C.Pass To Debug
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EBiomes                                 Red_Biome                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Red_Amount                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Red_Biome_Amount_Previous_0                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBiomes                                 Green_Biome                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Green_Amount                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Green_Biome_Amount_Previous_0                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBiomes                                 Blue_Biome                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Blue_Amount                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Blue_Biome_Amount_Previous_0                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBiomes                                 Alpha_Biome                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Alpha_Amount                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Alpha_Biome_Amount_Previoius_0                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Month_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomes*                                Red_Biome                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Red_Amount                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Red_Biome_Amount_Previous_0                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomes*                                Green_Biome                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Green_Amount                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Green_Biome_Amount_Previous_0                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomes*                                Blue_Biome                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Blue_Amount                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Blue_Biome_Amount_Previous_0                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomes*                                Alpha_Biome                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Alpha_Amount                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Alpha_Biome_Amount_Previoius_0                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Month_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Pass_To_Debug(EBiomes* Red_Biome, double* Red_Amount, double* Red_Biome_Amount_Previous_0, EBiomes* Green_Biome, double* Green_Amount, double* Green_Biome_Amount_Previous_0, EBiomes* Blue_Biome, double* Blue_Amount, double* Blue_Biome_Amount_Previous_0, EBiomes* Alpha_Biome, double* Alpha_Amount, double* Alpha_Biome_Amount_Previoius_0, int32* Month_0)
 {
@@ -521,11 +521,11 @@ void ABP_BiomeManager_C::Pass_To_Debug(EBiomes* Red_Biome, double* Red_Amount, d
 // uint8                                   Variable_Type                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  float_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UCurveFloat*                      Float_Curve                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UCurveLinearColor*                Color_Curve                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // double                                  Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Float_Output                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     Color_Output                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Float_Output                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Color_Output                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Pick_Variable(uint8 Variable_Type, double float_0, class UCurveFloat* Float_Curve, const struct FLinearColor& Color, class UCurveLinearColor* Color_Curve, double Time, double* Float_Output, struct FLinearColor* Color_Output)
 {
@@ -570,8 +570,8 @@ void ABP_BiomeManager_C::ReceiveBeginPlay()
 // Function BP_BiomeManager.BP_BiomeManager_C.Row Name To Biome
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class FName                             In_Row_Name                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBiomes                                 Row_Name_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName&                            In_Row_Name                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomes*                                Row_Name_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Row_Name_To_Biome(class FName& In_Row_Name, EBiomes* Row_Name_0)
 {
@@ -597,15 +597,15 @@ void ABP_BiomeManager_C::Row_Name_To_Biome(class FName& In_Row_Name, EBiomes* Ro
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   In_Month                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Time_Input                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   CURRENT_Global_Struct_0                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&CURRENT_Global_Struct_0                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // double                                  Normalized_Year_In                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_SingularClimateData      Current_Biome_Climate                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TMap<class FName, struct FSTRUCT_SingularClimateData>Biome_Climate_Map                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FSTRUCT_GlobalAtmosphereOutput   Global                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_SingularClimateData      Current_Biome_Climate_Out                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBiomes                                 DEBUG_Current_Biome                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_SingularClimateData&Current_Biome_Climate                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TMap<class FName, struct FSTRUCT_SingularClimateData>&Biome_Climate_Map                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FSTRUCT_GlobalAtmosphereOutput*  Global                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_SingularClimateData*     Current_Biome_Climate_Out                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomes*                                DEBUG_Current_Biome                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_BiomeManager_C::Run_Biome_BP_Functions(int32 In_Month, const struct FVector2D& Location, double Time_Input, const struct FSTRUCT_GlobalAtmosphereOutput& CURRENT_Global_Struct_0, double Normalized_Year_In, const struct FSTRUCT_SingularClimateData& Current_Biome_Climate, const TMap<class FName, struct FSTRUCT_SingularClimateData>& Biome_Climate_Map, struct FSTRUCT_GlobalAtmosphereOutput* Global, struct FSTRUCT_SingularClimateData* Current_Biome_Climate_Out, EBiomes* DEBUG_Current_Biome)
 {

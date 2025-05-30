@@ -26,8 +26,8 @@ public:
 	class UIntrepidCommonBorder*                  AlternatingBG;                                     // 0x1720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	class UCommonBorder* GetBorder();
 	class UAoCCommonButtonBase* GetButton();
+	class UCommonBorder* GetBorder();
 
 public:
 	static class UClass* StaticClass()

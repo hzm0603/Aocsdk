@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TradeWindow.WBP_TradeWindow_C
-// 0x0030 (0x0530 - 0x0500)
+// 0x0048 (0x0548 - 0x0500)
 class UWBP_TradeWindow_C final : public UTradeWindowBase
 {
 public:
@@ -25,8 +25,11 @@ public:
 	class UImage*                                 HeaderBG_1;                                        // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 HeaderBG_2;                                        // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 HeaderBG_3;                                        // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 VignetteBG3;                                       // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 VignetteBG4;                                       // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_Separator;                                     // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_Separator_1;                                   // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_Separator_2;                                   // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 VignetteBG3;                                       // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 VignetteBG4;                                       // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,13 +42,16 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TradeWindow_C) == 0x000008, "Wrong alignment on UWBP_TradeWindow_C");
-static_assert(sizeof(UWBP_TradeWindow_C) == 0x000530, "Wrong size on UWBP_TradeWindow_C");
+static_assert(sizeof(UWBP_TradeWindow_C) == 0x000548, "Wrong size on UWBP_TradeWindow_C");
 static_assert(offsetof(UWBP_TradeWindow_C, HeaderBG) == 0x000500, "Member 'UWBP_TradeWindow_C::HeaderBG' has a wrong offset!");
 static_assert(offsetof(UWBP_TradeWindow_C, HeaderBG_1) == 0x000508, "Member 'UWBP_TradeWindow_C::HeaderBG_1' has a wrong offset!");
 static_assert(offsetof(UWBP_TradeWindow_C, HeaderBG_2) == 0x000510, "Member 'UWBP_TradeWindow_C::HeaderBG_2' has a wrong offset!");
 static_assert(offsetof(UWBP_TradeWindow_C, HeaderBG_3) == 0x000518, "Member 'UWBP_TradeWindow_C::HeaderBG_3' has a wrong offset!");
-static_assert(offsetof(UWBP_TradeWindow_C, VignetteBG3) == 0x000520, "Member 'UWBP_TradeWindow_C::VignetteBG3' has a wrong offset!");
-static_assert(offsetof(UWBP_TradeWindow_C, VignetteBG4) == 0x000528, "Member 'UWBP_TradeWindow_C::VignetteBG4' has a wrong offset!");
+static_assert(offsetof(UWBP_TradeWindow_C, IMG_Separator) == 0x000520, "Member 'UWBP_TradeWindow_C::IMG_Separator' has a wrong offset!");
+static_assert(offsetof(UWBP_TradeWindow_C, IMG_Separator_1) == 0x000528, "Member 'UWBP_TradeWindow_C::IMG_Separator_1' has a wrong offset!");
+static_assert(offsetof(UWBP_TradeWindow_C, IMG_Separator_2) == 0x000530, "Member 'UWBP_TradeWindow_C::IMG_Separator_2' has a wrong offset!");
+static_assert(offsetof(UWBP_TradeWindow_C, VignetteBG3) == 0x000538, "Member 'UWBP_TradeWindow_C::VignetteBG3' has a wrong offset!");
+static_assert(offsetof(UWBP_TradeWindow_C, VignetteBG4) == 0x000540, "Member 'UWBP_TradeWindow_C::VignetteBG4' has a wrong offset!");
 
 }
 

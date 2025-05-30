@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CaravanComponentSlot.WBP_CaravanComponentSlot_C
-// 0x0008 (0x0380 - 0x0378)
+// 0x0008 (0x0370 - 0x0368)
 class UWBP_CaravanComponentSlot_C final : public UCaravanComponentSlotWidget
 {
 public:
-	class UImage*                                 HighlightImage;                                    // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HighlightImage;                                    // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CaravanComponentSlot_C) == 0x000008, "Wrong alignment on UWBP_CaravanComponentSlot_C");
-static_assert(sizeof(UWBP_CaravanComponentSlot_C) == 0x000380, "Wrong size on UWBP_CaravanComponentSlot_C");
-static_assert(offsetof(UWBP_CaravanComponentSlot_C, HighlightImage) == 0x000378, "Member 'UWBP_CaravanComponentSlot_C::HighlightImage' has a wrong offset!");
+static_assert(sizeof(UWBP_CaravanComponentSlot_C) == 0x000370, "Wrong size on UWBP_CaravanComponentSlot_C");
+static_assert(offsetof(UWBP_CaravanComponentSlot_C, HighlightImage) == 0x000368, "Member 'UWBP_CaravanComponentSlot_C::HighlightImage' has a wrong offset!");
 
 }
 

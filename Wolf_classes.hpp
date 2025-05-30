@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Wolf.Wolf_C
-// 0x0000 (0x1D90 - 0x1D90)
+// 0x0000 (0x1D50 - 0x1D50)
 class AWolf_C : public ANPCPawn_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AWolf_C) == 0x000010, "Wrong alignment on AWolf_C");
-static_assert(sizeof(AWolf_C) == 0x001D90, "Wrong size on AWolf_C");
+static_assert(sizeof(AWolf_C) == 0x001D50, "Wrong size on AWolf_C");
 
 }
 

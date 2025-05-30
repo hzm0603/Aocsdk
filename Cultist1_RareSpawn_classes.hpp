@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Cultist1_RareSpawn.Cultist1_RareSpawn_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ACultist1_RareSpawn_C final : public ACultist1_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACultist1_RareSpawn_C) == 0x000010, "Wrong alignment on ACultist1_RareSpawn_C");
-static_assert(sizeof(ACultist1_RareSpawn_C) == 0x001DB0, "Wrong size on ACultist1_RareSpawn_C");
+static_assert(sizeof(ACultist1_RareSpawn_C) == 0x001D70, "Wrong size on ACultist1_RareSpawn_C");
 
 }
 

@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_SiegeParticipantsList.WBP_SiegeParticipantsList_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_SiegeParticipantsList_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SiegeParticipantsList_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_SiegeParticipantsList_C_PreConstruct");
+static_assert(sizeof(WBP_SiegeParticipantsList_C_PreConstruct) == 0x000001, "Wrong size on WBP_SiegeParticipantsList_C_PreConstruct");
+static_assert(offsetof(WBP_SiegeParticipantsList_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_SiegeParticipantsList_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WBP_SiegeParticipantsList.WBP_SiegeParticipantsList_C.ExecuteUbergraph_WBP_SiegeParticipantsList
 // 0x0038 (0x0038 - 0x0000)
 struct WBP_SiegeParticipantsList_C_ExecuteUbergraph_WBP_SiegeParticipantsList final
@@ -44,17 +55,6 @@ static_assert(offsetof(WBP_SiegeParticipantsList_C_ExecuteUbergraph_WBP_SiegePar
 static_assert(offsetof(WBP_SiegeParticipantsList_C_ExecuteUbergraph_WBP_SiegeParticipantsList, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000028, "Member 'WBP_SiegeParticipantsList_C_ExecuteUbergraph_WBP_SiegeParticipantsList::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_SiegeParticipantsList_C_ExecuteUbergraph_WBP_SiegeParticipantsList, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'WBP_SiegeParticipantsList_C_ExecuteUbergraph_WBP_SiegeParticipantsList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_SiegeParticipantsList_C_ExecuteUbergraph_WBP_SiegeParticipantsList, K2Node_Event_IsDesignTime) == 0x000030, "Member 'WBP_SiegeParticipantsList_C_ExecuteUbergraph_WBP_SiegeParticipantsList::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WBP_SiegeParticipantsList.WBP_SiegeParticipantsList_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_SiegeParticipantsList_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SiegeParticipantsList_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_SiegeParticipantsList_C_PreConstruct");
-static_assert(sizeof(WBP_SiegeParticipantsList_C_PreConstruct) == 0x000001, "Wrong size on WBP_SiegeParticipantsList_C_PreConstruct");
-static_assert(offsetof(WBP_SiegeParticipantsList_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_SiegeParticipantsList_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

@@ -46,9 +46,11 @@ void UWBP_BuckFloatingTextManager_C::AbilitySystem_OnHit(const struct FHitInst& 
 // struct FAbilityHitRecord&               HitRecord                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // int64                                   SourceRecordType                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    hitting_OtherwiseGettingHit_                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    hitStr                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    hitStr_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    resist                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    immune                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_BuckFloatingTextManager_C::AddFloaterToTarget(const struct FStatModInst& StatMod, class ABaseCharacter* Target, struct FHitTargetInst& HitTargetInst, struct FAbilityHitRecord& HitRecord, int64 SourceRecordType, bool hitting_OtherwiseGettingHit_, const class FString& hitStr)
+void UWBP_BuckFloatingTextManager_C::AddFloaterToTarget(const struct FStatModInst& StatMod, class ABaseCharacter* Target, struct FHitTargetInst& HitTargetInst, struct FAbilityHitRecord& HitRecord, int64 SourceRecordType, bool hitting_OtherwiseGettingHit_, const class FString& hitStr_0, bool resist, bool immune)
 {
 	static class UFunction* Func = nullptr;
 
@@ -63,7 +65,9 @@ void UWBP_BuckFloatingTextManager_C::AddFloaterToTarget(const struct FStatModIns
 	Parms.HitRecord = std::move(HitRecord);
 	Parms.SourceRecordType = SourceRecordType;
 	Parms.hitting_OtherwiseGettingHit_ = hitting_OtherwiseGettingHit_;
-	Parms.hitStr = std::move(hitStr);
+	Parms.hitStr_0 = std::move(hitStr_0);
+	Parms.resist = resist;
+	Parms.immune = immune;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -83,6 +87,40 @@ void UWBP_BuckFloatingTextManager_C::CacheCharsBP()
 		Func = Class->GetFunction("WBP_BuckFloatingTextManager_C", "CacheCharsBP");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.CheckHitTags
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FGameplayTag>&            hitTags                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool*                                   weaponHit                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   isPhysical                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   isMagical                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_BuckFloatingTextManager_C::CheckHitTags(TArray<struct FGameplayTag>& hitTags, bool* weaponHit, bool* isPhysical, bool* isMagical)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BuckFloatingTextManager_C", "CheckHitTags");
+
+	Params::WBP_BuckFloatingTextManager_C_CheckHitTags Parms{};
+
+	Parms.hitTags = std::move(hitTags);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	hitTags = std::move(Parms.hitTags);
+
+	if (weaponHit != nullptr)
+		*weaponHit = Parms.weaponHit;
+
+	if (isPhysical != nullptr)
+		*isPhysical = Parms.isPhysical;
+
+	if (isMagical != nullptr)
+		*isMagical = Parms.isMagical;
 }
 
 
@@ -161,6 +199,62 @@ void UWBP_BuckFloatingTextManager_C::GetNextFloaterBP(class UWBP_BuckFloatingTex
 }
 
 
+// Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.GetShouldShowAndHitting
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABaseCharacter*                   me                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABaseCharacter*                   Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FGuid&                     InstigatorGuid_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   shouldShow                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   hitting                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_BuckFloatingTextManager_C::GetShouldShowAndHitting(class ABaseCharacter* me, class ABaseCharacter* Target, const struct FGuid& InstigatorGuid_0, bool* shouldShow, bool* hitting)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BuckFloatingTextManager_C", "GetShouldShowAndHitting");
+
+	Params::WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting Parms{};
+
+	Parms.me = me;
+	Parms.Target = Target;
+	Parms.InstigatorGuid_0 = std::move(InstigatorGuid_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (shouldShow != nullptr)
+		*shouldShow = Parms.shouldShow;
+
+	if (hitting != nullptr)
+		*hitting = Parms.hitting;
+}
+
+
+// Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.OnClientEffectImmune
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FEffectRecord&             EffectRecord                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class AActor*                     Instigator                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class AActor*                     Target                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_BuckFloatingTextManager_C::OnClientEffectImmune(const struct FEffectRecord& EffectRecord, const class AActor* Instigator, const class AActor* Target)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BuckFloatingTextManager_C", "OnClientEffectImmune");
+
+	Params::WBP_BuckFloatingTextManager_C_OnClientEffectImmune Parms{};
+
+	Parms.EffectRecord = std::move(EffectRecord);
+	Parms.Instigator = Instigator;
+	Parms.Target = Target;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.OnClientEffectInstigated
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -183,12 +277,38 @@ void UWBP_BuckFloatingTextManager_C::OnClientEffectInstigated(class UAoCStatsCom
 }
 
 
+// Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.OnClientEffectResisted
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FEffectRecord&             EffectRecord                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class AActor*                     Instigator                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class AActor*                     Target                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_BuckFloatingTextManager_C::OnClientEffectResisted(const struct FEffectRecord& EffectRecord, const class AActor* Instigator, const class AActor* Target)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BuckFloatingTextManager_C", "OnClientEffectResisted");
+
+	Params::WBP_BuckFloatingTextManager_C_OnClientEffectResisted Parms{};
+
+	Parms.EffectRecord = std::move(EffectRecord);
+	Parms.Instigator = Instigator;
+	Parms.Target = Target;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.UpdateRunningAvgBP
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  Val                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double&                                 avg                                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32&                                  hitCount                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_BuckFloatingTextManager_C::UpdateRunningAvgBP(double Val)
+void UWBP_BuckFloatingTextManager_C::UpdateRunningAvgBP(double Val, double& avg, int32& hitCount)
 {
 	static class UFunction* Func = nullptr;
 
@@ -198,8 +318,13 @@ void UWBP_BuckFloatingTextManager_C::UpdateRunningAvgBP(double Val)
 	Params::WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP Parms{};
 
 	Parms.Val = Val;
+	Parms.avg = avg;
+	Parms.hitCount = hitCount;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	avg = Parms.avg;
+	hitCount = Parms.hitCount;
 }
 
 }

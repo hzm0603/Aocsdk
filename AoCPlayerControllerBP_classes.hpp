@@ -21,52 +21,52 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass AoCPlayerControllerBP.AoCPlayerControllerBP_C
-// 0x01F0 (0x3740 - 0x3550)
+// 0x01F0 (0x3830 - 0x3640)
 class AAoCPlayerControllerBP_C final : public AAoCPlayerController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x3550(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Timeline_1_old_NewTrack_0_24AC6927467B3BD4B88319AA2261EE27; // 0x3558(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_1_old__Direction_24AC6927467B3BD4B88319AA2261EE27; // 0x355C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_355D[0x3];                                     // 0x355D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_1_old;                                    // 0x3560(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          DebugAuthority;                                    // 0x3568(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3569[0x3];                                     // 0x3569(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CurrentAuthority;                                  // 0x356C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TempAuthority;                                     // 0x3570(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3574[0x4];                                     // 0x3574(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        InteractOverlapCheckTimer;                         // 0x3578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UDecalComponent*                        Decal;                                             // 0x3580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             Vendor_Data_Table;                                 // 0x3588(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnActionCameraChange;                              // 0x3590(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class FName Slot_ID, bool KeyUo, bool IsMount)> Use_Actionbar_Slot; // 0x35A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class FName Slot_ID, bool New_Highlighted, bool IsMount)> Set_Actionbar_Highlight; // 0x35B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FTimerHandle                           LocationTimer;                                     // 0x35C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableABIndex;                                     // 0x35C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMovingX;                                         // 0x35C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMovingY;                                         // 0x35CA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35CB[0x5];                                     // 0x35CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMapRegistrationComponentBP_C*>  InitialMapRegs_0;                                  // 0x35D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TMap<class FString, class AActor*>            ClientConstructionActorRefs;                       // 0x35E0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void(int32 Up)>      InputAxisDiverted;                                 // 0x3630(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool IsActionMode, double ForwardAxis, double RightAxis)> OnMoveStart; // 0x3640(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              UpdateQuestSidebar;                                // 0x3650(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              UpdateActiveTarget;                                // 0x3660(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              ToggleCompassVisibility;                           // 0x3670(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class UObject* HotbarObject)> OnAbilityUpdated;                    // 0x3680(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool IsMount)>  ClearHotbar;                                       // 0x3690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              UpdateNodeActorBuildingResources;                  // 0x36A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const struct FTradeItems& TradeItems)> UpdateTargetTradeItems;     // 0x36B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(TArray<int32>& SlotIndexes)> UpdateVendorSaleItems;                // 0x36C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(EItemLocation Loc)> PlayerItemsUpdated;                            // 0x36D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              UpdateSkills;                                      // 0x36E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const struct FKey& Key)> OnAnyKey;                                 // 0x36F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(int32 NewLevel, bool IsAdventureLevel, bool LevelUp)> OnLevelChanged_0; // 0x3700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnExperienceEarned;                                // 0x3710(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          FriendlyModifier_OLD;                              // 0x3720(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3721[0x7];                                     // 0x3721(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 NPC;                                               // 0x3728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               ShadowArenaPrototype;                              // 0x3730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x3640(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Timeline_1_old_NewTrack_0_24AC6927467B3BD4B88319AA2261EE27; // 0x3648(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_1_old__Direction_24AC6927467B3BD4B88319AA2261EE27; // 0x364C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_364D[0x3];                                     // 0x364D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_1_old;                                    // 0x3650(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          DebugAuthority;                                    // 0x3658(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3659[0x3];                                     // 0x3659(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CurrentAuthority;                                  // 0x365C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TempAuthority;                                     // 0x3660(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3664[0x4];                                     // 0x3664(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        InteractOverlapCheckTimer;                         // 0x3668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDecalComponent*                        Decal;                                             // 0x3670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             Vendor_Data_Table;                                 // 0x3678(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnActionCameraChange;                              // 0x3680(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class FName Slot_ID, bool KeyUo, bool IsMount)> Use_Actionbar_Slot; // 0x3690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class FName Slot_ID, bool New_Highlighted, bool IsMount)> Set_Actionbar_Highlight; // 0x36A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FTimerHandle                           LocationTimer;                                     // 0x36B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableABIndex;                                     // 0x36B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMovingX;                                         // 0x36B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMovingY;                                         // 0x36BA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36BB[0x5];                                     // 0x36BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMapRegistrationComponentBP_C*>  InitialMapRegs_0;                                  // 0x36C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TMap<class FString, class AActor*>            ClientConstructionActorRefs;                       // 0x36D0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void(int32 Up)>      InputAxisDiverted;                                 // 0x3720(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool IsActionMode, double ForwardAxis, double RightAxis)> OnMoveStart; // 0x3730(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              UpdateQuestSidebar;                                // 0x3740(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              UpdateActiveTarget;                                // 0x3750(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              ToggleCompassVisibility;                           // 0x3760(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class UObject* HotbarObject)> OnAbilityUpdated;                    // 0x3770(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool IsMount)>  ClearHotbar;                                       // 0x3780(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              UpdateNodeActorBuildingResources;                  // 0x3790(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FTradeItems& TradeItems)> UpdateTargetTradeItems;     // 0x37A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(TArray<int32>& SlotIndexes)> UpdateVendorSaleItems;                // 0x37B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(EItemLocation Loc)> PlayerItemsUpdated;                            // 0x37C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              UpdateSkills;                                      // 0x37D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FKey& Key)> OnAnyKey;                                 // 0x37E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(int32 NewLevel, bool IsAdventureLevel, bool LevelUp)> OnLevelChanged_0; // 0x37F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnExperienceEarned;                                // 0x3800(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          FriendlyModifier_OLD;                              // 0x3810(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3811[0x7];                                     // 0x3811(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 NPC;                                               // 0x3818(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               ShadowArenaPrototype;                              // 0x3820(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Timeline_1_old__UpdateFunc();
@@ -114,44 +114,44 @@ public:
 	}
 };
 static_assert(alignof(AAoCPlayerControllerBP_C) == 0x000010, "Wrong alignment on AAoCPlayerControllerBP_C");
-static_assert(sizeof(AAoCPlayerControllerBP_C) == 0x003740, "Wrong size on AAoCPlayerControllerBP_C");
-static_assert(offsetof(AAoCPlayerControllerBP_C, UberGraphFrame) == 0x003550, "Member 'AAoCPlayerControllerBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, Timeline_1_old_NewTrack_0_24AC6927467B3BD4B88319AA2261EE27) == 0x003558, "Member 'AAoCPlayerControllerBP_C::Timeline_1_old_NewTrack_0_24AC6927467B3BD4B88319AA2261EE27' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, Timeline_1_old__Direction_24AC6927467B3BD4B88319AA2261EE27) == 0x00355C, "Member 'AAoCPlayerControllerBP_C::Timeline_1_old__Direction_24AC6927467B3BD4B88319AA2261EE27' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, Timeline_1_old) == 0x003560, "Member 'AAoCPlayerControllerBP_C::Timeline_1_old' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, DebugAuthority) == 0x003568, "Member 'AAoCPlayerControllerBP_C::DebugAuthority' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, CurrentAuthority) == 0x00356C, "Member 'AAoCPlayerControllerBP_C::CurrentAuthority' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, TempAuthority) == 0x003570, "Member 'AAoCPlayerControllerBP_C::TempAuthority' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, InteractOverlapCheckTimer) == 0x003578, "Member 'AAoCPlayerControllerBP_C::InteractOverlapCheckTimer' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, Decal) == 0x003580, "Member 'AAoCPlayerControllerBP_C::Decal' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, Vendor_Data_Table) == 0x003588, "Member 'AAoCPlayerControllerBP_C::Vendor_Data_Table' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, OnActionCameraChange) == 0x003590, "Member 'AAoCPlayerControllerBP_C::OnActionCameraChange' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, Use_Actionbar_Slot) == 0x0035A0, "Member 'AAoCPlayerControllerBP_C::Use_Actionbar_Slot' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, Set_Actionbar_Highlight) == 0x0035B0, "Member 'AAoCPlayerControllerBP_C::Set_Actionbar_Highlight' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, LocationTimer) == 0x0035C0, "Member 'AAoCPlayerControllerBP_C::LocationTimer' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, EnableABIndex) == 0x0035C8, "Member 'AAoCPlayerControllerBP_C::EnableABIndex' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, IsMovingX) == 0x0035C9, "Member 'AAoCPlayerControllerBP_C::IsMovingX' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, IsMovingY) == 0x0035CA, "Member 'AAoCPlayerControllerBP_C::IsMovingY' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, InitialMapRegs_0) == 0x0035D0, "Member 'AAoCPlayerControllerBP_C::InitialMapRegs_0' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, ClientConstructionActorRefs) == 0x0035E0, "Member 'AAoCPlayerControllerBP_C::ClientConstructionActorRefs' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, InputAxisDiverted) == 0x003630, "Member 'AAoCPlayerControllerBP_C::InputAxisDiverted' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, OnMoveStart) == 0x003640, "Member 'AAoCPlayerControllerBP_C::OnMoveStart' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateQuestSidebar) == 0x003650, "Member 'AAoCPlayerControllerBP_C::UpdateQuestSidebar' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateActiveTarget) == 0x003660, "Member 'AAoCPlayerControllerBP_C::UpdateActiveTarget' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, ToggleCompassVisibility) == 0x003670, "Member 'AAoCPlayerControllerBP_C::ToggleCompassVisibility' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, OnAbilityUpdated) == 0x003680, "Member 'AAoCPlayerControllerBP_C::OnAbilityUpdated' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, ClearHotbar) == 0x003690, "Member 'AAoCPlayerControllerBP_C::ClearHotbar' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateNodeActorBuildingResources) == 0x0036A0, "Member 'AAoCPlayerControllerBP_C::UpdateNodeActorBuildingResources' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateTargetTradeItems) == 0x0036B0, "Member 'AAoCPlayerControllerBP_C::UpdateTargetTradeItems' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateVendorSaleItems) == 0x0036C0, "Member 'AAoCPlayerControllerBP_C::UpdateVendorSaleItems' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, PlayerItemsUpdated) == 0x0036D0, "Member 'AAoCPlayerControllerBP_C::PlayerItemsUpdated' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateSkills) == 0x0036E0, "Member 'AAoCPlayerControllerBP_C::UpdateSkills' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, OnAnyKey) == 0x0036F0, "Member 'AAoCPlayerControllerBP_C::OnAnyKey' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, OnLevelChanged_0) == 0x003700, "Member 'AAoCPlayerControllerBP_C::OnLevelChanged_0' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, OnExperienceEarned) == 0x003710, "Member 'AAoCPlayerControllerBP_C::OnExperienceEarned' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, FriendlyModifier_OLD) == 0x003720, "Member 'AAoCPlayerControllerBP_C::FriendlyModifier_OLD' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, NPC) == 0x003728, "Member 'AAoCPlayerControllerBP_C::NPC' has a wrong offset!");
-static_assert(offsetof(AAoCPlayerControllerBP_C, ShadowArenaPrototype) == 0x003730, "Member 'AAoCPlayerControllerBP_C::ShadowArenaPrototype' has a wrong offset!");
+static_assert(sizeof(AAoCPlayerControllerBP_C) == 0x003830, "Wrong size on AAoCPlayerControllerBP_C");
+static_assert(offsetof(AAoCPlayerControllerBP_C, UberGraphFrame) == 0x003640, "Member 'AAoCPlayerControllerBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, Timeline_1_old_NewTrack_0_24AC6927467B3BD4B88319AA2261EE27) == 0x003648, "Member 'AAoCPlayerControllerBP_C::Timeline_1_old_NewTrack_0_24AC6927467B3BD4B88319AA2261EE27' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, Timeline_1_old__Direction_24AC6927467B3BD4B88319AA2261EE27) == 0x00364C, "Member 'AAoCPlayerControllerBP_C::Timeline_1_old__Direction_24AC6927467B3BD4B88319AA2261EE27' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, Timeline_1_old) == 0x003650, "Member 'AAoCPlayerControllerBP_C::Timeline_1_old' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, DebugAuthority) == 0x003658, "Member 'AAoCPlayerControllerBP_C::DebugAuthority' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, CurrentAuthority) == 0x00365C, "Member 'AAoCPlayerControllerBP_C::CurrentAuthority' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, TempAuthority) == 0x003660, "Member 'AAoCPlayerControllerBP_C::TempAuthority' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, InteractOverlapCheckTimer) == 0x003668, "Member 'AAoCPlayerControllerBP_C::InteractOverlapCheckTimer' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, Decal) == 0x003670, "Member 'AAoCPlayerControllerBP_C::Decal' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, Vendor_Data_Table) == 0x003678, "Member 'AAoCPlayerControllerBP_C::Vendor_Data_Table' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, OnActionCameraChange) == 0x003680, "Member 'AAoCPlayerControllerBP_C::OnActionCameraChange' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, Use_Actionbar_Slot) == 0x003690, "Member 'AAoCPlayerControllerBP_C::Use_Actionbar_Slot' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, Set_Actionbar_Highlight) == 0x0036A0, "Member 'AAoCPlayerControllerBP_C::Set_Actionbar_Highlight' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, LocationTimer) == 0x0036B0, "Member 'AAoCPlayerControllerBP_C::LocationTimer' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, EnableABIndex) == 0x0036B8, "Member 'AAoCPlayerControllerBP_C::EnableABIndex' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, IsMovingX) == 0x0036B9, "Member 'AAoCPlayerControllerBP_C::IsMovingX' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, IsMovingY) == 0x0036BA, "Member 'AAoCPlayerControllerBP_C::IsMovingY' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, InitialMapRegs_0) == 0x0036C0, "Member 'AAoCPlayerControllerBP_C::InitialMapRegs_0' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, ClientConstructionActorRefs) == 0x0036D0, "Member 'AAoCPlayerControllerBP_C::ClientConstructionActorRefs' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, InputAxisDiverted) == 0x003720, "Member 'AAoCPlayerControllerBP_C::InputAxisDiverted' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, OnMoveStart) == 0x003730, "Member 'AAoCPlayerControllerBP_C::OnMoveStart' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateQuestSidebar) == 0x003740, "Member 'AAoCPlayerControllerBP_C::UpdateQuestSidebar' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateActiveTarget) == 0x003750, "Member 'AAoCPlayerControllerBP_C::UpdateActiveTarget' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, ToggleCompassVisibility) == 0x003760, "Member 'AAoCPlayerControllerBP_C::ToggleCompassVisibility' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, OnAbilityUpdated) == 0x003770, "Member 'AAoCPlayerControllerBP_C::OnAbilityUpdated' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, ClearHotbar) == 0x003780, "Member 'AAoCPlayerControllerBP_C::ClearHotbar' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateNodeActorBuildingResources) == 0x003790, "Member 'AAoCPlayerControllerBP_C::UpdateNodeActorBuildingResources' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateTargetTradeItems) == 0x0037A0, "Member 'AAoCPlayerControllerBP_C::UpdateTargetTradeItems' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateVendorSaleItems) == 0x0037B0, "Member 'AAoCPlayerControllerBP_C::UpdateVendorSaleItems' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, PlayerItemsUpdated) == 0x0037C0, "Member 'AAoCPlayerControllerBP_C::PlayerItemsUpdated' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, UpdateSkills) == 0x0037D0, "Member 'AAoCPlayerControllerBP_C::UpdateSkills' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, OnAnyKey) == 0x0037E0, "Member 'AAoCPlayerControllerBP_C::OnAnyKey' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, OnLevelChanged_0) == 0x0037F0, "Member 'AAoCPlayerControllerBP_C::OnLevelChanged_0' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, OnExperienceEarned) == 0x003800, "Member 'AAoCPlayerControllerBP_C::OnExperienceEarned' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, FriendlyModifier_OLD) == 0x003810, "Member 'AAoCPlayerControllerBP_C::FriendlyModifier_OLD' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, NPC) == 0x003818, "Member 'AAoCPlayerControllerBP_C::NPC' has a wrong offset!");
+static_assert(offsetof(AAoCPlayerControllerBP_C, ShadowArenaPrototype) == 0x003820, "Member 'AAoCPlayerControllerBP_C::ShadowArenaPrototype' has a wrong offset!");
 
 }
 

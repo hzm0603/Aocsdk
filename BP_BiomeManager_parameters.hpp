@@ -11,16 +11,16 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "EBiomes_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_ExponentialHeightFog_structs.hpp"
-#include "STRUCT_SingularClimateData_structs.hpp"
 #include "Struct_BiomeClimate_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_Skylight_structs.hpp"
+#include "EBiomes_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_ExponentialHeightFog_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_structs.hpp"
+#include "STRUCT_SingularClimateData_structs.hpp"
 #include "STRUCT_GlobalOverrideAndBool_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_Skylight_structs.hpp"
 #include "STRUCT_GlobalAtmosphereOutput_SkyAtmosphere_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_Moon_structs.hpp"
 #include "STRUCT_GlobalAtmosphereOutput_Sun_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_Moon_structs.hpp"
 #include "STRUCT_BiomeSwitch_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 
@@ -171,14 +171,14 @@ public:
 	double                                        Time_Input;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_GlobalAtmosphereOutput         CURRENT_Global_Struct_0;                           // 0x0018(0x02E0)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        Normalized_Year_In;                                // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, struct FSTRUCT_SingularClimateData> Biome_Climate_Map;                                 // 0x0300(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TMap<class FName, struct FSTRUCT_SingularClimateData> Biome_Climate_Map;                         // 0x0300(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FSTRUCT_SingularClimateData            Current_Biome_Climate;                             // 0x0350(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_GlobalAtmosphereOutput         Global;                                            // 0x0380(0x02E0)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EBiomes                                       Current_Biome_0;                                   // 0x0660(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_661[0x7];                                      // 0x0661(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSTRUCT_SingularClimateData            Current_Biome_Climate_Out;                         // 0x0668(0x0030)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_SingularClimateData            LV_Climate;                                        // 0x0698(0x0030)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, struct FSTRUCT_SingularClimateData> NewLocalVar_0;                                     // 0x06C8(0x0050)(Edit, BlueprintVisible)
+	TMap<class FName, struct FSTRUCT_SingularClimateData> NewLocalVar_0;                             // 0x06C8(0x0050)(Edit, BlueprintVisible)
 	TMap<double, bool>                            LV_Blend_Biome_Bool;                               // 0x0718(0x0050)(Edit, BlueprintVisible)
 	int32                                         LV_Month;                                          // 0x0768(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Determine_Month_ReturnValue;              // 0x076C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -505,7 +505,7 @@ struct BP_BiomeManager_C_Get_Climate_For_Biome final
 public:
 	EBiomes                                       Biome_In;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FSTRUCT_SingularClimateData> TargetMap;                                         // 0x0008(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TMap<class FName, struct FSTRUCT_SingularClimateData> TargetMap;                                 // 0x0008(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FSTRUCT_SingularClimateData            OVERRIDE_Singular_Day_Climate;                     // 0x0058(0x0030)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_SingularClimateData            Single_Day_Climate;                                // 0x0088(0x0030)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FStruct_BiomeClimate                   Override_Climate;                                  // 0x00B8(0x0070)(Edit, BlueprintVisible, HasGetValueTypeHash)
@@ -607,7 +607,7 @@ struct BP_BiomeManager_C_INIT_Biome_Data_Tables final
 public:
 	int32                                         In_Month;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FSTRUCT_SingularClimateData> Climate_Single_Day_0;                              // 0x0008(0x0050)(Parm, OutParm)
+	TMap<class FName, struct FSTRUCT_SingularClimateData> Climate_Single_Day_0;                      // 0x0008(0x0050)(Parm, OutParm)
 	int32                                         Month_0;                                           // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSTRUCT_SingularClimateData            Single_Day_Climate;                                // 0x0060(0x0030)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -714,14 +714,14 @@ public:
 	struct FSTRUCT_GlobalOverrideAndBool          Current_Override_BOOL_Struct;                      // 0x05C8(0x0047)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_60F[0x1];                                      // 0x060F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSTRUCT_GlobalAtmosphereOutput         CURRENT_Global_Struct_0;                           // 0x0610(0x02E0)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFog Override_Exponential_Height_Fog_Struct__LV_;       // 0x08F0(0x00F8)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphere Override_Sky_Atmosphere_Struct__LV_;               // 0x09E8(0x0090)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_Skylight Override_Skylight_Struct__LV_;                     // 0x0A78(0x0048)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFog Override_Exponential_Height_Fog_Struct__LV_; // 0x08F0(0x00F8)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphere Override_Sky_Atmosphere_Struct__LV_;         // 0x09E8(0x0090)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_Skylight Override_Skylight_Struct__LV_;                    // 0x0A78(0x0048)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_GlobalAtmosphereOutput_Moon    Override_Moon_Struct__LV_;                         // 0x0AC0(0x0088)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_GlobalAtmosphereOutput_Sun     Override_Sun_Struct__LV_;                          // 0x0B48(0x0088)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFog Current_Exponential_Height_Fog_Struct__LV_;        // 0x0BD0(0x00F8)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphere Current_Sky_Atmosphere_Struct__LV_;                // 0x0CC8(0x0090)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_Skylight Current_SkyLight_Struct__LV_;                      // 0x0D58(0x0048)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFog Current_Exponential_Height_Fog_Struct__LV_; // 0x0BD0(0x00F8)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphere Current_Sky_Atmosphere_Struct__LV_;          // 0x0CC8(0x0090)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_Skylight Current_SkyLight_Struct__LV_;                     // 0x0D58(0x0048)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_GlobalAtmosphereOutput_Moon    Cuurent_Moon_Struct__LV_;                          // 0x0DA0(0x0088)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_GlobalAtmosphereOutput_Sun     Current_Sun_Struct__LV_;                           // 0x0E28(0x0088)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_GlobalOverrideAndBool          OVERRIDE_Bool__LV_;                                // 0x0EB0(0x0047)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1121,7 +1121,7 @@ public:
 	struct FSTRUCT_GlobalAtmosphereOutput         CURRENT_Global_Struct_0;                           // 0x0020(0x02E0)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        Normalized_Year_In;                                // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_SingularClimateData            Current_Biome_Climate;                             // 0x0308(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, struct FSTRUCT_SingularClimateData> Biome_Climate_Map;                                 // 0x0338(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TMap<class FName, struct FSTRUCT_SingularClimateData> Biome_Climate_Map;                         // 0x0338(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FSTRUCT_GlobalAtmosphereOutput         Global;                                            // 0x0388(0x02E0)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_SingularClimateData            Current_Biome_Climate_Out;                         // 0x0668(0x0030)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EBiomes                                       DEBUG_Current_Biome;                               // 0x0698(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

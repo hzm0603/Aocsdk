@@ -12,10 +12,10 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "ChaosCaching_structs.hpp"
 #include "MovieSceneTracks_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ChaosCaching_structs.hpp"
 #include "MovieScene_classes.hpp"
 
 
@@ -114,9 +114,9 @@ public:
 	TArray<struct FPerParticleCacheData>          ParticleTracks;                                    // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 ChannelCurveToParticle;                            // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<class FName, struct FRichCurves>         ChannelsTracks;                                    // 0x0080(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCompressedRichCurves> CompressedChannelsTracks;                          // 0x00D0(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FCompressedRichCurves> CompressedChannelsTracks;                        // 0x00D0(0x0050)(NativeAccessSpecifierPublic)
 	TMap<class FName, struct FRichCurve>          CurveData;                                         // 0x0120(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FParticleTransformTrack> NamedTransformTracks;                              // 0x0170(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FParticleTransformTrack> NamedTransformTracks;                          // 0x0170(0x0050)(NativeAccessSpecifierPublic)
 	bool                                          bCompressChannels;                                 // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ChannelsCompressionErrorThreshold;                 // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

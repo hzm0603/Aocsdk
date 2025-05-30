@@ -17,53 +17,19 @@
 namespace SDK
 {
 
-// Function STT_Accumulator.STT_Accumulator_C.SetTargetValue
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void USTT_Accumulator_C::SetTargetValue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STT_Accumulator_C", "SetTargetValue");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function STT_Accumulator.STT_Accumulator_C.Reset
-// (BlueprintCallable, BlueprintEvent)
+// Function STT_Accumulator.STT_Accumulator_C.Accumulate
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Identifier_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USTT_Accumulator_C::Reset(class FName Identifier_0)
+void USTT_Accumulator_C::Accumulate(double DeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STT_Accumulator_C", "Reset");
+		Func = Class->GetFunction("STT_Accumulator_C", "Accumulate");
 
-	Params::STT_Accumulator_C_Reset Parms{};
-
-	Parms.Identifier_0 = Identifier_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function STT_Accumulator.STT_Accumulator_C.ReceiveLatentTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const float                             DeltaTime                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USTT_Accumulator_C::ReceiveLatentTick(const float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STT_Accumulator_C", "ReceiveLatentTick");
-
-	Params::STT_Accumulator_C_ReceiveLatentTick Parms{};
+	Params::STT_Accumulator_C_Accumulate Parms{};
 
 	Parms.DeltaTime = DeltaTime;
 
@@ -71,41 +37,27 @@ void USTT_Accumulator_C::ReceiveLatentTick(const float DeltaTime)
 }
 
 
-// Function STT_Accumulator.STT_Accumulator_C.ReceiveLatentEnterState
-// (Event, Public, HasOutParams, BlueprintEvent)
+// Function STT_Accumulator.STT_Accumulator_C.ChargeAccumulator
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// class FName                             Identifier_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Number                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ResetAccumulator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReRoll                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USTT_Accumulator_C::ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition)
+void USTT_Accumulator_C::ChargeAccumulator(class FName Identifier_0, int32 Number, bool ResetAccumulator, bool ReRoll)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STT_Accumulator_C", "ReceiveLatentEnterState");
+		Func = Class->GetFunction("STT_Accumulator_C", "ChargeAccumulator");
 
-	Params::STT_Accumulator_C_ReceiveLatentEnterState Parms{};
+	Params::STT_Accumulator_C_ChargeAccumulator Parms{};
 
-	Parms.Transition = std::move(Transition);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function STT_Accumulator.STT_Accumulator_C.ReceiveExitState
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-
-void USTT_Accumulator_C::ReceiveExitState(const struct FStateTreeTransitionResult& Transition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STT_Accumulator_C", "ReceiveExitState");
-
-	Params::STT_Accumulator_C_ReceiveExitState Parms{};
-
-	Parms.Transition = std::move(Transition);
+	Parms.Identifier_0 = Identifier_0;
+	Parms.Number = Number;
+	Parms.ResetAccumulator = ResetAccumulator;
+	Parms.ReRoll = ReRoll;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -131,23 +83,127 @@ void USTT_Accumulator_C::ExecuteUbergraph_STT_Accumulator(int32 EntryPoint)
 }
 
 
-// Function STT_Accumulator.STT_Accumulator_C.Accumulate
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function STT_Accumulator.STT_Accumulator_C.ReceiveExitState
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// double                                  DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
-void USTT_Accumulator_C::Accumulate(double DeltaTime)
+void USTT_Accumulator_C::ReceiveExitState(const struct FStateTreeTransitionResult& Transition)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STT_Accumulator_C", "Accumulate");
+		Func = Class->GetFunction("STT_Accumulator_C", "ReceiveExitState");
 
-	Params::STT_Accumulator_C_Accumulate Parms{};
+	Params::STT_Accumulator_C_ReceiveExitState Parms{};
+
+	Parms.Transition = std::move(Transition);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function STT_Accumulator.STT_Accumulator_C.ReceiveLatentEnterState
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void USTT_Accumulator_C::ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_Accumulator_C", "ReceiveLatentEnterState");
+
+	Params::STT_Accumulator_C_ReceiveLatentEnterState Parms{};
+
+	Parms.Transition = std::move(Transition);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function STT_Accumulator.STT_Accumulator_C.ReceiveLatentTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const float                             DeltaTime                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USTT_Accumulator_C::ReceiveLatentTick(const float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_Accumulator_C", "ReceiveLatentTick");
+
+	Params::STT_Accumulator_C_ReceiveLatentTick Parms{};
 
 	Parms.DeltaTime = DeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function STT_Accumulator.STT_Accumulator_C.SetAccumulatorTarget
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  TargetValue_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Permanent                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USTT_Accumulator_C::SetAccumulatorTarget(double TargetValue_0, bool Permanent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_Accumulator_C", "SetAccumulatorTarget");
+
+	Params::STT_Accumulator_C_SetAccumulatorTarget Parms{};
+
+	Parms.TargetValue_0 = TargetValue_0;
+	Parms.Permanent = Permanent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function STT_Accumulator.STT_Accumulator_C.SetTargetValue
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void USTT_Accumulator_C::SetTargetValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_Accumulator_C", "SetTargetValue");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function STT_Accumulator.STT_Accumulator_C.StoreChargeToBBVar
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USTT_Accumulator_C::StoreChargeToBBVar()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_Accumulator_C", "StoreChargeToBBVar");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function STT_Accumulator.STT_Accumulator_C.UpdateCharge
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USTT_Accumulator_C::UpdateCharge()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_Accumulator_C", "UpdateCharge");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

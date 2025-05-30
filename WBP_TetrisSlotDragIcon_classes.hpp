@@ -17,23 +17,23 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TetrisSlotDragIcon.WBP_TetrisSlotDragIcon_C
-// 0x0068 (0x04C0 - 0x0458)
+// 0x0068 (0x0610 - 0x05A8)
 class UWBP_TetrisSlotDragIcon_C final : public UTetrisSlotDragIcon
 {
 public:
-	class UImage*                                 Image;                                             // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_1;                                           // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_2;                                           // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_4;                                           // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_5;                                           // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_6;                                           // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_8;                                           // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_9;                                           // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_10;                                          // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_12;                                          // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_13;                                          // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_14;                                          // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMenuAnchor*                            SplitStackAnchor;                                  // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image;                                             // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_1;                                           // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_2;                                           // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_4;                                           // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_5;                                           // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_6;                                           // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_8;                                           // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_9;                                           // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_10;                                          // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_12;                                          // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_13;                                          // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_14;                                          // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuAnchor*                            SplitStackAnchor;                                  // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -46,20 +46,20 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TetrisSlotDragIcon_C) == 0x000008, "Wrong alignment on UWBP_TetrisSlotDragIcon_C");
-static_assert(sizeof(UWBP_TetrisSlotDragIcon_C) == 0x0004C0, "Wrong size on UWBP_TetrisSlotDragIcon_C");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image) == 0x000458, "Member 'UWBP_TetrisSlotDragIcon_C::Image' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_1) == 0x000460, "Member 'UWBP_TetrisSlotDragIcon_C::Image_1' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_2) == 0x000468, "Member 'UWBP_TetrisSlotDragIcon_C::Image_2' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_4) == 0x000470, "Member 'UWBP_TetrisSlotDragIcon_C::Image_4' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_5) == 0x000478, "Member 'UWBP_TetrisSlotDragIcon_C::Image_5' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_6) == 0x000480, "Member 'UWBP_TetrisSlotDragIcon_C::Image_6' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_8) == 0x000488, "Member 'UWBP_TetrisSlotDragIcon_C::Image_8' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_9) == 0x000490, "Member 'UWBP_TetrisSlotDragIcon_C::Image_9' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_10) == 0x000498, "Member 'UWBP_TetrisSlotDragIcon_C::Image_10' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_12) == 0x0004A0, "Member 'UWBP_TetrisSlotDragIcon_C::Image_12' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_13) == 0x0004A8, "Member 'UWBP_TetrisSlotDragIcon_C::Image_13' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_14) == 0x0004B0, "Member 'UWBP_TetrisSlotDragIcon_C::Image_14' has a wrong offset!");
-static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, SplitStackAnchor) == 0x0004B8, "Member 'UWBP_TetrisSlotDragIcon_C::SplitStackAnchor' has a wrong offset!");
+static_assert(sizeof(UWBP_TetrisSlotDragIcon_C) == 0x000610, "Wrong size on UWBP_TetrisSlotDragIcon_C");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image) == 0x0005A8, "Member 'UWBP_TetrisSlotDragIcon_C::Image' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_1) == 0x0005B0, "Member 'UWBP_TetrisSlotDragIcon_C::Image_1' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_2) == 0x0005B8, "Member 'UWBP_TetrisSlotDragIcon_C::Image_2' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_4) == 0x0005C0, "Member 'UWBP_TetrisSlotDragIcon_C::Image_4' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_5) == 0x0005C8, "Member 'UWBP_TetrisSlotDragIcon_C::Image_5' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_6) == 0x0005D0, "Member 'UWBP_TetrisSlotDragIcon_C::Image_6' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_8) == 0x0005D8, "Member 'UWBP_TetrisSlotDragIcon_C::Image_8' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_9) == 0x0005E0, "Member 'UWBP_TetrisSlotDragIcon_C::Image_9' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_10) == 0x0005E8, "Member 'UWBP_TetrisSlotDragIcon_C::Image_10' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_12) == 0x0005F0, "Member 'UWBP_TetrisSlotDragIcon_C::Image_12' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_13) == 0x0005F8, "Member 'UWBP_TetrisSlotDragIcon_C::Image_13' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, Image_14) == 0x000600, "Member 'UWBP_TetrisSlotDragIcon_C::Image_14' has a wrong offset!");
+static_assert(offsetof(UWBP_TetrisSlotDragIcon_C, SplitStackAnchor) == 0x000608, "Member 'UWBP_TetrisSlotDragIcon_C::SplitStackAnchor' has a wrong offset!");
 
 }
 

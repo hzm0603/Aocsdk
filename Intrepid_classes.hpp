@@ -76,9 +76,9 @@ class alignas(0x10) UIntrepidSystemManager final : public UWorldSubsystem
 {
 public:
 	uint8                                         Pad_50[0x40];                                      // 0x0050(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<TWeakObjectPtr<class UObject>, TWeakObjectPtr<class UIntrepidSystem>> ObjectSystemMap;                                   // 0x0090(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<TWeakObjectPtr<class UObject>, TWeakObjectPtr<class UIntrepidSystem>> ObjectSystemMap;      // 0x0090(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 	TArray<TSubclassOf<class UObject>>            ManagerClasses;                                    // 0x00E0(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TMap<TSubclassOf<class UObject>, class UIntrepidSystem*> ManagerMap;                                        // 0x00F0(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<TSubclassOf<class UObject>, class UIntrepidSystem*> ManagerMap;                             // 0x00F0(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 	TArray<class UIntrepidSystem*>                ManagerInstances;                                  // 0x0140(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_150[0x90];                                     // 0x0150(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 

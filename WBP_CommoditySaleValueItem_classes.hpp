@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CommoditySaleValueItem.WBP_CommoditySaleValueItem_C
-// 0x0000 (0x0300 - 0x0300)
+// 0x0000 (0x0318 - 0x0318)
 class UWBP_CommoditySaleValueItem_C final : public UCommoditySaleValueItem
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CommoditySaleValueItem_C) == 0x000008, "Wrong alignment on UWBP_CommoditySaleValueItem_C");
-static_assert(sizeof(UWBP_CommoditySaleValueItem_C) == 0x000300, "Wrong size on UWBP_CommoditySaleValueItem_C");
+static_assert(sizeof(UWBP_CommoditySaleValueItem_C) == 0x000318, "Wrong size on UWBP_CommoditySaleValueItem_C");
 
 }
 

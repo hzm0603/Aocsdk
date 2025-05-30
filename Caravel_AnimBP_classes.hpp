@@ -25,7 +25,7 @@ class UCaravel_AnimBP_C final : public UAoCAnimInstance
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x10F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct Caravel_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x10F8(0x0020)(HasGetValueTypeHash)
+	struct Caravel_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;               // 0x10F8(0x0020)(HasGetValueTypeHash)
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x1118(0x0008)()
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1120(0x0008)()
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1128(0x0020)()

@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Archer2.Bandit_Archer2_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ABandit_Archer2_C : public ABandit_Archer_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Bandit_Archer2_C;                   // 0x1DA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Bandit_Archer2_C;                   // 0x1D68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_Bandit_Archer2(int32 EntryPoint);
@@ -39,8 +39,8 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Archer2_C) == 0x000010, "Wrong alignment on ABandit_Archer2_C");
-static_assert(sizeof(ABandit_Archer2_C) == 0x001DB0, "Wrong size on ABandit_Archer2_C");
-static_assert(offsetof(ABandit_Archer2_C, UberGraphFrame_Bandit_Archer2_C) == 0x001DA8, "Member 'ABandit_Archer2_C::UberGraphFrame_Bandit_Archer2_C' has a wrong offset!");
+static_assert(sizeof(ABandit_Archer2_C) == 0x001D70, "Wrong size on ABandit_Archer2_C");
+static_assert(offsetof(ABandit_Archer2_C, UberGraphFrame_Bandit_Archer2_C) == 0x001D68, "Member 'ABandit_Archer2_C::UberGraphFrame_Bandit_Archer2_C' has a wrong offset!");
 
 }
 

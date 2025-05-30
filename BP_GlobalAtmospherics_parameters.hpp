@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "STRUCT_GlobalAtmosphereOutput_Moon_structs.hpp"
 #include "STRUCT_CloudParameters_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_Sun_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_SkyAtmosphere_structs.hpp"
 #include "STRUCT_GlobalAtmosphereOutput_ExponentialHeightFog_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_Sun_structs.hpp"
 #include "STRUCT_GlobalAtmosphereOutput_Skylight_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_SkyAtmosphere_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_Moon_structs.hpp"
 
 
 namespace SDK::Params
@@ -74,7 +74,7 @@ struct BP_GlobalAtmospherics_C_Exp_Height_Fog_Param_Config final
 {
 public:
 	double                                        In_Time;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFog Exp_Fog_Struct;                                    // 0x0008(0x00F8)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFog Exp_Fog_Struct;                       // 0x0008(0x00F8)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_GlobalAtmospherics_C_Exp_Height_Fog_Param_Config) == 0x000008, "Wrong alignment on BP_GlobalAtmospherics_C_Exp_Height_Fog_Param_Config");
 static_assert(sizeof(BP_GlobalAtmospherics_C_Exp_Height_Fog_Param_Config) == 0x000100, "Wrong size on BP_GlobalAtmospherics_C_Exp_Height_Fog_Param_Config");
@@ -287,7 +287,7 @@ struct BP_GlobalAtmospherics_C_Sky_Atmosphere_Param_Config final
 public:
 	float                                         Tine_of_Game_Day_24h;                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphere StructOut;                                         // 0x0008(0x0090)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphere StructOut;                                   // 0x0008(0x0090)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_GlobalAtmospherics_C_Sky_Atmosphere_Param_Config) == 0x000008, "Wrong alignment on BP_GlobalAtmospherics_C_Sky_Atmosphere_Param_Config");
 static_assert(sizeof(BP_GlobalAtmospherics_C_Sky_Atmosphere_Param_Config) == 0x000098, "Wrong size on BP_GlobalAtmospherics_C_Sky_Atmosphere_Param_Config");
@@ -300,7 +300,7 @@ struct BP_GlobalAtmospherics_C_Skylight_Param_Config final
 {
 public:
 	double                                        In_Time;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_GlobalAtmosphereOutput_Skylight Skylight_Struct_0;                                 // 0x0008(0x0048)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_GlobalAtmosphereOutput_Skylight Skylight_Struct_0;                                // 0x0008(0x0048)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_GlobalAtmospherics_C_Skylight_Param_Config) == 0x000008, "Wrong alignment on BP_GlobalAtmospherics_C_Skylight_Param_Config");
 static_assert(sizeof(BP_GlobalAtmospherics_C_Skylight_Param_Config) == 0x000050, "Wrong size on BP_GlobalAtmospherics_C_Skylight_Param_Config");

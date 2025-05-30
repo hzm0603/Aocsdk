@@ -20,7 +20,7 @@ namespace SDK
 // Function IntrepidNet.IntrepidNetDebugComponent.ClientTransferDataRPC
 // (Net, NetReliable, Native, Event, Public, HasDefaults, NetClient)
 // Parameters:
-// struct FTimespan                        TimePromotionTook                                      (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTimespan&                 TimePromotionTook                                      (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UIntrepidNetDebugComponent::ClientTransferDataRPC(const struct FTimespan& TimePromotionTook)
 {
@@ -137,7 +137,7 @@ void UIntrepidNetDebugComponent::ServerSplitServerCell(ESubdivisionAxis Subdivis
 // Function IntrepidNet.IntrepidNetDebugComponent.SplitServerCell
 // (Final, Exec, Native, Public)
 // Parameters:
-// class FString                           Axis                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Axis                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   SplitRatio                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UIntrepidNetDebugComponent::SplitServerCell(const class FString& Axis, float SplitRatio)
@@ -164,7 +164,7 @@ void UIntrepidNetDebugComponent::SplitServerCell(const class FString& Axis, floa
 // Function IntrepidNet.IntrepidNetDebugComponent.SplitServerCellAt
 // (Final, Exec, Native, Public)
 // Parameters:
-// class FString                           Axis                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Axis                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Position                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UIntrepidNetDebugComponent::SplitServerCellAt(const class FString& Axis, float Position)
@@ -260,8 +260,8 @@ void UIntrepidNetUtilitySubsystem::BuildAndShowCurrentConfiguration()
 // Function IntrepidNet.IntrepidNetUtilitySubsystem.BuildServerGrid
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                          Origin                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Extents                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Origin                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Extents                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   NumX                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   NumY                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -335,12 +335,12 @@ TArray<class FString> UIntrepidNetUtilitySubsystem::GetIntrepidNetConfigProfiles
 // Function IntrepidNet.IntrepidNetUtilitySubsystem.MakeIntrepidNetConfig
 // (Final, Native, Protected, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          WorldOrigin                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          WorldSize                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   GridNodesX                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   GridNodesY                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector>                  PlayerStartLocations                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   WorldOrigin                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   WorldSize                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             GridNodesX                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             GridNodesY                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FVector>&           PlayerStartLocations                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UIntrepidNetUtilitySubsystem::MakeIntrepidNetConfig(const class FString& Name_0, const struct FVector& WorldOrigin, const struct FVector& WorldSize, const int32 GridNodesX, const int32 GridNodesY, const TArray<struct FVector>& PlayerStartLocations)
@@ -373,7 +373,7 @@ bool UIntrepidNetUtilitySubsystem::MakeIntrepidNetConfig(const class FString& Na
 // Function IntrepidNet.IntrepidNetUtilitySubsystem.OnConfigUpdated
 // (Final, Native, Protected)
 // Parameters:
-// class FString                           NewConfigFile                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    NewConfigFile                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UIntrepidNetUtilitySubsystem::OnConfigUpdated(const class FString& NewConfigFile)
 {
@@ -398,9 +398,9 @@ void UIntrepidNetUtilitySubsystem::OnConfigUpdated(const class FString& NewConfi
 // Function IntrepidNet.IntrepidNetUtilitySubsystem.ReadConfig
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FIntrepidNetConfigUnreal         OutConfig                                              (Parm, OutParm, NativeAccessSpecifierPublic)
-// class FString                           Error                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FIntrepidNetConfigUnreal*        OutConfig                                              (Parm, OutParm, NativeAccessSpecifierPublic)
+// class FString*                          Error                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UIntrepidNetUtilitySubsystem::ReadConfig(const class FString& Filename, struct FIntrepidNetConfigUnreal* OutConfig, class FString* Error)
@@ -434,9 +434,9 @@ bool UIntrepidNetUtilitySubsystem::ReadConfig(const class FString& Filename, str
 // Function IntrepidNet.IntrepidNetUtilitySubsystem.WriteConfig
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FIntrepidNetConfigUnreal         Config                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class FString                           Error                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FIntrepidNetConfigUnreal&  Config                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class FString*                          Error                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UIntrepidNetUtilitySubsystem::WriteConfig(const class FString& Filename, const struct FIntrepidNetConfigUnreal& Config, class FString* Error)

@@ -12,11 +12,11 @@
 
 #include "Engine_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
-#include "InterchangeEngine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "InterchangeCore_structs.hpp"
 #include "InterchangeCore_classes.hpp"
+#include "InterchangeEngine_structs.hpp"
 
 
 namespace SDK
@@ -251,8 +251,8 @@ class alignas(0x10) UInterchangeManager final : public UObject
 public:
 	uint8                                         Pad_48[0xB0];                                      // 0x0048(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<TSubclassOf<class UObject>>              RegisteredTranslatorsClass;                        // 0x00F8(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
-	TMap<TSubclassOf<class UObject>, TSubclassOf<class UObject>> RegisteredFactoryClasses;                          // 0x0148(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
-	TMap<TSubclassOf<class UObject>, class UInterchangeWriterBase*> RegisteredWriters;                                 // 0x0198(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<TSubclassOf<class UObject>, TSubclassOf<class UObject>> RegisteredFactoryClasses;           // 0x0148(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<TSubclassOf<class UObject>, class UInterchangeWriterBase*> RegisteredWriters;               // 0x0198(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1E8[0x18];                                     // 0x01E8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

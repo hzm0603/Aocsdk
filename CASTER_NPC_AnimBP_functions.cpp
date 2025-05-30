@@ -17,36 +17,259 @@
 namespace SDK
 {
 
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.AnimGraph
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.ExecuteUbergraph_CASTER_NPC_AnimBP
+// (Final, UbergraphFunction)
 // Parameters:
-// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCASTER_NPC_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
+void UCASTER_NPC_AnimBP_C::ExecuteUbergraph_CASTER_NPC_AnimBP(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "AnimGraph");
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "ExecuteUbergraph_CASTER_NPC_AnimBP");
 
-	Params::CASTER_NPC_AnimBP_C_AnimGraph Parms{};
+	Params::CASTER_NPC_AnimBP_C_ExecuteUbergraph_CASTER_NPC_AnimBP Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (AnimGraph_0 != nullptr)
-		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.AnimNotify_BanditFireballLaunch
-// (BlueprintCallable, BlueprintEvent)
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D641880C40E13A008D7C23BFCB9CE28D
+// (BlueprintEvent)
 
-void UCASTER_NPC_AnimBP_C::AnimNotify_BanditFireballLaunch()
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D641880C40E13A008D7C23BFCB9CE28D()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "AnimNotify_BanditFireballLaunch");
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D641880C40E13A008D7C23BFCB9CE28D");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D3B493A545B32D49CA25A2ABD722B34C
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D3B493A545B32D49CA25A2ABD722B34C()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D3B493A545B32D49CA25A2ABD722B34C");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_C51568AF4B132755D023B8AB913E7720
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_C51568AF4B132755D023B8AB913E7720()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_C51568AF4B132755D023B8AB913E7720");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_B32C6BA34E8476B08B7A7CB10C2BD989
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_B32C6BA34E8476B08B7A7CB10C2BD989()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_B32C6BA34E8476B08B7A7CB10C2BD989");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_974B151F44930C4127FA668F5A4E3D1D
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_974B151F44930C4127FA668F5A4E3D1D()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_974B151F44930C4127FA668F5A4E3D1D");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_97135CAE46331E54E8BA0D8A0FC95C0F
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_97135CAE46331E54E8BA0D8A0FC95C0F()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_97135CAE46331E54E8BA0D8A0FC95C0F");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_7E60248A4FA496C9DF51179B4350430B
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_7E60248A4FA496C9DF51179B4350430B()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_7E60248A4FA496C9DF51179B4350430B");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_53927A084FB3DBB4D6CD789D6B28DE20
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_53927A084FB3DBB4D6CD789D6B28DE20()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_53927A084FB3DBB4D6CD789D6B28DE20");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_5100D5424D6C1BD92030D7A27633FE6A
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_5100D5424D6C1BD92030D7A27633FE6A()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_5100D5424D6C1BD92030D7A27633FE6A");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_3C68CFD64C73ECB2FD7BBFB7E0F9D051
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_3C68CFD64C73ECB2FD7BBFB7E0F9D051()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_3C68CFD64C73ECB2FD7BBFB7E0F9D051");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_290F1FAD4CF02FA0522549A68B99FFC3
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_290F1FAD4CF02FA0522549A68B99FFC3()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_290F1FAD4CF02FA0522549A68B99FFC3");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_259EF9DA41414CB6A781DBAC37AFFDB4
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_259EF9DA41414CB6A781DBAC37AFFDB4()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_259EF9DA41414CB6A781DBAC37AFFDB4");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_239829884A523C96D6740ABD8E75AF54
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_239829884A523C96D6740ABD8E75AF54()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_239829884A523C96D6740ABD8E75AF54");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_18052E4340293FB8B00AA79D8EDC285D
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_18052E4340293FB8B00AA79D8EDC285D()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_18052E4340293FB8B00AA79D8EDC285D");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_17C360764F4967F75E24D2B07F901DB0
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_17C360764F4967F75E24D2B07F901DB0()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_17C360764F4967F75E24D2B07F901DB0");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_097ADC064888A75D352EF6BFFCD6F72E
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_097ADC064888A75D352EF6BFFCD6F72E()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_097ADC064888A75D352EF6BFFCD6F72E");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_BlendListByBool_1BC42A8140158696113D55BF5D1BB49E
+// (BlueprintEvent)
+
+void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_BlendListByBool_1BC42A8140158696113D55BF5D1BB49E()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_BlendListByBool_1BC42A8140158696113D55BF5D1BB49E");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,261 +295,38 @@ void UCASTER_NPC_AnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
 }
 
 
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_BlendListByBool_1BC42A8140158696113D55BF5D1BB49E
-// (BlueprintEvent)
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.AnimNotify_BanditFireballLaunch
+// (BlueprintCallable, BlueprintEvent)
 
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_BlendListByBool_1BC42A8140158696113D55BF5D1BB49E()
+void UCASTER_NPC_AnimBP_C::AnimNotify_BanditFireballLaunch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_BlendListByBool_1BC42A8140158696113D55BF5D1BB49E");
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "AnimNotify_BanditFireballLaunch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_097ADC064888A75D352EF6BFFCD6F72E
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_097ADC064888A75D352EF6BFFCD6F72E()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_097ADC064888A75D352EF6BFFCD6F72E");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_17C360764F4967F75E24D2B07F901DB0
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_17C360764F4967F75E24D2B07F901DB0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_17C360764F4967F75E24D2B07F901DB0");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_18052E4340293FB8B00AA79D8EDC285D
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_18052E4340293FB8B00AA79D8EDC285D()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_18052E4340293FB8B00AA79D8EDC285D");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_239829884A523C96D6740ABD8E75AF54
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_239829884A523C96D6740ABD8E75AF54()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_239829884A523C96D6740ABD8E75AF54");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_259EF9DA41414CB6A781DBAC37AFFDB4
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_259EF9DA41414CB6A781DBAC37AFFDB4()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_259EF9DA41414CB6A781DBAC37AFFDB4");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_290F1FAD4CF02FA0522549A68B99FFC3
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_290F1FAD4CF02FA0522549A68B99FFC3()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_290F1FAD4CF02FA0522549A68B99FFC3");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_3C68CFD64C73ECB2FD7BBFB7E0F9D051
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_3C68CFD64C73ECB2FD7BBFB7E0F9D051()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_3C68CFD64C73ECB2FD7BBFB7E0F9D051");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_5100D5424D6C1BD92030D7A27633FE6A
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_5100D5424D6C1BD92030D7A27633FE6A()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_5100D5424D6C1BD92030D7A27633FE6A");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_53927A084FB3DBB4D6CD789D6B28DE20
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_53927A084FB3DBB4D6CD789D6B28DE20()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_53927A084FB3DBB4D6CD789D6B28DE20");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_7E60248A4FA496C9DF51179B4350430B
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_7E60248A4FA496C9DF51179B4350430B()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_7E60248A4FA496C9DF51179B4350430B");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_97135CAE46331E54E8BA0D8A0FC95C0F
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_97135CAE46331E54E8BA0D8A0FC95C0F()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_97135CAE46331E54E8BA0D8A0FC95C0F");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_974B151F44930C4127FA668F5A4E3D1D
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_974B151F44930C4127FA668F5A4E3D1D()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_974B151F44930C4127FA668F5A4E3D1D");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_B32C6BA34E8476B08B7A7CB10C2BD989
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_B32C6BA34E8476B08B7A7CB10C2BD989()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_B32C6BA34E8476B08B7A7CB10C2BD989");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_C51568AF4B132755D023B8AB913E7720
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_C51568AF4B132755D023B8AB913E7720()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_C51568AF4B132755D023B8AB913E7720");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D3B493A545B32D49CA25A2ABD722B34C
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D3B493A545B32D49CA25A2ABD722B34C()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D3B493A545B32D49CA25A2ABD722B34C");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D641880C40E13A008D7C23BFCB9CE28D
-// (BlueprintEvent)
-
-void UCASTER_NPC_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D641880C40E13A008D7C23BFCB9CE28D()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_CASTER_NPC_AnimBP_AnimGraphNode_TransitionResult_D641880C40E13A008D7C23BFCB9CE28D");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.ExecuteUbergraph_CASTER_NPC_AnimBP
-// (Final, UbergraphFunction)
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
-void UCASTER_NPC_AnimBP_C::ExecuteUbergraph_CASTER_NPC_AnimBP(int32 EntryPoint)
+void UCASTER_NPC_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "ExecuteUbergraph_CASTER_NPC_AnimBP");
+		Func = Class->GetFunction("CASTER_NPC_AnimBP_C", "AnimGraph");
 
-	Params::CASTER_NPC_AnimBP_C_ExecuteUbergraph_CASTER_NPC_AnimBP Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::CASTER_NPC_AnimBP_C_AnimGraph Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 }

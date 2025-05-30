@@ -34,15 +34,15 @@ public:
 	bool                                          IsInUse;                                           // 0x0381(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void CheckInteractPointCooldowns();
-	void ExecuteUbergraph_NPCPropInteractionComponent(int32 EntryPoint);
-	void FinishInteraction(int32 TransformIndex);
-	void GetOpenInteractionPoint(class AActor* InteractingCharacter, bool* InteractPointFound, struct FTransform* InteractTransform, int32* InteractIndex);
-	void OnOverlapBegin(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void OnOverlapEnd(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
 	void StartInteraction(int32 InteractIndex, double InteractionLengtrh);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void OnOverlapEnd(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void OnOverlapBegin(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void GetOpenInteractionPoint(class AActor* InteractingCharacter, bool* InteractPointFound, struct FTransform* InteractTransform, int32* InteractIndex);
+	void FinishInteraction(int32 TransformIndex);
+	void ExecuteUbergraph_NPCPropInteractionComponent(int32 EntryPoint);
+	void CheckInteractPointCooldowns();
 
 public:
 	static class UClass* StaticClass()

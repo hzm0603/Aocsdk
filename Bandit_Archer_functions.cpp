@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function Bandit_Archer.Bandit_Archer_C.ExecuteUbergraph_Bandit_Archer
-// (Final, UbergraphFunction)
+// Function Bandit_Archer.Bandit_Archer_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABandit_Archer_C::ExecuteUbergraph_Bandit_Archer(int32 EntryPoint)
+void ABandit_Archer_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Bandit_Archer_C", "ExecuteUbergraph_Bandit_Archer");
+		Func = Class->GetFunction("Bandit_Archer_C", "ReceiveTick");
 
-	Params::Bandit_Archer_C_ExecuteUbergraph_Bandit_Archer Parms{};
+	Params::Bandit_Archer_C_ReceiveTick Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -51,21 +51,21 @@ void ABandit_Archer_C::ReceiveBeginPlay()
 }
 
 
-// Function Bandit_Archer.Bandit_Archer_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function Bandit_Archer.Bandit_Archer_C.ExecuteUbergraph_Bandit_Archer
+// (Final, UbergraphFunction)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABandit_Archer_C::ReceiveTick(float DeltaSeconds)
+void ABandit_Archer_C::ExecuteUbergraph_Bandit_Archer(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Bandit_Archer_C", "ReceiveTick");
+		Func = Class->GetFunction("Bandit_Archer_C", "ExecuteUbergraph_Bandit_Archer");
 
-	Params::Bandit_Archer_C_ReceiveTick Parms{};
+	Params::Bandit_Archer_C_ExecuteUbergraph_Bandit_Archer Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

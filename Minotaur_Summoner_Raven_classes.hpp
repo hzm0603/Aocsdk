@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Minotaur_Summoner_Raven.Minotaur_Summoner_Raven_C
-// 0x0040 (0x1DE0 - 0x1DA0)
+// 0x0040 (0x1DA0 - 0x1D60)
 class AMinotaur_Summoner_Raven_C : public ARaven_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Minotaur_Summoner_Raven_C;          // 0x1DA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      Spawn;                                             // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          StartFade;                                         // 0x1DB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DB1[0x7];                                     // 0x1DB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CurrentFade;                                       // 0x1DB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TargetFade;                                        // 0x1DC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FadeSpeed;                                         // 0x1DC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       BodyFade;                                          // 0x1DD0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Minotaur_Summoner_Raven_C;          // 0x1D60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      Spawn;                                             // 0x1D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          StartFade;                                         // 0x1D70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D71[0x7];                                     // 0x1D71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CurrentFade;                                       // 0x1D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TargetFade;                                        // 0x1D80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FadeSpeed;                                         // 0x1D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       BodyFade;                                          // 0x1D90(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_Minotaur_Summoner_Raven(int32 EntryPoint);
@@ -47,14 +47,14 @@ public:
 	}
 };
 static_assert(alignof(AMinotaur_Summoner_Raven_C) == 0x000010, "Wrong alignment on AMinotaur_Summoner_Raven_C");
-static_assert(sizeof(AMinotaur_Summoner_Raven_C) == 0x001DE0, "Wrong size on AMinotaur_Summoner_Raven_C");
-static_assert(offsetof(AMinotaur_Summoner_Raven_C, UberGraphFrame_Minotaur_Summoner_Raven_C) == 0x001DA0, "Member 'AMinotaur_Summoner_Raven_C::UberGraphFrame_Minotaur_Summoner_Raven_C' has a wrong offset!");
-static_assert(offsetof(AMinotaur_Summoner_Raven_C, Spawn) == 0x001DA8, "Member 'AMinotaur_Summoner_Raven_C::Spawn' has a wrong offset!");
-static_assert(offsetof(AMinotaur_Summoner_Raven_C, StartFade) == 0x001DB0, "Member 'AMinotaur_Summoner_Raven_C::StartFade' has a wrong offset!");
-static_assert(offsetof(AMinotaur_Summoner_Raven_C, CurrentFade) == 0x001DB8, "Member 'AMinotaur_Summoner_Raven_C::CurrentFade' has a wrong offset!");
-static_assert(offsetof(AMinotaur_Summoner_Raven_C, TargetFade) == 0x001DC0, "Member 'AMinotaur_Summoner_Raven_C::TargetFade' has a wrong offset!");
-static_assert(offsetof(AMinotaur_Summoner_Raven_C, FadeSpeed) == 0x001DC8, "Member 'AMinotaur_Summoner_Raven_C::FadeSpeed' has a wrong offset!");
-static_assert(offsetof(AMinotaur_Summoner_Raven_C, BodyFade) == 0x001DD0, "Member 'AMinotaur_Summoner_Raven_C::BodyFade' has a wrong offset!");
+static_assert(sizeof(AMinotaur_Summoner_Raven_C) == 0x001DA0, "Wrong size on AMinotaur_Summoner_Raven_C");
+static_assert(offsetof(AMinotaur_Summoner_Raven_C, UberGraphFrame_Minotaur_Summoner_Raven_C) == 0x001D60, "Member 'AMinotaur_Summoner_Raven_C::UberGraphFrame_Minotaur_Summoner_Raven_C' has a wrong offset!");
+static_assert(offsetof(AMinotaur_Summoner_Raven_C, Spawn) == 0x001D68, "Member 'AMinotaur_Summoner_Raven_C::Spawn' has a wrong offset!");
+static_assert(offsetof(AMinotaur_Summoner_Raven_C, StartFade) == 0x001D70, "Member 'AMinotaur_Summoner_Raven_C::StartFade' has a wrong offset!");
+static_assert(offsetof(AMinotaur_Summoner_Raven_C, CurrentFade) == 0x001D78, "Member 'AMinotaur_Summoner_Raven_C::CurrentFade' has a wrong offset!");
+static_assert(offsetof(AMinotaur_Summoner_Raven_C, TargetFade) == 0x001D80, "Member 'AMinotaur_Summoner_Raven_C::TargetFade' has a wrong offset!");
+static_assert(offsetof(AMinotaur_Summoner_Raven_C, FadeSpeed) == 0x001D88, "Member 'AMinotaur_Summoner_Raven_C::FadeSpeed' has a wrong offset!");
+static_assert(offsetof(AMinotaur_Summoner_Raven_C, BodyFade) == 0x001D90, "Member 'AMinotaur_Summoner_Raven_C::BodyFade' has a wrong offset!");
 
 }
 

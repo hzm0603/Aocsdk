@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "EZone_structs.hpp"
-#include "ELocationType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ELocationType_structs.hpp"
 
 
 namespace SDK

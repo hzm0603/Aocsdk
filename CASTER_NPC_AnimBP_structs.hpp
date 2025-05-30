@@ -17,6 +17,78 @@
 namespace SDK
 {
 
+// ScriptStruct CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.AnimBlueprintGeneratedMutableData
+// 0x004B (0x004C - 0x0001)
+struct CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+public:
+	bool                                          __BoolProperty;                                    // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_0;                                  // 0x0002(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         __FloatProperty_1;                                 // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_2;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_3;                                 // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_4;                                 // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_5;                                 // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_6;                                 // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_7;                                 // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_8;                                 // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         __ByteProperty_9;                                  // 0x0024(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_10;                                 // 0x0025(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_11;                                 // 0x0026(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_12;                                 // 0x0027(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_13;                                 // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         __FloatProperty_14;                                // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_15;                                // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_16;                                 // 0x0034(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         __ByteProperty_17;                                 // 0x0035(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         __ByteProperty_18;                                 // 0x0036(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         __ByteProperty_19;                                 // 0x0037(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_20;                                 // 0x0038(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_21;                                 // 0x0039(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_22;                                 // 0x003A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_23;                                 // 0x003B(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_24;                                 // 0x003C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_25;                                 // 0x003D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         __FloatProperty_26;                                // 0x0040(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_27;                                // 0x0044(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_28;                                // 0x0048(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData) == 0x000004, "Wrong alignment on CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData) == 0x00004C, "Wrong size on CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty) == 0x000001, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_0) == 0x000002, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_0' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_1) == 0x000004, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_1' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_2) == 0x000008, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_2' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_3) == 0x00000C, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_3' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_4) == 0x000010, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_4' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_5) == 0x000014, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_5' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_6) == 0x000018, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_6' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_7) == 0x00001C, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_7' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_8) == 0x000020, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_8' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __ByteProperty_9) == 0x000024, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__ByteProperty_9' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_10) == 0x000025, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_10' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_11) == 0x000026, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_11' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_12) == 0x000027, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_12' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_13) == 0x000028, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_13' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_14) == 0x00002C, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_14' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_15) == 0x000030, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_15' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_16) == 0x000034, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_16' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __ByteProperty_17) == 0x000035, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__ByteProperty_17' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __ByteProperty_18) == 0x000036, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__ByteProperty_18' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __ByteProperty_19) == 0x000037, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__ByteProperty_19' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_20) == 0x000038, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_20' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_21) == 0x000039, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_21' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_22) == 0x00003A, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_22' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_23) == 0x00003B, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_23' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_24) == 0x00003C, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_24' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_25) == 0x00003D, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_25' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_26) == 0x000040, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_26' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_27) == 0x000044, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_27' has a wrong offset!");
+static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_28) == 0x000048, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_28' has a wrong offset!");
+
 // ScriptStruct CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.AnimBlueprintGeneratedConstantData
 // 0x022F (0x0230 - 0x0001)
 struct CASTER_NPC_AnimBP::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
@@ -125,78 +197,6 @@ static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedConstantData, _
 static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_1111) == 0x000190, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_1111' has a wrong offset!");
 static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x000198, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
 static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x000218, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
-
-// ScriptStruct CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.AnimBlueprintGeneratedMutableData
-// 0x004B (0x004C - 0x0001)
-struct CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-public:
-	bool                                          __BoolProperty;                                    // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_0;                                  // 0x0002(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty_1;                                 // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_2;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_3;                                 // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_4;                                 // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_5;                                 // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_6;                                 // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_7;                                 // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_8;                                 // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         __ByteProperty_9;                                  // 0x0024(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_10;                                 // 0x0025(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_11;                                 // 0x0026(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_12;                                 // 0x0027(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_13;                                 // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty_14;                                // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_15;                                // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_16;                                 // 0x0034(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         __ByteProperty_17;                                 // 0x0035(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         __ByteProperty_18;                                 // 0x0036(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         __ByteProperty_19;                                 // 0x0037(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_20;                                 // 0x0038(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_21;                                 // 0x0039(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_22;                                 // 0x003A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_23;                                 // 0x003B(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_24;                                 // 0x003C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_25;                                 // 0x003D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty_26;                                // 0x0040(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_27;                                // 0x0044(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_28;                                // 0x0048(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData) == 0x000004, "Wrong alignment on CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData) == 0x00004C, "Wrong size on CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty) == 0x000001, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_0) == 0x000002, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_0' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_1) == 0x000004, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_1' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_2) == 0x000008, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_2' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_3) == 0x00000C, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_3' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_4) == 0x000010, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_4' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_5) == 0x000014, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_5' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_6) == 0x000018, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_6' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_7) == 0x00001C, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_7' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_8) == 0x000020, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_8' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __ByteProperty_9) == 0x000024, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__ByteProperty_9' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_10) == 0x000025, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_10' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_11) == 0x000026, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_11' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_12) == 0x000027, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_12' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_13) == 0x000028, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_13' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_14) == 0x00002C, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_14' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_15) == 0x000030, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_15' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_16) == 0x000034, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_16' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __ByteProperty_17) == 0x000035, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__ByteProperty_17' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __ByteProperty_18) == 0x000036, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__ByteProperty_18' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __ByteProperty_19) == 0x000037, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__ByteProperty_19' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_20) == 0x000038, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_20' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_21) == 0x000039, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_21' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_22) == 0x00003A, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_22' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_23) == 0x00003B, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_23' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_24) == 0x00003C, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_24' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_25) == 0x00003D, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_25' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_26) == 0x000040, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_26' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_27) == 0x000044, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_27' has a wrong offset!");
-static_assert(offsetof(CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_28) == 0x000048, "Member 'CASTER_NPC_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_28' has a wrong offset!");
 
 }
 

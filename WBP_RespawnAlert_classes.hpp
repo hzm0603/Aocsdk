@@ -17,18 +17,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_RespawnAlert.WBP_RespawnAlert_C
-// 0x0040 (0x0608 - 0x05C8)
+// 0x0040 (0x0638 - 0x05F8)
 class UWBP_RespawnAlert_C final : public URespawnAlert
 {
 public:
-	class UAoCCommonTextBlock*                    CorruptionMessage;                                 // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextButton_C*                    DeathSummaryButton;                                // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_313;                                         // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           LocationsContainer;                                // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               LocationsMap;                                      // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextButton_C*                    ReviveAtHomeButton;                                // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ReviveBarFrame;                                    // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           ReviveProgressBar;                                 // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    CorruptionMessage;                                 // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextButton_C*                    DeathSummaryButton;                                // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           LocationsContainer;                                // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               LocationsMap;                                      // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ConfirmationButtonBar_C*           ResurrectConfirmationBar;                          // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextButton_C*                    ReviveAtHomeButton;                                // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ReviveBarFrame;                                    // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           ReviveProgressBar;                                 // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -41,15 +41,15 @@ public:
 	}
 };
 static_assert(alignof(UWBP_RespawnAlert_C) == 0x000008, "Wrong alignment on UWBP_RespawnAlert_C");
-static_assert(sizeof(UWBP_RespawnAlert_C) == 0x000608, "Wrong size on UWBP_RespawnAlert_C");
-static_assert(offsetof(UWBP_RespawnAlert_C, CorruptionMessage) == 0x0005C8, "Member 'UWBP_RespawnAlert_C::CorruptionMessage' has a wrong offset!");
-static_assert(offsetof(UWBP_RespawnAlert_C, DeathSummaryButton) == 0x0005D0, "Member 'UWBP_RespawnAlert_C::DeathSummaryButton' has a wrong offset!");
-static_assert(offsetof(UWBP_RespawnAlert_C, Image_313) == 0x0005D8, "Member 'UWBP_RespawnAlert_C::Image_313' has a wrong offset!");
-static_assert(offsetof(UWBP_RespawnAlert_C, LocationsContainer) == 0x0005E0, "Member 'UWBP_RespawnAlert_C::LocationsContainer' has a wrong offset!");
-static_assert(offsetof(UWBP_RespawnAlert_C, LocationsMap) == 0x0005E8, "Member 'UWBP_RespawnAlert_C::LocationsMap' has a wrong offset!");
-static_assert(offsetof(UWBP_RespawnAlert_C, ReviveAtHomeButton) == 0x0005F0, "Member 'UWBP_RespawnAlert_C::ReviveAtHomeButton' has a wrong offset!");
-static_assert(offsetof(UWBP_RespawnAlert_C, ReviveBarFrame) == 0x0005F8, "Member 'UWBP_RespawnAlert_C::ReviveBarFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_RespawnAlert_C, ReviveProgressBar) == 0x000600, "Member 'UWBP_RespawnAlert_C::ReviveProgressBar' has a wrong offset!");
+static_assert(sizeof(UWBP_RespawnAlert_C) == 0x000638, "Wrong size on UWBP_RespawnAlert_C");
+static_assert(offsetof(UWBP_RespawnAlert_C, CorruptionMessage) == 0x0005F8, "Member 'UWBP_RespawnAlert_C::CorruptionMessage' has a wrong offset!");
+static_assert(offsetof(UWBP_RespawnAlert_C, DeathSummaryButton) == 0x000600, "Member 'UWBP_RespawnAlert_C::DeathSummaryButton' has a wrong offset!");
+static_assert(offsetof(UWBP_RespawnAlert_C, LocationsContainer) == 0x000608, "Member 'UWBP_RespawnAlert_C::LocationsContainer' has a wrong offset!");
+static_assert(offsetof(UWBP_RespawnAlert_C, LocationsMap) == 0x000610, "Member 'UWBP_RespawnAlert_C::LocationsMap' has a wrong offset!");
+static_assert(offsetof(UWBP_RespawnAlert_C, ResurrectConfirmationBar) == 0x000618, "Member 'UWBP_RespawnAlert_C::ResurrectConfirmationBar' has a wrong offset!");
+static_assert(offsetof(UWBP_RespawnAlert_C, ReviveAtHomeButton) == 0x000620, "Member 'UWBP_RespawnAlert_C::ReviveAtHomeButton' has a wrong offset!");
+static_assert(offsetof(UWBP_RespawnAlert_C, ReviveBarFrame) == 0x000628, "Member 'UWBP_RespawnAlert_C::ReviveBarFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_RespawnAlert_C, ReviveProgressBar) == 0x000630, "Member 'UWBP_RespawnAlert_C::ReviveProgressBar' has a wrong offset!");
 
 }
 

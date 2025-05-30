@@ -20,7 +20,7 @@ namespace SDK
 // Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.ConvertDecibelsToLinear
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
-// float                                   InDecibels                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InDecibels                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float USoundUtilitiesBPFunctionLibrary::ConvertDecibelsToLinear(const float InDecibels)
@@ -48,8 +48,8 @@ float USoundUtilitiesBPFunctionLibrary::ConvertDecibelsToLinear(const float InDe
 // Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.ConvertLinearToDecibels
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
-// float                                   InLinear                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   InFloor                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InLinear                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InFloor                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float USoundUtilitiesBPFunctionLibrary::ConvertLinearToDecibels(const float InLinear, const float InFloor)
@@ -78,7 +78,7 @@ float USoundUtilitiesBPFunctionLibrary::ConvertLinearToDecibels(const float InLi
 // Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetBandwidthFromQ
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
-// float                                   InQ                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InQ                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float USoundUtilitiesBPFunctionLibrary::GetBandwidthFromQ(const float InQ)
@@ -138,7 +138,7 @@ float USoundUtilitiesBPFunctionLibrary::GetBeatTempo(float BeatsPerMinute, int32
 // Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetFrequencyFromMIDIPitch
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
-// int32                                   MidiNote                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             MidiNote                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float USoundUtilitiesBPFunctionLibrary::GetFrequencyFromMIDIPitch(const int32 MidiNote)
@@ -166,7 +166,7 @@ float USoundUtilitiesBPFunctionLibrary::GetFrequencyFromMIDIPitch(const int32 Mi
 // Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetFrequencyMultiplierFromSemitones
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
-// float                                   InPitchSemitones                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InPitchSemitones                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float USoundUtilitiesBPFunctionLibrary::GetFrequencyMultiplierFromSemitones(const float InPitchSemitones)
@@ -222,9 +222,9 @@ float USoundUtilitiesBPFunctionLibrary::GetGainFromMidiVelocity(int32 InVelocity
 // Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetLinearFrequencyClamped
 // (Final, Native, Static, Private, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// float                                   InValue                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        InDomain                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        InRange                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InValue                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 InDomain                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 InRange                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float USoundUtilitiesBPFunctionLibrary::GetLinearFrequencyClamped(const float InValue, const struct FVector2D& InDomain, const struct FVector2D& InRange)
@@ -254,9 +254,9 @@ float USoundUtilitiesBPFunctionLibrary::GetLinearFrequencyClamped(const float In
 // Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetLogFrequencyClamped
 // (Final, Native, Static, Private, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// float                                   InValue                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        InDomain                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        InRange                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InValue                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 InDomain                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 InRange                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float USoundUtilitiesBPFunctionLibrary::GetLogFrequencyClamped(const float InValue, const struct FVector2D& InDomain, const struct FVector2D& InRange)
@@ -286,7 +286,7 @@ float USoundUtilitiesBPFunctionLibrary::GetLogFrequencyClamped(const float InVal
 // Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetMIDIPitchFromFrequency
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
-// float                                   Frequency                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             Frequency                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 USoundUtilitiesBPFunctionLibrary::GetMIDIPitchFromFrequency(const float Frequency)
@@ -314,8 +314,8 @@ int32 USoundUtilitiesBPFunctionLibrary::GetMIDIPitchFromFrequency(const float Fr
 // Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetPitchScaleFromMIDIPitch
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
-// int32                                   BaseMidiNote                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   TargetMidiNote                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             BaseMidiNote                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             TargetMidiNote                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float USoundUtilitiesBPFunctionLibrary::GetPitchScaleFromMIDIPitch(const int32 BaseMidiNote, const int32 TargetMidiNote)
@@ -344,7 +344,7 @@ float USoundUtilitiesBPFunctionLibrary::GetPitchScaleFromMIDIPitch(const int32 B
 // Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetQFromBandwidth
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
-// float                                   InBandwidth                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InBandwidth                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 float USoundUtilitiesBPFunctionLibrary::GetQFromBandwidth(const float InBandwidth)

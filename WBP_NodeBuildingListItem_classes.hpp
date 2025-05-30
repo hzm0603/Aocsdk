@@ -17,20 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_NodeBuildingListItem.WBP_NodeBuildingListItem_C
-// 0x0050 (0x1980 - 0x1930)
+// 0x0020 (0x19A0 - 0x1980)
 class UWBP_NodeBuildingListItem_C final : public UNodeBuildingListItem
 {
 public:
-	class UCommonBorder*                          B_BuildingListItem;                                // 0x1930(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    BuildingTypeTextBlock;                             // 0x1938(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ConstructionProgressBarTextBlock;                  // 0x1940(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BuildingManagerServiceIcon_C*      ServiceIcon;                                       // 0x1948(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BuildingManagerServiceIcon_C*      ServiceIcon_1;                                     // 0x1950(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BuildingManagerServiceIcon_C*      ServiceIcon_2;                                     // 0x1958(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BuildingManagerServiceIcon_C*      ServiceIcon_3;                                     // 0x1960(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BuildingManagerServiceIcon_C*      ServiceIcon_4;                                     // 0x1968(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TB_Remaining;                                      // 0x1970(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 TimerProgressBarFrame;                             // 0x1978(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          B_BuildingListItem;                                // 0x1980(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ConstructionProgressBarTextBlock;                  // 0x1988(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 TimerProgressBarFrame;                             // 0x1990(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UAoCCommonButtonBase* GetButton();
@@ -46,17 +39,10 @@ public:
 	}
 };
 static_assert(alignof(UWBP_NodeBuildingListItem_C) == 0x000010, "Wrong alignment on UWBP_NodeBuildingListItem_C");
-static_assert(sizeof(UWBP_NodeBuildingListItem_C) == 0x001980, "Wrong size on UWBP_NodeBuildingListItem_C");
-static_assert(offsetof(UWBP_NodeBuildingListItem_C, B_BuildingListItem) == 0x001930, "Member 'UWBP_NodeBuildingListItem_C::B_BuildingListItem' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeBuildingListItem_C, BuildingTypeTextBlock) == 0x001938, "Member 'UWBP_NodeBuildingListItem_C::BuildingTypeTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeBuildingListItem_C, ConstructionProgressBarTextBlock) == 0x001940, "Member 'UWBP_NodeBuildingListItem_C::ConstructionProgressBarTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeBuildingListItem_C, ServiceIcon) == 0x001948, "Member 'UWBP_NodeBuildingListItem_C::ServiceIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeBuildingListItem_C, ServiceIcon_1) == 0x001950, "Member 'UWBP_NodeBuildingListItem_C::ServiceIcon_1' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeBuildingListItem_C, ServiceIcon_2) == 0x001958, "Member 'UWBP_NodeBuildingListItem_C::ServiceIcon_2' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeBuildingListItem_C, ServiceIcon_3) == 0x001960, "Member 'UWBP_NodeBuildingListItem_C::ServiceIcon_3' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeBuildingListItem_C, ServiceIcon_4) == 0x001968, "Member 'UWBP_NodeBuildingListItem_C::ServiceIcon_4' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeBuildingListItem_C, TB_Remaining) == 0x001970, "Member 'UWBP_NodeBuildingListItem_C::TB_Remaining' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeBuildingListItem_C, TimerProgressBarFrame) == 0x001978, "Member 'UWBP_NodeBuildingListItem_C::TimerProgressBarFrame' has a wrong offset!");
+static_assert(sizeof(UWBP_NodeBuildingListItem_C) == 0x0019A0, "Wrong size on UWBP_NodeBuildingListItem_C");
+static_assert(offsetof(UWBP_NodeBuildingListItem_C, B_BuildingListItem) == 0x001980, "Member 'UWBP_NodeBuildingListItem_C::B_BuildingListItem' has a wrong offset!");
+static_assert(offsetof(UWBP_NodeBuildingListItem_C, ConstructionProgressBarTextBlock) == 0x001988, "Member 'UWBP_NodeBuildingListItem_C::ConstructionProgressBarTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_NodeBuildingListItem_C, TimerProgressBarFrame) == 0x001990, "Member 'UWBP_NodeBuildingListItem_C::TimerProgressBarFrame' has a wrong offset!");
 
 }
 

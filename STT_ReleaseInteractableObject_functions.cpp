@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function STT_ReleaseInteractableObject.STT_ReleaseInteractableObject_C.ExecuteUbergraph_STT_ReleaseInteractableObject
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USTT_ReleaseInteractableObject_C::ExecuteUbergraph_STT_ReleaseInteractableObject(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STT_ReleaseInteractableObject_C", "ExecuteUbergraph_STT_ReleaseInteractableObject");
-
-	Params::STT_ReleaseInteractableObject_C_ExecuteUbergraph_STT_ReleaseInteractableObject Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function STT_ReleaseInteractableObject.STT_ReleaseInteractableObject_C.ReceiveLatentEnterState
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void USTT_ReleaseInteractableObject_C::ReceiveLatentEnterState(const struct FSta
 	Params::STT_ReleaseInteractableObject_C_ReceiveLatentEnterState Parms{};
 
 	Parms.Transition = std::move(Transition);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function STT_ReleaseInteractableObject.STT_ReleaseInteractableObject_C.ExecuteUbergraph_STT_ReleaseInteractableObject
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USTT_ReleaseInteractableObject_C::ExecuteUbergraph_STT_ReleaseInteractableObject(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_ReleaseInteractableObject_C", "ExecuteUbergraph_STT_ReleaseInteractableObject");
+
+	Params::STT_ReleaseInteractableObject_C_ExecuteUbergraph_STT_ReleaseInteractableObject Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

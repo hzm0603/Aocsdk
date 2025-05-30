@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass War_Instigator_TurnInNPC.War_Instigator_TurnInNPC_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class AWar_Instigator_TurnInNPC_C final : public ANode_NPC_Master_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AWar_Instigator_TurnInNPC_C) == 0x000010, "Wrong alignment on AWar_Instigator_TurnInNPC_C");
-static_assert(sizeof(AWar_Instigator_TurnInNPC_C) == 0x001DD0, "Wrong size on AWar_Instigator_TurnInNPC_C");
+static_assert(sizeof(AWar_Instigator_TurnInNPC_C) == 0x001D90, "Wrong size on AWar_Instigator_TurnInNPC_C");
 
 }
 

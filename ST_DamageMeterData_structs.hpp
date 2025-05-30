@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "GameSystemsPlugin_structs.hpp"
-#include "ST_DamageMeterTimeData_structs.hpp"
 #include "ST_DamageMeterMapData_structs.hpp"
+#include "ST_DamageMeterTimeData_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
 
 
 namespace SDK

@@ -117,17 +117,6 @@ enum class EInterpoRotation_Type_Plugin : uint8
 	ENUM_MAX                                 = 2,
 };
 
-// ScriptStruct DragonIKPlugin.DragonData_StickySocketStruct
-// 0x0010 (0x0010 - 0x0000)
-struct FDragonData_StickySocketStruct final
-{
-public:
-	TArray<struct FBoneSocketTarget>              sticky_socket_array;                               // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDragonData_StickySocketStruct) == 0x000008, "Wrong alignment on FDragonData_StickySocketStruct");
-static_assert(sizeof(FDragonData_StickySocketStruct) == 0x000010, "Wrong size on FDragonData_StickySocketStruct");
-static_assert(offsetof(FDragonData_StickySocketStruct, sticky_socket_array) == 0x000000, "Member 'FDragonData_StickySocketStruct::sticky_socket_array' has a wrong offset!");
-
 // ScriptStruct DragonIKPlugin.DragonIKTraceKeyValuePair
 // 0x00F8 (0x00F8 - 0x0000)
 struct FDragonIKTraceKeyValuePair final
@@ -659,6 +648,17 @@ public:
 static_assert(alignof(FDragonData_FeetAlpha_Struct) == 0x000008, "Wrong alignment on FDragonData_FeetAlpha_Struct");
 static_assert(sizeof(FDragonData_FeetAlpha_Struct) == 0x000010, "Wrong size on FDragonData_FeetAlpha_Struct");
 static_assert(offsetof(FDragonData_FeetAlpha_Struct, feet_IK_alpha_array) == 0x000000, "Member 'FDragonData_FeetAlpha_Struct::feet_IK_alpha_array' has a wrong offset!");
+
+// ScriptStruct DragonIKPlugin.DragonData_StickySocketStruct
+// 0x0010 (0x0010 - 0x0000)
+struct FDragonData_StickySocketStruct final
+{
+public:
+	TArray<struct FBoneSocketTarget>              sticky_socket_array;                               // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDragonData_StickySocketStruct) == 0x000008, "Wrong alignment on FDragonData_StickySocketStruct");
+static_assert(sizeof(FDragonData_StickySocketStruct) == 0x000010, "Wrong size on FDragonData_StickySocketStruct");
+static_assert(offsetof(FDragonData_StickySocketStruct, sticky_socket_array) == 0x000000, "Member 'FDragonData_StickySocketStruct::sticky_socket_array' has a wrong offset!");
 
 // ScriptStruct DragonIKPlugin.AnimNode_DragonFeetSolver
 // 0x08F8 (0x09C0 - 0x00C8)

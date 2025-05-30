@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_NotificationItem.WBP_NotificationItem_C
-// 0x0000 (0x03C0 - 0x03C0)
+// 0x0000 (0x0410 - 0x0410)
 class UWBP_NotificationItem_C final : public UNotificationItem
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_NotificationItem_C) == 0x000008, "Wrong alignment on UWBP_NotificationItem_C");
-static_assert(sizeof(UWBP_NotificationItem_C) == 0x0003C0, "Wrong size on UWBP_NotificationItem_C");
+static_assert(sizeof(UWBP_NotificationItem_C) == 0x000410, "Wrong size on UWBP_NotificationItem_C");
 
 }
 

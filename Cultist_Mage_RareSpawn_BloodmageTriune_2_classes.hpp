@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Cultist_Mage_RareSpawn_BloodmageTriune_2.Cultist_Mage_RareSpawn_BloodmageTriune_2_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ACultist_Mage_RareSpawn_BloodmageTriune_2_C final : public ACultist2_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACultist_Mage_RareSpawn_BloodmageTriune_2_C) == 0x000010, "Wrong alignment on ACultist_Mage_RareSpawn_BloodmageTriune_2_C");
-static_assert(sizeof(ACultist_Mage_RareSpawn_BloodmageTriune_2_C) == 0x001DB0, "Wrong size on ACultist_Mage_RareSpawn_BloodmageTriune_2_C");
+static_assert(sizeof(ACultist_Mage_RareSpawn_BloodmageTriune_2_C) == 0x001D70, "Wrong size on ACultist_Mage_RareSpawn_BloodmageTriune_2_C");
 
 }
 

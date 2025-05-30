@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Hippo.Hippo_C
-// 0x0020 (0x1DB0 - 0x1D90)
+// 0x0020 (0x1D70 - 0x1D50)
 class AHippo_C final : public ANPCPawn_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Hippo_C;                            // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1D98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class ABaseCharacter* Target)> AddSpecialTarget;                   // 0x1DA0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Hippo_C;                            // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class ABaseCharacter* Target)> AddSpecialTarget;                   // 0x1D60(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_Hippo(int32 EntryPoint);
@@ -41,10 +41,10 @@ public:
 	}
 };
 static_assert(alignof(AHippo_C) == 0x000010, "Wrong alignment on AHippo_C");
-static_assert(sizeof(AHippo_C) == 0x001DB0, "Wrong size on AHippo_C");
-static_assert(offsetof(AHippo_C, UberGraphFrame_Hippo_C) == 0x001D90, "Member 'AHippo_C::UberGraphFrame_Hippo_C' has a wrong offset!");
-static_assert(offsetof(AHippo_C, Blackboard) == 0x001D98, "Member 'AHippo_C::Blackboard' has a wrong offset!");
-static_assert(offsetof(AHippo_C, AddSpecialTarget) == 0x001DA0, "Member 'AHippo_C::AddSpecialTarget' has a wrong offset!");
+static_assert(sizeof(AHippo_C) == 0x001D70, "Wrong size on AHippo_C");
+static_assert(offsetof(AHippo_C, UberGraphFrame_Hippo_C) == 0x001D50, "Member 'AHippo_C::UberGraphFrame_Hippo_C' has a wrong offset!");
+static_assert(offsetof(AHippo_C, Blackboard) == 0x001D58, "Member 'AHippo_C::Blackboard' has a wrong offset!");
+static_assert(offsetof(AHippo_C, AddSpecialTarget) == 0x001D60, "Member 'AHippo_C::AddSpecialTarget' has a wrong offset!");
 
 }
 

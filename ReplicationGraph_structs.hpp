@@ -22,7 +22,7 @@ struct FConnectionAlwaysRelevantNodePair final
 {
 public:
 	class UNetConnection*                         NetConnection;                                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UReplicationGraphNode_AlwaysRelevant_ForConnection* Node;                                              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UReplicationGraphNode_AlwaysRelevant_ForConnection* Node;                                  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FConnectionAlwaysRelevantNodePair) == 0x000008, "Wrong alignment on FConnectionAlwaysRelevantNodePair");
 static_assert(sizeof(FConnectionAlwaysRelevantNodePair) == 0x000010, "Wrong size on FConnectionAlwaysRelevantNodePair");

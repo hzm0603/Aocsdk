@@ -17,15 +17,15 @@
 namespace SDK
 {
 
-// Function WBP_BugReportMenu.WBP_BugReportMenu_C.Construct
+// Function WBP_BugReportMenu.WBP_BugReportMenu_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_BugReportMenu_C::Construct()
+void UWBP_BugReportMenu_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BugReportMenu_C", "Construct");
+		Func = Class->GetFunction("WBP_BugReportMenu_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,15 +51,15 @@ void UWBP_BugReportMenu_C::ExecuteUbergraph_WBP_BugReportMenu(int32 EntryPoint)
 }
 
 
-// Function WBP_BugReportMenu.WBP_BugReportMenu_C.OnInitialized
+// Function WBP_BugReportMenu.WBP_BugReportMenu_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_BugReportMenu_C::OnInitialized()
+void UWBP_BugReportMenu_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BugReportMenu_C", "OnInitialized");
+		Func = Class->GetFunction("WBP_BugReportMenu_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

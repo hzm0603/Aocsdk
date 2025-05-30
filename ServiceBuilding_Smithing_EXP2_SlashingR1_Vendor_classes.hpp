@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ServiceBuilding_Smithing_EXP2_SlashingR1_Vendor.ServiceBuilding_Smithing_EXP2_SlashingR1_Vendor_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class AServiceBuilding_Smithing_EXP2_SlashingR1_Vendor_C final : public AHumanoidNPCMaster_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AServiceBuilding_Smithing_EXP2_SlashingR1_Vendor_C) == 0x000010, "Wrong alignment on AServiceBuilding_Smithing_EXP2_SlashingR1_Vendor_C");
-static_assert(sizeof(AServiceBuilding_Smithing_EXP2_SlashingR1_Vendor_C) == 0x001DB0, "Wrong size on AServiceBuilding_Smithing_EXP2_SlashingR1_Vendor_C");
+static_assert(sizeof(AServiceBuilding_Smithing_EXP2_SlashingR1_Vendor_C) == 0x001D70, "Wrong size on AServiceBuilding_Smithing_EXP2_SlashingR1_Vendor_C");
 
 }
 

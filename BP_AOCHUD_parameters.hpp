@@ -18,15 +18,15 @@ namespace SDK::Params
 {
 
 // Function BP_AOCHUD.BP_AOCHUD_C.SetCastTimeBP
-// 0x1020 (0x1020 - 0x0000)
+// 0x1028 (0x1028 - 0x0000)
 struct BP_AOCHUD_C_SetCastTimeBP final
 {
 public:
 	class UTextBlock*                             TextBlock;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FAoCAbilityRecord                      AbilityRecord;                                     // 0x0008(0x1018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FAoCAbilityRecord                      AbilityRecord;                                     // 0x0008(0x1020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 static_assert(alignof(BP_AOCHUD_C_SetCastTimeBP) == 0x000008, "Wrong alignment on BP_AOCHUD_C_SetCastTimeBP");
-static_assert(sizeof(BP_AOCHUD_C_SetCastTimeBP) == 0x001020, "Wrong size on BP_AOCHUD_C_SetCastTimeBP");
+static_assert(sizeof(BP_AOCHUD_C_SetCastTimeBP) == 0x001028, "Wrong size on BP_AOCHUD_C_SetCastTimeBP");
 static_assert(offsetof(BP_AOCHUD_C_SetCastTimeBP, TextBlock) == 0x000000, "Member 'BP_AOCHUD_C_SetCastTimeBP::TextBlock' has a wrong offset!");
 static_assert(offsetof(BP_AOCHUD_C_SetCastTimeBP, AbilityRecord) == 0x000008, "Member 'BP_AOCHUD_C_SetCastTimeBP::AbilityRecord' has a wrong offset!");
 
@@ -48,7 +48,7 @@ struct BP_AOCHUD_C_Get_Speed_Mult final
 public:
 	ESpeedTypes                                   Speed;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        mult;                                              // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Mult;                                              // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
@@ -68,7 +68,7 @@ public:
 static_assert(alignof(BP_AOCHUD_C_Get_Speed_Mult) == 0x000008, "Wrong alignment on BP_AOCHUD_C_Get_Speed_Mult");
 static_assert(sizeof(BP_AOCHUD_C_Get_Speed_Mult) == 0x000050, "Wrong size on BP_AOCHUD_C_Get_Speed_Mult");
 static_assert(offsetof(BP_AOCHUD_C_Get_Speed_Mult, Speed) == 0x000000, "Member 'BP_AOCHUD_C_Get_Speed_Mult::Speed' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_Get_Speed_Mult, mult) == 0x000008, "Member 'BP_AOCHUD_C_Get_Speed_Mult::mult' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_Get_Speed_Mult, Mult) == 0x000008, "Member 'BP_AOCHUD_C_Get_Speed_Mult::Mult' has a wrong offset!");
 static_assert(offsetof(BP_AOCHUD_C_Get_Speed_Mult, CallFunc_MakeLiteralByte_ReturnValue) == 0x000010, "Member 'BP_AOCHUD_C_Get_Speed_Mult::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_AOCHUD_C_Get_Speed_Mult, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000011, "Member 'BP_AOCHUD_C_Get_Speed_Mult::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_AOCHUD_C_Get_Speed_Mult, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000018, "Member 'BP_AOCHUD_C_Get_Speed_Mult::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
@@ -82,7 +82,7 @@ static_assert(offsetof(BP_AOCHUD_C_Get_Speed_Mult, K2Node_FunctionResult_mult_Im
 static_assert(offsetof(BP_AOCHUD_C_Get_Speed_Mult, K2Node_FunctionResult_mult_ImplicitCast_1) == 0x000048, "Member 'BP_AOCHUD_C_Get_Speed_Mult::K2Node_FunctionResult_mult_ImplicitCast_1' has a wrong offset!");
 
 // Function BP_AOCHUD.BP_AOCHUD_C.ExecuteUbergraph_BP_AOCHUD
-// 0x1408 (0x1408 - 0x0000)
+// 0x1410 (0x1410 - 0x0000)
 struct BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD final
 {
 public:
@@ -102,51 +102,51 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTextBlock*                             K2Node_Event_TextBlock;                            // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FAoCAbilityRecord                      K2Node_Event_AbilityRecord;                        // 0x0058(0x1018)(ConstParm)
-	TArray<struct FAnimNotifyEvent>               K2Node_CustomEvent_AnimNotifyEvents;               // 0x1070(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
-	struct FAnimNotifyEvent                       CallFunc_Array_Get_Item;                           // 0x1080(0x00B8)(ContainsInstancedReference)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x1138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAnimNotifyEventTriggerTime_ReturnValue; // 0x1148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x114C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x114D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x114E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114F[0x1];                                     // 0x114F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FExprValue                             CallFunc_EvaluateCombatExpression_ReturnValue;     // 0x1150(0x00C8)()
-	double                                        CallFunc_Get_Speed_Mult_mult;                      // 0x1218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x1220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue;        // 0x1228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1229[0x7];                                     // 0x1229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x1230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default;                             // 0x1238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x1240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x1241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1242[0x2];                                     // 0x1242(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x1244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x1248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x1249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x124A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x124B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x124C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_124D[0x3];                                     // 0x124D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_1;                           // 0x1250(0x0018)()
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x1268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1269[0x7];                                     // 0x1269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_2;                           // 0x1270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x1278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x1280(0x0018)()
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData;     // 0x1298(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array;                  // 0x12E8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x12F8(0x0018)()
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_1;   // 0x1310(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_2;   // 0x1360(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array_1;                // 0x13B0(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array_2;                // 0x13C0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x13D0(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x13E8(0x0018)()
-	double                                        K2Node_Select_Option_0_ImplicitCast;               // 0x1400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAoCAbilityRecord                      K2Node_Event_AbilityRecord;                        // 0x0058(0x1020)(ConstParm)
+	TArray<struct FAnimNotifyEvent>               K2Node_CustomEvent_AnimNotifyEvents;               // 0x1078(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
+	struct FAnimNotifyEvent                       CallFunc_Array_Get_Item;                           // 0x1088(0x00B8)(ContainsInstancedReference)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x1140(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAnimNotifyEventTriggerTime_ReturnValue; // 0x1150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue;                     // 0x1154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x1155(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x1156(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1157[0x1];                                     // 0x1157(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FExprValue                             CallFunc_EvaluateCombatExpression_ReturnValue;     // 0x1158(0x00C8)()
+	double                                        CallFunc_Get_Speed_Mult_mult;                      // 0x1220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x1228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue;        // 0x1230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1231[0x7];                                     // 0x1231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x1238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default;                             // 0x1240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x1248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x1249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_124A[0x2];                                     // 0x124A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x124C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x1250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x1251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x1252(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x1253(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x1254(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1255[0x3];                                     // 0x1255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_1;                           // 0x1258(0x0018)()
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x1270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1271[0x7];                                     // 0x1271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default_2;                           // 0x1278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x1280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x1288(0x0018)()
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData;     // 0x12A0(0x0050)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array;                  // 0x12F0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x1300(0x0018)()
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_1;   // 0x1318(0x0050)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_2;   // 0x1368(0x0050)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array_1;                // 0x13B8(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array_2;                // 0x13C8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x13D8(0x0018)()
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x13F0(0x0018)()
+	double                                        K2Node_Select_Option_0_ImplicitCast;               // 0x1408(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD) == 0x000008, "Wrong alignment on BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD");
-static_assert(sizeof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD) == 0x001408, "Wrong size on BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD");
+static_assert(sizeof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD) == 0x001410, "Wrong size on BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD");
 static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, EntryPoint) == 0x000000, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_GetPlayerController_ReturnValue) == 0x000008, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, Temp_bool_Variable) == 0x000010, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::Temp_bool_Variable' has a wrong offset!");
@@ -160,42 +160,42 @@ static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, Temp_int_Loop_Cou
 static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Add_IntInt_ReturnValue) == 0x000048, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_Event_TextBlock) == 0x000050, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_Event_TextBlock' has a wrong offset!");
 static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_Event_AbilityRecord) == 0x000058, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_Event_AbilityRecord' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_CustomEvent_AnimNotifyEvents) == 0x001070, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_CustomEvent_AnimNotifyEvents' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Array_Get_Item) == 0x001080, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Conv_NameToString_ReturnValue) == 0x001138, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_GetAnimNotifyEventTriggerTime_ReturnValue) == 0x001148, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_GetAnimNotifyEventTriggerTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Contains_ReturnValue) == 0x00114C, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_EqualEqual_NameName_ReturnValue) == 0x00114D, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x00114E, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_EvaluateCombatExpression_ReturnValue) == 0x001150, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_EvaluateCombatExpression_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Get_Speed_Mult_mult) == 0x001218, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Get_Speed_Mult_mult' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_FMax_ReturnValue) == 0x001220, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_NotEqual_DoubleDouble_ReturnValue) == 0x001228, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_NotEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Conv_IntToDouble_ReturnValue) == 0x001230, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_Select_Default) == 0x001238, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Array_IsValidIndex_ReturnValue) == 0x001240, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x001241, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Array_Length_ReturnValue) == 0x001244, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Less_IntInt_ReturnValue) == 0x001248, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_IsValid_ReturnValue) == 0x001249, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_IsValid_ReturnValue_1) == 0x00124A, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, Temp_bool_Variable_2) == 0x00124B, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_TextIsEmpty_ReturnValue) == 0x00124C, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_Select_Default_1) == 0x001250, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x001268, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_Select_Default_2) == 0x001270, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x001278, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Conv_DoubleToText_ReturnValue) == 0x001280, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_FormatArgumentData) == 0x001298, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_Array) == 0x0012E8, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_Array' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Format_ReturnValue) == 0x0012F8, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_FormatArgumentData_1) == 0x001310, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_FormatArgumentData_2) == 0x001360, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_Array_1) == 0x0013B0, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_Array_2) == 0x0013C0, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_Array_2' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Format_ReturnValue_1) == 0x0013D0, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Format_ReturnValue_2) == 0x0013E8, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_Select_Option_0_ImplicitCast) == 0x001400, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_Select_Option_0_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_CustomEvent_AnimNotifyEvents) == 0x001078, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_CustomEvent_AnimNotifyEvents' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Array_Get_Item) == 0x001088, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Conv_NameToString_ReturnValue) == 0x001140, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_GetAnimNotifyEventTriggerTime_ReturnValue) == 0x001150, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_GetAnimNotifyEventTriggerTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Contains_ReturnValue) == 0x001154, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_EqualEqual_NameName_ReturnValue) == 0x001155, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x001156, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_EvaluateCombatExpression_ReturnValue) == 0x001158, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_EvaluateCombatExpression_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Get_Speed_Mult_mult) == 0x001220, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Get_Speed_Mult_mult' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_FMax_ReturnValue) == 0x001228, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_NotEqual_DoubleDouble_ReturnValue) == 0x001230, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_NotEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Conv_IntToDouble_ReturnValue) == 0x001238, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_Select_Default) == 0x001240, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Array_IsValidIndex_ReturnValue) == 0x001248, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x001249, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Array_Length_ReturnValue) == 0x00124C, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Less_IntInt_ReturnValue) == 0x001250, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_IsValid_ReturnValue) == 0x001251, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_IsValid_ReturnValue_1) == 0x001252, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, Temp_bool_Variable_2) == 0x001253, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_TextIsEmpty_ReturnValue) == 0x001254, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_Select_Default_1) == 0x001258, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x001270, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_Select_Default_2) == 0x001278, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x001280, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Conv_DoubleToText_ReturnValue) == 0x001288, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_FormatArgumentData) == 0x0012A0, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_Array) == 0x0012F0, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_Array' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Format_ReturnValue) == 0x001300, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_FormatArgumentData_1) == 0x001318, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_FormatArgumentData_2) == 0x001368, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_Array_1) == 0x0013B8, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_Array_1' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, UniqueObjectNameForCooking_Array_2) == 0x0013C8, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::UniqueObjectNameForCooking_Array_2' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Format_ReturnValue_1) == 0x0013D8, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, CallFunc_Format_ReturnValue_2) == 0x0013F0, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD, K2Node_Select_Option_0_ImplicitCast) == 0x001408, "Member 'BP_AOCHUD_C_ExecuteUbergraph_BP_AOCHUD::K2Node_Select_Option_0_ImplicitCast' has a wrong offset!");
 
 }
 

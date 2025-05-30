@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_MNT_Horse.ABP_MNT_Horse_C
-// 0x0000 (0xD480 - 0xD480)
+// 0x0000 (0xD490 - 0xD490)
 class UABP_MNT_Horse_C final : public UABP_MNT_Template_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UABP_MNT_Horse_C) == 0x000010, "Wrong alignment on UABP_MNT_Horse_C");
-static_assert(sizeof(UABP_MNT_Horse_C) == 0x00D480, "Wrong size on UABP_MNT_Horse_C");
+static_assert(sizeof(UABP_MNT_Horse_C) == 0x00D490, "Wrong size on UABP_MNT_Horse_C");
 
 }
 

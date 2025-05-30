@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Ranger_Aiming_Projectile_RainingDeath.Ranger_Aiming_Projectile_RainingDeath_C
-// 0x0008 (0x0598 - 0x0590)
+// 0x0008 (0x05A0 - 0x0598)
 class ARanger_Aiming_Projectile_RainingDeath_C final : public AAoCAbilityProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_Ranger_Aiming_Projectile_RainingDeath(int32 EntryPoint);
@@ -40,8 +40,8 @@ public:
 	}
 };
 static_assert(alignof(ARanger_Aiming_Projectile_RainingDeath_C) == 0x000008, "Wrong alignment on ARanger_Aiming_Projectile_RainingDeath_C");
-static_assert(sizeof(ARanger_Aiming_Projectile_RainingDeath_C) == 0x000598, "Wrong size on ARanger_Aiming_Projectile_RainingDeath_C");
-static_assert(offsetof(ARanger_Aiming_Projectile_RainingDeath_C, UberGraphFrame) == 0x000590, "Member 'ARanger_Aiming_Projectile_RainingDeath_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(ARanger_Aiming_Projectile_RainingDeath_C) == 0x0005A0, "Wrong size on ARanger_Aiming_Projectile_RainingDeath_C");
+static_assert(offsetof(ARanger_Aiming_Projectile_RainingDeath_C, UberGraphFrame) == 0x000598, "Member 'ARanger_Aiming_Projectile_RainingDeath_C::UberGraphFrame' has a wrong offset!");
 
 }
 

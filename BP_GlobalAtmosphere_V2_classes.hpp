@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_GlobalAtmosphere_V2.BP_GlobalAtmosphere_V2_C
-// 0x0010 (0x0A18 - 0x0A08)
+// 0x0010 (0x0A20 - 0x0A10)
 class ABP_GlobalAtmosphere_V2_C final : public AGlobalAtmosphere
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A08(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UVerraGlobalSkyCloudScenario*           DA;                                                // 0x0A10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerraGlobalSkyCloudScenario*           DA;                                                // 0x0A18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_GlobalAtmosphere_V2(int32 EntryPoint);
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_GlobalAtmosphere_V2_C) == 0x000008, "Wrong alignment on ABP_GlobalAtmosphere_V2_C");
-static_assert(sizeof(ABP_GlobalAtmosphere_V2_C) == 0x000A18, "Wrong size on ABP_GlobalAtmosphere_V2_C");
-static_assert(offsetof(ABP_GlobalAtmosphere_V2_C, UberGraphFrame) == 0x000A08, "Member 'ABP_GlobalAtmosphere_V2_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalAtmosphere_V2_C, DA) == 0x000A10, "Member 'ABP_GlobalAtmosphere_V2_C::DA' has a wrong offset!");
+static_assert(sizeof(ABP_GlobalAtmosphere_V2_C) == 0x000A20, "Wrong size on ABP_GlobalAtmosphere_V2_C");
+static_assert(offsetof(ABP_GlobalAtmosphere_V2_C, UberGraphFrame) == 0x000A10, "Member 'ABP_GlobalAtmosphere_V2_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_GlobalAtmosphere_V2_C, DA) == 0x000A18, "Member 'ABP_GlobalAtmosphere_V2_C::DA' has a wrong offset!");
 
 }
 

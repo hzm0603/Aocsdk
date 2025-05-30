@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PCG_structs.hpp"
 #include "PCGCoordinatePlaneAxes_structs.hpp"
+#include "PCG_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -83,18 +83,16 @@ static_assert(offsetof(CreatePointsGrid_C_ExecuteWithContext, K2Node_MakeStruct_
 static_assert(offsetof(CreatePointsGrid_C_ExecuteWithContext, K2Node_MakeArray_Array) == 0x0002E8, "Member 'CreatePointsGrid_C_ExecuteWithContext::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(CreatePointsGrid_C_ExecuteWithContext, K2Node_MakeStruct_PCGDataCollection) == 0x0002F8, "Member 'CreatePointsGrid_C_ExecuteWithContext::K2Node_MakeStruct_PCGDataCollection' has a wrong offset!");
 
-// Function CreatePointsGrid.CreatePointsGrid_C.IsCacheableOverride
-// 0x0002 (0x0002 - 0x0000)
-struct CreatePointsGrid_C_IsCacheableOverride final
+// Function CreatePointsGrid.CreatePointsGrid_C.NodeTitleOverride
+// 0x0008 (0x0008 - 0x0000)
+struct CreatePointsGrid_C_NodeTitleOverride final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CreatePointsGrid_C_IsCacheableOverride) == 0x000001, "Wrong alignment on CreatePointsGrid_C_IsCacheableOverride");
-static_assert(sizeof(CreatePointsGrid_C_IsCacheableOverride) == 0x000002, "Wrong size on CreatePointsGrid_C_IsCacheableOverride");
-static_assert(offsetof(CreatePointsGrid_C_IsCacheableOverride, ReturnValue) == 0x000000, "Member 'CreatePointsGrid_C_IsCacheableOverride::ReturnValue' has a wrong offset!");
-static_assert(offsetof(CreatePointsGrid_C_IsCacheableOverride, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'CreatePointsGrid_C_IsCacheableOverride::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(alignof(CreatePointsGrid_C_NodeTitleOverride) == 0x000004, "Wrong alignment on CreatePointsGrid_C_NodeTitleOverride");
+static_assert(sizeof(CreatePointsGrid_C_NodeTitleOverride) == 0x000008, "Wrong size on CreatePointsGrid_C_NodeTitleOverride");
+static_assert(offsetof(CreatePointsGrid_C_NodeTitleOverride, ReturnValue) == 0x000000, "Member 'CreatePointsGrid_C_NodeTitleOverride::ReturnValue' has a wrong offset!");
 
 // Function CreatePointsGrid.CreatePointsGrid_C.IterationLoopBody
 // 0x0A90 (0x0A90 - 0x0000)
@@ -301,16 +299,18 @@ static_assert(offsetof(CreatePointsGrid_C_IterationLoopBody, K2Node_Select_Defau
 static_assert(offsetof(CreatePointsGrid_C_IterationLoopBody, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000A80, "Member 'CreatePointsGrid_C_IterationLoopBody::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(CreatePointsGrid_C_IterationLoopBody, CallFunc_Greater_DoubleDouble_A_ImplicitCast_1) == 0x000A88, "Member 'CreatePointsGrid_C_IterationLoopBody::CallFunc_Greater_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
 
-// Function CreatePointsGrid.CreatePointsGrid_C.NodeTitleOverride
-// 0x0008 (0x0008 - 0x0000)
-struct CreatePointsGrid_C_NodeTitleOverride final
+// Function CreatePointsGrid.CreatePointsGrid_C.IsCacheableOverride
+// 0x0002 (0x0002 - 0x0000)
+struct CreatePointsGrid_C_IsCacheableOverride final
 {
 public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CreatePointsGrid_C_NodeTitleOverride) == 0x000004, "Wrong alignment on CreatePointsGrid_C_NodeTitleOverride");
-static_assert(sizeof(CreatePointsGrid_C_NodeTitleOverride) == 0x000008, "Wrong size on CreatePointsGrid_C_NodeTitleOverride");
-static_assert(offsetof(CreatePointsGrid_C_NodeTitleOverride, ReturnValue) == 0x000000, "Member 'CreatePointsGrid_C_NodeTitleOverride::ReturnValue' has a wrong offset!");
+static_assert(alignof(CreatePointsGrid_C_IsCacheableOverride) == 0x000001, "Wrong alignment on CreatePointsGrid_C_IsCacheableOverride");
+static_assert(sizeof(CreatePointsGrid_C_IsCacheableOverride) == 0x000002, "Wrong size on CreatePointsGrid_C_IsCacheableOverride");
+static_assert(offsetof(CreatePointsGrid_C_IsCacheableOverride, ReturnValue) == 0x000000, "Member 'CreatePointsGrid_C_IsCacheableOverride::ReturnValue' has a wrong offset!");
+static_assert(offsetof(CreatePointsGrid_C_IsCacheableOverride, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'CreatePointsGrid_C_IsCacheableOverride::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 }
 

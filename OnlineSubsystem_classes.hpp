@@ -42,7 +42,7 @@ static_assert(offsetof(UNamedInterfaces, NamedInterfaces) == 0x000048, "Member '
 static_assert(offsetof(UNamedInterfaces, NamedInterfaceDefs) == 0x000058, "Member 'UNamedInterfaces::NamedInterfaceDefs' has a wrong offset!");
 
 // Class OnlineSubsystem.TurnBasedMatchInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITurnBasedMatchInterface final : public IInterface
 {
 public:
@@ -59,8 +59,8 @@ public:
 		return GetDefaultObjImpl<ITurnBasedMatchInterface>();
 	}
 };
-static_assert(alignof(ITurnBasedMatchInterface) == 0x000008, "Wrong alignment on ITurnBasedMatchInterface");
-static_assert(sizeof(ITurnBasedMatchInterface) == 0x000048, "Wrong size on ITurnBasedMatchInterface");
+static_assert(alignof(ITurnBasedMatchInterface) == 0x000001, "Wrong alignment on ITurnBasedMatchInterface");
+static_assert(sizeof(ITurnBasedMatchInterface) == 0x000001, "Wrong size on ITurnBasedMatchInterface");
 
 }
 

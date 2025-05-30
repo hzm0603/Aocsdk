@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Projectile_Meteor.BP_Projectile_Meteor_C
-// 0x0018 (0x05A8 - 0x0590)
+// 0x0018 (0x05B0 - 0x0598)
 class ABP_Projectile_Meteor_C final : public AAoCAbilityProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      Niagara;                                           // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x05A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      Niagara;                                           // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x05A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Projectile_Meteor(int32 EntryPoint);
@@ -41,10 +41,10 @@ public:
 	}
 };
 static_assert(alignof(ABP_Projectile_Meteor_C) == 0x000008, "Wrong alignment on ABP_Projectile_Meteor_C");
-static_assert(sizeof(ABP_Projectile_Meteor_C) == 0x0005A8, "Wrong size on ABP_Projectile_Meteor_C");
-static_assert(offsetof(ABP_Projectile_Meteor_C, UberGraphFrame) == 0x000590, "Member 'ABP_Projectile_Meteor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Projectile_Meteor_C, Niagara) == 0x000598, "Member 'ABP_Projectile_Meteor_C::Niagara' has a wrong offset!");
-static_assert(offsetof(ABP_Projectile_Meteor_C, Scale) == 0x0005A0, "Member 'ABP_Projectile_Meteor_C::Scale' has a wrong offset!");
+static_assert(sizeof(ABP_Projectile_Meteor_C) == 0x0005B0, "Wrong size on ABP_Projectile_Meteor_C");
+static_assert(offsetof(ABP_Projectile_Meteor_C, UberGraphFrame) == 0x000598, "Member 'ABP_Projectile_Meteor_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_Projectile_Meteor_C, Niagara) == 0x0005A0, "Member 'ABP_Projectile_Meteor_C::Niagara' has a wrong offset!");
+static_assert(offsetof(ABP_Projectile_Meteor_C, Scale) == 0x0005A8, "Member 'ABP_Projectile_Meteor_C::Scale' has a wrong offset!");
 
 }
 

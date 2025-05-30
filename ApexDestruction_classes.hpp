@@ -26,7 +26,7 @@ class ADestructibleActor final : public AActor
 {
 public:
 	class UDestructibleComponent*                 DestructibleComponent;                             // 0x0348(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(struct FVector& HitPoint, struct FVector& HitDirection)> OnActorFracture;                                   // 0x0350(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FVector& HitPoint, const struct FVector& HitDirection)> OnActorFracture; // 0x0350(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -54,7 +54,7 @@ public:
 	bool                                          bEnableHardSleeping;                               // 0x0978(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_979[0x3];                                      // 0x0979(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LargeChunkThreshold;                               // 0x097C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FVector& HitPoint, struct FVector& HitDirection)> OnComponentFracture;                               // 0x0980(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FVector& HitPoint, const struct FVector& HitDirection)> OnComponentFracture; // 0x0980(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_990[0x70];                                     // 0x0990(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

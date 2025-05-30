@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Rabblerouser.Rabblerouser_C
-// 0x0010 (0x1DC0 - 0x1DB0)
+// 0x0010 (0x1D80 - 0x1D70)
 class ARabblerouser_C final : public ABandit_Melee_Base_C
 {
 public:
-	class USkeletalMeshComponent*                 WeaponL;                                           // 0x1DB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 WeaponR;                                           // 0x1DB8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 WeaponL;                                           // 0x1D70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 WeaponR;                                           // 0x1D78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(ARabblerouser_C) == 0x000010, "Wrong alignment on ARabblerouser_C");
-static_assert(sizeof(ARabblerouser_C) == 0x001DC0, "Wrong size on ARabblerouser_C");
-static_assert(offsetof(ARabblerouser_C, WeaponL) == 0x001DB0, "Member 'ARabblerouser_C::WeaponL' has a wrong offset!");
-static_assert(offsetof(ARabblerouser_C, WeaponR) == 0x001DB8, "Member 'ARabblerouser_C::WeaponR' has a wrong offset!");
+static_assert(sizeof(ARabblerouser_C) == 0x001D80, "Wrong size on ARabblerouser_C");
+static_assert(offsetof(ARabblerouser_C, WeaponL) == 0x001D70, "Member 'ARabblerouser_C::WeaponL' has a wrong offset!");
+static_assert(offsetof(ARabblerouser_C, WeaponR) == 0x001D78, "Member 'ARabblerouser_C::WeaponR' has a wrong offset!");
 
 }
 

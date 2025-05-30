@@ -17,23 +17,31 @@
 namespace SDK
 {
 
-// Function WBP_CommissionSummaryItem.WBP_CommissionSummaryItem_C.ExecuteUbergraph_WBP_CommissionSummaryItem
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_CommissionSummaryItem.WBP_CommissionSummaryItem_C.SequenceEvent__ENTRYPOINTWBP_CommissionSummaryItem
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_CommissionSummaryItem_C::ExecuteUbergraph_WBP_CommissionSummaryItem(int32 EntryPoint)
+void UWBP_CommissionSummaryItem_C::SequenceEvent__ENTRYPOINTWBP_CommissionSummaryItem()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CommissionSummaryItem_C", "ExecuteUbergraph_WBP_CommissionSummaryItem");
+		Func = Class->GetFunction("WBP_CommissionSummaryItem_C", "SequenceEvent__ENTRYPOINTWBP_CommissionSummaryItem");
 
-	Params::WBP_CommissionSummaryItem_C_ExecuteUbergraph_WBP_CommissionSummaryItem Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function WBP_CommissionSummaryItem.WBP_CommissionSummaryItem_C.SequenceEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_CommissionSummaryItem_C::SequenceEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CommissionSummaryItem_C", "SequenceEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -57,31 +65,23 @@ class UCommonBorder* UWBP_CommissionSummaryItem_C::GetBorder()
 }
 
 
-// Function WBP_CommissionSummaryItem.WBP_CommissionSummaryItem_C.SequenceEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_CommissionSummaryItem.WBP_CommissionSummaryItem_C.ExecuteUbergraph_WBP_CommissionSummaryItem
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CommissionSummaryItem_C::SequenceEvent()
+void UWBP_CommissionSummaryItem_C::ExecuteUbergraph_WBP_CommissionSummaryItem(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CommissionSummaryItem_C", "SequenceEvent");
+		Func = Class->GetFunction("WBP_CommissionSummaryItem_C", "ExecuteUbergraph_WBP_CommissionSummaryItem");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::WBP_CommissionSummaryItem_C_ExecuteUbergraph_WBP_CommissionSummaryItem Parms{};
 
+	Parms.EntryPoint = EntryPoint;
 
-// Function WBP_CommissionSummaryItem.WBP_CommissionSummaryItem_C.SequenceEvent__ENTRYPOINTWBP_CommissionSummaryItem
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_CommissionSummaryItem_C::SequenceEvent__ENTRYPOINTWBP_CommissionSummaryItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CommissionSummaryItem_C", "SequenceEvent__ENTRYPOINTWBP_CommissionSummaryItem");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

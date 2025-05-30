@@ -20,7 +20,7 @@ namespace SDK
 // Function WebBrowserWidget.WebBrowser.ExecuteJavascript
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           ScriptText                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ScriptText                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UWebBrowser::ExecuteJavascript(const class FString& ScriptText)
 {
@@ -45,8 +45,8 @@ void UWebBrowser::ExecuteJavascript(const class FString& ScriptText)
 // Function WebBrowserWidget.WebBrowser.LoadString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Contents                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           DummyURL                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Contents                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    DummyURL                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UWebBrowser::LoadString(const class FString& Contents, const class FString& DummyURL)
 {
@@ -72,7 +72,7 @@ void UWebBrowser::LoadString(const class FString& Contents, const class FString&
 // Function WebBrowserWidget.WebBrowser.LoadURL
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           NewURL                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    NewURL                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UWebBrowser::LoadURL(const class FString& NewURL)
 {

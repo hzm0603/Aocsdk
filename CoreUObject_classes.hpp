@@ -388,8 +388,8 @@ static_assert(alignof(UObjectReachabilityStressData) == 0x000008, "Wrong alignme
 static_assert(sizeof(UObjectReachabilityStressData) == 0x000058, "Wrong size on UObjectReachabilityStressData");
 
 // Class CoreUObject.Interface
-// 0x0000 (0x0048 - 0x0048)
-class IInterface : public UObject
+// 0x-048 (0x0000 - 0x0048)
+class IInterface final : public UObject
 {
 public:
 	static class UClass* StaticClass()
@@ -401,8 +401,8 @@ public:
 		return GetDefaultObjImpl<IInterface>();
 	}
 };
-static_assert(alignof(IInterface) == 0x000008, "Wrong alignment on IInterface");
-static_assert(sizeof(IInterface) == 0x000048, "Wrong size on IInterface");
+static_assert(alignof(IInterface) == 0x000001, "Wrong alignment on IInterface");
+static_assert(sizeof(IInterface) == 0x000001, "Wrong size on IInterface");
 
 // Class CoreUObject.LinkerPlaceholderClass
 // 0x01C0 (0x0480 - 0x02C0)

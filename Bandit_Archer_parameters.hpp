@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function Bandit_Archer.Bandit_Archer_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct Bandit_Archer_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Bandit_Archer_C_ReceiveTick) == 0x000004, "Wrong alignment on Bandit_Archer_C_ReceiveTick");
+static_assert(sizeof(Bandit_Archer_C_ReceiveTick) == 0x000004, "Wrong size on Bandit_Archer_C_ReceiveTick");
+static_assert(offsetof(Bandit_Archer_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'Bandit_Archer_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
 // Function Bandit_Archer.Bandit_Archer_C.ExecuteUbergraph_Bandit_Archer
 // 0x0008 (0x0008 - 0x0000)
 struct Bandit_Archer_C_ExecuteUbergraph_Bandit_Archer final
@@ -26,17 +37,6 @@ static_assert(alignof(Bandit_Archer_C_ExecuteUbergraph_Bandit_Archer) == 0x00000
 static_assert(sizeof(Bandit_Archer_C_ExecuteUbergraph_Bandit_Archer) == 0x000008, "Wrong size on Bandit_Archer_C_ExecuteUbergraph_Bandit_Archer");
 static_assert(offsetof(Bandit_Archer_C_ExecuteUbergraph_Bandit_Archer, EntryPoint) == 0x000000, "Member 'Bandit_Archer_C_ExecuteUbergraph_Bandit_Archer::EntryPoint' has a wrong offset!");
 static_assert(offsetof(Bandit_Archer_C_ExecuteUbergraph_Bandit_Archer, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'Bandit_Archer_C_ExecuteUbergraph_Bandit_Archer::K2Node_Event_DeltaSeconds' has a wrong offset!");
-
-// Function Bandit_Archer.Bandit_Archer_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct Bandit_Archer_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Bandit_Archer_C_ReceiveTick) == 0x000004, "Wrong alignment on Bandit_Archer_C_ReceiveTick");
-static_assert(sizeof(Bandit_Archer_C_ReceiveTick) == 0x000004, "Wrong size on Bandit_Archer_C_ReceiveTick");
-static_assert(offsetof(Bandit_Archer_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'Bandit_Archer_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 }
 

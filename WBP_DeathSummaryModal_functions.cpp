@@ -17,19 +17,19 @@
 namespace SDK
 {
 
-// Function WBP_DeathSummaryModal.WBP_DeathSummaryModal_C.GetBorderContainer
+// Function WBP_DeathSummaryModal.WBP_DeathSummaryModal_C.GetOddBorderStyle
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// TSubclassOf<class UCommonBorderStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
-class UPanelWidget* UWBP_DeathSummaryModal_C::GetBorderContainer()
+TSubclassOf<class UCommonBorderStyle> UWBP_DeathSummaryModal_C::GetOddBorderStyle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DeathSummaryModal_C", "GetBorderContainer");
+		Func = Class->GetFunction("WBP_DeathSummaryModal_C", "GetOddBorderStyle");
 
-	Params::WBP_DeathSummaryModal_C_GetBorderContainer Parms{};
+	Params::WBP_DeathSummaryModal_C_GetOddBorderStyle Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -57,19 +57,19 @@ TSubclassOf<class UCommonBorderStyle> UWBP_DeathSummaryModal_C::GetEvenBorderSty
 }
 
 
-// Function WBP_DeathSummaryModal.WBP_DeathSummaryModal_C.GetOddBorderStyle
+// Function WBP_DeathSummaryModal.WBP_DeathSummaryModal_C.GetBorderContainer
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TSubclassOf<class UCommonBorderStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-TSubclassOf<class UCommonBorderStyle> UWBP_DeathSummaryModal_C::GetOddBorderStyle()
+class UPanelWidget* UWBP_DeathSummaryModal_C::GetBorderContainer()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DeathSummaryModal_C", "GetOddBorderStyle");
+		Func = Class->GetFunction("WBP_DeathSummaryModal_C", "GetBorderContainer");
 
-	Params::WBP_DeathSummaryModal_C_GetOddBorderStyle Parms{};
+	Params::WBP_DeathSummaryModal_C_GetBorderContainer Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

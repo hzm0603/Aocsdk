@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Cultist1.Cultist1_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 #pragma pack(push, 0x1)
 class alignas(0x10) ACultist1_C : public ACultist_C
 {
@@ -33,7 +33,7 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(ACultist1_C) == 0x000010, "Wrong alignment on ACultist1_C");
-static_assert(sizeof(ACultist1_C) == 0x001DB0, "Wrong size on ACultist1_C");
+static_assert(sizeof(ACultist1_C) == 0x001D70, "Wrong size on ACultist1_C");
 
 }
 

@@ -110,6 +110,33 @@ enum class ESteeringType : uint8
 	ESteeringType_MAX                        = 3,
 };
 
+// ScriptStruct ChaosVehicles.VehicleTorqueControlConfig
+// 0x0040 (0x0040 - 0x0000)
+struct FVehicleTorqueControlConfig final
+{
+public:
+	bool                                          Enabled;                                           // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         YawTorqueScaling;                                  // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         YawFromSteering;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         YawFromRollTorqueScaling;                          // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PitchTorqueScaling;                                // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RollTorqueScaling;                                 // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RollFromSteering;                                  // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RotationDamping;                                   // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20[0x20];                                      // 0x0020(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FVehicleTorqueControlConfig) == 0x000004, "Wrong alignment on FVehicleTorqueControlConfig");
+static_assert(sizeof(FVehicleTorqueControlConfig) == 0x000040, "Wrong size on FVehicleTorqueControlConfig");
+static_assert(offsetof(FVehicleTorqueControlConfig, Enabled) == 0x000000, "Member 'FVehicleTorqueControlConfig::Enabled' has a wrong offset!");
+static_assert(offsetof(FVehicleTorqueControlConfig, YawTorqueScaling) == 0x000004, "Member 'FVehicleTorqueControlConfig::YawTorqueScaling' has a wrong offset!");
+static_assert(offsetof(FVehicleTorqueControlConfig, YawFromSteering) == 0x000008, "Member 'FVehicleTorqueControlConfig::YawFromSteering' has a wrong offset!");
+static_assert(offsetof(FVehicleTorqueControlConfig, YawFromRollTorqueScaling) == 0x00000C, "Member 'FVehicleTorqueControlConfig::YawFromRollTorqueScaling' has a wrong offset!");
+static_assert(offsetof(FVehicleTorqueControlConfig, PitchTorqueScaling) == 0x000010, "Member 'FVehicleTorqueControlConfig::PitchTorqueScaling' has a wrong offset!");
+static_assert(offsetof(FVehicleTorqueControlConfig, RollTorqueScaling) == 0x000014, "Member 'FVehicleTorqueControlConfig::RollTorqueScaling' has a wrong offset!");
+static_assert(offsetof(FVehicleTorqueControlConfig, RollFromSteering) == 0x000018, "Member 'FVehicleTorqueControlConfig::RollFromSteering' has a wrong offset!");
+static_assert(offsetof(FVehicleTorqueControlConfig, RotationDamping) == 0x00001C, "Member 'FVehicleTorqueControlConfig::RotationDamping' has a wrong offset!");
+
 // ScriptStruct ChaosVehicles.AnimNode_StageCoachWheelController
 // 0x0028 (0x00F0 - 0x00C8)
 struct FAnimNode_StageCoachWheelController final : public FAnimNode_SkeletalControlBase
@@ -138,6 +165,50 @@ public:
 static_assert(alignof(FAnimNode_WheelController) == 0x000008, "Wrong alignment on FAnimNode_WheelController");
 static_assert(sizeof(FAnimNode_WheelController) == 0x0000E0, "Wrong size on FAnimNode_WheelController");
 
+// ScriptStruct ChaosVehicles.WheelStatus
+// 0x0088 (0x0088 - 0x0000)
+struct FWheelStatus final
+{
+public:
+	bool                                          bInContact;                                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ContactPoint;                                      // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                HitLocation;                                       // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UPhysicalMaterial>       PhysMaterial;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NormalizedSuspensionLength;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpringForce;                                       // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SlipAngle;                                         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSlipping;                                       // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SlipMagnitude;                                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSkidding;                                       // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SkidMagnitude;                                     // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                SkidNormal;                                        // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DriveTorque;                                       // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BrakeTorque;                                       // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bABSActivated;                                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FWheelStatus) == 0x000008, "Wrong alignment on FWheelStatus");
+static_assert(sizeof(FWheelStatus) == 0x000088, "Wrong size on FWheelStatus");
+static_assert(offsetof(FWheelStatus, bInContact) == 0x000000, "Member 'FWheelStatus::bInContact' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, ContactPoint) == 0x000008, "Member 'FWheelStatus::ContactPoint' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, HitLocation) == 0x000020, "Member 'FWheelStatus::HitLocation' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, PhysMaterial) == 0x000038, "Member 'FWheelStatus::PhysMaterial' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, NormalizedSuspensionLength) == 0x000040, "Member 'FWheelStatus::NormalizedSuspensionLength' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, SpringForce) == 0x000044, "Member 'FWheelStatus::SpringForce' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, SlipAngle) == 0x000048, "Member 'FWheelStatus::SlipAngle' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, bIsSlipping) == 0x00004C, "Member 'FWheelStatus::bIsSlipping' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, SlipMagnitude) == 0x000050, "Member 'FWheelStatus::SlipMagnitude' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, bIsSkidding) == 0x000054, "Member 'FWheelStatus::bIsSkidding' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, SkidMagnitude) == 0x000058, "Member 'FWheelStatus::SkidMagnitude' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, SkidNormal) == 0x000060, "Member 'FWheelStatus::SkidNormal' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, DriveTorque) == 0x000078, "Member 'FWheelStatus::DriveTorque' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, BrakeTorque) == 0x00007C, "Member 'FWheelStatus::BrakeTorque' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, bABSActivated) == 0x000080, "Member 'FWheelStatus::bABSActivated' has a wrong offset!");
+
 // ScriptStruct ChaosVehicles.VehicleInputs
 // 0x001C (0x001C - 0x0000)
 struct FVehicleInputs
@@ -160,6 +231,25 @@ static_assert(offsetof(FVehicleInputs, PitchInput) == 0x00000C, "Member 'FVehicl
 static_assert(offsetof(FVehicleInputs, RollInput) == 0x000010, "Member 'FVehicleInputs::RollInput' has a wrong offset!");
 static_assert(offsetof(FVehicleInputs, YawInput) == 0x000014, "Member 'FVehicleInputs::YawInput' has a wrong offset!");
 static_assert(offsetof(FVehicleInputs, HandbrakeInput) == 0x000018, "Member 'FVehicleInputs::HandbrakeInput' has a wrong offset!");
+
+// ScriptStruct ChaosVehicles.WheelSnapshot
+// 0x0014 (0x0014 - 0x0000)
+struct FWheelSnapshot final
+{
+public:
+	float                                         SuspensionOffset;                                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WheelRotationAngle;                                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SteeringAngle;                                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WheelRadius;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WheelAngularVelocity;                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FWheelSnapshot) == 0x000004, "Wrong alignment on FWheelSnapshot");
+static_assert(sizeof(FWheelSnapshot) == 0x000014, "Wrong size on FWheelSnapshot");
+static_assert(offsetof(FWheelSnapshot, SuspensionOffset) == 0x000000, "Member 'FWheelSnapshot::SuspensionOffset' has a wrong offset!");
+static_assert(offsetof(FWheelSnapshot, WheelRotationAngle) == 0x000004, "Member 'FWheelSnapshot::WheelRotationAngle' has a wrong offset!");
+static_assert(offsetof(FWheelSnapshot, SteeringAngle) == 0x000008, "Member 'FWheelSnapshot::SteeringAngle' has a wrong offset!");
+static_assert(offsetof(FWheelSnapshot, WheelRadius) == 0x00000C, "Member 'FWheelSnapshot::WheelRadius' has a wrong offset!");
+static_assert(offsetof(FWheelSnapshot, WheelAngularVelocity) == 0x000010, "Member 'FWheelSnapshot::WheelAngularVelocity' has a wrong offset!");
 
 // ScriptStruct ChaosVehicles.ControlInputs
 // 0x0004 (0x0020 - 0x001C)
@@ -238,33 +328,6 @@ static_assert(sizeof(FVehicleReplicatedState) == 0x000028, "Wrong size on FVehic
 static_assert(offsetof(FVehicleReplicatedState, TargetGear) == 0x00001C, "Member 'FVehicleReplicatedState::TargetGear' has a wrong offset!");
 static_assert(offsetof(FVehicleReplicatedState, ThrottleUp) == 0x000020, "Member 'FVehicleReplicatedState::ThrottleUp' has a wrong offset!");
 static_assert(offsetof(FVehicleReplicatedState, ThrottleDown) == 0x000024, "Member 'FVehicleReplicatedState::ThrottleDown' has a wrong offset!");
-
-// ScriptStruct ChaosVehicles.VehicleTorqueControlConfig
-// 0x0040 (0x0040 - 0x0000)
-struct FVehicleTorqueControlConfig final
-{
-public:
-	bool                                          Enabled;                                           // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         YawTorqueScaling;                                  // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         YawFromSteering;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         YawFromRollTorqueScaling;                          // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PitchTorqueScaling;                                // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RollTorqueScaling;                                 // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RollFromSteering;                                  // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RotationDamping;                                   // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20[0x20];                                      // 0x0020(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FVehicleTorqueControlConfig) == 0x000004, "Wrong alignment on FVehicleTorqueControlConfig");
-static_assert(sizeof(FVehicleTorqueControlConfig) == 0x000040, "Wrong size on FVehicleTorqueControlConfig");
-static_assert(offsetof(FVehicleTorqueControlConfig, Enabled) == 0x000000, "Member 'FVehicleTorqueControlConfig::Enabled' has a wrong offset!");
-static_assert(offsetof(FVehicleTorqueControlConfig, YawTorqueScaling) == 0x000004, "Member 'FVehicleTorqueControlConfig::YawTorqueScaling' has a wrong offset!");
-static_assert(offsetof(FVehicleTorqueControlConfig, YawFromSteering) == 0x000008, "Member 'FVehicleTorqueControlConfig::YawFromSteering' has a wrong offset!");
-static_assert(offsetof(FVehicleTorqueControlConfig, YawFromRollTorqueScaling) == 0x00000C, "Member 'FVehicleTorqueControlConfig::YawFromRollTorqueScaling' has a wrong offset!");
-static_assert(offsetof(FVehicleTorqueControlConfig, PitchTorqueScaling) == 0x000010, "Member 'FVehicleTorqueControlConfig::PitchTorqueScaling' has a wrong offset!");
-static_assert(offsetof(FVehicleTorqueControlConfig, RollTorqueScaling) == 0x000014, "Member 'FVehicleTorqueControlConfig::RollTorqueScaling' has a wrong offset!");
-static_assert(offsetof(FVehicleTorqueControlConfig, RollFromSteering) == 0x000018, "Member 'FVehicleTorqueControlConfig::RollFromSteering' has a wrong offset!");
-static_assert(offsetof(FVehicleTorqueControlConfig, RotationDamping) == 0x00001C, "Member 'FVehicleTorqueControlConfig::RotationDamping' has a wrong offset!");
 
 // ScriptStruct ChaosVehicles.VehicleTargetRotationControlConfig
 // 0x0058 (0x0058 - 0x0000)
@@ -392,50 +455,6 @@ static_assert(offsetof(FVehicleThrustConfig, ThrustAxis) == 0x000028, "Member 'F
 static_assert(offsetof(FVehicleThrustConfig, MaxThrustForce) == 0x000040, "Member 'FVehicleThrustConfig::MaxThrustForce' has a wrong offset!");
 static_assert(offsetof(FVehicleThrustConfig, MaxControlAngle) == 0x000044, "Member 'FVehicleThrustConfig::MaxControlAngle' has a wrong offset!");
 
-// ScriptStruct ChaosVehicles.WheelStatus
-// 0x0088 (0x0088 - 0x0000)
-struct FWheelStatus final
-{
-public:
-	bool                                          bInContact;                                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ContactPoint;                                      // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                HitLocation;                                       // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UPhysicalMaterial>       PhysMaterial;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NormalizedSuspensionLength;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpringForce;                                       // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SlipAngle;                                         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsSlipping;                                       // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SlipMagnitude;                                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsSkidding;                                       // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SkidMagnitude;                                     // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                SkidNormal;                                        // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DriveTorque;                                       // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BrakeTorque;                                       // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bABSActivated;                                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FWheelStatus) == 0x000008, "Wrong alignment on FWheelStatus");
-static_assert(sizeof(FWheelStatus) == 0x000088, "Wrong size on FWheelStatus");
-static_assert(offsetof(FWheelStatus, bInContact) == 0x000000, "Member 'FWheelStatus::bInContact' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, ContactPoint) == 0x000008, "Member 'FWheelStatus::ContactPoint' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, HitLocation) == 0x000020, "Member 'FWheelStatus::HitLocation' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, PhysMaterial) == 0x000038, "Member 'FWheelStatus::PhysMaterial' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, NormalizedSuspensionLength) == 0x000040, "Member 'FWheelStatus::NormalizedSuspensionLength' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, SpringForce) == 0x000044, "Member 'FWheelStatus::SpringForce' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, SlipAngle) == 0x000048, "Member 'FWheelStatus::SlipAngle' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, bIsSlipping) == 0x00004C, "Member 'FWheelStatus::bIsSlipping' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, SlipMagnitude) == 0x000050, "Member 'FWheelStatus::SlipMagnitude' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, bIsSkidding) == 0x000054, "Member 'FWheelStatus::bIsSkidding' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, SkidMagnitude) == 0x000058, "Member 'FWheelStatus::SkidMagnitude' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, SkidNormal) == 0x000060, "Member 'FWheelStatus::SkidNormal' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, DriveTorque) == 0x000078, "Member 'FWheelStatus::DriveTorque' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, BrakeTorque) == 0x00007C, "Member 'FWheelStatus::BrakeTorque' has a wrong offset!");
-static_assert(offsetof(FWheelStatus, bABSActivated) == 0x000080, "Member 'FWheelStatus::bABSActivated' has a wrong offset!");
-
 // ScriptStruct ChaosVehicles.VehicleDifferentialConfig
 // 0x0010 (0x0010 - 0x0000)
 struct FVehicleDifferentialConfig final
@@ -550,25 +569,6 @@ static_assert(sizeof(FBaseSnapshotData) == 0x000090, "Wrong size on FBaseSnapsho
 static_assert(offsetof(FBaseSnapshotData, Transform) == 0x000000, "Member 'FBaseSnapshotData::Transform' has a wrong offset!");
 static_assert(offsetof(FBaseSnapshotData, LinearVelocity) == 0x000060, "Member 'FBaseSnapshotData::LinearVelocity' has a wrong offset!");
 static_assert(offsetof(FBaseSnapshotData, AngularVelocity) == 0x000078, "Member 'FBaseSnapshotData::AngularVelocity' has a wrong offset!");
-
-// ScriptStruct ChaosVehicles.WheelSnapshot
-// 0x0014 (0x0014 - 0x0000)
-struct FWheelSnapshot final
-{
-public:
-	float                                         SuspensionOffset;                                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WheelRotationAngle;                                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SteeringAngle;                                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WheelRadius;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WheelAngularVelocity;                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FWheelSnapshot) == 0x000004, "Wrong alignment on FWheelSnapshot");
-static_assert(sizeof(FWheelSnapshot) == 0x000014, "Wrong size on FWheelSnapshot");
-static_assert(offsetof(FWheelSnapshot, SuspensionOffset) == 0x000000, "Member 'FWheelSnapshot::SuspensionOffset' has a wrong offset!");
-static_assert(offsetof(FWheelSnapshot, WheelRotationAngle) == 0x000004, "Member 'FWheelSnapshot::WheelRotationAngle' has a wrong offset!");
-static_assert(offsetof(FWheelSnapshot, SteeringAngle) == 0x000008, "Member 'FWheelSnapshot::SteeringAngle' has a wrong offset!");
-static_assert(offsetof(FWheelSnapshot, WheelRadius) == 0x00000C, "Member 'FWheelSnapshot::WheelRadius' has a wrong offset!");
-static_assert(offsetof(FWheelSnapshot, WheelAngularVelocity) == 0x000010, "Member 'FWheelSnapshot::WheelAngularVelocity' has a wrong offset!");
 
 // ScriptStruct ChaosVehicles.WheeledSnaphotData
 // 0x0020 (0x00B0 - 0x0090)

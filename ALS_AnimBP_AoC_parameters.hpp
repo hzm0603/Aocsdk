@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ALSV4_CPP_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params

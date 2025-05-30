@@ -17,6 +17,30 @@
 namespace SDK::Params
 {
 
+// Function WBP_TimerTextBlock.WBP_TimerTextBlock_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_TimerTextBlock_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_TimerTextBlock_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_TimerTextBlock_C_PreConstruct");
+static_assert(sizeof(WBP_TimerTextBlock_C_PreConstruct) == 0x000001, "Wrong size on WBP_TimerTextBlock_C_PreConstruct");
+static_assert(offsetof(WBP_TimerTextBlock_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_TimerTextBlock_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_TimerTextBlock.WBP_TimerTextBlock_C.ExecuteUbergraph_WBP_TimerTextBlock
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock) == 0x000004, "Wrong alignment on WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock");
+static_assert(sizeof(WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock) == 0x000008, "Wrong size on WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock");
+static_assert(offsetof(WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock, EntryPoint) == 0x000000, "Member 'WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock::K2Node_Event_IsDesignTime' has a wrong offset!");
+
 // Function WBP_TimerTextBlock.WBP_TimerTextBlock_C.ConstructSettings
 // 0x0158 (0x0158 - 0x0000)
 struct WBP_TimerTextBlock_C_ConstructSettings final
@@ -62,30 +86,6 @@ static_assert(offsetof(WBP_TimerTextBlock_C_ConstructSettings, K2Node_Select_Def
 static_assert(offsetof(WBP_TimerTextBlock_C_ConstructSettings, UniqueObjectNameForCooking_FormatArgumentData_1) == 0x0000E0, "Member 'WBP_TimerTextBlock_C_ConstructSettings::UniqueObjectNameForCooking_FormatArgumentData_1' has a wrong offset!");
 static_assert(offsetof(WBP_TimerTextBlock_C_ConstructSettings, UniqueObjectNameForCooking_Array) == 0x000130, "Member 'WBP_TimerTextBlock_C_ConstructSettings::UniqueObjectNameForCooking_Array' has a wrong offset!");
 static_assert(offsetof(WBP_TimerTextBlock_C_ConstructSettings, CallFunc_Format_ReturnValue) == 0x000140, "Member 'WBP_TimerTextBlock_C_ConstructSettings::CallFunc_Format_ReturnValue' has a wrong offset!");
-
-// Function WBP_TimerTextBlock.WBP_TimerTextBlock_C.ExecuteUbergraph_WBP_TimerTextBlock
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock) == 0x000004, "Wrong alignment on WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock");
-static_assert(sizeof(WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock) == 0x000008, "Wrong size on WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock");
-static_assert(offsetof(WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock, EntryPoint) == 0x000000, "Member 'WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WBP_TimerTextBlock_C_ExecuteUbergraph_WBP_TimerTextBlock::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WBP_TimerTextBlock.WBP_TimerTextBlock_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_TimerTextBlock_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_TimerTextBlock_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_TimerTextBlock_C_PreConstruct");
-static_assert(sizeof(WBP_TimerTextBlock_C_PreConstruct) == 0x000001, "Wrong size on WBP_TimerTextBlock_C_PreConstruct");
-static_assert(offsetof(WBP_TimerTextBlock_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_TimerTextBlock_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass RightClickMenu.RightClickMenu_C
-// 0x0000 (0x03C8 - 0x03C8)
+// 0x0000 (0x0408 - 0x0408)
 class URightClickMenu_C final : public URightClickMenuBase
 {
 public:
@@ -36,7 +36,7 @@ public:
 	}
 };
 static_assert(alignof(URightClickMenu_C) == 0x000008, "Wrong alignment on URightClickMenu_C");
-static_assert(sizeof(URightClickMenu_C) == 0x0003C8, "Wrong size on URightClickMenu_C");
+static_assert(sizeof(URightClickMenu_C) == 0x000408, "Wrong size on URightClickMenu_C");
 
 }
 

@@ -17,14 +17,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MailItem.WBP_MailItem_C
-// 0x0000 (0x03D8 - 0x03D8)
+// 0x0000 (0x0418 - 0x0418)
 class UWBP_MailItem_C final : public UMailItemWidget
 {
 public:
-	class UAoCCommonButtonBase* GetButton();
-	class UPanelWidget* GetButtonContainer();
-	TSubclassOf<class UCommonButtonStyle> GetEvenButtonStyle();
 	TSubclassOf<class UCommonButtonStyle> GetOddButtonStyle();
+	TSubclassOf<class UCommonButtonStyle> GetEvenButtonStyle();
+	class UPanelWidget* GetButtonContainer();
+	class UAoCCommonButtonBase* GetButton();
 
 public:
 	static class UClass* StaticClass()
@@ -37,7 +37,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MailItem_C) == 0x000008, "Wrong alignment on UWBP_MailItem_C");
-static_assert(sizeof(UWBP_MailItem_C) == 0x0003D8, "Wrong size on UWBP_MailItem_C");
+static_assert(sizeof(UWBP_MailItem_C) == 0x000418, "Wrong size on UWBP_MailItem_C");
 
 }
 

@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Ranger_Aiming_Projectile.Ranger_Aiming_Projectile_C
-// 0x0010 (0x05A0 - 0x0590)
+// 0x0010 (0x05A8 - 0x0598)
 class ARanger_Aiming_Projectile_C final : public AAoCAbilityProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UArrowComponent*                        Arrow;                                             // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UArrowComponent*                        Arrow;                                             // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Ranger_Aiming_Projectile(int32 EntryPoint);
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(ARanger_Aiming_Projectile_C) == 0x000008, "Wrong alignment on ARanger_Aiming_Projectile_C");
-static_assert(sizeof(ARanger_Aiming_Projectile_C) == 0x0005A0, "Wrong size on ARanger_Aiming_Projectile_C");
-static_assert(offsetof(ARanger_Aiming_Projectile_C, UberGraphFrame) == 0x000590, "Member 'ARanger_Aiming_Projectile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ARanger_Aiming_Projectile_C, Arrow) == 0x000598, "Member 'ARanger_Aiming_Projectile_C::Arrow' has a wrong offset!");
+static_assert(sizeof(ARanger_Aiming_Projectile_C) == 0x0005A8, "Wrong size on ARanger_Aiming_Projectile_C");
+static_assert(offsetof(ARanger_Aiming_Projectile_C, UberGraphFrame) == 0x000598, "Member 'ARanger_Aiming_Projectile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ARanger_Aiming_Projectile_C, Arrow) == 0x0005A0, "Member 'ARanger_Aiming_Projectile_C::Arrow' has a wrong offset!");
 
 }
 

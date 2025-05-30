@@ -28,8 +28,8 @@ public:
 	class UComboBoxString*                        WidgetHierarchyDropDown;                           // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void DisplayUndoDebugTextBP(const TArray<struct FHudElementState>& CachedStates);
 	void ExecuteUbergraph_WBP_UnitFrameLayoutMenu(int32 EntryPoint);
+	void DisplayUndoDebugTextBP(const TArray<struct FHudElementState>& CachedStates);
 
 public:
 	static class UClass* StaticClass()

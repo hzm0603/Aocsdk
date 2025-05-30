@@ -27,8 +27,8 @@ public:
 	class UPanelWidget*                           Objectives_Box;                                    // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_QuestDetailsContent(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_QuestDetailsContent(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

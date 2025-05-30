@@ -40,7 +40,7 @@ void IAudioParameterControllerInterface::ResetParameters()
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<bool>                            InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<bool>&                     InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IAudioParameterControllerInterface::SetBoolArrayParameter(class FName InName, const TArray<bool>& InValue)
 {
@@ -94,7 +94,7 @@ void IAudioParameterControllerInterface::SetBoolParameter(class FName InName, bo
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<float>                           InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<float>&                    InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IAudioParameterControllerInterface::SetFloatArrayParameter(class FName InName, const TArray<float>& InValue)
 {
@@ -148,7 +148,7 @@ void IAudioParameterControllerInterface::SetFloatParameter(class FName InName, f
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<int32>                           InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IAudioParameterControllerInterface::SetIntArrayParameter(class FName InName, const TArray<int32>& InValue)
 {
@@ -202,7 +202,7 @@ void IAudioParameterControllerInterface::SetIntParameter(class FName InName, int
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class UObject*>                  InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class UObject*>&           InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IAudioParameterControllerInterface::SetObjectArrayParameter(class FName InName, const TArray<class UObject*>& InValue)
 {
@@ -255,7 +255,7 @@ void IAudioParameterControllerInterface::SetObjectParameter(class FName InName, 
 // Function AudioExtensions.AudioParameterControllerInterface.SetParameters_Blueprint
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<struct FAudioParameter>          InParameters                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FAudioParameter>&   InParameters                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IAudioParameterControllerInterface::SetParameters_Blueprint(const TArray<struct FAudioParameter>& InParameters)
 {
@@ -281,7 +281,7 @@ void IAudioParameterControllerInterface::SetParameters_Blueprint(const TArray<st
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>                   InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IAudioParameterControllerInterface::SetStringArrayParameter(class FName InName, const TArray<class FString>& InValue)
 {
@@ -308,7 +308,7 @@ void IAudioParameterControllerInterface::SetStringArrayParameter(class FName InN
 // (Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           InValue                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InValue                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void IAudioParameterControllerInterface::SetStringParameter(class FName InName, const class FString& InValue)
 {

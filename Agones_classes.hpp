@@ -26,29 +26,29 @@ public:
 	float                                         HealthRateSeconds;                                 // 0x0108(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisableAutoConnect;                               // 0x010C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(struct FGameServerResponse& Response)> ConnectedDelegate;                                 // 0x0110(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FGameServerResponse& Response)> ConnectedDelegate;    // 0x0110(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_120[0x48];                                     // 0x0120(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void Allocate(TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
+	void Allocate(TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
 	void Connect();
 	void ConnectSuccess(const struct FGameServerResponse& GameServerResponse);
-	void GameServer(TDelegate<void(struct FGameServerResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void GetConnectedPlayers(TDelegate<void(struct FConnectedPlayersResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void GetPlayerCapacity(TDelegate<void(struct FCountResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void GetPlayerCount(TDelegate<void(struct FCountResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void Health(TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
+	void GameServer(TDelegate<void(const struct FGameServerResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void GetConnectedPlayers(TDelegate<void(const struct FConnectedPlayersResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void GetPlayerCapacity(TDelegate<void(const struct FCountResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void GetPlayerCount(TDelegate<void(const struct FCountResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void Health(TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
 	void HealthPing(float RateSeconds);
-	void IsPlayerConnected(const class FString& PlayerId, TDelegate<void(struct FConnectedResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void PlayerConnect(const class FString& PlayerId, TDelegate<void(struct FConnectedResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void PlayerDisconnect(const class FString& PlayerId, TDelegate<void(struct FDisconnectResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void Ready(TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void Reserve(int64 Seconds, TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void SetAnnotation(const class FString& Key, const class FString& Value, TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void SetLabel(const class FString& Key, const class FString& Value, TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void SetPlayerCapacity(int64 Count, TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void Shutdown(TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);
-	void WatchGameServer(TDelegate<void(struct FGameServerResponse& Response)> WatchDelegate);
+	void IsPlayerConnected(const class FString& PlayerId, TDelegate<void(const struct FConnectedResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void PlayerConnect(const class FString& PlayerId, TDelegate<void(const struct FConnectedResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void PlayerDisconnect(const class FString& PlayerId, TDelegate<void(const struct FDisconnectResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void Ready(TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void Reserve(int64 Seconds, TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void SetAnnotation(const class FString& Key, const class FString& Value, TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void SetLabel(const class FString& Key, const class FString& Value, TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void SetPlayerCapacity(int64 Count, TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void Shutdown(TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate);
+	void WatchGameServer(TDelegate<void(const struct FGameServerResponse& Response)> WatchDelegate);
 
 public:
 	static class UClass* StaticClass()

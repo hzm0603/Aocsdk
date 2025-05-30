@@ -17,32 +17,32 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_SellItemsPanel.WBP_SellItemsPanel_C
-// 0x00B0 (0x06F8 - 0x0648)
+// 0x00B0 (0x0728 - 0x0678)
 class UWBP_SellItemsPanel_C final : public UMarketplaceSellPanel
 {
 public:
-	class UAoCCommonTextBlock*                    ActiveListingsCount_1;                             // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextButton_C*                    ClaimButton;                                       // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    NumberListedCounter;                               // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    NumberListedCounter_1;                             // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    NumberRemainingCounter;                            // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    NumberRemainingCounter_1;                          // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    NumberRemainingCounter_2;                          // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    NumberRemainingCounter_3;                          // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollingItemList;                                 // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    ShopDescription;                                   // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIntrepidVerticalBox*                   SoldItemsBox;                                      // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_ListedItemsLabel;                               // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_ListedItemsLabel_1;                             // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_StorefrontItemsInfoLabel;                       // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_StorefrontTotalListingsLabel;                   // 0x06B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TimeRemainingCounter;                              // 0x06C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_MarketplaceActiveListingEntry_C*   WBP_MarketplaceActiveListingEntry;                 // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_MarketplaceActiveListingEntry_C*   WBP_MarketplaceActiveListingEntry_1;               // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_MarketplaceActiveListingEntry_C*   WBP_MarketplaceActiveListingEntry_2;               // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_MarketplaceSoldItemEntry_C*        WBP_MarketplaceSoldItemEntry;                      // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_MarketplaceSoldItemEntry_C*        WBP_MarketplaceSoldItemEntry_1;                    // 0x06E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_MarketplaceSoldItemEntry_C*        WBP_MarketplaceSoldItemEntry_2;                    // 0x06F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    ActiveListingsCount_1;                             // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextButton_C*                    ClaimButton;                                       // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    NumberListedCounter;                               // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    NumberListedCounter_1;                             // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    NumberRemainingCounter;                            // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    NumberRemainingCounter_1;                          // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    NumberRemainingCounter_2;                          // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    NumberRemainingCounter_3;                          // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollingItemList;                                 // 0x06B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    ShopDescription;                                   // 0x06C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIntrepidVerticalBox*                   SoldItemsBox;                                      // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_ListedItemsLabel;                               // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_ListedItemsLabel_1;                             // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_StorefrontItemsInfoLabel;                       // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_StorefrontTotalListingsLabel;                   // 0x06E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TimeRemainingCounter;                              // 0x06F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_MarketplaceActiveListingEntry_C*   WBP_MarketplaceActiveListingEntry;                 // 0x06F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_MarketplaceActiveListingEntry_C*   WBP_MarketplaceActiveListingEntry_1;               // 0x0700(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_MarketplaceActiveListingEntry_C*   WBP_MarketplaceActiveListingEntry_2;               // 0x0708(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_MarketplaceSoldItemEntry_C*        WBP_MarketplaceSoldItemEntry;                      // 0x0710(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_MarketplaceSoldItemEntry_C*        WBP_MarketplaceSoldItemEntry_1;                    // 0x0718(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_MarketplaceSoldItemEntry_C*        WBP_MarketplaceSoldItemEntry_2;                    // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -55,29 +55,29 @@ public:
 	}
 };
 static_assert(alignof(UWBP_SellItemsPanel_C) == 0x000008, "Wrong alignment on UWBP_SellItemsPanel_C");
-static_assert(sizeof(UWBP_SellItemsPanel_C) == 0x0006F8, "Wrong size on UWBP_SellItemsPanel_C");
-static_assert(offsetof(UWBP_SellItemsPanel_C, ActiveListingsCount_1) == 0x000648, "Member 'UWBP_SellItemsPanel_C::ActiveListingsCount_1' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, ClaimButton) == 0x000650, "Member 'UWBP_SellItemsPanel_C::ClaimButton' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, NumberListedCounter) == 0x000658, "Member 'UWBP_SellItemsPanel_C::NumberListedCounter' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, NumberListedCounter_1) == 0x000660, "Member 'UWBP_SellItemsPanel_C::NumberListedCounter_1' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, NumberRemainingCounter) == 0x000668, "Member 'UWBP_SellItemsPanel_C::NumberRemainingCounter' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, NumberRemainingCounter_1) == 0x000670, "Member 'UWBP_SellItemsPanel_C::NumberRemainingCounter_1' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, NumberRemainingCounter_2) == 0x000678, "Member 'UWBP_SellItemsPanel_C::NumberRemainingCounter_2' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, NumberRemainingCounter_3) == 0x000680, "Member 'UWBP_SellItemsPanel_C::NumberRemainingCounter_3' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, ScrollingItemList) == 0x000688, "Member 'UWBP_SellItemsPanel_C::ScrollingItemList' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, ShopDescription) == 0x000690, "Member 'UWBP_SellItemsPanel_C::ShopDescription' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, SoldItemsBox) == 0x000698, "Member 'UWBP_SellItemsPanel_C::SoldItemsBox' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, TB_ListedItemsLabel) == 0x0006A0, "Member 'UWBP_SellItemsPanel_C::TB_ListedItemsLabel' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, TB_ListedItemsLabel_1) == 0x0006A8, "Member 'UWBP_SellItemsPanel_C::TB_ListedItemsLabel_1' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, TB_StorefrontItemsInfoLabel) == 0x0006B0, "Member 'UWBP_SellItemsPanel_C::TB_StorefrontItemsInfoLabel' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, TB_StorefrontTotalListingsLabel) == 0x0006B8, "Member 'UWBP_SellItemsPanel_C::TB_StorefrontTotalListingsLabel' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, TimeRemainingCounter) == 0x0006C0, "Member 'UWBP_SellItemsPanel_C::TimeRemainingCounter' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceActiveListingEntry) == 0x0006C8, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceActiveListingEntry' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceActiveListingEntry_1) == 0x0006D0, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceActiveListingEntry_1' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceActiveListingEntry_2) == 0x0006D8, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceActiveListingEntry_2' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceSoldItemEntry) == 0x0006E0, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceSoldItemEntry' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceSoldItemEntry_1) == 0x0006E8, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceSoldItemEntry_1' has a wrong offset!");
-static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceSoldItemEntry_2) == 0x0006F0, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceSoldItemEntry_2' has a wrong offset!");
+static_assert(sizeof(UWBP_SellItemsPanel_C) == 0x000728, "Wrong size on UWBP_SellItemsPanel_C");
+static_assert(offsetof(UWBP_SellItemsPanel_C, ActiveListingsCount_1) == 0x000678, "Member 'UWBP_SellItemsPanel_C::ActiveListingsCount_1' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, ClaimButton) == 0x000680, "Member 'UWBP_SellItemsPanel_C::ClaimButton' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, NumberListedCounter) == 0x000688, "Member 'UWBP_SellItemsPanel_C::NumberListedCounter' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, NumberListedCounter_1) == 0x000690, "Member 'UWBP_SellItemsPanel_C::NumberListedCounter_1' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, NumberRemainingCounter) == 0x000698, "Member 'UWBP_SellItemsPanel_C::NumberRemainingCounter' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, NumberRemainingCounter_1) == 0x0006A0, "Member 'UWBP_SellItemsPanel_C::NumberRemainingCounter_1' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, NumberRemainingCounter_2) == 0x0006A8, "Member 'UWBP_SellItemsPanel_C::NumberRemainingCounter_2' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, NumberRemainingCounter_3) == 0x0006B0, "Member 'UWBP_SellItemsPanel_C::NumberRemainingCounter_3' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, ScrollingItemList) == 0x0006B8, "Member 'UWBP_SellItemsPanel_C::ScrollingItemList' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, ShopDescription) == 0x0006C0, "Member 'UWBP_SellItemsPanel_C::ShopDescription' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, SoldItemsBox) == 0x0006C8, "Member 'UWBP_SellItemsPanel_C::SoldItemsBox' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, TB_ListedItemsLabel) == 0x0006D0, "Member 'UWBP_SellItemsPanel_C::TB_ListedItemsLabel' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, TB_ListedItemsLabel_1) == 0x0006D8, "Member 'UWBP_SellItemsPanel_C::TB_ListedItemsLabel_1' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, TB_StorefrontItemsInfoLabel) == 0x0006E0, "Member 'UWBP_SellItemsPanel_C::TB_StorefrontItemsInfoLabel' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, TB_StorefrontTotalListingsLabel) == 0x0006E8, "Member 'UWBP_SellItemsPanel_C::TB_StorefrontTotalListingsLabel' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, TimeRemainingCounter) == 0x0006F0, "Member 'UWBP_SellItemsPanel_C::TimeRemainingCounter' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceActiveListingEntry) == 0x0006F8, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceActiveListingEntry' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceActiveListingEntry_1) == 0x000700, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceActiveListingEntry_1' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceActiveListingEntry_2) == 0x000708, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceActiveListingEntry_2' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceSoldItemEntry) == 0x000710, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceSoldItemEntry' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceSoldItemEntry_1) == 0x000718, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceSoldItemEntry_1' has a wrong offset!");
+static_assert(offsetof(UWBP_SellItemsPanel_C, WBP_MarketplaceSoldItemEntry_2) == 0x000720, "Member 'UWBP_SellItemsPanel_C::WBP_MarketplaceSoldItemEntry_2' has a wrong offset!");
 
 }
 

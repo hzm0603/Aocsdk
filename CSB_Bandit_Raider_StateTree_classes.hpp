@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CSB_Bandit_Raider_StateTree.CSB_Bandit_Raider_StateTree_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ACSB_Bandit_Raider_StateTree_C : public ABandit_Raider2_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACSB_Bandit_Raider_StateTree_C) == 0x000010, "Wrong alignment on ACSB_Bandit_Raider_StateTree_C");
-static_assert(sizeof(ACSB_Bandit_Raider_StateTree_C) == 0x001DB0, "Wrong size on ACSB_Bandit_Raider_StateTree_C");
+static_assert(sizeof(ACSB_Bandit_Raider_StateTree_C) == 0x001D70, "Wrong size on ACSB_Bandit_Raider_StateTree_C");
 
 }
 

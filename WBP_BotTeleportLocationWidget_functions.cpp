@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function WBP_BotTeleportLocationWidget.WBP_BotTeleportLocationWidget_C.BndEvt__RemoveButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_BotTeleportLocationWidget.WBP_BotTeleportLocationWidget_C.SetData
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FBotTeleportLocation&      InData                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWBP_BotTeleportLocationWidget_C::BndEvt__RemoveButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UWBP_BotTeleportLocationWidget_C::SetData(const struct FBotTeleportLocation& InData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BotTeleportLocationWidget_C", "BndEvt__RemoveButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_BotTeleportLocationWidget_C", "SetData");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_BotTeleportLocationWidget_C_SetData Parms{};
+
+	Parms.InData = std::move(InData);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void UWBP_BotTeleportLocationWidget_C::ExecuteUbergraph_WBP_BotTeleportLocationW
 }
 
 
-// Function WBP_BotTeleportLocationWidget.WBP_BotTeleportLocationWidget_C.SetData
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FBotTeleportLocation&      InData                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// Function WBP_BotTeleportLocationWidget.WBP_BotTeleportLocationWidget_C.BndEvt__RemoveButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_BotTeleportLocationWidget_C::SetData(const struct FBotTeleportLocation& InData)
+void UWBP_BotTeleportLocationWidget_C::BndEvt__RemoveButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BotTeleportLocationWidget_C", "SetData");
+		Func = Class->GetFunction("WBP_BotTeleportLocationWidget_C", "BndEvt__RemoveButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
-	Params::WBP_BotTeleportLocationWidget_C_SetData Parms{};
-
-	Parms.InData = std::move(InData);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

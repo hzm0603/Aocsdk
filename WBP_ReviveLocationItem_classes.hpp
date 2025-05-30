@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ReviveLocationItem.WBP_ReviveLocationItem_C
-// 0x0000 (0x0370 - 0x0370)
+// 0x0000 (0x0390 - 0x0390)
 class UWBP_ReviveLocationItem_C final : public UReviveLocationItem
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ReviveLocationItem_C) == 0x000008, "Wrong alignment on UWBP_ReviveLocationItem_C");
-static_assert(sizeof(UWBP_ReviveLocationItem_C) == 0x000370, "Wrong size on UWBP_ReviveLocationItem_C");
+static_assert(sizeof(UWBP_ReviveLocationItem_C) == 0x000390, "Wrong size on UWBP_ReviveLocationItem_C");
 
 }
 

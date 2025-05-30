@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "ControlRigSpline_structs.hpp"
 #include "AnimationCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "ControlRig_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "RigVM_structs.hpp"
 #include "RigVM_classes.hpp"
 #include "PBIK_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ControlRigSpline_structs.hpp"
 
 
 namespace SDK
@@ -29,8 +29,8 @@ namespace SDK
 class UNPC_Hippo_Control_Rig_C final : public UControlRig
 {
 public:
-	double                                        Ground_Pitch;                                      // 0x0630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Ground_Roll;                                       // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ground_pitch;                                      // 0x0630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ground_roll;                                       // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Pelvis_Z;                                          // 0x0640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Pelvis_Z_Hit;                                      // 0x0648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Ball_L_Z;                                          // 0x0650(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -70,8 +70,8 @@ public:
 };
 static_assert(alignof(UNPC_Hippo_Control_Rig_C) == 0x000010, "Wrong alignment on UNPC_Hippo_Control_Rig_C");
 static_assert(sizeof(UNPC_Hippo_Control_Rig_C) == 0x0007D0, "Wrong size on UNPC_Hippo_Control_Rig_C");
-static_assert(offsetof(UNPC_Hippo_Control_Rig_C, Ground_Pitch) == 0x000630, "Member 'UNPC_Hippo_Control_Rig_C::Ground_Pitch' has a wrong offset!");
-static_assert(offsetof(UNPC_Hippo_Control_Rig_C, Ground_Roll) == 0x000638, "Member 'UNPC_Hippo_Control_Rig_C::Ground_Roll' has a wrong offset!");
+static_assert(offsetof(UNPC_Hippo_Control_Rig_C, ground_pitch) == 0x000630, "Member 'UNPC_Hippo_Control_Rig_C::ground_pitch' has a wrong offset!");
+static_assert(offsetof(UNPC_Hippo_Control_Rig_C, ground_roll) == 0x000638, "Member 'UNPC_Hippo_Control_Rig_C::ground_roll' has a wrong offset!");
 static_assert(offsetof(UNPC_Hippo_Control_Rig_C, Pelvis_Z) == 0x000640, "Member 'UNPC_Hippo_Control_Rig_C::Pelvis_Z' has a wrong offset!");
 static_assert(offsetof(UNPC_Hippo_Control_Rig_C, Pelvis_Z_Hit) == 0x000648, "Member 'UNPC_Hippo_Control_Rig_C::Pelvis_Z_Hit' has a wrong offset!");
 static_assert(offsetof(UNPC_Hippo_Control_Rig_C, Ball_L_Z) == 0x000650, "Member 'UNPC_Hippo_Control_Rig_C::Ball_L_Z' has a wrong offset!");

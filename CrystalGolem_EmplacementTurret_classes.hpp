@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CrystalGolem_EmplacementTurret.CrystalGolem_EmplacementTurret_C
-// 0x0000 (0x1D90 - 0x1D90)
+// 0x0000 (0x1D50 - 0x1D50)
 class ACrystalGolem_EmplacementTurret_C final : public ANPCPawn_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACrystalGolem_EmplacementTurret_C) == 0x000010, "Wrong alignment on ACrystalGolem_EmplacementTurret_C");
-static_assert(sizeof(ACrystalGolem_EmplacementTurret_C) == 0x001D90, "Wrong size on ACrystalGolem_EmplacementTurret_C");
+static_assert(sizeof(ACrystalGolem_EmplacementTurret_C) == 0x001D50, "Wrong size on ACrystalGolem_EmplacementTurret_C");
 
 }
 

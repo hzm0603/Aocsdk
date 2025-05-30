@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Cultist_Base.Cultist_Base_C
-// 0x0020 (0x1DD0 - 0x1DB0)
+// 0x0020 (0x1D90 - 0x1D70)
 class ACultist_Base_C : public ABandit_Mage_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Cultist_Base_C;                     // 0x1DA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FRotator                               OriginalRotation;                                  // 0x1DB0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Cultist_Base_C;                     // 0x1D68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FRotator                               OriginalRotation;                                  // 0x1D70(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_Cultist_Base(int32 EntryPoint);
@@ -41,9 +41,9 @@ public:
 	}
 };
 static_assert(alignof(ACultist_Base_C) == 0x000010, "Wrong alignment on ACultist_Base_C");
-static_assert(sizeof(ACultist_Base_C) == 0x001DD0, "Wrong size on ACultist_Base_C");
-static_assert(offsetof(ACultist_Base_C, UberGraphFrame_Cultist_Base_C) == 0x001DA8, "Member 'ACultist_Base_C::UberGraphFrame_Cultist_Base_C' has a wrong offset!");
-static_assert(offsetof(ACultist_Base_C, OriginalRotation) == 0x001DB0, "Member 'ACultist_Base_C::OriginalRotation' has a wrong offset!");
+static_assert(sizeof(ACultist_Base_C) == 0x001D90, "Wrong size on ACultist_Base_C");
+static_assert(offsetof(ACultist_Base_C, UberGraphFrame_Cultist_Base_C) == 0x001D68, "Member 'ACultist_Base_C::UberGraphFrame_Cultist_Base_C' has a wrong offset!");
+static_assert(offsetof(ACultist_Base_C, OriginalRotation) == 0x001D70, "Member 'ACultist_Base_C::OriginalRotation' has a wrong offset!");
 
 }
 

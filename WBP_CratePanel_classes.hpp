@@ -17,13 +17,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CratePanel.WBP_CratePanel_C
-// 0x0018 (0x0478 - 0x0460)
+// 0x0020 (0x04A8 - 0x0488)
 class UWBP_CratePanel_C final : public UCratePanel
 {
 public:
-	class UWBP_FiltersComponent_C*                FiltersComponent;                                  // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_Gradient_C*           ScrollingWindow;                                   // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextButton_C*                    SortButton;                                        // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TooltipHeader_C*                   CrateHeader;                                       // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_FiltersComponent_C*                FiltersComponent;                                  // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollingWindow;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextButton_C*                    SortButton;                                        // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,10 +37,11 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CratePanel_C) == 0x000008, "Wrong alignment on UWBP_CratePanel_C");
-static_assert(sizeof(UWBP_CratePanel_C) == 0x000478, "Wrong size on UWBP_CratePanel_C");
-static_assert(offsetof(UWBP_CratePanel_C, FiltersComponent) == 0x000460, "Member 'UWBP_CratePanel_C::FiltersComponent' has a wrong offset!");
-static_assert(offsetof(UWBP_CratePanel_C, ScrollingWindow) == 0x000468, "Member 'UWBP_CratePanel_C::ScrollingWindow' has a wrong offset!");
-static_assert(offsetof(UWBP_CratePanel_C, SortButton) == 0x000470, "Member 'UWBP_CratePanel_C::SortButton' has a wrong offset!");
+static_assert(sizeof(UWBP_CratePanel_C) == 0x0004A8, "Wrong size on UWBP_CratePanel_C");
+static_assert(offsetof(UWBP_CratePanel_C, CrateHeader) == 0x000488, "Member 'UWBP_CratePanel_C::CrateHeader' has a wrong offset!");
+static_assert(offsetof(UWBP_CratePanel_C, FiltersComponent) == 0x000490, "Member 'UWBP_CratePanel_C::FiltersComponent' has a wrong offset!");
+static_assert(offsetof(UWBP_CratePanel_C, ScrollingWindow) == 0x000498, "Member 'UWBP_CratePanel_C::ScrollingWindow' has a wrong offset!");
+static_assert(offsetof(UWBP_CratePanel_C, SortButton) == 0x0004A0, "Member 'UWBP_CratePanel_C::SortButton' has a wrong offset!");
 
 }
 

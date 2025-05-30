@@ -10,133 +10,134 @@
 
 #include "Basic.hpp"
 
-#include "GameSystemsPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PCG_structs.hpp"
+#include "S_RoadSetDressingData_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function IterateMeshesAlongSpline.IterateMeshesAlongSpline_C.Assign Length
-// 0x02D0 (0x02D0 - 0x0000)
+// 0x0300 (0x0300 - 0x0000)
 struct IterateMeshesAlongSpline_C_Assign_Length final
 {
 public:
-	struct FAoCSplineMeshEntry                    Entry;                                             // 0x0000(0x00D0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FRandomStream                          Stream;                                            // 0x00D0(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
-	double                                        Total_Length;                                      // 0x00D8(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Scaled_Mesh_Length;                                // 0x00E0(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x00E8(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Random_Padding;                                    // 0x00F0(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Random_Scale;                                      // 0x00F4(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRandomStream                          Local_Stream;                                      // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor)
-	bool                                          Temp_bool_Variable;                                // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector_X;                            // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_X;                          // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Origin;        // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Extents;       // 0x0158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            K2Node_DynamicCast_AsStatic_Mesh;                  // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17A[0x6];                                      // 0x017A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoxSphereBounds                       CallFunc_GetBounds_ReturnValue;                    // 0x0180(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakBoxSphereBounds_Origin;              // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakBoxSphereBounds_BoxExtent;           // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakBoxSphereBounds_SphereRadius;        // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue; // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector_X_1;                          // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y_1;                          // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z_1;                          // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_1; // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_SelectVector_ReturnValue_1;               // 0x0258(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESplineMeshAxis                               Temp_byte_Variable;                                // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_271[0x7];                                      // 0x0271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default;                             // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_3;           // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast; // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1; // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_1;        // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAoCSplineMeshEntry                    Entry;                                             // 0x0000(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FRandomStream                          Stream;                                            // 0x0100(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+	double                                        Total_Length;                                      // 0x0108(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Scaled_Mesh_Length;                                // 0x0110(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x0118(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Random_Padding;                                    // 0x0120(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Random_Scale;                                      // 0x0124(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRandomStream                          Local_Stream;                                      // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector_X;                            // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X;                          // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Origin;        // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Extents;       // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            K2Node_DynamicCast_AsStatic_Mesh;                  // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AA[0x6];                                      // 0x01AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoxSphereBounds                       CallFunc_GetBounds_ReturnValue;                    // 0x01B0(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakBoxSphereBounds_Origin;              // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakBoxSphereBounds_BoxExtent;           // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakBoxSphereBounds_SphereRadius;        // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue; // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector_X_1;                          // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y_1;                          // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z_1;                          // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_1; // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_SelectVector_ReturnValue_1;               // 0x0288(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESplineMeshAxis                               Temp_byte_Variable;                                // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A1[0x7];                                      // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default;                             // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_3;           // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast; // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1; // 0x02EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_1;        // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IterateMeshesAlongSpline_C_Assign_Length) == 0x000010, "Wrong alignment on IterateMeshesAlongSpline_C_Assign_Length");
-static_assert(sizeof(IterateMeshesAlongSpline_C_Assign_Length) == 0x0002D0, "Wrong size on IterateMeshesAlongSpline_C_Assign_Length");
+static_assert(sizeof(IterateMeshesAlongSpline_C_Assign_Length) == 0x000300, "Wrong size on IterateMeshesAlongSpline_C_Assign_Length");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Entry) == 0x000000, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Entry' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Stream) == 0x0000D0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Stream' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Total_Length) == 0x0000D8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Total_Length' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Scaled_Mesh_Length) == 0x0000E0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Scaled_Mesh_Length' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Scale) == 0x0000E8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Scale' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Random_Padding) == 0x0000F0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Random_Padding' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Random_Scale) == 0x0000F4, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Random_Scale' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Local_Stream) == 0x0000F8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Local_Stream' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Temp_bool_Variable) == 0x000100, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_X) == 0x000108, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_Y) == 0x000110, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_Z) == 0x000118, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector2D_X) == 0x000120, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector2D_Y) == 0x000128, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000130, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Abs_ReturnValue) == 0x000138, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_EditorGetBoundsFromUObject_Origin) == 0x000140, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_EditorGetBoundsFromUObject_Origin' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_EditorGetBoundsFromUObject_Extents) == 0x000158, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_EditorGetBoundsFromUObject_Extents' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, K2Node_DynamicCast_AsStatic_Mesh) == 0x000170, "Member 'IterateMeshesAlongSpline_C_Assign_Length::K2Node_DynamicCast_AsStatic_Mesh' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, K2Node_DynamicCast_bSuccess) == 0x000178, "Member 'IterateMeshesAlongSpline_C_Assign_Length::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_IsValid_ReturnValue) == 0x000179, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_GetBounds_ReturnValue) == 0x000180, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_GetBounds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakBoxSphereBounds_Origin) == 0x0001B8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakBoxSphereBounds_Origin' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakBoxSphereBounds_BoxExtent) == 0x0001D0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakBoxSphereBounds_BoxExtent' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakBoxSphereBounds_SphereRadius) == 0x0001E8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakBoxSphereBounds_SphereRadius' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_SelectVector_ReturnValue) == 0x0001F0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_RandomFloatInRangeFromStream_ReturnValue) == 0x000208, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_RandomFloatInRangeFromStream_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_X_1) == 0x000210, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_Y_1) == 0x000218, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_Z_1) == 0x000220, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_RandomFloatInRangeFromStream_ReturnValue_1) == 0x000228, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_RandomFloatInRangeFromStream_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000230, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000238, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000240, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_FMax_ReturnValue) == 0x000248, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000250, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_SelectVector_ReturnValue_1) == 0x000258, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_SelectVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Temp_byte_Variable) == 0x000270, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, K2Node_Select_Default) == 0x000278, "Member 'IterateMeshesAlongSpline_C_Assign_Length::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000280, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x000288, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000290, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000298, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x0002A0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0002A8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_SelectFloat_ReturnValue) == 0x0002B0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast) == 0x0002B8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1) == 0x0002BC, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0002C0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_B_ImplicitCast_1) == 0x0002C8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Stream) == 0x000100, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Stream' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Total_Length) == 0x000108, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Total_Length' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Scaled_Mesh_Length) == 0x000110, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Scaled_Mesh_Length' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Scale) == 0x000118, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Scale' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Random_Padding) == 0x000120, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Random_Padding' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Random_Scale) == 0x000124, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Random_Scale' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Local_Stream) == 0x000128, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Local_Stream' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Temp_bool_Variable) == 0x000130, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_X) == 0x000138, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_Y) == 0x000140, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_Z) == 0x000148, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector2D_X) == 0x000150, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector2D_Y) == 0x000158, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000160, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Abs_ReturnValue) == 0x000168, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_EditorGetBoundsFromUObject_Origin) == 0x000170, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_EditorGetBoundsFromUObject_Origin' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_EditorGetBoundsFromUObject_Extents) == 0x000188, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_EditorGetBoundsFromUObject_Extents' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, K2Node_DynamicCast_AsStatic_Mesh) == 0x0001A0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::K2Node_DynamicCast_AsStatic_Mesh' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, K2Node_DynamicCast_bSuccess) == 0x0001A8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_IsValid_ReturnValue) == 0x0001A9, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_GetBounds_ReturnValue) == 0x0001B0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_GetBounds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakBoxSphereBounds_Origin) == 0x0001E8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakBoxSphereBounds_Origin' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakBoxSphereBounds_BoxExtent) == 0x000200, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakBoxSphereBounds_BoxExtent' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakBoxSphereBounds_SphereRadius) == 0x000218, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakBoxSphereBounds_SphereRadius' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_SelectVector_ReturnValue) == 0x000220, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_RandomFloatInRangeFromStream_ReturnValue) == 0x000238, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_RandomFloatInRangeFromStream_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_X_1) == 0x000240, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_Y_1) == 0x000248, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_BreakVector_Z_1) == 0x000250, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_RandomFloatInRangeFromStream_ReturnValue_1) == 0x000258, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_RandomFloatInRangeFromStream_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000260, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000268, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000270, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_FMax_ReturnValue) == 0x000278, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000280, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_SelectVector_ReturnValue_1) == 0x000288, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_SelectVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, Temp_byte_Variable) == 0x0002A0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, K2Node_Select_Default) == 0x0002A8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x0002B0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x0002B8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0002C0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x0002C8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x0002D0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0002D8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_SelectFloat_ReturnValue) == 0x0002E0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast) == 0x0002E8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1) == 0x0002EC, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0002F0, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Assign_Length, CallFunc_Add_DoubleDouble_B_ImplicitCast_1) == 0x0002F8, "Member 'IterateMeshesAlongSpline_C_Assign_Length::CallFunc_Add_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
 
 // Function IterateMeshesAlongSpline.IterateMeshesAlongSpline_C.Choose Next Mesh Entry
-// 0x0A10 (0x0A10 - 0x0000)
+// 0x0AD0 (0x0AD0 - 0x0000)
 struct IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry final
 {
 public:
@@ -145,45 +146,45 @@ public:
 	int32                                         Consecutive_Index;                                 // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Mesh_Found;                                        // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_25[0xB];                                       // 0x0025(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    Point_Data;                                        // 0x0030(0x02F0)(Parm, OutParm)
-	struct FAoCSplineMeshEntry                    Entry_to_Check;                                    // 0x0320(0x00D0)(Edit, BlueprintVisible)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F1[0x3];                                      // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x03F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x03F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x03FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_401[0xF];                                      // 0x0401(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    CallFunc_Array_Get_Item;                           // 0x0410(0x02F0)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0700(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0704(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_SoftObjectReference_ReturnValue; // 0x0705(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_706[0xA];                                      // 0x0706(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    CallFunc_Array_RandomFromStream_OutItem;           // 0x0710(0x02F0)()
-	int32                                         CallFunc_Array_RandomFromStream_OutIndex;          // 0x0A00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIterationPointData                    Point_Data;                                        // 0x0030(0x0320)(Parm, OutParm)
+	struct FAoCSplineMeshEntry                    Entry_to_Check;                                    // 0x0350(0x0100)(Edit, BlueprintVisible)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0450(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_451[0x3];                                      // 0x0451(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0454(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0458(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x045C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0460(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_461[0xF];                                      // 0x0461(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    CallFunc_Array_Get_Item;                           // 0x0470(0x0320)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0790(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0794(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_SoftObjectReference_ReturnValue; // 0x0795(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_796[0xA];                                      // 0x0796(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    CallFunc_Array_RandomFromStream_OutItem;           // 0x07A0(0x0320)()
+	int32                                         CallFunc_Array_RandomFromStream_OutIndex;          // 0x0AC0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry) == 0x000010, "Wrong alignment on IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry");
-static_assert(sizeof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry) == 0x000A10, "Wrong size on IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry");
+static_assert(sizeof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry) == 0x000AD0, "Wrong size on IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Point_Data_Array) == 0x000000, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Point_Data_Array' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Mesh_Entry_List) == 0x000010, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Mesh_Entry_List' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Consecutive_Index) == 0x000020, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Consecutive_Index' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Mesh_Found) == 0x000024, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Mesh_Found' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Point_Data) == 0x000030, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Point_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Entry_to_Check) == 0x000320, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Entry_to_Check' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x0003F0, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Temp_int_Loop_Counter_Variable) == 0x0003F4, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Add_IntInt_ReturnValue) == 0x0003F8, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Temp_int_Array_Index_Variable) == 0x0003FC, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000400, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_Get_Item) == 0x000410, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_Length_ReturnValue) == 0x000700, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Less_IntInt_ReturnValue) == 0x000704, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_EqualEqual_SoftObjectReference_ReturnValue) == 0x000705, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_EqualEqual_SoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_RandomFromStream_OutItem) == 0x000710, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_RandomFromStream_OutItem' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_RandomFromStream_OutIndex) == 0x000A00, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_RandomFromStream_OutIndex' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Entry_to_Check) == 0x000350, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Entry_to_Check' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000450, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Temp_int_Loop_Counter_Variable) == 0x000454, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Add_IntInt_ReturnValue) == 0x000458, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, Temp_int_Array_Index_Variable) == 0x00045C, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000460, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_Get_Item) == 0x000470, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_Length_ReturnValue) == 0x000790, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Less_IntInt_ReturnValue) == 0x000794, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_EqualEqual_SoftObjectReference_ReturnValue) == 0x000795, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_EqualEqual_SoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_RandomFromStream_OutItem) == 0x0007A0, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_RandomFromStream_OutItem' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry, CallFunc_Array_RandomFromStream_OutIndex) == 0x000AC0, "Member 'IterateMeshesAlongSpline_C_Choose_Next_Mesh_Entry::CallFunc_Array_RandomFromStream_OutIndex' has a wrong offset!");
 
 // Function IterateMeshesAlongSpline.IterateMeshesAlongSpline_C.ExecuteWithContext
-// 0x26B0 (0x26B0 - 0x0000)
+// 0x24C0 (0x24C0 - 0x0000)
 struct IterateMeshesAlongSpline_C_ExecuteWithContext final
 {
 public:
@@ -219,363 +220,372 @@ public:
 	struct FVector                                Next_Point_Location;                               // 0x0408(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Current_Point_Location;                            // 0x0420(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Temp_New_Pos;                                      // 0x0438(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FIterationPointData                    Override_End_Iteration_Point;                      // 0x0450(0x02F0)(Edit, BlueprintVisible)
-	struct FIterationPointData                    Current_Iteration_Data;                            // 0x0740(0x02F0)(Edit, BlueprintVisible)
-	struct FIterationPointData                    Active_Iteration_Data;                             // 0x0A30(0x02F0)(Edit, BlueprintVisible)
-	struct FAoCSplineMeshEntry                    Current_Entry;                                     // 0x0D20(0x00D0)(Edit, BlueprintVisible)
-	struct FPCGPoint                              Active_Point;                                      // 0x0DF0(0x00D0)(Edit, BlueprintVisible, NoDestructor)
-	TArray<struct FAoCSplineMeshEntry>            Mesh_Entry_List;                                   // 0x0EC0(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FPCGPoint>                      All_Points;                                        // 0x0ED0(0x0010)(Edit, BlueprintVisible)
-	bool                                          Temp_bool_Should_Break_Variable;                   // 0x0EE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0EE1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EE2[0x2];                                      // 0x0EE2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Current_Loop_Index_Variable;              // 0x0EE4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0EE8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0EEC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0EED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EEE[0x2];                                      // 0x0EEE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPCGMetadata*                           CallFunc_MutableMetadata_ReturnValue;              // 0x0EF0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0EF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue; // 0x0EFC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0F00(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F01[0x3];                                      // 0x0F01(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0F04(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0F08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F0C[0x4];                                      // 0x0F0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0F10(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_SoftObjectReferenceToString_ReturnValue; // 0x0F18(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Origin;        // 0x0F28(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Extents;       // 0x0F40(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            K2Node_DynamicCast_AsStatic_Mesh;                  // 0x0F58(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0F60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0F61(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F62[0x6];                                      // 0x0F62(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoxSphereBounds                       CallFunc_GetBounds_ReturnValue;                    // 0x0F68(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakBoxSphereBounds_Origin;              // 0x0FA0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakBoxSphereBounds_BoxExtent;           // 0x0FB8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakBoxSphereBounds_SphereRadius;        // 0x0FD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FD4[0x4];                                      // 0x0FD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector2D_X;                          // 0x0FD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x0FE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0FE8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_1; // 0x1000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1004[0x4];                                     // 0x1004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x1008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x1020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FVector>                        K2Node_MakeArray_Array;                            // 0x1028(0x0010)(ConstParm, ReferenceParm)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x1038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetVectorArrayAverage_ReturnValue;        // 0x1050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x1068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x106C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x1070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x1074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1075[0x3];                                     // 0x1075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetLocationAtDistanceAlongSpline_ReturnValue; // 0x1078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x1090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1091[0x3];                                     // 0x1091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x1094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x1098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x10A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x10A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x10B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x10B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x10C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x10D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x10E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10E1[0x3];                                     // 0x10E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x10E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x10E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10EC[0x4];                                     // 0x10EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAoCSplineMeshEntry                    CallFunc_Array_Get_Item;                           // 0x10F0(0x00D0)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x11C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x11C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11C5[0x3];                                     // 0x11C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_PCGSplineMesh_C>  UniqueObjectNameForCooking_AsBPI_PCGSpline_Mesh;   // 0x11C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UniqueObjectNameForCooking_bSuccess;               // 0x11D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11D9[0x3];                                     // 0x11D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x11DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FAoCSplineMeshEntry                    CallFunc_Get_Mesh_List_First_Override_Beginning_Mesh; // 0x11E0(0x00D0)()
-	struct FAoCSplineMeshEntry                    CallFunc_Get_Mesh_List_First_Override_End_Mesh;    // 0x12B0(0x00D0)()
-	TArray<struct FAoCSplineMeshEntry>            CallFunc_Get_Mesh_List_First_Fence_Objects;        // 0x1380(0x0010)(ReferenceParm)
-	TArray<struct FAoCSplineDebrisEntry>          CallFunc_Get_Mesh_List_First_Debris_Objects;       // 0x1390(0x0010)(ReferenceParm)
-	struct FAoCSplineMeshEntry                    CallFunc_Get_Mesh_List_Second_Override_Beginning_Mesh; // 0x13A0(0x00D0)()
-	struct FAoCSplineMeshEntry                    CallFunc_Get_Mesh_List_Second_Override_End_Mesh;   // 0x1470(0x00D0)()
-	TArray<struct FAoCSplineMeshEntry>            CallFunc_Get_Mesh_List_Second_Fence_Objects;       // 0x1540(0x0010)(ReferenceParm)
-	TArray<struct FAoCSplineDebrisEntry>          CallFunc_Get_Mesh_List_Second_Debris_Objects;      // 0x1550(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x1560(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1561[0x3];                                     // 0x1561(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x1564(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x1568(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x156C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_156D[0x3];                                     // 0x156D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x1570(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x1574(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x1578(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_157C[0x4];                                     // 0x157C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x1580(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_2;        // 0x1588(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x15A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15A1[0x3];                                     // 0x15A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue; // 0x15A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_1; // 0x15A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15AC[0x4];                                     // 0x15AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x15B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x15B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x15C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue; // 0x15C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x15E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotFromZ_ReturnValue;                 // 0x15F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_MakeRotFromY_ReturnValue;                 // 0x1610(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue;                 // 0x1628(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x1640(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x1644(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x1648(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x164C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x1650(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x1654(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x1658(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x1670(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x1688(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_168C[0x4];                                     // 0x168C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x1690(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESplineMeshAxis                               Temp_byte_Variable;                                // 0x1698(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1699[0x7];                                     // 0x1699(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x16A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x16A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_2;            // 0x16AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x16B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x16B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x16C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x16C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x16D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x16D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_3;            // 0x16DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_1;         // 0x16E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Origin_1;      // 0x16E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Extents_1;     // 0x1700(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            K2Node_DynamicCast_AsStatic_Mesh_1;                // 0x1718(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x1720(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x1721(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1722[0x6];                                     // 0x1722(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoxSphereBounds                       CallFunc_GetBounds_ReturnValue_1;                  // 0x1728(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakBoxSphereBounds_Origin_1;            // 0x1760(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakBoxSphereBounds_BoxExtent_1;         // 0x1778(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakBoxSphereBounds_SphereRadius_1;      // 0x1790(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1794[0x4];                                     // 0x1794(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x1798(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_SelectVector_ReturnValue_1;               // 0x17B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X_1;                          // 0x17C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y_1;                          // 0x17D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z_1;                          // 0x17D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Assign_Length_Total_Length;               // 0x17E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Assign_Length_Scaled_Mesh_Length;         // 0x17E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Assign_Length_Scale;                      // 0x17F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Assign_Length_Random_Padding;             // 0x17F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Assign_Length_Random_Scale;               // 0x17FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X_2;                          // 0x1800(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y_2;                          // 0x1808(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z_2;                          // 0x1810(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_3;           // 0x1818(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x1820(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FFloor_ReturnValue_1;                     // 0x1828(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_4;            // 0x182C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x1830(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1848[0x8];                                     // 0x1848(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x1850(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x18B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x18B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18B2[0x6];                                     // 0x18B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetLocationAtSplinePoint_ReturnValue;     // 0x18B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetNumberOfSplinePoints_ReturnValue;      // 0x18D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_5;            // 0x18D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetLocationAtSplinePoint_ReturnValue_1;   // 0x18D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Find_Mesh_To_Fit_Area_Mesh_Found_;        // 0x18F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18F1[0xF];                                     // 0x18F1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    CallFunc_Find_Mesh_To_Fit_Area_Iteration_Point_Data; // 0x1900(0x02F0)()
-	bool                                          CallFunc_Find_Mesh_To_Fit_Area_First_Placed;       // 0x1BF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Find_Mesh_To_Fit_Area_Last_Placed;        // 0x1BF1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BF2[0x2];                                     // 0x1BF2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x1BF4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESplineMeshAxis                               Temp_byte_Variable_1;                              // 0x1BF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BF9[0x7];                                     // 0x1BF9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default;                             // 0x1C00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x1C08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C0C[0x4];                                     // 0x1C0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x1C10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x1C18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C19[0x7];                                     // 0x1C19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_3;        // 0x1C20(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x1C38(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x1C50(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x1C68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C6C[0x4];                                     // 0x1C6C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x1C70(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_Select_Default_1;                           // 0x1C88(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x1CA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CA1[0x7];                                     // 0x1CA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x1CA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x1CC0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x1CD8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x1CF0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x1D08(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x1D20(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x1D38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x1D40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RandomBoolFromStream_ReturnValue;         // 0x1D48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x1D49(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RandomBoolFromStream_ReturnValue_1;       // 0x1D4A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RandomBoolFromStream_ReturnValue_2;       // 0x1D4B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll_2;                      // 0x1D4C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch_2;                     // 0x1D50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw_2;                       // 0x1D54(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll_3;                      // 0x1D58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch_3;                     // 0x1D5C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw_3;                       // 0x1D60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D64[0x4];                                     // 0x1D64(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue_1;                // 0x1D68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_2;       // 0x1D70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D71[0x3];                                     // 0x1D71(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_2; // 0x1D74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_ReturnValue_2;                // 0x1D78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_ReturnValue_3;                // 0x1D80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue_2;                // 0x1D88(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_3; // 0x1DA0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIterationPointData                    Override_End_Iteration_Point;                      // 0x0450(0x0320)(Edit, BlueprintVisible)
+	struct FIterationPointData                    Current_Iteration_Data;                            // 0x0770(0x0320)(Edit, BlueprintVisible)
+	struct FIterationPointData                    Active_Iteration_Data;                             // 0x0A90(0x0320)(Edit, BlueprintVisible)
+	struct FAoCSplineMeshEntry                    Current_Entry;                                     // 0x0DB0(0x0100)(Edit, BlueprintVisible)
+	struct FPCGPoint                              Active_Point;                                      // 0x0EB0(0x00D0)(Edit, BlueprintVisible, NoDestructor)
+	TArray<struct FAoCSplineMeshEntry>            Mesh_Entry_List;                                   // 0x0F80(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FPCGPoint>                      All_Points;                                        // 0x0F90(0x0010)(Edit, BlueprintVisible)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0FA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FA1[0x7];                                      // 0x0FA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FS_RoadSetDressingData>         CallFunc_Retrieve_Set_Dressing_Data_Set_Dressing_Data; // 0x0FA8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Retrieve_Set_Dressing_Data_Is_Intersection; // 0x0FB8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0FB9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0FBA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0FBB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FBC[0x4];                                      // 0x0FBC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0FC0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FVector>                        K2Node_MakeArray_Array;                            // 0x0FD8(0x0010)(ConstParm, ReferenceParm)
+	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0FE8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetVectorArrayAverage_ReturnValue;        // 0x1000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x1018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Should_Break_Variable;                   // 0x101C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x101D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101E[0x2];                                     // 0x101E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x1020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1024[0x4];                                     // 0x1024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPCGMetadata*                           CallFunc_MutableMetadata_ReturnValue;              // 0x1028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue; // 0x1030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Current_Loop_Index_Variable;              // 0x1034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x1038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1039[0x3];                                     // 0x1039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x103C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x1040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x1041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x1042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1043[0x5];                                     // 0x1043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAoCSplineMeshEntry>            K2Node_Select_Default;                             // 0x1048(0x0010)(ReferenceParm)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x1058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_SoftObjectReferenceToString_ReturnValue; // 0x1060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Origin;        // 0x1070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Extents;       // 0x1088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            K2Node_DynamicCast_AsStatic_Mesh;                  // 0x10A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x10A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x10A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10AA[0x6];                                     // 0x10AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoxSphereBounds                       CallFunc_GetBounds_ReturnValue;                    // 0x10B0(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakBoxSphereBounds_Origin;              // 0x10E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakBoxSphereBounds_BoxExtent;           // 0x1100(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakBoxSphereBounds_SphereRadius;        // 0x1118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x111C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X;                          // 0x1120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x1128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_1; // 0x1130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1134[0x4];                                     // 0x1134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x1138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x1140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x1158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x115C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x1160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x1164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1165[0x3];                                     // 0x1165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetLocationAtDistanceAlongSpline_ReturnValue; // 0x1168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x1180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1184[0x4];                                     // 0x1184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x1188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x1190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x1198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x11A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x11A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x11B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x11B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x11D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11D1[0x3];                                     // 0x11D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x11D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x11D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11DC[0x4];                                     // 0x11DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCSplineMeshEntry                    CallFunc_Array_Get_Item;                           // 0x11E0(0x0100)()
+	int32                                         Temp_int_Variable_1;                               // 0x12E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x12E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x12E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12E6[0x2];                                     // 0x12E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x12E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x12EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x12F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12F1[0x3];                                     // 0x12F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x12F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x12F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x12FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x1300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x1304(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1305[0x3];                                     // 0x1305(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x1308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_2;        // 0x1310(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue; // 0x1328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_1; // 0x132C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x1330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x1338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x1340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x1348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1349[0x7];                                     // 0x1349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue; // 0x1350(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x1368(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotFromZ_ReturnValue;                 // 0x1380(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_MakeRotFromY_ReturnValue;                 // 0x1398(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue;                 // 0x13B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x13C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x13CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x13D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x13D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x13D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x13DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x13E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x13F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x1410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x1418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x1420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_2;            // 0x1424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x1428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x1430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x1438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x1440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x1448(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_144C[0x4];                                     // 0x144C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x1450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESplineMeshAxis                               Temp_byte_Variable;                                // 0x1458(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1459[0x3];                                     // 0x1459(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x145C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_3;            // 0x1460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1464[0x4];                                     // 0x1464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_1;         // 0x1468(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x1470(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1471[0x7];                                     // 0x1471(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Origin_1;      // 0x1478(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Extents_1;     // 0x1490(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            K2Node_DynamicCast_AsStatic_Mesh_1;                // 0x14A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x14B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x14B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14B2[0x6];                                     // 0x14B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoxSphereBounds                       CallFunc_GetBounds_ReturnValue_1;                  // 0x14B8(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakBoxSphereBounds_Origin_1;            // 0x14F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakBoxSphereBounds_BoxExtent_1;         // 0x1508(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakBoxSphereBounds_SphereRadius_1;      // 0x1520(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1524[0x4];                                     // 0x1524(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x1528(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_SelectVector_ReturnValue_1;               // 0x1540(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X_1;                          // 0x1558(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y_1;                          // 0x1560(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z_1;                          // 0x1568(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Assign_Length_Total_Length;               // 0x1570(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Assign_Length_Scaled_Mesh_Length;         // 0x1578(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Assign_Length_Scale;                      // 0x1580(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Assign_Length_Random_Padding;             // 0x1588(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Assign_Length_Random_Scale;               // 0x158C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X_2;                          // 0x1590(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y_2;                          // 0x1598(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z_2;                          // 0x15A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_3;           // 0x15A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x15B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FFloor_ReturnValue_1;                     // 0x15B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_4;            // 0x15BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x15C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15D8[0x8];                                     // 0x15D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x15E0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x1640(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1641[0x7];                                     // 0x1641(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetLocationAtSplinePoint_ReturnValue;     // 0x1648(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumberOfSplinePoints_ReturnValue;      // 0x1660(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_5;            // 0x1664(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetLocationAtSplinePoint_ReturnValue_1;   // 0x1668(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Find_Mesh_To_Fit_Area_Mesh_Found_;        // 0x1680(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1681[0xF];                                     // 0x1681(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    CallFunc_Find_Mesh_To_Fit_Area_Iteration_Point_Data; // 0x1690(0x0320)()
+	bool                                          CallFunc_Find_Mesh_To_Fit_Area_First_Placed;       // 0x19B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Find_Mesh_To_Fit_Area_Last_Placed;        // 0x19B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19B2[0x2];                                     // 0x19B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x19B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_2;       // 0x19B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19B9[0x3];                                     // 0x19B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x19BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x19C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x19C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19C5[0x3];                                     // 0x19C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x19C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x19E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x19F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x1A10(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x1A28(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x1A40(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x1A58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESplineMeshAxis                               Temp_byte_Variable_1;                              // 0x1A60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A61[0x7];                                     // 0x1A61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x1A68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x1A70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A71[0x7];                                     // 0x1A71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default_1;                           // 0x1A78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x1A80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x1A88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A89[0x7];                                     // 0x1A89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_3;        // 0x1A90(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x1AA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x1AC0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RandomBoolFromStream_ReturnValue;         // 0x1AD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AD9[0x7];                                     // 0x1AD9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x1AE0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_Select_Default_2;                           // 0x1AF8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RandomBoolFromStream_ReturnValue_1;       // 0x1B10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RandomBoolFromStream_ReturnValue_2;       // 0x1B11(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B12[0x2];                                     // 0x1B12(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakRotator_Roll_2;                      // 0x1B14(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_2;                     // 0x1B18(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_2;                       // 0x1B1C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Roll_3;                      // 0x1B20(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_3;                     // 0x1B24(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_3;                       // 0x1B28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B2C[0x4];                                     // 0x1B2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue_1;                // 0x1B30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_2; // 0x1B38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_3; // 0x1B3C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_3;       // 0x1B40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B41[0x7];                                     // 0x1B41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue_2;                // 0x1B48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x1B50(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B51[0x7];                                     // 0x1B51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue_2;                // 0x1B58(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	double                                        CallFunc_SelectFloat_ReturnValue_3;                // 0x1B70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_4; // 0x1B78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B7C[0x4];                                     // 0x1B7C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue_4;                // 0x1B80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_ReturnValue_5;                // 0x1B88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_5; // 0x1B90(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B94[0x4];                                     // 0x1B94(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue_6;                // 0x1B98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue_3;                // 0x1BA0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_2; // 0x1BB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BBC[0x4];                                     // 0x1BBC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               K2Node_Select_Default_3;                           // 0x1BC0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue_1; // 0x1BD8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x1BF0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue; // 0x1C08(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Cross_VectorVector_ReturnValue;           // 0x1C20(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetRightVectorAtDistanceAlongSpline_ReturnValue; // 0x1C38(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Normal_ReturnValue_1;                     // 0x1C50(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Cross_VectorVector_ReturnValue_1;         // 0x1C68(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Normal_ReturnValue_2;                     // 0x1C80(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_2;      // 0x1C98(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector4_X;                           // 0x1CB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector4_Y;                           // 0x1CB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector4_Z;                           // 0x1CC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector4_W;                           // 0x1CC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x1CD0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x1CE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_7;      // 0x1CF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_6; // 0x1CF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_7; // 0x1CFC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_4;           // 0x1D00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_5;           // 0x1D08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_4;        // 0x1D10(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_5;        // 0x1D28(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_3;      // 0x1D40(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_4;      // 0x1D58(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_5;      // 0x1D70(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x1D88(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x1DA0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1DA4[0x4];                                     // 0x1DA4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue_4;                // 0x1DA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_ReturnValue_5;                // 0x1DB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_4; // 0x1DB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DBC[0x4];                                     // 0x1DBC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue_6;                // 0x1DC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue_3;                // 0x1DC8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_2; // 0x1DE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DE4[0x4];                                     // 0x1DE4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               K2Node_Select_Default_2;                           // 0x1DE8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue_1; // 0x1E00(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x1E18(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue; // 0x1E30(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Cross_VectorVector_ReturnValue;           // 0x1E48(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetRightVectorAtDistanceAlongSpline_ReturnValue; // 0x1E60(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Normal_ReturnValue_1;                     // 0x1E78(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Cross_VectorVector_ReturnValue_1;         // 0x1E90(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Normal_ReturnValue_2;                     // 0x1EA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_2;      // 0x1EC0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector4_X;                           // 0x1ED8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector4_Y;                           // 0x1EE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector4_Z;                           // 0x1EE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector4_W;                           // 0x1EF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x1EF8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x1F10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_7;      // 0x1F18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_5; // 0x1F20(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_6; // 0x1F24(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_4;           // 0x1F28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_5;           // 0x1F30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_4;        // 0x1F38(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_5;        // 0x1F50(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_3;      // 0x1F68(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_4;      // 0x1F80(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_5;      // 0x1F98(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x1FB0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class USplineComponent*>               CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x1FC8(0x0010)(ReferenceParm, ContainsInstancedReference)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_3;           // 0x1FD8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USplineComponent*                       CallFunc_Array_Get_Item_1;                         // 0x1FF0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_4;           // 0x1FF8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x2010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_6;            // 0x2014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_SelectRotator_ReturnValue;                // 0x2018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_SelectRotator_ReturnValue_1;              // 0x2030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               K2Node_Select_Default_3;                           // 0x2048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FIterationPointData                    CallFunc_Array_Get_Item_2;                         // 0x2060(0x02F0)()
-	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x2350(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x2354(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x2355(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2356[0x2];                                     // 0x2356(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_SelectVector_ReturnValue_2;               // 0x2358(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x2370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Percent_IntInt_ReturnValue_1;             // 0x2374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x2378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2379[0x7];                                     // 0x2379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPCGMetadata*                           CallFunc_MutableMetadata_ReturnValue_1;            // 0x2380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x2388(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_238C[0x4];                                     // 0x238C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UPCGPointData*                    CallFunc_ToPointDataWithContext_ReturnValue;       // 0x2390(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_1; // 0x2398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2399[0x7];                                     // 0x2399(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPCGPoint>                      CallFunc_GetPoints_ReturnValue;                    // 0x23A0(0x0010)(ConstParm, ReferenceParm)
-	bool                                          Temp_bool_Variable_3;                              // 0x23B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23B1[0x7];                                     // 0x23B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_SelectVector_ReturnValue_3;               // 0x23B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x23D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23D4[0x4];                                     // 0x23D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_SelectVector_ReturnValue_4;               // 0x23D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x23F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23F1[0x7];                                     // 0x23F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_5;           // 0x23F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_2;      // 0x2410(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x2428(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_7;                 // 0x242C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x2430(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x2431(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2432[0x6];                                     // 0x2432(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPCGComponent*                          CallFunc_GetComponent_ReturnValue;                 // 0x2438(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x2440(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_2; // 0x2448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2449[0x7];                                     // 0x2449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UPCGPointData*                    CallFunc_ToPointDataWithContext_ReturnValue_1;     // 0x2450(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPCGPointData*                          CallFunc_PointLoop_OutData;                        // 0x2458(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPCGTaggedData                         K2Node_MakeStruct_PCGTaggedData;                   // 0x2460(0x0068)()
-	TArray<struct FPCGTaggedData>                 CallFunc_GetInputs_ReturnValue;                    // 0x24C8(0x0010)(ReferenceParm)
-	TArray<struct FPCGTaggedData>                 K2Node_MakeArray_Array_1;                          // 0x24D8(0x0010)(ReferenceParm)
-	struct FPCGDataCollection                     K2Node_MakeStruct_PCGDataCollection;               // 0x24E8(0x0020)()
-	class UPCGSpatialData*                        K2Node_DynamicCast_AsPCGSpatial_Data;              // 0x2508(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x2510(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x2511(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2512[0x6];                                     // 0x2512(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGTaggedData                         K2Node_MakeStruct_PCGTaggedData_1;                 // 0x2518(0x0068)()
-	TArray<struct FPCGTaggedData>                 K2Node_MakeArray_Array_2;                          // 0x2580(0x0010)(ReferenceParm)
-	struct FPCGDataCollection                     K2Node_MakeStruct_PCGDataCollection_1;             // 0x2590(0x0020)()
-	double                                        CallFunc_Greater_DoubleDouble_B_ImplicitCast;      // 0x25B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast; // 0x25B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast; // 0x25BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x25C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x25C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x25D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x25D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetTangentAtDistanceAlongSpline_Distance_ImplicitCast; // 0x25E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25E4[0x4];                                     // 0x25E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x25E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x25F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x25F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_EntryWidth_ImplicitCast;  // 0x2600(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_EntryScale_ImplicitCast;  // 0x2604(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeVector_X_ImplicitCast;                // 0x2608(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeVector_Y_ImplicitCast;                // 0x2610(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeVector_Z_ImplicitCast;                // 0x2618(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x2620(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_B_ImplicitCast;               // 0x2628(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_B_ImplicitCast_1;             // 0x2630(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_B_ImplicitCast_2;             // 0x2638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_A_ImplicitCast;               // 0x2640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_A_ImplicitCast_1;             // 0x2648(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_A_ImplicitCast_2;             // 0x2650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_B_ImplicitCast_3;             // 0x2658(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x2660(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast_1;           // 0x2664(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_B_ImplicitCast_4;             // 0x2668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x2670(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2674[0x4];                                     // 0x2674(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_B_ImplicitCast_5;             // 0x2678(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x2680(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1; // 0x2684(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_2; // 0x2688(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_1; // 0x268C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_2; // 0x2690(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2694[0x4];                                     // 0x2694(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_1;        // 0x2698(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_2;        // 0x26A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_3;           // 0x1DA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_6;            // 0x1DC0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1DC4[0x4];                                     // 0x1DC4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_4;           // 0x1DC8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_SelectRotator_ReturnValue;                // 0x1DE0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_SelectRotator_ReturnValue_1;              // 0x1DF8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               K2Node_Select_Default_4;                           // 0x1E10(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1E28[0x8];                                     // 0x1E28(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    CallFunc_Array_Get_Item_1;                         // 0x1E30(0x0320)()
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x2150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x2154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x2155(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2156[0x2];                                     // 0x2156(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class USplineComponent*>               CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x2158(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class USplineComponent*                       CallFunc_Array_Get_Item_2;                         // 0x2168(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Percent_IntInt_ReturnValue_1;             // 0x2170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x2174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x2175(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2176[0x2];                                     // 0x2176(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x2178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_217C[0x4];                                     // 0x217C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_SelectVector_ReturnValue_2;               // 0x2180(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x2198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219C[0x4];                                     // 0x219C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPCGMetadata*                           CallFunc_MutableMetadata_ReturnValue_1;            // 0x21A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_1; // 0x21A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x21A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21AA[0x6];                                     // 0x21AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UPCGPointData*                    CallFunc_ToPointDataWithContext_ReturnValue;       // 0x21B0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_SelectVector_ReturnValue_3;               // 0x21B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FPCGPoint>                      CallFunc_GetPoints_ReturnValue;                    // 0x21D0(0x0010)(ConstParm, ReferenceParm)
+	struct FVector                                CallFunc_SelectVector_ReturnValue_4;               // 0x21E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_5;           // 0x21F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_2;      // 0x2210(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x2228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x222C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x2230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_3;         // 0x2231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2232[0x2];                                     // 0x2232(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_7;                 // 0x2234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_4;         // 0x2238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2239[0x7];                                     // 0x2239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPCGComponent*                          CallFunc_GetComponent_ReturnValue;                 // 0x2240(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x2248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_2; // 0x2250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2251[0x7];                                     // 0x2251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UPCGPointData*                    CallFunc_ToPointDataWithContext_ReturnValue_1;     // 0x2258(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPCGPointData*                          CallFunc_PointLoop_OutData;                        // 0x2260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FPCGTaggedData>                 CallFunc_GetInputs_ReturnValue;                    // 0x2268(0x0010)(ReferenceParm)
+	struct FPCGTaggedData                         K2Node_MakeStruct_PCGTaggedData;                   // 0x2278(0x0068)()
+	TArray<struct FPCGTaggedData>                 K2Node_MakeArray_Array_1;                          // 0x22E0(0x0010)(ReferenceParm)
+	struct FPCGDataCollection                     K2Node_MakeStruct_PCGDataCollection;               // 0x22F0(0x0020)()
+	class UPCGSpatialData*                        K2Node_DynamicCast_AsPCGSpatial_Data;              // 0x2310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x2318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x2319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_231A[0x6];                                     // 0x231A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGTaggedData                         K2Node_MakeStruct_PCGTaggedData_1;                 // 0x2320(0x0068)()
+	TArray<struct FPCGTaggedData>                 K2Node_MakeArray_Array_2;                          // 0x2388(0x0010)(ReferenceParm)
+	struct FPCGDataCollection                     K2Node_MakeStruct_PCGDataCollection_1;             // 0x2398(0x0020)()
+	double                                        CallFunc_Greater_DoubleDouble_B_ImplicitCast;      // 0x23B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Greater_DoubleDouble_B_ImplicitCast_1;    // 0x23C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast; // 0x23C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast; // 0x23CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x23D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x23D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x23E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x23E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetTangentAtDistanceAlongSpline_Distance_ImplicitCast; // 0x23F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23F4[0x4];                                     // 0x23F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x23F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x2400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x2408(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_EntryWidth_ImplicitCast;  // 0x2410(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_EntryScale_ImplicitCast;  // 0x2414(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeVector_X_ImplicitCast;                // 0x2418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeVector_Y_ImplicitCast;                // 0x2420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeVector_Z_ImplicitCast;                // 0x2428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x2430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_B_ImplicitCast;               // 0x2438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_B_ImplicitCast_1;             // 0x2440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_B_ImplicitCast_2;             // 0x2448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_A_ImplicitCast;               // 0x2450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_A_ImplicitCast_1;             // 0x2458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_A_ImplicitCast_2;             // 0x2460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_1;    // 0x2468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_B_ImplicitCast_3;             // 0x2470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x2478(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast_1;           // 0x247C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_B_ImplicitCast_4;             // 0x2480(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x2488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_248C[0x4];                                     // 0x248C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_B_ImplicitCast_5;             // 0x2490(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x2498(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1; // 0x249C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_2; // 0x24A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_1; // 0x24A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_2; // 0x24A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24AC[0x4];                                     // 0x24AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_1;        // 0x24B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_2;        // 0x24B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IterateMeshesAlongSpline_C_ExecuteWithContext) == 0x000010, "Wrong alignment on IterateMeshesAlongSpline_C_ExecuteWithContext");
-static_assert(sizeof(IterateMeshesAlongSpline_C_ExecuteWithContext) == 0x0026B0, "Wrong size on IterateMeshesAlongSpline_C_ExecuteWithContext");
+static_assert(sizeof(IterateMeshesAlongSpline_C_ExecuteWithContext) == 0x0024C0, "Wrong size on IterateMeshesAlongSpline_C_ExecuteWithContext");
 static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, InContext) == 0x000000, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::InContext' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Input) == 0x0000B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Input' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Output) == 0x0000D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Output' has a wrong offset!");
@@ -606,313 +616,317 @@ static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Next_Point
 static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Current_Point_Location) == 0x000420, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Current_Point_Location' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_New_Pos) == 0x000438, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_New_Pos' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Override_End_Iteration_Point) == 0x000450, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Override_End_Iteration_Point' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Current_Iteration_Data) == 0x000740, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Current_Iteration_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Active_Iteration_Data) == 0x000A30, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Active_Iteration_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Current_Entry) == 0x000D20, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Current_Entry' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Active_Point) == 0x000DF0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Active_Point' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Mesh_Entry_List) == 0x000EC0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Mesh_Entry_List' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, All_Points) == 0x000ED0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::All_Points' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Should_Break_Variable) == 0x000EE0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Should_Break_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Not_PreBool_ReturnValue) == 0x000EE1, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Current_Loop_Index_Variable) == 0x000EE4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Current_Loop_Index_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue) == 0x000EE8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000EEC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BooleanAND_ReturnValue) == 0x000EED, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MutableMetadata_ReturnValue) == 0x000EF0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MutableMetadata_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Variable) == 0x000EF8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue) == 0x000EFC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000F00, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue) == 0x000F04, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Array_Index_Variable) == 0x000F08, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000F10, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_SoftObjectReferenceToString_ReturnValue) == 0x000F18, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_SoftObjectReferenceToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Origin) == 0x000F28, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Origin' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Extents) == 0x000F40, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Extents' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_AsStatic_Mesh) == 0x000F58, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_AsStatic_Mesh' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess) == 0x000F60, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue) == 0x000F61, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetBounds_ReturnValue) == 0x000F68, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetBounds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_Origin) == 0x000FA0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_Origin' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_BoxExtent) == 0x000FB8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_BoxExtent' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_SphereRadius) == 0x000FD0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_SphereRadius' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector2D_X) == 0x000FD8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector2D_Y) == 0x000FE0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000FE8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_1) == 0x001000, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Normal_ReturnValue) == 0x001008, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x001020, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeArray_Array) == 0x001028, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x001038, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetVectorArrayAverage_ReturnValue) == 0x001050, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetVectorArrayAverage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Loop_Counter_Variable) == 0x001068, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_1) == 0x00106C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_2) == 0x001070, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x001074, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetLocationAtDistanceAlongSpline_ReturnValue) == 0x001078, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetLocationAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue) == 0x001090, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x001094, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_IntToDouble_ReturnValue) == 0x001098, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0010A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0010A8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x0010B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0010B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x0010C0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0010D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0010E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Variable_1) == 0x0010E4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Array_Index_Variable_1) == 0x0010E8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Get_Item) == 0x0010F0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue) == 0x0011C0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0011C4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, UniqueObjectNameForCooking_AsBPI_PCGSpline_Mesh) == 0x0011C8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::UniqueObjectNameForCooking_AsBPI_PCGSpline_Mesh' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, UniqueObjectNameForCooking_bSuccess) == 0x0011D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::UniqueObjectNameForCooking_bSuccess' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Loop_Counter_Variable_1) == 0x0011DC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Get_Mesh_List_First_Override_Beginning_Mesh) == 0x0011E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Get_Mesh_List_First_Override_Beginning_Mesh' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Get_Mesh_List_First_Override_End_Mesh) == 0x0012B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Get_Mesh_List_First_Override_End_Mesh' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Get_Mesh_List_First_Fence_Objects) == 0x001380, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Get_Mesh_List_First_Fence_Objects' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Get_Mesh_List_First_Debris_Objects) == 0x001390, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Get_Mesh_List_First_Debris_Objects' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Get_Mesh_List_Second_Override_Beginning_Mesh) == 0x0013A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Get_Mesh_List_Second_Override_Beginning_Mesh' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Get_Mesh_List_Second_Override_End_Mesh) == 0x001470, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Get_Mesh_List_Second_Override_End_Mesh' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Get_Mesh_List_Second_Fence_Objects) == 0x001540, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Get_Mesh_List_Second_Fence_Objects' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Get_Mesh_List_Second_Debris_Objects) == 0x001550, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Get_Mesh_List_Second_Debris_Objects' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue_1) == 0x001560, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_3) == 0x001564, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Variable_2) == 0x001568, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_IntInt_ReturnValue) == 0x00156C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue_1) == 0x001570, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Add_ReturnValue) == 0x001574, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Percent_IntInt_ReturnValue) == 0x001578, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Percent_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue) == 0x001580, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue_2) == 0x001588, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Variable) == 0x0015A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue) == 0x0015A4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_1) == 0x0015A8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0015B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0015B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0015C0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue) == 0x0015C8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0015E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotFromZ_ReturnValue) == 0x0015F8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotFromZ_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotFromY_ReturnValue) == 0x001610, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotFromY_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotFromX_ReturnValue) == 0x001628, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotFromX_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Roll) == 0x001640, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Pitch) == 0x001644, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Yaw) == 0x001648, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Roll_1) == 0x00164C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Pitch_1) == 0x001650, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Yaw_1) == 0x001654, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_ReturnValue) == 0x001658, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_ReturnValue_1) == 0x001670, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_4) == 0x001688, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x001690, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_byte_Variable) == 0x001698, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x0016A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue_2) == 0x0016A8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_2) == 0x0016AC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_X) == 0x0016B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Y) == 0x0016B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Z) == 0x0016C0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x0016C8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0016D0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_FFloor_ReturnValue) == 0x0016D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_FFloor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_3) == 0x0016DC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_LoadAsset_Blocking_ReturnValue_1) == 0x0016E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_LoadAsset_Blocking_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Origin_1) == 0x0016E8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Origin_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Extents_1) == 0x001700, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Extents_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_AsStatic_Mesh_1) == 0x001718, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_AsStatic_Mesh_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess_1) == 0x001720, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue_1) == 0x001721, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetBounds_ReturnValue_1) == 0x001728, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetBounds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_Origin_1) == 0x001760, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_Origin_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_BoxExtent_1) == 0x001778, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_BoxExtent_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_SphereRadius_1) == 0x001790, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_SphereRadius_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue) == 0x001798, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue_1) == 0x0017B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_X_1) == 0x0017C8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Y_1) == 0x0017D0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Z_1) == 0x0017D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Assign_Length_Total_Length) == 0x0017E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Assign_Length_Total_Length' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Assign_Length_Scaled_Mesh_Length) == 0x0017E8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Assign_Length_Scaled_Mesh_Length' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Assign_Length_Scale) == 0x0017F0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Assign_Length_Scale' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Assign_Length_Random_Padding) == 0x0017F8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Assign_Length_Random_Padding' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Assign_Length_Random_Scale) == 0x0017FC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Assign_Length_Random_Scale' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_X_2) == 0x001800, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Y_2) == 0x001808, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Z_2) == 0x001810, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x001818, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x001820, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_FFloor_ReturnValue_1) == 0x001828, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_FFloor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_4) == 0x00182C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeVector_ReturnValue) == 0x001830, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeTransform_ReturnValue) == 0x001850, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Variable_1) == 0x0018B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x0018B1, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetLocationAtSplinePoint_ReturnValue) == 0x0018B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetLocationAtSplinePoint_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetNumberOfSplinePoints_ReturnValue) == 0x0018D0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetNumberOfSplinePoints_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_5) == 0x0018D4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetLocationAtSplinePoint_ReturnValue_1) == 0x0018D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetLocationAtSplinePoint_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Find_Mesh_To_Fit_Area_Mesh_Found_) == 0x0018F0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Find_Mesh_To_Fit_Area_Mesh_Found_' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Find_Mesh_To_Fit_Area_Iteration_Point_Data) == 0x001900, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Find_Mesh_To_Fit_Area_Iteration_Point_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Find_Mesh_To_Fit_Area_First_Placed) == 0x001BF0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Find_Mesh_To_Fit_Area_First_Placed' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Find_Mesh_To_Fit_Area_Last_Placed) == 0x001BF1, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Find_Mesh_To_Fit_Area_Last_Placed' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_5) == 0x001BF4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_byte_Variable_1) == 0x001BF8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_Select_Default) == 0x001C00, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Add_ReturnValue_1) == 0x001C08, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x001C10, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Variable_2) == 0x001C18, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue_3) == 0x001C20, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x001C38, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_VectorVector_ReturnValue_1) == 0x001C50, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Find_ReturnValue) == 0x001C68, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue) == 0x001C70, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_Select_Default_1) == 0x001C88, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Contains_ReturnValue) == 0x001CA0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Location) == 0x001CA8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Rotation) == 0x001CC0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Scale) == 0x001CD8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Location_1) == 0x001CF0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Rotation_1) == 0x001D08, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Scale_1) == 0x001D20, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Vector_Distance_ReturnValue) == 0x001D38, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Abs_ReturnValue) == 0x001D40, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomBoolFromStream_ReturnValue) == 0x001D48, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomBoolFromStream_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Less_DoubleDouble_ReturnValue) == 0x001D49, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomBoolFromStream_ReturnValue_1) == 0x001D4A, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomBoolFromStream_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomBoolFromStream_ReturnValue_2) == 0x001D4B, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomBoolFromStream_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Roll_2) == 0x001D4C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Roll_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Pitch_2) == 0x001D50, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Pitch_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Yaw_2) == 0x001D54, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Yaw_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Roll_3) == 0x001D58, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Roll_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Pitch_3) == 0x001D5C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Pitch_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Yaw_3) == 0x001D60, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Yaw_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_1) == 0x001D68, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_ReturnValue_2) == 0x001D70, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_2) == 0x001D74, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_2) == 0x001D78, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_3) == 0x001D80, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_ReturnValue_2) == 0x001D88, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_3) == 0x001DA0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_4) == 0x001DA8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_5) == 0x001DB0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_4) == 0x001DB8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_6) == 0x001DC0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_ReturnValue_3) == 0x001DC8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_2) == 0x001DE0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_Select_Default_2) == 0x001DE8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue_1) == 0x001E00, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_ComposeRotators_ReturnValue) == 0x001E18, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue) == 0x001E30, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Cross_VectorVector_ReturnValue) == 0x001E48, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Cross_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetRightVectorAtDistanceAlongSpline_ReturnValue) == 0x001E60, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetRightVectorAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Normal_ReturnValue_1) == 0x001E78, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Normal_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Cross_VectorVector_ReturnValue_1) == 0x001E90, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Cross_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Normal_ReturnValue_2) == 0x001EA8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Normal_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue_2) == 0x001EC0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector4_X) == 0x001ED8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector4_X' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector4_Y) == 0x001EE0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector4_Y' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector4_Z) == 0x001EE8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector4_Z' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector4_W) == 0x001EF0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector4_W' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue_1) == 0x001EF8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x001F10, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_7) == 0x001F18, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_5) == 0x001F20, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_6) == 0x001F24, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_4) == 0x001F28, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_5) == 0x001F30, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue_4) == 0x001F38, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue_5) == 0x001F50, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue_3) == 0x001F68, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue_4) == 0x001F80, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue_5) == 0x001F98, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue_2) == 0x001FB0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x001FC8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue_3) == 0x001FD8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Get_Item_1) == 0x001FF0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue_4) == 0x001FF8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue_3) == 0x002010, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_6) == 0x002014, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectRotator_ReturnValue) == 0x002018, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectRotator_ReturnValue_1) == 0x002030, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_Select_Default_3) == 0x002048, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Get_Item_2) == 0x002060, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue_4) == 0x002350, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue_2) == 0x002354, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_IsValidIndex_ReturnValue) == 0x002355, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue_2) == 0x002358, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Add_ReturnValue_2) == 0x002370, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Percent_IntInt_ReturnValue_1) == 0x002374, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Percent_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x002378, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MutableMetadata_ReturnValue_1) == 0x002380, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MutableMetadata_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectInt_ReturnValue) == 0x002388, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_ToPointDataWithContext_ReturnValue) == 0x002390, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_ToPointDataWithContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValidSoftObjectReference_ReturnValue_1) == 0x002398, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValidSoftObjectReference_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetPoints_ReturnValue) == 0x0023A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetPoints_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Variable_3) == 0x0023B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue_3) == 0x0023B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_6) == 0x0023D0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue_4) == 0x0023D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x0023F0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue_5) == 0x0023F8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_VectorVector_ReturnValue_2) == 0x002410, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Add_ReturnValue_3) == 0x002428, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_7) == 0x00242C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_IsValidIndex_ReturnValue_2) == 0x002430, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_IsValidIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue_2) == 0x002431, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetComponent_ReturnValue) == 0x002438, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetOwner_ReturnValue) == 0x002440, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValidSoftObjectReference_ReturnValue_2) == 0x002448, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValidSoftObjectReference_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_ToPointDataWithContext_ReturnValue_1) == 0x002450, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_ToPointDataWithContext_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_PointLoop_OutData) == 0x002458, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_PointLoop_OutData' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeStruct_PCGTaggedData) == 0x002460, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeStruct_PCGTaggedData' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetInputs_ReturnValue) == 0x0024C8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetInputs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeArray_Array_1) == 0x0024D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeStruct_PCGDataCollection) == 0x0024E8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeStruct_PCGDataCollection' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_AsPCGSpatial_Data) == 0x002508, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_AsPCGSpatial_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess_2) == 0x002510, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue_3) == 0x002511, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeStruct_PCGTaggedData_1) == 0x002518, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeStruct_PCGTaggedData_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeArray_Array_2) == 0x002580, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeStruct_PCGDataCollection_1) == 0x002590, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeStruct_PCGDataCollection_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_B_ImplicitCast) == 0x0025B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast) == 0x0025B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast) == 0x0025BC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0025C0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0025C8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x0025D0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0025D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetTangentAtDistanceAlongSpline_Distance_ImplicitCast) == 0x0025E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetTangentAtDistanceAlongSpline_Distance_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x0025E8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0025F0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x0025F8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_SetFieldsInStruct_EntryWidth_ImplicitCast) == 0x002600, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_SetFieldsInStruct_EntryWidth_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_SetFieldsInStruct_EntryScale_ImplicitCast) == 0x002604, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_SetFieldsInStruct_EntryScale_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeVector_X_ImplicitCast) == 0x002608, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeVector_X_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeVector_Y_ImplicitCast) == 0x002610, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeVector_Y_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeVector_Z_ImplicitCast) == 0x002618, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeVector_Z_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x002620, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast) == 0x002628, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast_1) == 0x002630, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast_2) == 0x002638, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_A_ImplicitCast) == 0x002640, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_A_ImplicitCast_1) == 0x002648, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_A_ImplicitCast_2) == 0x002650, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast_3) == 0x002658, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x002660, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_Yaw_ImplicitCast_1) == 0x002664, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_Yaw_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast_4) == 0x002668, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x002670, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast_5) == 0x002678, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x002680, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1) == 0x002684, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_2) == 0x002688, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_1) == 0x00268C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_2) == 0x002690, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_B_ImplicitCast_1) == 0x002698, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_B_ImplicitCast_2) == 0x0026A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_B_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Current_Iteration_Data) == 0x000770, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Current_Iteration_Data' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Active_Iteration_Data) == 0x000A90, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Active_Iteration_Data' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Current_Entry) == 0x000DB0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Current_Entry' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Active_Point) == 0x000EB0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Active_Point' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Mesh_Entry_List) == 0x000F80, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Mesh_Entry_List' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, All_Points) == 0x000F90, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::All_Points' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000FA0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Retrieve_Set_Dressing_Data_Set_Dressing_Data) == 0x000FA8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Retrieve_Set_Dressing_Data_Set_Dressing_Data' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Retrieve_Set_Dressing_Data_Is_Intersection) == 0x000FB8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Retrieve_Set_Dressing_Data_Is_Intersection' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000FB9, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000FBA, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue) == 0x000FBB, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000FC0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeArray_Array) == 0x000FD8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Normal_ReturnValue) == 0x000FE8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Normal_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetVectorArrayAverage_ReturnValue) == 0x001000, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetVectorArrayAverage_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Variable) == 0x001018, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Should_Break_Variable) == 0x00101C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Should_Break_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Not_PreBool_ReturnValue) == 0x00101D, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue) == 0x001020, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MutableMetadata_ReturnValue) == 0x001028, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MutableMetadata_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue) == 0x001030, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Current_Loop_Index_Variable) == 0x001034, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Current_Loop_Index_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x001038, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue) == 0x00103C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x001040, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BooleanAND_ReturnValue) == 0x001041, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Variable) == 0x001042, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_Select_Default) == 0x001048, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x001058, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_SoftObjectReferenceToString_ReturnValue) == 0x001060, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_SoftObjectReferenceToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Origin) == 0x001070, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Origin' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Extents) == 0x001088, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Extents' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_AsStatic_Mesh) == 0x0010A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_AsStatic_Mesh' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess) == 0x0010A8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue) == 0x0010A9, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetBounds_ReturnValue) == 0x0010B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetBounds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_Origin) == 0x0010E8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_Origin' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_BoxExtent) == 0x001100, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_BoxExtent' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_SphereRadius) == 0x001118, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_SphereRadius' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Array_Index_Variable) == 0x00111C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector2D_X) == 0x001120, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector2D_Y) == 0x001128, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_1) == 0x001130, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x001138, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x001140, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_1) == 0x001158, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Loop_Counter_Variable) == 0x00115C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_2) == 0x001160, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x001164, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetLocationAtDistanceAlongSpline_ReturnValue) == 0x001168, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetLocationAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x001180, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_IntToDouble_ReturnValue) == 0x001188, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x001190, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x001198, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0011A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0011A8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x0011B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x0011B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0011D0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue) == 0x0011D4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Array_Index_Variable_1) == 0x0011D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Get_Item) == 0x0011E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Variable_1) == 0x0012E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0012E4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_IntInt_ReturnValue) == 0x0012E5, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Loop_Counter_Variable_1) == 0x0012E8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue_1) == 0x0012EC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue_1) == 0x0012F0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_3) == 0x0012F4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_int_Variable_2) == 0x0012F8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Percent_IntInt_ReturnValue) == 0x0012FC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Percent_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Add_ReturnValue) == 0x001300, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BooleanOR_ReturnValue) == 0x001304, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue) == 0x001308, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue_2) == 0x001310, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue) == 0x001328, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_1) == 0x00132C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x001330, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x001338, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x001340, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Variable_1) == 0x001348, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue) == 0x001350, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue) == 0x001368, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotFromZ_ReturnValue) == 0x001380, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotFromZ_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotFromY_ReturnValue) == 0x001398, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotFromY_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotFromX_ReturnValue) == 0x0013B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotFromX_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Roll) == 0x0013C8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Pitch) == 0x0013CC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Yaw) == 0x0013D0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Roll_1) == 0x0013D4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Pitch_1) == 0x0013D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Yaw_1) == 0x0013DC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_ReturnValue) == 0x0013E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_ReturnValue_1) == 0x0013F8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x001410, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x001418, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue_2) == 0x001420, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_2) == 0x001424, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_X) == 0x001428, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Y) == 0x001430, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Z) == 0x001438, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x001440, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_4) == 0x001448, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x001450, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_byte_Variable) == 0x001458, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_FFloor_ReturnValue) == 0x00145C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_FFloor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_3) == 0x001460, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_LoadAsset_Blocking_ReturnValue_1) == 0x001468, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_LoadAsset_Blocking_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BooleanOR_ReturnValue_1) == 0x001470, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Origin_1) == 0x001478, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Origin_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Extents_1) == 0x001490, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Extents_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_AsStatic_Mesh_1) == 0x0014A8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_AsStatic_Mesh_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess_1) == 0x0014B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue_1) == 0x0014B1, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetBounds_ReturnValue_1) == 0x0014B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetBounds_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_Origin_1) == 0x0014F0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_Origin_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_BoxExtent_1) == 0x001508, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_BoxExtent_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_SphereRadius_1) == 0x001520, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_SphereRadius_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue) == 0x001528, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue_1) == 0x001540, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_X_1) == 0x001558, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Y_1) == 0x001560, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Z_1) == 0x001568, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Assign_Length_Total_Length) == 0x001570, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Assign_Length_Total_Length' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Assign_Length_Scaled_Mesh_Length) == 0x001578, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Assign_Length_Scaled_Mesh_Length' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Assign_Length_Scale) == 0x001580, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Assign_Length_Scale' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Assign_Length_Random_Padding) == 0x001588, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Assign_Length_Random_Padding' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Assign_Length_Random_Scale) == 0x00158C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Assign_Length_Random_Scale' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_X_2) == 0x001590, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_X_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Y_2) == 0x001598, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Y_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector_Z_2) == 0x0015A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector_Z_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x0015A8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x0015B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_FFloor_ReturnValue_1) == 0x0015B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_FFloor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_4) == 0x0015BC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeVector_ReturnValue) == 0x0015C0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeTransform_ReturnValue) == 0x0015E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Variable_2) == 0x001640, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetLocationAtSplinePoint_ReturnValue) == 0x001648, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetLocationAtSplinePoint_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetNumberOfSplinePoints_ReturnValue) == 0x001660, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetNumberOfSplinePoints_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_5) == 0x001664, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetLocationAtSplinePoint_ReturnValue_1) == 0x001668, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetLocationAtSplinePoint_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Find_Mesh_To_Fit_Area_Mesh_Found_) == 0x001680, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Find_Mesh_To_Fit_Area_Mesh_Found_' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Find_Mesh_To_Fit_Area_Iteration_Point_Data) == 0x001690, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Find_Mesh_To_Fit_Area_Iteration_Point_Data' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Find_Mesh_To_Fit_Area_First_Placed) == 0x0019B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Find_Mesh_To_Fit_Area_First_Placed' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Find_Mesh_To_Fit_Area_Last_Placed) == 0x0019B1, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Find_Mesh_To_Fit_Area_Last_Placed' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_5) == 0x0019B4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_ReturnValue_2) == 0x0019B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Add_ReturnValue_1) == 0x0019BC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Find_ReturnValue) == 0x0019C0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Contains_ReturnValue) == 0x0019C4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Location) == 0x0019C8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Rotation) == 0x0019E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Scale) == 0x0019F8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Location_1) == 0x001A10, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Location_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Rotation_1) == 0x001A28, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakTransform_Scale_1) == 0x001A40, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Vector_Distance_ReturnValue) == 0x001A58, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_byte_Variable_1) == 0x001A60, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Abs_ReturnValue) == 0x001A68, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Less_DoubleDouble_ReturnValue) == 0x001A70, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_Select_Default_1) == 0x001A78, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x001A80, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Variable_3) == 0x001A88, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue_3) == 0x001A90, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x001AA8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_VectorVector_ReturnValue_1) == 0x001AC0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomBoolFromStream_ReturnValue) == 0x001AD8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomBoolFromStream_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue) == 0x001AE0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_Select_Default_2) == 0x001AF8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomBoolFromStream_ReturnValue_1) == 0x001B10, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomBoolFromStream_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomBoolFromStream_ReturnValue_2) == 0x001B11, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomBoolFromStream_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Roll_2) == 0x001B14, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Roll_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Pitch_2) == 0x001B18, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Pitch_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Yaw_2) == 0x001B1C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Yaw_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Roll_3) == 0x001B20, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Roll_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Pitch_3) == 0x001B24, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Pitch_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakRotator_Yaw_3) == 0x001B28, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakRotator_Yaw_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_1) == 0x001B30, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_2) == 0x001B38, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_3) == 0x001B3C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_ReturnValue_3) == 0x001B40, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_2) == 0x001B48, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BooleanOR_ReturnValue_2) == 0x001B50, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_ReturnValue_2) == 0x001B58, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_3) == 0x001B70, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_4) == 0x001B78, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_4) == 0x001B80, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_5) == 0x001B88, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_5) == 0x001B90, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_ReturnValue_6) == 0x001B98, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_ReturnValue_3) == 0x001BA0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_2) == 0x001BB8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_Select_Default_3) == 0x001BC0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue_1) == 0x001BD8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_ComposeRotators_ReturnValue) == 0x001BF0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue) == 0x001C08, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Cross_VectorVector_ReturnValue) == 0x001C20, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Cross_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetRightVectorAtDistanceAlongSpline_ReturnValue) == 0x001C38, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetRightVectorAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Normal_ReturnValue_1) == 0x001C50, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Normal_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Cross_VectorVector_ReturnValue_1) == 0x001C68, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Cross_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Normal_ReturnValue_2) == 0x001C80, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Normal_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue_2) == 0x001C98, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector4_X) == 0x001CB0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector4_X' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector4_Y) == 0x001CB8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector4_Y' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector4_Z) == 0x001CC0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector4_Z' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_BreakVector4_W) == 0x001CC8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_BreakVector4_W' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue_1) == 0x001CD0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x001CE8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_ReturnValue_7) == 0x001CF0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_6) == 0x001CF8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_7) == 0x001CFC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_4) == 0x001D00, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_5) == 0x001D08, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue_4) == 0x001D10, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue_5) == 0x001D28, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue_3) == 0x001D40, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue_4) == 0x001D58, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_VectorVector_ReturnValue_5) == 0x001D70, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_VectorVector_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue_2) == 0x001D88, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue_3) == 0x001DA0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue_3) == 0x001DA8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_IntInt_ReturnValue_6) == 0x001DC0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_IntInt_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue_4) == 0x001DC8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectRotator_ReturnValue) == 0x001DE0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectRotator_ReturnValue_1) == 0x001DF8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectRotator_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_Select_Default_4) == 0x001E10, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_Select_Default_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Get_Item_1) == 0x001E30, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue_4) == 0x002150, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue_2) == 0x002154, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x002155, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x002158, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Get_Item_2) == 0x002168, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Percent_IntInt_ReturnValue_1) == 0x002170, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Percent_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x002174, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_IsValidIndex_ReturnValue_2) == 0x002175, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_IsValidIndex_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectInt_ReturnValue) == 0x002178, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue_2) == 0x002180, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Add_ReturnValue_2) == 0x002198, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MutableMetadata_ReturnValue_1) == 0x0021A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MutableMetadata_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValidSoftObjectReference_ReturnValue_1) == 0x0021A8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValidSoftObjectReference_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, Temp_bool_Variable_4) == 0x0021A9, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_ToPointDataWithContext_ReturnValue) == 0x0021B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_ToPointDataWithContext_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue_3) == 0x0021B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetPoints_ReturnValue) == 0x0021D0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetPoints_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue_4) == 0x0021E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_VectorVector_ReturnValue_5) == 0x0021F8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_VectorVector_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_VectorVector_ReturnValue_2) == 0x002210, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_VectorVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_Add_ReturnValue_3) == 0x002228, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_6) == 0x00222C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue_2) == 0x002230, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_IsValidIndex_ReturnValue_3) == 0x002231, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_IsValidIndex_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_7) == 0x002234, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Array_IsValidIndex_ReturnValue_4) == 0x002238, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Array_IsValidIndex_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetComponent_ReturnValue) == 0x002240, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetOwner_ReturnValue) == 0x002248, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValidSoftObjectReference_ReturnValue_2) == 0x002250, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValidSoftObjectReference_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_ToPointDataWithContext_ReturnValue_1) == 0x002258, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_ToPointDataWithContext_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_PointLoop_OutData) == 0x002260, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_PointLoop_OutData' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetInputs_ReturnValue) == 0x002268, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetInputs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeStruct_PCGTaggedData) == 0x002278, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeStruct_PCGTaggedData' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeArray_Array_1) == 0x0022E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeStruct_PCGDataCollection) == 0x0022F0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeStruct_PCGDataCollection' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_AsPCGSpatial_Data) == 0x002310, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_AsPCGSpatial_Data' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess_2) == 0x002318, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue_3) == 0x002319, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeStruct_PCGTaggedData_1) == 0x002320, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeStruct_PCGTaggedData_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeArray_Array_2) == 0x002388, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_MakeStruct_PCGDataCollection_1) == 0x002398, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_MakeStruct_PCGDataCollection_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_B_ImplicitCast) == 0x0023B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_B_ImplicitCast_1) == 0x0023C0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast) == 0x0023C8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast) == 0x0023CC, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0023D0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0023D8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x0023E0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0023E8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_GetTangentAtDistanceAlongSpline_Distance_ImplicitCast) == 0x0023F0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_GetTangentAtDistanceAlongSpline_Distance_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x0023F8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x002400, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x002408, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_SetFieldsInStruct_EntryWidth_ImplicitCast) == 0x002410, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_SetFieldsInStruct_EntryWidth_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, K2Node_SetFieldsInStruct_EntryScale_ImplicitCast) == 0x002414, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::K2Node_SetFieldsInStruct_EntryScale_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeVector_X_ImplicitCast) == 0x002418, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeVector_X_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeVector_Y_ImplicitCast) == 0x002420, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeVector_Y_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeVector_Z_ImplicitCast) == 0x002428, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeVector_Z_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x002430, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast) == 0x002438, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast_1) == 0x002440, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast_2) == 0x002448, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_A_ImplicitCast) == 0x002450, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_A_ImplicitCast_1) == 0x002458, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_A_ImplicitCast_2) == 0x002460, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_A_ImplicitCast_1) == 0x002468, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast_3) == 0x002470, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x002478, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_Yaw_ImplicitCast_1) == 0x00247C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_Yaw_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast_4) == 0x002480, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x002488, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_SelectFloat_B_ImplicitCast_5) == 0x002490, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_SelectFloat_B_ImplicitCast_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x002498, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1) == 0x00249C, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_2) == 0x0024A0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_1) == 0x0024A4, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_2) == 0x0024A8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_B_ImplicitCast_1) == 0x0024B0, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_B_ImplicitCast_2) == 0x0024B8, "Member 'IterateMeshesAlongSpline_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_B_ImplicitCast_2' has a wrong offset!");
 
 // Function IterateMeshesAlongSpline.IterateMeshesAlongSpline_C.Find Mesh To Fit Area
-// 0x26C0 (0x26C0 - 0x0000)
+// 0x2930 (0x2930 - 0x0000)
 struct IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area final
 {
 public:
@@ -922,354 +936,354 @@ public:
 	int32                                         Final_Spline_Index;                                // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Consecutive_Mesh_Index;                            // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    End_Data;                                          // 0x0030(0x02F0)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	double                                        End_Scaled_Mesh_Length;                            // 0x0320(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Mesh_Found_;                                       // 0x0328(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    Iteration_Point_Data;                              // 0x0330(0x02F0)(Parm, OutParm)
-	bool                                          First_Placed;                                      // 0x0620(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Last_Placed;                                       // 0x0621(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_622[0x2];                                      // 0x0622(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Spline_End_Distance;                               // 0x0624(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Mesh_End_Location;                                 // 0x0628(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Mesh_Start_Location;                               // 0x0640(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_Random_Scale;                                 // 0x0658(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_Random_Padding;                               // 0x065C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_Scale;                                        // 0x0660(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_Scaled_Mesh_Length;                           // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_Total_Length;                                 // 0x0670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Last_is_Placed;                                    // 0x0678(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Mesh_Found;                                        // 0x0679(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Override_First;                                    // 0x067A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Break_Loop;                                        // 0x067B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_67C[0x4];                                      // 0x067C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Shortest_Length;                                   // 0x0680(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Current_Index;                                     // 0x0688(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_68C[0x4];                                      // 0x068C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    Shortest_Point_Data;                               // 0x0690(0x02F0)(Edit, BlueprintVisible)
-	struct FAoCSplineMeshEntry                    Current_Mesh;                                      // 0x0980(0x00D0)(Edit, BlueprintVisible)
-	struct FIterationPointData                    Output_Point_Data;                                 // 0x0A50(0x02F0)(Edit, BlueprintVisible)
-	TArray<struct FAoCSplineMeshEntry>            Current_Mesh_List;                                 // 0x0D40(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FIterationPointData>            Small_Curve_Point_Data_Array;                      // 0x0D50(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FIterationPointData>            Point_Data_Array;                                  // 0x0D60(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Variable;                                 // 0x0D70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0D74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0D78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0D79(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D7A[0x2];                                      // 0x0D7A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0D7C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0D80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0D81(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D82[0x2];                                      // 0x0D82(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x0D84(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0D88(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0D8C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0D90(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0D94(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0D98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D99[0x3];                                      // 0x0D99(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0D9C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0DA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DA1[0x3];                                      // 0x0DA1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0DA4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0DA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0DB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0DB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0DBC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0DC0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DC4[0x4];                                      // 0x0DC4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0DC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x0DD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0DD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0DE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0DE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0DF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X_1;                          // 0x0DF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y_1;                          // 0x0E00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z_1;                          // 0x0E08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0E10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0E18(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0E30(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0E48(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X_2;                          // 0x0E60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y_2;                          // 0x0E68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z_2;                          // 0x0E70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0E78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X_3;                          // 0x0E80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y_3;                          // 0x0E88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z_3;                          // 0x0E90(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_3;           // 0x0E98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0EA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x0EA8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0EAC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0EB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EB1[0x7];                                      // 0x0EB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0EB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FFloor_ReturnValue_1;                     // 0x0EC0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0EC4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0EC8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0ECC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_ECD[0x3];                                      // 0x0ECD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0ED0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x0ED4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0ED8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FFloor_ReturnValue_2;                     // 0x0EE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_7;                 // 0x0EE4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x0EE8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x0F00(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x0F18(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location_2;                // 0x0F30(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_2;                // 0x0F48(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_2;                   // 0x0F60(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Assign_Length_Total_Length;               // 0x0F78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Assign_Length_Scaled_Mesh_Length;         // 0x0F80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Assign_Length_Scale;                      // 0x0F88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Assign_Length_Random_Padding;             // 0x0F90(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Assign_Length_Random_Scale;               // 0x0F94(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetLocationAtSplinePoint_ReturnValue;     // 0x0F98(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FIterationPointData                    K2Node_MakeStruct_IterationPointData;              // 0x0FB0(0x02F0)()
-	bool                                          CallFunc_Array_IsEmpty_ReturnValue;                // 0x12A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12A1[0x3];                                     // 0x12A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x12A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x12A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12A9[0x7];                                     // 0x12A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    K2Node_MakeStruct_IterationPointData_1;            // 0x12B0(0x02F0)()
-	struct FVector                                CallFunc_BreakTransform_Location_3;                // 0x15A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_3;                // 0x15B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_3;                   // 0x15D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x15E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x15F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x15F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15F9[0x7];                                     // 0x15F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Get_Distance_Along_Spline_Between_Points_Distance; // 0x1600(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Get_Curvature_of_Spline_Between_Points_Average_Curvature; // 0x1608(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x1610(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_1;          // 0x1618(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x1619(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x161A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x161B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x161C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x1620(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x1624(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x1625(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x1626(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1627[0x1];                                     // 0x1627(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x1628(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FFloor_ReturnValue_3;                     // 0x1630(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1634[0x4];                                     // 0x1634(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Vector_Distance_ReturnValue_1;            // 0x1638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_8;                 // 0x1640(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1644[0x4];                                     // 0x1644(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x1648(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_9;                 // 0x1650(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_2;          // 0x1654(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1655[0x3];                                     // 0x1655(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakTransform_Location_4;                // 0x1658(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_4;                // 0x1670(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_4;                   // 0x1688(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Choose_Next_Mesh_Entry_Mesh_Found;        // 0x16A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16A1[0xF];                                     // 0x16A1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    CallFunc_Choose_Next_Mesh_Entry_Point_Data;        // 0x16B0(0x02F0)()
-	struct FIterationPointData                    CallFunc_Array_Get_Item;                           // 0x19A0(0x02F0)()
-	bool                                          CallFunc_Array_IsEmpty_ReturnValue_1;              // 0x1C90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C91[0x3];                                     // 0x1C91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x1C94(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_3;          // 0x1C98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x1C99(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C9A[0x6];                                     // 0x1C9A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    CallFunc_Array_RandomFromStream_OutItem;           // 0x1CA0(0x02F0)()
-	int32                                         CallFunc_Array_RandomFromStream_OutIndex;          // 0x1F90(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsEmpty_ReturnValue_2;              // 0x1F94(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x1F95(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F96[0xA];                                     // 0x1F96(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    CallFunc_Array_Get_Item_1;                         // 0x1FA0(0x02F0)()
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x2290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x2294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x2298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2299[0x7];                                     // 0x2299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    K2Node_MakeStruct_IterationPointData_2;            // 0x22A0(0x02F0)()
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x2590(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2594[0xC];                                     // 0x2594(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAoCSplineMeshEntry                    CallFunc_Array_Get_Item_2;                         // 0x25A0(0x00D0)()
-	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x2670(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x2674(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2675[0x3];                                     // 0x2675(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x2678(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_1; // 0x267C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_267D[0x3];                                     // 0x267D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x2680(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x2688(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x2690(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x2698(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_EntryWidth_ImplicitCast;         // 0x26A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_EntryScale_ImplicitCast;         // 0x26A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_Shortest_Length_ImplicitCast;   // 0x26A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x26B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIterationPointData                    End_Data;                                          // 0x0030(0x0320)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	double                                        End_Scaled_Mesh_Length;                            // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Mesh_Found_;                                       // 0x0358(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    Iteration_Point_Data;                              // 0x0360(0x0320)(Parm, OutParm)
+	bool                                          First_Placed;                                      // 0x0680(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Last_Placed;                                       // 0x0681(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_682[0x2];                                      // 0x0682(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Spline_End_Distance;                               // 0x0684(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Mesh_End_Location;                                 // 0x0688(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Mesh_Start_Location;                               // 0x06A0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_Random_Scale;                                 // 0x06B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_Random_Padding;                               // 0x06BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_Scale;                                        // 0x06C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_Scaled_Mesh_Length;                           // 0x06C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_Total_Length;                                 // 0x06D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Last_is_Placed;                                    // 0x06D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Mesh_Found;                                        // 0x06D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Override_First;                                    // 0x06DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Break_Loop;                                        // 0x06DB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6DC[0x4];                                      // 0x06DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Shortest_Length;                                   // 0x06E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Current_Index;                                     // 0x06E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6EC[0x4];                                      // 0x06EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    Shortest_Point_Data;                               // 0x06F0(0x0320)(Edit, BlueprintVisible)
+	struct FAoCSplineMeshEntry                    Current_Mesh;                                      // 0x0A10(0x0100)(Edit, BlueprintVisible)
+	struct FIterationPointData                    Output_Point_Data;                                 // 0x0B10(0x0320)(Edit, BlueprintVisible)
+	TArray<struct FAoCSplineMeshEntry>            Current_Mesh_List;                                 // 0x0E30(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FIterationPointData>            Small_Curve_Point_Data_Array;                      // 0x0E40(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FIterationPointData>            Point_Data_Array;                                  // 0x0E50(0x0010)(Edit, BlueprintVisible)
+	int32                                         Temp_int_Variable;                                 // 0x0E60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0E64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0E68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0E69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E6A[0x2];                                      // 0x0E6A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0E6C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0E70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0E71(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E72[0x2];                                      // 0x0E72(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_1;                               // 0x0E74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0E78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0E7C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0E80(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0E84(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0E88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E89[0x3];                                      // 0x0E89(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0E8C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0E90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E91[0x3];                                      // 0x0E91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0E94(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0E98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0EA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0EA8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0EAC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0EB0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EB4[0x4];                                      // 0x0EB4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0EB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0EC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0EC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0ED0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0ED8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0EE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X_1;                          // 0x0EE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y_1;                          // 0x0EF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z_1;                          // 0x0EF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0F00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0F08(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0F20(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0F38(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X_2;                          // 0x0F50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y_2;                          // 0x0F58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z_2;                          // 0x0F60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0F68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X_3;                          // 0x0F70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y_3;                          // 0x0F78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z_3;                          // 0x0F80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_3;           // 0x0F88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0F90(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x0F98(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0F9C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0FA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FA1[0x7];                                      // 0x0FA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0FA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FFloor_ReturnValue_1;                     // 0x0FB0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0FB4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0FB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0FBC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FBD[0x3];                                      // 0x0FBD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0FC0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x0FC4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0FC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FFloor_ReturnValue_2;                     // 0x0FD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_7;                 // 0x0FD4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x0FD8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x0FF0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x1008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_2;                // 0x1020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_2;                // 0x1038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_2;                   // 0x1050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Assign_Length_Total_Length;               // 0x1068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Assign_Length_Scaled_Mesh_Length;         // 0x1070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Assign_Length_Scale;                      // 0x1078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Assign_Length_Random_Padding;             // 0x1080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Assign_Length_Random_Scale;               // 0x1084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetLocationAtSplinePoint_ReturnValue;     // 0x1088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIterationPointData                    K2Node_MakeStruct_IterationPointData;              // 0x10A0(0x0320)()
+	bool                                          CallFunc_Array_IsEmpty_ReturnValue;                // 0x13C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C1[0x3];                                     // 0x13C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x13C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x13C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C9[0x7];                                     // 0x13C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    K2Node_MakeStruct_IterationPointData_1;            // 0x13D0(0x0320)()
+	struct FVector                                CallFunc_BreakTransform_Location_3;                // 0x16F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_3;                // 0x1708(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_3;                   // 0x1720(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x1738(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x1740(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x1748(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1749[0x7];                                     // 0x1749(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Get_Distance_Along_Spline_Between_Points_Distance; // 0x1750(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Get_Curvature_of_Spline_Between_Points_Average_Curvature; // 0x1758(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x1760(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_1;          // 0x1768(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x1769(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x176A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x176B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x176C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x1770(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x1774(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x1775(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x1776(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1777[0x1];                                     // 0x1777(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x1778(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FFloor_ReturnValue_3;                     // 0x1780(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1784[0x4];                                     // 0x1784(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Vector_Distance_ReturnValue_1;            // 0x1788(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_8;                 // 0x1790(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1794[0x4];                                     // 0x1794(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x1798(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_9;                 // 0x17A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_2;          // 0x17A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17A5[0x3];                                     // 0x17A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakTransform_Location_4;                // 0x17A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_4;                // 0x17C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_4;                   // 0x17D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Choose_Next_Mesh_Entry_Mesh_Found;        // 0x17F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17F1[0xF];                                     // 0x17F1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    CallFunc_Choose_Next_Mesh_Entry_Point_Data;        // 0x1800(0x0320)()
+	struct FIterationPointData                    CallFunc_Array_Get_Item;                           // 0x1B20(0x0320)()
+	bool                                          CallFunc_Array_IsEmpty_ReturnValue_1;              // 0x1E40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E41[0x3];                                     // 0x1E41(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x1E44(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_3;          // 0x1E48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x1E49(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E4A[0x6];                                     // 0x1E4A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    CallFunc_Array_RandomFromStream_OutItem;           // 0x1E50(0x0320)()
+	int32                                         CallFunc_Array_RandomFromStream_OutIndex;          // 0x2170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsEmpty_ReturnValue_2;              // 0x2174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x2175(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2176[0xA];                                     // 0x2176(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    CallFunc_Array_Get_Item_1;                         // 0x2180(0x0320)()
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x24A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x24A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x24A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24A9[0x7];                                     // 0x24A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIterationPointData                    K2Node_MakeStruct_IterationPointData_2;            // 0x24B0(0x0320)()
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x27D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27D4[0xC];                                     // 0x27D4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCSplineMeshEntry                    CallFunc_Array_Get_Item_2;                         // 0x27E0(0x0100)()
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x28E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x28E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_28E5[0x3];                                     // 0x28E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x28E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_1; // 0x28EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_28ED[0x3];                                     // 0x28ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x28F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x28F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x2900(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x2908(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_MakeStruct_EntryWidth_ImplicitCast;         // 0x2910(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_MakeStruct_EntryScale_ImplicitCast;         // 0x2914(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_Shortest_Length_ImplicitCast;   // 0x2918(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x2920(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area) == 0x000010, "Wrong alignment on IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area");
-static_assert(sizeof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area) == 0x0026C0, "Wrong size on IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area");
+static_assert(sizeof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area) == 0x002930, "Wrong size on IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Mesh_Entry_List) == 0x000000, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Mesh_Entry_List' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, All_Points) == 0x000010, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::All_Points' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Mesh_Start_Index) == 0x000020, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Mesh_Start_Index' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Final_Spline_Index) == 0x000024, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Final_Spline_Index' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Consecutive_Mesh_Index) == 0x000028, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Consecutive_Mesh_Index' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, End_Data) == 0x000030, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::End_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, End_Scaled_Mesh_Length) == 0x000320, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::End_Scaled_Mesh_Length' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Mesh_Found_) == 0x000328, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Mesh_Found_' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Iteration_Point_Data) == 0x000330, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Iteration_Point_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, First_Placed) == 0x000620, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::First_Placed' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Last_Placed) == 0x000621, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Last_Placed' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Spline_End_Distance) == 0x000624, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Spline_End_Distance' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Mesh_End_Location) == 0x000628, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Mesh_End_Location' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Mesh_Start_Location) == 0x000640, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Mesh_Start_Location' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_Random_Scale) == 0x000658, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_Random_Scale' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_Random_Padding) == 0x00065C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_Random_Padding' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_Scale) == 0x000660, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_Scale' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_Scaled_Mesh_Length) == 0x000668, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_Scaled_Mesh_Length' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_Total_Length) == 0x000670, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_Total_Length' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Last_is_Placed) == 0x000678, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Last_is_Placed' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Mesh_Found) == 0x000679, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Mesh_Found' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Override_First) == 0x00067A, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Override_First' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Break_Loop) == 0x00067B, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Break_Loop' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Shortest_Length) == 0x000680, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Shortest_Length' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Current_Index) == 0x000688, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Current_Index' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Shortest_Point_Data) == 0x000690, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Shortest_Point_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Current_Mesh) == 0x000980, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Current_Mesh' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Output_Point_Data) == 0x000A50, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Output_Point_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Current_Mesh_List) == 0x000D40, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Current_Mesh_List' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Small_Curve_Point_Data_Array) == 0x000D50, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Small_Curve_Point_Data_Array' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Point_Data_Array) == 0x000D60, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Point_Data_Array' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Variable) == 0x000D70, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue) == 0x000D74, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_bool_Variable) == 0x000D78, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Not_PreBool_ReturnValue) == 0x000D79, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Array_Index_Variable) == 0x000D7C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000D80, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BooleanAND_ReturnValue) == 0x000D81, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Variable_1) == 0x000D84, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_1) == 0x000D88, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Loop_Counter_Variable) == 0x000D8C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_2) == 0x000D90, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Array_Index_Variable_1) == 0x000D94, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_bool_Variable_1) == 0x000D98, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Length_ReturnValue) == 0x000D9C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Not_PreBool_ReturnValue_1) == 0x000DA0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Subtract_IntInt_ReturnValue) == 0x000DA4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000DA8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000DB0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Loop_Counter_Variable_1) == 0x000DB8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_3) == 0x000DBC, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Array_Index_Variable_2) == 0x000DC0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000DC8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_X) == 0x000DD0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Y) == 0x000DD8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Z) == 0x000DE0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000DE8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000DF0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_X_1) == 0x000DF8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Y_1) == 0x000E00, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Z_1) == 0x000E08, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000E10, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Location) == 0x000E18, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Rotation) == 0x000E30, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Scale) == 0x000E48, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_X_2) == 0x000E60, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Y_2) == 0x000E68, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Z_2) == 0x000E70, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000E78, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_X_3) == 0x000E80, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_X_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Y_3) == 0x000E88, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Y_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Z_3) == 0x000E90, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Z_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x000E98, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000EA0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_FFloor_ReturnValue) == 0x000EA8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_FFloor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_4) == 0x000EAC, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Greater_IntInt_ReturnValue) == 0x000EB0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000EB8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_FFloor_ReturnValue_1) == 0x000EC0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_FFloor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_5) == 0x000EC4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Loop_Counter_Variable_2) == 0x000EC8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000ECC, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_SelectInt_ReturnValue) == 0x000ED0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_6) == 0x000ED4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000ED8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_FFloor_ReturnValue_2) == 0x000EE0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_FFloor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_7) == 0x000EE4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Location_1) == 0x000EE8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Rotation_1) == 0x000F00, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Scale_1) == 0x000F18, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Location_2) == 0x000F30, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Location_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Rotation_2) == 0x000F48, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Rotation_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Scale_2) == 0x000F60, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Scale_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Assign_Length_Total_Length) == 0x000F78, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Assign_Length_Total_Length' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Assign_Length_Scaled_Mesh_Length) == 0x000F80, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Assign_Length_Scaled_Mesh_Length' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Assign_Length_Scale) == 0x000F88, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Assign_Length_Scale' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Assign_Length_Random_Padding) == 0x000F90, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Assign_Length_Random_Padding' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Assign_Length_Random_Scale) == 0x000F94, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Assign_Length_Random_Scale' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_GetLocationAtSplinePoint_ReturnValue) == 0x000F98, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_GetLocationAtSplinePoint_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_MakeStruct_IterationPointData) == 0x000FB0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_MakeStruct_IterationPointData' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_IsEmpty_ReturnValue) == 0x0012A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Add_ReturnValue) == 0x0012A4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Not_PreBool_ReturnValue_2) == 0x0012A8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_MakeStruct_IterationPointData_1) == 0x0012B0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_MakeStruct_IterationPointData_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Location_3) == 0x0015A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Location_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Rotation_3) == 0x0015B8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Rotation_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Scale_3) == 0x0015D0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Scale_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Vector_Distance_ReturnValue) == 0x0015E8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Abs_ReturnValue) == 0x0015F0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0015F8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Get_Distance_Along_Spline_Between_Points_Distance) == 0x001600, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Get_Distance_Along_Spline_Between_Points_Distance' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Get_Curvature_of_Spline_Between_Points_Average_Curvature) == 0x001608, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Get_Curvature_of_Spline_Between_Points_Average_Curvature' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x001610, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_DoubleDouble_ReturnValue_1) == 0x001618, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x001619, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BooleanAND_ReturnValue_1) == 0x00161A, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BooleanAND_ReturnValue_2) == 0x00161B, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Length_ReturnValue_1) == 0x00161C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x001620, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x001624, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x001625, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BooleanAND_ReturnValue_3) == 0x001626, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x001628, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_FFloor_ReturnValue_3) == 0x001630, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_FFloor_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Vector_Distance_ReturnValue_1) == 0x001638, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Vector_Distance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_8) == 0x001640, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Abs_ReturnValue_1) == 0x001648, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_9) == 0x001650, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_DoubleDouble_ReturnValue_2) == 0x001654, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Location_4) == 0x001658, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Location_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Rotation_4) == 0x001670, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Rotation_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Scale_4) == 0x001688, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Scale_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Choose_Next_Mesh_Entry_Mesh_Found) == 0x0016A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Choose_Next_Mesh_Entry_Mesh_Found' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Choose_Next_Mesh_Entry_Point_Data) == 0x0016B0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Choose_Next_Mesh_Entry_Point_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Get_Item) == 0x0019A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_IsEmpty_ReturnValue_1) == 0x001C90, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_IsEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Length_ReturnValue_2) == 0x001C94, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_DoubleDouble_ReturnValue_3) == 0x001C98, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_IntInt_ReturnValue) == 0x001C99, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_RandomFromStream_OutItem) == 0x001CA0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_RandomFromStream_OutItem' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_RandomFromStream_OutIndex) == 0x001F90, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_RandomFromStream_OutIndex' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_IsEmpty_ReturnValue_2) == 0x001F94, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_IsEmpty_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BooleanAND_ReturnValue_4) == 0x001F95, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Get_Item_1) == 0x001FA0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Length_ReturnValue_3) == 0x002290, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Add_ReturnValue_1) == 0x002294, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_IntInt_ReturnValue_1) == 0x002298, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_MakeStruct_IterationPointData_2) == 0x0022A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_MakeStruct_IterationPointData_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Add_ReturnValue_2) == 0x002590, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Get_Item_2) == 0x0025A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Length_ReturnValue_4) == 0x002670, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_IntInt_ReturnValue_2) == 0x002674, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Add_ReturnValue_3) == 0x002678, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_IsValidSoftObjectReference_ReturnValue_1) == 0x00267C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_IsValidSoftObjectReference_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x002680, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x002688, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x002690, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x002698, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_MakeStruct_EntryWidth_ImplicitCast) == 0x0026A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_MakeStruct_EntryWidth_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_MakeStruct_EntryScale_ImplicitCast) == 0x0026A4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_MakeStruct_EntryScale_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_VariableSet_Shortest_Length_ImplicitCast) == 0x0026A8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_VariableSet_Shortest_Length_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x0026B0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, End_Scaled_Mesh_Length) == 0x000350, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::End_Scaled_Mesh_Length' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Mesh_Found_) == 0x000358, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Mesh_Found_' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Iteration_Point_Data) == 0x000360, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Iteration_Point_Data' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, First_Placed) == 0x000680, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::First_Placed' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Last_Placed) == 0x000681, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Last_Placed' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Spline_End_Distance) == 0x000684, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Spline_End_Distance' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Mesh_End_Location) == 0x000688, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Mesh_End_Location' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Mesh_Start_Location) == 0x0006A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Mesh_Start_Location' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_Random_Scale) == 0x0006B8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_Random_Scale' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_Random_Padding) == 0x0006BC, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_Random_Padding' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_Scale) == 0x0006C0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_Scale' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_Scaled_Mesh_Length) == 0x0006C8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_Scaled_Mesh_Length' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_Total_Length) == 0x0006D0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_Total_Length' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Last_is_Placed) == 0x0006D8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Last_is_Placed' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Mesh_Found) == 0x0006D9, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Mesh_Found' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Override_First) == 0x0006DA, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Override_First' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Break_Loop) == 0x0006DB, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Break_Loop' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Shortest_Length) == 0x0006E0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Shortest_Length' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Current_Index) == 0x0006E8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Current_Index' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Shortest_Point_Data) == 0x0006F0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Shortest_Point_Data' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Current_Mesh) == 0x000A10, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Current_Mesh' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Output_Point_Data) == 0x000B10, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Output_Point_Data' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Current_Mesh_List) == 0x000E30, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Current_Mesh_List' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Small_Curve_Point_Data_Array) == 0x000E40, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Small_Curve_Point_Data_Array' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Point_Data_Array) == 0x000E50, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Point_Data_Array' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Variable) == 0x000E60, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue) == 0x000E64, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_bool_Variable) == 0x000E68, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Not_PreBool_ReturnValue) == 0x000E69, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Array_Index_Variable) == 0x000E6C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000E70, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BooleanAND_ReturnValue) == 0x000E71, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Variable_1) == 0x000E74, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_1) == 0x000E78, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Loop_Counter_Variable) == 0x000E7C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_2) == 0x000E80, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Array_Index_Variable_1) == 0x000E84, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_bool_Variable_1) == 0x000E88, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Length_ReturnValue) == 0x000E8C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Not_PreBool_ReturnValue_1) == 0x000E90, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Subtract_IntInt_ReturnValue) == 0x000E94, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000E98, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000EA0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Loop_Counter_Variable_1) == 0x000EA8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_3) == 0x000EAC, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Array_Index_Variable_2) == 0x000EB0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000EB8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_X) == 0x000EC0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Y) == 0x000EC8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Z) == 0x000ED0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000ED8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000EE0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_X_1) == 0x000EE8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Y_1) == 0x000EF0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Z_1) == 0x000EF8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000F00, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Location) == 0x000F08, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Rotation) == 0x000F20, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Scale) == 0x000F38, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_X_2) == 0x000F50, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_X_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Y_2) == 0x000F58, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Y_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Z_2) == 0x000F60, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Z_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000F68, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_X_3) == 0x000F70, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_X_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Y_3) == 0x000F78, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Y_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakVector_Z_3) == 0x000F80, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakVector_Z_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x000F88, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000F90, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_FFloor_ReturnValue) == 0x000F98, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_FFloor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_4) == 0x000F9C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Greater_IntInt_ReturnValue) == 0x000FA0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000FA8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_FFloor_ReturnValue_1) == 0x000FB0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_FFloor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_5) == 0x000FB4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, Temp_int_Loop_Counter_Variable_2) == 0x000FB8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000FBC, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_SelectInt_ReturnValue) == 0x000FC0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_6) == 0x000FC4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000FC8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_FFloor_ReturnValue_2) == 0x000FD0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_FFloor_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_7) == 0x000FD4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Location_1) == 0x000FD8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Location_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Rotation_1) == 0x000FF0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Scale_1) == 0x001008, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Location_2) == 0x001020, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Location_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Rotation_2) == 0x001038, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Rotation_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Scale_2) == 0x001050, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Scale_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Assign_Length_Total_Length) == 0x001068, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Assign_Length_Total_Length' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Assign_Length_Scaled_Mesh_Length) == 0x001070, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Assign_Length_Scaled_Mesh_Length' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Assign_Length_Scale) == 0x001078, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Assign_Length_Scale' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Assign_Length_Random_Padding) == 0x001080, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Assign_Length_Random_Padding' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Assign_Length_Random_Scale) == 0x001084, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Assign_Length_Random_Scale' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_GetLocationAtSplinePoint_ReturnValue) == 0x001088, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_GetLocationAtSplinePoint_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_MakeStruct_IterationPointData) == 0x0010A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_MakeStruct_IterationPointData' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_IsEmpty_ReturnValue) == 0x0013C0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Add_ReturnValue) == 0x0013C4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Not_PreBool_ReturnValue_2) == 0x0013C8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_MakeStruct_IterationPointData_1) == 0x0013D0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_MakeStruct_IterationPointData_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Location_3) == 0x0016F0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Location_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Rotation_3) == 0x001708, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Rotation_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Scale_3) == 0x001720, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Scale_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Vector_Distance_ReturnValue) == 0x001738, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Abs_ReturnValue) == 0x001740, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_DoubleDouble_ReturnValue) == 0x001748, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Get_Distance_Along_Spline_Between_Points_Distance) == 0x001750, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Get_Distance_Along_Spline_Between_Points_Distance' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Get_Curvature_of_Spline_Between_Points_Average_Curvature) == 0x001758, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Get_Curvature_of_Spline_Between_Points_Average_Curvature' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x001760, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_DoubleDouble_ReturnValue_1) == 0x001768, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x001769, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BooleanAND_ReturnValue_1) == 0x00176A, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BooleanAND_ReturnValue_2) == 0x00176B, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Length_ReturnValue_1) == 0x00176C, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x001770, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x001774, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x001775, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BooleanAND_ReturnValue_3) == 0x001776, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x001778, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_FFloor_ReturnValue_3) == 0x001780, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_FFloor_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Vector_Distance_ReturnValue_1) == 0x001788, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Vector_Distance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_8) == 0x001790, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Abs_ReturnValue_1) == 0x001798, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Add_IntInt_ReturnValue_9) == 0x0017A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Add_IntInt_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_DoubleDouble_ReturnValue_2) == 0x0017A4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Location_4) == 0x0017A8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Location_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Rotation_4) == 0x0017C0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Rotation_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BreakTransform_Scale_4) == 0x0017D8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BreakTransform_Scale_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Choose_Next_Mesh_Entry_Mesh_Found) == 0x0017F0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Choose_Next_Mesh_Entry_Mesh_Found' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Choose_Next_Mesh_Entry_Point_Data) == 0x001800, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Choose_Next_Mesh_Entry_Point_Data' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Get_Item) == 0x001B20, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_IsEmpty_ReturnValue_1) == 0x001E40, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_IsEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Length_ReturnValue_2) == 0x001E44, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_DoubleDouble_ReturnValue_3) == 0x001E48, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_IntInt_ReturnValue) == 0x001E49, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_RandomFromStream_OutItem) == 0x001E50, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_RandomFromStream_OutItem' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_RandomFromStream_OutIndex) == 0x002170, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_RandomFromStream_OutIndex' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_IsEmpty_ReturnValue_2) == 0x002174, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_IsEmpty_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_BooleanAND_ReturnValue_4) == 0x002175, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Get_Item_1) == 0x002180, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Length_ReturnValue_3) == 0x0024A0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Add_ReturnValue_1) == 0x0024A4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_IntInt_ReturnValue_1) == 0x0024A8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_MakeStruct_IterationPointData_2) == 0x0024B0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_MakeStruct_IterationPointData_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Add_ReturnValue_2) == 0x0027D0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Get_Item_2) == 0x0027E0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Length_ReturnValue_4) == 0x0028E0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_IntInt_ReturnValue_2) == 0x0028E4, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Array_Add_ReturnValue_3) == 0x0028E8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_IsValidSoftObjectReference_ReturnValue_1) == 0x0028EC, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_IsValidSoftObjectReference_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0028F0, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0028F8, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x002900, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x002908, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_MakeStruct_EntryWidth_ImplicitCast) == 0x002910, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_MakeStruct_EntryWidth_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_MakeStruct_EntryScale_ImplicitCast) == 0x002914, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_MakeStruct_EntryScale_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, K2Node_VariableSet_Shortest_Length_ImplicitCast) == 0x002918, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::K2Node_VariableSet_Shortest_Length_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x002920, "Member 'IterateMeshesAlongSpline_C_Find_Mesh_To_Fit_Area::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function IterateMeshesAlongSpline.IterateMeshesAlongSpline_C.Get Curvature of Spline Between Points
 // 0x0180 (0x0180 - 0x0000)
@@ -1474,7 +1488,7 @@ static_assert(sizeof(IterateMeshesAlongSpline_C_NodeTitleOverride) == 0x000008, 
 static_assert(offsetof(IterateMeshesAlongSpline_C_NodeTitleOverride, ReturnValue) == 0x000000, "Member 'IterateMeshesAlongSpline_C_NodeTitleOverride::ReturnValue' has a wrong offset!");
 
 // Function IterateMeshesAlongSpline.IterateMeshesAlongSpline_C.PointLoopBody
-// 0x0A10 (0x0A10 - 0x0000)
+// 0x0AA0 (0x0AA0 - 0x0000)
 struct IterateMeshesAlongSpline_C_PointLoopBody final
 {
 public:
@@ -1487,29 +1501,29 @@ public:
 	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Mesh_Width;                                        // 0x0270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_278[0x8];                                      // 0x0278(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIterationPointData                    Current_Iteration_Data;                            // 0x0280(0x02F0)(Edit, BlueprintVisible)
-	struct FIterationPointData                    Next_Iteration_Data;                               // 0x0570(0x02F0)(Edit, BlueprintVisible)
-	struct FVector                                Color_Vector;                                      // 0x0860(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Next_Location;                                     // 0x0878(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Current_Location;                                  // 0x0890(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8A8[0x8];                                      // 0x08A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAoCSplineMeshEntry                    Current_Entry;                                     // 0x08B0(0x00D0)(Edit, BlueprintVisible)
-	bool                                          ShouldBend;                                        // 0x0980(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_981[0x3];                                      // 0x0981(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Current_Index;                                     // 0x0984(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Current_Mesh_Path;                                 // 0x0988(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetStringAttribute_ReturnValue;           // 0x0998(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FSoftObjectPath                        CallFunc_MakeSoftObjectPath_ReturnValue;           // 0x09A8(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UObject>                 CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue; // 0x09C8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x09F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            K2Node_DynamicCast_AsStatic_Mesh;                  // 0x09F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0A00(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetBoolAttribute_ReturnValue;             // 0x0A01(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0A02(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0A03(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIterationPointData                    Current_Iteration_Data;                            // 0x0280(0x0320)(Edit, BlueprintVisible)
+	struct FIterationPointData                    Next_Iteration_Data;                               // 0x05A0(0x0320)(Edit, BlueprintVisible)
+	struct FVector                                Color_Vector;                                      // 0x08C0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Next_Location;                                     // 0x08D8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Current_Location;                                  // 0x08F0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_908[0x8];                                      // 0x0908(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCSplineMeshEntry                    Current_Entry;                                     // 0x0910(0x0100)(Edit, BlueprintVisible)
+	bool                                          ShouldBend;                                        // 0x0A10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A11[0x3];                                      // 0x0A11(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Current_Index;                                     // 0x0A14(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Current_Mesh_Path;                                 // 0x0A18(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetStringAttribute_ReturnValue;           // 0x0A28(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FSoftObjectPath                        CallFunc_MakeSoftObjectPath_ReturnValue;           // 0x0A38(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue; // 0x0A58(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0A80(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            K2Node_DynamicCast_AsStatic_Mesh;                  // 0x0A88(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0A90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetBoolAttribute_ReturnValue;             // 0x0A91(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0A92(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0A93(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IterateMeshesAlongSpline_C_PointLoopBody) == 0x000010, "Wrong alignment on IterateMeshesAlongSpline_C_PointLoopBody");
-static_assert(sizeof(IterateMeshesAlongSpline_C_PointLoopBody) == 0x000A10, "Wrong size on IterateMeshesAlongSpline_C_PointLoopBody");
+static_assert(sizeof(IterateMeshesAlongSpline_C_PointLoopBody) == 0x000AA0, "Wrong size on IterateMeshesAlongSpline_C_PointLoopBody");
 static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, InContext) == 0x000000, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::InContext' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, InData) == 0x0000B8, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::InData' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, InPoint) == 0x0000C0, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::InPoint' has a wrong offset!");
@@ -1518,23 +1532,23 @@ static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, OutMetadata) ==
 static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, ReturnValue) == 0x000268, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::ReturnValue' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Mesh_Width) == 0x000270, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Mesh_Width' has a wrong offset!");
 static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Current_Iteration_Data) == 0x000280, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Current_Iteration_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Next_Iteration_Data) == 0x000570, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Next_Iteration_Data' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Color_Vector) == 0x000860, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Color_Vector' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Next_Location) == 0x000878, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Next_Location' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Current_Location) == 0x000890, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Current_Location' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Current_Entry) == 0x0008B0, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Current_Entry' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, ShouldBend) == 0x000980, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::ShouldBend' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Current_Index) == 0x000984, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Current_Index' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Current_Mesh_Path) == 0x000988, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Current_Mesh_Path' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_GetStringAttribute_ReturnValue) == 0x000998, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_GetStringAttribute_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_MakeSoftObjectPath_ReturnValue) == 0x0009A8, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_MakeSoftObjectPath_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue) == 0x0009C8, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x0009F0, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, K2Node_DynamicCast_AsStatic_Mesh) == 0x0009F8, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::K2Node_DynamicCast_AsStatic_Mesh' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, K2Node_DynamicCast_bSuccess) == 0x000A00, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_GetBoolAttribute_ReturnValue) == 0x000A01, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_GetBoolAttribute_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_IsValid_ReturnValue) == 0x000A02, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_Not_PreBool_ReturnValue) == 0x000A03, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Next_Iteration_Data) == 0x0005A0, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Next_Iteration_Data' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Color_Vector) == 0x0008C0, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Color_Vector' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Next_Location) == 0x0008D8, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Next_Location' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Current_Location) == 0x0008F0, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Current_Location' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Current_Entry) == 0x000910, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Current_Entry' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, ShouldBend) == 0x000A10, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::ShouldBend' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Current_Index) == 0x000A14, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Current_Index' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, Current_Mesh_Path) == 0x000A18, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::Current_Mesh_Path' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_GetStringAttribute_ReturnValue) == 0x000A28, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_GetStringAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_MakeSoftObjectPath_ReturnValue) == 0x000A38, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_MakeSoftObjectPath_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue) == 0x000A58, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000A80, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, K2Node_DynamicCast_AsStatic_Mesh) == 0x000A88, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::K2Node_DynamicCast_AsStatic_Mesh' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, K2Node_DynamicCast_bSuccess) == 0x000A90, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_GetBoolAttribute_ReturnValue) == 0x000A91, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_GetBoolAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_IsValid_ReturnValue) == 0x000A92, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(IterateMeshesAlongSpline_C_PointLoopBody, CallFunc_Not_PreBool_ReturnValue) == 0x000A93, "Member 'IterateMeshesAlongSpline_C_PointLoopBody::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 }
 

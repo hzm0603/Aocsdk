@@ -10,20 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "HumanoidMonsterMaster_classes.hpp"
 #include "Engine_structs.hpp"
+#include "HumanoidMonsterMaster_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Laria_LeMonte.Laria_LeMonte_C
-// 0x0010 (0x1DB0 - 0x1DA0)
+// 0x0010 (0x1D70 - 0x1D60)
 class ALaria_LeMonte_C final : public AHumanoidMonsterMaster_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Laria_LeMonte_C;                    // 0x1DA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                 WeaponR;                                           // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Laria_LeMonte_C;                    // 0x1D60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                 WeaponR;                                           // 0x1D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Laria_LeMonte(int32 EntryPoint);
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(ALaria_LeMonte_C) == 0x000010, "Wrong alignment on ALaria_LeMonte_C");
-static_assert(sizeof(ALaria_LeMonte_C) == 0x001DB0, "Wrong size on ALaria_LeMonte_C");
-static_assert(offsetof(ALaria_LeMonte_C, UberGraphFrame_Laria_LeMonte_C) == 0x001DA0, "Member 'ALaria_LeMonte_C::UberGraphFrame_Laria_LeMonte_C' has a wrong offset!");
-static_assert(offsetof(ALaria_LeMonte_C, WeaponR) == 0x001DA8, "Member 'ALaria_LeMonte_C::WeaponR' has a wrong offset!");
+static_assert(sizeof(ALaria_LeMonte_C) == 0x001D70, "Wrong size on ALaria_LeMonte_C");
+static_assert(offsetof(ALaria_LeMonte_C, UberGraphFrame_Laria_LeMonte_C) == 0x001D60, "Member 'ALaria_LeMonte_C::UberGraphFrame_Laria_LeMonte_C' has a wrong offset!");
+static_assert(offsetof(ALaria_LeMonte_C, WeaponR) == 0x001D68, "Member 'ALaria_LeMonte_C::WeaponR' has a wrong offset!");
 
 }
 

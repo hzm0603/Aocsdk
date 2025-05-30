@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "HumanoidMonsterMaster_classes.hpp"
 #include "Engine_structs.hpp"
+#include "HumanoidMonsterMaster_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Longbow.Bandit_Longbow_C
-// 0x0010 (0x1DB0 - 0x1DA0)
+// 0x0010 (0x1D70 - 0x1D60)
 class ABandit_Longbow_C : public AHumanoidMonsterMaster_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Bandit_Longbow_C;                   // 0x1DA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Bandit_Longbow_C;                   // 0x1D60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_Bandit_Longbow(int32 EntryPoint);
@@ -39,8 +39,8 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Longbow_C) == 0x000010, "Wrong alignment on ABandit_Longbow_C");
-static_assert(sizeof(ABandit_Longbow_C) == 0x001DB0, "Wrong size on ABandit_Longbow_C");
-static_assert(offsetof(ABandit_Longbow_C, UberGraphFrame_Bandit_Longbow_C) == 0x001DA0, "Member 'ABandit_Longbow_C::UberGraphFrame_Bandit_Longbow_C' has a wrong offset!");
+static_assert(sizeof(ABandit_Longbow_C) == 0x001D70, "Wrong size on ABandit_Longbow_C");
+static_assert(offsetof(ABandit_Longbow_C, UberGraphFrame_Bandit_Longbow_C) == 0x001D60, "Member 'ABandit_Longbow_C::UberGraphFrame_Bandit_Longbow_C' has a wrong offset!");
 
 }
 

@@ -17,59 +17,53 @@
 namespace SDK
 {
 
-// Function WBP_Accordion.WBP_Accordion_C.ExecuteUbergraph_WBP_Accordion
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_Accordion.WBP_Accordion_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Accordion_C::ExecuteUbergraph_WBP_Accordion(int32 EntryPoint)
+void UWBP_Accordion_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Accordion_C", "ExecuteUbergraph_WBP_Accordion");
+		Func = Class->GetFunction("WBP_Accordion_C", "PreConstruct");
 
-	Params::WBP_Accordion_C_ExecuteUbergraph_WBP_Accordion Parms{};
+	Params::WBP_Accordion_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Accordion.WBP_Accordion_C.GetBreadcrumbWidget
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function WBP_Accordion.WBP_Accordion_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-class UWidget* UWBP_Accordion_C::GetBreadcrumbWidget()
+void UWBP_Accordion_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Accordion_C", "GetBreadcrumbWidget");
+		Func = Class->GetFunction("WBP_Accordion_C", "OnInitialized");
 
-	Params::WBP_Accordion_C_GetBreadcrumbWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Accordion.WBP_Accordion_C.GetButtonContainer
+// Function WBP_Accordion.WBP_Accordion_C.GetOddButtonStyle
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// TSubclassOf<class UCommonButtonStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
-class UPanelWidget* UWBP_Accordion_C::GetButtonContainer()
+TSubclassOf<class UCommonButtonStyle> UWBP_Accordion_C::GetOddButtonStyle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Accordion_C", "GetButtonContainer");
+		Func = Class->GetFunction("WBP_Accordion_C", "GetOddButtonStyle");
 
-	Params::WBP_Accordion_C_GetButtonContainer Parms{};
+	Params::WBP_Accordion_C_GetOddButtonStyle Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -97,19 +91,19 @@ TSubclassOf<class UCommonButtonStyle> UWBP_Accordion_C::GetEvenButtonStyle()
 }
 
 
-// Function WBP_Accordion.WBP_Accordion_C.GetOddButtonStyle
+// Function WBP_Accordion.WBP_Accordion_C.GetButtonContainer
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TSubclassOf<class UCommonButtonStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-TSubclassOf<class UCommonButtonStyle> UWBP_Accordion_C::GetOddButtonStyle()
+class UPanelWidget* UWBP_Accordion_C::GetButtonContainer()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Accordion_C", "GetOddButtonStyle");
+		Func = Class->GetFunction("WBP_Accordion_C", "GetButtonContainer");
 
-	Params::WBP_Accordion_C_GetOddButtonStyle Parms{};
+	Params::WBP_Accordion_C_GetButtonContainer Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -117,35 +111,41 @@ TSubclassOf<class UCommonButtonStyle> UWBP_Accordion_C::GetOddButtonStyle()
 }
 
 
-// Function WBP_Accordion.WBP_Accordion_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_Accordion.WBP_Accordion_C.GetBreadcrumbWidget
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Accordion_C::OnInitialized()
+class UWidget* UWBP_Accordion_C::GetBreadcrumbWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Accordion_C", "OnInitialized");
+		Func = Class->GetFunction("WBP_Accordion_C", "GetBreadcrumbWidget");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_Accordion_C_GetBreadcrumbWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
-// Function WBP_Accordion.WBP_Accordion_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_Accordion.WBP_Accordion_C.ExecuteUbergraph_WBP_Accordion
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Accordion_C::PreConstruct(bool IsDesignTime)
+void UWBP_Accordion_C::ExecuteUbergraph_WBP_Accordion(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Accordion_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_Accordion_C", "ExecuteUbergraph_WBP_Accordion");
 
-	Params::WBP_Accordion_C_PreConstruct Parms{};
+	Params::WBP_Accordion_C_ExecuteUbergraph_WBP_Accordion Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

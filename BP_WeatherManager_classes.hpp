@@ -10,11 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "Struct_BiomeClimate_structs.hpp"
 #include "STRUCT_SingularClimateData_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
+#include "E_Weather_FogCondition_structs.hpp"
+#include "E_Weather_HumidityCondition_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "E_WeatherType_structs.hpp"
-#include "STRUCT_CloudParameters_structs.hpp"
+#include "E_Weather_SnowCondition_structs.hpp"
+#include "E_Weather_RainCondition_structs.hpp"
+#include "E_Weather_WindCondition_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -22,81 +25,72 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_WeatherManager.BP_WeatherManager_C
-// 0x0448 (0x0790 - 0x0348)
+// 0x0148 (0x0490 - 0x0348)
 class ABP_WeatherManager_C final : public AActor
 {
 public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             BiomeClimateData;                                  // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Row_Name;                                          // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Row_Name_0;                                        // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStruct_BiomeClimate                   Biome_Data_Struct;                                 // 0x0368(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FSTRUCT_SingularClimateData            Singular_Biome_Climate;                            // 0x03D8(0x0030)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Should_Weather_Occur;                              // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Should_Precipitate;                                // 0x0409(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40A[0x6];                                      // 0x040A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Current_Temp;                                      // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Current_Month;                                     // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Min_Temp;                                          // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Max_Temp;                                          // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRandomStream                          RandomStream;                                      // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor)
-	double                                        Temp_Offset_Range;                                 // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Precip_Inches_Offset;                              // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Sunshine_Hours_Offset;                             // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Chance_of_Rain_Offset;                             // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Chance_Of_Rain;                                    // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Precipitation;                                     // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Weather_Decision_Made;                             // 0x0468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_469[0x7];                                      // 0x0469(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<E_WeatherType, class UBPDA_CloudPreset_C*> WeatherPresets;                                    // 0x0470(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class FText>                           Weather_Conditions;                                // 0x04C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   Current_Weather_Condition;                         // 0x04D0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UTexture2D*                             WeatherMapTexture;                                 // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class UBPDA_CloudPreset_C*>            CloudTypeArray;                                    // 0x04F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UBPDA_CloudPreset_C*                    CloudA;                                            // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UBPDA_CloudPreset_C*                    CloudB;                                            // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UBPDA_CloudPreset_C*                    CloudFinalOutput;                                  // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                Cloud_Struct;                                      // 0x0518(0x0190)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Random_Weather_Noise_Influence;                    // 0x06A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Weather_Fluctuation_Speed;                         // 0x06B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Cloud_Vis;                                         // 0x06B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6B9[0x7];                                      // 0x06B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, struct FSTRUCT_CloudParameters> CloudPack;                                         // 0x06C0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UBPDA_CloudPreset_C*                    Target;                                            // 0x0710(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        Dew_Point;                                         // 0x0718(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Normalized_Temp;                                   // 0x0720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Wetness;                                           // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Normalized_DewPoint;                               // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LocalFog;                                          // 0x0738(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UVerraGlobalSkyCloudScenario*           CloudTestA;                                        // 0x0740(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UVerraGlobalSkyCloudScenario*           CloudTestB;                                        // 0x0748(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<double>                                Biome_Data_Struct_Degrees_Day;                     // 0x0750(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 Biome_Data_Struct_Sunshine_Hours;                  // 0x0760(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UVerraGlobalSkyCloudScenario*           CloudTestC;                                        // 0x0770(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UVerraGlobalSkyCloudScenario*           CloudTestD;                                        // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UVerraGlobalSkyCloudScenario*           CloudTestE;                                        // 0x0780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UVerraGlobalSkyCloudScenario*           CloudTestF;                                        // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_SingularClimateData            Singular_Biome_Climate;                            // 0x0350(0x0030)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Current_Month;                                     // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Min_Temp;                                          // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Max_Temp;                                          // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_Offset_Range;                                 // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Precip_Inches_Offset;                              // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Sunshine_Hours_Offset;                             // 0x03A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3AC[0x4];                                      // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Chance_of_Rain_Offset;                             // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Weather_Fluctuation_Speed;                         // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Temp;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wetness;                                           // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<double>                                Biome_Data_Struct_Degrees_Day;                     // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 Biome_Data_Struct_Sunshine_Hours;                  // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<EBiomeType, struct FVector2D>            Biome_StartPeak;                                   // 0x03F0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        FreezingPoint;                                     // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LightnightThreshold;                               // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Raining;                                           // 0x0450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Did_Rain;                                          // 0x0451(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Snowing;                                           // 0x0452(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Did_Snow;                                          // 0x0453(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_RainCondition                       RainCondition;                                     // 0x0454(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_SnowCondition                       SnowCondition;                                     // 0x0455(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_WindCondition                       WindCondition;                                     // 0x0456(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_HumidityCondition                   HumidityCondition;                                 // 0x0457(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PrecipTimer;                                       // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_FogCondition                        FogCondition;                                      // 0x0460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_461[0x7];                                      // 0x0461(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Amount_Of_Precipitation;                           // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WetnessForTempCalc;                                // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RetHumidity;                                       // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LightningMOD;                                      // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TempInF;                                           // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Add_Global_Noise_To_Climate(const struct FSingleDayClimate& Singular_Day_Climate, double TOD_for_Curves, double In_TOY_in_hours, double* Current_Temp_0, double* Amount_of_Precipitation, double* Current_Humidity);
-	void Calculate_Dew_Point(double Current_Temp_0, double Current_Humidity, double* DewPoint);
-	double Calculate_Weness(double Precipitation_0);
-	void Cloud_DA_to_Struct(class UBPDA_CloudPreset_C* Cloud_DA_in, struct FSTRUCT_CloudParameters* StructOut);
-	struct FVerraGlobalSkyVolumetricCloudSettings Cloud_Logic(double Humidity, double Chance_Of_Precipitation, double* DEBUG_Alpha_for_Blend, bool* Cloud_Vis_0, struct FSTRUCT_CloudParameters* StructOut);
-	int32 Determine_Month(double In_Year);
-	void LERP_Clouds(class UBPDA_CloudPreset_C* Clouds_1, class UBPDA_CloudPreset_C* Clouds_2, double ALPHA, class UBPDA_CloudPreset_C* Cloud_Blend, const struct FSTRUCT_CloudParameters& Cloud_Struct_IN, bool because_im_lazy_and_i_said_so, class UBPDA_CloudPreset_C** OutputPin, struct FSTRUCT_CloudParameters* Cloud_Struct_0);
-	void LERP_Clouds2(double ALPHA, const TMap<class FString, struct FSTRUCT_CloudParameters>& CloudPack_0, int32 Cloud_A_Index, int32 Cloud_B_Index, bool Use_Previous_Struct, const struct FSTRUCT_CloudParameters& Previous_Cloud_Blend, struct FSTRUCT_CloudParameters* StructOut);
-	void NatrualLog(double Target_Number);
-	void Precip_Logic(const struct FSTRUCT_SingularClimateData& Singular_Biome_Climate_0, double Current_Temp_0, double Current_AMOUNT_of_Precip, double Current_Humidity, class UBPDA_CloudPreset_C** Value, struct FSTRUCT_SingularClimateData* Singular_Biome_Climate1, class FText* Output_Get, bool* Should_Precipitate_0);
-	void Random_Chance_Of_Precip(double In_Float, double In_TOY_in_hours, double* Post_Noise);
-	void Reset_Temp_Test();
-	TMap<class FName, float> Run_Weather_BP_Functions(const struct FSingleDayClimate& Singular_Day_Climate, double TOD_for_Curves, double In_TOY_in_hours, bool OverridePrecip, bool OverrideHumidity, double* NormalizePrecipitation, double* NormalizedTemperature, double* Humidity, double* DewPoint, double* DEBUG_CurrentTemp, double* DEBUG_Precipitation_Amount, double* DEBUG_CurrentHumidity, bool* Cloud_Vis_0, struct FSTRUCT_CloudParameters* StructOut, struct FVerraGlobalSkyVolumetricCloudSettings* CloudScenarioStructOut);
-	void Select_Cloud_Set();
-	void Set_Days_Climate_Data(const struct FStruct_BiomeClimate& Biome_Data_Struct_0, double* Min, double* Max, struct FSTRUCT_SingularClimateData* StructOut);
+	void Absolute_Humidity(double Normalized_Temp_0, double Humidity, double* Dew_Pont);
+	void Assign_Fog_Condition(double Fog_in, E_Weather_FogCondition* FogCondition_0);
+	void Assign_Humidity_Condition(double Humidity, E_Weather_HumidityCondition* HumidityCondition_0);
+	void Assign_Precipitation_Condition(double Precipitation, double Temperature, E_Weather_RainCondition* RainCondition_0, E_Weather_SnowCondition* SnowCondition_0);
+	void Assign_Weather_Conditions(double Temperature, double Precipitation, double Humidity, double Fog, double Wind_Speed, E_Weather_RainCondition* RainCondition_0, E_Weather_SnowCondition* SnowCondition_0, E_Weather_WindCondition* WindCondition_0, E_Weather_HumidityCondition* HumidityCondition_0, E_Weather_FogCondition* FogCondition_0);
+	void Assign_Wind_Condition(double WindSpeed, E_Weather_WindCondition* WindCondition_0);
+	void Calculate_Dew_Point(double Normalized_Temp_0, double Current_Humidity, double Wetness_0, double* NormalizedDewPoint);
+	double Calculate_Humidity(double Humidity, double In_Time_of_Year_in_hours, double Wetness_0, double Normalized_Temp_0, double* RetHumidity_0);
+	void Calculate_Precipitation(EBiomeType Current_Biome, double Chance_Of_Precipitation, double In_TOY_in_hours, double In_Precip_Amount, double* Amount_Of_Precipitation_0);
+	void Calculate_Saturation_Point(double Temp);
+	void Calculate_Temperature(double Time_Of_Day_2400, EBiomeType Current_Biome, double Degrees_Low, double Degrees_High, double Normalized_Altitude, double In_Time_of_Year_in_hours, double AmountPrecip, double DeltaT, double* Current_Temp, double* Modified_Normalized_Temp, double* NonModified_Normalized_Temp);
+	void Calculate_Weather(const struct FSingleDayClimate& In_Climate, double Time_Of_Day_2400, double In_Time_of_Year_in_hours, EBiomeType Current_Biome, bool bOverrideTemp, bool bOverridePrecip, bool bOverrideHumidity, bool bOverrideFog, double Local_FogIn, double Delta_Seconds, double* Normalized_Temp_Return, double* Amount_of_Precip_Return, double* Humidity_Return, double* Normalized_DewPoint_Return, double* Wetness_Return, double* Local_Fog_Return, double* Cloud_Lerp_Return);
+	void Calculate_Wetness(double Precipitation, double Normalized_Temp_0, double Wetness_0, double* WetnessRet);
+	void CalculateCloudLerp(double Humidity, double Normalized_Precip, int32 Sunshine_Hours, double* Cloud_Lerp);
+	void CalculateLocalFog(double Normalized_DewPoint, double Normalized_Temperature, double* Local_Fog);
+	void CalculateShouldLighting(bool* CouldLightning);
+	double GaussianCurve(const struct FVector2D& Start_Peak, double Time);
+	void Get_0_1_TimeOfDay_Normalized(double Value, double* Zero_1_Time_of_Day_Normalized);
+	void GetBiomeNormalizedPrecipAmount(EBiomeType Current_Biome, double In_Precip, double* Normalized_Precip_Amount_For_Biome);
+	void Random_Weather_Flucuations(double In_Float, double In_Time_of_Year_in_hours, double* Post_Noise);
+	double S_Curve_For_Temp(const struct FVector2D& Start_Peak, double Time);
+	void Set_Days_Climate_Data(const struct FStruct_BiomeClimate& Biome_Data_Struct, double* Min, double* Max, struct FSTRUCT_SingularClimateData* StructOut);
+	void UpdateMPC();
 	void UserConstructionScript();
-	void WeatherOffsetMap();
 
 public:
 	static class UClass* StaticClass()
@@ -109,54 +103,39 @@ public:
 	}
 };
 static_assert(alignof(ABP_WeatherManager_C) == 0x000008, "Wrong alignment on ABP_WeatherManager_C");
-static_assert(sizeof(ABP_WeatherManager_C) == 0x000790, "Wrong size on ABP_WeatherManager_C");
+static_assert(sizeof(ABP_WeatherManager_C) == 0x000490, "Wrong size on ABP_WeatherManager_C");
 static_assert(offsetof(ABP_WeatherManager_C, DefaultSceneRoot) == 0x000348, "Member 'ABP_WeatherManager_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, BiomeClimateData) == 0x000350, "Member 'ABP_WeatherManager_C::BiomeClimateData' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Row_Name) == 0x000358, "Member 'ABP_WeatherManager_C::Row_Name' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Row_Name_0) == 0x000360, "Member 'ABP_WeatherManager_C::Row_Name_0' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Biome_Data_Struct) == 0x000368, "Member 'ABP_WeatherManager_C::Biome_Data_Struct' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Singular_Biome_Climate) == 0x0003D8, "Member 'ABP_WeatherManager_C::Singular_Biome_Climate' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Should_Weather_Occur) == 0x000408, "Member 'ABP_WeatherManager_C::Should_Weather_Occur' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Should_Precipitate) == 0x000409, "Member 'ABP_WeatherManager_C::Should_Precipitate' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Current_Temp) == 0x000410, "Member 'ABP_WeatherManager_C::Current_Temp' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Current_Month) == 0x000418, "Member 'ABP_WeatherManager_C::Current_Month' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Min_Temp) == 0x000420, "Member 'ABP_WeatherManager_C::Min_Temp' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Max_Temp) == 0x000428, "Member 'ABP_WeatherManager_C::Max_Temp' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, RandomStream) == 0x000430, "Member 'ABP_WeatherManager_C::RandomStream' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Temp_Offset_Range) == 0x000438, "Member 'ABP_WeatherManager_C::Temp_Offset_Range' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Precip_Inches_Offset) == 0x000440, "Member 'ABP_WeatherManager_C::Precip_Inches_Offset' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Sunshine_Hours_Offset) == 0x000448, "Member 'ABP_WeatherManager_C::Sunshine_Hours_Offset' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Chance_of_Rain_Offset) == 0x000450, "Member 'ABP_WeatherManager_C::Chance_of_Rain_Offset' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Chance_Of_Rain) == 0x000458, "Member 'ABP_WeatherManager_C::Chance_Of_Rain' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Precipitation) == 0x000460, "Member 'ABP_WeatherManager_C::Precipitation' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Weather_Decision_Made) == 0x000468, "Member 'ABP_WeatherManager_C::Weather_Decision_Made' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, WeatherPresets) == 0x000470, "Member 'ABP_WeatherManager_C::WeatherPresets' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Weather_Conditions) == 0x0004C0, "Member 'ABP_WeatherManager_C::Weather_Conditions' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Current_Weather_Condition) == 0x0004D0, "Member 'ABP_WeatherManager_C::Current_Weather_Condition' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, WeatherMapTexture) == 0x0004E8, "Member 'ABP_WeatherManager_C::WeatherMapTexture' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudTypeArray) == 0x0004F0, "Member 'ABP_WeatherManager_C::CloudTypeArray' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudA) == 0x000500, "Member 'ABP_WeatherManager_C::CloudA' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudB) == 0x000508, "Member 'ABP_WeatherManager_C::CloudB' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudFinalOutput) == 0x000510, "Member 'ABP_WeatherManager_C::CloudFinalOutput' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Cloud_Struct) == 0x000518, "Member 'ABP_WeatherManager_C::Cloud_Struct' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Random_Weather_Noise_Influence) == 0x0006A8, "Member 'ABP_WeatherManager_C::Random_Weather_Noise_Influence' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Weather_Fluctuation_Speed) == 0x0006B0, "Member 'ABP_WeatherManager_C::Weather_Fluctuation_Speed' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Cloud_Vis) == 0x0006B8, "Member 'ABP_WeatherManager_C::Cloud_Vis' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudPack) == 0x0006C0, "Member 'ABP_WeatherManager_C::CloudPack' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Target) == 0x000710, "Member 'ABP_WeatherManager_C::Target' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Dew_Point) == 0x000718, "Member 'ABP_WeatherManager_C::Dew_Point' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Normalized_Temp) == 0x000720, "Member 'ABP_WeatherManager_C::Normalized_Temp' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Wetness) == 0x000728, "Member 'ABP_WeatherManager_C::Wetness' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Normalized_DewPoint) == 0x000730, "Member 'ABP_WeatherManager_C::Normalized_DewPoint' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, LocalFog) == 0x000738, "Member 'ABP_WeatherManager_C::LocalFog' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudTestA) == 0x000740, "Member 'ABP_WeatherManager_C::CloudTestA' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudTestB) == 0x000748, "Member 'ABP_WeatherManager_C::CloudTestB' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Biome_Data_Struct_Degrees_Day) == 0x000750, "Member 'ABP_WeatherManager_C::Biome_Data_Struct_Degrees_Day' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, Biome_Data_Struct_Sunshine_Hours) == 0x000760, "Member 'ABP_WeatherManager_C::Biome_Data_Struct_Sunshine_Hours' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudTestC) == 0x000770, "Member 'ABP_WeatherManager_C::CloudTestC' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudTestD) == 0x000778, "Member 'ABP_WeatherManager_C::CloudTestD' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudTestE) == 0x000780, "Member 'ABP_WeatherManager_C::CloudTestE' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherManager_C, CloudTestF) == 0x000788, "Member 'ABP_WeatherManager_C::CloudTestF' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Singular_Biome_Climate) == 0x000350, "Member 'ABP_WeatherManager_C::Singular_Biome_Climate' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Current_Month) == 0x000380, "Member 'ABP_WeatherManager_C::Current_Month' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Min_Temp) == 0x000388, "Member 'ABP_WeatherManager_C::Min_Temp' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Max_Temp) == 0x000390, "Member 'ABP_WeatherManager_C::Max_Temp' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Temp_Offset_Range) == 0x000398, "Member 'ABP_WeatherManager_C::Temp_Offset_Range' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Precip_Inches_Offset) == 0x0003A0, "Member 'ABP_WeatherManager_C::Precip_Inches_Offset' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Sunshine_Hours_Offset) == 0x0003A8, "Member 'ABP_WeatherManager_C::Sunshine_Hours_Offset' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Chance_of_Rain_Offset) == 0x0003B0, "Member 'ABP_WeatherManager_C::Chance_of_Rain_Offset' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Weather_Fluctuation_Speed) == 0x0003B8, "Member 'ABP_WeatherManager_C::Weather_Fluctuation_Speed' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Normalized_Temp) == 0x0003C0, "Member 'ABP_WeatherManager_C::Normalized_Temp' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Wetness) == 0x0003C8, "Member 'ABP_WeatherManager_C::Wetness' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Biome_Data_Struct_Degrees_Day) == 0x0003D0, "Member 'ABP_WeatherManager_C::Biome_Data_Struct_Degrees_Day' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Biome_Data_Struct_Sunshine_Hours) == 0x0003E0, "Member 'ABP_WeatherManager_C::Biome_Data_Struct_Sunshine_Hours' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Biome_StartPeak) == 0x0003F0, "Member 'ABP_WeatherManager_C::Biome_StartPeak' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, FreezingPoint) == 0x000440, "Member 'ABP_WeatherManager_C::FreezingPoint' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, LightnightThreshold) == 0x000448, "Member 'ABP_WeatherManager_C::LightnightThreshold' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Raining) == 0x000450, "Member 'ABP_WeatherManager_C::Raining' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Did_Rain) == 0x000451, "Member 'ABP_WeatherManager_C::Did_Rain' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Snowing) == 0x000452, "Member 'ABP_WeatherManager_C::Snowing' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Did_Snow) == 0x000453, "Member 'ABP_WeatherManager_C::Did_Snow' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, RainCondition) == 0x000454, "Member 'ABP_WeatherManager_C::RainCondition' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, SnowCondition) == 0x000455, "Member 'ABP_WeatherManager_C::SnowCondition' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, WindCondition) == 0x000456, "Member 'ABP_WeatherManager_C::WindCondition' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, HumidityCondition) == 0x000457, "Member 'ABP_WeatherManager_C::HumidityCondition' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, PrecipTimer) == 0x000458, "Member 'ABP_WeatherManager_C::PrecipTimer' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, FogCondition) == 0x000460, "Member 'ABP_WeatherManager_C::FogCondition' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, Amount_Of_Precipitation) == 0x000468, "Member 'ABP_WeatherManager_C::Amount_Of_Precipitation' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, WetnessForTempCalc) == 0x000470, "Member 'ABP_WeatherManager_C::WetnessForTempCalc' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, RetHumidity) == 0x000478, "Member 'ABP_WeatherManager_C::RetHumidity' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, LightningMOD) == 0x000480, "Member 'ABP_WeatherManager_C::LightningMOD' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherManager_C, TempInF) == 0x000488, "Member 'ABP_WeatherManager_C::TempInF' has a wrong offset!");
 
 }
 

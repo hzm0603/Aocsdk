@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Wanick_the_Cutpurse.Wanick_the_Cutpurse_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class AWanick_the_Cutpurse_C final : public ABandit_Rogue_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AWanick_the_Cutpurse_C) == 0x000010, "Wrong alignment on AWanick_the_Cutpurse_C");
-static_assert(sizeof(AWanick_the_Cutpurse_C) == 0x001DB0, "Wrong size on AWanick_the_Cutpurse_C");
+static_assert(sizeof(AWanick_the_Cutpurse_C) == 0x001D70, "Wrong size on AWanick_the_Cutpurse_C");
 
 }
 

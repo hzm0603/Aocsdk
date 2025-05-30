@@ -21,42 +21,42 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass PC_Ballista_AnimBP.PC_Ballista_AnimBP_C
-// 0x0C00 (0x1CE0 - 0x10E0)
+// 0x0C00 (0x1CF0 - 0x10F0)
 #pragma pack(push, 0x1)
 class alignas(0x10) UPC_Ballista_AnimBP_C : public UAoCAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x10E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct PC_Ballista_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;           // 0x10E8(0x0010)(HasGetValueTypeHash)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x10F8(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1100(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1108(0x0020)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x1128(0x00F0)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x1218(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x1260(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x12E0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x1308(0x0028)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x1330(0x0070)()
-	struct FAnimNode_TwoBoneIK                    AnimGraphNode_TwoBoneIK_1;                         // 0x13A0(0x0280)()
-	struct FAnimNode_HandIKRetargeting            AnimGraphNode_HandIKRetargeting;                   // 0x1620(0x0120)()
-	struct FAnimNode_TwoBoneIK                    AnimGraphNode_TwoBoneIK;                           // 0x1740(0x0280)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_1;             // 0x19C0(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_1;             // 0x19E0(0x0020)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x1A00(0x0080)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x1A80(0x0128)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1BA8(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x1BC8(0x0020)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x1BE8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x1C10(0x0028)()
-	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x1C38(0x0048)()
-	uint8                                         WeaponState;                                       // 0x1C80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C81[0x7];                                     // 0x1C81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Pitch;                                             // 0x1C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Yaw;                                               // 0x1C90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Hand_Favoring;                                     // 0x1C98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Hand_IKWeight;                                     // 0x1CA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ik_hand_l_effector;                                // 0x1CA8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ik_hand_r_effector;                                // 0x1CC0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x10F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct PC_Ballista_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;           // 0x10F8(0x0010)(HasGetValueTypeHash)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x1108(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1110(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1118(0x0020)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x1138(0x00F0)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x1228(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x1270(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x12F0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x1318(0x0028)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x1340(0x0070)()
+	struct FAnimNode_TwoBoneIK                    AnimGraphNode_TwoBoneIK_1;                         // 0x13B0(0x0280)()
+	struct FAnimNode_HandIKRetargeting            AnimGraphNode_HandIKRetargeting;                   // 0x1630(0x0120)()
+	struct FAnimNode_TwoBoneIK                    AnimGraphNode_TwoBoneIK;                           // 0x1750(0x0280)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_1;             // 0x19D0(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_1;             // 0x19F0(0x0020)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x1A10(0x0080)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x1A90(0x0128)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1BB8(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x1BD8(0x0020)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x1BF8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x1C20(0x0028)()
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x1C48(0x0048)()
+	uint8                                         WeaponState;                                       // 0x1C90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C91[0x7];                                     // 0x1C91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Pitch;                                             // 0x1C98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Yaw;                                               // 0x1CA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Hand_Favoring;                                     // 0x1CA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Hand_IKWeight;                                     // 0x1CB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ik_hand_l_effector;                                // 0x1CB8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ik_hand_r_effector;                                // 0x1CD0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -75,37 +75,37 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(UPC_Ballista_AnimBP_C) == 0x000010, "Wrong alignment on UPC_Ballista_AnimBP_C");
-static_assert(sizeof(UPC_Ballista_AnimBP_C) == 0x001CE0, "Wrong size on UPC_Ballista_AnimBP_C");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, UberGraphFrame) == 0x0010E0, "Member 'UPC_Ballista_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, __AnimBlueprintMutables) == 0x0010E8, "Member 'UPC_Ballista_AnimBP_C::__AnimBlueprintMutables' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimBlueprintExtension_PropertyAccess) == 0x0010F8, "Member 'UPC_Ballista_AnimBP_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimBlueprintExtension_Base) == 0x001100, "Member 'UPC_Ballista_AnimBP_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_Root) == 0x001108, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_LayeredBoneBlend) == 0x001128, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_SequencePlayer) == 0x001218, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_SaveCachedPose_1) == 0x001260, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_UseCachedPose_3) == 0x0012E0, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_UseCachedPose_2) == 0x001308, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_BlendSpacePlayer) == 0x001330, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_TwoBoneIK_1) == 0x0013A0, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_TwoBoneIK_1' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_HandIKRetargeting) == 0x001620, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_HandIKRetargeting' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_TwoBoneIK) == 0x001740, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_TwoBoneIK' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_LocalToComponentSpace_1) == 0x0019C0, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_ComponentToLocalSpace_1) == 0x0019E0, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_SaveCachedPose) == 0x001A00, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_ModifyBone) == 0x001A80, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x001BA8, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x001BC8, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_UseCachedPose_1) == 0x001BE8, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_UseCachedPose) == 0x001C10, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_BlendListByEnum) == 0x001C38, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_BlendListByEnum' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, WeaponState) == 0x001C80, "Member 'UPC_Ballista_AnimBP_C::WeaponState' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, Pitch) == 0x001C88, "Member 'UPC_Ballista_AnimBP_C::Pitch' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, Yaw) == 0x001C90, "Member 'UPC_Ballista_AnimBP_C::Yaw' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, Hand_Favoring) == 0x001C98, "Member 'UPC_Ballista_AnimBP_C::Hand_Favoring' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, Hand_IKWeight) == 0x001CA0, "Member 'UPC_Ballista_AnimBP_C::Hand_IKWeight' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, ik_hand_l_effector) == 0x001CA8, "Member 'UPC_Ballista_AnimBP_C::ik_hand_l_effector' has a wrong offset!");
-static_assert(offsetof(UPC_Ballista_AnimBP_C, ik_hand_r_effector) == 0x001CC0, "Member 'UPC_Ballista_AnimBP_C::ik_hand_r_effector' has a wrong offset!");
+static_assert(sizeof(UPC_Ballista_AnimBP_C) == 0x001CF0, "Wrong size on UPC_Ballista_AnimBP_C");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, UberGraphFrame) == 0x0010F0, "Member 'UPC_Ballista_AnimBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, __AnimBlueprintMutables) == 0x0010F8, "Member 'UPC_Ballista_AnimBP_C::__AnimBlueprintMutables' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimBlueprintExtension_PropertyAccess) == 0x001108, "Member 'UPC_Ballista_AnimBP_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimBlueprintExtension_Base) == 0x001110, "Member 'UPC_Ballista_AnimBP_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_Root) == 0x001118, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_LayeredBoneBlend) == 0x001138, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_SequencePlayer) == 0x001228, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_SaveCachedPose_1) == 0x001270, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_UseCachedPose_3) == 0x0012F0, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_UseCachedPose_2) == 0x001318, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_BlendSpacePlayer) == 0x001340, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_TwoBoneIK_1) == 0x0013B0, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_TwoBoneIK_1' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_HandIKRetargeting) == 0x001630, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_HandIKRetargeting' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_TwoBoneIK) == 0x001750, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_TwoBoneIK' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_LocalToComponentSpace_1) == 0x0019D0, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_ComponentToLocalSpace_1) == 0x0019F0, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_SaveCachedPose) == 0x001A10, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_ModifyBone) == 0x001A90, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_ModifyBone' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x001BB8, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x001BD8, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_UseCachedPose_1) == 0x001BF8, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_UseCachedPose) == 0x001C20, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, AnimGraphNode_BlendListByEnum) == 0x001C48, "Member 'UPC_Ballista_AnimBP_C::AnimGraphNode_BlendListByEnum' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, WeaponState) == 0x001C90, "Member 'UPC_Ballista_AnimBP_C::WeaponState' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, Pitch) == 0x001C98, "Member 'UPC_Ballista_AnimBP_C::Pitch' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, Yaw) == 0x001CA0, "Member 'UPC_Ballista_AnimBP_C::Yaw' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, Hand_Favoring) == 0x001CA8, "Member 'UPC_Ballista_AnimBP_C::Hand_Favoring' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, Hand_IKWeight) == 0x001CB0, "Member 'UPC_Ballista_AnimBP_C::Hand_IKWeight' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, ik_hand_l_effector) == 0x001CB8, "Member 'UPC_Ballista_AnimBP_C::ik_hand_l_effector' has a wrong offset!");
+static_assert(offsetof(UPC_Ballista_AnimBP_C, ik_hand_r_effector) == 0x001CD0, "Member 'UPC_Ballista_AnimBP_C::ik_hand_r_effector' has a wrong offset!");
 
 }
 

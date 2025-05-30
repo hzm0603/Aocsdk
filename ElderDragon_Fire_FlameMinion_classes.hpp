@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameSystemsPlugin_structs.hpp"
 #include "Engine_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
 #include "NPCPawn_classes.hpp"
 
 
@@ -19,17 +19,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ElderDragon_Fire_FlameMinion.ElderDragon_Fire_FlameMinion_C
-// 0x0050 (0x1DE0 - 0x1D90)
+// 0x0050 (0x1DA0 - 0x1D50)
 class AElderDragon_Fire_FlameMinion_C final : public ANPCPawn_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_ElderDragon_Fire_FlameMinion_C;     // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      FX_CFX;                                            // 0x1D98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      FX_FlamePatch_Channel;                             // 0x1DA0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      FX_FlameMinion_Spawn;                              // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1DB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AElderDragon_Fire_FlamePatch_C*         AssociatedFlamePatch;                              // 0x1DB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FAbilityHitId                          AbsorbedHit;                                       // 0x1DC0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_ElderDragon_Fire_FlameMinion_C;     // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      FX_CFX;                                            // 0x1D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      FX_FlamePatch_Channel;                             // 0x1D60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      FX_FlameMinion_Spawn;                              // 0x1D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AElderDragon_Fire_FlamePatch_C*         AssociatedFlamePatch;                              // 0x1D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FAbilityHitId                          AbsorbedHit;                                       // 0x1D80(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Absorbed(class ABaseCharacter* Owner_Dragon);
@@ -49,14 +49,14 @@ public:
 	}
 };
 static_assert(alignof(AElderDragon_Fire_FlameMinion_C) == 0x000010, "Wrong alignment on AElderDragon_Fire_FlameMinion_C");
-static_assert(sizeof(AElderDragon_Fire_FlameMinion_C) == 0x001DE0, "Wrong size on AElderDragon_Fire_FlameMinion_C");
-static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, UberGraphFrame_ElderDragon_Fire_FlameMinion_C) == 0x001D90, "Member 'AElderDragon_Fire_FlameMinion_C::UberGraphFrame_ElderDragon_Fire_FlameMinion_C' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, FX_CFX) == 0x001D98, "Member 'AElderDragon_Fire_FlameMinion_C::FX_CFX' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, FX_FlamePatch_Channel) == 0x001DA0, "Member 'AElderDragon_Fire_FlameMinion_C::FX_FlamePatch_Channel' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, FX_FlameMinion_Spawn) == 0x001DA8, "Member 'AElderDragon_Fire_FlameMinion_C::FX_FlameMinion_Spawn' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, Blackboard) == 0x001DB0, "Member 'AElderDragon_Fire_FlameMinion_C::Blackboard' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, AssociatedFlamePatch) == 0x001DB8, "Member 'AElderDragon_Fire_FlameMinion_C::AssociatedFlamePatch' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, AbsorbedHit) == 0x001DC0, "Member 'AElderDragon_Fire_FlameMinion_C::AbsorbedHit' has a wrong offset!");
+static_assert(sizeof(AElderDragon_Fire_FlameMinion_C) == 0x001DA0, "Wrong size on AElderDragon_Fire_FlameMinion_C");
+static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, UberGraphFrame_ElderDragon_Fire_FlameMinion_C) == 0x001D50, "Member 'AElderDragon_Fire_FlameMinion_C::UberGraphFrame_ElderDragon_Fire_FlameMinion_C' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, FX_CFX) == 0x001D58, "Member 'AElderDragon_Fire_FlameMinion_C::FX_CFX' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, FX_FlamePatch_Channel) == 0x001D60, "Member 'AElderDragon_Fire_FlameMinion_C::FX_FlamePatch_Channel' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, FX_FlameMinion_Spawn) == 0x001D68, "Member 'AElderDragon_Fire_FlameMinion_C::FX_FlameMinion_Spawn' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, Blackboard) == 0x001D70, "Member 'AElderDragon_Fire_FlameMinion_C::Blackboard' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, AssociatedFlamePatch) == 0x001D78, "Member 'AElderDragon_Fire_FlameMinion_C::AssociatedFlamePatch' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Fire_FlameMinion_C, AbsorbedHit) == 0x001D80, "Member 'AElderDragon_Fire_FlameMinion_C::AbsorbedHit' has a wrong offset!");
 
 }
 

@@ -89,8 +89,8 @@ public:
 	float                                         DebugCanvasPaddingBottom;                          // 0x018C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDebugCanvasEnableTextShadow;                      // 0x0190(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameplayDebuggerCategoryConfig> Categories;                                        // 0x0198(0x0010)(Edit, EditFixedSize, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayDebuggerExtensionConfig> Extensions;                                        // 0x01A8(0x0010)(Edit, EditFixedSize, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayDebuggerCategoryConfig> Categories;                                       // 0x0198(0x0010)(Edit, EditFixedSize, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayDebuggerExtensionConfig> Extensions;                                      // 0x01A8(0x0010)(Edit, EditFixedSize, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1B8[0xC0];                                     // 0x01B8(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -188,7 +188,7 @@ class AGameplayDebuggerPlayerManager final : public AActor
 public:
 	uint8                                         Pad_348[0x8];                                      // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FGameplayDebuggerPlayerData>    PlayerData;                                        // 0x0350(0x0010)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<class AGameplayDebuggerCategoryReplicator*> PendingRegistrations;                              // 0x0360(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class AGameplayDebuggerCategoryReplicator*> PendingRegistrations;                         // 0x0360(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	uint8                                         Pad_370[0x8];                                      // 0x0370(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

@@ -32,12 +32,12 @@ using namespace UC;
 */
 namespace Offsets
 {
-	inline int32 GObjects          = 0x0ACA8490;
-	inline int32 AppendString      = 0x00E57610;
-	inline int32 GNames            = 0x0AC01B00;
-	inline int32 GWorld            = 0x0AE1F640;
-	inline int32 ProcessEvent      = 0x0103FA20;
-	inline int32 ProcessEventIdx   = 0x0000005A;
+	constexpr int32 GObjects          = 0x0AD14950;
+	constexpr int32 AppendString      = 0x00E5AC50;
+	constexpr int32 GNames            = 0x0AC6DFC0;
+	constexpr int32 GWorld            = 0x0AE8EC38;
+	constexpr int32 ProcessEvent      = 0x01043060;
+	constexpr int32 ProcessEventIdx   = 0x0000005A;
 }
 
 namespace InSDKUtils
@@ -169,7 +169,7 @@ class UClass* StaticBPGeneratedClassImpl()
 template<class ClassType>
 ClassType* GetDefaultObjImpl()
 {
-	return static_cast<ClassType*>(ClassType::StaticClass()->DefaultObject);
+	return reinterpret_cast<ClassType*>(ClassType::StaticClass()->DefaultObject);
 }
 
 
@@ -220,7 +220,7 @@ public:
 		const int32 ChunkIndex = Index / ElementsPerChunk;
 		const int32 InChunkIdx = Index % ElementsPerChunk;
 		
-		if (ChunkIndex >= NumChunks || Index >= NumElements)
+		if (Index < 0 || ChunkIndex >= NumChunks || Index >= NumElements)
 		    return nullptr;
 		
 		FUObjectItem* ChunkPtr = GetDecrytedObjPtr()[ChunkIndex];
@@ -831,7 +831,11 @@ enum class EObjectFlags : int32
 	StrongRefOnFrame				= 0x01000000,
 	NonPIEDuplicateTransient		= 0x02000000,
 	Dynamic							= 0x04000000,
-	WillBeLoaded					= 0x08000000, 
+	WillBeLoaded					= 0x08000000,
+	HasExternalPackage				= 0x10000000,
+
+	MirroredGarbage					= 0x40000000,
+	AllocatedInSharedPage			= 0x80000000,
 };
 
 enum class EFunctionFlags : uint32
@@ -963,14 +967,14 @@ enum class EClassCastFlags : uint64
 	SetProperty							= 0x0000800000000000,
 	EnumProperty						= 0x0001000000000000,
 	USparseDelegateFunction				= 0x0002000000000000,
-	FMulticasTMulticastInlineDelegateProperty	= 0x0004000000000000,
-	FMulticastSparseDelegateProperty	= 0x0008000000000000,
-	FFieldPathProperty					= 0x0010000000000000,
-	FLargeWorldCoordinatesRealProperty	= 0x0080000000000000,
-	FOptionalProperty					= 0x0100000000000000,
-	FVValueProperty						= 0x0200000000000000,
+	MulticastInlineDelegateProperty	    = 0x0004000000000000,
+	MulticastSparseDelegateProperty	    = 0x0008000000000000,
+	FieldPathProperty					= 0x0010000000000000,
+	LargeWorldCoordinatesRealProperty	= 0x0080000000000000,
+	OptionalProperty					= 0x0100000000000000,
+	VValueProperty						= 0x0200000000000000,
 	UVerseVMClass						= 0x0400000000000000,
-	FVRestValueProperty					= 0x0800000000000000,
+	VRestValueProperty					= 0x0800000000000000,
 };
 
 enum class EPropertyFlags : uint64

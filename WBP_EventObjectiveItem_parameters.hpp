@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_EventObjectiveItem.WBP_EventObjectiveItem_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_EventObjectiveItem_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_EventObjectiveItem_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_EventObjectiveItem_C_PreConstruct");
+static_assert(sizeof(WBP_EventObjectiveItem_C_PreConstruct) == 0x000001, "Wrong size on WBP_EventObjectiveItem_C_PreConstruct");
+static_assert(offsetof(WBP_EventObjectiveItem_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_EventObjectiveItem_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WBP_EventObjectiveItem.WBP_EventObjectiveItem_C.ExecuteUbergraph_WBP_EventObjectiveItem
 // 0x0020 (0x0020 - 0x0000)
 struct WBP_EventObjectiveItem_C_ExecuteUbergraph_WBP_EventObjectiveItem final
@@ -38,17 +49,6 @@ static_assert(offsetof(WBP_EventObjectiveItem_C_ExecuteUbergraph_WBP_EventObject
 static_assert(offsetof(WBP_EventObjectiveItem_C_ExecuteUbergraph_WBP_EventObjectiveItem, K2Node_Event_IsDesignTime) == 0x00001A, "Member 'WBP_EventObjectiveItem_C_ExecuteUbergraph_WBP_EventObjectiveItem::K2Node_Event_IsDesignTime' has a wrong offset!");
 static_assert(offsetof(WBP_EventObjectiveItem_C_ExecuteUbergraph_WBP_EventObjectiveItem, CallFunc_IsValid_ReturnValue_2) == 0x00001B, "Member 'WBP_EventObjectiveItem_C_ExecuteUbergraph_WBP_EventObjectiveItem::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WBP_EventObjectiveItem_C_ExecuteUbergraph_WBP_EventObjectiveItem, K2Node_SwitchEnum_CmpSuccess) == 0x00001C, "Member 'WBP_EventObjectiveItem_C_ExecuteUbergraph_WBP_EventObjectiveItem::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-
-// Function WBP_EventObjectiveItem.WBP_EventObjectiveItem_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_EventObjectiveItem_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_EventObjectiveItem_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_EventObjectiveItem_C_PreConstruct");
-static_assert(sizeof(WBP_EventObjectiveItem_C_PreConstruct) == 0x000001, "Wrong size on WBP_EventObjectiveItem_C_PreConstruct");
-static_assert(offsetof(WBP_EventObjectiveItem_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_EventObjectiveItem_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

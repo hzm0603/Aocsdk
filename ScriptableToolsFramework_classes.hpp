@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
+#include "Engine_classes.hpp"
 #include "ScriptableToolsFramework_structs.hpp"
 #include "InteractiveToolsFramework_structs.hpp"
 #include "InteractiveToolsFramework_classes.hpp"
-#include "Engine_classes.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -38,7 +38,7 @@ public:
 	class UScriptableTool_RenderAPI*              RenderHelper;                                      // 0x0140(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NonTransactional, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UScriptableTool_HUDAPI*                 DrawHUDHelper;                                     // 0x0148(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NonTransactional, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_150[0xD0];                                     // 0x0150(0x00D0)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, class UCombinedTransformGizmo*> Gizmos;                                            // 0x0220(0x0050)(Transient, DuplicateTransient, NonTransactional, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TMap<class FString, class UCombinedTransformGizmo*> Gizmos;                                      // 0x0220(0x0050)(Transient, DuplicateTransient, NonTransactional, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 
 public:
 	void AddLogMessage(const class FText& Message, bool bHighlighted);

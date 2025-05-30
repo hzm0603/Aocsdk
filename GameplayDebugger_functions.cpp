@@ -20,7 +20,7 @@ namespace SDK
 // Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ClientDataPackPacket
 // (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetClient)
 // Parameters:
-// struct FGameplayDebuggerDataPackRPCParamsParams_0                                               (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FGameplayDebuggerDataPackRPCParams&Params_0                                               (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void AGameplayDebuggerCategoryReplicator::ClientDataPackPacket(const struct FGameplayDebuggerDataPackRPCParams& Params_0)
 {
@@ -216,8 +216,8 @@ void AGameplayDebuggerCategoryReplicator::ServerSetEnabled(bool bEnable)
 // Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetViewPoint
 // (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, HasDefaults, NetValidate)
 // Parameters:
-// struct FVector                          InViewLocation                                         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          InViewDirection                                        (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InViewLocation                                         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InViewDirection                                        (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void AGameplayDebuggerCategoryReplicator::ServerSetViewPoint(const struct FVector& InViewLocation, const struct FVector& InViewDirection)
 {

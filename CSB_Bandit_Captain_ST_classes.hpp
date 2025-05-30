@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CSB_Bandit_Captain_ST.CSB_Bandit_Captain_ST_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class ACSB_Bandit_Captain_ST_C final : public ABandit_Captain1_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACSB_Bandit_Captain_ST_C) == 0x000010, "Wrong alignment on ACSB_Bandit_Captain_ST_C");
-static_assert(sizeof(ACSB_Bandit_Captain_ST_C) == 0x001DD0, "Wrong size on ACSB_Bandit_Captain_ST_C");
+static_assert(sizeof(ACSB_Bandit_Captain_ST_C) == 0x001D90, "Wrong size on ACSB_Bandit_Captain_ST_C");
 
 }
 

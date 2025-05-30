@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ElderDragon_Fire_RainofFireQueryPoint_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ElderDragon_Fire_RainofFireQueryPoint_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 
 

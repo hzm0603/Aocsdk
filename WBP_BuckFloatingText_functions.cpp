@@ -56,11 +56,12 @@ void UWBP_BuckFloatingText_C::ExecuteUbergraph_WBP_BuckFloatingText(int32 EntryP
 // Parameters:
 // class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    isText                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Hitting                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    hitting                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsHealing                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    resist                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector*                         Offset_0                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_BuckFloatingText_C::GetFloaterBaseOffset(class AActor* Owner_0, bool isText, bool Hitting, bool IsHealing, struct FVector* Offset_0)
+void UWBP_BuckFloatingText_C::GetFloaterBaseOffset(class AActor* Owner_0, bool isText, bool hitting, bool IsHealing, bool resist, struct FVector* Offset_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -71,8 +72,9 @@ void UWBP_BuckFloatingText_C::GetFloaterBaseOffset(class AActor* Owner_0, bool i
 
 	Parms.Owner_0 = Owner_0;
 	Parms.isText = isText;
-	Parms.Hitting = Hitting;
+	Parms.hitting = hitting;
 	Parms.IsHealing = IsHealing;
+	Parms.resist = resist;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -88,6 +90,8 @@ void UWBP_BuckFloatingText_C::GetFloaterBaseOffset(class AActor* Owner_0, bool i
 // bool                                    isCrit                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    isMiss                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    isBlock                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isResist                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isImmune                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   StatModGuid_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Value_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  RawValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -95,8 +99,11 @@ void UWBP_BuckFloatingText_C::GetFloaterBaseOffset(class AActor* Owner_0, bool i
 // bool                                    hitting_OtherwiseGettingHit_                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   statGuid                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    Str                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    weaponHit                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isPhysical                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isMagical                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_BuckFloatingText_C::SetFloater(class AActor* Owner_0, bool isCrit, bool isMiss, bool isBlock, int64 StatModGuid_0, double Value_0, double RawValue, int64 SourceRecordType, bool hitting_OtherwiseGettingHit_, int64 statGuid, const class FString& Str)
+void UWBP_BuckFloatingText_C::SetFloater(class AActor* Owner_0, bool isCrit, bool isMiss, bool isBlock, bool isResist, bool isImmune, int64 StatModGuid_0, double Value_0, double RawValue, int64 SourceRecordType, bool hitting_OtherwiseGettingHit_, int64 statGuid, const class FString& Str, bool weaponHit, bool isPhysical, bool isMagical)
 {
 	static class UFunction* Func = nullptr;
 
@@ -109,6 +116,8 @@ void UWBP_BuckFloatingText_C::SetFloater(class AActor* Owner_0, bool isCrit, boo
 	Parms.isCrit = isCrit;
 	Parms.isMiss = isMiss;
 	Parms.isBlock = isBlock;
+	Parms.isResist = isResist;
+	Parms.isImmune = isImmune;
 	Parms.StatModGuid_0 = StatModGuid_0;
 	Parms.Value_0 = Value_0;
 	Parms.RawValue = RawValue;
@@ -116,6 +125,9 @@ void UWBP_BuckFloatingText_C::SetFloater(class AActor* Owner_0, bool isCrit, boo
 	Parms.hitting_OtherwiseGettingHit_ = hitting_OtherwiseGettingHit_;
 	Parms.statGuid = statGuid;
 	Parms.Str = std::move(Str);
+	Parms.weaponHit = weaponHit;
+	Parms.isPhysical = isPhysical;
+	Parms.isMagical = isMagical;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -124,15 +136,19 @@ void UWBP_BuckFloatingText_C::SetFloater(class AActor* Owner_0, bool isCrit, boo
 // Function WBP_BuckFloatingText.WBP_BuckFloatingText_C.SetFloaterVisuals
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Hitting                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    hitting                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    isCrit                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   statGuid                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Value_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  dynamicSizeMult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  SizeMult                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    isText                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FLinearColor&              colorIfText                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ColorOverride                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              OverrideColor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    weaponHit                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isPhysical                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isMagical                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_BuckFloatingText_C::SetFloaterVisuals(bool Hitting, bool isCrit, int64 statGuid, double Value_0, double dynamicSizeMult, bool isText, const struct FLinearColor& colorIfText)
+void UWBP_BuckFloatingText_C::SetFloaterVisuals(bool hitting, bool isCrit, int64 statGuid, double Value_0, double SizeMult, bool isText, bool ColorOverride, const struct FLinearColor& OverrideColor, bool weaponHit, bool isPhysical, bool isMagical)
 {
 	static class UFunction* Func = nullptr;
 
@@ -141,13 +157,17 @@ void UWBP_BuckFloatingText_C::SetFloaterVisuals(bool Hitting, bool isCrit, int64
 
 	Params::WBP_BuckFloatingText_C_SetFloaterVisuals Parms{};
 
-	Parms.Hitting = Hitting;
+	Parms.hitting = hitting;
 	Parms.isCrit = isCrit;
 	Parms.statGuid = statGuid;
 	Parms.Value_0 = Value_0;
-	Parms.dynamicSizeMult = dynamicSizeMult;
+	Parms.SizeMult = SizeMult;
 	Parms.isText = isText;
-	Parms.colorIfText = std::move(colorIfText);
+	Parms.ColorOverride = ColorOverride;
+	Parms.OverrideColor = std::move(OverrideColor);
+	Parms.weaponHit = weaponHit;
+	Parms.isPhysical = isPhysical;
+	Parms.isMagical = isMagical;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

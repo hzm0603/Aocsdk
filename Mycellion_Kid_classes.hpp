@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Mycellion_Kid.Mycellion_Kid_C
-// 0x0000 (0x1D90 - 0x1D90)
-class AMycellion_Kid_C final : public AMycellion_C
+// 0x0000 (0x1D50 - 0x1D50)
+class AMycellion_Kid_C : public AMycellion_C
 {
 public:
 	static class UClass* StaticClass()
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AMycellion_Kid_C) == 0x000010, "Wrong alignment on AMycellion_Kid_C");
-static_assert(sizeof(AMycellion_Kid_C) == 0x001D90, "Wrong size on AMycellion_Kid_C");
+static_assert(sizeof(AMycellion_Kid_C) == 0x001D50, "Wrong size on AMycellion_Kid_C");
 
 }
 

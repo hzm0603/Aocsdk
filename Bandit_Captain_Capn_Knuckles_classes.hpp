@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Captain_Capn_Knuckles.Bandit_Captain_Capn_Knuckles_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class ABandit_Captain_Capn_Knuckles_C final : public ABandit_Captain1_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Captain_Capn_Knuckles_C) == 0x000010, "Wrong alignment on ABandit_Captain_Capn_Knuckles_C");
-static_assert(sizeof(ABandit_Captain_Capn_Knuckles_C) == 0x001DD0, "Wrong size on ABandit_Captain_Capn_Knuckles_C");
+static_assert(sizeof(ABandit_Captain_Capn_Knuckles_C) == 0x001D90, "Wrong size on ABandit_Captain_Capn_Knuckles_C");
 
 }
 

@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ElderDragon_Fire.ElderDragon_Fire_C
-// 0x0020 (0x1DC0 - 0x1DA0)
+// 0x0020 (0x1D80 - 0x1D60)
 class AElderDragon_Fire_C final : public AElderDragon_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_ElderDragon_Fire_C;                 // 0x1DA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class AElderDragon_Fire_FlameMinion_C*> OwnedFlameMinions;                                // 0x1DB0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_ElderDragon_Fire_C;                 // 0x1D60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class AElderDragon_Fire_FlameMinion_C*> OwnedFlameMinions;                                // 0x1D70(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_ElderDragon_Fire(int32 EntryPoint);
@@ -41,10 +41,10 @@ public:
 	}
 };
 static_assert(alignof(AElderDragon_Fire_C) == 0x000010, "Wrong alignment on AElderDragon_Fire_C");
-static_assert(sizeof(AElderDragon_Fire_C) == 0x001DC0, "Wrong size on AElderDragon_Fire_C");
-static_assert(offsetof(AElderDragon_Fire_C, UberGraphFrame_ElderDragon_Fire_C) == 0x001DA0, "Member 'AElderDragon_Fire_C::UberGraphFrame_ElderDragon_Fire_C' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Fire_C, Blackboard) == 0x001DA8, "Member 'AElderDragon_Fire_C::Blackboard' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Fire_C, OwnedFlameMinions) == 0x001DB0, "Member 'AElderDragon_Fire_C::OwnedFlameMinions' has a wrong offset!");
+static_assert(sizeof(AElderDragon_Fire_C) == 0x001D80, "Wrong size on AElderDragon_Fire_C");
+static_assert(offsetof(AElderDragon_Fire_C, UberGraphFrame_ElderDragon_Fire_C) == 0x001D60, "Member 'AElderDragon_Fire_C::UberGraphFrame_ElderDragon_Fire_C' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Fire_C, Blackboard) == 0x001D68, "Member 'AElderDragon_Fire_C::Blackboard' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Fire_C, OwnedFlameMinions) == 0x001D70, "Member 'AElderDragon_Fire_C::OwnedFlameMinions' has a wrong offset!");
 
 }
 

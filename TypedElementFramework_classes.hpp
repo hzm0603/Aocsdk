@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // Class TypedElementFramework.TypedElementDataStorageCompatibilityInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITypedElementDataStorageCompatibilityInterface final : public IInterface
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<ITypedElementDataStorageCompatibilityInterface>();
 	}
 };
-static_assert(alignof(ITypedElementDataStorageCompatibilityInterface) == 0x000008, "Wrong alignment on ITypedElementDataStorageCompatibilityInterface");
-static_assert(sizeof(ITypedElementDataStorageCompatibilityInterface) == 0x000048, "Wrong size on ITypedElementDataStorageCompatibilityInterface");
+static_assert(alignof(ITypedElementDataStorageCompatibilityInterface) == 0x000001, "Wrong alignment on ITypedElementDataStorageCompatibilityInterface");
+static_assert(sizeof(ITypedElementDataStorageCompatibilityInterface) == 0x000001, "Wrong size on ITypedElementDataStorageCompatibilityInterface");
 
 // Class TypedElementFramework.TypedElementDataStorageFactory
 // 0x0000 (0x0048 - 0x0048)
@@ -51,7 +51,7 @@ static_assert(alignof(UTypedElementDataStorageFactory) == 0x000008, "Wrong align
 static_assert(sizeof(UTypedElementDataStorageFactory) == 0x000048, "Wrong size on UTypedElementDataStorageFactory");
 
 // Class TypedElementFramework.TypedElementDataStorageInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITypedElementDataStorageInterface final : public IInterface
 {
 public:
@@ -64,11 +64,11 @@ public:
 		return GetDefaultObjImpl<ITypedElementDataStorageInterface>();
 	}
 };
-static_assert(alignof(ITypedElementDataStorageInterface) == 0x000008, "Wrong alignment on ITypedElementDataStorageInterface");
-static_assert(sizeof(ITypedElementDataStorageInterface) == 0x000048, "Wrong size on ITypedElementDataStorageInterface");
+static_assert(alignof(ITypedElementDataStorageInterface) == 0x000001, "Wrong alignment on ITypedElementDataStorageInterface");
+static_assert(sizeof(ITypedElementDataStorageInterface) == 0x000001, "Wrong size on ITypedElementDataStorageInterface");
 
 // Class TypedElementFramework.TypedElementDataStorageUiInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITypedElementDataStorageUiInterface final : public IInterface
 {
 public:
@@ -81,8 +81,8 @@ public:
 		return GetDefaultObjImpl<ITypedElementDataStorageUiInterface>();
 	}
 };
-static_assert(alignof(ITypedElementDataStorageUiInterface) == 0x000008, "Wrong alignment on ITypedElementDataStorageUiInterface");
-static_assert(sizeof(ITypedElementDataStorageUiInterface) == 0x000048, "Wrong size on ITypedElementDataStorageUiInterface");
+static_assert(alignof(ITypedElementDataStorageUiInterface) == 0x000001, "Wrong alignment on ITypedElementDataStorageUiInterface");
+static_assert(sizeof(ITypedElementDataStorageUiInterface) == 0x000001, "Wrong size on ITypedElementDataStorageUiInterface");
 
 // Class TypedElementFramework.TypedElementHandleLibrary
 // 0x0000 (0x0048 - 0x0048)
@@ -147,7 +147,7 @@ static_assert(alignof(UTypedElementListLibrary) == 0x000008, "Wrong alignment on
 static_assert(sizeof(UTypedElementListLibrary) == 0x000048, "Wrong size on UTypedElementListLibrary");
 
 // Class TypedElementFramework.TypedElementCounterInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITypedElementCounterInterface final : public IInterface
 {
 public:
@@ -160,8 +160,8 @@ public:
 		return GetDefaultObjImpl<ITypedElementCounterInterface>();
 	}
 };
-static_assert(alignof(ITypedElementCounterInterface) == 0x000008, "Wrong alignment on ITypedElementCounterInterface");
-static_assert(sizeof(ITypedElementCounterInterface) == 0x000048, "Wrong size on ITypedElementCounterInterface");
+static_assert(alignof(ITypedElementCounterInterface) == 0x000001, "Wrong alignment on ITypedElementCounterInterface");
+static_assert(sizeof(ITypedElementCounterInterface) == 0x000001, "Wrong size on ITypedElementCounterInterface");
 
 // Class TypedElementFramework.TypedElementRegistry
 // 0x0950 (0x0998 - 0x0048)
@@ -189,7 +189,7 @@ static_assert(alignof(UTypedElementRegistry) == 0x000008, "Wrong alignment on UT
 static_assert(sizeof(UTypedElementRegistry) == 0x000998, "Wrong size on UTypedElementRegistry");
 
 // Class TypedElementFramework.TestTypedElementInterfaceA
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITestTypedElementInterfaceA final : public IInterface
 {
 public:
@@ -206,11 +206,11 @@ public:
 		return GetDefaultObjImpl<ITestTypedElementInterfaceA>();
 	}
 };
-static_assert(alignof(ITestTypedElementInterfaceA) == 0x000008, "Wrong alignment on ITestTypedElementInterfaceA");
-static_assert(sizeof(ITestTypedElementInterfaceA) == 0x000048, "Wrong size on ITestTypedElementInterfaceA");
+static_assert(alignof(ITestTypedElementInterfaceA) == 0x000001, "Wrong alignment on ITestTypedElementInterfaceA");
+static_assert(sizeof(ITestTypedElementInterfaceA) == 0x000001, "Wrong size on ITestTypedElementInterfaceA");
 
 // Class TypedElementFramework.TestTypedElementInterfaceB
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITestTypedElementInterfaceB final : public IInterface
 {
 public:
@@ -226,11 +226,11 @@ public:
 		return GetDefaultObjImpl<ITestTypedElementInterfaceB>();
 	}
 };
-static_assert(alignof(ITestTypedElementInterfaceB) == 0x000008, "Wrong alignment on ITestTypedElementInterfaceB");
-static_assert(sizeof(ITestTypedElementInterfaceB) == 0x000048, "Wrong size on ITestTypedElementInterfaceB");
+static_assert(alignof(ITestTypedElementInterfaceB) == 0x000001, "Wrong alignment on ITestTypedElementInterfaceB");
+static_assert(sizeof(ITestTypedElementInterfaceB) == 0x000001, "Wrong size on ITestTypedElementInterfaceB");
 
 // Class TypedElementFramework.TestTypedElementInterfaceC
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITestTypedElementInterfaceC final : public IInterface
 {
 public:
@@ -246,8 +246,8 @@ public:
 		return GetDefaultObjImpl<ITestTypedElementInterfaceC>();
 	}
 };
-static_assert(alignof(ITestTypedElementInterfaceC) == 0x000008, "Wrong alignment on ITestTypedElementInterfaceC");
-static_assert(sizeof(ITestTypedElementInterfaceC) == 0x000048, "Wrong size on ITestTypedElementInterfaceC");
+static_assert(alignof(ITestTypedElementInterfaceC) == 0x000001, "Wrong alignment on ITestTypedElementInterfaceC");
+static_assert(sizeof(ITestTypedElementInterfaceC) == 0x000001, "Wrong size on ITestTypedElementInterfaceC");
 
 // Class TypedElementFramework.TestTypedElementInterfaceA_ImplTyped
 // 0x0008 (0x0050 - 0x0048)

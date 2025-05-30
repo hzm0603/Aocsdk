@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass AnimatedArmor_Mage_AnimBP.AnimatedArmor_Mage_AnimBP_C
-// 0x0000 (0x3EB0 - 0x3EB0)
+// 0x0000 (0x3EC0 - 0x3EC0)
 class UAnimatedArmor_Mage_AnimBP_C : public UAnimatedArmor_AnimBP_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UAnimatedArmor_Mage_AnimBP_C) == 0x000010, "Wrong alignment on UAnimatedArmor_Mage_AnimBP_C");
-static_assert(sizeof(UAnimatedArmor_Mage_AnimBP_C) == 0x003EB0, "Wrong size on UAnimatedArmor_Mage_AnimBP_C");
+static_assert(sizeof(UAnimatedArmor_Mage_AnimBP_C) == 0x003EC0, "Wrong size on UAnimatedArmor_Mage_AnimBP_C");
 
 }
 

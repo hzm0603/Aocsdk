@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "STRUCT_SingularClimateData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "STRUCT_SingularClimateData_structs.hpp"
 #include "STRUCT_GlobalOverrideAndBool_structs.hpp"
-#include "GameSystemsPlugin_structs.hpp"
-#include "EBiomes_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EBiomes_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_structs.hpp"
 
 
 namespace SDK
@@ -64,7 +64,7 @@ public:
 	double                                        Humidity_Offset;                                   // 0x0A80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRandomStream                          Stream_For_Random;                                 // 0x0A88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor)
 	TMap<int32, double>                           Degrees_Day;                                       // 0x0A90(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FName, struct FSTRUCT_SingularClimateData> Climate_Single_Day;                                // 0x0AE0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, struct FSTRUCT_SingularClimateData> Climate_Single_Day;                        // 0x0AE0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	EBiomes                                       Biome;                                             // 0x0B30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

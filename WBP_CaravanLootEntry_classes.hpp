@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CaravanLootEntry.WBP_CaravanLootEntry_C
-// 0x0008 (0x03B0 - 0x03A8)
+// 0x0008 (0x03E0 - 0x03D8)
 class UWBP_CaravanLootEntry_C final : public UCaravanLootEntry
 {
 public:
-	class UCommonBorder*                          AlternatingBorder;                                 // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          AlternatingBorder;                                 // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CaravanLootEntry_C) == 0x000008, "Wrong alignment on UWBP_CaravanLootEntry_C");
-static_assert(sizeof(UWBP_CaravanLootEntry_C) == 0x0003B0, "Wrong size on UWBP_CaravanLootEntry_C");
-static_assert(offsetof(UWBP_CaravanLootEntry_C, AlternatingBorder) == 0x0003A8, "Member 'UWBP_CaravanLootEntry_C::AlternatingBorder' has a wrong offset!");
+static_assert(sizeof(UWBP_CaravanLootEntry_C) == 0x0003E0, "Wrong size on UWBP_CaravanLootEntry_C");
+static_assert(offsetof(UWBP_CaravanLootEntry_C, AlternatingBorder) == 0x0003D8, "Member 'UWBP_CaravanLootEntry_C::AlternatingBorder' has a wrong offset!");
 
 }
 

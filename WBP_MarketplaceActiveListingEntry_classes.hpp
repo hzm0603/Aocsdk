@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MarketplaceActiveListingEntry.WBP_MarketplaceActiveListingEntry_C
-// 0x0008 (0x04D8 - 0x04D0)
+// 0x0008 (0x0500 - 0x04F8)
 class UWBP_MarketplaceActiveListingEntry_C final : public UMarketplaceActiveListingEntry
 {
 public:
-	class UCommonBorder*                          B_AlternatingBG;                                   // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          B_AlternatingBG;                                   // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UCommonBorder* GetBorder();
@@ -37,8 +37,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MarketplaceActiveListingEntry_C) == 0x000008, "Wrong alignment on UWBP_MarketplaceActiveListingEntry_C");
-static_assert(sizeof(UWBP_MarketplaceActiveListingEntry_C) == 0x0004D8, "Wrong size on UWBP_MarketplaceActiveListingEntry_C");
-static_assert(offsetof(UWBP_MarketplaceActiveListingEntry_C, B_AlternatingBG) == 0x0004D0, "Member 'UWBP_MarketplaceActiveListingEntry_C::B_AlternatingBG' has a wrong offset!");
+static_assert(sizeof(UWBP_MarketplaceActiveListingEntry_C) == 0x000500, "Wrong size on UWBP_MarketplaceActiveListingEntry_C");
+static_assert(offsetof(UWBP_MarketplaceActiveListingEntry_C, B_AlternatingBG) == 0x0004F8, "Member 'UWBP_MarketplaceActiveListingEntry_C::B_AlternatingBG' has a wrong offset!");
 
 }
 

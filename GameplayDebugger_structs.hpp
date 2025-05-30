@@ -109,7 +109,7 @@ public:
 	class FName                                   CategoryName;                                      // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         TextLines;                                         // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FGameplayDebuggerShape>         Shapes;                                            // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayDebuggerDataPackHeader> DataPacks;                                         // 0x0028(0x0010)(ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayDebuggerDataPackHeader> DataPacks;                                        // 0x0028(0x0010)(ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
 	bool                                          bIsEnabled;                                        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "AudioPlatformConfiguration_structs.hpp"
 #include "Engine_structs.hpp"
 #include "DeveloperSettings_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "AudioPlatformConfiguration_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "InputCore_structs.hpp"
@@ -413,7 +413,7 @@ public:
 	TArray<class FString>                         EngineTestModules;                                 // 0x0048(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FString>                         EditorTestModules;                                 // 0x0058(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        AutomationTestmap;                                 // 0x0068(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FEditorMapPerformanceTestDefinition> EditorPerformanceTestMaps;                         // 0x0088(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FEditorMapPerformanceTestDefinition> EditorPerformanceTestMaps;                    // 0x0088(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FString>                         AssetsToOpen;                                      // 0x0098(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FString>                         MapsToPIETest;                                     // 0x00A8(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	bool                                          bUseAllProjectMapsToPlayInPIE;                     // 0x00B8(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -424,7 +424,7 @@ public:
 	struct FBlueprintEditorPromotionSettings      BlueprintEditorPromotionTest;                      // 0x02F0(0x0030)(Edit, Config, NativeAccessSpecifierPublic)
 	TArray<class FString>                         TestLevelFolders;                                  // 0x0320(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<struct FExternalToolDefinition>        ExternalTools;                                     // 0x0330(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FEditorImportExportTestDefinition> ImportExportTestDefinitions;                       // 0x0340(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FEditorImportExportTestDefinition> ImportExportTestDefinitions;                    // 0x0340(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<struct FLaunchOnTestSettings>          LaunchOnSettings;                                  // 0x0350(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	struct FIntPoint                              DefaultScreenshotResolution;                       // 0x0360(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PIETestDuration;                                   // 0x0368(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1066,7 +1066,7 @@ static_assert(sizeof(UInputDelegateBinding) == 0x000048, "Wrong size on UInputDe
 class UInputActionDelegateBinding final : public UInputDelegateBinding
 {
 public:
-	TArray<struct FBlueprintInputActionDelegateBinding> InputActionDelegateBindings;                       // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FBlueprintInputActionDelegateBinding> InputActionDelegateBindings;                 // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1434,7 +1434,7 @@ class UMaterialParameterCollectionInstance final : public UObject
 {
 public:
 	uint8                                         Pad_48[0x4];                                       // 0x0048(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class UMaterialParameterCollection> Collection;                                        // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class UMaterialParameterCollection> Collection;                                   // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_54[0xEC];                                      // 0x0054(0x00EC)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2256,7 +2256,7 @@ class UInputDeviceAudioBasedVibrationProperty final : public UInputDevicePropert
 {
 public:
 	struct FAudioBasedVibrationData               Data;                                              // 0x0050(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FAudioBasedVibrationData> DeviceOverrideData;                                // 0x0058(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FAudioBasedVibrationData> DeviceOverrideData;                           // 0x0058(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -2822,8 +2822,8 @@ public:
 	TArray<struct FVectorParameterValue>          VectorParameterValues;                             // 0x0180(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FDoubleVectorParameterValue>    DoubleVectorParameterValues;                       // 0x0190(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FTextureParameterValue>         TextureParameterValues;                            // 0x01A0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRuntimeVirtualTextureParameterValue> RuntimeVirtualTextureParameterValues;              // 0x01B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FSparseVolumeTextureParameterValue> SparseVolumeTextureParameterValues;                // 0x01C0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRuntimeVirtualTextureParameterValue> RuntimeVirtualTextureParameterValues;        // 0x01B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FSparseVolumeTextureParameterValue> SparseVolumeTextureParameterValues;            // 0x01C0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FFontParameterValue>            FontParameterValues;                               // 0x01D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FMaterialInstanceBasePropertyOverrides BasePropertyOverrides;                             // 0x01E0(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1F4[0xC];                                      // 0x01F4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
@@ -3041,7 +3041,7 @@ static_assert(offsetof(UMeshComponent, OverlayMaterial) == 0x0005D0, "Member 'UM
 static_assert(offsetof(UMeshComponent, OverlayMaterialMaxDrawDistance) == 0x0005D8, "Member 'UMeshComponent::OverlayMaterialMaxDrawDistance' has a wrong offset!");
 
 // Class Engine.NavEdgeProviderInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class INavEdgeProviderInterface final : public IInterface
 {
 public:
@@ -3054,8 +3054,8 @@ public:
 		return GetDefaultObjImpl<INavEdgeProviderInterface>();
 	}
 };
-static_assert(alignof(INavEdgeProviderInterface) == 0x000008, "Wrong alignment on INavEdgeProviderInterface");
-static_assert(sizeof(INavEdgeProviderInterface) == 0x000048, "Wrong size on INavEdgeProviderInterface");
+static_assert(alignof(INavEdgeProviderInterface) == 0x000001, "Wrong alignment on INavEdgeProviderInterface");
+static_assert(sizeof(INavEdgeProviderInterface) == 0x000001, "Wrong size on INavEdgeProviderInterface");
 
 // Class Engine.MaterialExpressionRuntimeVirtualTextureSample
 // 0x0088 (0x0158 - 0x00D0)
@@ -3461,7 +3461,7 @@ class UInstancedStaticMeshComponent : public UStaticMeshComponent
 public:
 	uint8                                         Pad_680[0x8];                                      // 0x0680(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        PerInstanceOriginalScales;                         // 0x0688(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStaticMeshInstanceData> PerInstanceSMData;                                 // 0x0698(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStaticMeshInstanceData> PerInstanceSMData;                               // 0x0698(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FMatrix>                        PerInstancePrevTransform;                          // 0x06A8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	int32                                         NumCustomDataFloats;                               // 0x06B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6BC[0x4];                                      // 0x06BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -3476,7 +3476,7 @@ public:
 	TArray<int32>                                 InstanceReorderTable;                              // 0x06F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_708[0xC4];                                     // 0x0708(0x00C4)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumPendingLightmaps;                               // 0x07CC(0x0004)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FInstancedStaticMeshMappingInfo> CachedMappings;                                    // 0x07D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient, Protected, TextExportTransient, NativeAccessSpecifierProtected)
+	TArray<struct FInstancedStaticMeshMappingInfo> CachedMappings;                                   // 0x07D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient, Protected, TextExportTransient, NativeAccessSpecifierProtected)
 
 public:
 	int32 AddInstance(const struct FTransform& InstanceTransform, bool bWorldSpace);
@@ -3693,7 +3693,7 @@ static_assert(offsetof(UMaterialExpressionSwitch, ConstDefault) == 0x000138, "Me
 static_assert(offsetof(UMaterialExpressionSwitch, Inputs) == 0x000140, "Member 'UMaterialExpressionSwitch::Inputs' has a wrong offset!");
 
 // Class Engine.NavRelevantInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class INavRelevantInterface final : public IInterface
 {
 public:
@@ -3706,8 +3706,8 @@ public:
 		return GetDefaultObjImpl<INavRelevantInterface>();
 	}
 };
-static_assert(alignof(INavRelevantInterface) == 0x000008, "Wrong alignment on INavRelevantInterface");
-static_assert(sizeof(INavRelevantInterface) == 0x000048, "Wrong size on INavRelevantInterface");
+static_assert(alignof(INavRelevantInterface) == 0x000001, "Wrong alignment on INavRelevantInterface");
+static_assert(sizeof(INavRelevantInterface) == 0x000001, "Wrong size on INavRelevantInterface");
 
 // Class Engine.PartitionActor
 // 0x0000 (0x0348 - 0x0348)
@@ -4077,7 +4077,7 @@ static_assert(offsetof(UTimecodeProvider, FrameDelay) == 0x000048, "Member 'UTim
 
 // Class Engine.RuntimeVirtualTextureVolume
 // 0x0008 (0x0350 - 0x0348)
-class ARuntimeVirtualTextureVolume : public AActor
+class ARuntimeVirtualTextureVolume final : public AActor
 {
 public:
 	class URuntimeVirtualTextureComponent*        VirtualTextureComponent;                           // 0x0348(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4153,7 +4153,7 @@ static_assert(offsetof(ABrush, BrushComponent) == 0x000360, "Member 'ABrush::Bru
 static_assert(offsetof(ABrush, SavedSelections) == 0x000370, "Member 'ABrush::SavedSelections' has a wrong offset!");
 
 // Class Engine.NavigationDataInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class INavigationDataInterface final : public IInterface
 {
 public:
@@ -4166,8 +4166,8 @@ public:
 		return GetDefaultObjImpl<INavigationDataInterface>();
 	}
 };
-static_assert(alignof(INavigationDataInterface) == 0x000008, "Wrong alignment on INavigationDataInterface");
-static_assert(sizeof(INavigationDataInterface) == 0x000048, "Wrong size on INavigationDataInterface");
+static_assert(alignof(INavigationDataInterface) == 0x000001, "Wrong alignment on INavigationDataInterface");
+static_assert(sizeof(INavigationDataInterface) == 0x000001, "Wrong size on INavigationDataInterface");
 
 // Class Engine.Volume
 // 0x0000 (0x0380 - 0x0380)
@@ -4598,7 +4598,7 @@ public:
 	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFunction*                              UberGraphFunction;                                 // 0x0348(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FName, struct FGuid>               CookedPropertyGuids;                               // 0x0350(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FBlueprintCookedComponentInstancingData> CookedComponentInstancingData;                     // 0x03A0(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FBlueprintCookedComponentInstancingData> CookedComponentInstancingData; // 0x03A0(0x0050)(NativeAccessSpecifierPublic)
 	uint8                                         Pad_3F0[0x38];                                     // 0x03F0(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -4671,7 +4671,7 @@ static_assert(alignof(UEngineCustomTimeStep) == 0x000008, "Wrong alignment on UE
 static_assert(sizeof(UEngineCustomTimeStep) == 0x000048, "Wrong size on UEngineCustomTimeStep");
 
 // Class Engine.SMInstanceManager
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ISMInstanceManager final : public IInterface
 {
 public:
@@ -4684,8 +4684,8 @@ public:
 		return GetDefaultObjImpl<ISMInstanceManager>();
 	}
 };
-static_assert(alignof(ISMInstanceManager) == 0x000008, "Wrong alignment on ISMInstanceManager");
-static_assert(sizeof(ISMInstanceManager) == 0x000048, "Wrong size on ISMInstanceManager");
+static_assert(alignof(ISMInstanceManager) == 0x000001, "Wrong alignment on ISMInstanceManager");
+static_assert(sizeof(ISMInstanceManager) == 0x000001, "Wrong size on ISMInstanceManager");
 
 // Class Engine.LineBatchComponent
 // 0x0040 (0x0600 - 0x05C0)
@@ -4989,8 +4989,8 @@ public:
 	class UBodySetup*                             BodySetup;                                         // 0x0B10(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B18[0x4];                                      // 0x0B18(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ClothMaxDistanceScale;                             // 0x0B1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(int32 ConstraintIndex)> OnConstraintBroken;                                // 0x0B20(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(int32 ConstraintIndex)> OnPlasticDeformation;                              // 0x0B30(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 ConstraintIndex)> OnConstraintBroken;                        // 0x0B20(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 ConstraintIndex)> OnPlasticDeformation;                      // 0x0B30(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TSubclassOf<class UClothingSimulationFactory> ClothingSimulationFactory;                         // 0x0B40(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B48[0x100];                                    // 0x0B48(0x0100)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TeleportDistanceThreshold;                         // 0x0C48(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -5297,9 +5297,9 @@ public:
 	uint8                                         bRunBlueprintUpdate : 1;                           // 0x0051(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bQueueMontageEvents : 1;                           // 0x0052(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
 	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UAnimMontage* Montage, bool bInterrupted)> OnMontageBlendingOut;                              // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UAnimMontage* Montage, int32 MontageInstanceID)> OnMontageStarted;                                  // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UAnimMontage* Montage, bool bInterrupted, int32 MontageInstanceID)> OnMontageEnded;                                    // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UAnimMontage* Montage, bool bInterrupted)> OnMontageBlendingOut; // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UAnimMontage* Montage, int32 MontageInstanceID)> OnMontageStarted; // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UAnimMontage* Montage, bool bInterrupted, int32 MontageInstanceID)> OnMontageEnded; // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnAllMontageInstancesEnded;                        // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_98[0xD8];                                      // 0x0098(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimNotifyQueue                       NotifyQueue;                                       // 0x0170(0x0070)(Transient, NativeAccessSpecifierPublic)
@@ -6122,7 +6122,7 @@ static_assert(alignof(USoundEffectSubmixPreset) == 0x000008, "Wrong alignment on
 static_assert(sizeof(USoundEffectSubmixPreset) == 0x000088, "Wrong size on USoundEffectSubmixPreset");
 
 // Class Engine.ActiveSoundUpdateInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IActiveSoundUpdateInterface final : public IInterface
 {
 public:
@@ -6135,8 +6135,8 @@ public:
 		return GetDefaultObjImpl<IActiveSoundUpdateInterface>();
 	}
 };
-static_assert(alignof(IActiveSoundUpdateInterface) == 0x000008, "Wrong alignment on IActiveSoundUpdateInterface");
-static_assert(sizeof(IActiveSoundUpdateInterface) == 0x000048, "Wrong size on IActiveSoundUpdateInterface");
+static_assert(alignof(IActiveSoundUpdateInterface) == 0x000001, "Wrong alignment on IActiveSoundUpdateInterface");
+static_assert(sizeof(IActiveSoundUpdateInterface) == 0x000001, "Wrong size on IActiveSoundUpdateInterface");
 
 // Class Engine.CurveBase
 // 0x0008 (0x0050 - 0x0048)
@@ -6359,7 +6359,7 @@ static_assert(sizeof(UMaterialExpressionSign) == 0x0000F8, "Wrong size on UMater
 static_assert(offsetof(UMaterialExpressionSign, Input) == 0x0000D0, "Member 'UMaterialExpressionSign::Input' has a wrong offset!");
 
 // Class Engine.Interface_AnimCurveMetaData
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterface_AnimCurveMetaData final : public IInterface
 {
 public:
@@ -6372,11 +6372,11 @@ public:
 		return GetDefaultObjImpl<IInterface_AnimCurveMetaData>();
 	}
 };
-static_assert(alignof(IInterface_AnimCurveMetaData) == 0x000008, "Wrong alignment on IInterface_AnimCurveMetaData");
-static_assert(sizeof(IInterface_AnimCurveMetaData) == 0x000048, "Wrong size on IInterface_AnimCurveMetaData");
+static_assert(alignof(IInterface_AnimCurveMetaData) == 0x000001, "Wrong alignment on IInterface_AnimCurveMetaData");
+static_assert(sizeof(IInterface_AnimCurveMetaData) == 0x000001, "Wrong size on IInterface_AnimCurveMetaData");
 
 // Class Engine.AnimLayerInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IAnimLayerInterface final : public IInterface
 {
 public:
@@ -6389,8 +6389,8 @@ public:
 		return GetDefaultObjImpl<IAnimLayerInterface>();
 	}
 };
-static_assert(alignof(IAnimLayerInterface) == 0x000008, "Wrong alignment on IAnimLayerInterface");
-static_assert(sizeof(IAnimLayerInterface) == 0x000048, "Wrong size on IAnimLayerInterface");
+static_assert(alignof(IAnimLayerInterface) == 0x000001, "Wrong alignment on IAnimLayerInterface");
+static_assert(sizeof(IAnimLayerInterface) == 0x000001, "Wrong size on IAnimLayerInterface");
 
 // Class Engine.DataTableFunctionLibrary
 // 0x0000 (0x0048 - 0x0048)
@@ -6657,7 +6657,7 @@ public:
 	TArray<struct FPrimaryAssetTypeInfo>          PrimaryAssetTypesToScan;                           // 0x0058(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<struct FDirectoryPath>                 DirectoriesToExclude;                              // 0x0068(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<struct FPrimaryAssetRulesOverride>     PrimaryAssetRules;                                 // 0x0078(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FPrimaryAssetRulesCustomOverride> CustomPrimaryAssetRules;                           // 0x0088(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FPrimaryAssetRulesCustomOverride> CustomPrimaryAssetRules;                         // 0x0088(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	bool                                          bOnlyCookProductionAssets;                         // 0x0098(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldManagerDetermineTypeAndName;                // 0x0099(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldGuessTypeAndNameInEditor;                   // 0x009A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6815,8 +6815,8 @@ static_assert(sizeof(ULevelActorContainer) == 0x000058, "Wrong size on ULevelAct
 static_assert(offsetof(ULevelActorContainer, Actors) == 0x000048, "Member 'ULevelActorContainer::Actors' has a wrong offset!");
 
 // Class Engine.AudioPanelWidgetInterface
-// 0x0000 (0x0048 - 0x0048)
-class IAudioPanelWidgetInterface : public IInterface
+// 0x0000 (0x0000 - 0x0000)
+class IAudioPanelWidgetInterface final : public IInterface
 {
 public:
 	class FText GetEditorName();
@@ -6832,11 +6832,11 @@ public:
 		return GetDefaultObjImpl<IAudioPanelWidgetInterface>();
 	}
 };
-static_assert(alignof(IAudioPanelWidgetInterface) == 0x000008, "Wrong alignment on IAudioPanelWidgetInterface");
-static_assert(sizeof(IAudioPanelWidgetInterface) == 0x000048, "Wrong size on IAudioPanelWidgetInterface");
+static_assert(alignof(IAudioPanelWidgetInterface) == 0x000001, "Wrong alignment on IAudioPanelWidgetInterface");
+static_assert(sizeof(IAudioPanelWidgetInterface) == 0x000001, "Wrong size on IAudioPanelWidgetInterface");
 
 // Class Engine.BlendableInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IBlendableInterface final : public IInterface
 {
 public:
@@ -6849,8 +6849,8 @@ public:
 		return GetDefaultObjImpl<IBlendableInterface>();
 	}
 };
-static_assert(alignof(IBlendableInterface) == 0x000008, "Wrong alignment on IBlendableInterface");
-static_assert(sizeof(IBlendableInterface) == 0x000048, "Wrong size on IBlendableInterface");
+static_assert(alignof(IBlendableInterface) == 0x000001, "Wrong alignment on IBlendableInterface");
+static_assert(sizeof(IBlendableInterface) == 0x000001, "Wrong size on IBlendableInterface");
 
 // Class Engine.InputDeviceTriggerEffect
 // 0x0010 (0x0060 - 0x0050)
@@ -6880,7 +6880,7 @@ class UInputDeviceTriggerResistanceProperty final : public UInputDeviceTriggerEf
 {
 public:
 	struct FDeviceTriggerTriggerResistanceData    TriggerData;                                       // 0x0060(0x0010)(Edit, BlueprintVisible, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	TMap<class FName, struct FDeviceTriggerTriggerResistanceData> DeviceOverrideData;                                // 0x0070(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FDeviceTriggerTriggerResistanceData> DeviceOverrideData;                // 0x0070(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_C0[0x20];                                      // 0x00C0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -6948,12 +6948,12 @@ static_assert(offsetof(UMaterialExpressionTangent, Period) == 0x0000F8, "Member 
 class UClusterUnionComponent final : public UPrimitiveComponent
 {
 public:
-	TMulticastInlineDelegate<void(class UPrimitiveComponent* Component, TSet<int32>& BoneIds, bool bIsNew)> OnComponentAddedEvent;                             // 0x05C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UPrimitiveComponent* Component)> OnComponentRemovedEvent;                           // 0x05D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UClusterUnionComponent* Component, struct FBoxSphereBounds& Bounds)> OnComponentBoundsChangedEvent;                     // 0x05E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UPrimitiveComponent* Component, const TSet<int32>& BoneIds, bool bIsNew)> OnComponentAddedEvent; // 0x05C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UPrimitiveComponent* Component)> OnComponentRemovedEvent;    // 0x05D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UClusterUnionComponent* Component, const struct FBoxSphereBounds& Bounds)> OnComponentBoundsChangedEvent; // 0x05E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<struct FComponentReference>            ClusteredComponentsReferences;                     // 0x05F0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_600[0x140];                                    // 0x0600(0x0140)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, struct FClusterUnionParticleCandidateData> UniqueIdxToComponent;                              // 0x0740(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TMap<int32, struct FClusterUnionParticleCandidateData> UniqueIdxToComponent;                     // 0x0740(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	struct FClusterUnionReplicatedData            ReplicatedRigidState;                              // 0x0790(0x0002)(Net, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_792[0x6E];                                     // 0x0792(0x006E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -7952,10 +7952,10 @@ static_assert(offsetof(UAssetManager, NumberOfSpawnedNotifications) == 0x000374,
 class UChaosEventRelay final : public UObject
 {
 public:
-	TMulticastInlineDelegate<void(TArray<struct FCollisionChaosEvent>& CollisionEvents)> OnCollisionEvent;                                  // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(TArray<struct FChaosBreakEvent>& BreakEvents)> OnBreakEvent;                                      // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(TArray<struct FChaosRemovalEvent>& RemovalEvents)> OnRemovalEvent;                                    // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(TArray<struct FChaosCrumblingEvent>& CrumblingEvents)> OnCrumblingEvent;                                  // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<struct FCollisionChaosEvent>& CollisionEvents)> OnCollisionEvent; // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<struct FChaosBreakEvent>& BreakEvents)> OnBreakEvent; // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<struct FChaosRemovalEvent>& RemovalEvents)> OnRemovalEvent; // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<struct FChaosCrumblingEvent>& CrumblingEvents)> OnCrumblingEvent; // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -8155,7 +8155,7 @@ static_assert(alignof(UMaterialExpressionTextureSampleParameterSubUV) == 0x00000
 static_assert(sizeof(UMaterialExpressionTextureSampleParameterSubUV) == 0x000268, "Wrong size on UMaterialExpressionTextureSampleParameterSubUV");
 
 // Class Engine.PreviewCollectionInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IPreviewCollectionInterface final : public IInterface
 {
 public:
@@ -8168,8 +8168,8 @@ public:
 		return GetDefaultObjImpl<IPreviewCollectionInterface>();
 	}
 };
-static_assert(alignof(IPreviewCollectionInterface) == 0x000008, "Wrong alignment on IPreviewCollectionInterface");
-static_assert(sizeof(IPreviewCollectionInterface) == 0x000048, "Wrong size on IPreviewCollectionInterface");
+static_assert(alignof(IPreviewCollectionInterface) == 0x000001, "Wrong alignment on IPreviewCollectionInterface");
+static_assert(sizeof(IPreviewCollectionInterface) == 0x000001, "Wrong size on IPreviewCollectionInterface");
 
 // Class Engine.ChildConnection
 // 0x0008 (0x1F08 - 0x1F00)
@@ -8675,7 +8675,7 @@ static_assert(offsetof(UMaterialExpressionComment, bGroupMode) == 0x000100, "Mem
 class UDataLayerManager final : public UObject
 {
 public:
-	TMulticastInlineDelegate<void(class UDataLayerInstance* DataLayer, EDataLayerRuntimeState State)> OnDataLayerInstanceRuntimeStateChanged;            // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class UDataLayerInstance* DataLayer, EDataLayerRuntimeState State)> OnDataLayerInstanceRuntimeStateChanged; // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TSet<class UObject*>                          ReferencedObjects;                                 // 0x0058(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_A8[0x50];                                      // 0x00A8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -8728,7 +8728,7 @@ static_assert(sizeof(UAsyncActionLoadPrimaryAssetBase) == 0x000098, "Wrong size 
 class UAsyncActionLoadPrimaryAsset final : public UAsyncActionLoadPrimaryAssetBase
 {
 public:
-	TMulticastInlineDelegate<void(class UObject* Loaded)> Completed;                                         // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UObject* Loaded)> Completed;                                 // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UAsyncActionLoadPrimaryAsset* AsyncLoadPrimaryAsset(class UObject* WorldContextObject, const struct FPrimaryAssetId& PrimaryAsset, const TArray<class FName>& LoadBundles);
@@ -8793,7 +8793,7 @@ static_assert(offsetof(UPendingNetGame, NetDriver) == 0x000050, "Member 'UPendin
 static_assert(offsetof(UPendingNetGame, DemoNetDriver) == 0x000058, "Member 'UPendingNetGame::DemoNetDriver' has a wrong offset!");
 
 // Class Engine.CurveSourceInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ICurveSourceInterface final : public IInterface
 {
 public:
@@ -8811,8 +8811,8 @@ public:
 		return GetDefaultObjImpl<ICurveSourceInterface>();
 	}
 };
-static_assert(alignof(ICurveSourceInterface) == 0x000008, "Wrong alignment on ICurveSourceInterface");
-static_assert(sizeof(ICurveSourceInterface) == 0x000048, "Wrong size on ICurveSourceInterface");
+static_assert(alignof(ICurveSourceInterface) == 0x000001, "Wrong alignment on ICurveSourceInterface");
+static_assert(sizeof(ICurveSourceInterface) == 0x000001, "Wrong size on ICurveSourceInterface");
 
 // Class Engine.HLODBuilderSettings
 // 0x0000 (0x0048 - 0x0048)
@@ -9653,11 +9653,11 @@ public:
 	bool                                          bCheckIfStillInWorld;                              // 0x016B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bForceSubStepping : 1;                             // 0x016C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_16D[0x3];                                      // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(struct FHitResult& ImpactResult, float Time)> OnInterpToReverse;                                 // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FHitResult& ImpactResult, float Time)> OnInterpToStop;                                    // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FHitResult& ImpactResult, float Time)> OnWaitBeginDelegate;                               // 0x0190(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FHitResult& ImpactResult, float Time)> OnWaitEndDelegate;                                 // 0x01A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FHitResult& ImpactResult, float Time)> OnResetDelegate;                                   // 0x01B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FHitResult& ImpactResult, float Time)> OnInterpToReverse; // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FHitResult& ImpactResult, float Time)> OnInterpToStop; // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FHitResult& ImpactResult, float Time)> OnWaitBeginDelegate; // 0x0190(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FHitResult& ImpactResult, float Time)> OnWaitEndDelegate; // 0x01A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FHitResult& ImpactResult, float Time)> OnResetDelegate; // 0x01B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	float                                         MaxSimulationTimeStep;                             // 0x01C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxSimulationIterations;                           // 0x01C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FInterpControlPoint>            ControlPoints;                                     // 0x01C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -10367,10 +10367,10 @@ public:
 	uint8                                         bPostUpdateTickGroup : 1;                          // 0x0350(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bCurrentlyActive : 1;                              // 0x0350(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Net, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_351[0x7];                                      // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, const struct FVector& Location, const struct FVector& Velocity)> OnParticleSpawn;                                   // 0x0358(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleCount)> OnParticleBurst;                                   // 0x0368(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction)> OnParticleDeath;                                   // 0x0378(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction, const struct FVector& Normal, class FName BoneName, class UPhysicalMaterial* PhysMat)> OnParticleCollide;                                 // 0x0388(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, const struct FVector& Location, const struct FVector& Velocity)> OnParticleSpawn; // 0x0358(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleCount)> OnParticleBurst; // 0x0368(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction)> OnParticleDeath; // 0x0378(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction, const struct FVector& Normal, class FName BoneName, class UPhysicalMaterial* PhysMat)> OnParticleCollide; // 0x0388(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	void Activate();
@@ -10417,7 +10417,7 @@ public:
 	struct FInteriorSettings                      AmbientZoneSettings;                               // 0x03A8(0x0024)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAudioVolumeSubmixSendSettings> SubmixSendSettings;                                // 0x03D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FAudioVolumeSubmixOverrideSettings> SubmixOverrideSettings;                            // 0x03E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FAudioVolumeSubmixOverrideSettings> SubmixOverrideSettings;                        // 0x03E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
 	void OnRep_bEnabled();
@@ -10447,7 +10447,7 @@ static_assert(offsetof(AAudioVolume, SubmixSendSettings) == 0x0003D0, "Member 'A
 static_assert(offsetof(AAudioVolume, SubmixOverrideSettings) == 0x0003E0, "Member 'AAudioVolume::SubmixOverrideSettings' has a wrong offset!");
 
 // Class Engine.SlateTextureAtlasInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ISlateTextureAtlasInterface final : public IInterface
 {
 public:
@@ -10460,8 +10460,8 @@ public:
 		return GetDefaultObjImpl<ISlateTextureAtlasInterface>();
 	}
 };
-static_assert(alignof(ISlateTextureAtlasInterface) == 0x000008, "Wrong alignment on ISlateTextureAtlasInterface");
-static_assert(sizeof(ISlateTextureAtlasInterface) == 0x000048, "Wrong size on ISlateTextureAtlasInterface");
+static_assert(alignof(ISlateTextureAtlasInterface) == 0x000001, "Wrong alignment on ISlateTextureAtlasInterface");
+static_assert(sizeof(ISlateTextureAtlasInterface) == 0x000001, "Wrong size on ISlateTextureAtlasInterface");
 
 // Class Engine.MaterialExpressionDecalMipmapLevel
 // 0x0030 (0x0100 - 0x00D0)
@@ -12031,7 +12031,7 @@ static_assert(alignof(UWorldPartitionHLODSourceActors) == 0x000008, "Wrong align
 static_assert(sizeof(UWorldPartitionHLODSourceActors) == 0x000048, "Wrong size on UWorldPartitionHLODSourceActors");
 
 // Class Engine.NodeMappingProviderInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class INodeMappingProviderInterface final : public IInterface
 {
 public:
@@ -12044,8 +12044,8 @@ public:
 		return GetDefaultObjImpl<INodeMappingProviderInterface>();
 	}
 };
-static_assert(alignof(INodeMappingProviderInterface) == 0x000008, "Wrong alignment on INodeMappingProviderInterface");
-static_assert(sizeof(INodeMappingProviderInterface) == 0x000048, "Wrong size on INodeMappingProviderInterface");
+static_assert(alignof(INodeMappingProviderInterface) == 0x000001, "Wrong alignment on INodeMappingProviderInterface");
+static_assert(sizeof(INodeMappingProviderInterface) == 0x000001, "Wrong size on INodeMappingProviderInterface");
 
 // Class Engine.WorldPartitionHLODSourceActorsFromCell
 // 0x0000 (0x0048 - 0x0048)
@@ -12201,7 +12201,7 @@ static_assert(offsetof(UHLODTemplatedInstancedStaticMeshComponent, TemplateActor
 static_assert(offsetof(UHLODTemplatedInstancedStaticMeshComponent, TemplateComponentName) == 0x0007E8, "Member 'UHLODTemplatedInstancedStaticMeshComponent::TemplateComponentName' has a wrong offset!");
 
 // Class Engine.AnimationDataController
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IAnimationDataController final : public IInterface
 {
 public:
@@ -12257,8 +12257,8 @@ public:
 		return GetDefaultObjImpl<IAnimationDataController>();
 	}
 };
-static_assert(alignof(IAnimationDataController) == 0x000008, "Wrong alignment on IAnimationDataController");
-static_assert(sizeof(IAnimationDataController) == 0x000048, "Wrong size on IAnimationDataController");
+static_assert(alignof(IAnimationDataController) == 0x000001, "Wrong alignment on IAnimationDataController");
+static_assert(sizeof(IAnimationDataController) == 0x000001, "Wrong size on IAnimationDataController");
 
 // Class Engine.MaterialExpressionExponential
 // 0x0028 (0x00F8 - 0x00D0)
@@ -12282,7 +12282,7 @@ static_assert(sizeof(UMaterialExpressionExponential) == 0x0000F8, "Wrong size on
 static_assert(offsetof(UMaterialExpressionExponential, Input) == 0x0000D0, "Member 'UMaterialExpressionExponential::Input' has a wrong offset!");
 
 // Class Engine.AnimationDataModel
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IAnimationDataModel final : public IInterface
 {
 public:
@@ -12313,8 +12313,8 @@ public:
 		return GetDefaultObjImpl<IAnimationDataModel>();
 	}
 };
-static_assert(alignof(IAnimationDataModel) == 0x000008, "Wrong alignment on IAnimationDataModel");
-static_assert(sizeof(IAnimationDataModel) == 0x000048, "Wrong size on IAnimationDataModel");
+static_assert(alignof(IAnimationDataModel) == 0x000001, "Wrong alignment on IAnimationDataModel");
+static_assert(sizeof(IAnimationDataModel) == 0x000001, "Wrong size on IAnimationDataModel");
 
 // Class Engine.AnimNotify_PlaySound
 // 0x0020 (0x0078 - 0x0058)
@@ -12476,7 +12476,7 @@ static_assert(offsetof(UMaterialExpressionSphericalParticleOpacity, Density) == 
 static_assert(offsetof(UMaterialExpressionSphericalParticleOpacity, ConstantDensity) == 0x0000F8, "Member 'UMaterialExpressionSphericalParticleOpacity::ConstantDensity' has a wrong offset!");
 
 // Class Engine.Interface_ActorSubobject
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterface_ActorSubobject final : public IInterface
 {
 public:
@@ -12489,8 +12489,8 @@ public:
 		return GetDefaultObjImpl<IInterface_ActorSubobject>();
 	}
 };
-static_assert(alignof(IInterface_ActorSubobject) == 0x000008, "Wrong alignment on IInterface_ActorSubobject");
-static_assert(sizeof(IInterface_ActorSubobject) == 0x000048, "Wrong size on IInterface_ActorSubobject");
+static_assert(alignof(IInterface_ActorSubobject) == 0x000001, "Wrong alignment on IInterface_ActorSubobject");
+static_assert(sizeof(IInterface_ActorSubobject) == 0x000001, "Wrong size on IInterface_ActorSubobject");
 
 // Class Engine.ArrowComponent
 // 0x0020 (0x05E0 - 0x05C0)
@@ -12533,7 +12533,7 @@ static_assert(offsetof(UArrowComponent, ArrowLength) == 0x0005C8, "Member 'UArro
 static_assert(offsetof(UArrowComponent, ScreenSize) == 0x0005CC, "Member 'UArrowComponent::ScreenSize' has a wrong offset!");
 
 // Class Engine.Interface_AssetUserData
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterface_AssetUserData final : public IInterface
 {
 public:
@@ -12546,8 +12546,8 @@ public:
 		return GetDefaultObjImpl<IInterface_AssetUserData>();
 	}
 };
-static_assert(alignof(IInterface_AssetUserData) == 0x000008, "Wrong alignment on IInterface_AssetUserData");
-static_assert(sizeof(IInterface_AssetUserData) == 0x000048, "Wrong size on IInterface_AssetUserData");
+static_assert(alignof(IInterface_AssetUserData) == 0x000001, "Wrong alignment on IInterface_AssetUserData");
+static_assert(sizeof(IInterface_AssetUserData) == 0x000001, "Wrong size on IInterface_AssetUserData");
 
 // Class Engine.ShapeComponent
 // 0x0020 (0x05E0 - 0x05C0)
@@ -12610,7 +12610,7 @@ static_assert(sizeof(USphereComponent) == 0x0005F0, "Wrong size on USphereCompon
 static_assert(offsetof(USphereComponent, SphereRadius) == 0x0005E0, "Member 'USphereComponent::SphereRadius' has a wrong offset!");
 
 // Class Engine.Interface_AsyncCompilation
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterface_AsyncCompilation final : public IInterface
 {
 public:
@@ -12623,8 +12623,8 @@ public:
 		return GetDefaultObjImpl<IInterface_AsyncCompilation>();
 	}
 };
-static_assert(alignof(IInterface_AsyncCompilation) == 0x000008, "Wrong alignment on IInterface_AsyncCompilation");
-static_assert(sizeof(IInterface_AsyncCompilation) == 0x000048, "Wrong size on IInterface_AsyncCompilation");
+static_assert(alignof(IInterface_AsyncCompilation) == 0x000001, "Wrong alignment on IInterface_AsyncCompilation");
+static_assert(sizeof(IInterface_AsyncCompilation) == 0x000001, "Wrong size on IInterface_AsyncCompilation");
 
 // Class Engine.DeprecatedDataLayerInstance
 // 0x0018 (0x0080 - 0x0068)
@@ -12672,7 +12672,7 @@ static_assert(alignof(UMaterialExpressionPreSkinnedLocalBounds) == 0x000008, "Wr
 static_assert(sizeof(UMaterialExpressionPreSkinnedLocalBounds) == 0x0000D0, "Wrong size on UMaterialExpressionPreSkinnedLocalBounds");
 
 // Class Engine.BoneReferenceSkeletonProvider
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IBoneReferenceSkeletonProvider final : public IInterface
 {
 public:
@@ -12685,8 +12685,8 @@ public:
 		return GetDefaultObjImpl<IBoneReferenceSkeletonProvider>();
 	}
 };
-static_assert(alignof(IBoneReferenceSkeletonProvider) == 0x000008, "Wrong alignment on IBoneReferenceSkeletonProvider");
-static_assert(sizeof(IBoneReferenceSkeletonProvider) == 0x000048, "Wrong size on IBoneReferenceSkeletonProvider");
+static_assert(alignof(IBoneReferenceSkeletonProvider) == 0x000001, "Wrong alignment on IBoneReferenceSkeletonProvider");
+static_assert(sizeof(IBoneReferenceSkeletonProvider) == 0x000001, "Wrong size on IBoneReferenceSkeletonProvider");
 
 // Class Engine.PawnMovementComponent
 // 0x0008 (0x01B0 - 0x01A8)
@@ -12900,7 +12900,7 @@ public:
 	float                                         NavMeshProjectionHeightScaleDown;                  // 0x0740(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         NavWalkingFloorDistTolerance;                      // 0x0744(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_748[0x30];                                     // 0x0748(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCharacterMovementComponentPostPhysicsTickFunction PostPhysicsTickFunction;                           // 0x0778(0x0030)(NativeAccessSpecifierPublic)
+	struct FCharacterMovementComponentPostPhysicsTickFunction PostPhysicsTickFunction;               // 0x0778(0x0030)(NativeAccessSpecifierPublic)
 	uint8                                         Pad_7A8[0x18];                                     // 0x07A8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinTimeBetweenTimeStampResets;                     // 0x07C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7C4[0x534];                                    // 0x07C4(0x0534)(Fixing Size After Last Property [ Dumper-7 ])
@@ -13076,7 +13076,7 @@ static_assert(offsetof(UCharacterMovementComponent, RootMotionParams) == 0x000EF
 static_assert(offsetof(UCharacterMovementComponent, AnimRootMotionVelocity) == 0x000F60, "Member 'UCharacterMovementComponent::AnimRootMotionVelocity' has a wrong offset!");
 
 // Class Engine.Interface_CollisionDataProvider
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterface_CollisionDataProvider final : public IInterface
 {
 public:
@@ -13089,11 +13089,11 @@ public:
 		return GetDefaultObjImpl<IInterface_CollisionDataProvider>();
 	}
 };
-static_assert(alignof(IInterface_CollisionDataProvider) == 0x000008, "Wrong alignment on IInterface_CollisionDataProvider");
-static_assert(sizeof(IInterface_CollisionDataProvider) == 0x000048, "Wrong size on IInterface_CollisionDataProvider");
+static_assert(alignof(IInterface_CollisionDataProvider) == 0x000001, "Wrong alignment on IInterface_CollisionDataProvider");
+static_assert(sizeof(IInterface_CollisionDataProvider) == 0x000001, "Wrong size on IInterface_CollisionDataProvider");
 
 // Class Engine.Interface_PostProcessVolume
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterface_PostProcessVolume final : public IInterface
 {
 public:
@@ -13106,8 +13106,8 @@ public:
 		return GetDefaultObjImpl<IInterface_PostProcessVolume>();
 	}
 };
-static_assert(alignof(IInterface_PostProcessVolume) == 0x000008, "Wrong alignment on IInterface_PostProcessVolume");
-static_assert(sizeof(IInterface_PostProcessVolume) == 0x000048, "Wrong size on IInterface_PostProcessVolume");
+static_assert(alignof(IInterface_PostProcessVolume) == 0x000001, "Wrong alignment on IInterface_PostProcessVolume");
+static_assert(sizeof(IInterface_PostProcessVolume) == 0x000001, "Wrong size on IInterface_PostProcessVolume");
 
 // Class Engine.MaterialExpressionPathTracingRayTypeSwitch
 // 0x00C8 (0x0198 - 0x00D0)
@@ -13164,7 +13164,7 @@ static_assert(offsetof(UParticleModuleColorScaleOverLife, ColorScaleOverLife) ==
 static_assert(offsetof(UParticleModuleColorScaleOverLife, AlphaScaleOverLife) == 0x0000B0, "Member 'UParticleModuleColorScaleOverLife::AlphaScaleOverLife' has a wrong offset!");
 
 // Class Engine.Interface_PreviewMeshProvider
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterface_PreviewMeshProvider final : public IInterface
 {
 public:
@@ -13177,15 +13177,15 @@ public:
 		return GetDefaultObjImpl<IInterface_PreviewMeshProvider>();
 	}
 };
-static_assert(alignof(IInterface_PreviewMeshProvider) == 0x000008, "Wrong alignment on IInterface_PreviewMeshProvider");
-static_assert(sizeof(IInterface_PreviewMeshProvider) == 0x000048, "Wrong size on IInterface_PreviewMeshProvider");
+static_assert(alignof(IInterface_PreviewMeshProvider) == 0x000001, "Wrong alignment on IInterface_PreviewMeshProvider");
+static_assert(sizeof(IInterface_PreviewMeshProvider) == 0x000001, "Wrong size on IInterface_PreviewMeshProvider");
 
 // Class Engine.ComponentDelegateBinding
 // 0x0010 (0x0058 - 0x0048)
 class UComponentDelegateBinding final : public UDynamicBlueprintBinding
 {
 public:
-	TArray<struct FBlueprintComponentDelegateBinding> ComponentDelegateBindings;                         // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FBlueprintComponentDelegateBinding> ComponentDelegateBindings;                     // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -13202,7 +13202,7 @@ static_assert(sizeof(UComponentDelegateBinding) == 0x000058, "Wrong size on UCom
 static_assert(offsetof(UComponentDelegateBinding, ComponentDelegateBindings) == 0x000048, "Member 'UComponentDelegateBinding::ComponentDelegateBindings' has a wrong offset!");
 
 // Class Engine.PhysicsComponent
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IPhysicsComponent final : public IInterface
 {
 public:
@@ -13215,8 +13215,8 @@ public:
 		return GetDefaultObjImpl<IPhysicsComponent>();
 	}
 };
-static_assert(alignof(IPhysicsComponent) == 0x000008, "Wrong alignment on IPhysicsComponent");
-static_assert(sizeof(IPhysicsComponent) == 0x000048, "Wrong size on IPhysicsComponent");
+static_assert(alignof(IPhysicsComponent) == 0x000001, "Wrong alignment on IPhysicsComponent");
+static_assert(sizeof(IPhysicsComponent) == 0x000001, "Wrong size on IPhysicsComponent");
 
 // Class Engine.ParticleModuleKillBase
 // 0x0000 (0x0050 - 0x0050)
@@ -13263,7 +13263,7 @@ static_assert(offsetof(UParticleModuleKillBox, LowerLeftCorner) == 0x000050, "Me
 static_assert(offsetof(UParticleModuleKillBox, UpperRightCorner) == 0x0000B0, "Member 'UParticleModuleKillBox::UpperRightCorner' has a wrong offset!");
 
 // Class Engine.ISMPartitionInstanceManager
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IISMPartitionInstanceManager final : public IInterface
 {
 public:
@@ -13276,8 +13276,8 @@ public:
 		return GetDefaultObjImpl<IISMPartitionInstanceManager>();
 	}
 };
-static_assert(alignof(IISMPartitionInstanceManager) == 0x000008, "Wrong alignment on IISMPartitionInstanceManager");
-static_assert(sizeof(IISMPartitionInstanceManager) == 0x000048, "Wrong size on IISMPartitionInstanceManager");
+static_assert(alignof(IISMPartitionInstanceManager) == 0x000001, "Wrong alignment on IISMPartitionInstanceManager");
+static_assert(sizeof(IISMPartitionInstanceManager) == 0x000001, "Wrong size on IISMPartitionInstanceManager");
 
 // Class Engine.CapsuleComponent
 // 0x0010 (0x05F0 - 0x05E0)
@@ -13338,7 +13338,7 @@ static_assert(alignof(UMaterialExpressionObjectOrientation) == 0x000008, "Wrong 
 static_assert(sizeof(UMaterialExpressionObjectOrientation) == 0x0000D0, "Wrong size on UMaterialExpressionObjectOrientation");
 
 // Class Engine.ISMPartitionInstanceManagerProvider
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IISMPartitionInstanceManagerProvider final : public IInterface
 {
 public:
@@ -13351,8 +13351,8 @@ public:
 		return GetDefaultObjImpl<IISMPartitionInstanceManagerProvider>();
 	}
 };
-static_assert(alignof(IISMPartitionInstanceManagerProvider) == 0x000008, "Wrong alignment on IISMPartitionInstanceManagerProvider");
-static_assert(sizeof(IISMPartitionInstanceManagerProvider) == 0x000048, "Wrong size on IISMPartitionInstanceManagerProvider");
+static_assert(alignof(IISMPartitionInstanceManagerProvider) == 0x000001, "Wrong alignment on IISMPartitionInstanceManagerProvider");
+static_assert(sizeof(IISMPartitionInstanceManagerProvider) == 0x000001, "Wrong size on IISMPartitionInstanceManagerProvider");
 
 // Class Engine.LocalHeightFogComponent
 // 0x0050 (0x0340 - 0x02F0)
@@ -13394,7 +13394,7 @@ static_assert(offsetof(ULocalHeightFogComponent, FogEmissive) == 0x000318, "Memb
 static_assert(offsetof(ULocalHeightFogComponent, FogSortPriority) == 0x000328, "Member 'ULocalHeightFogComponent::FogSortPriority' has a wrong offset!");
 
 // Class Engine.WorldPartitionObjectResolver
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IWorldPartitionObjectResolver final : public IInterface
 {
 public:
@@ -13407,8 +13407,8 @@ public:
 		return GetDefaultObjImpl<IWorldPartitionObjectResolver>();
 	}
 };
-static_assert(alignof(IWorldPartitionObjectResolver) == 0x000008, "Wrong alignment on IWorldPartitionObjectResolver");
-static_assert(sizeof(IWorldPartitionObjectResolver) == 0x000048, "Wrong size on IWorldPartitionObjectResolver");
+static_assert(alignof(IWorldPartitionObjectResolver) == 0x000001, "Wrong alignment on IWorldPartitionObjectResolver");
+static_assert(sizeof(IWorldPartitionObjectResolver) == 0x000001, "Wrong size on IWorldPartitionObjectResolver");
 
 // Class Engine.HLODLayer
 // 0x0040 (0x0088 - 0x0048)
@@ -13425,7 +13425,7 @@ public:
 	double                                        LoadingRange;                                      // 0x0068(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UHLODLayer*                             ParentLayer;                                       // 0x0070(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSubclassOf<class AWorldPartitionHLOD>        HLODActorClass;                                    // 0x0078(0x0008)(Edit, ZeroConstructor, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UWorldPartitionHLODModifier> HLODModifierClass;                                 // 0x0080(0x0008)(Edit, ZeroConstructor, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UWorldPartitionHLODModifier> HLODModifierClass;                                // 0x0080(0x0008)(Edit, ZeroConstructor, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -13548,7 +13548,7 @@ public:
 	float                                         IntensityMultiplier;                               // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UForceFeedbackAttenuation*              AttenuationSettings;                               // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FForceFeedbackAttenuationSettings      AttenuationOverrides;                              // 0x0308(0x00C8)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UForceFeedbackComponent* ForceFeedbackComponent)> OnForceFeedbackFinished;                           // 0x03D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UForceFeedbackComponent* ForceFeedbackComponent)> OnForceFeedbackFinished; // 0x03D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3E0[0x10];                                     // 0x03E0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -13579,7 +13579,7 @@ static_assert(offsetof(UForceFeedbackComponent, AttenuationOverrides) == 0x00030
 static_assert(offsetof(UForceFeedbackComponent, OnForceFeedbackFinished) == 0x0003D0, "Member 'UForceFeedbackComponent::OnForceFeedbackFinished' has a wrong offset!");
 
 // Class Engine.LevelInstanceEditorPivotInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ILevelInstanceEditorPivotInterface final : public IInterface
 {
 public:
@@ -13592,8 +13592,8 @@ public:
 		return GetDefaultObjImpl<ILevelInstanceEditorPivotInterface>();
 	}
 };
-static_assert(alignof(ILevelInstanceEditorPivotInterface) == 0x000008, "Wrong alignment on ILevelInstanceEditorPivotInterface");
-static_assert(sizeof(ILevelInstanceEditorPivotInterface) == 0x000048, "Wrong size on ILevelInstanceEditorPivotInterface");
+static_assert(alignof(ILevelInstanceEditorPivotInterface) == 0x000001, "Wrong alignment on ILevelInstanceEditorPivotInterface");
+static_assert(sizeof(ILevelInstanceEditorPivotInterface) == 0x000001, "Wrong size on ILevelInstanceEditorPivotInterface");
 
 // Class Engine.World
 // 0x08C8 (0x0910 - 0x0048)
@@ -13633,7 +13633,7 @@ public:
 	TArray<struct FLevelCollection>               LevelCollections;                                  // 0x01A0(0x0010)(ZeroConstructor, Transient, NonTransactional, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1B0[0x28];                                     // 0x01B0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          OwningGameInstance;                                // 0x01D8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UMaterialParameterCollectionInstance*> ParameterCollectionInstances;                      // 0x01E0(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMaterialParameterCollectionInstance*> ParameterCollectionInstances;                // 0x01E0(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 	class UCanvas*                                CanvasForRenderingToTarget;                        // 0x01F0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UCanvas*                                CanvasForDrawMaterialToRenderTarget;               // 0x01F8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_200[0x70];                                     // 0x0200(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
@@ -14033,7 +14033,7 @@ class alignas(0x10) UDemoNetDriver final : public UNetDriver
 {
 public:
 	uint8                                         Pad_7F8[0x38];                                     // 0x07F8(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, struct FRollbackNetStartupActorInfo> RollbackNetStartupActors;                          // 0x0830(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	TMap<class FString, struct FRollbackNetStartupActorInfo> RollbackNetStartupActors;               // 0x0830(0x0050)(Transient, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_880[0xE4];                                     // 0x0880(0x00E4)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CheckpointSaveMaxMSPerFrame;                       // 0x0964(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_968[0x18];                                     // 0x0968(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
@@ -14503,7 +14503,7 @@ static_assert(sizeof(UParticleModuleLight_Seeded) == 0x000180, "Wrong size on UP
 static_assert(offsetof(UParticleModuleLight_Seeded, RandomSeedInfo) == 0x000160, "Member 'UParticleModuleLight_Seeded::RandomSeedInfo' has a wrong offset!");
 
 // Class Engine.DeformableInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IDeformableInterface final : public IInterface
 {
 public:
@@ -14516,8 +14516,8 @@ public:
 		return GetDefaultObjImpl<IDeformableInterface>();
 	}
 };
-static_assert(alignof(IDeformableInterface) == 0x000008, "Wrong alignment on IDeformableInterface");
-static_assert(sizeof(IDeformableInterface) == 0x000048, "Wrong size on IDeformableInterface");
+static_assert(alignof(IDeformableInterface) == 0x000001, "Wrong alignment on IDeformableInterface");
+static_assert(sizeof(IDeformableInterface) == 0x000001, "Wrong size on IDeformableInterface");
 
 // Class Engine.LocalHeightFog
 // 0x0008 (0x0350 - 0x0348)
@@ -14636,7 +14636,7 @@ static_assert(sizeof(UMapBuildDataRegistry) == 0x000258, "Wrong size on UMapBuil
 static_assert(offsetof(UMapBuildDataRegistry, LevelLightingQuality) == 0x000048, "Member 'UMapBuildDataRegistry::LevelLightingQuality' has a wrong offset!");
 
 // Class Engine.CameraLensEffectInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ICameraLensEffectInterface final : public IInterface
 {
 public:
@@ -14653,8 +14653,8 @@ public:
 		return GetDefaultObjImpl<ICameraLensEffectInterface>();
 	}
 };
-static_assert(alignof(ICameraLensEffectInterface) == 0x000008, "Wrong alignment on ICameraLensEffectInterface");
-static_assert(sizeof(ICameraLensEffectInterface) == 0x000048, "Wrong size on ICameraLensEffectInterface");
+static_assert(alignof(ICameraLensEffectInterface) == 0x000001, "Wrong alignment on ICameraLensEffectInterface");
+static_assert(sizeof(ICameraLensEffectInterface) == 0x000001, "Wrong size on ICameraLensEffectInterface");
 
 // Class Engine.MaterialExpressionAbs
 // 0x0028 (0x00F8 - 0x00D0)
@@ -14788,8 +14788,8 @@ public:
 	float                                         Friction;                                          // 0x019C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BounceVelocityStopSimulatingThreshold;             // 0x01A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinFrictionFraction;                               // 0x01A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FHitResult& ImpactResult, struct FVector& ImpactVelocity)> OnProjectileBounce;                                // 0x01A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FHitResult& ImpactResult)> OnProjectileStop;                                  // 0x01B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FHitResult& ImpactResult, const struct FVector& ImpactVelocity)> OnProjectileBounce; // 0x01A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FHitResult& ImpactResult)> OnProjectileStop;          // 0x01B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	float                                         HomingAccelerationMagnitude;                       // 0x01C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class USceneComponent>         HomingTargetComponent;                             // 0x01CC(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnTemplate, EditConst, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxSimulationTimeStep;                             // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -15345,7 +15345,7 @@ static_assert(offsetof(AVectorFieldVolume, VectorFieldComponent) == 0x000348, "M
 class UMaterialExpressionNamedRerouteUsage final : public UMaterialExpressionNamedRerouteBase
 {
 public:
-	class UMaterialExpressionNamedRerouteDeclaration* Declaration;                                       // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialExpressionNamedRerouteDeclaration* Declaration;                                   // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  DeclarationGuid;                                   // 0x00D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -15493,7 +15493,7 @@ public:
 	uint8                                         Pad_1A8[0x10];                                     // 0x01A8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameRate                             TargetFrameRate;                                   // 0x01B8(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FPerPlatformFrameRate                  PlatformTargetFrameRate;                           // 0x01C0(0x0008)(Edit, EditConst, NoDestructor, AssetRegistrySearchable, Protected, NativeAccessSpecifierProtected)
-	TMap<struct FAnimationAttributeIdentifier, struct FAttributeCurve> AttributeCurves;                                   // 0x01C8(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TMap<struct FAnimationAttributeIdentifier, struct FAttributeCurve> AttributeCurves;              // 0x01C8(0x0050)(Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -16382,10 +16382,10 @@ class UMaterialExpressionMaterialAttributeLayers final : public UMaterialExpress
 public:
 	struct FMaterialAttributesInput               Input;                                             // 0x00D0(0x0030)(NoDestructor, NativeAccessSpecifierPublic)
 	struct FMaterialLayersFunctions               DefaultLayers;                                     // 0x0100(0x0100)(Edit, NativeAccessSpecifierPublic)
-	TArray<class UMaterialExpressionMaterialFunctionCall*> LayerCallers;                                      // 0x0200(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UMaterialExpressionMaterialFunctionCall*> LayerCallers;                             // 0x0200(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
 	int32                                         NumActiveLayerCallers;                             // 0x0210(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialExpressionMaterialFunctionCall*> BlendCallers;                                      // 0x0218(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UMaterialExpressionMaterialFunctionCall*> BlendCallers;                             // 0x0218(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
 	int32                                         NumActiveBlendCallers;                             // 0x0228(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsLayerGraphBuilt;                                // 0x022C(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22D[0xB];                                      // 0x022D(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -16417,7 +16417,7 @@ class AWorldDataLayers final : public AInfo
 public:
 	uint8                                         Pad_348[0xA0];                                     // 0x0348(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<class UDataLayerInstance*>               DataLayerInstances;                                // 0x03E8(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
-	TMap<class FName, TWeakObjectPtr<class UDataLayerInstance>> DeprecatedDataLayerNameToDataLayerInstance;        // 0x0438(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<class FName, TWeakObjectPtr<class UDataLayerInstance>> DeprecatedDataLayerNameToDataLayerInstance; // 0x0438(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
 	TSet<class UDataLayer*>                       WorldDataLayers;                                   // 0x0488(0x0050)(Deprecated, UObjectWrapper, NativeAccessSpecifierPrivate)
 	TArray<class FName>                           RepActiveDataLayerNames;                           // 0x04D8(0x0010)(Net, ZeroConstructor, Transient, RepNotify, NativeAccessSpecifierPrivate)
 	TArray<class FName>                           RepLoadedDataLayerNames;                           // 0x04E8(0x0010)(Net, ZeroConstructor, Transient, RepNotify, NativeAccessSpecifierPrivate)
@@ -16621,8 +16621,8 @@ public:
 	uint8                                         Pad_348[0x8];                                      // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           PlayerState;                                       // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, RepNotify, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_358[0x8];                                      // 0x0358(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(float Damage, class UDamageType* DamageType, class AActor* DamagedActor, class AActor* DamageCauser)> OnInstigatedAnyDamage;                             // 0x0360(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class APawn* OldPawn, class APawn* NewPawn)> OnPossessedPawnChanged;                            // 0x0370(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(float Damage, const class UDamageType* DamageType, class AActor* DamagedActor, class AActor* DamageCauser)> OnInstigatedAnyDamage; // 0x0360(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class APawn* OldPawn, class APawn* NewPawn)> OnPossessedPawnChanged; // 0x0370(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class FName                                   StateName;                                         // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APawn*                                  Pawn;                                              // 0x0388(0x0008)(Net, ZeroConstructor, RepNotify, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_390[0x8];                                      // 0x0390(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -16905,7 +16905,7 @@ class UMaterialExpressionDataDrivenShaderPlatformInfoSwitch final : public UMate
 public:
 	struct FExpressionInput                       InputTrue;                                         // 0x00D0(0x0028)(NoDestructor, NativeAccessSpecifierPublic)
 	struct FExpressionInput                       InputFalse;                                        // 0x00F8(0x0028)(NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FDataDrivenShaderPlatformInfoInput> DDSPIPropertyNames;                                // 0x0120(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FDataDrivenShaderPlatformInfoInput> DDSPIPropertyNames;                            // 0x0120(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         bContainsInvalidProperty : 1;                      // 0x0130(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -17817,7 +17817,7 @@ static_assert(offsetof(UMaterialExpressionMin, ConstA) == 0x000120, "Member 'UMa
 static_assert(offsetof(UMaterialExpressionMin, ConstB) == 0x000124, "Member 'UMaterialExpressionMin::ConstB' has a wrong offset!");
 
 // Class Engine.LevelInstanceInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ILevelInstanceInterface final : public IInterface
 {
 public:
@@ -17837,8 +17837,8 @@ public:
 		return GetDefaultObjImpl<ILevelInstanceInterface>();
 	}
 };
-static_assert(alignof(ILevelInstanceInterface) == 0x000008, "Wrong alignment on ILevelInstanceInterface");
-static_assert(sizeof(ILevelInstanceInterface) == 0x000048, "Wrong size on ILevelInstanceInterface");
+static_assert(alignof(ILevelInstanceInterface) == 0x000001, "Wrong alignment on ILevelInstanceInterface");
+static_assert(sizeof(ILevelInstanceInterface) == 0x000001, "Wrong size on ILevelInstanceInterface");
 
 // Class Engine.MaterialExpressionNaniteReplace
 // 0x0050 (0x0120 - 0x00D0)
@@ -18074,7 +18074,7 @@ class ALightWeightInstanceStaticMeshManager final : public ALightWeightInstanceM
 public:
 	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UStaticMesh>             StaticMesh;                                        // 0x0400(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, RepNotify, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UHierarchicalInstancedStaticMeshComponent* InstancedStaticMeshComponent;                      // 0x0428(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, AdvancedDisplay, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UHierarchicalInstancedStaticMeshComponent* InstancedStaticMeshComponent;                   // 0x0428(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, AdvancedDisplay, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<int32>                                 RenderingIndicesToDataIndices;                     // 0x0430(0x0010)(Net, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<int32>                                 DataIndicesToRenderingIndices;                     // 0x0440(0x0010)(Net, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_450[0x10];                                     // 0x0450(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -18743,7 +18743,7 @@ static_assert(offsetof(UMaterialExpressionSceneColor, OffsetFraction) == 0x00010
 static_assert(offsetof(UMaterialExpressionSceneColor, ConstInput) == 0x000128, "Member 'UMaterialExpressionSceneColor::ConstInput' has a wrong offset!");
 
 // Class Engine.NavAgentInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class INavAgentInterface final : public IInterface
 {
 public:
@@ -18756,8 +18756,8 @@ public:
 		return GetDefaultObjImpl<INavAgentInterface>();
 	}
 };
-static_assert(alignof(INavAgentInterface) == 0x000008, "Wrong alignment on INavAgentInterface");
-static_assert(sizeof(INavAgentInterface) == 0x000048, "Wrong size on INavAgentInterface");
+static_assert(alignof(INavAgentInterface) == 0x000001, "Wrong alignment on INavAgentInterface");
+static_assert(sizeof(INavAgentInterface) == 0x000001, "Wrong size on INavAgentInterface");
 
 // Class Engine.MaterialExpressionSceneDepth
 // 0x0068 (0x0138 - 0x00D0)
@@ -19101,7 +19101,7 @@ public:
 	class FString                                 SavedNetworkAddress;                               // 0x0368(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       UniqueID;                                          // 0x0378(0x0030)(Net, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3A8[0x8];                                      // 0x03A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class APlayerState* Player, class APawn* NewPawn, class APawn* OldPawn)> OnPawnSet;                                         // 0x03B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class APlayerState* Player, class APawn* NewPawn, class APawn* OldPawn)> OnPawnSet; // 0x03B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class APawn*                                  PawnPrivate;                                       // 0x03C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_3C8[0x18];                                     // 0x03C8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PlayerNamePrivate;                                 // 0x03E0(0x0010)(Net, ZeroConstructor, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -19701,7 +19701,7 @@ public:
 	uint8                                         bVerifyPeer : 1;                                   // 0x0058(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bEnableMultiplayerWorldOriginRebasing : 1;         // 0x0058(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FNetworkEmulationProfileDescription> NetworkEmulationProfiles;                          // 0x0060(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FNetworkEmulationProfileDescription> NetworkEmulationProfiles;                     // 0x0060(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -20738,7 +20738,7 @@ public:
 	class FName                                   SoundfieldEndpointType;                            // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UAudioEndpointSettingsBase> EndpointSettingsClass;                             // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundfieldEndpointSettingsBase*        EndpointSettings;                                  // 0x0070(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class USoundfieldEncodingSettingsBase> EncodingSettingsClass;                             // 0x0078(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class USoundfieldEncodingSettingsBase> EncodingSettingsClass;                        // 0x0078(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundfieldEncodingSettingsBase*        EncodingSettings;                                  // 0x0080(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class USoundfieldEffectBase*>          SoundfieldEffectChain;                             // 0x0088(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 
@@ -21738,8 +21738,8 @@ public:
 	TArray<struct FFontParameterValue>            FontParameterValues;                               // 0x00B0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FStaticSwitchParameter>         StaticSwitchParameterValues;                       // 0x00C0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FStaticComponentMaskParameter>  StaticComponentMaskParameterValues;                // 0x00D0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRuntimeVirtualTextureParameterValue> RuntimeVirtualTextureParameterValues;              // 0x00E0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FSparseVolumeTextureParameterValue> SparseVolumeTextureParameterValues;                // 0x00F0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRuntimeVirtualTextureParameterValue> RuntimeVirtualTextureParameterValues;        // 0x00E0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FSparseVolumeTextureParameterValue> SparseVolumeTextureParameterValues;            // 0x00F0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -21871,7 +21871,7 @@ static_assert(alignof(UAssetImportData) == 0x000008, "Wrong alignment on UAssetI
 static_assert(sizeof(UAssetImportData) == 0x000048, "Wrong size on UAssetImportData");
 
 // Class Engine.NavPathObserverInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class INavPathObserverInterface final : public IInterface
 {
 public:
@@ -21884,8 +21884,8 @@ public:
 		return GetDefaultObjImpl<INavPathObserverInterface>();
 	}
 };
-static_assert(alignof(INavPathObserverInterface) == 0x000008, "Wrong alignment on INavPathObserverInterface");
-static_assert(sizeof(INavPathObserverInterface) == 0x000048, "Wrong size on INavPathObserverInterface");
+static_assert(alignof(INavPathObserverInterface) == 0x000001, "Wrong alignment on INavPathObserverInterface");
+static_assert(sizeof(INavPathObserverInterface) == 0x000001, "Wrong size on INavPathObserverInterface");
 
 // Class Engine.ActorElementHierarchyInterface
 // 0x0008 (0x0050 - 0x0048)
@@ -21908,7 +21908,7 @@ static_assert(alignof(UActorElementHierarchyInterface) == 0x000008, "Wrong align
 static_assert(sizeof(UActorElementHierarchyInterface) == 0x000050, "Wrong size on UActorElementHierarchyInterface");
 
 // Class Engine.NetworkPredictionInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class INetworkPredictionInterface final : public IInterface
 {
 public:
@@ -21921,8 +21921,8 @@ public:
 		return GetDefaultObjImpl<INetworkPredictionInterface>();
 	}
 };
-static_assert(alignof(INetworkPredictionInterface) == 0x000008, "Wrong alignment on INetworkPredictionInterface");
-static_assert(sizeof(INetworkPredictionInterface) == 0x000048, "Wrong size on INetworkPredictionInterface");
+static_assert(alignof(INetworkPredictionInterface) == 0x000001, "Wrong alignment on INetworkPredictionInterface");
+static_assert(sizeof(INetworkPredictionInterface) == 0x000001, "Wrong size on INetworkPredictionInterface");
 
 // Class Engine.ParticleLODLevel
 // 0x0090 (0x00D8 - 0x0048)
@@ -21941,7 +21941,7 @@ public:
 	TArray<class UParticleModule*>                SpawnModules;                                      // 0x0090(0x0010)(ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class UParticleModule*>                UpdateModules;                                     // 0x00A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class UParticleModuleOrbit*>           OrbitModules;                                      // 0x00B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<class UParticleModuleEventReceiverBase*> EventReceiverModules;                              // 0x00C0(0x0010)(ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UParticleModuleEventReceiverBase*> EventReceiverModules;                            // 0x00C0(0x0010)(ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper, NativeAccessSpecifierPublic)
 	uint8                                         ConvertedModules : 1;                              // 0x00D0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PeakActiveParticles;                               // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -22665,19 +22665,19 @@ public:
 	EAttachmentRule                               AutoAttachScaleRule;                               // 0x0976(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_977[0x1];                                      // 0x0977(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoundModulationDefaultRoutingSettings ModulationRouting;                                 // 0x0978(0x0168)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(EAudioComponentPlayState PlayState)> OnAudioPlayStateChanged;                           // 0x0AE0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(EAudioComponentPlayState PlayState)> OnAudioPlayStateChanged;      // 0x0AE0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_AF0[0x18];                                     // 0x0AF0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool bIsVirtualized)> OnAudioVirtualizationChanged;                      // 0x0B08(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool bIsVirtualized)> OnAudioVirtualizationChanged;                // 0x0B08(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B18[0x18];                                     // 0x0B18(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              OnAudioFinished;                                   // 0x0B30(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B40[0x18];                                     // 0x0B40(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class USoundWave* PlayingSoundWave, float PlaybackPercent)> OnAudioPlaybackPercent;                            // 0x0B58(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class USoundWave* PlayingSoundWave, const float PlaybackPercent)> OnAudioPlaybackPercent; // 0x0B58(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B68[0x18];                                     // 0x0B68(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class USoundWave* PlayingSoundWave, float EnvelopeValue)> OnAudioSingleEnvelopeValue;                        // 0x0B80(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class USoundWave* PlayingSoundWave, const float EnvelopeValue)> OnAudioSingleEnvelopeValue; // 0x0B80(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B90[0x18];                                     // 0x0B90(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(float AverageEnvelopeValue, float MaxEnvelope, int32 NumWaveInstances)> OnAudioMultiEnvelopeValue;                         // 0x0BA8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const float AverageEnvelopeValue, const float MaxEnvelope, const int32 NumWaveInstances)> OnAudioMultiEnvelopeValue; // 0x0BA8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_BB8[0x18];                                     // 0x0BB8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(TArray<struct FSubtitleCue>& Subtitles, float CueDuration)> OnQueueSubtitles;                                  // 0x0BD0(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const TArray<struct FSubtitleCue>& Subtitles, float CueDuration)> OnQueueSubtitles; // 0x0BD0(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_BE0[0x10];                                     // 0x0BE0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TWeakObjectPtr<class USceneComponent>         AutoAttachParent;                                  // 0x0BF0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnTemplate, EditConst, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   AutoAttachSocketName;                              // 0x0BF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -23292,7 +23292,7 @@ class UHLODProxy final : public UObject
 {
 public:
 	TArray<struct FHLODProxyMesh>                 ProxyMeshes;                                       // 0x0048(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
-	TMap<class UHLODProxyDesc*, struct FHLODProxyMesh> HLODActors;                                        // 0x0058(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TMap<class UHLODProxyDesc*, struct FHLODProxyMesh> HLODActors;                                   // 0x0058(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -23497,7 +23497,7 @@ static_assert(offsetof(UParticleModuleMeshRotationRateOverLife, RotRate) == 0x00
 class UInputAxisKeyDelegateBinding : public UInputDelegateBinding
 {
 public:
-	TArray<struct FBlueprintInputAxisKeyDelegateBinding> InputAxisKeyDelegateBindings;                      // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FBlueprintInputAxisKeyDelegateBinding> InputAxisKeyDelegateBindings;               // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -24042,7 +24042,7 @@ static_assert(offsetof(UParticleModuleRotationRateMultiplyLife, LifeMultiplier) 
 class UAsyncActionLoadPrimaryAssetClassList final : public UAsyncActionLoadPrimaryAssetBase
 {
 public:
-	TMulticastInlineDelegate<void(TArray<TSubclassOf<class UObject>>& Loaded)> Completed;                                         // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<TSubclassOf<class UObject>>& Loaded)> Completed;      // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UAsyncActionLoadPrimaryAssetClassList* AsyncLoadPrimaryAssetClassList(class UObject* WorldContextObject, const TArray<struct FPrimaryAssetId>& PrimaryAssetList, const TArray<class FName>& LoadBundles);
@@ -24690,7 +24690,7 @@ class UInputDeviceTriggerFeedbackProperty final : public UInputDeviceTriggerEffe
 {
 public:
 	struct FDeviceTriggerFeedbackData             TriggerData;                                       // 0x0060(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FDeviceTriggerFeedbackData> DeviceOverrideData;                                // 0x0070(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FDeviceTriggerFeedbackData> DeviceOverrideData;                         // 0x0070(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C0[0x18];                                      // 0x00C0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -24792,7 +24792,7 @@ class UInputDeviceSubsystem final : public UEngineSubsystem
 {
 public:
 	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(struct FPlatformUserId& UserId, struct FInputDeviceId& DeviceID)> OnInputHardwareDeviceChanged;                      // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FPlatformUserId& UserId, const struct FInputDeviceId& DeviceID)> OnInputHardwareDeviceChanged; // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TSet<struct FActiveDeviceProperty>            ActiveProperties;                                  // 0x0068(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
 	TSet<struct FInputDevicePropertyHandle>       PropertiesPendingRemoval;                          // 0x00B8(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_108[0xB0];                                     // 0x0108(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -25358,10 +25358,10 @@ public:
 	EParticleSignificanceLevel                    RequiredSignificance;                              // 0x05F6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5F7[0x1];                                      // 0x05F7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FParticleSysParam>              InstanceParameters;                                // 0x05F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, const struct FVector& Location, const struct FVector& Velocity)> OnParticleSpawn;                                   // 0x0608(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleCount)> OnParticleBurst;                                   // 0x0618(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction)> OnParticleDeath;                                   // 0x0628(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction, const struct FVector& Normal, class FName BoneName, class UPhysicalMaterial* PhysMat)> OnParticleCollide;                                 // 0x0638(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, const struct FVector& Location, const struct FVector& Velocity)> OnParticleSpawn; // 0x0608(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleCount)> OnParticleBurst; // 0x0618(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction)> OnParticleDeath; // 0x0628(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName EventName, float EmitterTime, int32 ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction, const struct FVector& Normal, class FName BoneName, class UPhysicalMaterial* PhysMat)> OnParticleCollide; // 0x0638(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                          bOldPositionValid;                                 // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_649[0x7];                                      // 0x0649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                OldPosition;                                       // 0x0650(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -25383,7 +25383,7 @@ public:
 	EAttachmentRule                               AutoAttachRotationRule;                            // 0x0739(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAttachmentRule                               AutoAttachScaleRule;                               // 0x073A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_73B[0x55];                                     // 0x073B(0x0055)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UParticleSystemComponent* PSystem)> OnSystemFinished;                                  // 0x0790(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UParticleSystemComponent* PSystem)> OnSystemFinished;        // 0x0790(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7A0[0x130];                                    // 0x07A0(0x0130)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -25495,7 +25495,7 @@ static_assert(sizeof(UAssetMappingTable) == 0x000058, "Wrong size on UAssetMappi
 static_assert(offsetof(UAssetMappingTable, MappedAssets) == 0x000048, "Member 'UAssetMappingTable::MappedAssets' has a wrong offset!");
 
 // Class Engine.PathFollowingAgentInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IPathFollowingAgentInterface final : public IInterface
 {
 public:
@@ -25508,8 +25508,8 @@ public:
 		return GetDefaultObjImpl<IPathFollowingAgentInterface>();
 	}
 };
-static_assert(alignof(IPathFollowingAgentInterface) == 0x000008, "Wrong alignment on IPathFollowingAgentInterface");
-static_assert(sizeof(IPathFollowingAgentInterface) == 0x000048, "Wrong size on IPathFollowingAgentInterface");
+static_assert(alignof(IPathFollowingAgentInterface) == 0x000001, "Wrong alignment on IPathFollowingAgentInterface");
+static_assert(sizeof(IPathFollowingAgentInterface) == 0x000001, "Wrong size on IPathFollowingAgentInterface");
 
 // Class Engine.PhysicsObjectBlueprintLibrary
 // 0x0000 (0x0048 - 0x0048)
@@ -25646,7 +25646,7 @@ public:
 	struct FSoftObjectPath                        Path;                                              // 0x0048(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class AActor>                  TypedPtr;                                          // 0x0068(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPieFixupStructWithSoftObjectPath      Struct;                                            // 0x0090(0x0048)(NativeAccessSpecifierPublic)
-	TArray<struct FPieFixupStructWithSoftObjectPath> Array;                                             // 0x00D8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPieFixupStructWithSoftObjectPath> Array;                                          // 0x00D8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -25727,9 +25727,9 @@ public:
 	uint8                                         bCaptureOnMovement : 1;                            // 0x02F2(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	bool                                          bAlwaysPersistRenderingState;                      // 0x02F3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2F4[0x4];                                      // 0x02F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TWeakObjectPtr<class UPrimitiveComponent>> HiddenComponents;                                  // 0x02F8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TWeakObjectPtr<class UPrimitiveComponent>> HiddenComponents;                              // 0x02F8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class AActor*>                         HiddenActors;                                      // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<TWeakObjectPtr<class UPrimitiveComponent>> ShowOnlyComponents;                                // 0x0318(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TWeakObjectPtr<class UPrimitiveComponent>> ShowOnlyComponents;                            // 0x0318(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class AActor*>                         ShowOnlyActors;                                    // 0x0328(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, UObjectWrapper, NativeAccessSpecifierPublic)
 	float                                         LODDistanceFactor;                                 // 0x0338(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxViewDistanceOverride;                           // 0x033C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -25931,9 +25931,9 @@ public:
 	uint8                                         Pad_2394[0x4];                                     // 0x2394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                FreeCamOffset;                                     // 0x2398(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ViewTargetOffset;                                  // 0x23B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(bool bFadeOut, float FadeTime)> OnAudioFadeChangeEvent;                            // 0x23C8(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool bFadeOut, float FadeTime)> OnAudioFadeChangeEvent;            // 0x23C8(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_23D8[0x18];                                    // 0x23D8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TScriptInterface<class ICameraLensEffectInterface>> CameraLensEffects;                                 // 0x23F0(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<TScriptInterface<class ICameraLensEffectInterface>> CameraLensEffects;                    // 0x23F0(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	class UCameraModifier_CameraShake*            CachedCameraShakeMod;                              // 0x2400(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FPostProcessSettings>           PostProcessBlendCache;                             // 0x2408(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_2418[0x20];                                    // 0x2418(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
@@ -26355,7 +26355,7 @@ static_assert(alignof(URuntimePartitionPersistent) == 0x000008, "Wrong alignment
 static_assert(sizeof(URuntimePartitionPersistent) == 0x000048, "Wrong size on URuntimePartitionPersistent");
 
 // Class Engine.RVOAvoidanceInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IRVOAvoidanceInterface final : public IInterface
 {
 public:
@@ -26368,8 +26368,8 @@ public:
 		return GetDefaultObjImpl<IRVOAvoidanceInterface>();
 	}
 };
-static_assert(alignof(IRVOAvoidanceInterface) == 0x000008, "Wrong alignment on IRVOAvoidanceInterface");
-static_assert(sizeof(IRVOAvoidanceInterface) == 0x000048, "Wrong size on IRVOAvoidanceInterface");
+static_assert(alignof(IRVOAvoidanceInterface) == 0x000001, "Wrong alignment on IRVOAvoidanceInterface");
+static_assert(sizeof(IRVOAvoidanceInterface) == 0x000001, "Wrong size on IRVOAvoidanceInterface");
 
 // Class Engine.AtmosphericFogComponent
 // 0x0000 (0x03F0 - 0x03F0)
@@ -26541,7 +26541,7 @@ static_assert(offsetof(USceneCaptureComponentCube, TextureTarget) == 0x0003A8, "
 static_assert(offsetof(USceneCaptureComponentCube, bCaptureRotation) == 0x0003B0, "Member 'USceneCaptureComponentCube::bCaptureRotation' has a wrong offset!");
 
 // Class Engine.ActorSoundParameterInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IActorSoundParameterInterface final : public IInterface
 {
 public:
@@ -26557,8 +26557,8 @@ public:
 		return GetDefaultObjImpl<IActorSoundParameterInterface>();
 	}
 };
-static_assert(alignof(IActorSoundParameterInterface) == 0x000008, "Wrong alignment on IActorSoundParameterInterface");
-static_assert(sizeof(IActorSoundParameterInterface) == 0x000048, "Wrong size on IActorSoundParameterInterface");
+static_assert(alignof(IActorSoundParameterInterface) == 0x000001, "Wrong alignment on IActorSoundParameterInterface");
+static_assert(sizeof(IActorSoundParameterInterface) == 0x000001, "Wrong size on IActorSoundParameterInterface");
 
 // Class Engine.SceneCaptureCube
 // 0x0008 (0x0360 - 0x0358)
@@ -26834,7 +26834,7 @@ static_assert(offsetof(UFontFace, DescendOverriddenValue) == 0x00006C, "Member '
 static_assert(offsetof(UFontFace, bIsDescendOverridden) == 0x000070, "Member 'UFontFace::bIsDescendOverridden' has a wrong offset!");
 
 // Class Engine.SMInstanceManagerProvider
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ISMInstanceManagerProvider final : public IInterface
 {
 public:
@@ -26847,8 +26847,8 @@ public:
 		return GetDefaultObjImpl<ISMInstanceManagerProvider>();
 	}
 };
-static_assert(alignof(ISMInstanceManagerProvider) == 0x000008, "Wrong alignment on ISMInstanceManagerProvider");
-static_assert(sizeof(ISMInstanceManagerProvider) == 0x000048, "Wrong size on ISMInstanceManagerProvider");
+static_assert(alignof(ISMInstanceManagerProvider) == 0x000001, "Wrong alignment on ISMInstanceManagerProvider");
+static_assert(sizeof(ISMInstanceManagerProvider) == 0x000001, "Wrong size on ISMInstanceManagerProvider");
 
 // Class Engine.SoundAttenuation
 // 0x03F8 (0x0440 - 0x0048)
@@ -26905,7 +26905,7 @@ static_assert(offsetof(UBrushBuilder, Polys) == 0x000080, "Member 'UBrushBuilder
 static_assert(offsetof(UBrushBuilder, Layer) == 0x000090, "Member 'UBrushBuilder::Layer' has a wrong offset!");
 
 // Class Engine.SoundEffectPresetWidgetInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ISoundEffectPresetWidgetInterface final : public IAudioPanelWidgetInterface
 {
 public:
@@ -26923,8 +26923,8 @@ public:
 		return GetDefaultObjImpl<ISoundEffectPresetWidgetInterface>();
 	}
 };
-static_assert(alignof(ISoundEffectPresetWidgetInterface) == 0x000008, "Wrong alignment on ISoundEffectPresetWidgetInterface");
-static_assert(sizeof(ISoundEffectPresetWidgetInterface) == 0x000048, "Wrong size on ISoundEffectPresetWidgetInterface");
+static_assert(alignof(ISoundEffectPresetWidgetInterface) == 0x000001, "Wrong alignment on ISoundEffectPresetWidgetInterface");
+static_assert(sizeof(ISoundEffectPresetWidgetInterface) == 0x000001, "Wrong size on ISoundEffectPresetWidgetInterface");
 
 // Class Engine.SoundEffectSourcePresetChain
 // 0x0018 (0x0060 - 0x0048)
@@ -26979,7 +26979,7 @@ public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         BracketCounter;                                    // 0x0050(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EAnimDataModelNotifyType NotifType, TScriptInterface<class IAnimationDataModel> Model, struct FAnimDataModelNotifPayload& Payload)> ModifiedEventDynamic;                              // 0x0058(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(EAnimDataModelNotifyType NotifType, TScriptInterface<class IAnimationDataModel> Model, const struct FAnimDataModelNotifPayload& Payload)> ModifiedEventDynamic; // 0x0058(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_68[0x18];                                      // 0x0068(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBoneAnimationTrack>            BoneAnimationTracks;                               // 0x0080(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
 	float                                         PlayLength;                                        // 0x0090(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -27039,7 +27039,7 @@ static_assert(offsetof(USoundNodeModulatorContinuous, PitchModulationParams) == 
 static_assert(offsetof(USoundNodeModulatorContinuous, VolumeModulationParams) == 0x000088, "Member 'USoundNodeModulatorContinuous::VolumeModulationParams' has a wrong offset!");
 
 // Class Engine.SoundSubmixWidgetInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ISoundSubmixWidgetInterface final : public IInterface
 {
 public:
@@ -27055,8 +27055,8 @@ public:
 		return GetDefaultObjImpl<ISoundSubmixWidgetInterface>();
 	}
 };
-static_assert(alignof(ISoundSubmixWidgetInterface) == 0x000008, "Wrong alignment on ISoundSubmixWidgetInterface");
-static_assert(sizeof(ISoundSubmixWidgetInterface) == 0x000048, "Wrong size on ISoundSubmixWidgetInterface");
+static_assert(alignof(ISoundSubmixWidgetInterface) == 0x000001, "Wrong alignment on ISoundSubmixWidgetInterface");
+static_assert(sizeof(ISoundSubmixWidgetInterface) == 0x000001, "Wrong size on ISoundSubmixWidgetInterface");
 
 // Class Engine.AnimNotifyMirrorInspectionLibrary
 // 0x0000 (0x0048 - 0x0048)
@@ -27664,9 +27664,9 @@ public:
 	TMulticastInlineDelegate<void()>              ApplicationHasEnteredForegroundDelegate;           // 0x0128(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              ApplicationWillTerminateDelegate;                  // 0x0138(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              ApplicationShouldUnloadResourcesDelegate;          // 0x0148(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(TArray<class FString>& StartupArguments)> ApplicationReceivedStartupArgumentsDelegate;       // 0x0158(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(ETemperatureSeverityType Severity)> OnTemperatureChangeDelegate;                       // 0x0168(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(bool bInLowPowerMode)> OnLowPowerModeDelegate;                            // 0x0178(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<class FString>& StartupArguments)> ApplicationReceivedStartupArgumentsDelegate; // 0x0158(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(ETemperatureSeverityType Severity)> OnTemperatureChangeDelegate;   // 0x0168(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool bInLowPowerMode)> OnLowPowerModeDelegate;                     // 0x0178(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -28273,7 +28273,7 @@ static_assert(offsetof(UVectorFieldStatic, SizeZ) == 0x000090, "Member 'UVectorF
 static_assert(offsetof(UVectorFieldStatic, bAllowCPUAccess) == 0x000094, "Member 'UVectorFieldStatic::bAllowCPUAccess' has a wrong offset!");
 
 // Class Engine.VisualLoggerDebugSnapshotInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IVisualLoggerDebugSnapshotInterface final : public IInterface
 {
 public:
@@ -28286,8 +28286,8 @@ public:
 		return GetDefaultObjImpl<IVisualLoggerDebugSnapshotInterface>();
 	}
 };
-static_assert(alignof(IVisualLoggerDebugSnapshotInterface) == 0x000008, "Wrong alignment on IVisualLoggerDebugSnapshotInterface");
-static_assert(sizeof(IVisualLoggerDebugSnapshotInterface) == 0x000048, "Wrong size on IVisualLoggerDebugSnapshotInterface");
+static_assert(alignof(IVisualLoggerDebugSnapshotInterface) == 0x000001, "Wrong alignment on IVisualLoggerDebugSnapshotInterface");
+static_assert(sizeof(IVisualLoggerDebugSnapshotInterface) == 0x000001, "Wrong size on IVisualLoggerDebugSnapshotInterface");
 
 // Class Engine.WindDirectionalSourceComponent
 // 0x0020 (0x0310 - 0x02F0)
@@ -28670,11 +28670,11 @@ public:
 	uint8                                         Pad_257[0x69];                                     // 0x0257(0x0069)(Fixing Size After Last Property [ Dumper-7 ])
 	class AWorldSettings*                         WorldSettings;                                     // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class AWorldDataLayers*                       WorldDataLayers;                                   // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftObjectPtr<class UWorldPartitionRuntimeCell> WorldPartitionRuntimeCell;                         // 0x02D0(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UWorldPartitionRuntimeCell> WorldPartitionRuntimeCell;                      // 0x02D0(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x0300(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	uint8                                         Pad_310[0x10];                                     // 0x0310(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FReplicatedStaticActorDestructionInfo> DestroyedReplicatedStaticActors;                   // 0x0320(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	TArray<struct FReplicatedStaticActorDestructionInfo> DestroyedReplicatedStaticActors;            // 0x0320(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_330[0x8];                                      // 0x0330(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -29137,7 +29137,7 @@ public:
 	ECustomAttributeBlendType                     DefaultAttributeBlendMode;                         // 0x0120(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         TransformAttributeNames;                           // 0x0128(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<TSoftObjectPtr<class UUserDefinedStruct>> UserDefinedStructAttributes;                       // 0x0138(0x0010)(Edit, ZeroConstructor, Config, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TSoftObjectPtr<class UUserDefinedStruct>> UserDefinedStructAttributes;                    // 0x0138(0x0010)(Edit, ZeroConstructor, Config, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<struct FMirrorFindReplaceExpression>   MirrorFindReplaceExpressions;                      // 0x0148(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	struct FFrameRate                             DefaultFrameRate;                                  // 0x0158(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnforceSupportedFrameRates;                       // 0x0160(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -29259,10 +29259,10 @@ public:
 	TMap<class FName, struct FCachedPoseIndices>  OrderedSavedPoseIndicesMap;                        // 0x0458(0x0050)(NativeAccessSpecifierPublic)
 	uint8                                         Pad_4A8[0x80];                                     // 0x04A8(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           SyncGroupNames;                                    // 0x0528(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FGraphAssetPlayerInformation> GraphAssetPlayerInformation;                       // 0x0538(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FAnimGraphBlendOptions> GraphBlendOptions;                                 // 0x0588(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FGraphAssetPlayerInformation> GraphAssetPlayerInformation;              // 0x0538(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FAnimGraphBlendOptions> GraphBlendOptions;                              // 0x0588(0x0050)(NativeAccessSpecifierPublic)
 	TArray<struct FAnimNodeData>                  AnimNodeData;                                      // 0x05D8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TMap<class UScriptStruct*, struct FAnimNodeStructData> NodeTypeMap;                                       // 0x05E8(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class UScriptStruct*, struct FAnimNodeStructData> NodeTypeMap;                              // 0x05E8(0x0050)(NativeAccessSpecifierPrivate)
 	uint8                                         Pad_638[0x58];                                     // 0x0638(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -29378,9 +29378,9 @@ public:
 	uint8                                         Pad_198[0x10];                                     // 0x0198(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TFieldPath<class FStructProperty>>     InitializationNodeProperties;                      // 0x01A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1B8[0x10];                                     // 0x01B8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FGraphAssetPlayerInformation> GraphNameAssetPlayers;                             // 0x01C8(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FGraphAssetPlayerInformation> GraphNameAssetPlayers;                    // 0x01C8(0x0050)(NativeAccessSpecifierPublic)
 	TArray<class FName>                           SyncGroupNames;                                    // 0x0218(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FAnimGraphBlendOptions> GraphBlendOptions;                                 // 0x0228(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FAnimGraphBlendOptions> GraphBlendOptions;                              // 0x0228(0x0050)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -29412,7 +29412,7 @@ static_assert(offsetof(UAnimClassData, SyncGroupNames) == 0x000218, "Member 'UAn
 static_assert(offsetof(UAnimClassData, GraphBlendOptions) == 0x000228, "Member 'UAnimClassData::GraphBlendOptions' has a wrong offset!");
 
 // Class Engine.AnimClassInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IAnimClassInterface final : public IInterface
 {
 public:
@@ -29425,8 +29425,8 @@ public:
 		return GetDefaultObjImpl<IAnimClassInterface>();
 	}
 };
-static_assert(alignof(IAnimClassInterface) == 0x000008, "Wrong alignment on IAnimClassInterface");
-static_assert(sizeof(IAnimClassInterface) == 0x000048, "Wrong size on IAnimClassInterface");
+static_assert(alignof(IAnimClassInterface) == 0x000001, "Wrong alignment on IAnimClassInterface");
+static_assert(sizeof(IAnimClassInterface) == 0x000001, "Wrong size on IAnimClassInterface");
 
 // Class Engine.AnimCompositeBase
 // 0x0008 (0x00D8 - 0x00D0)
@@ -29782,7 +29782,7 @@ public:
 	float                                         SmoothTargetViewRotationSpeed;                     // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         HiddenActors;                                      // 0x0488(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<TWeakObjectPtr<class UPrimitiveComponent>> HiddenPrimitiveComponents;                         // 0x0498(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TWeakObjectPtr<class UPrimitiveComponent>> HiddenPrimitiveComponents;                     // 0x0498(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4A8[0x4];                                      // 0x04A8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LastSpectatorStateSynchTime;                       // 0x04AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                LastSpectatorSyncLocation;                         // 0x04B0(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -30510,7 +30510,7 @@ static_assert(offsetof(UAnimBlueprint, bWarnAboutBlueprintUsage) == 0x0000EA, "M
 class UAsyncActionLoadPrimaryAssetClass final : public UAsyncActionLoadPrimaryAssetBase
 {
 public:
-	TMulticastInlineDelegate<void(TSubclassOf<class UObject> Loaded)> Completed;                                         // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(TSubclassOf<class UObject> Loaded)> Completed;                     // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UAsyncActionLoadPrimaryAssetClass* AsyncLoadPrimaryAssetClass(class UObject* WorldContextObject, const struct FPrimaryAssetId& PrimaryAsset, const TArray<class FName>& LoadBundles);
@@ -30534,7 +30534,7 @@ static_assert(offsetof(UAsyncActionLoadPrimaryAssetClass, Completed) == 0x000098
 class UAsyncActionLoadPrimaryAssetList final : public UAsyncActionLoadPrimaryAssetBase
 {
 public:
-	TMulticastInlineDelegate<void(TArray<class UObject*>& Loaded)> Completed;                                         // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<class UObject*>& Loaded)> Completed;                  // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UAsyncActionLoadPrimaryAssetList* AsyncLoadPrimaryAssetList(class UObject* WorldContextObject, const TArray<struct FPrimaryAssetId>& PrimaryAssetList, const TArray<class FName>& LoadBundles);
@@ -30679,7 +30679,7 @@ static_assert(offsetof(UAudioSettings, DefaultMediaSoundClass) == 0x0001F0, "Mem
 static_assert(offsetof(UAudioSettings, DefaultSoundConcurrency) == 0x0001F8, "Member 'UAudioSettings::DefaultSoundConcurrency' has a wrong offset!");
 
 // Class Engine.SoundParameterControllerInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ISoundParameterControllerInterface final : public IAudioParameterControllerInterface
 {
 public:
@@ -30692,8 +30692,8 @@ public:
 		return GetDefaultObjImpl<ISoundParameterControllerInterface>();
 	}
 };
-static_assert(alignof(ISoundParameterControllerInterface) == 0x000008, "Wrong alignment on ISoundParameterControllerInterface");
-static_assert(sizeof(ISoundParameterControllerInterface) == 0x000048, "Wrong size on ISoundParameterControllerInterface");
+static_assert(alignof(ISoundParameterControllerInterface) == 0x000001, "Wrong alignment on ISoundParameterControllerInterface");
+static_assert(sizeof(ISoundParameterControllerInterface) == 0x000001, "Wrong size on ISoundParameterControllerInterface");
 
 // Class Engine.BlueprintSetLibrary
 // 0x0000 (0x0048 - 0x0048)
@@ -30795,7 +30795,7 @@ class UCameraModifier_CameraShake final : public UCameraModifier
 {
 public:
 	TArray<struct FActiveCameraShakeInfo>         ActiveShakes;                                      // 0x0068(0x0010)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TMap<TSubclassOf<class UCameraShakeBase>, struct FPooledCameraShakes> ExpiredPooledShakesMap;                            // 0x0078(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TMap<TSubclassOf<class UCameraShakeBase>, struct FPooledCameraShakes> ExpiredPooledShakesMap;    // 0x0078(0x0050)(Protected, NativeAccessSpecifierProtected)
 	float                                         SplitScreenShakeScale;                             // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -30860,7 +30860,7 @@ static_assert(offsetof(UCameraShakeSourceComponent, bAutoStart) == 0x000308, "Me
 class UCanvasRenderTarget2D final : public UTextureRenderTarget2D
 {
 public:
-	TMulticastInlineDelegate<void(class UCanvas* Canvas, int32 Width, int32 Height)> OnCanvasRenderTargetUpdate;                        // 0x0218(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UCanvas* Canvas, int32 Width, int32 Height)> OnCanvasRenderTargetUpdate; // 0x0218(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class UWorld>                  World;                                             // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bShouldClearRenderTargetOnReceiveUpdate;           // 0x0230(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_231[0xF];                                      // 0x0231(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -30937,13 +30937,13 @@ public:
 	int32                                         JumpCurrentCountPreJump;                           // 0x0548(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54C[0x4];                                      // 0x054C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              OnReachedJumpApex;                                 // 0x0550(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FHitResult& Hit)> LandedDelegate;                                    // 0x0560(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)> MovementModeChangedDelegate;                       // 0x0570(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(float DeltaSeconds, const struct FVector& OldLocation, const struct FVector& OldVelocity)> OnCharacterMovementUpdated;                        // 0x0580(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FHitResult& Hit)> LandedDelegate;                     // 0x0560(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)> MovementModeChangedDelegate; // 0x0570(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(float DeltaSeconds, const struct FVector& OldLocation, const struct FVector& OldVelocity)> OnCharacterMovementUpdated; // 0x0580(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FRootMotionSourceGroup                 SavedRootMotion;                                   // 0x0590(0x0048)(Transient, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5D8[0x8];                                      // 0x05D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRootMotionMovementParams              ClientRootMotionParams;                            // 0x05E0(0x0070)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FSimulatedRootMotionReplicatedMove> RootMotionRepMoves;                                // 0x0650(0x0010)(ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<struct FSimulatedRootMotionReplicatedMove> RootMotionRepMoves;                            // 0x0650(0x0010)(ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	struct FRepRootMotionMontage                  RepRootMotion;                                     // 0x0660(0x00D8)(Net, RepNotify, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 public:
@@ -31687,7 +31687,7 @@ class UClassCookedMetaData final : public UObject
 {
 public:
 	struct FStructCookedMetaDataStore             ClassMetaData;                                     // 0x0048(0x00A0)(Protected, NativeAccessSpecifierProtected)
-	TMap<class FName, struct FStructCookedMetaDataStore> FunctionsMetaData;                                 // 0x00E8(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FStructCookedMetaDataStore> FunctionsMetaData;                          // 0x00E8(0x0050)(Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -31876,7 +31876,7 @@ static_assert(sizeof(UPrimaryDataAsset) == 0x000050, "Wrong size on UPrimaryData
 class UDataDrivenCVarEngineSubsystem final : public UEngineSubsystem
 {
 public:
-	TMulticastInlineDelegate<void(const class FString& CVarName)> OnDataDrivenCVarDelegate;                          // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& CVarName)> OnDataDrivenCVarDelegate;          // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -31956,7 +31956,7 @@ static_assert(offsetof(ADebugCameraController, InitialDecel) == 0x000A6C, "Membe
 class UDebugCameraControllerSettings final : public UDeveloperSettings
 {
 public:
-	TArray<struct FDebugCameraControllerSettingsViewModeIndex> CycleViewModes;                                    // 0x0058(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FDebugCameraControllerSettingsViewModeIndex> CycleViewModes;                       // 0x0058(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -32035,7 +32035,7 @@ static_assert(alignof(ADefaultPhysicsVolume) == 0x000008, "Wrong alignment on AD
 static_assert(sizeof(ADefaultPhysicsVolume) == 0x000390, "Wrong size on ADefaultPhysicsVolume");
 
 // Class Engine.DestructibleInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IDestructibleInterface final : public IInterface
 {
 public:
@@ -32048,8 +32048,8 @@ public:
 		return GetDefaultObjImpl<IDestructibleInterface>();
 	}
 };
-static_assert(alignof(IDestructibleInterface) == 0x000008, "Wrong alignment on IDestructibleInterface");
-static_assert(sizeof(IDestructibleInterface) == 0x000048, "Wrong size on IDestructibleInterface");
+static_assert(alignof(IDestructibleInterface) == 0x000001, "Wrong alignment on IDestructibleInterface");
+static_assert(sizeof(IDestructibleInterface) == 0x000001, "Wrong size on IDestructibleInterface");
 
 // Class Engine.DeviceProfileManager
 // 0x0068 (0x00B0 - 0x0048)
@@ -32314,7 +32314,7 @@ static_assert(alignof(UTypedElementCommonActions) == 0x000008, "Wrong alignment 
 static_assert(sizeof(UTypedElementCommonActions) == 0x000848, "Wrong size on UTypedElementCommonActions");
 
 // Class Engine.TypedElementWorldInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITypedElementWorldInterface final : public IInterface
 {
 public:
@@ -32350,8 +32350,8 @@ public:
 		return GetDefaultObjImpl<ITypedElementWorldInterface>();
 	}
 };
-static_assert(alignof(ITypedElementWorldInterface) == 0x000008, "Wrong alignment on ITypedElementWorldInterface");
-static_assert(sizeof(ITypedElementWorldInterface) == 0x000048, "Wrong size on ITypedElementWorldInterface");
+static_assert(alignof(ITypedElementWorldInterface) == 0x000001, "Wrong alignment on ITypedElementWorldInterface");
+static_assert(sizeof(ITypedElementWorldInterface) == 0x000001, "Wrong size on ITypedElementWorldInterface");
 
 // Class Engine.ObjectElementCounterInterface
 // 0x0008 (0x0050 - 0x0048)
@@ -32471,7 +32471,7 @@ static_assert(alignof(USMInstanceElementWorldInterface) == 0x000008, "Wrong alig
 static_assert(sizeof(USMInstanceElementWorldInterface) == 0x000050, "Wrong size on USMInstanceElementWorldInterface");
 
 // Class Engine.LODSyncInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ILODSyncInterface final : public IInterface
 {
 public:
@@ -32484,8 +32484,8 @@ public:
 		return GetDefaultObjImpl<ILODSyncInterface>();
 	}
 };
-static_assert(alignof(ILODSyncInterface) == 0x000008, "Wrong alignment on ILODSyncInterface");
-static_assert(sizeof(ILODSyncInterface) == 0x000048, "Wrong size on ILODSyncInterface");
+static_assert(alignof(ILODSyncInterface) == 0x000001, "Wrong alignment on ILODSyncInterface");
+static_assert(sizeof(ILODSyncInterface) == 0x000001, "Wrong size on ILODSyncInterface");
 
 // Class Engine.PoseWatchFolder
 // 0x0000 (0x0048 - 0x0048)
@@ -32555,7 +32555,7 @@ static_assert(offsetof(UFloatingPawnMovement, TurningBoost) == 0x0001BC, "Member
 class UAsyncActionHandleSaveGame final : public UBlueprintAsyncActionBase
 {
 public:
-	TMulticastInlineDelegate<void(class USaveGame* SaveGame, bool bSuccess)> Completed;                                         // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class USaveGame* SaveGame, bool bSuccess)> Completed;              // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_60[0x20];                                      // 0x0060(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              SaveGameObject;                                    // 0x0080(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
@@ -32584,7 +32584,7 @@ class UForceFeedbackEffect final : public UObject
 {
 public:
 	TArray<struct FForceFeedbackChannelDetails>   ChannelDetails;                                    // 0x0048(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FForceFeedbackEffectOverridenChannelDetails> PerDeviceOverrides;                                // 0x0058(0x0050)(Edit, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FForceFeedbackEffectOverridenChannelDetails> PerDeviceOverrides;        // 0x0058(0x0050)(Edit, NativeAccessSpecifierPublic)
 	TArray<class UInputDeviceProperty*>           DeviceProperties;                                  // 0x00A8(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	float                                         Duration;                                          // 0x00B8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -32612,7 +32612,7 @@ class UColorInputDeviceCurveProperty final : public UInputDeviceProperty
 {
 public:
 	struct FDeviceColorCurveData                  ColorData;                                         // 0x0050(0x0010)(Edit, BlueprintVisible, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	TMap<class FName, struct FDeviceColorCurveData> DeviceOverrideData;                                // 0x0060(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FDeviceColorCurveData> DeviceOverrideData;                              // 0x0060(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_B0[0x10];                                      // 0x00B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -32636,7 +32636,7 @@ class UInputDeviceTriggerVibrationProperty final : public UInputDeviceTriggerEff
 {
 public:
 	struct FDeviceTriggerTriggerVibrationData     TriggerData;                                       // 0x0060(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FDeviceTriggerTriggerVibrationData> DeviceOverrideData;                                // 0x0078(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FDeviceTriggerTriggerVibrationData> DeviceOverrideData;                 // 0x0078(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C8[0x18];                                      // 0x00C8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -32681,10 +32681,10 @@ public:
 	class UOnlineSession*                         OnlineSession;                                     // 0x0068(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<class UObject*>                        ReferencedObjects;                                 // 0x0070(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	uint8                                         Pad_80[0x18];                                      // 0x0080(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class APawn* Pawn, class AController* Controller)> OnPawnControllerChangedDelegates;                  // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void(class APawn* Pawn, class AController* Controller)> OnPawnControllerChangedDelegates; // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_A8[0x58];                                      // 0x00A8(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EInputDeviceConnectionState NewConnectionState, const struct FPlatformUserId& PlatformUserId, const struct FInputDeviceId& InputDeviceId)> OnInputDeviceConnectionChange;                     // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const struct FInputDeviceId& InputDeviceId, const struct FPlatformUserId& NewUserPlatformId, const struct FPlatformUserId& OldUserPlatformId)> OnUserInputDevicePairingChange;                    // 0x0110(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(EInputDeviceConnectionState NewConnectionState, const struct FPlatformUserId& PlatformUserId, const struct FInputDeviceId& InputDeviceId)> OnInputDeviceConnectionChange; // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FInputDeviceId& InputDeviceId, const struct FPlatformUserId& NewUserPlatformId, const struct FPlatformUserId& OldUserPlatformId)> OnUserInputDevicePairingChange; // 0x0110(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_120[0x100];                                    // 0x0120(0x0100)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -33141,7 +33141,7 @@ static_assert(alignof(UHLODProxyDesc) == 0x000008, "Wrong alignment on UHLODProx
 static_assert(sizeof(UHLODProxyDesc) == 0x000048, "Wrong size on UHLODProxyDesc");
 
 // Class Engine.ImportantToggleSettingInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IImportantToggleSettingInterface final : public IInterface
 {
 public:
@@ -33154,15 +33154,15 @@ public:
 		return GetDefaultObjImpl<IImportantToggleSettingInterface>();
 	}
 };
-static_assert(alignof(IImportantToggleSettingInterface) == 0x000008, "Wrong alignment on IImportantToggleSettingInterface");
-static_assert(sizeof(IImportantToggleSettingInterface) == 0x000048, "Wrong size on IImportantToggleSettingInterface");
+static_assert(alignof(IImportantToggleSettingInterface) == 0x000001, "Wrong alignment on IImportantToggleSettingInterface");
+static_assert(sizeof(IImportantToggleSettingInterface) == 0x000001, "Wrong size on IImportantToggleSettingInterface");
 
 // Class Engine.InputAxisDelegateBinding
 // 0x0010 (0x0058 - 0x0048)
 class UInputAxisDelegateBinding final : public UInputDelegateBinding
 {
 public:
-	TArray<struct FBlueprintInputAxisDelegateBinding> InputAxisDelegateBindings;                         // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FBlueprintInputAxisDelegateBinding> InputAxisDelegateBindings;                     // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -33225,7 +33225,7 @@ static_assert(sizeof(UInputDeviceLibrary) == 0x000048, "Wrong size on UInputDevi
 class UInputKeyDelegateBinding final : public UInputDelegateBinding
 {
 public:
-	TArray<struct FBlueprintInputKeyDelegateBinding> InputKeyDelegateBindings;                          // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FBlueprintInputKeyDelegateBinding> InputKeyDelegateBindings;                       // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -33246,7 +33246,7 @@ static_assert(offsetof(UInputKeyDelegateBinding, InputKeyDelegateBindings) == 0x
 class UInputTouchDelegateBinding final : public UInputDelegateBinding
 {
 public:
-	TArray<struct FBlueprintInputTouchDelegateBinding> InputTouchDelegateBindings;                        // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FBlueprintInputTouchDelegateBinding> InputTouchDelegateBindings;                   // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -34498,12 +34498,12 @@ public:
 	TMulticastInlineDelegate<void()>              ApplicationHasEnteredForegroundDelegate;           // 0x0250(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              ApplicationWillTerminateDelegate;                  // 0x0260(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              ApplicationShouldUnloadResourcesDelegate;          // 0x0270(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(TArray<class FString>& StartupArguments)> ApplicationReceivedStartupArgumentsDelegate;       // 0x0280(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(TArray<uint8>& inArray)> ApplicationRegisteredForRemoteNotificationsDelegate; // 0x0290(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<class FString>& StartupArguments)> ApplicationReceivedStartupArgumentsDelegate; // 0x0280(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<uint8>& inArray)> ApplicationRegisteredForRemoteNotificationsDelegate; // 0x0290(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(int32 inInt)>   ApplicationRegisteredForUserNotificationsDelegate; // 0x02A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(const class FString& InString)> ApplicationFailedToRegisterForRemoteNotificationsDelegate; // 0x02B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& InString, EApplicationState inAppState)> ApplicationReceivedRemoteNotificationDelegate;     // 0x02C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& InString, int32 inInt, EApplicationState inAppState)> ApplicationReceivedLocalNotificationDelegate;      // 0x02D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& InString, EApplicationState inAppState)> ApplicationReceivedRemoteNotificationDelegate; // 0x02C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& InString, int32 inInt, EApplicationState inAppState)> ApplicationReceivedLocalNotificationDelegate; // 0x02D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(EScreenOrientation inScreenOrientation)> ApplicationReceivedScreenOrientationChangedNotificationDelegate; // 0x02E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
@@ -34916,7 +34916,7 @@ class ALODActor final : public AActor
 {
 public:
 	class UStaticMeshComponent*                   StaticMeshComponent;                               // 0x0348(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMap<struct FHLODInstancingKey, class UInstancedStaticMeshComponent*> InstancedStaticMeshComponents;                     // 0x0350(0x0050)(ExportObject, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<struct FHLODInstancingKey, class UInstancedStaticMeshComponent*> InstancedStaticMeshComponents; // 0x0350(0x0050)(ExportObject, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
 	class UHLODProxy*                             Proxy;                                             // 0x03A0(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                   Key;                                               // 0x03A8(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         LODDrawDistance;                                   // 0x03B0(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -35886,8 +35886,8 @@ public:
 	struct FConstrainComponentPropName            ComponentName2;                                    // 0x0308(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_310[0x10];                                     // 0x0310(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPhysicsConstraintTemplate*             ConstraintSetup;                                   // 0x0320(0x0008)(ExportObject, ZeroConstructor, InstancedReference, Deprecated, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(int32 ConstraintIndex)> OnConstraintBroken;                                // 0x0328(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(int32 ConstraintIndex)> OnPlasticDeformation;                              // 0x0338(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 ConstraintIndex)> OnConstraintBroken;                        // 0x0328(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 ConstraintIndex)> OnPlasticDeformation;                      // 0x0338(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FConstraintInstance                    ConstraintInstance;                                // 0x0348(0x0278)(Edit, NativeAccessSpecifierPublic)
 
 public:
@@ -35959,7 +35959,7 @@ class UPhysicsConstraintTemplate final : public UObject
 {
 public:
 	struct FConstraintInstance                    DefaultInstance;                                   // 0x0048(0x0278)(Edit, NativeAccessSpecifierPublic)
-	TArray<struct FPhysicsConstraintProfileHandle> ProfileHandles;                                    // 0x02C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPhysicsConstraintProfileHandle> ProfileHandles;                                   // 0x02C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FConstraintProfileProperties           DefaultProfile;                                    // 0x02D0(0x0160)(Transient, NoDestructor, NativeAccessSpecifierPrivate)
 
 public:
@@ -36470,7 +36470,7 @@ class USCS_Node final : public UObject
 public:
 	TSubclassOf<class UObject>                    ComponentClass;                                    // 0x0048(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UActorComponent*                        ComponentTemplate;                                 // 0x0050(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlueprintCookedComponentInstancingData CookedComponentInstancingData;                     // 0x0058(0x0048)(NativeAccessSpecifierPublic)
+	struct FBlueprintCookedComponentInstancingData CookedComponentInstancingData;                    // 0x0058(0x0048)(NativeAccessSpecifierPublic)
 	class FName                                   AttachToName;                                      // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ParentComponentOrVariableName;                     // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ParentComponentOwnerClassName;                     // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -37193,13 +37193,13 @@ public:
 	uint8                                         bSendToAudioLink : 1;                              // 0x01A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAudioLinkSettingsAbstract*             AudioLinkSettings;                                 // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class USoundWave* ResultingSoundWave)> OnSubmixRecordedFileDone;                          // 0x01B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class USoundWave* ResultingSoundWave)> OnSubmixRecordedFileDone; // 0x01B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C8[0x8];                                      // 0x01C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void AddEnvelopeFollowerDelegate(const class UObject* WorldContextObject, const TDelegate<void(TArray<float>& Envelope)>& OnSubmixEnvelopeBP);
-	void AddSpectralAnalysisDelegate(const class UObject* WorldContextObject, const TArray<struct FSoundSubmixSpectralAnalysisBandSettings>& InBandSettings, const TDelegate<void(TArray<float>& Magnitude)>& OnSubmixSpectralAnalysisBP, float UpdateRate, float DecibelNoiseFloor, bool bDoNormalize, bool bDoAutoRange, float AutoRangeAttackTime, float AutoRangeReleaseTime);
-	void RemoveSpectralAnalysisDelegate(const class UObject* WorldContextObject, const TDelegate<void(TArray<float>& Magnitude)>& OnSubmixSpectralAnalysisBP);
+	void AddEnvelopeFollowerDelegate(const class UObject* WorldContextObject, const TDelegate<void(const TArray<float>& Envelope)>& OnSubmixEnvelopeBP);
+	void AddSpectralAnalysisDelegate(const class UObject* WorldContextObject, const TArray<struct FSoundSubmixSpectralAnalysisBandSettings>& InBandSettings, const TDelegate<void(const TArray<float>& Magnitude)>& OnSubmixSpectralAnalysisBP, float UpdateRate, float DecibelNoiseFloor, bool bDoNormalize, bool bDoAutoRange, float AutoRangeAttackTime, float AutoRangeReleaseTime);
+	void RemoveSpectralAnalysisDelegate(const class UObject* WorldContextObject, const TDelegate<void(const TArray<float>& Magnitude)>& OnSubmixSpectralAnalysisBP);
 	void SetDryVolumeModulation(const struct FSoundModulationDestinationSettings& InVolMod);
 	void SetOutputVolumeModulation(const struct FSoundModulationDestinationSettings& InVolMod);
 	void SetSubmixDryLevel(const class UObject* WorldContextObject, float InDryLevel);
@@ -37246,7 +37246,7 @@ public:
 	class FName                                   SoundfieldEncodingFormat;                          // 0x0068(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundfieldEncodingSettingsBase*        EncodingSettings;                                  // 0x0070(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class USoundfieldEffectBase*>          SoundfieldEffectChain;                             // 0x0078(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TSubclassOf<class USoundfieldEncodingSettingsBase> EncodingSettingsClass;                             // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class USoundfieldEncodingSettingsBase> EncodingSettingsClass;                        // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -37651,7 +37651,7 @@ class UUserInterfaceSettings final : public UDeveloperSettings
 public:
 	ERenderFocusRule                              RenderFocusRule;                                   // 0x0058(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<EMouseCursor, struct FHardwareCursorReference> HardwareCursors;                                   // 0x0060(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	TMap<EMouseCursor, struct FHardwareCursorReference> HardwareCursors;                             // 0x0060(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
 	TMap<EMouseCursor, struct FSoftClassPath>     SoftwareCursors;                                   // 0x00B0(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FSoftClassPath                         DefaultCursor;                                     // 0x0100(0x0020)(ZeroConstructor, Config, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftClassPath                         TextEditBeamCursor;                                // 0x0120(0x0020)(ZeroConstructor, Config, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -38510,7 +38510,7 @@ static_assert(sizeof(UDataLayerLoadingPolicy) == 0x000048, "Wrong size on UDataL
 class UDataLayerSubsystem final : public UWorldSubsystem
 {
 public:
-	TMulticastInlineDelegate<void(class UDataLayerInstance* DataLayer, EDataLayerRuntimeState State)> OnDataLayerRuntimeStateChanged;                    // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class UDataLayerInstance* DataLayer, EDataLayerRuntimeState State)> OnDataLayerRuntimeStateChanged; // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TSoftClassPtr<class UClass>                   DataLayerLoadingPolicyClass;                       // 0x0060(0x0028)(Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -38642,7 +38642,7 @@ static_assert(alignof(UNullHLODBuilder) == 0x000008, "Wrong alignment on UNullHL
 static_assert(sizeof(UNullHLODBuilder) == 0x000048, "Wrong size on UNullHLODBuilder");
 
 // Class Engine.WorldPartitionDestructibleInHLODInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IWorldPartitionDestructibleInHLODInterface final : public IInterface
 {
 public:
@@ -38660,8 +38660,8 @@ public:
 		return GetDefaultObjImpl<IWorldPartitionDestructibleInHLODInterface>();
 	}
 };
-static_assert(alignof(IWorldPartitionDestructibleInHLODInterface) == 0x000008, "Wrong alignment on IWorldPartitionDestructibleInHLODInterface");
-static_assert(sizeof(IWorldPartitionDestructibleInHLODInterface) == 0x000048, "Wrong size on IWorldPartitionDestructibleInHLODInterface");
+static_assert(alignof(IWorldPartitionDestructibleInHLODInterface) == 0x000001, "Wrong alignment on IWorldPartitionDestructibleInHLODInterface");
+static_assert(sizeof(IWorldPartitionDestructibleInHLODInterface) == 0x000001, "Wrong size on IWorldPartitionDestructibleInHLODInterface");
 
 // Class Engine.WorldPartitionHLODModifier
 // 0x0000 (0x0048 - 0x0048)
@@ -38681,7 +38681,7 @@ static_assert(alignof(UWorldPartitionHLODModifier) == 0x000008, "Wrong alignment
 static_assert(sizeof(UWorldPartitionHLODModifier) == 0x000048, "Wrong size on UWorldPartitionHLODModifier");
 
 // Class Engine.WorldPartitionHLODProvider
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IWorldPartitionHLODProvider final : public IInterface
 {
 public:
@@ -38694,8 +38694,8 @@ public:
 		return GetDefaultObjImpl<IWorldPartitionHLODProvider>();
 	}
 };
-static_assert(alignof(IWorldPartitionHLODProvider) == 0x000008, "Wrong alignment on IWorldPartitionHLODProvider");
-static_assert(sizeof(IWorldPartitionHLODProvider) == 0x000048, "Wrong size on IWorldPartitionHLODProvider");
+static_assert(alignof(IWorldPartitionHLODProvider) == 0x000001, "Wrong alignment on IWorldPartitionHLODProvider");
+static_assert(sizeof(IWorldPartitionHLODProvider) == 0x000001, "Wrong size on IWorldPartitionHLODProvider");
 
 // Class Engine.HLODSubsystem
 // 0x0120 (0x0170 - 0x0050)
@@ -38718,7 +38718,7 @@ static_assert(alignof(UHLODSubsystem) == 0x000008, "Wrong alignment on UHLODSubs
 static_assert(sizeof(UHLODSubsystem) == 0x000170, "Wrong size on UHLODSubsystem");
 
 // Class Engine.WorldPartitionActorLoaderInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IWorldPartitionActorLoaderInterface final : public IInterface
 {
 public:
@@ -38731,8 +38731,8 @@ public:
 		return GetDefaultObjImpl<IWorldPartitionActorLoaderInterface>();
 	}
 };
-static_assert(alignof(IWorldPartitionActorLoaderInterface) == 0x000008, "Wrong alignment on IWorldPartitionActorLoaderInterface");
-static_assert(sizeof(IWorldPartitionActorLoaderInterface) == 0x000048, "Wrong size on IWorldPartitionActorLoaderInterface");
+static_assert(alignof(IWorldPartitionActorLoaderInterface) == 0x000001, "Wrong alignment on IWorldPartitionActorLoaderInterface");
+static_assert(sizeof(IWorldPartitionActorLoaderInterface) == 0x000001, "Wrong size on IWorldPartitionActorLoaderInterface");
 
 // Class Engine.WorldPartitionEditorPerProjectUserSettings
 // 0x0000 (0x0048 - 0x0048)
@@ -38758,7 +38758,7 @@ class UWorldPartitionLevelStreamingDynamic final : public ULevelStreamingDynamic
 public:
 	bool                                          bShouldBeAlwaysLoaded;                             // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class UWorldPartitionRuntimeLevelStreamingCell> StreamingCell;                                     // 0x01C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TWeakObjectPtr<class UWorldPartitionRuntimeLevelStreamingCell> StreamingCell;                    // 0x01C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWorldPartition*                        OuterWorldPartition;                               // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1D8[0x8];                                      // 0x01D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -38806,7 +38806,7 @@ class UWorldPartitionLevelStreamingPolicy : public UWorldPartitionStreamingPolic
 public:
 	struct FTopLevelAssetPath                     SourceWorldAssetPath;                              // 0x02A8(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<class FName, class FName>                SubObjectsToCellRemapping;                         // 0x02B8(0x0050)(NativeAccessSpecifierPrivate)
-	TArray<TWeakObjectPtr<class URuntimeHashExternalStreamingObjectBase>> ExternalStreamingObjects;                          // 0x0308(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<TWeakObjectPtr<class URuntimeHashExternalStreamingObjectBase>> ExternalStreamingObjects;  // 0x0308(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -38864,7 +38864,7 @@ static_assert(sizeof(AWorldPartitionReplay) == 0x000368, "Wrong size on AWorldPa
 static_assert(offsetof(AWorldPartitionReplay, StreamingSourceNames) == 0x000348, "Member 'AWorldPartitionReplay::StreamingSourceNames' has a wrong offset!");
 
 // Class Engine.WorldPartitionCell
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IWorldPartitionCell final : public IInterface
 {
 public:
@@ -38877,8 +38877,8 @@ public:
 		return GetDefaultObjImpl<IWorldPartitionCell>();
 	}
 };
-static_assert(alignof(IWorldPartitionCell) == 0x000008, "Wrong alignment on IWorldPartitionCell");
-static_assert(sizeof(IWorldPartitionCell) == 0x000048, "Wrong size on IWorldPartitionCell");
+static_assert(alignof(IWorldPartitionCell) == 0x000001, "Wrong alignment on IWorldPartitionCell");
+static_assert(sizeof(IWorldPartitionCell) == 0x000001, "Wrong size on IWorldPartitionCell");
 
 // Class Engine.SpatialHashRuntimeGridInfo
 // 0x0008 (0x0350 - 0x0348)

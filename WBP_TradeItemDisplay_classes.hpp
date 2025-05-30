@@ -17,14 +17,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TradeItemDisplay.WBP_TradeItemDisplay_C
-// 0x0020 (0x0388 - 0x0368)
+// 0x0028 (0x03B0 - 0x0388)
 class UWBP_TradeItemDisplay_C final : public UTradeItemDisplayBase
 {
 public:
-	class UWBP_Pager_C*                           Pager;                                             // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           TradeVertBox;                                      // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarehouseHeader_C*                 WBP_WarehouseHeader;                               // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarehouseHeader_C*                 WBP_WarehouseHeader_89;                            // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Pager_C*                           Pager;                                             // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_ItemsHeaderText;                                // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_MaterialsHeaderText;                            // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           TradeVertBox;                                      // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarehouseHeader_C*                 WBP_WarehouseHeader_89;                            // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +38,12 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TradeItemDisplay_C) == 0x000008, "Wrong alignment on UWBP_TradeItemDisplay_C");
-static_assert(sizeof(UWBP_TradeItemDisplay_C) == 0x000388, "Wrong size on UWBP_TradeItemDisplay_C");
-static_assert(offsetof(UWBP_TradeItemDisplay_C, Pager) == 0x000368, "Member 'UWBP_TradeItemDisplay_C::Pager' has a wrong offset!");
-static_assert(offsetof(UWBP_TradeItemDisplay_C, TradeVertBox) == 0x000370, "Member 'UWBP_TradeItemDisplay_C::TradeVertBox' has a wrong offset!");
-static_assert(offsetof(UWBP_TradeItemDisplay_C, WBP_WarehouseHeader) == 0x000378, "Member 'UWBP_TradeItemDisplay_C::WBP_WarehouseHeader' has a wrong offset!");
-static_assert(offsetof(UWBP_TradeItemDisplay_C, WBP_WarehouseHeader_89) == 0x000380, "Member 'UWBP_TradeItemDisplay_C::WBP_WarehouseHeader_89' has a wrong offset!");
+static_assert(sizeof(UWBP_TradeItemDisplay_C) == 0x0003B0, "Wrong size on UWBP_TradeItemDisplay_C");
+static_assert(offsetof(UWBP_TradeItemDisplay_C, Pager) == 0x000388, "Member 'UWBP_TradeItemDisplay_C::Pager' has a wrong offset!");
+static_assert(offsetof(UWBP_TradeItemDisplay_C, TB_ItemsHeaderText) == 0x000390, "Member 'UWBP_TradeItemDisplay_C::TB_ItemsHeaderText' has a wrong offset!");
+static_assert(offsetof(UWBP_TradeItemDisplay_C, TB_MaterialsHeaderText) == 0x000398, "Member 'UWBP_TradeItemDisplay_C::TB_MaterialsHeaderText' has a wrong offset!");
+static_assert(offsetof(UWBP_TradeItemDisplay_C, TradeVertBox) == 0x0003A0, "Member 'UWBP_TradeItemDisplay_C::TradeVertBox' has a wrong offset!");
+static_assert(offsetof(UWBP_TradeItemDisplay_C, WBP_WarehouseHeader_89) == 0x0003A8, "Member 'UWBP_TradeItemDisplay_C::WBP_WarehouseHeader_89' has a wrong offset!");
 
 }
 

@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_UnitFrameLayoutMenu.WBP_UnitFrameLayoutMenu_C.DisplayUndoDebugTextBP
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP final
-{
-public:
-	TArray<struct FHudElementState>               CachedStates;                                      // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP) == 0x000008, "Wrong alignment on WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP");
-static_assert(sizeof(WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP) == 0x000010, "Wrong size on WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP");
-static_assert(offsetof(WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP, CachedStates) == 0x000000, "Member 'WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP::CachedStates' has a wrong offset!");
-
 // Function WBP_UnitFrameLayoutMenu.WBP_UnitFrameLayoutMenu_C.ExecuteUbergraph_WBP_UnitFrameLayoutMenu
 // 0x0018 (0x0018 - 0x0000)
 struct WBP_UnitFrameLayoutMenu_C_ExecuteUbergraph_WBP_UnitFrameLayoutMenu final
@@ -40,6 +29,17 @@ static_assert(alignof(WBP_UnitFrameLayoutMenu_C_ExecuteUbergraph_WBP_UnitFrameLa
 static_assert(sizeof(WBP_UnitFrameLayoutMenu_C_ExecuteUbergraph_WBP_UnitFrameLayoutMenu) == 0x000018, "Wrong size on WBP_UnitFrameLayoutMenu_C_ExecuteUbergraph_WBP_UnitFrameLayoutMenu");
 static_assert(offsetof(WBP_UnitFrameLayoutMenu_C_ExecuteUbergraph_WBP_UnitFrameLayoutMenu, EntryPoint) == 0x000000, "Member 'WBP_UnitFrameLayoutMenu_C_ExecuteUbergraph_WBP_UnitFrameLayoutMenu::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_UnitFrameLayoutMenu_C_ExecuteUbergraph_WBP_UnitFrameLayoutMenu, K2Node_Event_CachedStates) == 0x000008, "Member 'WBP_UnitFrameLayoutMenu_C_ExecuteUbergraph_WBP_UnitFrameLayoutMenu::K2Node_Event_CachedStates' has a wrong offset!");
+
+// Function WBP_UnitFrameLayoutMenu.WBP_UnitFrameLayoutMenu_C.DisplayUndoDebugTextBP
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP final
+{
+public:
+	TArray<struct FHudElementState>               CachedStates;                                      // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP) == 0x000008, "Wrong alignment on WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP");
+static_assert(sizeof(WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP) == 0x000010, "Wrong size on WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP");
+static_assert(offsetof(WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP, CachedStates) == 0x000000, "Member 'WBP_UnitFrameLayoutMenu_C_DisplayUndoDebugTextBP::CachedStates' has a wrong offset!");
 
 }
 

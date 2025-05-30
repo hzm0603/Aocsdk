@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_PartyMemberWidget.WBP_PartyMemberWidget_C
-// 0x0010 (0x0460 - 0x0450)
+// 0x0010 (0x04B0 - 0x04A0)
 class UWBP_PartyMemberWidget_C final : public UPartyMemberWidget
 {
 public:
-	class UProgressBar*                           DeltaDamageBar;                                    // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           StaminaBar;                                        // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           DeltaDamageBar;                                    // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           StaminaBar;                                        // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_PartyMemberWidget_C) == 0x000008, "Wrong alignment on UWBP_PartyMemberWidget_C");
-static_assert(sizeof(UWBP_PartyMemberWidget_C) == 0x000460, "Wrong size on UWBP_PartyMemberWidget_C");
-static_assert(offsetof(UWBP_PartyMemberWidget_C, DeltaDamageBar) == 0x000450, "Member 'UWBP_PartyMemberWidget_C::DeltaDamageBar' has a wrong offset!");
-static_assert(offsetof(UWBP_PartyMemberWidget_C, StaminaBar) == 0x000458, "Member 'UWBP_PartyMemberWidget_C::StaminaBar' has a wrong offset!");
+static_assert(sizeof(UWBP_PartyMemberWidget_C) == 0x0004B0, "Wrong size on UWBP_PartyMemberWidget_C");
+static_assert(offsetof(UWBP_PartyMemberWidget_C, DeltaDamageBar) == 0x0004A0, "Member 'UWBP_PartyMemberWidget_C::DeltaDamageBar' has a wrong offset!");
+static_assert(offsetof(UWBP_PartyMemberWidget_C, StaminaBar) == 0x0004A8, "Member 'UWBP_PartyMemberWidget_C::StaminaBar' has a wrong offset!");
 
 }
 

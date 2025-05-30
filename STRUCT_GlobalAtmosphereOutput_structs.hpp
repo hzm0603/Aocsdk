@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "STRUCT_GlobalAtmosphereOutput_Sun_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_Moon_structs.hpp"
-#include "STRUCT_GlobalAtmosphereOutput_Skylight_structs.hpp"
 #include "STRUCT_GlobalAtmosphereOutput_SkyAtmosphere_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_Sun_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_Skylight_structs.hpp"
+#include "STRUCT_GlobalAtmosphereOutput_Moon_structs.hpp"
 #include "STRUCT_GlobalAtmosphereOutput_ExponentialHeightFog_structs.hpp"
 
 

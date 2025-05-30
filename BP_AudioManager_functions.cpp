@@ -34,7 +34,7 @@ void ABP_AudioManager_C::ActivateUnderwaterAudio()
 // Function BP_AudioManager.BP_AudioManager_C.AddInteriorOverride
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSStartStopAudioEvents           StartStopOverride                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FSStartStopAudioEvents&    StartStopOverride                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void ABP_AudioManager_C::AddInteriorOverride(const struct FSStartStopAudioEvents& StartStopOverride)
 {
@@ -134,7 +134,7 @@ void ABP_AudioManager_C::ExecuteUbergraph_BP_AudioManager(int32 EntryPoint)
 // double                                  Wind_Speed_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Wind_Speed_Variation_Amplifier_0                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Wind_Speed_Amplitude_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Audio_Wind_Intensity                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Audio_Wind_Intensity                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_AudioManager_C::Get_Audio_Wind_Intensity(double Noisy_Wind_Speed_0, double Wind_Speed_0, double Wind_Speed_Variation_Amplifier_0, double Wind_Speed_Amplitude_0, double* Audio_Wind_Intensity)
 {
@@ -174,7 +174,7 @@ void ABP_AudioManager_C::Initialize_Biome_Music()
 // Function BP_AudioManager.BP_AudioManager_C.InsertOutdoorSettings
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSStartStopAudioEvents           OutdoorSettings                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FSStartStopAudioEvents&    OutdoorSettings                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // int32                                   Priority                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_AudioManager_C::InsertOutdoorSettings(const struct FSStartStopAudioEvents& OutdoorSettings, int32 Priority)
@@ -216,8 +216,8 @@ void ABP_AudioManager_C::Music_Beat_Event(float BeatDuration)
 // Function BP_AudioManager.BP_AudioManager_C.PopOutdoorSettings
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSStartStopAudioEvents           OutdoorSettings                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FS_EnvironmentSettingsSwitches   OutdoorSettingsSwitches                                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSStartStopAudioEvents&    OutdoorSettings                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FS_EnvironmentSettingsSwitches&OutdoorSettingsSwitches                                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_AudioManager_C::PopOutdoorSettings(const struct FSStartStopAudioEvents& OutdoorSettings, const struct FS_EnvironmentSettingsSwitches& OutdoorSettingsSwitches)
 {
@@ -238,7 +238,7 @@ void ABP_AudioManager_C::PopOutdoorSettings(const struct FSStartStopAudioEvents&
 // Function BP_AudioManager.BP_AudioManager_C.PostEventArray
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class UAkAudioEvent*>            Events                                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class UAkAudioEvent*>&           Events                                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class UAkComponent*                     AkComponent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 void ABP_AudioManager_C::PostEventArray(TArray<class UAkAudioEvent*>& Events, class UAkComponent* AkComponent)
@@ -262,8 +262,8 @@ void ABP_AudioManager_C::PostEventArray(TArray<class UAkAudioEvent*>& Events, cl
 // Function BP_AudioManager.BP_AudioManager_C.PushOutdoorSettings
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSStartStopAudioEvents           OutdoorSettings                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FS_EnvironmentSettingsSwitches   OutdoorSettingsSwitches                                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSStartStopAudioEvents&    OutdoorSettings                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FS_EnvironmentSettingsSwitches&OutdoorSettingsSwitches                                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Priority                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_AudioManager_C::PushOutdoorSettings(const struct FSStartStopAudioEvents& OutdoorSettings, const struct FS_EnvironmentSettingsSwitches& OutdoorSettingsSwitches, int32 Priority)
@@ -350,7 +350,7 @@ void ABP_AudioManager_C::RemoveInteriorOverride()
 // Parameters:
 // double                                  OutdoorAmount                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Dungeon_Amount_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Audio_Throttle                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_AudioManager_C::Run_Audio(double OutdoorAmount, double Dungeon_Amount_0, const struct FVector2D& Location, bool Audio_Throttle)
@@ -410,7 +410,7 @@ void ABP_AudioManager_C::Set_Settings()
 // Function BP_AudioManager.BP_AudioManager_C.SetRTPCArray
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class UAkRtpc*>                  RTPCs                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class UAkRtpc*>&                 RTPCs                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_AudioManager_C::SetRTPCArray(TArray<class UAkRtpc*>& RTPCs, double Value)

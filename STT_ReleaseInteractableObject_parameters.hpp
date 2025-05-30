@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function STT_ReleaseInteractableObject.STT_ReleaseInteractableObject_C.ReceiveLatentEnterState
+// 0x002E (0x002E - 0x0000)
+struct STT_ReleaseInteractableObject_C_ReceiveLatentEnterState final
+{
+public:
+	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+};
+static_assert(alignof(STT_ReleaseInteractableObject_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_ReleaseInteractableObject_C_ReceiveLatentEnterState");
+static_assert(sizeof(STT_ReleaseInteractableObject_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_ReleaseInteractableObject_C_ReceiveLatentEnterState");
+static_assert(offsetof(STT_ReleaseInteractableObject_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_ReleaseInteractableObject_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
+
 // Function STT_ReleaseInteractableObject.STT_ReleaseInteractableObject_C.ExecuteUbergraph_STT_ReleaseInteractableObject
 // 0x0048 (0x0048 - 0x0000)
 struct STT_ReleaseInteractableObject_C_ExecuteUbergraph_STT_ReleaseInteractableObject final
@@ -35,17 +46,6 @@ static_assert(offsetof(STT_ReleaseInteractableObject_C_ExecuteUbergraph_STT_Rele
 static_assert(offsetof(STT_ReleaseInteractableObject_C_ExecuteUbergraph_STT_ReleaseInteractableObject, CallFunc_IsValid_ReturnValue) == 0x000032, "Member 'STT_ReleaseInteractableObject_C_ExecuteUbergraph_STT_ReleaseInteractableObject::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(STT_ReleaseInteractableObject_C_ExecuteUbergraph_STT_ReleaseInteractableObject, CallFunc_GetComponentByClass_ReturnValue) == 0x000038, "Member 'STT_ReleaseInteractableObject_C_ExecuteUbergraph_STT_ReleaseInteractableObject::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(STT_ReleaseInteractableObject_C_ExecuteUbergraph_STT_ReleaseInteractableObject, CallFunc_IsValid_ReturnValue_1) == 0x000040, "Member 'STT_ReleaseInteractableObject_C_ExecuteUbergraph_STT_ReleaseInteractableObject::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-
-// Function STT_ReleaseInteractableObject.STT_ReleaseInteractableObject_C.ReceiveLatentEnterState
-// 0x002E (0x002E - 0x0000)
-struct STT_ReleaseInteractableObject_C_ReceiveLatentEnterState final
-{
-public:
-	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-};
-static_assert(alignof(STT_ReleaseInteractableObject_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_ReleaseInteractableObject_C_ReceiveLatentEnterState");
-static_assert(sizeof(STT_ReleaseInteractableObject_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_ReleaseInteractableObject_C_ReceiveLatentEnterState");
-static_assert(offsetof(STT_ReleaseInteractableObject_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_ReleaseInteractableObject_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
 
 }
 

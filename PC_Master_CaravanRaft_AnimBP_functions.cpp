@@ -20,7 +20,7 @@ namespace SDK
 // Function PC_Master_CaravanRaft_AnimBP.PC_Master_CaravanRaft_AnimBP_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
 void UPC_Master_CaravanRaft_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {

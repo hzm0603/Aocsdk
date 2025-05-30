@@ -26,8 +26,8 @@ public:
 	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScW_Overrides;                                     // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_TaxPanel(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_TaxPanel(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

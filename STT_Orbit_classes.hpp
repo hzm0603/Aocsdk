@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "STT_Base_classes.hpp"
+#include "DesignDataPlugin_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EAIMovementOrientation_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "DesignDataPlugin_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
+#include "STT_Base_classes.hpp"
 
 
 namespace SDK

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "NPCPawn_classes.hpp"
 
 
@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass HarvestableResource.HarvestableResource_C
-// 0x0040 (0x1D70 - 0x1D30)
+// 0x0040 (0x1D90 - 0x1D50)
 class AHarvestableResource_C final : public ANPCPawn_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_HarvestableResource_C;              // 0x1D30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHarvestingComponent*                   harvesting;                                        // 0x1D38(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class APlayerCharacter*                       Player;                                            // 0x1D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          DirectHit;                                         // 0x1D48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D49[0x7];                                     // 0x1D49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                HarvestLocation;                                   // 0x1D50(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_HarvestableResource_C;              // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHarvestingComponent*                   harvesting;                                        // 0x1D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class APlayerCharacter*                       Player;                                            // 0x1D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          DirectHit;                                         // 0x1D68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D69[0x7];                                     // 0x1D69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                HarvestLocation;                                   // 0x1D70(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Mesh_K2Node_ComponentBoundEvent_0_ComponentBeginCursorOverSignature__DelegateSignature(class UPrimitiveComponent* TouchedComponent);
@@ -49,12 +49,12 @@ public:
 	}
 };
 static_assert(alignof(AHarvestableResource_C) == 0x000010, "Wrong alignment on AHarvestableResource_C");
-static_assert(sizeof(AHarvestableResource_C) == 0x001D70, "Wrong size on AHarvestableResource_C");
-static_assert(offsetof(AHarvestableResource_C, UberGraphFrame_HarvestableResource_C) == 0x001D30, "Member 'AHarvestableResource_C::UberGraphFrame_HarvestableResource_C' has a wrong offset!");
-static_assert(offsetof(AHarvestableResource_C, harvesting) == 0x001D38, "Member 'AHarvestableResource_C::harvesting' has a wrong offset!");
-static_assert(offsetof(AHarvestableResource_C, Player) == 0x001D40, "Member 'AHarvestableResource_C::Player' has a wrong offset!");
-static_assert(offsetof(AHarvestableResource_C, DirectHit) == 0x001D48, "Member 'AHarvestableResource_C::DirectHit' has a wrong offset!");
-static_assert(offsetof(AHarvestableResource_C, HarvestLocation) == 0x001D50, "Member 'AHarvestableResource_C::HarvestLocation' has a wrong offset!");
+static_assert(sizeof(AHarvestableResource_C) == 0x001D90, "Wrong size on AHarvestableResource_C");
+static_assert(offsetof(AHarvestableResource_C, UberGraphFrame_HarvestableResource_C) == 0x001D50, "Member 'AHarvestableResource_C::UberGraphFrame_HarvestableResource_C' has a wrong offset!");
+static_assert(offsetof(AHarvestableResource_C, harvesting) == 0x001D58, "Member 'AHarvestableResource_C::harvesting' has a wrong offset!");
+static_assert(offsetof(AHarvestableResource_C, Player) == 0x001D60, "Member 'AHarvestableResource_C::Player' has a wrong offset!");
+static_assert(offsetof(AHarvestableResource_C, DirectHit) == 0x001D68, "Member 'AHarvestableResource_C::DirectHit' has a wrong offset!");
+static_assert(offsetof(AHarvestableResource_C, HarvestLocation) == 0x001D70, "Member 'AHarvestableResource_C::HarvestLocation' has a wrong offset!");
 
 }
 

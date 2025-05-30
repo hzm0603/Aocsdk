@@ -30,8 +30,8 @@ public:
 	class UImage*                                 Image_Logo;                                        // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Construct();
 	void ExecuteUbergraph_WBP_LoadingScreen(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

@@ -17,16 +17,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_DeconstructItemModal.WBP_DeconstructItemModal_C
-// 0x0030 (0x04E0 - 0x04B0)
+// 0x0030 (0x0530 - 0x0500)
 class UWBP_DeconstructItemModal_C final : public UDeconstructItemModal
 {
 public:
-	class UCommonRichTextBlock*                   MessagingTextBlock;                                // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ItemIcon_C*                        WBP_ItemIcon_1;                                    // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ItemIcon_C*                        WBP_ItemIcon_2;                                    // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ItemIcon_C*                        WBP_ItemIcon_3;                                    // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ItemIcon_C*                        WBP_ItemIcon_4;                                    // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ItemIcon_C*                        WBP_ItemIcon_5;                                    // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   MessagingTextBlock;                                // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemIcon_C*                        WBP_ItemIcon_1;                                    // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemIcon_C*                        WBP_ItemIcon_2;                                    // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemIcon_C*                        WBP_ItemIcon_3;                                    // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemIcon_C*                        WBP_ItemIcon_4;                                    // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemIcon_C*                        WBP_ItemIcon_5;                                    // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,13 +39,13 @@ public:
 	}
 };
 static_assert(alignof(UWBP_DeconstructItemModal_C) == 0x000008, "Wrong alignment on UWBP_DeconstructItemModal_C");
-static_assert(sizeof(UWBP_DeconstructItemModal_C) == 0x0004E0, "Wrong size on UWBP_DeconstructItemModal_C");
-static_assert(offsetof(UWBP_DeconstructItemModal_C, MessagingTextBlock) == 0x0004B0, "Member 'UWBP_DeconstructItemModal_C::MessagingTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_DeconstructItemModal_C, WBP_ItemIcon_1) == 0x0004B8, "Member 'UWBP_DeconstructItemModal_C::WBP_ItemIcon_1' has a wrong offset!");
-static_assert(offsetof(UWBP_DeconstructItemModal_C, WBP_ItemIcon_2) == 0x0004C0, "Member 'UWBP_DeconstructItemModal_C::WBP_ItemIcon_2' has a wrong offset!");
-static_assert(offsetof(UWBP_DeconstructItemModal_C, WBP_ItemIcon_3) == 0x0004C8, "Member 'UWBP_DeconstructItemModal_C::WBP_ItemIcon_3' has a wrong offset!");
-static_assert(offsetof(UWBP_DeconstructItemModal_C, WBP_ItemIcon_4) == 0x0004D0, "Member 'UWBP_DeconstructItemModal_C::WBP_ItemIcon_4' has a wrong offset!");
-static_assert(offsetof(UWBP_DeconstructItemModal_C, WBP_ItemIcon_5) == 0x0004D8, "Member 'UWBP_DeconstructItemModal_C::WBP_ItemIcon_5' has a wrong offset!");
+static_assert(sizeof(UWBP_DeconstructItemModal_C) == 0x000530, "Wrong size on UWBP_DeconstructItemModal_C");
+static_assert(offsetof(UWBP_DeconstructItemModal_C, MessagingTextBlock) == 0x000500, "Member 'UWBP_DeconstructItemModal_C::MessagingTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_DeconstructItemModal_C, WBP_ItemIcon_1) == 0x000508, "Member 'UWBP_DeconstructItemModal_C::WBP_ItemIcon_1' has a wrong offset!");
+static_assert(offsetof(UWBP_DeconstructItemModal_C, WBP_ItemIcon_2) == 0x000510, "Member 'UWBP_DeconstructItemModal_C::WBP_ItemIcon_2' has a wrong offset!");
+static_assert(offsetof(UWBP_DeconstructItemModal_C, WBP_ItemIcon_3) == 0x000518, "Member 'UWBP_DeconstructItemModal_C::WBP_ItemIcon_3' has a wrong offset!");
+static_assert(offsetof(UWBP_DeconstructItemModal_C, WBP_ItemIcon_4) == 0x000520, "Member 'UWBP_DeconstructItemModal_C::WBP_ItemIcon_4' has a wrong offset!");
+static_assert(offsetof(UWBP_DeconstructItemModal_C, WBP_ItemIcon_5) == 0x000528, "Member 'UWBP_DeconstructItemModal_C::WBP_ItemIcon_5' has a wrong offset!");
 
 }
 

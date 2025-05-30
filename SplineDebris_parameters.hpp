@@ -13,13 +13,14 @@
 #include "PCG_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
+#include "S_RoadSetDressingData_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function SplineDebris.SplineDebris_C.ExecuteWithContext
-// 0x0A30 (0x0A30 - 0x0000)
+// 0x06C0 (0x06C0 - 0x0000)
 struct SplineDebris_C_ExecuteWithContext final
 {
 public:
@@ -29,71 +30,74 @@ public:
 	struct FVector                                Temp_Position;                                     // 0x00F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Debris_Density;                                    // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         TempRandomDensity;                                 // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPCGComponent*                          CallFunc_GetComponent_ReturnValue;                 // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class USplineComponent*>               CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0140(0x0010)(ReferenceParm, ContainsInstancedReference)
-	float                                         CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue; // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class USplineComponent*>               CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0148(0x0010)(ReferenceParm, ContainsInstancedReference)
 	class USplineComponent*                       CallFunc_Array_Get_Item;                           // 0x0158(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue; // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue; // 0x0178(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Cross_VectorVector_ReturnValue;           // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x01B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_1;           // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<double>                                CallFunc_Map_Keys_Keys;                            // 0x01D0(0x0010)(ReferenceParm)
-	double                                        CallFunc_Array_Get_Item_1;                         // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FAoCSplineDebrisEntry                  CallFunc_Map_Find_Value;                           // 0x0230(0x0058)()
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_289[0x3];                                      // 0x0289(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0291(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_292[0x6];                                      // 0x0292(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector2D_X;                          // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_X_1;                        // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y_1;                        // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue; // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Origin;        // 0x02D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Extents;       // 0x02E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            K2Node_DynamicCast_AsStatic_Mesh;                  // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_311[0x7];                                      // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBoxSphereBounds                       CallFunc_GetBounds_ReturnValue;                    // 0x0320(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0358(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakBoxSphereBounds_Origin;              // 0x0370(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakBoxSphereBounds_BoxExtent;           // 0x0388(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakBoxSphereBounds_SphereRadius;        // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A5[0x3];                                      // 0x03A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_SoftObjectReferenceToString_ReturnValue; // 0x03A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BC[0x4];                                      // 0x03BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAoCSplineDebrisEntry                  CallFunc_Array_RandomFromStream_OutItem;           // 0x03C0(0x0058)()
-	int32                                         CallFunc_Array_RandomFromStream_OutIndex;          // 0x0418(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x041C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41D[0x3];                                      // 0x041D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_1; // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_2; // 0x0424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_429[0x7];                                      // 0x0429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue; // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue; // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue; // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Cross_VectorVector_ReturnValue;           // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_1;           // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<double>                                CallFunc_Map_Keys_Keys;                            // 0x0220(0x0010)(ReferenceParm)
+	double                                        CallFunc_Array_Get_Item_1;                         // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCSplineDebrisEntry                  CallFunc_Map_Find_Value;                           // 0x0240(0x0058)()
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29A[0x2];                                      // 0x029A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x02A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A2[0x6];                                      // 0x02A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector2D_X;                          // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X_1;                        // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y_1;                        // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue; // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Origin;        // 0x02E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_EditorGetBoundsFromUObject_Extents;       // 0x02F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            K2Node_DynamicCast_AsStatic_Mesh;                  // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBoxSphereBounds                       CallFunc_GetBounds_ReturnValue;                    // 0x0330(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0368(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakBoxSphereBounds_Origin;              // 0x0380(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakBoxSphereBounds_BoxExtent;           // 0x0398(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakBoxSphereBounds_SphereRadius;        // 0x03B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B5[0x3];                                      // 0x03B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_SoftObjectReferenceToString_ReturnValue; // 0x03B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FAoCSplineDebrisEntry                  CallFunc_Array_RandomFromStream_OutItem;           // 0x03C8(0x0058)()
+	int32                                         CallFunc_Array_RandomFromStream_OutIndex;          // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_1; // 0x0424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_ReturnValue_2; // 0x0428(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x042C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42D[0x3];                                      // 0x042D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x0438(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0450(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -117,96 +121,93 @@ public:
 	class UPCGComponent*                          CallFunc_GetComponent_ReturnValue_1;               // 0x05F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FPCGDataCollection                     K2Node_MakeStruct_PCGDataCollection;               // 0x05F8(0x0020)()
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0618(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_PCGSplineMesh_C>  UniqueObjectNameForCooking_AsBPI_PCGSpline_Mesh;   // 0x0620(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UniqueObjectNameForCooking_bSuccess;               // 0x0630(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_631[0xF];                                      // 0x0631(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAoCSplineMeshEntry                    CallFunc_Get_Mesh_List_First_Override_Beginning_Mesh; // 0x0640(0x00D0)()
-	struct FAoCSplineMeshEntry                    CallFunc_Get_Mesh_List_First_Override_End_Mesh;    // 0x0710(0x00D0)()
-	TArray<struct FAoCSplineMeshEntry>            CallFunc_Get_Mesh_List_First_Fence_Objects;        // 0x07E0(0x0010)(ReferenceParm)
-	TArray<struct FAoCSplineDebrisEntry>          CallFunc_Get_Mesh_List_First_Debris_Objects;       // 0x07F0(0x0010)(ReferenceParm)
-	struct FAoCSplineMeshEntry                    CallFunc_Get_Mesh_List_Second_Override_Beginning_Mesh; // 0x0800(0x00D0)()
-	struct FAoCSplineMeshEntry                    CallFunc_Get_Mesh_List_Second_Override_End_Mesh;   // 0x08D0(0x00D0)()
-	TArray<struct FAoCSplineMeshEntry>            CallFunc_Get_Mesh_List_Second_Fence_Objects;       // 0x09A0(0x0010)(ReferenceParm)
-	TArray<struct FAoCSplineDebrisEntry>          CallFunc_Get_Mesh_List_Second_Debris_Objects;      // 0x09B0(0x0010)(ReferenceParm)
-	class UPCGMetadata*                           CallFunc_MutableMetadata_ReturnValue;              // 0x09C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FPCGTaggedData>                 CallFunc_GetInputs_ReturnValue;                    // 0x09C8(0x0010)(ReferenceParm)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x09D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9D9[0x7];                                      // 0x09D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPCGSpatialData*                        K2Node_DynamicCast_AsPCGSpatial_Data;              // 0x09E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x09E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9E9[0x7];                                      // 0x09E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x09F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x09F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast; // 0x0A00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast; // 0x0A04(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1; // 0x0A08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A0C[0x4];                                      // 0x0A0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_1;        // 0x0A10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Map_Add_Key_ImplicitCast;                 // 0x0A18(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0A20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FS_RoadSetDressingData>         CallFunc_Retrieve_Set_Dressing_Data_Set_Dressing_Data; // 0x0620(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Retrieve_Set_Dressing_Data_Is_Intersection; // 0x0630(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_631[0x7];                                      // 0x0631(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAoCSplineDebrisEntry>          K2Node_Select_Default;                             // 0x0638(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_2;           // 0x0649(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64A[0x6];                                      // 0x064A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPCGMetadata*                           CallFunc_MutableMetadata_ReturnValue;              // 0x0650(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FPCGTaggedData>                 CallFunc_GetInputs_ReturnValue;                    // 0x0658(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0668(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_669[0x7];                                      // 0x0669(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPCGSpatialData*                        K2Node_DynamicCast_AsPCGSpatial_Data;              // 0x0670(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0678(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_679[0x7];                                      // 0x0679(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x0680(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0688(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast; // 0x0690(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast; // 0x0694(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1; // 0x0698(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69C[0x4];                                      // 0x069C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_1;        // 0x06A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Map_Add_Key_ImplicitCast;                 // 0x06A8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x06B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(SplineDebris_C_ExecuteWithContext) == 0x000010, "Wrong alignment on SplineDebris_C_ExecuteWithContext");
-static_assert(sizeof(SplineDebris_C_ExecuteWithContext) == 0x000A30, "Wrong size on SplineDebris_C_ExecuteWithContext");
+static_assert(sizeof(SplineDebris_C_ExecuteWithContext) == 0x0006C0, "Wrong size on SplineDebris_C_ExecuteWithContext");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, InContext) == 0x000000, "Member 'SplineDebris_C_ExecuteWithContext::InContext' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Input) == 0x0000B8, "Member 'SplineDebris_C_ExecuteWithContext::Input' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Output) == 0x0000D8, "Member 'SplineDebris_C_ExecuteWithContext::Output' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_Position) == 0x0000F8, "Member 'SplineDebris_C_ExecuteWithContext::Temp_Position' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Debris_Density) == 0x000110, "Member 'SplineDebris_C_ExecuteWithContext::Debris_Density' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, TempRandomDensity) == 0x000114, "Member 'SplineDebris_C_ExecuteWithContext::TempRandomDensity' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_int_Loop_Counter_Variable) == 0x000118, "Member 'SplineDebris_C_ExecuteWithContext::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue) == 0x00011C, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_int_Array_Index_Variable) == 0x000120, "Member 'SplineDebris_C_ExecuteWithContext::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_int_Loop_Counter_Variable_1) == 0x000124, "Member 'SplineDebris_C_ExecuteWithContext::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_1) == 0x000128, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_int_Array_Index_Variable_1) == 0x00012C, "Member 'SplineDebris_C_ExecuteWithContext::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_bool_Variable) == 0x000118, "Member 'SplineDebris_C_ExecuteWithContext::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_int_Array_Index_Variable) == 0x00011C, "Member 'SplineDebris_C_ExecuteWithContext::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_int_Loop_Counter_Variable) == 0x000120, "Member 'SplineDebris_C_ExecuteWithContext::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue) == 0x000124, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_int_Loop_Counter_Variable_1) == 0x000128, "Member 'SplineDebris_C_ExecuteWithContext::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetComponent_ReturnValue) == 0x000130, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetOwner_ReturnValue) == 0x000138, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000140, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue) == 0x000150, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue_1) == 0x000138, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetOwner_ReturnValue) == 0x000140, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000148, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_Get_Item) == 0x000158, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue) == 0x000160, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue) == 0x000178, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000190, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Cross_VectorVector_ReturnValue) == 0x000198, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Cross_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Normal_ReturnValue) == 0x0001B0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_IsNotEmpty_ReturnValue_1) == 0x0001C8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_IsNotEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Map_Keys_Keys) == 0x0001D0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_Get_Item_1) == 0x0001E0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakTransform_Location) == 0x0001E8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakTransform_Rotation) == 0x000200, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakTransform_Scale) == 0x000218, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Map_Find_Value) == 0x000230, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Map_Find_ReturnValue) == 0x000288, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue) == 0x00028C, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue) == 0x000290, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000291, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakVector2D_X) == 0x000298, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakVector2D_Y) == 0x0002A0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakVector2D_X_1) == 0x0002A8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakVector2D_Y_1) == 0x0002B0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Abs_ReturnValue) == 0x0002B8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x0002C0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue) == 0x0002C8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Origin) == 0x0002D0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Origin' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Extents) == 0x0002E8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Extents' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000300, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_DynamicCast_AsStatic_Mesh) == 0x000308, "Member 'SplineDebris_C_ExecuteWithContext::K2Node_DynamicCast_AsStatic_Mesh' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess) == 0x000310, "Member 'SplineDebris_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_FMax_ReturnValue) == 0x000318, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetBounds_ReturnValue) == 0x000320, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetBounds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_MakeVector_ReturnValue) == 0x000358, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_Origin) == 0x000370, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_Origin' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_BoxExtent) == 0x000388, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_BoxExtent' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_SphereRadius) == 0x0003A0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_SphereRadius' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue) == 0x0003A4, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Conv_SoftObjectReferenceToString_ReturnValue) == 0x0003A8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Conv_SoftObjectReferenceToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue_1) == 0x0003B8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_RandomFromStream_OutItem) == 0x0003C0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_RandomFromStream_OutItem' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_RandomFromStream_OutIndex) == 0x000418, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_RandomFromStream_OutIndex' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue_1) == 0x00041C, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_1) == 0x000420, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_2) == 0x000424, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_bool_Variable) == 0x000428, "Member 'SplineDebris_C_ExecuteWithContext::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000160, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_int_Array_Index_Variable_1) == 0x000164, "Member 'SplineDebris_C_ExecuteWithContext::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue) == 0x000168, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetDistanceAlongSplineAtLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue) == 0x000170, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetTangentAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue) == 0x000188, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetUpVectorAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Cross_VectorVector_ReturnValue) == 0x0001A0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Cross_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Normal_ReturnValue) == 0x0001B8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Normal_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_IsNotEmpty_ReturnValue_1) == 0x0001D0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_IsNotEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakTransform_Location) == 0x0001D8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakTransform_Rotation) == 0x0001F0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakTransform_Scale) == 0x000208, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Map_Keys_Keys) == 0x000220, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_Get_Item_1) == 0x000230, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue) == 0x000238, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Map_Find_Value) == 0x000240, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Map_Find_ReturnValue) == 0x000298, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue) == 0x000299, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue_1) == 0x00029C, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue_1) == 0x0002A0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0002A1, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakVector2D_X) == 0x0002A8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakVector2D_Y) == 0x0002B0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakVector2D_X_1) == 0x0002B8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakVector2D_X_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakVector2D_Y_1) == 0x0002C0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Abs_ReturnValue) == 0x0002C8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x0002D0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue) == 0x0002D8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Origin) == 0x0002E0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Origin' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_EditorGetBoundsFromUObject_Extents) == 0x0002F8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_EditorGetBoundsFromUObject_Extents' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000310, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_DynamicCast_AsStatic_Mesh) == 0x000318, "Member 'SplineDebris_C_ExecuteWithContext::K2Node_DynamicCast_AsStatic_Mesh' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess) == 0x000320, "Member 'SplineDebris_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_FMax_ReturnValue) == 0x000328, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetBounds_ReturnValue) == 0x000330, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetBounds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_MakeVector_ReturnValue) == 0x000368, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_Origin) == 0x000380, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_Origin' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_BoxExtent) == 0x000398, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_BoxExtent' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_BreakBoxSphereBounds_SphereRadius) == 0x0003B0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_BreakBoxSphereBounds_SphereRadius' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue) == 0x0003B4, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Conv_SoftObjectReferenceToString_ReturnValue) == 0x0003B8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Conv_SoftObjectReferenceToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_RandomFromStream_OutItem) == 0x0003C8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_RandomFromStream_OutItem' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_RandomFromStream_OutIndex) == 0x000420, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_RandomFromStream_OutIndex' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_1) == 0x000424, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_ReturnValue_2) == 0x000428, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, Temp_bool_Variable_1) == 0x00042C, "Member 'SplineDebris_C_ExecuteWithContext::Temp_bool_Variable_1' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000430, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_SelectVector_ReturnValue) == 0x000438, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000450, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
@@ -228,29 +229,24 @@ static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_MakeArray_Array
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetComponent_ReturnValue_1) == 0x0005F0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetComponent_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_MakeStruct_PCGDataCollection) == 0x0005F8, "Member 'SplineDebris_C_ExecuteWithContext::K2Node_MakeStruct_PCGDataCollection' has a wrong offset!");
 static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetOwner_ReturnValue_1) == 0x000618, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, UniqueObjectNameForCooking_AsBPI_PCGSpline_Mesh) == 0x000620, "Member 'SplineDebris_C_ExecuteWithContext::UniqueObjectNameForCooking_AsBPI_PCGSpline_Mesh' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, UniqueObjectNameForCooking_bSuccess) == 0x000630, "Member 'SplineDebris_C_ExecuteWithContext::UniqueObjectNameForCooking_bSuccess' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Get_Mesh_List_First_Override_Beginning_Mesh) == 0x000640, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Get_Mesh_List_First_Override_Beginning_Mesh' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Get_Mesh_List_First_Override_End_Mesh) == 0x000710, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Get_Mesh_List_First_Override_End_Mesh' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Get_Mesh_List_First_Fence_Objects) == 0x0007E0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Get_Mesh_List_First_Fence_Objects' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Get_Mesh_List_First_Debris_Objects) == 0x0007F0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Get_Mesh_List_First_Debris_Objects' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Get_Mesh_List_Second_Override_Beginning_Mesh) == 0x000800, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Get_Mesh_List_Second_Override_Beginning_Mesh' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Get_Mesh_List_Second_Override_End_Mesh) == 0x0008D0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Get_Mesh_List_Second_Override_End_Mesh' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Get_Mesh_List_Second_Fence_Objects) == 0x0009A0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Get_Mesh_List_Second_Fence_Objects' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Get_Mesh_List_Second_Debris_Objects) == 0x0009B0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Get_Mesh_List_Second_Debris_Objects' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_MutableMetadata_ReturnValue) == 0x0009C0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_MutableMetadata_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetInputs_ReturnValue) == 0x0009C8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetInputs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue_1) == 0x0009D8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_DynamicCast_AsPCGSpatial_Data) == 0x0009E0, "Member 'SplineDebris_C_ExecuteWithContext::K2Node_DynamicCast_AsPCGSpatial_Data' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess_1) == 0x0009E8, "Member 'SplineDebris_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0009F0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x0009F8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast) == 0x000A00, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast) == 0x000A04, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1) == 0x000A08, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_B_ImplicitCast_1) == 0x000A10, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Map_Add_Key_ImplicitCast) == 0x000A18, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Map_Add_Key_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000A20, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Retrieve_Set_Dressing_Data_Set_Dressing_Data) == 0x000620, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Retrieve_Set_Dressing_Data_Set_Dressing_Data' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Retrieve_Set_Dressing_Data_Is_Intersection) == 0x000630, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Retrieve_Set_Dressing_Data_Is_Intersection' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_Select_Default) == 0x000638, "Member 'SplineDebris_C_ExecuteWithContext::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000648, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Array_IsNotEmpty_ReturnValue_2) == 0x000649, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Array_IsNotEmpty_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_MutableMetadata_ReturnValue) == 0x000650, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_MutableMetadata_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_GetInputs_ReturnValue) == 0x000658, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_GetInputs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_IsValid_ReturnValue_1) == 0x000668, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_DynamicCast_AsPCGSpatial_Data) == 0x000670, "Member 'SplineDebris_C_ExecuteWithContext::K2Node_DynamicCast_AsPCGSpatial_Data' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess_1) == 0x000678, "Member 'SplineDebris_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x000680, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000688, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast) == 0x000690, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Min_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast) == 0x000694, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1) == 0x000698, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_RandomFloatInRangeFromStream_Max_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_B_ImplicitCast_1) == 0x0006A0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Map_Add_Key_ImplicitCast) == 0x0006A8, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Map_Add_Key_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(SplineDebris_C_ExecuteWithContext, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x0006B0, "Member 'SplineDebris_C_ExecuteWithContext::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function SplineDebris.SplineDebris_C.NodeTitleOverride
 // 0x0008 (0x0008 - 0x0000)

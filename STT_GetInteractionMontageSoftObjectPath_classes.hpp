@@ -31,9 +31,9 @@ public:
 	bool                                          CanFail;                                           // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath(int32 EntryPoint);
-	void KeyNameContainsMatch(TArray<class FName>& NameArray, class FName* SelectedName);
 	void ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition);
+	void KeyNameContainsMatch(TArray<class FName>& NameArray, class FName* SelectedName);
+	void ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

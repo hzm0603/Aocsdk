@@ -14,16 +14,16 @@
 namespace SDK::Params
 {
 
-// Function WBP_HUDEditorResetWindowPositions.WBP_HUDEditorResetWindowPositions_C.BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// Function WBP_HUDEditorResetWindowPositions.WBP_HUDEditorResetWindowPositions_C.GetBorder
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature final
+struct WBP_HUDEditorResetWindowPositions_C_GetBorder final
 {
 public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonBorder*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+static_assert(alignof(WBP_HUDEditorResetWindowPositions_C_GetBorder) == 0x000008, "Wrong alignment on WBP_HUDEditorResetWindowPositions_C_GetBorder");
+static_assert(sizeof(WBP_HUDEditorResetWindowPositions_C_GetBorder) == 0x000008, "Wrong size on WBP_HUDEditorResetWindowPositions_C_GetBorder");
+static_assert(offsetof(WBP_HUDEditorResetWindowPositions_C_GetBorder, ReturnValue) == 0x000000, "Member 'WBP_HUDEditorResetWindowPositions_C_GetBorder::ReturnValue' has a wrong offset!");
 
 // Function WBP_HUDEditorResetWindowPositions.WBP_HUDEditorResetWindowPositions_C.ExecuteUbergraph_WBP_HUDEditorResetWindowPositions
 // 0x0010 (0x0010 - 0x0000)
@@ -39,16 +39,16 @@ static_assert(sizeof(WBP_HUDEditorResetWindowPositions_C_ExecuteUbergraph_WBP_HU
 static_assert(offsetof(WBP_HUDEditorResetWindowPositions_C_ExecuteUbergraph_WBP_HUDEditorResetWindowPositions, EntryPoint) == 0x000000, "Member 'WBP_HUDEditorResetWindowPositions_C_ExecuteUbergraph_WBP_HUDEditorResetWindowPositions::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_HUDEditorResetWindowPositions_C_ExecuteUbergraph_WBP_HUDEditorResetWindowPositions, K2Node_ComponentBoundEvent_Button) == 0x000008, "Member 'WBP_HUDEditorResetWindowPositions_C_ExecuteUbergraph_WBP_HUDEditorResetWindowPositions::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
 
-// Function WBP_HUDEditorResetWindowPositions.WBP_HUDEditorResetWindowPositions_C.GetBorder
+// Function WBP_HUDEditorResetWindowPositions.WBP_HUDEditorResetWindowPositions_C.BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_HUDEditorResetWindowPositions_C_GetBorder final
+struct WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class UCommonBorder*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUDEditorResetWindowPositions_C_GetBorder) == 0x000008, "Wrong alignment on WBP_HUDEditorResetWindowPositions_C_GetBorder");
-static_assert(sizeof(WBP_HUDEditorResetWindowPositions_C_GetBorder) == 0x000008, "Wrong size on WBP_HUDEditorResetWindowPositions_C_GetBorder");
-static_assert(offsetof(WBP_HUDEditorResetWindowPositions_C_GetBorder, ReturnValue) == 0x000000, "Member 'WBP_HUDEditorResetWindowPositions_C_GetBorder::ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
 }
 

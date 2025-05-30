@@ -17,21 +17,16 @@
 namespace SDK::Params
 {
 
-// Function STT_GetPerceivedCharacterByActorTag.STT_GetPerceivedCharacterByActorTag_C.ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag
-// 0x0034 (0x0034 - 0x0000)
-struct STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag final
+// Function STT_GetPerceivedCharacterByActorTag.STT_GetPerceivedCharacterByActorTag_C.ReceiveLatentEnterState
+// 0x002E (0x002E - 0x0000)
+struct STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x1];                                        // 0x0005(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStateTreeTransitionResult             K2Node_Event_Transition;                           // 0x0006(0x002E)(ConstParm, NoDestructor)
+	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 };
-static_assert(alignof(STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag) == 0x000004, "Wrong alignment on STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag");
-static_assert(sizeof(STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag) == 0x000034, "Wrong size on STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag");
-static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag, EntryPoint) == 0x000000, "Member 'STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag::EntryPoint' has a wrong offset!");
-static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag, K2Node_Event_Transition) == 0x000006, "Member 'STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag::K2Node_Event_Transition' has a wrong offset!");
+static_assert(alignof(STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState");
+static_assert(sizeof(STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState");
+static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
 
 // Function STT_GetPerceivedCharacterByActorTag.STT_GetPerceivedCharacterByActorTag_C.FindCharacterWithActorTag
 // 0x00E0 (0x00E0 - 0x0000)
@@ -131,16 +126,21 @@ static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_FindCharacterWithAc
 static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_FindCharacterWithActorTag, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x0000D0, "Member 'STT_GetPerceivedCharacterByActorTag_C_FindCharacterWithActorTag::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_FindCharacterWithActorTag, K2Node_VariableSet_ClosestDistance_ImplicitCast) == 0x0000D8, "Member 'STT_GetPerceivedCharacterByActorTag_C_FindCharacterWithActorTag::K2Node_VariableSet_ClosestDistance_ImplicitCast' has a wrong offset!");
 
-// Function STT_GetPerceivedCharacterByActorTag.STT_GetPerceivedCharacterByActorTag_C.ReceiveLatentEnterState
-// 0x002E (0x002E - 0x0000)
-struct STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState final
+// Function STT_GetPerceivedCharacterByActorTag.STT_GetPerceivedCharacterByActorTag_C.ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag
+// 0x0034 (0x0034 - 0x0000)
+struct STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag final
 {
 public:
-	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x1];                                        // 0x0005(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStateTreeTransitionResult             K2Node_Event_Transition;                           // 0x0006(0x002E)(ConstParm, NoDestructor)
 };
-static_assert(alignof(STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState");
-static_assert(sizeof(STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState");
-static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_GetPerceivedCharacterByActorTag_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
+static_assert(alignof(STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag) == 0x000004, "Wrong alignment on STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag");
+static_assert(sizeof(STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag) == 0x000034, "Wrong size on STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag");
+static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag, EntryPoint) == 0x000000, "Member 'STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag::EntryPoint' has a wrong offset!");
+static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag, K2Node_Event_Transition) == 0x000006, "Member 'STT_GetPerceivedCharacterByActorTag_C_ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag::K2Node_Event_Transition' has a wrong offset!");
 
 }
 

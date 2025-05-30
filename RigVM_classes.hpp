@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // Class RigVM.RigVMGraphFunctionHost
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IRigVMGraphFunctionHost final : public IInterface
 {
 public:
@@ -33,8 +33,8 @@ public:
 		return GetDefaultObjImpl<IRigVMGraphFunctionHost>();
 	}
 };
-static_assert(alignof(IRigVMGraphFunctionHost) == 0x000008, "Wrong alignment on IRigVMGraphFunctionHost");
-static_assert(sizeof(IRigVMGraphFunctionHost) == 0x000048, "Wrong size on IRigVMGraphFunctionHost");
+static_assert(alignof(IRigVMGraphFunctionHost) == 0x000001, "Wrong alignment on IRigVMGraphFunctionHost");
+static_assert(sizeof(IRigVMGraphFunctionHost) == 0x000001, "Wrong size on IRigVMGraphFunctionHost");
 
 // Class RigVM.RigVMBlueprintGeneratedClass
 // 0x0028 (0x0450 - 0x0428)

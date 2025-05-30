@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "OpenColorIO_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -93,7 +93,7 @@ static_assert(offsetof(OpenColorIODisplayExtensionWrapper_SetSceneExtensionIsAct
 struct OpenColorIODisplayExtensionWrapper_SetSceneExtensionIsActiveFunctions final
 {
 public:
-	TArray<struct FSceneViewExtensionIsActiveFunctor> IsActiveFunctions;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FSceneViewExtensionIsActiveFunctor> IsActiveFunctions;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OpenColorIODisplayExtensionWrapper_SetSceneExtensionIsActiveFunctions) == 0x000008, "Wrong alignment on OpenColorIODisplayExtensionWrapper_SetSceneExtensionIsActiveFunctions");
 static_assert(sizeof(OpenColorIODisplayExtensionWrapper_SetSceneExtensionIsActiveFunctions) == 0x000010, "Wrong size on OpenColorIODisplayExtensionWrapper_SetSceneExtensionIsActiveFunctions");

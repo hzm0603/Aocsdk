@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ServiceBuilding_Smithing_EXP0_Weapon_Vendor.ServiceBuilding_Smithing_EXP0_Weapon_Vendor_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class AServiceBuilding_Smithing_EXP0_Weapon_Vendor_C final : public ANode_NPC_Master_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AServiceBuilding_Smithing_EXP0_Weapon_Vendor_C) == 0x000010, "Wrong alignment on AServiceBuilding_Smithing_EXP0_Weapon_Vendor_C");
-static_assert(sizeof(AServiceBuilding_Smithing_EXP0_Weapon_Vendor_C) == 0x001DD0, "Wrong size on AServiceBuilding_Smithing_EXP0_Weapon_Vendor_C");
+static_assert(sizeof(AServiceBuilding_Smithing_EXP0_Weapon_Vendor_C) == 0x001D90, "Wrong size on AServiceBuilding_Smithing_EXP0_Weapon_Vendor_C");
 
 }
 

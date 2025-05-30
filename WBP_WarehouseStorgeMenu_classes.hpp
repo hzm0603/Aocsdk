@@ -18,22 +18,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_WarehouseStorgeMenu.WBP_WarehouseStorgeMenu_C
-// 0x0040 (0x06A8 - 0x0668)
+// 0x0038 (0x06F0 - 0x06B8)
 class UWBP_WarehouseStorgeMenu_C final : public UWarehouseStorageMenu
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0668(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_ScrollWindow_Framed_C*             AccordionListWindow;                               // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   CargoInventoryPage;                                // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HoveredHighlight;                                  // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HoveredHighlight_1;                                // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   MaterialsInventoryPage;                            // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCheckBox*                              PartyShoutsCheckBox;                               // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WBP_ScrollWindow;                                  // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   AccordionListWindow;                               // 0x06C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   CargoInventoryPage;                                // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   MaterialsInventoryPage;                            // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TextDropdown_C*                    PackCrateDropdown;                                 // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCheckBox*                              PartyShoutsCheckBox;                               // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WBP_ScrollWindow;                                  // 0x06E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_WarehouseStorgeMenu(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_WarehouseStorgeMenu(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -46,15 +45,14 @@ public:
 	}
 };
 static_assert(alignof(UWBP_WarehouseStorgeMenu_C) == 0x000008, "Wrong alignment on UWBP_WarehouseStorgeMenu_C");
-static_assert(sizeof(UWBP_WarehouseStorgeMenu_C) == 0x0006A8, "Wrong size on UWBP_WarehouseStorgeMenu_C");
-static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, UberGraphFrame) == 0x000668, "Member 'UWBP_WarehouseStorgeMenu_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, AccordionListWindow) == 0x000670, "Member 'UWBP_WarehouseStorgeMenu_C::AccordionListWindow' has a wrong offset!");
-static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, CargoInventoryPage) == 0x000678, "Member 'UWBP_WarehouseStorgeMenu_C::CargoInventoryPage' has a wrong offset!");
-static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, HoveredHighlight) == 0x000680, "Member 'UWBP_WarehouseStorgeMenu_C::HoveredHighlight' has a wrong offset!");
-static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, HoveredHighlight_1) == 0x000688, "Member 'UWBP_WarehouseStorgeMenu_C::HoveredHighlight_1' has a wrong offset!");
-static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, MaterialsInventoryPage) == 0x000690, "Member 'UWBP_WarehouseStorgeMenu_C::MaterialsInventoryPage' has a wrong offset!");
-static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, PartyShoutsCheckBox) == 0x000698, "Member 'UWBP_WarehouseStorgeMenu_C::PartyShoutsCheckBox' has a wrong offset!");
-static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, WBP_ScrollWindow) == 0x0006A0, "Member 'UWBP_WarehouseStorgeMenu_C::WBP_ScrollWindow' has a wrong offset!");
+static_assert(sizeof(UWBP_WarehouseStorgeMenu_C) == 0x0006F0, "Wrong size on UWBP_WarehouseStorgeMenu_C");
+static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, UberGraphFrame) == 0x0006B8, "Member 'UWBP_WarehouseStorgeMenu_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, AccordionListWindow) == 0x0006C0, "Member 'UWBP_WarehouseStorgeMenu_C::AccordionListWindow' has a wrong offset!");
+static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, CargoInventoryPage) == 0x0006C8, "Member 'UWBP_WarehouseStorgeMenu_C::CargoInventoryPage' has a wrong offset!");
+static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, MaterialsInventoryPage) == 0x0006D0, "Member 'UWBP_WarehouseStorgeMenu_C::MaterialsInventoryPage' has a wrong offset!");
+static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, PackCrateDropdown) == 0x0006D8, "Member 'UWBP_WarehouseStorgeMenu_C::PackCrateDropdown' has a wrong offset!");
+static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, PartyShoutsCheckBox) == 0x0006E0, "Member 'UWBP_WarehouseStorgeMenu_C::PartyShoutsCheckBox' has a wrong offset!");
+static_assert(offsetof(UWBP_WarehouseStorgeMenu_C, WBP_ScrollWindow) == 0x0006E8, "Member 'UWBP_WarehouseStorgeMenu_C::WBP_ScrollWindow' has a wrong offset!");
 
 }
 

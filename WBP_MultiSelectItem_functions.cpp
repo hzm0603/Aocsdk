@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_MultiSelectItem.WBP_MultiSelectItem_C.GetBorder
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UCommonBorder*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UCommonBorder* UWBP_MultiSelectItem_C::GetBorder()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MultiSelectItem_C", "GetBorder");
-
-	Params::WBP_MultiSelectItem_C_GetBorder Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function WBP_MultiSelectItem.WBP_MultiSelectItem_C.GetButton
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -50,6 +30,26 @@ class UAoCCommonButtonBase* UWBP_MultiSelectItem_C::GetButton()
 		Func = Class->GetFunction("WBP_MultiSelectItem_C", "GetButton");
 
 	Params::WBP_MultiSelectItem_C_GetButton Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_MultiSelectItem.WBP_MultiSelectItem_C.GetBorder
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UCommonBorder*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UCommonBorder* UWBP_MultiSelectItem_C::GetBorder()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MultiSelectItem_C", "GetBorder");
+
+	Params::WBP_MultiSelectItem_C_GetBorder Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

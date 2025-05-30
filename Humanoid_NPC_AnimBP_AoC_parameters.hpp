@@ -49,32 +49,58 @@ static_assert(alignof(Humanoid_NPC_AnimBP_AoC_C_BasePoses) == 0x000008, "Wrong a
 static_assert(sizeof(Humanoid_NPC_AnimBP_AoC_C_BasePoses) == 0x000010, "Wrong size on Humanoid_NPC_AnimBP_AoC_C_BasePoses");
 static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_BasePoses, BasePoses_0) == 0x000000, "Member 'Humanoid_NPC_AnimBP_AoC_C_BasePoses::BasePoses_0' has a wrong offset!");
 
+// Function Humanoid_NPC_AnimBP_AoC.Humanoid_NPC_AnimBP_AoC_C.BlueprintUpdateAnimation
+// 0x0004 (0x0004 - 0x0000)
+struct Humanoid_NPC_AnimBP_AoC_C_BlueprintUpdateAnimation final
+{
+public:
+	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Humanoid_NPC_AnimBP_AoC_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on Humanoid_NPC_AnimBP_AoC_C_BlueprintUpdateAnimation");
+static_assert(sizeof(Humanoid_NPC_AnimBP_AoC_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on Humanoid_NPC_AnimBP_AoC_C_BlueprintUpdateAnimation");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'Humanoid_NPC_AnimBP_AoC_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+
 // Function Humanoid_NPC_AnimBP_AoC.Humanoid_NPC_AnimBP_AoC_C.ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetCurveValue_ReturnValue;                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetCurveValue_ReturnValue_1;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCurveValue_ReturnValue_2;              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCurveValue_ReturnValue_3;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCurveValue_ReturnValue_4;              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCurveValue_ReturnValue_1;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCurveValue_ReturnValue_2;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaTimeX;                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess_1;                 // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess_2;                 // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetCurveValue_ReturnValue_3;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCurveValue_ReturnValue_4;              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC) == 0x000008, "Wrong alignment on Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC");
-static_assert(sizeof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC) == 0x000028, "Wrong size on Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC");
+static_assert(sizeof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC) == 0x000038, "Wrong size on Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC");
 static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, EntryPoint) == 0x000000, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::EntryPoint' has a wrong offset!");
 static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_GetCurveValue_ReturnValue) == 0x000004, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_GetCurveValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000008, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_GetCurveValue_ReturnValue_1) == 0x00000C, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_GetCurveValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_GetCurveValue_ReturnValue_2) == 0x000010, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_GetCurveValue_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_GetCurveValue_ReturnValue_3) == 0x000014, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_GetCurveValue_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_GetCurveValue_ReturnValue_4) == 0x000018, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_GetCurveValue_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000020, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_GetCurveValue_ReturnValue_1) == 0x000008, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_GetCurveValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_GetCurveValue_ReturnValue_2) == 0x00000C, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_GetCurveValue_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, K2Node_Event_DeltaTimeX) == 0x000010, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::K2Node_Event_DeltaTimeX' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, K2Node_SwitchEnum_CmpSuccess) == 0x000014, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000018, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x00001C, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, K2Node_SwitchInteger_CmpSuccess) == 0x000020, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, K2Node_SwitchInteger_CmpSuccess_1) == 0x000021, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::K2Node_SwitchInteger_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, K2Node_SwitchInteger_CmpSuccess_2) == 0x000022, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::K2Node_SwitchInteger_CmpSuccess_2' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_GetCurveValue_ReturnValue_3) == 0x000024, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_GetCurveValue_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_GetCurveValue_ReturnValue_4) == 0x000028, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_GetCurveValue_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_Less_DoubleDouble_ReturnValue) == 0x00002C, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000030, "Member 'Humanoid_NPC_AnimBP_AoC_C_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function Humanoid_NPC_AnimBP_AoC.Humanoid_NPC_AnimBP_AoC_C.FootIK
 // 0x0020 (0x0020 - 0x0000)

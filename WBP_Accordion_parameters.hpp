@@ -14,6 +14,61 @@
 namespace SDK::Params
 {
 
+// Function WBP_Accordion.WBP_Accordion_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Accordion_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Accordion_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_Accordion_C_PreConstruct");
+static_assert(sizeof(WBP_Accordion_C_PreConstruct) == 0x000001, "Wrong size on WBP_Accordion_C_PreConstruct");
+static_assert(offsetof(WBP_Accordion_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_Accordion_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_Accordion.WBP_Accordion_C.GetOddButtonStyle
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Accordion_C_GetOddButtonStyle final
+{
+public:
+	TSubclassOf<class UCommonButtonStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Accordion_C_GetOddButtonStyle) == 0x000008, "Wrong alignment on WBP_Accordion_C_GetOddButtonStyle");
+static_assert(sizeof(WBP_Accordion_C_GetOddButtonStyle) == 0x000008, "Wrong size on WBP_Accordion_C_GetOddButtonStyle");
+static_assert(offsetof(WBP_Accordion_C_GetOddButtonStyle, ReturnValue) == 0x000000, "Member 'WBP_Accordion_C_GetOddButtonStyle::ReturnValue' has a wrong offset!");
+
+// Function WBP_Accordion.WBP_Accordion_C.GetEvenButtonStyle
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Accordion_C_GetEvenButtonStyle final
+{
+public:
+	TSubclassOf<class UCommonButtonStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Accordion_C_GetEvenButtonStyle) == 0x000008, "Wrong alignment on WBP_Accordion_C_GetEvenButtonStyle");
+static_assert(sizeof(WBP_Accordion_C_GetEvenButtonStyle) == 0x000008, "Wrong size on WBP_Accordion_C_GetEvenButtonStyle");
+static_assert(offsetof(WBP_Accordion_C_GetEvenButtonStyle, ReturnValue) == 0x000000, "Member 'WBP_Accordion_C_GetEvenButtonStyle::ReturnValue' has a wrong offset!");
+
+// Function WBP_Accordion.WBP_Accordion_C.GetButtonContainer
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Accordion_C_GetButtonContainer final
+{
+public:
+	class UPanelWidget*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Accordion_C_GetButtonContainer) == 0x000008, "Wrong alignment on WBP_Accordion_C_GetButtonContainer");
+static_assert(sizeof(WBP_Accordion_C_GetButtonContainer) == 0x000008, "Wrong size on WBP_Accordion_C_GetButtonContainer");
+static_assert(offsetof(WBP_Accordion_C_GetButtonContainer, ReturnValue) == 0x000000, "Member 'WBP_Accordion_C_GetButtonContainer::ReturnValue' has a wrong offset!");
+
+// Function WBP_Accordion.WBP_Accordion_C.GetBreadcrumbWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Accordion_C_GetBreadcrumbWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Accordion_C_GetBreadcrumbWidget) == 0x000008, "Wrong alignment on WBP_Accordion_C_GetBreadcrumbWidget");
+static_assert(sizeof(WBP_Accordion_C_GetBreadcrumbWidget) == 0x000008, "Wrong size on WBP_Accordion_C_GetBreadcrumbWidget");
+static_assert(offsetof(WBP_Accordion_C_GetBreadcrumbWidget, ReturnValue) == 0x000000, "Member 'WBP_Accordion_C_GetBreadcrumbWidget::ReturnValue' has a wrong offset!");
+
 // Function WBP_Accordion.WBP_Accordion_C.ExecuteUbergraph_WBP_Accordion
 // 0x0030 (0x0030 - 0x0000)
 struct WBP_Accordion_C_ExecuteUbergraph_WBP_Accordion final
@@ -41,61 +96,6 @@ static_assert(offsetof(WBP_Accordion_C_ExecuteUbergraph_WBP_Accordion, Temp_int_
 static_assert(offsetof(WBP_Accordion_C_ExecuteUbergraph_WBP_Accordion, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000020, "Member 'WBP_Accordion_C_ExecuteUbergraph_WBP_Accordion::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Accordion_C_ExecuteUbergraph_WBP_Accordion, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'WBP_Accordion_C_ExecuteUbergraph_WBP_Accordion::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Accordion_C_ExecuteUbergraph_WBP_Accordion, CallFunc_Create_ReturnValue) == 0x000028, "Member 'WBP_Accordion_C_ExecuteUbergraph_WBP_Accordion::CallFunc_Create_ReturnValue' has a wrong offset!");
-
-// Function WBP_Accordion.WBP_Accordion_C.GetBreadcrumbWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Accordion_C_GetBreadcrumbWidget final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Accordion_C_GetBreadcrumbWidget) == 0x000008, "Wrong alignment on WBP_Accordion_C_GetBreadcrumbWidget");
-static_assert(sizeof(WBP_Accordion_C_GetBreadcrumbWidget) == 0x000008, "Wrong size on WBP_Accordion_C_GetBreadcrumbWidget");
-static_assert(offsetof(WBP_Accordion_C_GetBreadcrumbWidget, ReturnValue) == 0x000000, "Member 'WBP_Accordion_C_GetBreadcrumbWidget::ReturnValue' has a wrong offset!");
-
-// Function WBP_Accordion.WBP_Accordion_C.GetButtonContainer
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Accordion_C_GetButtonContainer final
-{
-public:
-	class UPanelWidget*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Accordion_C_GetButtonContainer) == 0x000008, "Wrong alignment on WBP_Accordion_C_GetButtonContainer");
-static_assert(sizeof(WBP_Accordion_C_GetButtonContainer) == 0x000008, "Wrong size on WBP_Accordion_C_GetButtonContainer");
-static_assert(offsetof(WBP_Accordion_C_GetButtonContainer, ReturnValue) == 0x000000, "Member 'WBP_Accordion_C_GetButtonContainer::ReturnValue' has a wrong offset!");
-
-// Function WBP_Accordion.WBP_Accordion_C.GetEvenButtonStyle
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Accordion_C_GetEvenButtonStyle final
-{
-public:
-	TSubclassOf<class UCommonButtonStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Accordion_C_GetEvenButtonStyle) == 0x000008, "Wrong alignment on WBP_Accordion_C_GetEvenButtonStyle");
-static_assert(sizeof(WBP_Accordion_C_GetEvenButtonStyle) == 0x000008, "Wrong size on WBP_Accordion_C_GetEvenButtonStyle");
-static_assert(offsetof(WBP_Accordion_C_GetEvenButtonStyle, ReturnValue) == 0x000000, "Member 'WBP_Accordion_C_GetEvenButtonStyle::ReturnValue' has a wrong offset!");
-
-// Function WBP_Accordion.WBP_Accordion_C.GetOddButtonStyle
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Accordion_C_GetOddButtonStyle final
-{
-public:
-	TSubclassOf<class UCommonButtonStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Accordion_C_GetOddButtonStyle) == 0x000008, "Wrong alignment on WBP_Accordion_C_GetOddButtonStyle");
-static_assert(sizeof(WBP_Accordion_C_GetOddButtonStyle) == 0x000008, "Wrong size on WBP_Accordion_C_GetOddButtonStyle");
-static_assert(offsetof(WBP_Accordion_C_GetOddButtonStyle, ReturnValue) == 0x000000, "Member 'WBP_Accordion_C_GetOddButtonStyle::ReturnValue' has a wrong offset!");
-
-// Function WBP_Accordion.WBP_Accordion_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Accordion_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Accordion_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_Accordion_C_PreConstruct");
-static_assert(sizeof(WBP_Accordion_C_PreConstruct) == 0x000001, "Wrong size on WBP_Accordion_C_PreConstruct");
-static_assert(offsetof(WBP_Accordion_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_Accordion_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

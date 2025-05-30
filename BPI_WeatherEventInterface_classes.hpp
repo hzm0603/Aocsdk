@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPI_WeatherEventInterface.BPI_WeatherEventInterface_C
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IBPI_WeatherEventInterface_C final : public IInterface
 {
 public:
@@ -35,8 +35,8 @@ public:
 		return GetDefaultObjImpl<IBPI_WeatherEventInterface_C>();
 	}
 };
-static_assert(alignof(IBPI_WeatherEventInterface_C) == 0x000008, "Wrong alignment on IBPI_WeatherEventInterface_C");
-static_assert(sizeof(IBPI_WeatherEventInterface_C) == 0x000048, "Wrong size on IBPI_WeatherEventInterface_C");
+static_assert(alignof(IBPI_WeatherEventInterface_C) == 0x000001, "Wrong alignment on IBPI_WeatherEventInterface_C");
+static_assert(sizeof(IBPI_WeatherEventInterface_C) == 0x000001, "Wrong size on IBPI_WeatherEventInterface_C");
 
 }
 

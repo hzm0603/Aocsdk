@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass NPC_Zombie_Scholar_AnimBP_Child.NPC_Zombie_Scholar_AnimBP_Child_C
-// 0x0000 (0x3EC0 - 0x3EC0)
+// 0x0000 (0x3ED0 - 0x3ED0)
 class UNPC_Zombie_Scholar_AnimBP_Child_C final : public UNPC_Zombie_AnimBP_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UNPC_Zombie_Scholar_AnimBP_Child_C) == 0x000010, "Wrong alignment on UNPC_Zombie_Scholar_AnimBP_Child_C");
-static_assert(sizeof(UNPC_Zombie_Scholar_AnimBP_Child_C) == 0x003EC0, "Wrong size on UNPC_Zombie_Scholar_AnimBP_Child_C");
+static_assert(sizeof(UNPC_Zombie_Scholar_AnimBP_Child_C) == 0x003ED0, "Wrong size on UNPC_Zombie_Scholar_AnimBP_Child_C");
 
 }
 

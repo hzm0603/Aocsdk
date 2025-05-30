@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass SetGrass.SetGrass_C
-// 0x0038 (0x00C0 - 0x0088)
+// 0x0040 (0x00C8 - 0x0088)
 class USetGrass_C final : public UPCGBlueprintElement
 {
 public:
@@ -29,6 +29,7 @@ public:
 	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         ObjectPath_Array;                                  // 0x00A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FPCGPoint>                      In_Points;                                         // 0x00B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         Spline_Index;                                      // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteWithContext(struct FPCGContext& InContext, const struct FPCGDataCollection& Input, struct FPCGDataCollection* Output);
@@ -46,12 +47,13 @@ public:
 	}
 };
 static_assert(alignof(USetGrass_C) == 0x000008, "Wrong alignment on USetGrass_C");
-static_assert(sizeof(USetGrass_C) == 0x0000C0, "Wrong size on USetGrass_C");
+static_assert(sizeof(USetGrass_C) == 0x0000C8, "Wrong size on USetGrass_C");
 static_assert(offsetof(USetGrass_C, Spatial_Data) == 0x000088, "Member 'USetGrass_C::Spatial_Data' has a wrong offset!");
 static_assert(offsetof(USetGrass_C, Grass_Seed) == 0x000090, "Member 'USetGrass_C::Grass_Seed' has a wrong offset!");
 static_assert(offsetof(USetGrass_C, Stream) == 0x000094, "Member 'USetGrass_C::Stream' has a wrong offset!");
 static_assert(offsetof(USetGrass_C, ObjectPath_Array) == 0x0000A0, "Member 'USetGrass_C::ObjectPath_Array' has a wrong offset!");
 static_assert(offsetof(USetGrass_C, In_Points) == 0x0000B0, "Member 'USetGrass_C::In_Points' has a wrong offset!");
+static_assert(offsetof(USetGrass_C, Spline_Index) == 0x0000C0, "Member 'USetGrass_C::Spline_Index' has a wrong offset!");
 
 }
 

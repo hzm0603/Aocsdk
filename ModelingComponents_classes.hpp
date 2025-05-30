@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "GeometryFramework_classes.hpp"
 #include "InteractiveToolsFramework_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "ModelingComponents_structs.hpp"
+#include "GeometryFramework_classes.hpp"
 #include "Engine_classes.hpp"
 #include "PhysicsCore_structs.hpp"
 
@@ -29,7 +29,7 @@ class alignas(0x10) UMeshTopologySelectionMechanic : public UInteractionMechanic
 {
 public:
 	uint8                                         Pad_50[0x48];                                      // 0x0050(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshTopologySelectionMechanicProperties* Properties;                                        // 0x0098(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMeshTopologySelectionMechanicProperties* Properties;                                      // 0x0098(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A0[0x60];                                      // 0x00A0(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMouseHoverBehavior*                    HoverBehavior;                                     // 0x0100(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class USingleClickOrDragInputBehavior*        ClickOrDragBehavior;                               // 0x0108(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -79,7 +79,7 @@ static_assert(alignof(UBoundarySelectionMechanic) == 0x000010, "Wrong alignment 
 static_assert(sizeof(UBoundarySelectionMechanic) == 0x000B10, "Wrong size on UBoundarySelectionMechanic");
 
 // Class ModelingComponents.DynamicMeshCommitter
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IDynamicMeshCommitter final : public IInterface
 {
 public:
@@ -92,11 +92,11 @@ public:
 		return GetDefaultObjImpl<IDynamicMeshCommitter>();
 	}
 };
-static_assert(alignof(IDynamicMeshCommitter) == 0x000008, "Wrong alignment on IDynamicMeshCommitter");
-static_assert(sizeof(IDynamicMeshCommitter) == 0x000048, "Wrong size on IDynamicMeshCommitter");
+static_assert(alignof(IDynamicMeshCommitter) == 0x000001, "Wrong alignment on IDynamicMeshCommitter");
+static_assert(sizeof(IDynamicMeshCommitter) == 0x000001, "Wrong size on IDynamicMeshCommitter");
 
 // Class ModelingComponents.DynamicMeshProvider
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IDynamicMeshProvider final : public IInterface
 {
 public:
@@ -109,11 +109,11 @@ public:
 		return GetDefaultObjImpl<IDynamicMeshProvider>();
 	}
 };
-static_assert(alignof(IDynamicMeshProvider) == 0x000008, "Wrong alignment on IDynamicMeshProvider");
-static_assert(sizeof(IDynamicMeshProvider) == 0x000048, "Wrong size on IDynamicMeshProvider");
+static_assert(alignof(IDynamicMeshProvider) == 0x000001, "Wrong alignment on IDynamicMeshProvider");
+static_assert(sizeof(IDynamicMeshProvider) == 0x000001, "Wrong size on IDynamicMeshProvider");
 
 // Class ModelingComponents.PersistentDynamicMeshSource
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IPersistentDynamicMeshSource final : public IInterface
 {
 public:
@@ -126,8 +126,8 @@ public:
 		return GetDefaultObjImpl<IPersistentDynamicMeshSource>();
 	}
 };
-static_assert(alignof(IPersistentDynamicMeshSource) == 0x000008, "Wrong alignment on IPersistentDynamicMeshSource");
-static_assert(sizeof(IPersistentDynamicMeshSource) == 0x000048, "Wrong size on IPersistentDynamicMeshSource");
+static_assert(alignof(IPersistentDynamicMeshSource) == 0x000001, "Wrong alignment on IPersistentDynamicMeshSource");
+static_assert(sizeof(IPersistentDynamicMeshSource) == 0x000001, "Wrong size on IPersistentDynamicMeshSource");
 
 // Class ModelingComponents.GeometrySelectionVisualizationProperties
 // 0x0060 (0x0128 - 0x00C8)
@@ -210,7 +210,7 @@ static_assert(alignof(UInteractiveToolActivity) == 0x000008, "Wrong alignment on
 static_assert(sizeof(UInteractiveToolActivity) == 0x000050, "Wrong size on UInteractiveToolActivity");
 
 // Class ModelingComponents.ToolActivityHost
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IToolActivityHost final : public IInterface
 {
 public:
@@ -223,8 +223,8 @@ public:
 		return GetDefaultObjImpl<IToolActivityHost>();
 	}
 };
-static_assert(alignof(IToolActivityHost) == 0x000008, "Wrong alignment on IToolActivityHost");
-static_assert(sizeof(IToolActivityHost) == 0x000048, "Wrong size on IToolActivityHost");
+static_assert(alignof(IToolActivityHost) == 0x000001, "Wrong alignment on IToolActivityHost");
+static_assert(sizeof(IToolActivityHost) == 0x000001, "Wrong size on IToolActivityHost");
 
 // Class ModelingComponents.MeshTopologySelectionMechanicProperties
 // 0x0018 (0x00E0 - 0x00C8)
@@ -509,7 +509,7 @@ public:
 	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTransformInputsToolProperties*         TransformProperties;                               // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UCreateMeshObjectTypeProperties*        OutputTypeProperties;                              // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBaseCreateFromSelectedHandleSourceProperties* HandleSourcesProperties;                           // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBaseCreateFromSelectedHandleSourceProperties* HandleSourcesProperties;                    // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UMeshOpPreviewWithBackgroundCompute*    Preview;                                           // 0x0100(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<class UTransformProxy*>                TransformProxies;                                  // 0x0108(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TArray<class UCombinedTransformGizmo*>        TransformGizmos;                                   // 0x0118(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
@@ -676,7 +676,7 @@ class USingleTargetWithSelectionTool : public USingleSelectionTool
 public:
 	TWeakObjectPtr<class UWorld>                  TargetWorld;                                       // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_D8[0x60];                                      // 0x00D8(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometrySelectionVisualizationProperties* GeometrySelectionVizProperties;                    // 0x0138(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UGeometrySelectionVisualizationProperties* GeometrySelectionVizProperties;                 // 0x0138(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPreviewGeometry*                       GeometrySelectionViz;                              // 0x0140(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -826,9 +826,9 @@ class UPreviewGeometry : public UObject
 {
 public:
 	class APreviewGeometryActor*                  ParentActor;                                       // 0x0048(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, class UTriangleSetComponent*> TriangleSets;                                      // 0x0050(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<class FString, class UTriangleSetComponent*> TriangleSets;                                  // 0x0050(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	TMap<class FString, class ULineSetComponent*> LineSets;                                          // 0x00A0(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	TMap<class FString, class UPointSetComponent*> PointSets;                                         // 0x00F0(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<class FString, class UPointSetComponent*> PointSets;                                        // 0x00F0(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 
 public:
 	class ULineSetComponent* AddLineSet(const class FString& LineSetIdentifier);
@@ -1505,7 +1505,7 @@ public:
 	class USingleClickInputBehavior*              ClickBehavior;                                     // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMouseHoverBehavior*                    HoverBehavior;                                     // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_70[0x18];                                      // 0x0070(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class USpaceCurveDeformationMechanicPropertySet* TransformProperties;                               // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USpaceCurveDeformationMechanicPropertySet* TransformProperties;                            // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_90[0xF8];                                      // 0x0090(0x00F8)(Fixing Size After Last Property [ Dumper-7 ])
 	class APreviewGeometryActor*                  PreviewGeometryActor;                              // 0x0188(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPointSetComponent*                     RenderPoints;                                      // 0x0190(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)

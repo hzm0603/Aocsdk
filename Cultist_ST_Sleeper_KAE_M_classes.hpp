@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Cultist_ST_Sleeper_KAE_M.Cultist_ST_Sleeper_KAE_M_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ACultist_ST_Sleeper_KAE_M_C : public ACultist_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACultist_ST_Sleeper_KAE_M_C) == 0x000010, "Wrong alignment on ACultist_ST_Sleeper_KAE_M_C");
-static_assert(sizeof(ACultist_ST_Sleeper_KAE_M_C) == 0x001DB0, "Wrong size on ACultist_ST_Sleeper_KAE_M_C");
+static_assert(sizeof(ACultist_ST_Sleeper_KAE_M_C) == 0x001D70, "Wrong size on ACultist_ST_Sleeper_KAE_M_C");
 
 }
 

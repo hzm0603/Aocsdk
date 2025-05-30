@@ -18,18 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TrackedEvent.WBP_TrackedEvent_C
-// 0x0020 (0x04D0 - 0x04B0)
+// 0x0030 (0x04E0 - 0x04B0)
 class UWBP_TrackedEvent_C final : public UTrackedEvent
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UImage*                                 EventIcon;                                         // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Separator;                                         // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VB_EventContent;                                   // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          HeaderBG;                                          // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          HeaderBG2;                                         // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 TrackedIcon;                                       // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VB_EventContent;                                   // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_TrackedEvent(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_TrackedEvent(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -42,11 +44,13 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TrackedEvent_C) == 0x000008, "Wrong alignment on UWBP_TrackedEvent_C");
-static_assert(sizeof(UWBP_TrackedEvent_C) == 0x0004D0, "Wrong size on UWBP_TrackedEvent_C");
+static_assert(sizeof(UWBP_TrackedEvent_C) == 0x0004E0, "Wrong size on UWBP_TrackedEvent_C");
 static_assert(offsetof(UWBP_TrackedEvent_C, UberGraphFrame) == 0x0004B0, "Member 'UWBP_TrackedEvent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_TrackedEvent_C, EventIcon) == 0x0004B8, "Member 'UWBP_TrackedEvent_C::EventIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_TrackedEvent_C, Separator) == 0x0004C0, "Member 'UWBP_TrackedEvent_C::Separator' has a wrong offset!");
-static_assert(offsetof(UWBP_TrackedEvent_C, VB_EventContent) == 0x0004C8, "Member 'UWBP_TrackedEvent_C::VB_EventContent' has a wrong offset!");
+static_assert(offsetof(UWBP_TrackedEvent_C, HeaderBG) == 0x0004C0, "Member 'UWBP_TrackedEvent_C::HeaderBG' has a wrong offset!");
+static_assert(offsetof(UWBP_TrackedEvent_C, HeaderBG2) == 0x0004C8, "Member 'UWBP_TrackedEvent_C::HeaderBG2' has a wrong offset!");
+static_assert(offsetof(UWBP_TrackedEvent_C, TrackedIcon) == 0x0004D0, "Member 'UWBP_TrackedEvent_C::TrackedIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_TrackedEvent_C, VB_EventContent) == 0x0004D8, "Member 'UWBP_TrackedEvent_C::VB_EventContent' has a wrong offset!");
 
 }
 

@@ -18,17 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_SiegeParticipantsList.WBP_SiegeParticipantsList_C
-// 0x0018 (0x0678 - 0x0660)
+// 0x0020 (0x0688 - 0x0668)
 class UWBP_SiegeParticipantsList_C final : public USiegeParticipantList
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0660(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCircularThrobber*                      Loading;                                           // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TeamManagerLabel;                                  // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0668(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCircularThrobber*                      Loading;                                           // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CommonSortButton_C*                SortByStatusB;                                     // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TeamManagerLabel;                                  // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_SiegeParticipantsList(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_SiegeParticipantsList(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,10 +42,11 @@ public:
 	}
 };
 static_assert(alignof(UWBP_SiegeParticipantsList_C) == 0x000008, "Wrong alignment on UWBP_SiegeParticipantsList_C");
-static_assert(sizeof(UWBP_SiegeParticipantsList_C) == 0x000678, "Wrong size on UWBP_SiegeParticipantsList_C");
-static_assert(offsetof(UWBP_SiegeParticipantsList_C, UberGraphFrame) == 0x000660, "Member 'UWBP_SiegeParticipantsList_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_SiegeParticipantsList_C, Loading) == 0x000668, "Member 'UWBP_SiegeParticipantsList_C::Loading' has a wrong offset!");
-static_assert(offsetof(UWBP_SiegeParticipantsList_C, TeamManagerLabel) == 0x000670, "Member 'UWBP_SiegeParticipantsList_C::TeamManagerLabel' has a wrong offset!");
+static_assert(sizeof(UWBP_SiegeParticipantsList_C) == 0x000688, "Wrong size on UWBP_SiegeParticipantsList_C");
+static_assert(offsetof(UWBP_SiegeParticipantsList_C, UberGraphFrame) == 0x000668, "Member 'UWBP_SiegeParticipantsList_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_SiegeParticipantsList_C, Loading) == 0x000670, "Member 'UWBP_SiegeParticipantsList_C::Loading' has a wrong offset!");
+static_assert(offsetof(UWBP_SiegeParticipantsList_C, SortByStatusB) == 0x000678, "Member 'UWBP_SiegeParticipantsList_C::SortByStatusB' has a wrong offset!");
+static_assert(offsetof(UWBP_SiegeParticipantsList_C, TeamManagerLabel) == 0x000680, "Member 'UWBP_SiegeParticipantsList_C::TeamManagerLabel' has a wrong offset!");
 
 }
 

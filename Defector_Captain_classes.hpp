@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Defector_Captain.Defector_Captain_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ADefector_Captain_C final : public ABandit_Melee_Base_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ADefector_Captain_C) == 0x000010, "Wrong alignment on ADefector_Captain_C");
-static_assert(sizeof(ADefector_Captain_C) == 0x001DB0, "Wrong size on ADefector_Captain_C");
+static_assert(sizeof(ADefector_Captain_C) == 0x001D70, "Wrong size on ADefector_Captain_C");
 
 }
 

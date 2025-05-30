@@ -10,30 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
+#include "GameSystemsPlugin_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_BuildingManagerSection.WBP_BuildingManagerSection_C
-// 0x0040 (0x0330 - 0x02F0)
-class UWBP_BuildingManagerSection_C final : public UUserWidget
+// 0x0008 (0x0370 - 0x0368)
+class UWBP_BuildingManagerSection_C final : public UBuildingManagerSection
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAoCCommonTextBlock*                    LabelTextBlock;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNamedSlot*                             NamedSlot;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    SubheadLabelTextBlock;                             // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    SubheadLabelTextBlock_1;                           // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   SectionLabel;                                      // 0x0318(0x0018)(Edit, BlueprintVisible)
-
-public:
-	void ExecuteUbergraph_WBP_BuildingManagerSection(int32 EntryPoint);
-	void OnInitialized();
-	void PreConstruct(bool IsDesignTime);
-	void Set_Section_Label(const class FText& SectionLabel_0);
+	class UNamedSlot*                             NamedSlot;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -46,13 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_BuildingManagerSection_C) == 0x000008, "Wrong alignment on UWBP_BuildingManagerSection_C");
-static_assert(sizeof(UWBP_BuildingManagerSection_C) == 0x000330, "Wrong size on UWBP_BuildingManagerSection_C");
-static_assert(offsetof(UWBP_BuildingManagerSection_C, UberGraphFrame) == 0x0002F0, "Member 'UWBP_BuildingManagerSection_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_BuildingManagerSection_C, LabelTextBlock) == 0x0002F8, "Member 'UWBP_BuildingManagerSection_C::LabelTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_BuildingManagerSection_C, NamedSlot) == 0x000300, "Member 'UWBP_BuildingManagerSection_C::NamedSlot' has a wrong offset!");
-static_assert(offsetof(UWBP_BuildingManagerSection_C, SubheadLabelTextBlock) == 0x000308, "Member 'UWBP_BuildingManagerSection_C::SubheadLabelTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_BuildingManagerSection_C, SubheadLabelTextBlock_1) == 0x000310, "Member 'UWBP_BuildingManagerSection_C::SubheadLabelTextBlock_1' has a wrong offset!");
-static_assert(offsetof(UWBP_BuildingManagerSection_C, SectionLabel) == 0x000318, "Member 'UWBP_BuildingManagerSection_C::SectionLabel' has a wrong offset!");
+static_assert(sizeof(UWBP_BuildingManagerSection_C) == 0x000370, "Wrong size on UWBP_BuildingManagerSection_C");
+static_assert(offsetof(UWBP_BuildingManagerSection_C, NamedSlot) == 0x000368, "Member 'UWBP_BuildingManagerSection_C::NamedSlot' has a wrong offset!");
 
 }
 

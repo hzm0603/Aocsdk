@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Node_Warehouse_StorageClerk_KAE.Node_Warehouse_StorageClerk_KAE_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class ANode_Warehouse_StorageClerk_KAE_C final : public ANode_NPC_Master_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ANode_Warehouse_StorageClerk_KAE_C) == 0x000010, "Wrong alignment on ANode_Warehouse_StorageClerk_KAE_C");
-static_assert(sizeof(ANode_Warehouse_StorageClerk_KAE_C) == 0x001DD0, "Wrong size on ANode_Warehouse_StorageClerk_KAE_C");
+static_assert(sizeof(ANode_Warehouse_StorageClerk_KAE_C) == 0x001D90, "Wrong size on ANode_Warehouse_StorageClerk_KAE_C");
 
 }
 

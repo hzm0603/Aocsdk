@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_SummonCaravanItem.WBP_SummonCaravanItem_C
-// 0x0010 (0x0338 - 0x0328)
+// 0x0010 (0x0340 - 0x0330)
 class UWBP_SummonCaravanItem_C final : public USummonCaravanItem
 {
 public:
-	class UWBP_ItemIcon_C*                        CaravanIcon;                                       // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          ItemBG;                                            // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemIcon_C*                        CaravanIcon;                                       // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          ItemBG;                                            // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UCommonBorder* GetBorder();
@@ -38,9 +38,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_SummonCaravanItem_C) == 0x000008, "Wrong alignment on UWBP_SummonCaravanItem_C");
-static_assert(sizeof(UWBP_SummonCaravanItem_C) == 0x000338, "Wrong size on UWBP_SummonCaravanItem_C");
-static_assert(offsetof(UWBP_SummonCaravanItem_C, CaravanIcon) == 0x000328, "Member 'UWBP_SummonCaravanItem_C::CaravanIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_SummonCaravanItem_C, ItemBG) == 0x000330, "Member 'UWBP_SummonCaravanItem_C::ItemBG' has a wrong offset!");
+static_assert(sizeof(UWBP_SummonCaravanItem_C) == 0x000340, "Wrong size on UWBP_SummonCaravanItem_C");
+static_assert(offsetof(UWBP_SummonCaravanItem_C, CaravanIcon) == 0x000330, "Member 'UWBP_SummonCaravanItem_C::CaravanIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_SummonCaravanItem_C, ItemBG) == 0x000338, "Member 'UWBP_SummonCaravanItem_C::ItemBG' has a wrong offset!");
 
 }
 

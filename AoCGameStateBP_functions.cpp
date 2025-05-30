@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function AoCGameStateBP.AoCGameStateBP_C.ExecuteUbergraph_AoCGameStateBP
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAoCGameStateBP_C::ExecuteUbergraph_AoCGameStateBP(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AoCGameStateBP_C", "ExecuteUbergraph_AoCGameStateBP");
-
-	Params::AoCGameStateBP_C_ExecuteUbergraph_AoCGameStateBP Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function AoCGameStateBP.AoCGameStateBP_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void AAoCGameStateBP_C::ReceiveTick(float DeltaSeconds)
 	Params::AoCGameStateBP_C_ReceiveTick Parms{};
 
 	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AoCGameStateBP.AoCGameStateBP_C.ExecuteUbergraph_AoCGameStateBP
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AAoCGameStateBP_C::ExecuteUbergraph_AoCGameStateBP(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AoCGameStateBP_C", "ExecuteUbergraph_AoCGameStateBP");
+
+	Params::AoCGameStateBP_C_ExecuteUbergraph_AoCGameStateBP Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

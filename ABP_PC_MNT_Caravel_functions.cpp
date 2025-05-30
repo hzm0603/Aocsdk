@@ -20,7 +20,7 @@ namespace SDK
 // Function ABP_PC_MNT_Caravel.ABP_PC_MNT_Caravel_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
 void UABP_PC_MNT_Caravel_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {

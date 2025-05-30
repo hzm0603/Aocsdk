@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass IWeaponWielder.IWeaponWielder_C
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IIWeaponWielder_C final : public IInterface
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<IIWeaponWielder_C>();
 	}
 };
-static_assert(alignof(IIWeaponWielder_C) == 0x000008, "Wrong alignment on IIWeaponWielder_C");
-static_assert(sizeof(IIWeaponWielder_C) == 0x000048, "Wrong size on IIWeaponWielder_C");
+static_assert(alignof(IIWeaponWielder_C) == 0x000001, "Wrong alignment on IIWeaponWielder_C");
+static_assert(sizeof(IIWeaponWielder_C) == 0x000001, "Wrong size on IIWeaponWielder_C");
 
 }
 

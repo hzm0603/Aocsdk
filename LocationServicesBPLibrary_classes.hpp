@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "CoreUObject_classes.hpp"
 #include "LocationServicesBPLibrary_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -49,7 +49,7 @@ static_assert(sizeof(ULocationServices) == 0x000048, "Wrong size on ULocationSer
 class ULocationServicesImpl final : public UObject
 {
 public:
-	TMulticastInlineDelegate<void(const struct FLocationServicesData& LocationData)> OnLocationChanged;                                 // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FLocationServicesData& LocationData)> OnLocationChanged; // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

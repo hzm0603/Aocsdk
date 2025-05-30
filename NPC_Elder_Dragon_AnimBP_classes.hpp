@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "NPC_Elder_Dragon_AnimBP_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ControlRig_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
+#include "NPC_Elder_Dragon_AnimBP_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
 
 
@@ -22,175 +22,175 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass NPC_Elder_Dragon_AnimBP.NPC_Elder_Dragon_AnimBP_C
-// 0x3130 (0x4D70 - 0x1C40)
+// 0x3130 (0x4D80 - 0x1C50)
 class UNPC_Elder_Dragon_AnimBP_C final : public UAoCNPCAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1C40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct NPC_Elder_Dragon_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;      // 0x1C48(0x005C)(HasGetValueTypeHash)
-	uint8                                         Pad_1CA4[0x4];                                     // 0x1CA4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x1CA8(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1CB0(0x0008)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_10;                             // 0x1CB8(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_21;                    // 0x1D00(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_4;                    // 0x1D28(0x0080)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_2;                        // 0x1DA8(0x0460)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_6;                   // 0x2208(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_9;                              // 0x2250(0x0048)()
-	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_3;                    // 0x2298(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_8;                              // 0x22E0(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_7;                              // 0x2328(0x0048)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_5;                   // 0x2370(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_6;                              // 0x23B8(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_5;                              // 0x2400(0x0048)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_4;                   // 0x2448(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x2490(0x0048)()
-	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_2;                    // 0x24D8(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0x2520(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x2568(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x25B0(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x25F8(0x0048)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_3;                   // 0x2640(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_3;                    // 0x2688(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_20;                    // 0x2708(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_19;                    // 0x2730(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_25;                 // 0x2758(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_24;                 // 0x2780(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_23;                 // 0x27A8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_22;                 // 0x27D0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_21;                 // 0x27F8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_20;                 // 0x2820(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_19;                 // 0x2848(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_18;                   // 0x2870(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_20;                      // 0x28B8(0x0020)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_19;                      // 0x28D8(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_17;                   // 0x28F8(0x0048)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_2;                   // 0x2940(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_16;                   // 0x2988(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_18;                      // 0x29D0(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_18;                 // 0x29F0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_17;                 // 0x2A18(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_16;                 // 0x2A40(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_15;                 // 0x2A68(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_14;                 // 0x2A90(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_13;                 // 0x2AB8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_12;                 // 0x2AE0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_11;                 // 0x2B08(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_10;                 // 0x2B30(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_15;                   // 0x2B58(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_17;                      // 0x2BA0(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_14;                   // 0x2BC0(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_16;                      // 0x2C08(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_13;                   // 0x2C28(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_15;                      // 0x2C70(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_9;                  // 0x2C90(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_8;                  // 0x2CB8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_7;                  // 0x2CE0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_6;                  // 0x2D08(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x2D30(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x2D58(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x2D80(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x2DA8(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_12;                   // 0x2DD0(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_14;                      // 0x2E18(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_11;                   // 0x2E38(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_13;                      // 0x2E80(0x0020)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_12;                      // 0x2EA0(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_6;                      // 0x2EC0(0x00C8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_11;                      // 0x2F88(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x2FA8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x2FD0(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_10;                   // 0x2FF8(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_10;                      // 0x3040(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_9;                    // 0x3060(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_9;                       // 0x30A8(0x0020)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_8;                       // 0x30C8(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_5;                      // 0x30E8(0x00C8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_7;                       // 0x31B0(0x0020)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_6;                       // 0x31D0(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_4;                      // 0x31F0(0x00C8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_5;                       // 0x32B8(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_8;                    // 0x32D8(0x0048)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0x3320(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_7;                    // 0x3368(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_6;                    // 0x33B0(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_5;                    // 0x33F8(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_4;                    // 0x3440(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x3488(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x34D0(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x3518(0x0048)()
-	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_1;                    // 0x3560(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x35A8(0x0048)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x35F0(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_4;                       // 0x3638(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_3;                      // 0x3658(0x00C8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x3720(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_2;                      // 0x3740(0x00C8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x3808(0x0020)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x3828(0x0070)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x3898(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_1;                      // 0x38B8(0x00C8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x3980(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x39A0(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x3A68(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_18;                    // 0x3AE8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_17;                    // 0x3B10(0x0028)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0x3B38(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_16;                    // 0x3C28(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_1;                       // 0x3C50(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_15;                    // 0x3D18(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_14;                    // 0x3D40(0x0028)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x3D68(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_13;                    // 0x3E58(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x3E80(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_12;                    // 0x3F48(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_11;                    // 0x3F70(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_10;                    // 0x3F98(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0x3FC0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0x3FE8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x4010(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x4038(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x4060(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x4088(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x40B0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x40D8(0x0028)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_1;                        // 0x4100(0x0460)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x4560(0x0020)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x4580(0x0028)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x45A8(0x0020)()
-	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt;                      // 0x45C8(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x4610(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x4638(0x0080)()
-	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x46B8(0x0110)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x47C8(0x0460)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x4C28(0x0080)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x4CA8(0x0020)()
-	bool                                          __CustomProperty_Should_Do_Tail_IK_8ECDF165483732A0488E32BD687B1C44; // 0x4CC8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_Should_Do_Head_IK_36604ADE49B4F1804562EB95C384C46E; // 0x4CC9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CCA[0x6];                                     // 0x4CCA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        __CustomProperty_Ground_Slope_Pitch_698EEF5D41704989943C25B994DA6544; // 0x4CD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_Should_Do_Feet_Normal_Adjust_698EEF5D41704989943C25B994DA6544; // 0x4CD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_Should_Do_Feet_IK_Trace_698EEF5D41704989943C25B994DA6544; // 0x4CD9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFlying;                                          // 0x4CDA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CDB[0x5];                                     // 0x4CDB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             IceFoley;                                          // 0x4CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             FS_Dragon_Ice;                                     // 0x4CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             FS_Dragon_Default;                                 // 0x4CF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             ShockwaveSound;                                    // 0x4CF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             FireBreathSound;                                   // 0x4D00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        AudioBreathComponent;                              // 0x4D08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldUseSlopeAdditives;                           // 0x4D10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D11[0x7];                                     // 0x4D11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                PreviousDir;                                       // 0x4D18(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CurrentDir;                                        // 0x4D30(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Turn_Rate;                                         // 0x4D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          MovingAndIsFlying;                                 // 0x4D50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          MovingAndNotFlying;                                // 0x4D51(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D52[0x6];                                     // 0x4D52(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        TurnAngle;                                         // 0x4D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Do90Turn;                                          // 0x4D60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SpawnComplete;                                     // 0x4D61(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NotDeadAndSpawnComplete;                           // 0x4D62(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1C50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct NPC_Elder_Dragon_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;      // 0x1C58(0x005C)(HasGetValueTypeHash)
+	uint8                                         Pad_1CB4[0x4];                                     // 0x1CB4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x1CB8(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1CC0(0x0008)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_10;                             // 0x1CC8(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_21;                    // 0x1D10(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_4;                    // 0x1D38(0x0080)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_2;                        // 0x1DB8(0x0460)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_6;                   // 0x2218(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_9;                              // 0x2260(0x0048)()
+	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_3;                    // 0x22A8(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_8;                              // 0x22F0(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_7;                              // 0x2338(0x0048)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_5;                   // 0x2380(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_6;                              // 0x23C8(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_5;                              // 0x2410(0x0048)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_4;                   // 0x2458(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x24A0(0x0048)()
+	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_2;                    // 0x24E8(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0x2530(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x2578(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x25C0(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x2608(0x0048)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_3;                   // 0x2650(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_3;                    // 0x2698(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_20;                    // 0x2718(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_19;                    // 0x2740(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_25;                 // 0x2768(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_24;                 // 0x2790(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_23;                 // 0x27B8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_22;                 // 0x27E0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_21;                 // 0x2808(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_20;                 // 0x2830(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_19;                 // 0x2858(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_18;                   // 0x2880(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_20;                      // 0x28C8(0x0020)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_19;                      // 0x28E8(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_17;                   // 0x2908(0x0048)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_2;                   // 0x2950(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_16;                   // 0x2998(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_18;                      // 0x29E0(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_18;                 // 0x2A00(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_17;                 // 0x2A28(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_16;                 // 0x2A50(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_15;                 // 0x2A78(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_14;                 // 0x2AA0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_13;                 // 0x2AC8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_12;                 // 0x2AF0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_11;                 // 0x2B18(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_10;                 // 0x2B40(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_15;                   // 0x2B68(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_17;                      // 0x2BB0(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_14;                   // 0x2BD0(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_16;                      // 0x2C18(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_13;                   // 0x2C38(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_15;                      // 0x2C80(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_9;                  // 0x2CA0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_8;                  // 0x2CC8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_7;                  // 0x2CF0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_6;                  // 0x2D18(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x2D40(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x2D68(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x2D90(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x2DB8(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_12;                   // 0x2DE0(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_14;                      // 0x2E28(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_11;                   // 0x2E48(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_13;                      // 0x2E90(0x0020)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_12;                      // 0x2EB0(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_6;                      // 0x2ED0(0x00C8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_11;                      // 0x2F98(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x2FB8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x2FE0(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_10;                   // 0x3008(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_10;                      // 0x3050(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_9;                    // 0x3070(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_9;                       // 0x30B8(0x0020)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_8;                       // 0x30D8(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_5;                      // 0x30F8(0x00C8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_7;                       // 0x31C0(0x0020)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_6;                       // 0x31E0(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_4;                      // 0x3200(0x00C8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_5;                       // 0x32C8(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_8;                    // 0x32E8(0x0048)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0x3330(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_7;                    // 0x3378(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_6;                    // 0x33C0(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_5;                    // 0x3408(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_4;                    // 0x3450(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x3498(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x34E0(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x3528(0x0048)()
+	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_1;                    // 0x3570(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x35B8(0x0048)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x3600(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_4;                       // 0x3648(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_3;                      // 0x3668(0x00C8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x3730(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_2;                      // 0x3750(0x00C8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x3818(0x0020)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x3838(0x0070)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x38A8(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_1;                      // 0x38C8(0x00C8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x3990(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x39B0(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x3A78(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_18;                    // 0x3AF8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_17;                    // 0x3B20(0x0028)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0x3B48(0x00F0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_16;                    // 0x3C38(0x0028)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_1;                       // 0x3C60(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_15;                    // 0x3D28(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_14;                    // 0x3D50(0x0028)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x3D78(0x00F0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_13;                    // 0x3E68(0x0028)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x3E90(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_12;                    // 0x3F58(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_11;                    // 0x3F80(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_10;                    // 0x3FA8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0x3FD0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0x3FF8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x4020(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x4048(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x4070(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x4098(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x40C0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x40E8(0x0028)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_1;                        // 0x4110(0x0460)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x4570(0x0020)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x4590(0x0028)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x45B8(0x0020)()
+	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt;                      // 0x45D8(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x4620(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x4648(0x0080)()
+	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x46C8(0x0110)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x47D8(0x0460)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x4C38(0x0080)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x4CB8(0x0020)()
+	bool                                          __CustomProperty_Should_Do_Tail_IK_8ECDF165483732A0488E32BD687B1C44; // 0x4CD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_Should_Do_Head_IK_36604ADE49B4F1804562EB95C384C46E; // 0x4CD9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4CDA[0x6];                                     // 0x4CDA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        __CustomProperty_Ground_Slope_Pitch_698EEF5D41704989943C25B994DA6544; // 0x4CE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_Should_Do_Feet_Normal_Adjust_698EEF5D41704989943C25B994DA6544; // 0x4CE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_Should_Do_Feet_IK_Trace_698EEF5D41704989943C25B994DA6544; // 0x4CE9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFlying;                                          // 0x4CEA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4CEB[0x5];                                     // 0x4CEB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             IceFoley;                                          // 0x4CF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             FS_Dragon_Ice;                                     // 0x4CF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             FS_Dragon_Default;                                 // 0x4D00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             ShockwaveSound;                                    // 0x4D08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             FireBreathSound;                                   // 0x4D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        AudioBreathComponent;                              // 0x4D18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldUseSlopeAdditives;                           // 0x4D20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D21[0x7];                                     // 0x4D21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                PreviousDir;                                       // 0x4D28(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CurrentDir;                                        // 0x4D40(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Turn_Rate;                                         // 0x4D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          MovingAndIsFlying;                                 // 0x4D60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          MovingAndNotFlying;                                // 0x4D61(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D62[0x6];                                     // 0x4D62(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TurnAngle;                                         // 0x4D68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Do90Turn;                                          // 0x4D70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnComplete;                                     // 0x4D71(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NotDeadAndSpawnComplete;                           // 0x4D72(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -212,167 +212,167 @@ public:
 	}
 };
 static_assert(alignof(UNPC_Elder_Dragon_AnimBP_C) == 0x000010, "Wrong alignment on UNPC_Elder_Dragon_AnimBP_C");
-static_assert(sizeof(UNPC_Elder_Dragon_AnimBP_C) == 0x004D70, "Wrong size on UNPC_Elder_Dragon_AnimBP_C");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, UberGraphFrame) == 0x001C40, "Member 'UNPC_Elder_Dragon_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __AnimBlueprintMutables) == 0x001C48, "Member 'UNPC_Elder_Dragon_AnimBP_C::__AnimBlueprintMutables' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimBlueprintExtension_PropertyAccess) == 0x001CA8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimBlueprintExtension_Base) == 0x001CB0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_10) == 0x001CB8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_10' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_21) == 0x001D00, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_21' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SaveCachedPose_4) == 0x001D28, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SaveCachedPose_4' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_ControlRig_2) == 0x001DA8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_ControlRig_2' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_6) == 0x002208, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_6' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_9) == 0x002250, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_9' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByInt_3) == 0x002298, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByInt_3' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_8) == 0x0022E0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_8' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_7) == 0x002328, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_7' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_5) == 0x002370, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_5' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_6) == 0x0023B8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_6' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_5) == 0x002400, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_5' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_4) == 0x002448, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_4' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_4) == 0x002490, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_4' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByInt_2) == 0x0024D8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByInt_2' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_3) == 0x002520, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_3' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_2) == 0x002568, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_2' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_1) == 0x0025B0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot) == 0x0025F8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_3) == 0x002640, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_3' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SaveCachedPose_3) == 0x002688, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SaveCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_20) == 0x002708, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_20' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_19) == 0x002730, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_19' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_25) == 0x002758, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_25' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_24) == 0x002780, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_24' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_23) == 0x0027A8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_23' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_22) == 0x0027D0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_22' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_21) == 0x0027F8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_21' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_20) == 0x002820, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_20' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_19) == 0x002848, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_19' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_18) == 0x002870, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_18' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_20) == 0x0028B8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_20' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_19) == 0x0028D8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_19' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_17) == 0x0028F8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_17' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_2) == 0x002940, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_2' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_16) == 0x002988, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_16' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_18) == 0x0029D0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_18' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_18) == 0x0029F0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_18' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_17) == 0x002A18, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_17' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_16) == 0x002A40, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_16' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_15) == 0x002A68, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_15' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_14) == 0x002A90, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_14' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_13) == 0x002AB8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_13' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_12) == 0x002AE0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_12' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_11) == 0x002B08, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_11' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_10) == 0x002B30, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_10' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_15) == 0x002B58, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_15' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_17) == 0x002BA0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_17' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_14) == 0x002BC0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_14' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_16) == 0x002C08, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_16' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_13) == 0x002C28, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_13' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_15) == 0x002C70, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_15' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_9) == 0x002C90, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_9' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_8) == 0x002CB8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_8' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_7) == 0x002CE0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_7' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_6) == 0x002D08, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_6' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_5) == 0x002D30, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_5' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_4) == 0x002D58, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_4' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_3) == 0x002D80, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_2) == 0x002DA8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_12) == 0x002DD0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_12' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_14) == 0x002E18, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_14' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_11) == 0x002E38, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_11' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_13) == 0x002E80, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_13' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_12) == 0x002EA0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_12' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_6) == 0x002EC0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_6' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_11) == 0x002F88, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_11' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_1) == 0x002FA8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult) == 0x002FD0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_10) == 0x002FF8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_10' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_10) == 0x003040, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_10' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_9) == 0x003060, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_9' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_9) == 0x0030A8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_9' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_8) == 0x0030C8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_8' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_5) == 0x0030E8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_5' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_7) == 0x0031B0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_7' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_6) == 0x0031D0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_6' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_4) == 0x0031F0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_4' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_5) == 0x0032B8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_5' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_8) == 0x0032D8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_8' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_1) == 0x003320, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_7) == 0x003368, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_7' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_6) == 0x0033B0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_6' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_5) == 0x0033F8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_5' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_4) == 0x003440, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_4' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_3) == 0x003488, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_2) == 0x0034D0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_1) == 0x003518, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByInt_1) == 0x003560, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByInt_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer) == 0x0035A8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool) == 0x0035F0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_4) == 0x003638, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_4' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_3) == 0x003658, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_3' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_3) == 0x003720, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_3' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_2) == 0x003740, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_2' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_2) == 0x003808, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendSpacePlayer) == 0x003828, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_1) == 0x003898, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_1) == 0x0038B8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult) == 0x003980, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine) == 0x0039A0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SaveCachedPose_2) == 0x003A68, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_18) == 0x003AE8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_18' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_17) == 0x003B10, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_17' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_LayeredBoneBlend_1) == 0x003B38, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_16) == 0x003C28, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_16' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TwoWayBlend_1) == 0x003C50, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TwoWayBlend_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_15) == 0x003D18, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_15' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_14) == 0x003D40, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_14' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_LayeredBoneBlend) == 0x003D68, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_13) == 0x003E58, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_13' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TwoWayBlend) == 0x003E80, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TwoWayBlend' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_12) == 0x003F48, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_12' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_11) == 0x003F70, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_11' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_10) == 0x003F98, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_10' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_9) == 0x003FC0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_8) == 0x003FE8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_7) == 0x004010, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_6) == 0x004038, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_5) == 0x004060, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_4) == 0x004088, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_3) == 0x0040B0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_2) == 0x0040D8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_ControlRig_1) == 0x004100, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_ControlRig_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x004560, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_1) == 0x004580, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x0045A8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByInt) == 0x0045C8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByInt' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose) == 0x004610, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SaveCachedPose_1) == 0x004638, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Inertialization) == 0x0046B8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Inertialization' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_ControlRig) == 0x0047C8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_ControlRig' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SaveCachedPose) == 0x004C28, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Root) == 0x004CA8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __CustomProperty_Should_Do_Tail_IK_8ECDF165483732A0488E32BD687B1C44) == 0x004CC8, "Member 'UNPC_Elder_Dragon_AnimBP_C::__CustomProperty_Should_Do_Tail_IK_8ECDF165483732A0488E32BD687B1C44' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __CustomProperty_Should_Do_Head_IK_36604ADE49B4F1804562EB95C384C46E) == 0x004CC9, "Member 'UNPC_Elder_Dragon_AnimBP_C::__CustomProperty_Should_Do_Head_IK_36604ADE49B4F1804562EB95C384C46E' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __CustomProperty_Ground_Slope_Pitch_698EEF5D41704989943C25B994DA6544) == 0x004CD0, "Member 'UNPC_Elder_Dragon_AnimBP_C::__CustomProperty_Ground_Slope_Pitch_698EEF5D41704989943C25B994DA6544' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __CustomProperty_Should_Do_Feet_Normal_Adjust_698EEF5D41704989943C25B994DA6544) == 0x004CD8, "Member 'UNPC_Elder_Dragon_AnimBP_C::__CustomProperty_Should_Do_Feet_Normal_Adjust_698EEF5D41704989943C25B994DA6544' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __CustomProperty_Should_Do_Feet_IK_Trace_698EEF5D41704989943C25B994DA6544) == 0x004CD9, "Member 'UNPC_Elder_Dragon_AnimBP_C::__CustomProperty_Should_Do_Feet_IK_Trace_698EEF5D41704989943C25B994DA6544' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, IsFlying) == 0x004CDA, "Member 'UNPC_Elder_Dragon_AnimBP_C::IsFlying' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, IceFoley) == 0x004CE0, "Member 'UNPC_Elder_Dragon_AnimBP_C::IceFoley' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, FS_Dragon_Ice) == 0x004CE8, "Member 'UNPC_Elder_Dragon_AnimBP_C::FS_Dragon_Ice' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, FS_Dragon_Default) == 0x004CF0, "Member 'UNPC_Elder_Dragon_AnimBP_C::FS_Dragon_Default' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, ShockwaveSound) == 0x004CF8, "Member 'UNPC_Elder_Dragon_AnimBP_C::ShockwaveSound' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, FireBreathSound) == 0x004D00, "Member 'UNPC_Elder_Dragon_AnimBP_C::FireBreathSound' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AudioBreathComponent) == 0x004D08, "Member 'UNPC_Elder_Dragon_AnimBP_C::AudioBreathComponent' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, ShouldUseSlopeAdditives) == 0x004D10, "Member 'UNPC_Elder_Dragon_AnimBP_C::ShouldUseSlopeAdditives' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, PreviousDir) == 0x004D18, "Member 'UNPC_Elder_Dragon_AnimBP_C::PreviousDir' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, CurrentDir) == 0x004D30, "Member 'UNPC_Elder_Dragon_AnimBP_C::CurrentDir' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, Turn_Rate) == 0x004D48, "Member 'UNPC_Elder_Dragon_AnimBP_C::Turn_Rate' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, MovingAndIsFlying) == 0x004D50, "Member 'UNPC_Elder_Dragon_AnimBP_C::MovingAndIsFlying' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, MovingAndNotFlying) == 0x004D51, "Member 'UNPC_Elder_Dragon_AnimBP_C::MovingAndNotFlying' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, TurnAngle) == 0x004D58, "Member 'UNPC_Elder_Dragon_AnimBP_C::TurnAngle' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, Do90Turn) == 0x004D60, "Member 'UNPC_Elder_Dragon_AnimBP_C::Do90Turn' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, SpawnComplete) == 0x004D61, "Member 'UNPC_Elder_Dragon_AnimBP_C::SpawnComplete' has a wrong offset!");
-static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, NotDeadAndSpawnComplete) == 0x004D62, "Member 'UNPC_Elder_Dragon_AnimBP_C::NotDeadAndSpawnComplete' has a wrong offset!");
+static_assert(sizeof(UNPC_Elder_Dragon_AnimBP_C) == 0x004D80, "Wrong size on UNPC_Elder_Dragon_AnimBP_C");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, UberGraphFrame) == 0x001C50, "Member 'UNPC_Elder_Dragon_AnimBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __AnimBlueprintMutables) == 0x001C58, "Member 'UNPC_Elder_Dragon_AnimBP_C::__AnimBlueprintMutables' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimBlueprintExtension_PropertyAccess) == 0x001CB8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimBlueprintExtension_Base) == 0x001CC0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_10) == 0x001CC8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_10' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_21) == 0x001D10, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_21' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SaveCachedPose_4) == 0x001D38, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SaveCachedPose_4' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_ControlRig_2) == 0x001DB8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_ControlRig_2' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_6) == 0x002218, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_6' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_9) == 0x002260, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_9' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByInt_3) == 0x0022A8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByInt_3' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_8) == 0x0022F0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_8' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_7) == 0x002338, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_7' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_5) == 0x002380, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_5' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_6) == 0x0023C8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_6' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_5) == 0x002410, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_5' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_4) == 0x002458, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_4' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_4) == 0x0024A0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_4' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByInt_2) == 0x0024E8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByInt_2' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_3) == 0x002530, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_3' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_2) == 0x002578, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_2' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot_1) == 0x0025C0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Slot) == 0x002608, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_3) == 0x002650, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_3' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SaveCachedPose_3) == 0x002698, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SaveCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_20) == 0x002718, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_20' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_19) == 0x002740, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_19' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_25) == 0x002768, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_25' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_24) == 0x002790, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_24' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_23) == 0x0027B8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_23' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_22) == 0x0027E0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_22' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_21) == 0x002808, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_21' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_20) == 0x002830, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_20' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_19) == 0x002858, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_19' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_18) == 0x002880, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_18' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_20) == 0x0028C8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_20' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_19) == 0x0028E8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_19' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_17) == 0x002908, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_17' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_2) == 0x002950, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_2' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_16) == 0x002998, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_16' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_18) == 0x0029E0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_18' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_18) == 0x002A00, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_18' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_17) == 0x002A28, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_17' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_16) == 0x002A50, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_16' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_15) == 0x002A78, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_15' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_14) == 0x002AA0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_14' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_13) == 0x002AC8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_13' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_12) == 0x002AF0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_12' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_11) == 0x002B18, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_11' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_10) == 0x002B40, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_10' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_15) == 0x002B68, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_15' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_17) == 0x002BB0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_17' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_14) == 0x002BD0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_14' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_16) == 0x002C18, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_16' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_13) == 0x002C38, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_13' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_15) == 0x002C80, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_15' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_9) == 0x002CA0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_9' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_8) == 0x002CC8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_8' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_7) == 0x002CF0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_7' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_6) == 0x002D18, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_6' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_5) == 0x002D40, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_5' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_4) == 0x002D68, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_4' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_3) == 0x002D90, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_2) == 0x002DB8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_12) == 0x002DE0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_12' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_14) == 0x002E28, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_14' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_11) == 0x002E48, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_11' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_13) == 0x002E90, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_13' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_12) == 0x002EB0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_12' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_6) == 0x002ED0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_6' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_11) == 0x002F98, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_11' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult_1) == 0x002FB8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TransitionResult) == 0x002FE0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TransitionResult' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_10) == 0x003008, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_10' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_10) == 0x003050, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_10' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_9) == 0x003070, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_9' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_9) == 0x0030B8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_9' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_8) == 0x0030D8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_8' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_5) == 0x0030F8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_5' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_7) == 0x0031C0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_7' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_6) == 0x0031E0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_6' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_4) == 0x003200, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_4' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_5) == 0x0032C8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_5' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_8) == 0x0032E8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_8' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool_1) == 0x003330, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_7) == 0x003378, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_7' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_6) == 0x0033C0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_6' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_5) == 0x003408, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_5' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_4) == 0x003450, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_4' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_3) == 0x003498, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_2) == 0x0034E0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer_1) == 0x003528, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByInt_1) == 0x003570, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByInt_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SequencePlayer) == 0x0035B8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByBool) == 0x003600, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_4) == 0x003648, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_4' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_3) == 0x003668, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_3' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_3) == 0x003730, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_3' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_2) == 0x003750, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_2' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_2) == 0x003818, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_2' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendSpacePlayer) == 0x003838, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult_1) == 0x0038A8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine_1) == 0x0038C8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateResult) == 0x003990, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateResult' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_StateMachine) == 0x0039B0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_StateMachine' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SaveCachedPose_2) == 0x003A78, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_18) == 0x003AF8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_18' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_17) == 0x003B20, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_17' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_LayeredBoneBlend_1) == 0x003B48, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_16) == 0x003C38, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_16' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TwoWayBlend_1) == 0x003C60, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TwoWayBlend_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_15) == 0x003D28, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_15' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_14) == 0x003D50, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_14' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_LayeredBoneBlend) == 0x003D78, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_13) == 0x003E68, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_13' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_TwoWayBlend) == 0x003E90, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_TwoWayBlend' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_12) == 0x003F58, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_12' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_11) == 0x003F80, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_11' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_10) == 0x003FA8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_10' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_9) == 0x003FD0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_8) == 0x003FF8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_7) == 0x004020, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_6) == 0x004048, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_5) == 0x004070, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_4) == 0x004098, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_3) == 0x0040C0, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_2) == 0x0040E8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_ControlRig_1) == 0x004110, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_ControlRig_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x004570, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose_1) == 0x004590, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x0045B8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_BlendListByInt) == 0x0045D8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_BlendListByInt' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_UseCachedPose) == 0x004620, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SaveCachedPose_1) == 0x004648, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Inertialization) == 0x0046C8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Inertialization' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_ControlRig) == 0x0047D8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_ControlRig' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_SaveCachedPose) == 0x004C38, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AnimGraphNode_Root) == 0x004CB8, "Member 'UNPC_Elder_Dragon_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __CustomProperty_Should_Do_Tail_IK_8ECDF165483732A0488E32BD687B1C44) == 0x004CD8, "Member 'UNPC_Elder_Dragon_AnimBP_C::__CustomProperty_Should_Do_Tail_IK_8ECDF165483732A0488E32BD687B1C44' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __CustomProperty_Should_Do_Head_IK_36604ADE49B4F1804562EB95C384C46E) == 0x004CD9, "Member 'UNPC_Elder_Dragon_AnimBP_C::__CustomProperty_Should_Do_Head_IK_36604ADE49B4F1804562EB95C384C46E' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __CustomProperty_Ground_Slope_Pitch_698EEF5D41704989943C25B994DA6544) == 0x004CE0, "Member 'UNPC_Elder_Dragon_AnimBP_C::__CustomProperty_Ground_Slope_Pitch_698EEF5D41704989943C25B994DA6544' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __CustomProperty_Should_Do_Feet_Normal_Adjust_698EEF5D41704989943C25B994DA6544) == 0x004CE8, "Member 'UNPC_Elder_Dragon_AnimBP_C::__CustomProperty_Should_Do_Feet_Normal_Adjust_698EEF5D41704989943C25B994DA6544' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, __CustomProperty_Should_Do_Feet_IK_Trace_698EEF5D41704989943C25B994DA6544) == 0x004CE9, "Member 'UNPC_Elder_Dragon_AnimBP_C::__CustomProperty_Should_Do_Feet_IK_Trace_698EEF5D41704989943C25B994DA6544' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, IsFlying) == 0x004CEA, "Member 'UNPC_Elder_Dragon_AnimBP_C::IsFlying' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, IceFoley) == 0x004CF0, "Member 'UNPC_Elder_Dragon_AnimBP_C::IceFoley' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, FS_Dragon_Ice) == 0x004CF8, "Member 'UNPC_Elder_Dragon_AnimBP_C::FS_Dragon_Ice' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, FS_Dragon_Default) == 0x004D00, "Member 'UNPC_Elder_Dragon_AnimBP_C::FS_Dragon_Default' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, ShockwaveSound) == 0x004D08, "Member 'UNPC_Elder_Dragon_AnimBP_C::ShockwaveSound' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, FireBreathSound) == 0x004D10, "Member 'UNPC_Elder_Dragon_AnimBP_C::FireBreathSound' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, AudioBreathComponent) == 0x004D18, "Member 'UNPC_Elder_Dragon_AnimBP_C::AudioBreathComponent' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, ShouldUseSlopeAdditives) == 0x004D20, "Member 'UNPC_Elder_Dragon_AnimBP_C::ShouldUseSlopeAdditives' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, PreviousDir) == 0x004D28, "Member 'UNPC_Elder_Dragon_AnimBP_C::PreviousDir' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, CurrentDir) == 0x004D40, "Member 'UNPC_Elder_Dragon_AnimBP_C::CurrentDir' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, Turn_Rate) == 0x004D58, "Member 'UNPC_Elder_Dragon_AnimBP_C::Turn_Rate' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, MovingAndIsFlying) == 0x004D60, "Member 'UNPC_Elder_Dragon_AnimBP_C::MovingAndIsFlying' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, MovingAndNotFlying) == 0x004D61, "Member 'UNPC_Elder_Dragon_AnimBP_C::MovingAndNotFlying' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, TurnAngle) == 0x004D68, "Member 'UNPC_Elder_Dragon_AnimBP_C::TurnAngle' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, Do90Turn) == 0x004D70, "Member 'UNPC_Elder_Dragon_AnimBP_C::Do90Turn' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, SpawnComplete) == 0x004D71, "Member 'UNPC_Elder_Dragon_AnimBP_C::SpawnComplete' has a wrong offset!");
+static_assert(offsetof(UNPC_Elder_Dragon_AnimBP_C, NotDeadAndSpawnComplete) == 0x004D72, "Member 'UNPC_Elder_Dragon_AnimBP_C::NotDeadAndSpawnComplete' has a wrong offset!");
 
 }
 

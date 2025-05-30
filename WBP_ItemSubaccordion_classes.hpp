@@ -17,22 +17,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ItemSubaccordion.WBP_ItemSubaccordion_C
-// 0x0040 (0x04B0 - 0x0470)
+// 0x0040 (0x04D8 - 0x0498)
 class UWBP_ItemSubaccordion_C final : public UItemAccordion
 {
 public:
-	class UImage*                                 CraftablePip;                                      // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    LabelTextBlock;                                    // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 MasteryIcon;                                       // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 UnreadNotifier;                                    // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ListItem_C*                        WBP_ListItem;                                      // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ListItem_C*                        WBP_ListItem_1;                                    // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ListItem_C*                        WBP_ListItem_2;                                    // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ListItem_C*                        WBP_ListItem_3;                                    // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CraftablePip;                                      // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    LabelTextBlock;                                    // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 MasteryIcon;                                       // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 UnreadNotifier;                                    // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ListItem_C*                        WBP_ListItem;                                      // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ListItem_C*                        WBP_ListItem_1;                                    // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ListItem_C*                        WBP_ListItem_2;                                    // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ListItem_C*                        WBP_ListItem_3;                                    // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	class UWidget* GetBreadcrumbWidget();
 	class UAoCCommonButtonBase* GetButton();
+	class UWidget* GetBreadcrumbWidget();
 
 public:
 	static class UClass* StaticClass()
@@ -45,15 +45,15 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ItemSubaccordion_C) == 0x000008, "Wrong alignment on UWBP_ItemSubaccordion_C");
-static_assert(sizeof(UWBP_ItemSubaccordion_C) == 0x0004B0, "Wrong size on UWBP_ItemSubaccordion_C");
-static_assert(offsetof(UWBP_ItemSubaccordion_C, CraftablePip) == 0x000470, "Member 'UWBP_ItemSubaccordion_C::CraftablePip' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemSubaccordion_C, LabelTextBlock) == 0x000478, "Member 'UWBP_ItemSubaccordion_C::LabelTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemSubaccordion_C, MasteryIcon) == 0x000480, "Member 'UWBP_ItemSubaccordion_C::MasteryIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemSubaccordion_C, UnreadNotifier) == 0x000488, "Member 'UWBP_ItemSubaccordion_C::UnreadNotifier' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemSubaccordion_C, WBP_ListItem) == 0x000490, "Member 'UWBP_ItemSubaccordion_C::WBP_ListItem' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemSubaccordion_C, WBP_ListItem_1) == 0x000498, "Member 'UWBP_ItemSubaccordion_C::WBP_ListItem_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemSubaccordion_C, WBP_ListItem_2) == 0x0004A0, "Member 'UWBP_ItemSubaccordion_C::WBP_ListItem_2' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemSubaccordion_C, WBP_ListItem_3) == 0x0004A8, "Member 'UWBP_ItemSubaccordion_C::WBP_ListItem_3' has a wrong offset!");
+static_assert(sizeof(UWBP_ItemSubaccordion_C) == 0x0004D8, "Wrong size on UWBP_ItemSubaccordion_C");
+static_assert(offsetof(UWBP_ItemSubaccordion_C, CraftablePip) == 0x000498, "Member 'UWBP_ItemSubaccordion_C::CraftablePip' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemSubaccordion_C, LabelTextBlock) == 0x0004A0, "Member 'UWBP_ItemSubaccordion_C::LabelTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemSubaccordion_C, MasteryIcon) == 0x0004A8, "Member 'UWBP_ItemSubaccordion_C::MasteryIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemSubaccordion_C, UnreadNotifier) == 0x0004B0, "Member 'UWBP_ItemSubaccordion_C::UnreadNotifier' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemSubaccordion_C, WBP_ListItem) == 0x0004B8, "Member 'UWBP_ItemSubaccordion_C::WBP_ListItem' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemSubaccordion_C, WBP_ListItem_1) == 0x0004C0, "Member 'UWBP_ItemSubaccordion_C::WBP_ListItem_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemSubaccordion_C, WBP_ListItem_2) == 0x0004C8, "Member 'UWBP_ItemSubaccordion_C::WBP_ListItem_2' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemSubaccordion_C, WBP_ListItem_3) == 0x0004D0, "Member 'UWBP_ItemSubaccordion_C::WBP_ListItem_3' has a wrong offset!");
 
 }
 

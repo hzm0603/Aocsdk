@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "DesignDataPlugin_structs.hpp"
-#include "STT_Base_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "STT_Base_classes.hpp"
 
 
 namespace SDK

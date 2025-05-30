@@ -17,6 +17,28 @@
 namespace SDK::Params
 {
 
+// Function STT_FindInteractableObject.STT_FindInteractableObject_C.ReceiveLatentTick
+// 0x0004 (0x0004 - 0x0000)
+struct STT_FindInteractableObject_C_ReceiveLatentTick final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(STT_FindInteractableObject_C_ReceiveLatentTick) == 0x000004, "Wrong alignment on STT_FindInteractableObject_C_ReceiveLatentTick");
+static_assert(sizeof(STT_FindInteractableObject_C_ReceiveLatentTick) == 0x000004, "Wrong size on STT_FindInteractableObject_C_ReceiveLatentTick");
+static_assert(offsetof(STT_FindInteractableObject_C_ReceiveLatentTick, DeltaTime) == 0x000000, "Member 'STT_FindInteractableObject_C_ReceiveLatentTick::DeltaTime' has a wrong offset!");
+
+// Function STT_FindInteractableObject.STT_FindInteractableObject_C.ReceiveLatentEnterState
+// 0x002E (0x002E - 0x0000)
+struct STT_FindInteractableObject_C_ReceiveLatentEnterState final
+{
+public:
+	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+};
+static_assert(alignof(STT_FindInteractableObject_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_FindInteractableObject_C_ReceiveLatentEnterState");
+static_assert(sizeof(STT_FindInteractableObject_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_FindInteractableObject_C_ReceiveLatentEnterState");
+static_assert(offsetof(STT_FindInteractableObject_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_FindInteractableObject_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
+
 // Function STT_FindInteractableObject.STT_FindInteractableObject_C.ExecuteUbergraph_STT_FindInteractableObject
 // 0x0130 (0x0130 - 0x0000)
 struct STT_FindInteractableObject_C_ExecuteUbergraph_STT_FindInteractableObject final
@@ -102,28 +124,6 @@ static_assert(offsetof(STT_FindInteractableObject_C_ExecuteUbergraph_STT_FindInt
 static_assert(offsetof(STT_FindInteractableObject_C_ExecuteUbergraph_STT_FindInteractableObject, CallFunc_Less_IntInt_ReturnValue_1) == 0x000118, "Member 'STT_FindInteractableObject_C_ExecuteUbergraph_STT_FindInteractableObject::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(STT_FindInteractableObject_C_ExecuteUbergraph_STT_FindInteractableObject, CallFunc_Add_IntInt_ReturnValue_1) == 0x00011C, "Member 'STT_FindInteractableObject_C_ExecuteUbergraph_STT_FindInteractableObject::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(STT_FindInteractableObject_C_ExecuteUbergraph_STT_FindInteractableObject, CallFunc_BooleanAND_ReturnValue_1) == 0x000120, "Member 'STT_FindInteractableObject_C_ExecuteUbergraph_STT_FindInteractableObject::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-
-// Function STT_FindInteractableObject.STT_FindInteractableObject_C.ReceiveLatentEnterState
-// 0x002E (0x002E - 0x0000)
-struct STT_FindInteractableObject_C_ReceiveLatentEnterState final
-{
-public:
-	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-};
-static_assert(alignof(STT_FindInteractableObject_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_FindInteractableObject_C_ReceiveLatentEnterState");
-static_assert(sizeof(STT_FindInteractableObject_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_FindInteractableObject_C_ReceiveLatentEnterState");
-static_assert(offsetof(STT_FindInteractableObject_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_FindInteractableObject_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
-
-// Function STT_FindInteractableObject.STT_FindInteractableObject_C.ReceiveLatentTick
-// 0x0004 (0x0004 - 0x0000)
-struct STT_FindInteractableObject_C_ReceiveLatentTick final
-{
-public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(STT_FindInteractableObject_C_ReceiveLatentTick) == 0x000004, "Wrong alignment on STT_FindInteractableObject_C_ReceiveLatentTick");
-static_assert(sizeof(STT_FindInteractableObject_C_ReceiveLatentTick) == 0x000004, "Wrong size on STT_FindInteractableObject_C_ReceiveLatentTick");
-static_assert(offsetof(STT_FindInteractableObject_C_ReceiveLatentTick, DeltaTime) == 0x000000, "Member 'STT_FindInteractableObject_C_ReceiveLatentTick::DeltaTime' has a wrong offset!");
 
 }
 

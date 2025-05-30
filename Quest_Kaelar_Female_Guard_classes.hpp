@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Quest_Kaelar_Female_Guard.Quest_Kaelar_Female_Guard_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class AQuest_Kaelar_Female_Guard_C final : public AFillerNPC_Base_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AQuest_Kaelar_Female_Guard_C) == 0x000010, "Wrong alignment on AQuest_Kaelar_Female_Guard_C");
-static_assert(sizeof(AQuest_Kaelar_Female_Guard_C) == 0x001DB0, "Wrong size on AQuest_Kaelar_Female_Guard_C");
+static_assert(sizeof(AQuest_Kaelar_Female_Guard_C) == 0x001D70, "Wrong size on AQuest_Kaelar_Female_Guard_C");
 
 }
 

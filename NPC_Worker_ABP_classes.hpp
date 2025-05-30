@@ -19,19 +19,19 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass NPC_Worker_ABP.NPC_Worker_ABP_C
-// 0x00A0 (0x1CE0 - 0x1C40)
+// 0x00A0 (0x1CF0 - 0x1C50)
 class UNPC_Worker_ABP_C final : public UAoCNPCAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1C40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x1C48(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1C50(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1C58(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1C78(0x0048)()
-	int32                                         MontageIndex;                                      // 0x1CC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CC4[0x4];                                     // 0x1CC4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Montage_Value;                                     // 0x1CC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsEvaluatingChooser;                              // 0x1CD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1C50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x1C58(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1C60(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1C68(0x0020)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1C88(0x0048)()
+	int32                                         MontageIndex;                                      // 0x1CD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1CD4[0x4];                                     // 0x1CD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Montage_Value;                                     // 0x1CD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsEvaluatingChooser;                              // 0x1CE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -49,15 +49,15 @@ public:
 	}
 };
 static_assert(alignof(UNPC_Worker_ABP_C) == 0x000010, "Wrong alignment on UNPC_Worker_ABP_C");
-static_assert(sizeof(UNPC_Worker_ABP_C) == 0x001CE0, "Wrong size on UNPC_Worker_ABP_C");
-static_assert(offsetof(UNPC_Worker_ABP_C, UberGraphFrame) == 0x001C40, "Member 'UNPC_Worker_ABP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UNPC_Worker_ABP_C, AnimBlueprintExtension_PropertyAccess) == 0x001C48, "Member 'UNPC_Worker_ABP_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UNPC_Worker_ABP_C, AnimBlueprintExtension_Base) == 0x001C50, "Member 'UNPC_Worker_ABP_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UNPC_Worker_ABP_C, AnimGraphNode_Root) == 0x001C58, "Member 'UNPC_Worker_ABP_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UNPC_Worker_ABP_C, AnimGraphNode_Slot) == 0x001C78, "Member 'UNPC_Worker_ABP_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UNPC_Worker_ABP_C, MontageIndex) == 0x001CC0, "Member 'UNPC_Worker_ABP_C::MontageIndex' has a wrong offset!");
-static_assert(offsetof(UNPC_Worker_ABP_C, Montage_Value) == 0x001CC8, "Member 'UNPC_Worker_ABP_C::Montage_Value' has a wrong offset!");
-static_assert(offsetof(UNPC_Worker_ABP_C, bIsEvaluatingChooser) == 0x001CD0, "Member 'UNPC_Worker_ABP_C::bIsEvaluatingChooser' has a wrong offset!");
+static_assert(sizeof(UNPC_Worker_ABP_C) == 0x001CF0, "Wrong size on UNPC_Worker_ABP_C");
+static_assert(offsetof(UNPC_Worker_ABP_C, UberGraphFrame) == 0x001C50, "Member 'UNPC_Worker_ABP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UNPC_Worker_ABP_C, AnimBlueprintExtension_PropertyAccess) == 0x001C58, "Member 'UNPC_Worker_ABP_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UNPC_Worker_ABP_C, AnimBlueprintExtension_Base) == 0x001C60, "Member 'UNPC_Worker_ABP_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UNPC_Worker_ABP_C, AnimGraphNode_Root) == 0x001C68, "Member 'UNPC_Worker_ABP_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UNPC_Worker_ABP_C, AnimGraphNode_Slot) == 0x001C88, "Member 'UNPC_Worker_ABP_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UNPC_Worker_ABP_C, MontageIndex) == 0x001CD0, "Member 'UNPC_Worker_ABP_C::MontageIndex' has a wrong offset!");
+static_assert(offsetof(UNPC_Worker_ABP_C, Montage_Value) == 0x001CD8, "Member 'UNPC_Worker_ABP_C::Montage_Value' has a wrong offset!");
+static_assert(offsetof(UNPC_Worker_ABP_C, bIsEvaluatingChooser) == 0x001CE0, "Member 'UNPC_Worker_ABP_C::bIsEvaluatingChooser' has a wrong offset!");
 
 }
 

@@ -50,5 +50,25 @@ void AElderDragon_Fire_RainofFire_FireBallDrop_C::ReceiveBeginPlay()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function ElderDragon_Fire_RainofFire_FireBallDrop.ElderDragon_Fire_RainofFire_FireBallDrop_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AElderDragon_Fire_RainofFire_FireBallDrop_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ElderDragon_Fire_RainofFire_FireBallDrop_C", "ReceiveTick");
+
+	Params::ElderDragon_Fire_RainofFire_FireBallDrop_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

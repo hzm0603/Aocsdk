@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ItemFrontEndSlot.WBP_ItemFrontEndSlot_C
-// 0x0000 (0x0480 - 0x0480)
+// 0x0000 (0x04B8 - 0x04B8)
 class UWBP_ItemFrontEndSlot_C final : public UItemFrontEndSlot
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ItemFrontEndSlot_C) == 0x000008, "Wrong alignment on UWBP_ItemFrontEndSlot_C");
-static_assert(sizeof(UWBP_ItemFrontEndSlot_C) == 0x000480, "Wrong size on UWBP_ItemFrontEndSlot_C");
+static_assert(sizeof(UWBP_ItemFrontEndSlot_C) == 0x0004B8, "Wrong size on UWBP_ItemFrontEndSlot_C");
 
 }
 

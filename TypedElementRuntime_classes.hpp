@@ -47,8 +47,8 @@ class UTypedElementSelectionSet final : public UObject
 {
 public:
 	uint8                                         Pad_48[0x800];                                     // 0x0048(0x0800)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UTypedElementSelectionSet* SelectionSet)> OnPreSelectionChange;                              // 0x0848(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UTypedElementSelectionSet* SelectionSet)> OnSelectionChange;                                 // 0x0858(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class UTypedElementSelectionSet* SelectionSet)> OnPreSelectionChange; // 0x0848(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class UTypedElementSelectionSet* SelectionSet)> OnSelectionChange; // 0x0858(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_868[0x50];                                     // 0x0868(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -92,7 +92,7 @@ static_assert(offsetof(UTypedElementSelectionSet, OnPreSelectionChange) == 0x000
 static_assert(offsetof(UTypedElementSelectionSet, OnSelectionChange) == 0x000858, "Member 'UTypedElementSelectionSet::OnSelectionChange' has a wrong offset!");
 
 // Class TypedElementRuntime.TypedElementAssetDataInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITypedElementAssetDataInterface final : public IInterface
 {
 public:
@@ -109,11 +109,11 @@ public:
 		return GetDefaultObjImpl<ITypedElementAssetDataInterface>();
 	}
 };
-static_assert(alignof(ITypedElementAssetDataInterface) == 0x000008, "Wrong alignment on ITypedElementAssetDataInterface");
-static_assert(sizeof(ITypedElementAssetDataInterface) == 0x000048, "Wrong size on ITypedElementAssetDataInterface");
+static_assert(alignof(ITypedElementAssetDataInterface) == 0x000001, "Wrong alignment on ITypedElementAssetDataInterface");
+static_assert(sizeof(ITypedElementAssetDataInterface) == 0x000001, "Wrong size on ITypedElementAssetDataInterface");
 
 // Class TypedElementRuntime.TypedElementHierarchyInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITypedElementHierarchyInterface final : public IInterface
 {
 public:
@@ -130,11 +130,11 @@ public:
 		return GetDefaultObjImpl<ITypedElementHierarchyInterface>();
 	}
 };
-static_assert(alignof(ITypedElementHierarchyInterface) == 0x000008, "Wrong alignment on ITypedElementHierarchyInterface");
-static_assert(sizeof(ITypedElementHierarchyInterface) == 0x000048, "Wrong size on ITypedElementHierarchyInterface");
+static_assert(alignof(ITypedElementHierarchyInterface) == 0x000001, "Wrong alignment on ITypedElementHierarchyInterface");
+static_assert(sizeof(ITypedElementHierarchyInterface) == 0x000001, "Wrong size on ITypedElementHierarchyInterface");
 
 // Class TypedElementRuntime.TypedElementObjectInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITypedElementObjectInterface final : public IInterface
 {
 public:
@@ -151,11 +151,11 @@ public:
 		return GetDefaultObjImpl<ITypedElementObjectInterface>();
 	}
 };
-static_assert(alignof(ITypedElementObjectInterface) == 0x000008, "Wrong alignment on ITypedElementObjectInterface");
-static_assert(sizeof(ITypedElementObjectInterface) == 0x000048, "Wrong size on ITypedElementObjectInterface");
+static_assert(alignof(ITypedElementObjectInterface) == 0x000001, "Wrong alignment on ITypedElementObjectInterface");
+static_assert(sizeof(ITypedElementObjectInterface) == 0x000001, "Wrong size on ITypedElementObjectInterface");
 
 // Class TypedElementRuntime.TypedElementPrimitiveCustomDataInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITypedElementPrimitiveCustomDataInterface final : public IInterface
 {
 public:
@@ -172,11 +172,11 @@ public:
 		return GetDefaultObjImpl<ITypedElementPrimitiveCustomDataInterface>();
 	}
 };
-static_assert(alignof(ITypedElementPrimitiveCustomDataInterface) == 0x000008, "Wrong alignment on ITypedElementPrimitiveCustomDataInterface");
-static_assert(sizeof(ITypedElementPrimitiveCustomDataInterface) == 0x000048, "Wrong size on ITypedElementPrimitiveCustomDataInterface");
+static_assert(alignof(ITypedElementPrimitiveCustomDataInterface) == 0x000001, "Wrong alignment on ITypedElementPrimitiveCustomDataInterface");
+static_assert(sizeof(ITypedElementPrimitiveCustomDataInterface) == 0x000001, "Wrong size on ITypedElementPrimitiveCustomDataInterface");
 
 // Class TypedElementRuntime.TypedElementSelectionInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ITypedElementSelectionInterface final : public IInterface
 {
 public:
@@ -198,8 +198,8 @@ public:
 		return GetDefaultObjImpl<ITypedElementSelectionInterface>();
 	}
 };
-static_assert(alignof(ITypedElementSelectionInterface) == 0x000008, "Wrong alignment on ITypedElementSelectionInterface");
-static_assert(sizeof(ITypedElementSelectionInterface) == 0x000048, "Wrong size on ITypedElementSelectionInterface");
+static_assert(alignof(ITypedElementSelectionInterface) == 0x000001, "Wrong alignment on ITypedElementSelectionInterface");
+static_assert(sizeof(ITypedElementSelectionInterface) == 0x000001, "Wrong size on ITypedElementSelectionInterface");
 
 }
 

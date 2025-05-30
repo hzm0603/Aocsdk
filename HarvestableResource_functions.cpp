@@ -41,7 +41,7 @@ void AHarvestableResource_C::BndEvt__Mesh_K2Node_ComponentBoundEvent_0_Component
 // (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*              TouchedComponent                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// struct FKey                             ButtonPressed                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FKey&                      ButtonPressed                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
 void AHarvestableResource_C::BndEvt__Mesh_K2Node_ComponentBoundEvent_0_ComponentOnClickedSignature__DelegateSignature(class UPrimitiveComponent* TouchedComponent, const struct FKey& ButtonPressed)
 {
@@ -102,7 +102,7 @@ void AHarvestableResource_C::ExecuteUbergraph_HarvestableResource(int32 EntryPoi
 // Function HarvestableResource.HarvestableResource_C.On Click From Player
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AHarvestableResource_C::On_Click_From_Player(const struct FVector& Location)
 {

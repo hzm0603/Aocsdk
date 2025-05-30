@@ -165,9 +165,9 @@ static_assert(sizeof(FIntrepidNetInterServerManagerTickFunction) == 0x000030, "W
 struct FIntrepidNetReplicationGraphGlobal final
 {
 public:
-	class UReplicationGraphNode_GridSpatialization2D* SpatialGridNode;                                   // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UReplicationGraphNode_GridSpatialization2D* SpatialGridNode;                               // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UReplicationGraphNode_AlwaysRelevant*   AlwaysRelevantNode;                                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UIntrepidNetReplicationGraphNode_LargeCullDistance* LargeCullDistanceActors;                           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UIntrepidNetReplicationGraphNode_LargeCullDistance* LargeCullDistanceActors;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FIntrepidNetReplicationGraphGlobal) == 0x000008, "Wrong alignment on FIntrepidNetReplicationGraphGlobal");
 static_assert(sizeof(FIntrepidNetReplicationGraphGlobal) == 0x000018, "Wrong size on FIntrepidNetReplicationGraphGlobal");

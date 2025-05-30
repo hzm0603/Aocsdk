@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_ProfessionListButton.WBP_ProfessionListButton_C.GetBreadcrumbWidget
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWBP_ProfessionListButton_C::GetBreadcrumbWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ProfessionListButton_C", "GetBreadcrumbWidget");
-
-	Params::WBP_ProfessionListButton_C_GetBreadcrumbWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function WBP_ProfessionListButton.WBP_ProfessionListButton_C.GetButton
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -50,6 +30,26 @@ class UAoCCommonButtonBase* UWBP_ProfessionListButton_C::GetButton()
 		Func = Class->GetFunction("WBP_ProfessionListButton_C", "GetButton");
 
 	Params::WBP_ProfessionListButton_C_GetButton Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_ProfessionListButton.WBP_ProfessionListButton_C.GetBreadcrumbWidget
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_ProfessionListButton_C::GetBreadcrumbWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ProfessionListButton_C", "GetBreadcrumbWidget");
+
+	Params::WBP_ProfessionListButton_C_GetBreadcrumbWidget Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

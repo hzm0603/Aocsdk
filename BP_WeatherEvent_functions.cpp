@@ -69,11 +69,11 @@ void ABP_WeatherEvent_C::ExecuteUbergraph_BP_WeatherEvent(int32 EntryPoint)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  Delta_Seconds                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FS_EnvironmentSettings           Settings                                               (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
-// struct FS_EnvironmentSettingsSwitches   Switches                                               (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Radius_0                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Intensity_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector4                         Lightning_Pos_Size                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FS_EnvironmentSettings*          Settings                                               (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
+// struct FS_EnvironmentSettingsSwitches*  Switches                                               (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Radius_0                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Intensity_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector4*                        Lightning_Pos_Size                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WeatherEvent_C::Get_Weather_Settings(double Delta_Seconds, struct FS_EnvironmentSettings* Settings, struct FS_EnvironmentSettingsSwitches* Switches, double* Radius_0, double* Intensity_0, struct FVector4* Lightning_Pos_Size)
 {

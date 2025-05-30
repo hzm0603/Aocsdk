@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BefallenForge_Bellow.BefallenForge_Bellow_C
-// 0x0000 (0x1D90 - 0x1D90)
+// 0x0000 (0x1D50 - 0x1D50)
 class ABefallenForge_Bellow_C final : public ANPCPawn_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABefallenForge_Bellow_C) == 0x000010, "Wrong alignment on ABefallenForge_Bellow_C");
-static_assert(sizeof(ABefallenForge_Bellow_C) == 0x001D90, "Wrong size on ABefallenForge_Bellow_C");
+static_assert(sizeof(ABefallenForge_Bellow_C) == 0x001D50, "Wrong size on ABefallenForge_Bellow_C");
 
 }
 

@@ -25,7 +25,7 @@ class UStateTreeComponent : public UBrainComponent
 {
 public:
 	uint8                                         Pad_150[0x8];                                      // 0x0150(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EStateTreeRunStatus StateTreeRunStatus)> OnStateTreeRunStatusChanged;                       // 0x0158(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(EStateTreeRunStatus StateTreeRunStatus)> OnStateTreeRunStatusChanged; // 0x0158(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FStateTreeReference                    StateTreeRef;                                      // 0x0168(0x0018)(Edit, NativeAccessSpecifierPublic)
 	class UAoCTasksPool*                          TasksPool;                                         // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FStateTreeTransferMetadata             TransferMetaData;                                  // 0x0188(0x0028)(NativeAccessSpecifierPublic)

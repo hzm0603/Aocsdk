@@ -17,32 +17,32 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Skillbook.WBP_Skillbook_C
-// 0x00B0 (0x04F0 - 0x0440)
+// 0x00B0 (0x0528 - 0x0478)
 class UWBP_Skillbook_C final : public USkillBook
 {
 public:
-	class UCommonRichTextBlock*                   DescriptionRichText;                               // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollWindow;                                      // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Accordion_C*                       SecondaryArchetypeAccordion;                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WBP_ScrollWindowSkillDetails;                      // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry;                                    // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_1;                                  // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_2;                                  // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_3;                                  // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_4;                                  // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_5;                                  // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_6;                                  // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_7;                                  // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_8;                                  // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_9;                                  // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_10;                                 // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_11;                                 // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_12;                                 // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_13;                                 // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillEntry_C*                      WBP_SkillEntry_50;                                 // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillStatusEffectEntry_C*          WBP_SkillStatusEffectEntry;                        // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillStatusEffectEntry_C*          WBP_SkillStatusEffectEntry_1;                      // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SkillStatusEffectEntry_C*          WBP_SkillStatusEffectEntry_2;                      // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   DescriptionRichText;                               // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollWindow;                                      // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Accordion_C*                       SecondaryArchetypeAccordion;                       // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WBP_ScrollWindowSkillDetails;                      // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry;                                    // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_1;                                  // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_2;                                  // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_3;                                  // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_4;                                  // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_5;                                  // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_6;                                  // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_7;                                  // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_8;                                  // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_9;                                  // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_10;                                 // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_11;                                 // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_12;                                 // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_13;                                 // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillEntry_C*                      WBP_SkillEntry_50;                                 // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillStatusEffectEntry_C*          WBP_SkillStatusEffectEntry;                        // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillStatusEffectEntry_C*          WBP_SkillStatusEffectEntry_1;                      // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SkillStatusEffectEntry_C*          WBP_SkillStatusEffectEntry_2;                      // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -55,29 +55,29 @@ public:
 	}
 };
 static_assert(alignof(UWBP_Skillbook_C) == 0x000008, "Wrong alignment on UWBP_Skillbook_C");
-static_assert(sizeof(UWBP_Skillbook_C) == 0x0004F0, "Wrong size on UWBP_Skillbook_C");
-static_assert(offsetof(UWBP_Skillbook_C, DescriptionRichText) == 0x000440, "Member 'UWBP_Skillbook_C::DescriptionRichText' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, ScrollWindow) == 0x000448, "Member 'UWBP_Skillbook_C::ScrollWindow' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, SecondaryArchetypeAccordion) == 0x000450, "Member 'UWBP_Skillbook_C::SecondaryArchetypeAccordion' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_ScrollWindowSkillDetails) == 0x000458, "Member 'UWBP_Skillbook_C::WBP_ScrollWindowSkillDetails' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry) == 0x000460, "Member 'UWBP_Skillbook_C::WBP_SkillEntry' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_1) == 0x000468, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_2) == 0x000470, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_2' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_3) == 0x000478, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_3' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_4) == 0x000480, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_4' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_5) == 0x000488, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_5' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_6) == 0x000490, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_6' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_7) == 0x000498, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_7' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_8) == 0x0004A0, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_8' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_9) == 0x0004A8, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_9' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_10) == 0x0004B0, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_10' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_11) == 0x0004B8, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_11' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_12) == 0x0004C0, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_12' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_13) == 0x0004C8, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_13' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_50) == 0x0004D0, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_50' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillStatusEffectEntry) == 0x0004D8, "Member 'UWBP_Skillbook_C::WBP_SkillStatusEffectEntry' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillStatusEffectEntry_1) == 0x0004E0, "Member 'UWBP_Skillbook_C::WBP_SkillStatusEffectEntry_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillStatusEffectEntry_2) == 0x0004E8, "Member 'UWBP_Skillbook_C::WBP_SkillStatusEffectEntry_2' has a wrong offset!");
+static_assert(sizeof(UWBP_Skillbook_C) == 0x000528, "Wrong size on UWBP_Skillbook_C");
+static_assert(offsetof(UWBP_Skillbook_C, DescriptionRichText) == 0x000478, "Member 'UWBP_Skillbook_C::DescriptionRichText' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, ScrollWindow) == 0x000480, "Member 'UWBP_Skillbook_C::ScrollWindow' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, SecondaryArchetypeAccordion) == 0x000488, "Member 'UWBP_Skillbook_C::SecondaryArchetypeAccordion' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_ScrollWindowSkillDetails) == 0x000490, "Member 'UWBP_Skillbook_C::WBP_ScrollWindowSkillDetails' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry) == 0x000498, "Member 'UWBP_Skillbook_C::WBP_SkillEntry' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_1) == 0x0004A0, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_2) == 0x0004A8, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_2' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_3) == 0x0004B0, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_3' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_4) == 0x0004B8, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_4' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_5) == 0x0004C0, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_5' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_6) == 0x0004C8, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_6' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_7) == 0x0004D0, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_7' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_8) == 0x0004D8, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_8' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_9) == 0x0004E0, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_9' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_10) == 0x0004E8, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_10' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_11) == 0x0004F0, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_11' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_12) == 0x0004F8, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_12' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_13) == 0x000500, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_13' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillEntry_50) == 0x000508, "Member 'UWBP_Skillbook_C::WBP_SkillEntry_50' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillStatusEffectEntry) == 0x000510, "Member 'UWBP_Skillbook_C::WBP_SkillStatusEffectEntry' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillStatusEffectEntry_1) == 0x000518, "Member 'UWBP_Skillbook_C::WBP_SkillStatusEffectEntry_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Skillbook_C, WBP_SkillStatusEffectEntry_2) == 0x000520, "Member 'UWBP_Skillbook_C::WBP_SkillStatusEffectEntry_2' has a wrong offset!");
 
 }
 

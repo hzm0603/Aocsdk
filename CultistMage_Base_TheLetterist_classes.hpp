@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CultistMage_Base_TheLetterist.CultistMage_Base_TheLetterist_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ACultistMage_Base_TheLetterist_C final : public ACultistMage_Base_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACultistMage_Base_TheLetterist_C) == 0x000010, "Wrong alignment on ACultistMage_Base_TheLetterist_C");
-static_assert(sizeof(ACultistMage_Base_TheLetterist_C) == 0x001DB0, "Wrong size on ACultistMage_Base_TheLetterist_C");
+static_assert(sizeof(ACultistMage_Base_TheLetterist_C) == 0x001D70, "Wrong size on ACultistMage_Base_TheLetterist_C");
 
 }
 

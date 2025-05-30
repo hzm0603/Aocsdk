@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STT_Base_classes.hpp"
 #include "Engine_structs.hpp"
+#include "STT_Base_classes.hpp"
 
 
 namespace SDK
@@ -29,9 +29,9 @@ public:
 	double                                        OptionalDistance;                                  // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag(int32 EntryPoint);
-	void FindCharacterWithActorTag();
 	void ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition);
+	void FindCharacterWithActorTag();
+	void ExecuteUbergraph_STT_GetPerceivedCharacterByActorTag(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

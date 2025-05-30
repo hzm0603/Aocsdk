@@ -985,7 +985,7 @@ static_assert(offsetof(SentrySubsystem_ContinueTrace, ReturnValue) == 0x000020, 
 struct SentrySubsystem_InitializeWithSettings final
 {
 public:
-	TDelegate<void(class USentrySettings* Settings)> OnConfigureSettings;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class USentrySettings* Settings)> OnConfigureSettings;                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SentrySubsystem_InitializeWithSettings) == 0x000004, "Wrong alignment on SentrySubsystem_InitializeWithSettings");
 static_assert(sizeof(SentrySubsystem_InitializeWithSettings) == 0x000010, "Wrong size on SentrySubsystem_InitializeWithSettings");

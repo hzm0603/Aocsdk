@@ -10,122 +10,118 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
+#include "GameSystemsPlugin_structs.hpp"
+#include "GameSystemsPlugin_classes.hpp"
 #include "ENUM_SunPosition_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MasterLightActor.BP_MasterLightActor_C
-// 0x0478 (0x07C0 - 0x0348)
-class ABP_MasterLightActor_C : public AActor
+// 0x0568 (0x08D0 - 0x0368)
+class ABP_MasterLightActor_C : public AMasterLightActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_358[0x8];                                      // 0x0358(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Light_Transform;                                   // 0x0360(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Light_Fixture_Component;                           // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            Light_Fixture_Mesh;                                // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Support_Fixture_Component;                         // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Light_Fixture_Transform;                           // 0x03E0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Light_Fixture_Cast_Shadow;                         // 0x0440(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_441[0x7];                                      // 0x0441(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMesh*                            Support_Fixture_Mesh;                              // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             Support_Fixture_Transform;                         // 0x0450(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Use_Point_Light;                                   // 0x04B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B1[0x3];                                      // 0x04B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Point_Light_Intensity;                             // 0x04B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Point_Light_Color;                                 // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Point_Use_Temperature;                             // 0x04C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C9[0x3];                                      // 0x04C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Point_Temperature;                                 // 0x04CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Point_Cast_Shadows;                                // 0x04D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D1[0x3];                                      // 0x04D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Point_Attenuation_Radius;                          // 0x04D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Point_Source_Radius;                               // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Point_Soft_Source_Radius;                          // 0x04DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Point_Source_Length;                               // 0x04E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Point_Volumetric_Scattering;                       // 0x04E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Point_Contact_Shadow_Length_in_World_Space_Units;  // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E9[0x3];                                      // 0x04E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Point_Contact_Shadow_Length;                       // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Point_Light_Falloff_Exponent;                      // 0x04F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Point_Use_Inverse_Square_Falloff;                  // 0x04F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F5[0x3];                                      // 0x04F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Point_Contact_Shadow_Casting_Intensity;            // 0x04F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC[0x4];                                      // 0x04FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USpotLightComponent*                    Spot_Light_Component;                              // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Use_Spot_Light;                                    // 0x0508(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_509[0x3];                                      // 0x0509(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Spot_Intensity;                                    // 0x050C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Spot_Light_Color;                                  // 0x0510(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Spot_Use_Temperature;                              // 0x0520(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_521[0x3];                                      // 0x0521(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Spot_Temperature;                                  // 0x0524(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Spot_Cast_Shadows;                                 // 0x0528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_529[0x3];                                      // 0x0529(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Spot_Attenuation_Radius;                           // 0x052C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Spot_Inner_Cone_Angle;                             // 0x0530(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Spot_Outer_Cone_Angle;                             // 0x0534(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Spot_Source_Radius;                                // 0x0538(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Spot_Source_Length;                                // 0x053C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Spot_Volumetric_Scattering;                        // 0x0540(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Spot_Inverse_Square_Falloff;                       // 0x0544(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_545[0x3];                                      // 0x0545(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Spot_Light_Falloff_Exponent;                       // 0x0548(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Spot_Contact_Shadow_Length;                        // 0x054C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Spot_Contact_Shadow_Length_in_World_Space_Units;   // 0x0550(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_551[0x3];                                      // 0x0551(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Spot_Contact_Shadow_Casting_Intensity;             // 0x0554(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UNiagaraComponent*>              VFX_Components;                                    // 0x0558(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UNiagaraSystem*                         Niagra_VFX;                                        // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             VFX_Transform;                                     // 0x0570(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Scale;                                             // 0x05D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Smoke_Spawn;                                       // 0x05E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           VFX_Color;                                         // 0x05E4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         VFX_Enclosed;                                      // 0x05F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UNiagaraSystem*>                 Socketed_VFX;                                      // 0x05F8(0x0010)(Edit, BlueprintVisible)
-	uint8                                         Pad_608[0x8];                                      // 0x0608(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Emissive_Light_Transform;                          // 0x0610(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Use_Sphere_Emissive;                               // 0x0670(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_671[0x3];                                      // 0x0671(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           Spherical_Emissive_Color;                          // 0x0674(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_684[0x4];                                      // 0x0684(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Sphere_Emissive_Material;                          // 0x0688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               Sphere_Emissive_DMI;                               // 0x0690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          Use_Plane_Emissive;                                // 0x0698(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_699[0x3];                                      // 0x0699(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           Plane_Emissive_Color;                              // 0x069C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6AC[0x4];                                      // 0x06AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Plane_Emissive_Transform;                          // 0x06B0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     Plane_Emissive_Material;                           // 0x0710(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               Plane_Emissive_DMI;                                // 0x0718(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   Point_Light_Component;                             // 0x0720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          TOD_Visability;                                    // 0x0728(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_729[0x7];                                      // 0x0729(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_VerraWorld_GlobalSky_C*             Verra_World_Global_Sky;                            // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        Transition_Speed;                                  // 0x0738(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Transition_Alpha;                                  // 0x0740(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Plane_Emissive_Component;                          // 0x0748(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Sphere_Emissive_Component;                         // 0x0750(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       Mesh_DMIs;                                         // 0x0758(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<float>                                 Emissive_Strengths;                                // 0x0768(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UTextureCube*                           Point_Light_Shadow_Texture;                        // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Soft_Shadow_Amount;                                // 0x0780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Soft_Shadow_Focus_Offset;                          // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Light_Flicker_Amount;                              // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               Point_Light_Function_DMI;                          // 0x0798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         Spot_Max_Draw_Distance;                            // 0x07A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Spot_Max_Distance_Fade_Range;                      // 0x07A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Point_Max_Draw_Distance;                           // 0x07A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Point_Max_Distance_Fade_Range;                     // 0x07AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAkAudioEvent*                          Ak_Event;                                          // 0x07B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkSwitchValue*                         Ak_Switch;                                         // 0x07B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        MeshContainer;                                     // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        LightContainer;                                    // 0x0378(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0380(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	ELightActorDefaultTypes                       LightType;                                         // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_389[0x7];                                      // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Point_Light_Transform_Modifier;                    // 0x0390(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Light_Fixture_Component;                           // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            Light_Fixture_Mesh;                                // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Support_Fixture_Component;                         // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_408[0x8];                                      // 0x0408(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Light_Fixture_Transform;                           // 0x0410(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bLightFixtureCastShadows;                          // 0x0470(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_471[0x7];                                      // 0x0471(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMesh*                            Support_Fixture_Mesh;                              // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             Support_Fixture_Transform;                         // 0x0480(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUsePointLight;                                    // 0x04E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E1[0x3];                                      // 0x04E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Point_Light_Intensity;                             // 0x04E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Point_Light_Color;                                 // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Point_Temperature;                                 // 0x04F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPointCastShadows;                                 // 0x04FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4FD[0x3];                                      // 0x04FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Point_Attenuation_Radius;                          // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Point_Source_Radius;                               // 0x0504(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Point_Soft_Source_Radius;                          // 0x0508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Point_Volumetric_Scattering;                       // 0x050C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Point_Light_Falloff_Exponent;                      // 0x0510(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	bool                                          bPointUseInverseSquareFalloff;                     // 0x0514(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	uint8                                         Pad_515[0x3];                                      // 0x0515(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USpotLightComponent*                    Spot_Light_Component;                              // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             Spot_Light_Transform_Modifier;                     // 0x0520(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseSpotLight;                                     // 0x0580(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_581[0x3];                                      // 0x0581(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Spot_Intensity;                                    // 0x0584(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Spot_Light_Color;                                  // 0x0588(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Spot_Temperature;                                  // 0x0598(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSpotCastShadows;                                  // 0x059C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59D[0x3];                                      // 0x059D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Spot_Attenuation_Radius;                           // 0x05A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Spot_Inner_Cone_Angle;                             // 0x05A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Spot_Outer_Cone_Angle;                             // 0x05A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Spot_Volumetric_Scattering;                        // 0x05AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSpotInverseSquareFalloff;                         // 0x05B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	uint8                                         Pad_5B1[0x3];                                      // 0x05B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Spot_Light_Falloff_Exponent;                       // 0x05B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	TArray<class UNiagaraComponent*>              VFX_Components;                                    // 0x05B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UNiagaraSystem*                         Niagara_VFX;                                       // 0x05C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             VFX_Transform;                                     // 0x05D0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              Scale;                                             // 0x0630(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Smoke_Spawn;                                       // 0x0640(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           VFX_Color;                                         // 0x0644(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         VFX_Enclosed;                                      // 0x0654(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseSphereEmissive;                                // 0x0658(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_659[0x7];                                      // 0x0659(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Emissive_Light_Transform;                          // 0x0660(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Spherical_Emissive_Color;                          // 0x06C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Sphere_Emissive_Intensity;                         // 0x06D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     Sphere_Emissive_Material;                          // 0x06D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               Sphere_Emissive_DMI;                               // 0x06E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUsePlaneEmissive;                                 // 0x06E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E9[0x7];                                      // 0x06E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Plane_Emissive_Transform;                          // 0x06F0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Plane_Emissive_Color;                              // 0x0750(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Plane_Emissive_Intensity;                          // 0x0760(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     Plane_Emissive_Material;                           // 0x0768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               Plane_Emissive_DMI;                                // 0x0770(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   Point_Light_Component;                             // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          bTODVisibility;                                    // 0x0780(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_781[0x7];                                      // 0x0781(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_VerraWorld_GlobalSky_C*             Verra_World_Global_Sky;                            // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        Transition_Speed;                                  // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Transition_Alpha;                                  // 0x0798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Plane_Emissive_Component;                          // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Sphere_Emissive_Component;                         // 0x07A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       Mesh_DMIs;                                         // 0x07B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<float>                                 Emissive_Strengths;                                // 0x07C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UTextureCube*                           Point_Light_Shadow_Texture;                        // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Soft_Shadow_Amount;                                // 0x07D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Soft_Shadow_Focus_Offset;                          // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LightFlickerAmount;                                // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               Point_Light_Function_DMI;                          // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         Spot_Max_Draw_Distance;                            // 0x07F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	float                                         Spot_Max_Distance_Fade_Range;                      // 0x07FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	float                                         Point_Max_Draw_Distance;                           // 0x0800(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	float                                         Point_Max_Distance_Fade_Range;                     // 0x0804(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	class UAkAudioEvent*                          Ak_Event;                                          // 0x0808(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkSwitchValue*                         Ak_Switch;                                         // 0x0810(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FTransform>                     PointLight_InitialTranfrom;                        // 0x0818(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FTransform>                     SpotLight_InitialTransfrom;                        // 0x0828(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FTransform>                     VFX_InitialTransform;                              // 0x0838(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	uint8                                         Pad_848[0x8];                                      // 0x0848(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             VFX_Transform_Modifier;                            // 0x0850(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Spot_Source_Radius;                                // 0x08B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Spot_Soft_Source_Radius;                           // 0x08B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UPointLightComponent*>           Point_Light_Array;                                 // 0x08B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	EComponentMobility                            Mobility;                                          // 0x08C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Add_Light_Components();
@@ -135,16 +131,23 @@ public:
 	void Add_Sperical_Emissive();
 	void Add_Spot();
 	void Add_VFX_Components();
-	void Add_VFX_Components_at_Sockets();
+	struct FTransform AdjustLightTransForWidgetOffset(const struct FTransform& InTransform, double Z);
+	void Check_If_AKEvent_Is_Overridden(class UAkAudioEvent* Instance, class UAkAudioEvent* Default, class UAkAudioEvent** Color);
+	void Check_if_AKSwitch_Is_Overriden(class UAkSwitchValue* Instance, class UAkSwitchValue* Default, class UAkSwitchValue** Color);
+	void Check_if_Color_Overridden(const struct FLinearColor& Instance, const struct FLinearColor& Default, struct FLinearColor* Color);
+	void Check_if_Float_Overridden(double Instance, double Default, double* float_0);
+	void Check_if_VFX_Is_Overridden(class UNiagaraSystem* Instance, class UNiagaraSystem* Default, class UNiagaraSystem** VFX);
 	void Editor_Time_Refresh();
 	void ExecuteUbergraph_BP_MasterLightActor(int32 EntryPoint);
-	void Get_Light_Socket_Transform();
+	void Get_Socket_Transform();
+	void InitializeDefaults();
 	void Make_DMIs_from_Mesh_Materials();
 	void OnConstruct();
 	void ReceiveBeginPlay();
 	void ReceiveDestroyed();
 	void ReceiveTick(float DeltaSeconds);
-	void Resize_Socketed_VFX_Array();
+	void Refresh();
+	void ResetDefaults();
 	void Sound_Module();
 	void Sun_Altitude_Phase_Changed();
 	void UserConstructionScript();
@@ -160,89 +163,91 @@ public:
 	}
 };
 static_assert(alignof(ABP_MasterLightActor_C) == 0x000010, "Wrong alignment on ABP_MasterLightActor_C");
-static_assert(sizeof(ABP_MasterLightActor_C) == 0x0007C0, "Wrong size on ABP_MasterLightActor_C");
-static_assert(offsetof(ABP_MasterLightActor_C, UberGraphFrame) == 0x000348, "Member 'ABP_MasterLightActor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, DefaultSceneRoot) == 0x000350, "Member 'ABP_MasterLightActor_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Light_Transform) == 0x000360, "Member 'ABP_MasterLightActor_C::Light_Transform' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Light_Fixture_Component) == 0x0003C0, "Member 'ABP_MasterLightActor_C::Light_Fixture_Component' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Light_Fixture_Mesh) == 0x0003C8, "Member 'ABP_MasterLightActor_C::Light_Fixture_Mesh' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Support_Fixture_Component) == 0x0003D0, "Member 'ABP_MasterLightActor_C::Support_Fixture_Component' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Light_Fixture_Transform) == 0x0003E0, "Member 'ABP_MasterLightActor_C::Light_Fixture_Transform' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Light_Fixture_Cast_Shadow) == 0x000440, "Member 'ABP_MasterLightActor_C::Light_Fixture_Cast_Shadow' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Support_Fixture_Mesh) == 0x000448, "Member 'ABP_MasterLightActor_C::Support_Fixture_Mesh' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Support_Fixture_Transform) == 0x000450, "Member 'ABP_MasterLightActor_C::Support_Fixture_Transform' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Use_Point_Light) == 0x0004B0, "Member 'ABP_MasterLightActor_C::Use_Point_Light' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Intensity) == 0x0004B4, "Member 'ABP_MasterLightActor_C::Point_Light_Intensity' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Color) == 0x0004B8, "Member 'ABP_MasterLightActor_C::Point_Light_Color' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Use_Temperature) == 0x0004C8, "Member 'ABP_MasterLightActor_C::Point_Use_Temperature' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Temperature) == 0x0004CC, "Member 'ABP_MasterLightActor_C::Point_Temperature' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Cast_Shadows) == 0x0004D0, "Member 'ABP_MasterLightActor_C::Point_Cast_Shadows' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Attenuation_Radius) == 0x0004D4, "Member 'ABP_MasterLightActor_C::Point_Attenuation_Radius' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Source_Radius) == 0x0004D8, "Member 'ABP_MasterLightActor_C::Point_Source_Radius' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Soft_Source_Radius) == 0x0004DC, "Member 'ABP_MasterLightActor_C::Point_Soft_Source_Radius' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Source_Length) == 0x0004E0, "Member 'ABP_MasterLightActor_C::Point_Source_Length' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Volumetric_Scattering) == 0x0004E4, "Member 'ABP_MasterLightActor_C::Point_Volumetric_Scattering' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Contact_Shadow_Length_in_World_Space_Units) == 0x0004E8, "Member 'ABP_MasterLightActor_C::Point_Contact_Shadow_Length_in_World_Space_Units' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Contact_Shadow_Length) == 0x0004EC, "Member 'ABP_MasterLightActor_C::Point_Contact_Shadow_Length' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Falloff_Exponent) == 0x0004F0, "Member 'ABP_MasterLightActor_C::Point_Light_Falloff_Exponent' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Use_Inverse_Square_Falloff) == 0x0004F4, "Member 'ABP_MasterLightActor_C::Point_Use_Inverse_Square_Falloff' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Contact_Shadow_Casting_Intensity) == 0x0004F8, "Member 'ABP_MasterLightActor_C::Point_Contact_Shadow_Casting_Intensity' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Light_Component) == 0x000500, "Member 'ABP_MasterLightActor_C::Spot_Light_Component' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Use_Spot_Light) == 0x000508, "Member 'ABP_MasterLightActor_C::Use_Spot_Light' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Intensity) == 0x00050C, "Member 'ABP_MasterLightActor_C::Spot_Intensity' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Light_Color) == 0x000510, "Member 'ABP_MasterLightActor_C::Spot_Light_Color' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Use_Temperature) == 0x000520, "Member 'ABP_MasterLightActor_C::Spot_Use_Temperature' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Temperature) == 0x000524, "Member 'ABP_MasterLightActor_C::Spot_Temperature' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Cast_Shadows) == 0x000528, "Member 'ABP_MasterLightActor_C::Spot_Cast_Shadows' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Attenuation_Radius) == 0x00052C, "Member 'ABP_MasterLightActor_C::Spot_Attenuation_Radius' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Inner_Cone_Angle) == 0x000530, "Member 'ABP_MasterLightActor_C::Spot_Inner_Cone_Angle' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Outer_Cone_Angle) == 0x000534, "Member 'ABP_MasterLightActor_C::Spot_Outer_Cone_Angle' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Source_Radius) == 0x000538, "Member 'ABP_MasterLightActor_C::Spot_Source_Radius' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Source_Length) == 0x00053C, "Member 'ABP_MasterLightActor_C::Spot_Source_Length' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Volumetric_Scattering) == 0x000540, "Member 'ABP_MasterLightActor_C::Spot_Volumetric_Scattering' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Inverse_Square_Falloff) == 0x000544, "Member 'ABP_MasterLightActor_C::Spot_Inverse_Square_Falloff' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Light_Falloff_Exponent) == 0x000548, "Member 'ABP_MasterLightActor_C::Spot_Light_Falloff_Exponent' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Contact_Shadow_Length) == 0x00054C, "Member 'ABP_MasterLightActor_C::Spot_Contact_Shadow_Length' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Contact_Shadow_Length_in_World_Space_Units) == 0x000550, "Member 'ABP_MasterLightActor_C::Spot_Contact_Shadow_Length_in_World_Space_Units' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Contact_Shadow_Casting_Intensity) == 0x000554, "Member 'ABP_MasterLightActor_C::Spot_Contact_Shadow_Casting_Intensity' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, VFX_Components) == 0x000558, "Member 'ABP_MasterLightActor_C::VFX_Components' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Niagra_VFX) == 0x000568, "Member 'ABP_MasterLightActor_C::Niagra_VFX' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, VFX_Transform) == 0x000570, "Member 'ABP_MasterLightActor_C::VFX_Transform' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Scale) == 0x0005D0, "Member 'ABP_MasterLightActor_C::Scale' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Smoke_Spawn) == 0x0005E0, "Member 'ABP_MasterLightActor_C::Smoke_Spawn' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, VFX_Color) == 0x0005E4, "Member 'ABP_MasterLightActor_C::VFX_Color' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, VFX_Enclosed) == 0x0005F4, "Member 'ABP_MasterLightActor_C::VFX_Enclosed' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Socketed_VFX) == 0x0005F8, "Member 'ABP_MasterLightActor_C::Socketed_VFX' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Emissive_Light_Transform) == 0x000610, "Member 'ABP_MasterLightActor_C::Emissive_Light_Transform' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Use_Sphere_Emissive) == 0x000670, "Member 'ABP_MasterLightActor_C::Use_Sphere_Emissive' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spherical_Emissive_Color) == 0x000674, "Member 'ABP_MasterLightActor_C::Spherical_Emissive_Color' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Sphere_Emissive_Material) == 0x000688, "Member 'ABP_MasterLightActor_C::Sphere_Emissive_Material' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Sphere_Emissive_DMI) == 0x000690, "Member 'ABP_MasterLightActor_C::Sphere_Emissive_DMI' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Use_Plane_Emissive) == 0x000698, "Member 'ABP_MasterLightActor_C::Use_Plane_Emissive' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_Color) == 0x00069C, "Member 'ABP_MasterLightActor_C::Plane_Emissive_Color' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_Transform) == 0x0006B0, "Member 'ABP_MasterLightActor_C::Plane_Emissive_Transform' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_Material) == 0x000710, "Member 'ABP_MasterLightActor_C::Plane_Emissive_Material' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_DMI) == 0x000718, "Member 'ABP_MasterLightActor_C::Plane_Emissive_DMI' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Component) == 0x000720, "Member 'ABP_MasterLightActor_C::Point_Light_Component' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, TOD_Visability) == 0x000728, "Member 'ABP_MasterLightActor_C::TOD_Visability' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Verra_World_Global_Sky) == 0x000730, "Member 'ABP_MasterLightActor_C::Verra_World_Global_Sky' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Transition_Speed) == 0x000738, "Member 'ABP_MasterLightActor_C::Transition_Speed' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Transition_Alpha) == 0x000740, "Member 'ABP_MasterLightActor_C::Transition_Alpha' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_Component) == 0x000748, "Member 'ABP_MasterLightActor_C::Plane_Emissive_Component' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Sphere_Emissive_Component) == 0x000750, "Member 'ABP_MasterLightActor_C::Sphere_Emissive_Component' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Mesh_DMIs) == 0x000758, "Member 'ABP_MasterLightActor_C::Mesh_DMIs' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Emissive_Strengths) == 0x000768, "Member 'ABP_MasterLightActor_C::Emissive_Strengths' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Shadow_Texture) == 0x000778, "Member 'ABP_MasterLightActor_C::Point_Light_Shadow_Texture' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Soft_Shadow_Amount) == 0x000780, "Member 'ABP_MasterLightActor_C::Soft_Shadow_Amount' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Soft_Shadow_Focus_Offset) == 0x000788, "Member 'ABP_MasterLightActor_C::Soft_Shadow_Focus_Offset' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Light_Flicker_Amount) == 0x000790, "Member 'ABP_MasterLightActor_C::Light_Flicker_Amount' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Function_DMI) == 0x000798, "Member 'ABP_MasterLightActor_C::Point_Light_Function_DMI' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Max_Draw_Distance) == 0x0007A0, "Member 'ABP_MasterLightActor_C::Spot_Max_Draw_Distance' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Spot_Max_Distance_Fade_Range) == 0x0007A4, "Member 'ABP_MasterLightActor_C::Spot_Max_Distance_Fade_Range' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Max_Draw_Distance) == 0x0007A8, "Member 'ABP_MasterLightActor_C::Point_Max_Draw_Distance' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Point_Max_Distance_Fade_Range) == 0x0007AC, "Member 'ABP_MasterLightActor_C::Point_Max_Distance_Fade_Range' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Ak_Event) == 0x0007B0, "Member 'ABP_MasterLightActor_C::Ak_Event' has a wrong offset!");
-static_assert(offsetof(ABP_MasterLightActor_C, Ak_Switch) == 0x0007B8, "Member 'ABP_MasterLightActor_C::Ak_Switch' has a wrong offset!");
+static_assert(sizeof(ABP_MasterLightActor_C) == 0x0008D0, "Wrong size on ABP_MasterLightActor_C");
+static_assert(offsetof(ABP_MasterLightActor_C, UberGraphFrame) == 0x000368, "Member 'ABP_MasterLightActor_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, MeshContainer) == 0x000370, "Member 'ABP_MasterLightActor_C::MeshContainer' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, LightContainer) == 0x000378, "Member 'ABP_MasterLightActor_C::LightContainer' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, DefaultSceneRoot) == 0x000380, "Member 'ABP_MasterLightActor_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, LightType) == 0x000388, "Member 'ABP_MasterLightActor_C::LightType' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Transform_Modifier) == 0x000390, "Member 'ABP_MasterLightActor_C::Point_Light_Transform_Modifier' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Light_Fixture_Component) == 0x0003F0, "Member 'ABP_MasterLightActor_C::Light_Fixture_Component' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Light_Fixture_Mesh) == 0x0003F8, "Member 'ABP_MasterLightActor_C::Light_Fixture_Mesh' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Support_Fixture_Component) == 0x000400, "Member 'ABP_MasterLightActor_C::Support_Fixture_Component' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Light_Fixture_Transform) == 0x000410, "Member 'ABP_MasterLightActor_C::Light_Fixture_Transform' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, bLightFixtureCastShadows) == 0x000470, "Member 'ABP_MasterLightActor_C::bLightFixtureCastShadows' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Support_Fixture_Mesh) == 0x000478, "Member 'ABP_MasterLightActor_C::Support_Fixture_Mesh' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Support_Fixture_Transform) == 0x000480, "Member 'ABP_MasterLightActor_C::Support_Fixture_Transform' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, bUsePointLight) == 0x0004E0, "Member 'ABP_MasterLightActor_C::bUsePointLight' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Intensity) == 0x0004E4, "Member 'ABP_MasterLightActor_C::Point_Light_Intensity' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Color) == 0x0004E8, "Member 'ABP_MasterLightActor_C::Point_Light_Color' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Temperature) == 0x0004F8, "Member 'ABP_MasterLightActor_C::Point_Temperature' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, bPointCastShadows) == 0x0004FC, "Member 'ABP_MasterLightActor_C::bPointCastShadows' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Attenuation_Radius) == 0x000500, "Member 'ABP_MasterLightActor_C::Point_Attenuation_Radius' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Source_Radius) == 0x000504, "Member 'ABP_MasterLightActor_C::Point_Source_Radius' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Soft_Source_Radius) == 0x000508, "Member 'ABP_MasterLightActor_C::Point_Soft_Source_Radius' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Volumetric_Scattering) == 0x00050C, "Member 'ABP_MasterLightActor_C::Point_Volumetric_Scattering' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Falloff_Exponent) == 0x000510, "Member 'ABP_MasterLightActor_C::Point_Light_Falloff_Exponent' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, bPointUseInverseSquareFalloff) == 0x000514, "Member 'ABP_MasterLightActor_C::bPointUseInverseSquareFalloff' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Light_Component) == 0x000518, "Member 'ABP_MasterLightActor_C::Spot_Light_Component' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Light_Transform_Modifier) == 0x000520, "Member 'ABP_MasterLightActor_C::Spot_Light_Transform_Modifier' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, bUseSpotLight) == 0x000580, "Member 'ABP_MasterLightActor_C::bUseSpotLight' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Intensity) == 0x000584, "Member 'ABP_MasterLightActor_C::Spot_Intensity' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Light_Color) == 0x000588, "Member 'ABP_MasterLightActor_C::Spot_Light_Color' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Temperature) == 0x000598, "Member 'ABP_MasterLightActor_C::Spot_Temperature' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, bSpotCastShadows) == 0x00059C, "Member 'ABP_MasterLightActor_C::bSpotCastShadows' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Attenuation_Radius) == 0x0005A0, "Member 'ABP_MasterLightActor_C::Spot_Attenuation_Radius' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Inner_Cone_Angle) == 0x0005A4, "Member 'ABP_MasterLightActor_C::Spot_Inner_Cone_Angle' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Outer_Cone_Angle) == 0x0005A8, "Member 'ABP_MasterLightActor_C::Spot_Outer_Cone_Angle' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Volumetric_Scattering) == 0x0005AC, "Member 'ABP_MasterLightActor_C::Spot_Volumetric_Scattering' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, bSpotInverseSquareFalloff) == 0x0005B0, "Member 'ABP_MasterLightActor_C::bSpotInverseSquareFalloff' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Light_Falloff_Exponent) == 0x0005B4, "Member 'ABP_MasterLightActor_C::Spot_Light_Falloff_Exponent' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, VFX_Components) == 0x0005B8, "Member 'ABP_MasterLightActor_C::VFX_Components' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Niagara_VFX) == 0x0005C8, "Member 'ABP_MasterLightActor_C::Niagara_VFX' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, VFX_Transform) == 0x0005D0, "Member 'ABP_MasterLightActor_C::VFX_Transform' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Scale) == 0x000630, "Member 'ABP_MasterLightActor_C::Scale' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Smoke_Spawn) == 0x000640, "Member 'ABP_MasterLightActor_C::Smoke_Spawn' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, VFX_Color) == 0x000644, "Member 'ABP_MasterLightActor_C::VFX_Color' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, VFX_Enclosed) == 0x000654, "Member 'ABP_MasterLightActor_C::VFX_Enclosed' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, bUseSphereEmissive) == 0x000658, "Member 'ABP_MasterLightActor_C::bUseSphereEmissive' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Emissive_Light_Transform) == 0x000660, "Member 'ABP_MasterLightActor_C::Emissive_Light_Transform' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spherical_Emissive_Color) == 0x0006C0, "Member 'ABP_MasterLightActor_C::Spherical_Emissive_Color' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Sphere_Emissive_Intensity) == 0x0006D0, "Member 'ABP_MasterLightActor_C::Sphere_Emissive_Intensity' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Sphere_Emissive_Material) == 0x0006D8, "Member 'ABP_MasterLightActor_C::Sphere_Emissive_Material' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Sphere_Emissive_DMI) == 0x0006E0, "Member 'ABP_MasterLightActor_C::Sphere_Emissive_DMI' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, bUsePlaneEmissive) == 0x0006E8, "Member 'ABP_MasterLightActor_C::bUsePlaneEmissive' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_Transform) == 0x0006F0, "Member 'ABP_MasterLightActor_C::Plane_Emissive_Transform' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_Color) == 0x000750, "Member 'ABP_MasterLightActor_C::Plane_Emissive_Color' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_Intensity) == 0x000760, "Member 'ABP_MasterLightActor_C::Plane_Emissive_Intensity' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_Material) == 0x000768, "Member 'ABP_MasterLightActor_C::Plane_Emissive_Material' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_DMI) == 0x000770, "Member 'ABP_MasterLightActor_C::Plane_Emissive_DMI' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Component) == 0x000778, "Member 'ABP_MasterLightActor_C::Point_Light_Component' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, bTODVisibility) == 0x000780, "Member 'ABP_MasterLightActor_C::bTODVisibility' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Verra_World_Global_Sky) == 0x000788, "Member 'ABP_MasterLightActor_C::Verra_World_Global_Sky' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Transition_Speed) == 0x000790, "Member 'ABP_MasterLightActor_C::Transition_Speed' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Transition_Alpha) == 0x000798, "Member 'ABP_MasterLightActor_C::Transition_Alpha' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Plane_Emissive_Component) == 0x0007A0, "Member 'ABP_MasterLightActor_C::Plane_Emissive_Component' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Sphere_Emissive_Component) == 0x0007A8, "Member 'ABP_MasterLightActor_C::Sphere_Emissive_Component' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Mesh_DMIs) == 0x0007B0, "Member 'ABP_MasterLightActor_C::Mesh_DMIs' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Emissive_Strengths) == 0x0007C0, "Member 'ABP_MasterLightActor_C::Emissive_Strengths' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Shadow_Texture) == 0x0007D0, "Member 'ABP_MasterLightActor_C::Point_Light_Shadow_Texture' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Soft_Shadow_Amount) == 0x0007D8, "Member 'ABP_MasterLightActor_C::Soft_Shadow_Amount' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Soft_Shadow_Focus_Offset) == 0x0007E0, "Member 'ABP_MasterLightActor_C::Soft_Shadow_Focus_Offset' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, LightFlickerAmount) == 0x0007E8, "Member 'ABP_MasterLightActor_C::LightFlickerAmount' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Function_DMI) == 0x0007F0, "Member 'ABP_MasterLightActor_C::Point_Light_Function_DMI' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Max_Draw_Distance) == 0x0007F8, "Member 'ABP_MasterLightActor_C::Spot_Max_Draw_Distance' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Max_Distance_Fade_Range) == 0x0007FC, "Member 'ABP_MasterLightActor_C::Spot_Max_Distance_Fade_Range' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Max_Draw_Distance) == 0x000800, "Member 'ABP_MasterLightActor_C::Point_Max_Draw_Distance' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Max_Distance_Fade_Range) == 0x000804, "Member 'ABP_MasterLightActor_C::Point_Max_Distance_Fade_Range' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Ak_Event) == 0x000808, "Member 'ABP_MasterLightActor_C::Ak_Event' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Ak_Switch) == 0x000810, "Member 'ABP_MasterLightActor_C::Ak_Switch' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, PointLight_InitialTranfrom) == 0x000818, "Member 'ABP_MasterLightActor_C::PointLight_InitialTranfrom' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, SpotLight_InitialTransfrom) == 0x000828, "Member 'ABP_MasterLightActor_C::SpotLight_InitialTransfrom' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, VFX_InitialTransform) == 0x000838, "Member 'ABP_MasterLightActor_C::VFX_InitialTransform' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, VFX_Transform_Modifier) == 0x000850, "Member 'ABP_MasterLightActor_C::VFX_Transform_Modifier' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Source_Radius) == 0x0008B0, "Member 'ABP_MasterLightActor_C::Spot_Source_Radius' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Spot_Soft_Source_Radius) == 0x0008B4, "Member 'ABP_MasterLightActor_C::Spot_Soft_Source_Radius' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Point_Light_Array) == 0x0008B8, "Member 'ABP_MasterLightActor_C::Point_Light_Array' has a wrong offset!");
+static_assert(offsetof(ABP_MasterLightActor_C, Mobility) == 0x0008C8, "Member 'ABP_MasterLightActor_C::Mobility' has a wrong offset!");
 
 }
 

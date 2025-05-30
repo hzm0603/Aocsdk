@@ -18,17 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_BuildingProgress.WBP_BuildingProgress_C
-// 0x0018 (0x0378 - 0x0360)
+// 0x0010 (0x05D8 - 0x05C8)
 class UWBP_BuildingProgress_C final : public UBuildingProgress
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 BuildingStateIcon;                                 // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ExperienceBarFrame;                                // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 ExperienceBarFrame;                                // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_BuildingProgress(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_BuildingProgress(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,10 +40,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_BuildingProgress_C) == 0x000008, "Wrong alignment on UWBP_BuildingProgress_C");
-static_assert(sizeof(UWBP_BuildingProgress_C) == 0x000378, "Wrong size on UWBP_BuildingProgress_C");
-static_assert(offsetof(UWBP_BuildingProgress_C, UberGraphFrame) == 0x000360, "Member 'UWBP_BuildingProgress_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_BuildingProgress_C, BuildingStateIcon) == 0x000368, "Member 'UWBP_BuildingProgress_C::BuildingStateIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_BuildingProgress_C, ExperienceBarFrame) == 0x000370, "Member 'UWBP_BuildingProgress_C::ExperienceBarFrame' has a wrong offset!");
+static_assert(sizeof(UWBP_BuildingProgress_C) == 0x0005D8, "Wrong size on UWBP_BuildingProgress_C");
+static_assert(offsetof(UWBP_BuildingProgress_C, UberGraphFrame) == 0x0005C8, "Member 'UWBP_BuildingProgress_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_BuildingProgress_C, ExperienceBarFrame) == 0x0005D0, "Member 'UWBP_BuildingProgress_C::ExperienceBarFrame' has a wrong offset!");
 
 }
 

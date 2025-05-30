@@ -18,18 +18,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass NPCPawn.NPCPawn_C
-// 0x0050 (0x1D30 - 0x1CE0)
+// 0x0060 (0x1D50 - 0x1CF0)
 class ANPCPawn_C : public ANPCCharacter
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1CE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNameplateComponent*                    Nameplate;                                         // 0x1CE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStateTreeComponent*                    StateTree;                                         // 0x1CF0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMapRegistrationComponentBP_C*          MapRegistrationComponentBP;                        // 0x1CF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        MinScalar;                                         // 0x1D00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxScalar;                                         // 0x1D08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         InteractableTargets;                               // 0x1D10(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TMulticastInlineDelegate<void(class FName Identifier, int32 Number, bool ResetAccumulator, bool ReRoll)> ConsumeAccumulatorCharge;                          // 0x1D20(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1CF0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNameplateComponent*                    Nameplate;                                         // 0x1CF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStateTreeComponent*                    StateTree;                                         // 0x1D00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMapRegistrationComponentBP_C*          MapRegistrationComponentBP;                        // 0x1D08(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        MinScalar;                                         // 0x1D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxScalar;                                         // 0x1D18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         InteractableTargets;                               // 0x1D20(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TMulticastInlineDelegate<void(class FName Identifier, int32 Number, bool ResetAccumulator, bool ReRoll)> ChargeAccumulator; // 0x1D30(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(double TargetValue, bool Permanent)> SetAccumulatorTarget;         // 0x1D40(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_NPCPawn(int32 EntryPoint);
@@ -46,15 +47,16 @@ public:
 	}
 };
 static_assert(alignof(ANPCPawn_C) == 0x000010, "Wrong alignment on ANPCPawn_C");
-static_assert(sizeof(ANPCPawn_C) == 0x001D30, "Wrong size on ANPCPawn_C");
-static_assert(offsetof(ANPCPawn_C, UberGraphFrame) == 0x001CE0, "Member 'ANPCPawn_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ANPCPawn_C, Nameplate) == 0x001CE8, "Member 'ANPCPawn_C::Nameplate' has a wrong offset!");
-static_assert(offsetof(ANPCPawn_C, StateTree) == 0x001CF0, "Member 'ANPCPawn_C::StateTree' has a wrong offset!");
-static_assert(offsetof(ANPCPawn_C, MapRegistrationComponentBP) == 0x001CF8, "Member 'ANPCPawn_C::MapRegistrationComponentBP' has a wrong offset!");
-static_assert(offsetof(ANPCPawn_C, MinScalar) == 0x001D00, "Member 'ANPCPawn_C::MinScalar' has a wrong offset!");
-static_assert(offsetof(ANPCPawn_C, MaxScalar) == 0x001D08, "Member 'ANPCPawn_C::MaxScalar' has a wrong offset!");
-static_assert(offsetof(ANPCPawn_C, InteractableTargets) == 0x001D10, "Member 'ANPCPawn_C::InteractableTargets' has a wrong offset!");
-static_assert(offsetof(ANPCPawn_C, ConsumeAccumulatorCharge) == 0x001D20, "Member 'ANPCPawn_C::ConsumeAccumulatorCharge' has a wrong offset!");
+static_assert(sizeof(ANPCPawn_C) == 0x001D50, "Wrong size on ANPCPawn_C");
+static_assert(offsetof(ANPCPawn_C, UberGraphFrame) == 0x001CF0, "Member 'ANPCPawn_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ANPCPawn_C, Nameplate) == 0x001CF8, "Member 'ANPCPawn_C::Nameplate' has a wrong offset!");
+static_assert(offsetof(ANPCPawn_C, StateTree) == 0x001D00, "Member 'ANPCPawn_C::StateTree' has a wrong offset!");
+static_assert(offsetof(ANPCPawn_C, MapRegistrationComponentBP) == 0x001D08, "Member 'ANPCPawn_C::MapRegistrationComponentBP' has a wrong offset!");
+static_assert(offsetof(ANPCPawn_C, MinScalar) == 0x001D10, "Member 'ANPCPawn_C::MinScalar' has a wrong offset!");
+static_assert(offsetof(ANPCPawn_C, MaxScalar) == 0x001D18, "Member 'ANPCPawn_C::MaxScalar' has a wrong offset!");
+static_assert(offsetof(ANPCPawn_C, InteractableTargets) == 0x001D20, "Member 'ANPCPawn_C::InteractableTargets' has a wrong offset!");
+static_assert(offsetof(ANPCPawn_C, ChargeAccumulator) == 0x001D30, "Member 'ANPCPawn_C::ChargeAccumulator' has a wrong offset!");
+static_assert(offsetof(ANPCPawn_C, SetAccumulatorTarget) == 0x001D40, "Member 'ANPCPawn_C::SetAccumulatorTarget' has a wrong offset!");
 
 }
 

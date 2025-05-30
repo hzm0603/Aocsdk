@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Bandit_Arsonist_StateTree_classes.hpp"
+#include "Bandit_Arsonist_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Scholar_Arsonist_Recipient.Scholar_Arsonist_Recipient_C
-// 0x0000 (0x1DB0 - 0x1DB0)
-class AScholar_Arsonist_Recipient_C final : public ABandit_Arsonist_StateTree_C
+// 0x0000 (0x1D70 - 0x1D70)
+class AScholar_Arsonist_Recipient_C final : public ABandit_Arsonist_C
 {
 public:
 	static class UClass* StaticClass()
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AScholar_Arsonist_Recipient_C) == 0x000010, "Wrong alignment on AScholar_Arsonist_Recipient_C");
-static_assert(sizeof(AScholar_Arsonist_Recipient_C) == 0x001DB0, "Wrong size on AScholar_Arsonist_Recipient_C");
+static_assert(sizeof(AScholar_Arsonist_Recipient_C) == 0x001D70, "Wrong size on AScholar_Arsonist_Recipient_C");
 
 }
 

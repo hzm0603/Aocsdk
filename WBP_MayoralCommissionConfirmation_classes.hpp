@@ -17,15 +17,9 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MayoralCommissionConfirmation.WBP_MayoralCommissionConfirmation_C
-// 0x0020 (0x0330 - 0x0310)
+// 0x0000 (0x0328 - 0x0328)
 class UWBP_MayoralCommissionConfirmation_C final : public UMayoralCommissionConfirmation
 {
-public:
-	class UCommonRichTextBlock*                   CommissionMessagingTextBlock;                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ConfirmationButtonBar_C*           ConfirmationButtonBar;                             // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ItemIcon_C*                        WBP_ItemIcon;                                      // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ItemIcon_C*                        WBP_ItemIcon_2;                                    // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -37,11 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MayoralCommissionConfirmation_C) == 0x000008, "Wrong alignment on UWBP_MayoralCommissionConfirmation_C");
-static_assert(sizeof(UWBP_MayoralCommissionConfirmation_C) == 0x000330, "Wrong size on UWBP_MayoralCommissionConfirmation_C");
-static_assert(offsetof(UWBP_MayoralCommissionConfirmation_C, CommissionMessagingTextBlock) == 0x000310, "Member 'UWBP_MayoralCommissionConfirmation_C::CommissionMessagingTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionConfirmation_C, ConfirmationButtonBar) == 0x000318, "Member 'UWBP_MayoralCommissionConfirmation_C::ConfirmationButtonBar' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionConfirmation_C, WBP_ItemIcon) == 0x000320, "Member 'UWBP_MayoralCommissionConfirmation_C::WBP_ItemIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionConfirmation_C, WBP_ItemIcon_2) == 0x000328, "Member 'UWBP_MayoralCommissionConfirmation_C::WBP_ItemIcon_2' has a wrong offset!");
+static_assert(sizeof(UWBP_MayoralCommissionConfirmation_C) == 0x000328, "Wrong size on UWBP_MayoralCommissionConfirmation_C");
 
 }
 

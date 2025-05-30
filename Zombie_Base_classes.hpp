@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Zombie_Base.Zombie_Base_C
-// 0x0010 (0x1DA0 - 0x1D90)
+// 0x0010 (0x1D60 - 0x1D50)
 #pragma pack(push, 0x1)
 class alignas(0x10) AZombie_Base_C : public ANPCPawn_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Zombie_Base_C;                      // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Zombie_Base_C;                      // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_Zombie_Base(int32 EntryPoint);
@@ -41,8 +41,8 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AZombie_Base_C) == 0x000010, "Wrong alignment on AZombie_Base_C");
-static_assert(sizeof(AZombie_Base_C) == 0x001DA0, "Wrong size on AZombie_Base_C");
-static_assert(offsetof(AZombie_Base_C, UberGraphFrame_Zombie_Base_C) == 0x001D90, "Member 'AZombie_Base_C::UberGraphFrame_Zombie_Base_C' has a wrong offset!");
+static_assert(sizeof(AZombie_Base_C) == 0x001D60, "Wrong size on AZombie_Base_C");
+static_assert(offsetof(AZombie_Base_C, UberGraphFrame_Zombie_Base_C) == 0x001D50, "Member 'AZombie_Base_C::UberGraphFrame_Zombie_Base_C' has a wrong offset!");
 
 }
 

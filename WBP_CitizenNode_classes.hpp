@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CitizenNode.WBP_CitizenNode_C
-// 0x0000 (0x0390 - 0x0390)
+// 0x0000 (0x0380 - 0x0380)
 class UWBP_CitizenNode_C final : public UCitizenNode
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CitizenNode_C) == 0x000008, "Wrong alignment on UWBP_CitizenNode_C");
-static_assert(sizeof(UWBP_CitizenNode_C) == 0x000390, "Wrong size on UWBP_CitizenNode_C");
+static_assert(sizeof(UWBP_CitizenNode_C) == 0x000380, "Wrong size on UWBP_CitizenNode_C");
 
 }
 

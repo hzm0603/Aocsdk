@@ -18,22 +18,28 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_FastCraftingMenu.WBP_FastCraftingMenu_C
-// 0x0048 (0x04F8 - 0x04B0)
+// 0x0078 (0x0558 - 0x04E0)
 class UWBP_FastCraftingMenu_C final : public UFastCraftingMenu
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAoCCommonTextBlock*                    RequirementsTextBlock;                             // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PossibleProcessingItem_C*          WBP_PossibleProcessingItem;                        // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PossibleProcessingItem_C*          WBP_PossibleProcessingItem_1;                      // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WBP_ScrollWindow_NoFrameNoPadding;                 // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class FText>                           CraftableCategoryDesignTimeText;                   // 0x04D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class FText>                           CraftableItemsDesignTimeText;                      // 0x04E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          HeaderBG;                                          // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          HeaderBG2;                                         // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   IngredientsScrollArea;                             // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemIcon_C*                        ItemIcon;                                          // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    ItemNameTextBlock;                                 // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    ItemTypeTextBlock;                                 // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    RequirementsTextBlock;                             // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PossibleProcessingItem_C*          WBP_PossibleProcessingItem;                        // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PossibleProcessingItem_C*          WBP_PossibleProcessingItem_1;                      // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WBP_ScrollWindow_NoFrameNoPadding;                 // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class FText>                           CraftableCategoryDesignTimeText;                   // 0x0538(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class FText>                           CraftableItemsDesignTimeText;                      // 0x0548(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void Add_Materials();
-	void ExecuteUbergraph_WBP_FastCraftingMenu(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_FastCraftingMenu(int32 EntryPoint);
+	void Add_Materials();
 
 public:
 	static class UClass* StaticClass()
@@ -46,14 +52,20 @@ public:
 	}
 };
 static_assert(alignof(UWBP_FastCraftingMenu_C) == 0x000008, "Wrong alignment on UWBP_FastCraftingMenu_C");
-static_assert(sizeof(UWBP_FastCraftingMenu_C) == 0x0004F8, "Wrong size on UWBP_FastCraftingMenu_C");
-static_assert(offsetof(UWBP_FastCraftingMenu_C, UberGraphFrame) == 0x0004B0, "Member 'UWBP_FastCraftingMenu_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_FastCraftingMenu_C, RequirementsTextBlock) == 0x0004B8, "Member 'UWBP_FastCraftingMenu_C::RequirementsTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_FastCraftingMenu_C, WBP_PossibleProcessingItem) == 0x0004C0, "Member 'UWBP_FastCraftingMenu_C::WBP_PossibleProcessingItem' has a wrong offset!");
-static_assert(offsetof(UWBP_FastCraftingMenu_C, WBP_PossibleProcessingItem_1) == 0x0004C8, "Member 'UWBP_FastCraftingMenu_C::WBP_PossibleProcessingItem_1' has a wrong offset!");
-static_assert(offsetof(UWBP_FastCraftingMenu_C, WBP_ScrollWindow_NoFrameNoPadding) == 0x0004D0, "Member 'UWBP_FastCraftingMenu_C::WBP_ScrollWindow_NoFrameNoPadding' has a wrong offset!");
-static_assert(offsetof(UWBP_FastCraftingMenu_C, CraftableCategoryDesignTimeText) == 0x0004D8, "Member 'UWBP_FastCraftingMenu_C::CraftableCategoryDesignTimeText' has a wrong offset!");
-static_assert(offsetof(UWBP_FastCraftingMenu_C, CraftableItemsDesignTimeText) == 0x0004E8, "Member 'UWBP_FastCraftingMenu_C::CraftableItemsDesignTimeText' has a wrong offset!");
+static_assert(sizeof(UWBP_FastCraftingMenu_C) == 0x000558, "Wrong size on UWBP_FastCraftingMenu_C");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, UberGraphFrame) == 0x0004E0, "Member 'UWBP_FastCraftingMenu_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, HeaderBG) == 0x0004E8, "Member 'UWBP_FastCraftingMenu_C::HeaderBG' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, HeaderBG2) == 0x0004F0, "Member 'UWBP_FastCraftingMenu_C::HeaderBG2' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, IngredientsScrollArea) == 0x0004F8, "Member 'UWBP_FastCraftingMenu_C::IngredientsScrollArea' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, ItemIcon) == 0x000500, "Member 'UWBP_FastCraftingMenu_C::ItemIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, ItemNameTextBlock) == 0x000508, "Member 'UWBP_FastCraftingMenu_C::ItemNameTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, ItemTypeTextBlock) == 0x000510, "Member 'UWBP_FastCraftingMenu_C::ItemTypeTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, RequirementsTextBlock) == 0x000518, "Member 'UWBP_FastCraftingMenu_C::RequirementsTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, WBP_PossibleProcessingItem) == 0x000520, "Member 'UWBP_FastCraftingMenu_C::WBP_PossibleProcessingItem' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, WBP_PossibleProcessingItem_1) == 0x000528, "Member 'UWBP_FastCraftingMenu_C::WBP_PossibleProcessingItem_1' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, WBP_ScrollWindow_NoFrameNoPadding) == 0x000530, "Member 'UWBP_FastCraftingMenu_C::WBP_ScrollWindow_NoFrameNoPadding' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, CraftableCategoryDesignTimeText) == 0x000538, "Member 'UWBP_FastCraftingMenu_C::CraftableCategoryDesignTimeText' has a wrong offset!");
+static_assert(offsetof(UWBP_FastCraftingMenu_C, CraftableItemsDesignTimeText) == 0x000548, "Member 'UWBP_FastCraftingMenu_C::CraftableItemsDesignTimeText' has a wrong offset!");
 
 }
 

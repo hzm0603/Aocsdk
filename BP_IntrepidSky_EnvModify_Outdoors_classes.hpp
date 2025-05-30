@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "S_EnvironmentSettings_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "S_EnvironmentSettingsSwitches_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "S_EnvironmentSettings_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
-#include "S_EnvironmentSettingsSwitches_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -82,26 +82,26 @@ public:
 	class UMaterialInstanceDynamic*               PPV_LUT_MID;                                       // 0x18C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AllowTrigger();
-	void Clear_Spline_Settings_In_IntrepidSky();
-	void Editor_Compute_Blend();
-	void ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors(int32 EntryPoint);
-	void OnAudioActivated();
-	void OnAudioDeactivated();
-	void PostNodeInit();
-	void PPV_Blend(float Blend_Weight, bool Set_Enabled);
-	void PreviewModifications();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void Refresh_Preview();
-	void RevertToWorldDefaults();
-	void Set_Master_Value(double Master_Value_0);
-	void Set_Spline_Settings_In_IntrepidSky();
-	void Set_Transition_Value_In_IntrepidSky(double Value);
-	void Start_Previewing();
-	void Stop_Previewing();
-	void Update_Blending_Editor_Time();
 	void UserConstructionScript();
+	void Update_Blending_Editor_Time();
+	void Stop_Previewing();
+	void Start_Previewing();
+	void Set_Transition_Value_In_IntrepidSky(double Value);
+	void Set_Spline_Settings_In_IntrepidSky();
+	void Set_Master_Value(double Master_Value_0);
+	void RevertToWorldDefaults();
+	void Refresh_Preview();
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void PreviewModifications();
+	void PPV_Blend(float Blend_Weight, bool Set_Enabled);
+	void PostNodeInit();
+	void OnAudioDeactivated();
+	void OnAudioActivated();
+	void ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors(int32 EntryPoint);
+	void Editor_Compute_Blend();
+	void Clear_Spline_Settings_In_IntrepidSky();
+	void AllowTrigger();
 
 public:
 	static class UClass* StaticClass()

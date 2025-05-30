@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "DatasmithContent_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "DatasmithContent_structs.hpp"
 
 
 namespace SDK
@@ -536,7 +536,7 @@ static_assert(offsetof(UDatasmithAssetUserData, MetaData) == 0x000048, "Member '
 class UDatasmithCineCameraActorTemplate final : public UDatasmithObjectTemplate
 {
 public:
-	struct FDatasmithCameraLookatTrackingSettingsTemplate LookatTrackingSettings;                            // 0x0050(0x0030)(NativeAccessSpecifierPublic)
+	struct FDatasmithCameraLookatTrackingSettingsTemplate LookatTrackingSettings;                    // 0x0050(0x0030)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -557,7 +557,7 @@ static_assert(offsetof(UDatasmithCineCameraActorTemplate, LookatTrackingSettings
 class UDatasmithCineCameraComponentTemplate final : public UDatasmithObjectTemplate
 {
 public:
-	struct FDatasmithCameraFilmbackSettingsTemplate FilmbackSettings;                                  // 0x0050(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FDatasmithCameraFilmbackSettingsTemplate FilmbackSettings;                                // 0x0050(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
 	struct FDatasmithCameraLensSettingsTemplate   LensSettings;                                      // 0x0058(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
 	struct FDatasmithCameraFocusSettingsTemplate  FocusSettings;                                     // 0x005C(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
 	float                                         CurrentFocalLength;                                // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -833,7 +833,7 @@ public:
 	TSoftObjectPtr<class UMaterialInterface>      ParentMaterial;                                    // 0x0050(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FName, float>                      ScalarParameterValues;                             // 0x0078(0x0050)(NativeAccessSpecifierPublic)
 	TMap<class FName, struct FLinearColor>        VectorParameterValues;                             // 0x00C8(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, TSoftObjectPtr<class UTexture>> TextureParameterValues;                            // 0x0118(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<class FName, TSoftObjectPtr<class UTexture>> TextureParameterValues;                        // 0x0118(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
 	struct FDatasmithStaticParameterSetTemplate   StaticParameters;                                  // 0x0168(0x0050)(NativeAccessSpecifierPublic)
 
 public:
@@ -932,7 +932,7 @@ class ADatasmithSceneActor final : public AActor
 {
 public:
 	class UDatasmithScene*                        Scene;                                             // 0x0348(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, TSoftObjectPtr<class AActor>> RelatedActors;                                     // 0x0350(0x0050)(Edit, EditConst, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<class FName, TSoftObjectPtr<class AActor>> RelatedActors;                                   // 0x0350(0x0050)(Edit, EditConst, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1063,8 +1063,8 @@ public:
 	struct FDatasmithMeshSectionInfoMapTemplate   SectionInfoMap;                                    // 0x0050(0x0050)(Edit, EditConst, NativeAccessSpecifierPublic)
 	int32                                         LightMapCoordinateIndex;                           // 0x00A0(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LightMapResolution;                                // 0x00A4(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FDatasmithMeshBuildSettingsTemplate> BuildSettings;                                     // 0x00A8(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FDatasmithStaticMaterialTemplate> StaticMaterials;                                   // 0x00B8(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FDatasmithMeshBuildSettingsTemplate> BuildSettings;                                // 0x00A8(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FDatasmithStaticMaterialTemplate> StaticMaterials;                                 // 0x00B8(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

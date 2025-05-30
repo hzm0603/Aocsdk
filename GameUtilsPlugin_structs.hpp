@@ -46,52 +46,61 @@ enum class EVertexRenderType : uint8
 	EVertexRenderType_MAX                    = 4,
 };
 
+// ScriptStruct GameUtilsPlugin.NamedTextArg
+// 0x0020 (0x0020 - 0x0000)
+struct FNamedTextArg final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Value;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FNamedTextArg) == 0x000008, "Wrong alignment on FNamedTextArg");
+static_assert(sizeof(FNamedTextArg) == 0x000020, "Wrong size on FNamedTextArg");
+static_assert(offsetof(FNamedTextArg, Key) == 0x000000, "Member 'FNamedTextArg::Key' has a wrong offset!");
+static_assert(offsetof(FNamedTextArg, Value) == 0x000010, "Member 'FNamedTextArg::Value' has a wrong offset!");
+
 // ScriptStruct GameUtilsPlugin.TextLookupArg
-// 0x0010 (0x0010 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct FTextLookupArg final
 {
 public:
-	class FName                                   TableId;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Key;                                               // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TableId;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Key;                                               // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTextLookupArg) == 0x000004, "Wrong alignment on FTextLookupArg");
-static_assert(sizeof(FTextLookupArg) == 0x000010, "Wrong size on FTextLookupArg");
+static_assert(alignof(FTextLookupArg) == 0x000008, "Wrong alignment on FTextLookupArg");
+static_assert(sizeof(FTextLookupArg) == 0x000020, "Wrong size on FTextLookupArg");
 static_assert(offsetof(FTextLookupArg, TableId) == 0x000000, "Member 'FTextLookupArg::TableId' has a wrong offset!");
-static_assert(offsetof(FTextLookupArg, Key) == 0x000008, "Member 'FTextLookupArg::Key' has a wrong offset!");
+static_assert(offsetof(FTextLookupArg, Key) == 0x000010, "Member 'FTextLookupArg::Key' has a wrong offset!");
+
+// ScriptStruct GameUtilsPlugin.NamedTextLookupArg
+// 0x0030 (0x0030 - 0x0000)
+struct FNamedTextLookupArg final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTextLookupArg                         Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FNamedTextLookupArg) == 0x000008, "Wrong alignment on FNamedTextLookupArg");
+static_assert(sizeof(FNamedTextLookupArg) == 0x000030, "Wrong size on FNamedTextLookupArg");
+static_assert(offsetof(FNamedTextLookupArg, Key) == 0x000000, "Member 'FNamedTextLookupArg::Key' has a wrong offset!");
+static_assert(offsetof(FNamedTextLookupArg, Value) == 0x000010, "Member 'FNamedTextLookupArg::Value' has a wrong offset!");
 
 // ScriptStruct GameUtilsPlugin.LocalizedMessage
-// 0x00B0 (0x00B0 - 0x0000)
-struct alignas(0x08) FLocalizedMessage final
+// 0x0040 (0x0040 - 0x0000)
+struct FLocalizedMessage final
 {
 public:
-	class FName                                   StringTableId;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Key;                                               // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0xA0];                                      // 0x0010(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 StringTableId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Key;                                               // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FNamedTextArg>                  FormatArgs;                                        // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FNamedTextLookupArg>            LookupArgs;                                        // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FLocalizedMessage) == 0x000008, "Wrong alignment on FLocalizedMessage");
-static_assert(sizeof(FLocalizedMessage) == 0x0000B0, "Wrong size on FLocalizedMessage");
+static_assert(sizeof(FLocalizedMessage) == 0x000040, "Wrong size on FLocalizedMessage");
 static_assert(offsetof(FLocalizedMessage, StringTableId) == 0x000000, "Member 'FLocalizedMessage::StringTableId' has a wrong offset!");
-static_assert(offsetof(FLocalizedMessage, Key) == 0x000008, "Member 'FLocalizedMessage::Key' has a wrong offset!");
-
-// ScriptStruct GameUtilsPlugin.OctreeTreeNode
-// 0x00B8 (0x00B8 - 0x0000)
-struct alignas(0x08) FOctreeTreeNode final
-{
-public:
-	uint8                                         Pad_0[0xB8];                                       // 0x0000(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FOctreeTreeNode) == 0x000008, "Wrong alignment on FOctreeTreeNode");
-static_assert(sizeof(FOctreeTreeNode) == 0x0000B8, "Wrong size on FOctreeTreeNode");
-
-// ScriptStruct GameUtilsPlugin.AoCTargetInfo
-// 0x0050 (0x0050 - 0x0000)
-struct alignas(0x08) FAoCTargetInfo final
-{
-public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAoCTargetInfo) == 0x000008, "Wrong alignment on FAoCTargetInfo");
-static_assert(sizeof(FAoCTargetInfo) == 0x000050, "Wrong size on FAoCTargetInfo");
+static_assert(offsetof(FLocalizedMessage, Key) == 0x000010, "Member 'FLocalizedMessage::Key' has a wrong offset!");
+static_assert(offsetof(FLocalizedMessage, FormatArgs) == 0x000020, "Member 'FLocalizedMessage::FormatArgs' has a wrong offset!");
+static_assert(offsetof(FLocalizedMessage, LookupArgs) == 0x000030, "Member 'FLocalizedMessage::LookupArgs' has a wrong offset!");
 
 // ScriptStruct GameUtilsPlugin.CyclicalTime
 // 0x0004 (0x0004 - 0x0000)
@@ -117,6 +126,16 @@ static_assert(sizeof(FCyclicalTimeWithWorldContext) == 0x000008, "Wrong size on 
 static_assert(offsetof(FCyclicalTimeWithWorldContext, CyclicalTime) == 0x000000, "Member 'FCyclicalTimeWithWorldContext::CyclicalTime' has a wrong offset!");
 static_assert(offsetof(FCyclicalTimeWithWorldContext, NoRep_WorldContextTime) == 0x000004, "Member 'FCyclicalTimeWithWorldContext::NoRep_WorldContextTime' has a wrong offset!");
 
+// ScriptStruct GameUtilsPlugin.AoCTargetInfo
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x08) FAoCTargetInfo final
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAoCTargetInfo) == 0x000008, "Wrong alignment on FAoCTargetInfo");
+static_assert(sizeof(FAoCTargetInfo) == 0x000050, "Wrong size on FAoCTargetInfo");
+
 // ScriptStruct GameUtilsPlugin.IntrepidBitArray
 // 0x0010 (0x0010 - 0x0000)
 struct alignas(0x08) FIntrepidBitArray final
@@ -136,6 +155,16 @@ public:
 };
 static_assert(alignof(FOctreeNode) == 0x000010, "Wrong alignment on FOctreeNode");
 static_assert(sizeof(FOctreeNode) == 0x0000A0, "Wrong size on FOctreeNode");
+
+// ScriptStruct GameUtilsPlugin.OctreeTreeNode
+// 0x00B8 (0x00B8 - 0x0000)
+struct alignas(0x08) FOctreeTreeNode final
+{
+public:
+	uint8                                         Pad_0[0xB8];                                       // 0x0000(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FOctreeTreeNode) == 0x000008, "Wrong alignment on FOctreeTreeNode");
+static_assert(sizeof(FOctreeTreeNode) == 0x0000B8, "Wrong size on FOctreeTreeNode");
 
 // ScriptStruct GameUtilsPlugin.Octree
 // 0x01B0 (0x01B0 - 0x0000)

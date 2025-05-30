@@ -31,73 +31,92 @@ static_assert(sizeof(WBP_BuckFloatingText_C_ExecuteUbergraph_WBP_BuckFloatingTex
 static_assert(offsetof(WBP_BuckFloatingText_C_ExecuteUbergraph_WBP_BuckFloatingText, EntryPoint) == 0x000000, "Member 'WBP_BuckFloatingText_C_ExecuteUbergraph_WBP_BuckFloatingText::EntryPoint' has a wrong offset!");
 
 // Function WBP_BuckFloatingText.WBP_BuckFloatingText_C.GetFloaterBaseOffset
-// 0x0110 (0x0110 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct WBP_BuckFloatingText_C_GetFloaterBaseOffset final
 {
 public:
 	class AActor*                                 Owner_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          isText;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Hitting;                                           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          hitting;                                           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsHealing;                                         // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          resist;                                            // 0x000B(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Offset_0;                                          // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetMeshComponent_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable;                                // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable;                                // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetMeshComponent_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector_X;                            // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_1;                              // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default;                             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_2;                              // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_1;                           // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_2;                              // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_2;                           // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default;                             // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_3;                              // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default_1;                           // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default_2;                           // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_4;                              // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default_3;                           // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default_4;                           // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_BuckFloatingText_C_GetFloaterBaseOffset) == 0x000008, "Wrong alignment on WBP_BuckFloatingText_C_GetFloaterBaseOffset");
-static_assert(sizeof(WBP_BuckFloatingText_C_GetFloaterBaseOffset) == 0x000110, "Wrong size on WBP_BuckFloatingText_C_GetFloaterBaseOffset");
+static_assert(sizeof(WBP_BuckFloatingText_C_GetFloaterBaseOffset) == 0x000148, "Wrong size on WBP_BuckFloatingText_C_GetFloaterBaseOffset");
 static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Owner_0) == 0x000000, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Owner_0' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, isText) == 0x000008, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::isText' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Hitting) == 0x000009, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Hitting' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, hitting) == 0x000009, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::hitting' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, IsHealing) == 0x00000A, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::IsHealing' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, resist) == 0x00000B, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::resist' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Offset_0) == 0x000010, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Offset_0' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_bool_Variable) == 0x000028, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_GetMeshComponent_ReturnValue) == 0x000030, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_GetMeshComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_GetComponentBounds_Origin) == 0x000038, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_GetComponentBounds_Origin' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_GetComponentBounds_BoxExtent) == 0x000050, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_GetComponentBounds_BoxExtent' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_GetComponentBounds_SphereRadius) == 0x000068, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_GetComponentBounds_SphereRadius' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_real_Variable) == 0x000070, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_real_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_BreakVector_X) == 0x000078, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_BreakVector_Y) == 0x000080, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_BreakVector_Z) == 0x000088, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000090, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_real_Variable) == 0x000028, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_BooleanAND_ReturnValue) == 0x000030, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_GetMeshComponent_ReturnValue) == 0x000038, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_GetMeshComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_bool_Variable) == 0x000040, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_GetComponentBounds_Origin) == 0x000048, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_GetComponentBounds_Origin' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_GetComponentBounds_BoxExtent) == 0x000060, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_GetComponentBounds_BoxExtent' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_GetComponentBounds_SphereRadius) == 0x000078, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_GetComponentBounds_SphereRadius' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_BreakVector_X) == 0x000080, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_BreakVector_Y) == 0x000088, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_BreakVector_Z) == 0x000090, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_BreakVector_Z' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_real_Variable_1) == 0x000098, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_real_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_MapRangeClamped_ReturnValue) == 0x0000A0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_bool_Variable_1) == 0x0000A8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, K2Node_Select_Default) == 0x0000B0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_bool_Variable_2) == 0x0000B8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, K2Node_Select_Default_1) == 0x0000C0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_real_Variable_2) == 0x0000C8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_real_Variable_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, K2Node_Select_Default_2) == 0x0000D0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000D8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_MakeVector_ReturnValue) == 0x0000E0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_Add_VectorVector_ReturnValue) == 0x0000F8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000A0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_MapRangeClamped_ReturnValue) == 0x0000A8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_real_Variable_2) == 0x0000B0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_real_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_bool_Variable_1) == 0x0000B8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, K2Node_Select_Default) == 0x0000C0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_real_Variable_3) == 0x0000C8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_real_Variable_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_bool_Variable_2) == 0x0000D0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, K2Node_Select_Default_1) == 0x0000D8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_bool_Variable_3) == 0x0000E0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, K2Node_Select_Default_2) == 0x0000E8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_real_Variable_4) == 0x0000F0, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_real_Variable_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, Temp_bool_Variable_4) == 0x0000F8, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, K2Node_Select_Default_3) == 0x000100, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, K2Node_Select_Default_4) == 0x000108, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::K2Node_Select_Default_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000110, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_MakeVector_ReturnValue) == 0x000118, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_GetFloaterBaseOffset, CallFunc_Add_VectorVector_ReturnValue) == 0x000130, "Member 'WBP_BuckFloatingText_C_GetFloaterBaseOffset::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
 
 // Function WBP_BuckFloatingText.WBP_BuckFloatingText_C.SetFloater
-// 0x0410 (0x0410 - 0x0000)
+// 0x0568 (0x0568 - 0x0000)
 struct WBP_BuckFloatingText_C_SetFloater final
 {
 public:
@@ -105,7 +124,9 @@ public:
 	bool                                          isCrit;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          isMiss;                                            // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          isBlock;                                           // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          isResist;                                          // 0x000B(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isImmune;                                          // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         StatModGuid_0;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Value_0;                                           // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        RawValue;                                          // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -114,107 +135,146 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         statGuid;                                          // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 Str;                                               // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          weaponHit;                                         // 0x0050(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isPhysical;                                        // 0x0051(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isMagical;                                         // 0x0052(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0018)()
 	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue_1;      // 0x0073(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Abs_ReturnValue;                          // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FMax_ReturnValue;                         // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetFloaterBaseOffset_offset;              // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x00C0(0x0018)()
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData;     // 0x00E0(0x0050)(HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13D[0x3];                                      // 0x013D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Temp_string_Variable;                              // 0x0140(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_1;                            // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_Select_Default;                             // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable;                                // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0180(0x0018)()
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_1;   // 0x0198(0x0050)(HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_1;                              // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_2;                              // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_5;                              // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_1;                           // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_3;                              // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_2;                           // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0220(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_4;                              // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_2;                            // 0x0238(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_3;                           // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_3;                            // 0x0250(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_6;                              // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_Select_Default_4;                           // 0x0268(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UWBP_BuckFloatingTextManager_C*         K2Node_DynamicCast_AsWBP_Buck_Floating_Text_Manager; // 0x0278(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x0288(0x0018)()
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_2;   // 0x02A0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array;                  // 0x02F0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0300(0x0018)()
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_5;                           // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Add_Vector2DVector2D_ReturnValue;         // 0x0350(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Add_Vector2DVector2D_ReturnValue_1;       // 0x0368(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x0380(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default_6;                           // 0x0390(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_8;                              // 0x0394(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_395[0x3];                                      // 0x0395(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_5;                              // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Default_7;                           // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A4[0x4];                                      // 0x03A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_6;                              // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_9;                              // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x00B0(0x0018)()
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData;     // 0x00D0(0x0050)(HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x0122(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_5;                  // 0x0123(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetFloaterBaseOffset_offset;              // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Temp_string_Variable;                              // 0x0148(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_1;                            // 0x0158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_Select_Default;                             // 0x0170(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0188(0x0018)()
+	int32                                         Temp_int_Variable;                                 // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_1;   // 0x01A8(0x0050)(HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x01FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1FD[0x3];                                      // 0x01FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Temp_string_Variable_2;                            // 0x0200(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_3;                            // 0x0210(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_Select_Default_1;                           // 0x0228(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x0238(0x0018)()
+	double                                        Temp_real_Variable;                                // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_2;   // 0x0258(0x0050)(HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_6;                              // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_1;                              // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_2;                              // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default_2;                           // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_3;                              // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default_3;                           // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_4;                              // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default_4;                           // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default_5;                           // 0x02F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F4[0x4];                                      // 0x02F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x02F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_BuckFloatingTextManager_C*         K2Node_DynamicCast_AsWBP_Buck_Floating_Text_Manager; // 0x0308(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_8;                              // 0x0311(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_312[0x6];                                      // 0x0312(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_5;                              // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_6;                              // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_9;                              // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Temp_string_Variable_4;                            // 0x0368(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default_6;                           // 0x0378(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_5;                            // 0x0380(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_10;                             // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_Select_Default_7;                           // 0x0398(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UWBP_BuckFloatingTextManager_C*         K2Node_DynamicCast_AsWBP_Buck_Floating_Text_Manager_1; // 0x03A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3B1[0x7];                                      // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_8;                           // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       K2Node_Select_Default_9;                           // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x03C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x03D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Option_0_ImplicitCast;               // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_ScrollSpeed_ImplicitCast;       // 0x03F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Option_0_ImplicitCast_1;             // 0x0400(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast; // 0x0404(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast_1; // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x03B8(0x0018)()
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_3;   // 0x03D0(0x0050)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array;                  // 0x0420(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0430(0x0018)()
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default_8;                           // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x0458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_9;                           // 0x0460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_Add_Vector2DVector2D_ReturnValue;         // 0x0468(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Add_Vector2DVector2D_ReturnValue_1;       // 0x0478(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_7;                              // 0x0488(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_11;                             // 0x0490(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_491[0x3];                                      // 0x0491(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           Temp_struct_Variable;                              // 0x0494(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A4[0x4];                                      // 0x04A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default_10;                          // 0x04A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x04B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x04C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_12;                             // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D1[0x3];                                      // 0x04D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           Temp_struct_Variable_2;                            // 0x04D4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_Select_Default_11;                          // 0x04E4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Temp_struct_Variable_3;                            // 0x04F4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_13;                             // 0x0504(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_505[0x3];                                      // 0x0505(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           K2Node_Select_Default_12;                          // 0x0508(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       K2Node_Select_Default_13;                          // 0x0518(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0520(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0528(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_B_ImplicitCast;               // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast; // 0x0538(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast_1; // 0x053C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_UpdateRunningAvgBP_avg_ImplicitCast;      // 0x0540(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Option_0_ImplicitCast;               // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0550(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0558(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_ScrollSpeed_ImplicitCast;       // 0x0560(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Option_1_ImplicitCast;               // 0x0564(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_BuckFloatingText_C_SetFloater) == 0x000008, "Wrong alignment on WBP_BuckFloatingText_C_SetFloater");
-static_assert(sizeof(WBP_BuckFloatingText_C_SetFloater) == 0x000410, "Wrong size on WBP_BuckFloatingText_C_SetFloater");
+static_assert(sizeof(WBP_BuckFloatingText_C_SetFloater) == 0x000568, "Wrong size on WBP_BuckFloatingText_C_SetFloater");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Owner_0) == 0x000000, "Member 'WBP_BuckFloatingText_C_SetFloater::Owner_0' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, isCrit) == 0x000008, "Member 'WBP_BuckFloatingText_C_SetFloater::isCrit' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, isMiss) == 0x000009, "Member 'WBP_BuckFloatingText_C_SetFloater::isMiss' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, isBlock) == 0x00000A, "Member 'WBP_BuckFloatingText_C_SetFloater::isBlock' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, isResist) == 0x00000B, "Member 'WBP_BuckFloatingText_C_SetFloater::isResist' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, isImmune) == 0x00000C, "Member 'WBP_BuckFloatingText_C_SetFloater::isImmune' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, StatModGuid_0) == 0x000010, "Member 'WBP_BuckFloatingText_C_SetFloater::StatModGuid_0' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Value_0) == 0x000018, "Member 'WBP_BuckFloatingText_C_SetFloater::Value_0' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, RawValue) == 0x000020, "Member 'WBP_BuckFloatingText_C_SetFloater::RawValue' has a wrong offset!");
@@ -222,170 +282,221 @@ static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, SourceRecordType) == 0
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, hitting_OtherwiseGettingHit_) == 0x000030, "Member 'WBP_BuckFloatingText_C_SetFloater::hitting_OtherwiseGettingHit_' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, statGuid) == 0x000038, "Member 'WBP_BuckFloatingText_C_SetFloater::statGuid' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Str) == 0x000040, "Member 'WBP_BuckFloatingText_C_SetFloater::Str' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable) == 0x000050, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, weaponHit) == 0x000050, "Member 'WBP_BuckFloatingText_C_SetFloater::weaponHit' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, isPhysical) == 0x000051, "Member 'WBP_BuckFloatingText_C_SetFloater::isPhysical' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, isMagical) == 0x000052, "Member 'WBP_BuckFloatingText_C_SetFloater::isMagical' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable) == 0x000053, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Conv_StringToText_ReturnValue) == 0x000058, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_IsEmpty_ReturnValue) == 0x000070, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Not_PreBool_ReturnValue) == 0x000071, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_EqualEqual_Int64Int64_ReturnValue) == 0x000072, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_EqualEqual_Int64Int64_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_EqualEqual_Int64Int64_ReturnValue_1) == 0x000073, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_EqualEqual_Int64Int64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_BooleanOR_ReturnValue) == 0x000074, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Abs_ReturnValue) == 0x000078, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000080, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_BooleanOR_ReturnValue) == 0x000080, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_FMax_ReturnValue) == 0x000088, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_GetFloaterBaseOffset_offset) == 0x000090, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_GetFloaterBaseOffset_offset' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_BooleanOR_ReturnValue_1) == 0x0000A8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Abs_ReturnValue_1) == 0x0000B0, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000B8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Conv_DoubleToText_ReturnValue) == 0x0000C0, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000D8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, UniqueObjectNameForCooking_FormatArgumentData) == 0x0000E0, "Member 'WBP_BuckFloatingText_C_SetFloater::UniqueObjectNameForCooking_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_1) == 0x000130, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_int_Variable) == 0x000134, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_int_Variable_1) == 0x000138, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_2) == 0x00013C, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_string_Variable) == 0x000140, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_string_Variable_1) == 0x000150, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_string_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_3) == 0x000160, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default) == 0x000168, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable) == 0x000178, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000180, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, UniqueObjectNameForCooking_FormatArgumentData_1) == 0x000198, "Member 'WBP_BuckFloatingText_C_SetFloater::UniqueObjectNameForCooking_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_4) == 0x0001E8, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_1) == 0x0001F0, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_2) == 0x0001F8, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_5) == 0x000200, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_1) == 0x000208, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_3) == 0x000210, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_3' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_2) == 0x000218, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_MakeVector2D_ReturnValue) == 0x000220, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_4) == 0x000230, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_4' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_string_Variable_2) == 0x000238, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_string_Variable_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_3) == 0x000248, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_string_Variable_3) == 0x000250, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_string_Variable_3' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_6) == 0x000260, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_6' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_4) == 0x000268, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_DynamicCast_AsWBP_Buck_Floating_Text_Manager) == 0x000278, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_DynamicCast_AsWBP_Buck_Floating_Text_Manager' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_DynamicCast_bSuccess) == 0x000280, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Conv_StringToText_ReturnValue_2) == 0x000288, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, UniqueObjectNameForCooking_FormatArgumentData_2) == 0x0002A0, "Member 'WBP_BuckFloatingText_C_SetFloater::UniqueObjectNameForCooking_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, UniqueObjectNameForCooking_Array) == 0x0002F0, "Member 'WBP_BuckFloatingText_C_SetFloater::UniqueObjectNameForCooking_Array' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Format_ReturnValue) == 0x000300, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000318, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000320, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_MapRangeClamped_ReturnValue) == 0x000328, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000330, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000338, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_5) == 0x000340, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_5' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000348, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Add_Vector2DVector2D_ReturnValue) == 0x000350, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Add_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000360, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Add_Vector2DVector2D_ReturnValue_1) == 0x000368, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Add_Vector2DVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_7) == 0x000378, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_MakeVector2D_ReturnValue_1) == 0x000380, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_6) == 0x000390, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_6' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_8) == 0x000394, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_8' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_5) == 0x000398, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_5' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_7) == 0x0003A0, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_7' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_6) == 0x0003A8, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_6' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_9) == 0x0003B0, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_9' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_8) == 0x0003B8, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_8' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_9) == 0x0003C0, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_9' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_PlayAnimation_ReturnValue) == 0x0003C8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_PlayAnimation_ReturnValue_1) == 0x0003D0, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x0003D8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Option_0_ImplicitCast) == 0x0003E0, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Option_0_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0003E8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_VariableSet_ScrollSpeed_ImplicitCast) == 0x0003F0, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_VariableSet_ScrollSpeed_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x0003F8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Option_0_ImplicitCast_1) == 0x000400, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Option_0_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast) == 0x000404, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast_1) == 0x000408, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000090, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Abs_ReturnValue_1) == 0x000098, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_BooleanOR_ReturnValue_1) == 0x0000A0, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Conv_DoubleToText_ReturnValue) == 0x0000B0, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000C8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, UniqueObjectNameForCooking_FormatArgumentData) == 0x0000D0, "Member 'WBP_BuckFloatingText_C_SetFloater::UniqueObjectNameForCooking_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_BooleanOR_ReturnValue_2) == 0x000120, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_BooleanOR_ReturnValue_3) == 0x000121, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_BooleanOR_ReturnValue_4) == 0x000122, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_BooleanOR_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_BooleanOR_ReturnValue_5) == 0x000123, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_BooleanOR_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_GetFloaterBaseOffset_offset) == 0x000128, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_GetFloaterBaseOffset_offset' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_1) == 0x000140, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_string_Variable) == 0x000148, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_string_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_string_Variable_1) == 0x000158, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_string_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_2) == 0x000168, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default) == 0x000170, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_3) == 0x000180, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000188, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_int_Variable) == 0x0001A0, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, UniqueObjectNameForCooking_FormatArgumentData_1) == 0x0001A8, "Member 'WBP_BuckFloatingText_C_SetFloater::UniqueObjectNameForCooking_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_int_Variable_1) == 0x0001F8, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_4) == 0x0001FC, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_string_Variable_2) == 0x000200, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_string_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_string_Variable_3) == 0x000210, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_string_Variable_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_5) == 0x000220, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_5' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_1) == 0x000228, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Conv_StringToText_ReturnValue_2) == 0x000238, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable) == 0x000250, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, UniqueObjectNameForCooking_FormatArgumentData_2) == 0x000258, "Member 'WBP_BuckFloatingText_C_SetFloater::UniqueObjectNameForCooking_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_6) == 0x0002A8, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_6' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_1) == 0x0002B0, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_2) == 0x0002B8, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_7) == 0x0002C0, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_7' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_2) == 0x0002C8, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_3) == 0x0002D0, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_3) == 0x0002D8, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_4) == 0x0002E0, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_4) == 0x0002E8, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_5) == 0x0002F0, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_5' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_MakeVector2D_ReturnValue) == 0x0002F8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_DynamicCast_AsWBP_Buck_Floating_Text_Manager) == 0x000308, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_DynamicCast_AsWBP_Buck_Floating_Text_Manager' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_DynamicCast_bSuccess) == 0x000310, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_8) == 0x000311, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_8' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_SelectFloat_ReturnValue) == 0x000318, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000320, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000328, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_5) == 0x000330, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_5' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000338, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000340, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_6) == 0x000348, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_6' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_MapRangeClamped_ReturnValue) == 0x000350, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000358, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_9) == 0x000360, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_9' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_string_Variable_4) == 0x000368, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_string_Variable_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_6) == 0x000378, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_6' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_string_Variable_5) == 0x000380, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_string_Variable_5' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_10) == 0x000390, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_10' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_7) == 0x000398, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_7' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_DynamicCast_AsWBP_Buck_Floating_Text_Manager_1) == 0x0003A8, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_DynamicCast_AsWBP_Buck_Floating_Text_Manager_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_DynamicCast_bSuccess_1) == 0x0003B0, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Conv_StringToText_ReturnValue_3) == 0x0003B8, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Conv_StringToText_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, UniqueObjectNameForCooking_FormatArgumentData_3) == 0x0003D0, "Member 'WBP_BuckFloatingText_C_SetFloater::UniqueObjectNameForCooking_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, UniqueObjectNameForCooking_Array) == 0x000420, "Member 'WBP_BuckFloatingText_C_SetFloater::UniqueObjectNameForCooking_Array' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Format_ReturnValue) == 0x000430, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000448, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_8) == 0x000450, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_8' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x000458, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_9) == 0x000460, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_9' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Add_Vector2DVector2D_ReturnValue) == 0x000468, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Add_Vector2DVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Add_Vector2DVector2D_ReturnValue_1) == 0x000478, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Add_Vector2DVector2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_real_Variable_7) == 0x000488, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_real_Variable_7' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_11) == 0x000490, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_11' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_struct_Variable) == 0x000494, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_10) == 0x0004A8, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_10' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_MakeVector2D_ReturnValue_1) == 0x0004B0, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_struct_Variable_1) == 0x0004C0, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_12) == 0x0004D0, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_12' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_struct_Variable_2) == 0x0004D4, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_struct_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_11) == 0x0004E4, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_11' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_struct_Variable_3) == 0x0004F4, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_struct_Variable_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, Temp_bool_Variable_13) == 0x000504, "Member 'WBP_BuckFloatingText_C_SetFloater::Temp_bool_Variable_13' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_12) == 0x000508, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_12' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Default_13) == 0x000518, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Default_13' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_PlayAnimation_ReturnValue) == 0x000520, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_PlayAnimation_ReturnValue_1) == 0x000528, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_SelectFloat_B_ImplicitCast) == 0x000530, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_SelectFloat_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast) == 0x000538, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast_1) == 0x00053C, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_UpdateRunningAvgBP_avg_ImplicitCast) == 0x000540, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_UpdateRunningAvgBP_avg_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Option_0_ImplicitCast) == 0x000548, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Option_0_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000550, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000558, "Member 'WBP_BuckFloatingText_C_SetFloater::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_VariableSet_ScrollSpeed_ImplicitCast) == 0x000560, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_VariableSet_ScrollSpeed_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloater, K2Node_Select_Option_1_ImplicitCast) == 0x000564, "Member 'WBP_BuckFloatingText_C_SetFloater::K2Node_Select_Option_1_ImplicitCast' has a wrong offset!");
 
 // Function WBP_BuckFloatingText.WBP_BuckFloatingText_C.SetFloaterVisuals
-// 0x0578 (0x0578 - 0x0000)
+// 0x05B0 (0x05B0 - 0x0000)
 struct WBP_BuckFloatingText_C_SetFloaterVisuals final
 {
 public:
-	bool                                          Hitting;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          hitting;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          isCrit;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         statGuid;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Value_0;                                           // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        dynamicSizeMult;                                   // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SizeMult;                                          // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          isText;                                            // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           colorIfText;                                       // 0x0024(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          ColorOverride;                                     // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           OverrideColor;                                     // 0x0024(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          weaponHit;                                         // 0x0034(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isPhysical;                                        // 0x0035(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isMagical;                                         // 0x0036(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_37[0x1];                                       // 0x0037(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFloatingTextSettings                  Settings;                                          // 0x0038(0x0088)(Edit, BlueprintVisible)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue_1;      // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C3[0x5];                                       // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Temp_bool_Variable;                                // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue_1;      // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x00C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C6[0x2];                                       // 0x00C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFloatingTextSettings                  CallFunc_GetFloatingTextSettings_ReturnValue;      // 0x00C8(0x0088)()
 	struct FFontOutlineSettings                   K2Node_MakeStruct_FontOutlineSettings;             // 0x0150(0x0020)(NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFloatingTextSettings                  CallFunc_GetFloatingTextSettings_ReturnValue_1;    // 0x0178(0x0088)()
-	bool                                          Temp_bool_Variable_1;                              // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_201[0x3];                                      // 0x0201(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           K2Node_Select_Default;                             // 0x0204(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Default_1;                           // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0218(0x0014)()
-	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UFont*                                  UniqueObjectNameForCooking_AsFont;                 // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          UniqueObjectNameForCooking_bSuccess;               // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFloatingTextSettings                  CallFunc_GetFloatingTextSettings_ReturnValue_2;    // 0x0250(0x0088)()
-	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x02D8(0x0058)(HasGetValueTypeHash)
+	struct FFloatingTextSettings                  CallFunc_GetFloatingTextSettings_ReturnValue_1;    // 0x0170(0x0088)()
+	bool                                          Temp_bool_Variable_2;                              // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           K2Node_Select_Default;                             // 0x01FC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_Select_Default_1;                           // 0x020C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_2;                           // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFont*                                  UniqueObjectNameForCooking_AsFont;                 // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          UniqueObjectNameForCooking_bSuccess;               // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0250(0x0058)(HasGetValueTypeHash)
+	struct FFloatingTextSettings                  CallFunc_GetFloatingTextSettings_ReturnValue_2;    // 0x02A8(0x0088)()
 	struct FFloatingTextSettings                  CallFunc_GetFloatingTextSettings_ReturnValue_3;    // 0x0330(0x0088)()
 	struct FFloatingTextSettings                  CallFunc_GetFloatingTextSettings_ReturnValue_4;    // 0x03B8(0x0088)()
 	struct FFloatingTextSettings                  CallFunc_GetFloatingTextSettings_ReturnValue_5;    // 0x0440(0x0088)()
-	struct FFloatingTextSettings                  CallFunc_GetFloatingTextSettings_ReturnValue_6;    // 0x04C8(0x0088)()
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0550(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0558(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_FontSize_ImplicitCast;          // 0x0560(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_564[0x4];                                      // 0x0564(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0568(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_RegularFontSize_ImplicitCast; // 0x0570(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x04C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C9[0x7];                                      // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFloatingTextSettings                  CallFunc_GetFloatingTextSettings_ReturnValue_6;    // 0x04D0(0x0088)()
+	struct FLinearColor                           K2Node_Select_Default_3;                           // 0x0558(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x0568(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0578(0x0014)()
+	uint8                                         Pad_58C[0x4];                                      // 0x058C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0590(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Option_1_ImplicitCast;               // 0x0598(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59C[0x4];                                      // 0x059C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x05A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_FontSize_ImplicitCast;          // 0x05A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_BuckFloatingText_C_SetFloaterVisuals) == 0x000008, "Wrong alignment on WBP_BuckFloatingText_C_SetFloaterVisuals");
-static_assert(sizeof(WBP_BuckFloatingText_C_SetFloaterVisuals) == 0x000578, "Wrong size on WBP_BuckFloatingText_C_SetFloaterVisuals");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, Hitting) == 0x000000, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::Hitting' has a wrong offset!");
+static_assert(sizeof(WBP_BuckFloatingText_C_SetFloaterVisuals) == 0x0005B0, "Wrong size on WBP_BuckFloatingText_C_SetFloaterVisuals");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, hitting) == 0x000000, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::hitting' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, isCrit) == 0x000001, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::isCrit' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, statGuid) == 0x000008, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::statGuid' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, Value_0) == 0x000010, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::Value_0' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, dynamicSizeMult) == 0x000018, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::dynamicSizeMult' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, SizeMult) == 0x000018, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::SizeMult' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, isText) == 0x000020, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::isText' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, colorIfText) == 0x000024, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::colorIfText' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, ColorOverride) == 0x000021, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::ColorOverride' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, OverrideColor) == 0x000024, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::OverrideColor' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, weaponHit) == 0x000034, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::weaponHit' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, isPhysical) == 0x000035, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::isPhysical' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, isMagical) == 0x000036, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::isMagical' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, Settings) == 0x000038, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::Settings' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x0000C0, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_EqualEqual_Int64Int64_ReturnValue) == 0x0000C1, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_EqualEqual_Int64Int64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_EqualEqual_Int64Int64_ReturnValue_1) == 0x0000C2, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_EqualEqual_Int64Int64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, Temp_bool_Variable) == 0x0000C0, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x0000C1, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_EqualEqual_Int64Int64_ReturnValue) == 0x0000C2, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_EqualEqual_Int64Int64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_BooleanAND_ReturnValue) == 0x0000C3, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_EqualEqual_Int64Int64_ReturnValue_1) == 0x0000C4, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_EqualEqual_Int64Int64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, Temp_bool_Variable_1) == 0x0000C5, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::Temp_bool_Variable_1' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_GetFloatingTextSettings_ReturnValue) == 0x0000C8, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_GetFloatingTextSettings_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_MakeStruct_FontOutlineSettings) == 0x000150, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_MakeStruct_FontOutlineSettings' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, Temp_bool_Variable) == 0x000170, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_GetFloatingTextSettings_ReturnValue_1) == 0x000178, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_GetFloatingTextSettings_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, Temp_bool_Variable_1) == 0x000200, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_Select_Default) == 0x000204, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_Select_Default_1) == 0x000214, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_MakeStruct_SlateColor) == 0x000218, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000230, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000238, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, UniqueObjectNameForCooking_AsFont) == 0x000240, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::UniqueObjectNameForCooking_AsFont' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, UniqueObjectNameForCooking_bSuccess) == 0x000248, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::UniqueObjectNameForCooking_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_GetFloatingTextSettings_ReturnValue_2) == 0x000250, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_GetFloatingTextSettings_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_MakeStruct_SlateFontInfo) == 0x0002D8, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_MakeStruct_SlateFontInfo' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_GetFloatingTextSettings_ReturnValue_1) == 0x000170, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_GetFloatingTextSettings_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, Temp_bool_Variable_2) == 0x0001F8, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_Select_Default) == 0x0001FC, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_Select_Default_1) == 0x00020C, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000220, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000228, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_Select_Default_2) == 0x000230, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, UniqueObjectNameForCooking_AsFont) == 0x000238, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::UniqueObjectNameForCooking_AsFont' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, UniqueObjectNameForCooking_bSuccess) == 0x000240, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::UniqueObjectNameForCooking_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000248, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_MakeStruct_SlateFontInfo) == 0x000250, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_MakeStruct_SlateFontInfo' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_GetFloatingTextSettings_ReturnValue_2) == 0x0002A8, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_GetFloatingTextSettings_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_GetFloatingTextSettings_ReturnValue_3) == 0x000330, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_GetFloatingTextSettings_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_GetFloatingTextSettings_ReturnValue_4) == 0x0003B8, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_GetFloatingTextSettings_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_GetFloatingTextSettings_ReturnValue_5) == 0x000440, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_GetFloatingTextSettings_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_GetFloatingTextSettings_ReturnValue_6) == 0x0004C8, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_GetFloatingTextSettings_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000550, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000558, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_VariableSet_FontSize_ImplicitCast) == 0x000560, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_VariableSet_FontSize_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000568, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_SetFieldsInStruct_RegularFontSize_ImplicitCast) == 0x000570, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_SetFieldsInStruct_RegularFontSize_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, Temp_bool_Variable_3) == 0x0004C8, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_GetFloatingTextSettings_ReturnValue_6) == 0x0004D0, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_GetFloatingTextSettings_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_Select_Default_3) == 0x000558, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_SelectColor_ReturnValue) == 0x000568, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_SelectColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_MakeStruct_SlateColor) == 0x000578, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000590, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_Select_Option_1_ImplicitCast) == 0x000598, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_Select_Option_1_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x0005A0, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingText_C_SetFloaterVisuals, K2Node_VariableSet_FontSize_ImplicitCast) == 0x0005A8, "Member 'WBP_BuckFloatingText_C_SetFloaterVisuals::K2Node_VariableSet_FontSize_ImplicitCast' has a wrong offset!");
 
 }
 

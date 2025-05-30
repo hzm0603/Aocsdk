@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "ABP_AoC_Simple_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
 
 
@@ -25,7 +25,7 @@ class UABP_AoC_Simple_C final : public UAoCPlayerAnimInstance
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2430(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct ABP_AoC_Simple::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x2438(0x0244)(HasGetValueTypeHash)
+	struct ABP_AoC_Simple::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;               // 0x2438(0x0244)(HasGetValueTypeHash)
 	uint8                                         Pad_267C[0x4];                                     // 0x267C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x2680(0x0008)()
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x2688(0x0008)()

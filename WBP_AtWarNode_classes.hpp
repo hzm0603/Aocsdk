@@ -17,9 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_AtWarNode.WBP_AtWarNode_C
-// 0x0000 (0x0320 - 0x0320)
+// 0x0010 (0x0330 - 0x0320)
 class UWBP_AtWarNode_C final : public UAtWarNode
 {
+public:
+	class UImage*                                 BannerBorder;                                      // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 NodeBanner;                                        // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -31,7 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_AtWarNode_C) == 0x000008, "Wrong alignment on UWBP_AtWarNode_C");
-static_assert(sizeof(UWBP_AtWarNode_C) == 0x000320, "Wrong size on UWBP_AtWarNode_C");
+static_assert(sizeof(UWBP_AtWarNode_C) == 0x000330, "Wrong size on UWBP_AtWarNode_C");
+static_assert(offsetof(UWBP_AtWarNode_C, BannerBorder) == 0x000320, "Member 'UWBP_AtWarNode_C::BannerBorder' has a wrong offset!");
+static_assert(offsetof(UWBP_AtWarNode_C, NodeBanner) == 0x000328, "Member 'UWBP_AtWarNode_C::NodeBanner' has a wrong offset!");
 
 }
 

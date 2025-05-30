@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_WindowFrame_Alert.WBP_WindowFrame_Alert_C
-// 0x0000 (0x0700 - 0x0700)
+// 0x0000 (0x0708 - 0x0708)
 class UWBP_WindowFrame_Alert_C final : public UAoCWindow
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_WindowFrame_Alert_C) == 0x000008, "Wrong alignment on UWBP_WindowFrame_Alert_C");
-static_assert(sizeof(UWBP_WindowFrame_Alert_C) == 0x000700, "Wrong size on UWBP_WindowFrame_Alert_C");
+static_assert(sizeof(UWBP_WindowFrame_Alert_C) == 0x000708, "Wrong size on UWBP_WindowFrame_Alert_C");
 
 }
 

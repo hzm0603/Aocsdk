@@ -25,7 +25,7 @@ class UPC_Master_CaravanRaft_AnimBP_C final : public UAoCRiderAnimInstance
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2800(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct PC_Master_CaravanRaft_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x2808(0x0008)(HasGetValueTypeHash)
+	struct PC_Master_CaravanRaft_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables; // 0x2808(0x0008)(HasGetValueTypeHash)
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x2810(0x0008)()
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x2818(0x0008)()
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x2820(0x0020)()

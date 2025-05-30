@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Military_Mount_Base_Vendor.Military_Mount_Base_Vendor_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class AMilitary_Mount_Base_Vendor_C final : public AHumanoidNPCMaster_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AMilitary_Mount_Base_Vendor_C) == 0x000010, "Wrong alignment on AMilitary_Mount_Base_Vendor_C");
-static_assert(sizeof(AMilitary_Mount_Base_Vendor_C) == 0x001DB0, "Wrong size on AMilitary_Mount_Base_Vendor_C");
+static_assert(sizeof(AMilitary_Mount_Base_Vendor_C) == 0x001D70, "Wrong size on AMilitary_Mount_Base_Vendor_C");
 
 }
 

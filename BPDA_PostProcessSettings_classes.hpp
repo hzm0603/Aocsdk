@@ -22,7 +22,7 @@ namespace SDK
 class UBPDA_PostProcessSettings_C final : public UPrimaryDataAsset
 {
 public:
-	TMap<class FName, struct FSTRUCT_PostProcessDefaultSettings> Color_Grade_Defualts;                              // 0x0050(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, struct FSTRUCT_PostProcessDefaultSettings> Color_Grade_Defualts;               // 0x0050(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	static class UClass* StaticClass()

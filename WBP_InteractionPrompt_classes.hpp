@@ -18,12 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_InteractionPrompt.WBP_InteractionPrompt_C
-// 0x0010 (0x0448 - 0x0438)
+// 0x0028 (0x0460 - 0x0438)
 class UWBP_InteractionPrompt_C final : public UInteractionPrompt
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 CompleteImg;                                       // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               AlertContainer;                                    // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 AlertIcon;                                         // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    AlertMessageText;                                  // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CompleteImg;                                       // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_InteractionPrompt(int32 EntryPoint);
@@ -39,9 +42,12 @@ public:
 	}
 };
 static_assert(alignof(UWBP_InteractionPrompt_C) == 0x000008, "Wrong alignment on UWBP_InteractionPrompt_C");
-static_assert(sizeof(UWBP_InteractionPrompt_C) == 0x000448, "Wrong size on UWBP_InteractionPrompt_C");
+static_assert(sizeof(UWBP_InteractionPrompt_C) == 0x000460, "Wrong size on UWBP_InteractionPrompt_C");
 static_assert(offsetof(UWBP_InteractionPrompt_C, UberGraphFrame) == 0x000438, "Member 'UWBP_InteractionPrompt_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_InteractionPrompt_C, CompleteImg) == 0x000440, "Member 'UWBP_InteractionPrompt_C::CompleteImg' has a wrong offset!");
+static_assert(offsetof(UWBP_InteractionPrompt_C, AlertContainer) == 0x000440, "Member 'UWBP_InteractionPrompt_C::AlertContainer' has a wrong offset!");
+static_assert(offsetof(UWBP_InteractionPrompt_C, AlertIcon) == 0x000448, "Member 'UWBP_InteractionPrompt_C::AlertIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_InteractionPrompt_C, AlertMessageText) == 0x000450, "Member 'UWBP_InteractionPrompt_C::AlertMessageText' has a wrong offset!");
+static_assert(offsetof(UWBP_InteractionPrompt_C, CompleteImg) == 0x000458, "Member 'UWBP_InteractionPrompt_C::CompleteImg' has a wrong offset!");
 
 }
 

@@ -39,11 +39,11 @@ public:
 	bool                                          isMainBars;                                        // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__DesignDamageMeter_Bar_BarButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__DesignDamageMeter_Bar_BarButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__DesignDamageMeter_Bar_BarButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
-	void ExecuteUbergraph_WBP_DamageMeterBar(int32 EntryPoint);
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void ExecuteUbergraph_WBP_DamageMeterBar(int32 EntryPoint);
+	void BndEvt__DesignDamageMeter_Bar_BarButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__DesignDamageMeter_Bar_BarButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__DesignDamageMeter_Bar_BarButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

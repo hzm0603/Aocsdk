@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass AshenHaunt_Lancer.AshenHaunt_Lancer_C
-// 0x0010 (0x1DB0 - 0x1DA0)
+// 0x0010 (0x1D70 - 0x1D60)
 class AAshenHaunt_Lancer_C : public AAshenHaunt_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_AshenHaunt_Lancer_C;                // 0x1DA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_AshenHaunt_Lancer_C;                // 0x1D60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_AshenHaunt_Lancer(int32 EntryPoint);
@@ -39,8 +39,8 @@ public:
 	}
 };
 static_assert(alignof(AAshenHaunt_Lancer_C) == 0x000010, "Wrong alignment on AAshenHaunt_Lancer_C");
-static_assert(sizeof(AAshenHaunt_Lancer_C) == 0x001DB0, "Wrong size on AAshenHaunt_Lancer_C");
-static_assert(offsetof(AAshenHaunt_Lancer_C, UberGraphFrame_AshenHaunt_Lancer_C) == 0x001DA0, "Member 'AAshenHaunt_Lancer_C::UberGraphFrame_AshenHaunt_Lancer_C' has a wrong offset!");
+static_assert(sizeof(AAshenHaunt_Lancer_C) == 0x001D70, "Wrong size on AAshenHaunt_Lancer_C");
+static_assert(offsetof(AAshenHaunt_Lancer_C, UberGraphFrame_AshenHaunt_Lancer_C) == 0x001D60, "Member 'AAshenHaunt_Lancer_C::UberGraphFrame_AshenHaunt_Lancer_C' has a wrong offset!");
 
 }
 

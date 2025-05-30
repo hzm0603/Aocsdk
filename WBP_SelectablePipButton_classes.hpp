@@ -30,12 +30,12 @@ public:
 	class FText                                   Label;                                             // 0x0310(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
-	void Construct();
-	void ExecuteUbergraph_WBP_SelectablePipButton(int32 EntryPoint);
-	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
 	void PreConstruct(bool IsDesignTime);
+	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
+	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void ExecuteUbergraph_WBP_SelectablePipButton(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

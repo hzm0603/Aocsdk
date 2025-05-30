@@ -59,19 +59,6 @@ static_assert(sizeof(FGetSkeletalMeshDataflowNode) == 0x0000F8, "Wrong size on F
 static_assert(offsetof(FGetSkeletalMeshDataflowNode, SkeletalMesh) == 0x0000E8, "Member 'FGetSkeletalMeshDataflowNode::SkeletalMesh' has a wrong offset!");
 static_assert(offsetof(FGetSkeletalMeshDataflowNode, PropertyName) == 0x0000F0, "Member 'FGetSkeletalMeshDataflowNode::PropertyName' has a wrong offset!");
 
-// ScriptStruct DataflowNodes.GetStaticMeshDataflowNode
-// 0x0010 (0x00F8 - 0x00E8)
-struct FGetStaticMeshDataflowNode final : public FDataflowNode
-{
-public:
-	class UStaticMesh*                            StaticMesh;                                        // 0x00E8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   PropertyName;                                      // 0x00F0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGetStaticMeshDataflowNode) == 0x000008, "Wrong alignment on FGetStaticMeshDataflowNode");
-static_assert(sizeof(FGetStaticMeshDataflowNode) == 0x0000F8, "Wrong size on FGetStaticMeshDataflowNode");
-static_assert(offsetof(FGetStaticMeshDataflowNode, StaticMesh) == 0x0000E8, "Member 'FGetStaticMeshDataflowNode::StaticMesh' has a wrong offset!");
-static_assert(offsetof(FGetStaticMeshDataflowNode, PropertyName) == 0x0000F0, "Member 'FGetStaticMeshDataflowNode::PropertyName' has a wrong offset!");
-
 // ScriptStruct DataflowNodes.GetSkeletonDataflowNode
 // 0x0010 (0x00F8 - 0x00E8)
 struct FGetSkeletonDataflowNode final : public FDataflowNode
@@ -118,6 +105,19 @@ static_assert(sizeof(FSkeletalMeshReferenceTransformDataflowNode) == 0x000160, "
 static_assert(offsetof(FSkeletalMeshReferenceTransformDataflowNode, SkeletalMeshIn) == 0x0000E8, "Member 'FSkeletalMeshReferenceTransformDataflowNode::SkeletalMeshIn' has a wrong offset!");
 static_assert(offsetof(FSkeletalMeshReferenceTransformDataflowNode, BoneIndexIn) == 0x0000F0, "Member 'FSkeletalMeshReferenceTransformDataflowNode::BoneIndexIn' has a wrong offset!");
 static_assert(offsetof(FSkeletalMeshReferenceTransformDataflowNode, TransformOut) == 0x000100, "Member 'FSkeletalMeshReferenceTransformDataflowNode::TransformOut' has a wrong offset!");
+
+// ScriptStruct DataflowNodes.GetStaticMeshDataflowNode
+// 0x0010 (0x00F8 - 0x00E8)
+struct FGetStaticMeshDataflowNode final : public FDataflowNode
+{
+public:
+	class UStaticMesh*                            StaticMesh;                                        // 0x00E8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PropertyName;                                      // 0x00F0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGetStaticMeshDataflowNode) == 0x000008, "Wrong alignment on FGetStaticMeshDataflowNode");
+static_assert(sizeof(FGetStaticMeshDataflowNode) == 0x0000F8, "Wrong size on FGetStaticMeshDataflowNode");
+static_assert(offsetof(FGetStaticMeshDataflowNode, StaticMesh) == 0x0000E8, "Member 'FGetStaticMeshDataflowNode::StaticMesh' has a wrong offset!");
+static_assert(offsetof(FGetStaticMeshDataflowNode, PropertyName) == 0x0000F0, "Member 'FGetStaticMeshDataflowNode::PropertyName' has a wrong offset!");
 
 }
 

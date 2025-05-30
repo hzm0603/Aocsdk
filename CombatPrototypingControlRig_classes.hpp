@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "ControlRig_classes.hpp"
 #include "RigVM_structs.hpp"
 #include "RigVM_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK

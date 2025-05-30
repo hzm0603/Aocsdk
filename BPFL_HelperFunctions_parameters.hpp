@@ -19,6 +19,92 @@
 namespace SDK::Params
 {
 
+// Function BPFL_HelperFunctions.BPFL_HelperFunctions_C.ColorTempToRGB
+// 0x0100 (0x0100 - 0x0000)
+struct BPFL_HelperFunctions_C_ColorTempToRGB final
+{
+public:
+	double                                        Temp;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Return_Color;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Red;                                               // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Green;                                             // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Blue;                                              // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K;                                                 // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           UniqueObjectNameForCooking_LinearColor;            // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Loge_ReturnValue;                         // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_1;          // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_2;       // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AB[0x5];                                       // 0x00AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Loge_ReturnValue_1;                       // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_2;          // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_3;      // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_2;     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         UniqueObjectNameForCooking_B_ImplicitCast;         // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         UniqueObjectNameForCooking_G_ImplicitCast;         // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         UniqueObjectNameForCooking_R_ImplicitCast;         // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPFL_HelperFunctions_C_ColorTempToRGB) == 0x000008, "Wrong alignment on BPFL_HelperFunctions_C_ColorTempToRGB");
+static_assert(sizeof(BPFL_HelperFunctions_C_ColorTempToRGB) == 0x000100, "Wrong size on BPFL_HelperFunctions_C_ColorTempToRGB");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, Temp) == 0x000000, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::Temp' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, __WorldContext) == 0x000008, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, Return_Color) == 0x000010, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::Return_Color' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, Red) == 0x000020, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::Red' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, Green) == 0x000028, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::Green' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, Blue) == 0x000030, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::Blue' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, K) == 0x000038, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::K' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000040, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000048, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000049, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000050, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000058, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x000060, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, UniqueObjectNameForCooking_LinearColor) == 0x000068, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::UniqueObjectNameForCooking_LinearColor' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000078, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Loge_ReturnValue) == 0x000080, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Loge_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000088, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Less_DoubleDouble_ReturnValue_1) == 0x000090, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Less_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000098, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0000A0, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x0000A9, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Greater_DoubleDouble_ReturnValue_2) == 0x0000AA, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Greater_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Loge_ReturnValue_1) == 0x0000B0, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Loge_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0000B8, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Less_DoubleDouble_ReturnValue_2) == 0x0000C0, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Less_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x0000C8, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x0000D0, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x0000D8, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Subtract_DoubleDouble_ReturnValue_3) == 0x0000E0, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Subtract_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x0000E8, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, CallFunc_LessEqual_DoubleDouble_ReturnValue_2) == 0x0000F0, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::CallFunc_LessEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, UniqueObjectNameForCooking_B_ImplicitCast) == 0x0000F4, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::UniqueObjectNameForCooking_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, UniqueObjectNameForCooking_G_ImplicitCast) == 0x0000F8, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::UniqueObjectNameForCooking_G_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BPFL_HelperFunctions_C_ColorTempToRGB, UniqueObjectNameForCooking_R_ImplicitCast) == 0x0000FC, "Member 'BPFL_HelperFunctions_C_ColorTempToRGB::UniqueObjectNameForCooking_R_ImplicitCast' has a wrong offset!");
+
 // Function BPFL_HelperFunctions.BPFL_HelperFunctions_C.Get Biome From Location
 // 0x0030 (0x0030 - 0x0000)
 struct BPFL_HelperFunctions_C_Get_Biome_From_Location final

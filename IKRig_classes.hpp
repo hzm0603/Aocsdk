@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "PBIK_structs.hpp"
-#include "IKRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "IKRig_structs.hpp"
 #include "Engine_classes.hpp"
+#include "PBIK_structs.hpp"
 
 
 namespace SDK
 {
 
 // Class IKRig.IKGoalCreatorInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IIKGoalCreatorInterface final : public IInterface
 {
 public:
@@ -37,8 +37,8 @@ public:
 		return GetDefaultObjImpl<IIKGoalCreatorInterface>();
 	}
 };
-static_assert(alignof(IIKGoalCreatorInterface) == 0x000008, "Wrong alignment on IIKGoalCreatorInterface");
-static_assert(sizeof(IIKGoalCreatorInterface) == 0x000048, "Wrong size on IIKGoalCreatorInterface");
+static_assert(alignof(IIKGoalCreatorInterface) == 0x000001, "Wrong alignment on IIKGoalCreatorInterface");
+static_assert(sizeof(IIKGoalCreatorInterface) == 0x000001, "Wrong size on IIKGoalCreatorInterface");
 
 // Class IKRig.IKRigComponent
 // 0x0018 (0x0110 - 0x00F8)

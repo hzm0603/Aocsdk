@@ -17,19 +17,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_NodeSummaryPanel.WBP_NodeSummaryPanel_C
-// 0x0048 (0x03D8 - 0x0390)
+// 0x0038 (0x0440 - 0x0408)
 class UWBP_NodeSummaryPanel_C final : public UNodeSummaryPanel
 {
 public:
-	class UImage*                                 NodeIcon;                                          // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 NodeIcon_1;                                        // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    NodePopulation;                                    // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 NodeStatusIcon;                                    // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PolicyIcon1;                                       // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PolicyIcon2;                                       // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PolicyIcon3;                                       // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PolicyIcon4;                                       // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_Gradient_C*           ScW_MMOTD;                                         // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 NodeIcon_1;                                        // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    NodePopulation;                                    // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 NodeStatusIcon;                                    // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PolicyIcon1;                                       // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PolicyIcon2;                                       // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PolicyIcon3;                                       // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PolicyIcon4;                                       // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UCommonBorder* GetBorder();
@@ -45,16 +43,14 @@ public:
 	}
 };
 static_assert(alignof(UWBP_NodeSummaryPanel_C) == 0x000008, "Wrong alignment on UWBP_NodeSummaryPanel_C");
-static_assert(sizeof(UWBP_NodeSummaryPanel_C) == 0x0003D8, "Wrong size on UWBP_NodeSummaryPanel_C");
-static_assert(offsetof(UWBP_NodeSummaryPanel_C, NodeIcon) == 0x000390, "Member 'UWBP_NodeSummaryPanel_C::NodeIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeSummaryPanel_C, NodeIcon_1) == 0x000398, "Member 'UWBP_NodeSummaryPanel_C::NodeIcon_1' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeSummaryPanel_C, NodePopulation) == 0x0003A0, "Member 'UWBP_NodeSummaryPanel_C::NodePopulation' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeSummaryPanel_C, NodeStatusIcon) == 0x0003A8, "Member 'UWBP_NodeSummaryPanel_C::NodeStatusIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeSummaryPanel_C, PolicyIcon1) == 0x0003B0, "Member 'UWBP_NodeSummaryPanel_C::PolicyIcon1' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeSummaryPanel_C, PolicyIcon2) == 0x0003B8, "Member 'UWBP_NodeSummaryPanel_C::PolicyIcon2' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeSummaryPanel_C, PolicyIcon3) == 0x0003C0, "Member 'UWBP_NodeSummaryPanel_C::PolicyIcon3' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeSummaryPanel_C, PolicyIcon4) == 0x0003C8, "Member 'UWBP_NodeSummaryPanel_C::PolicyIcon4' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeSummaryPanel_C, ScW_MMOTD) == 0x0003D0, "Member 'UWBP_NodeSummaryPanel_C::ScW_MMOTD' has a wrong offset!");
+static_assert(sizeof(UWBP_NodeSummaryPanel_C) == 0x000440, "Wrong size on UWBP_NodeSummaryPanel_C");
+static_assert(offsetof(UWBP_NodeSummaryPanel_C, NodeIcon_1) == 0x000408, "Member 'UWBP_NodeSummaryPanel_C::NodeIcon_1' has a wrong offset!");
+static_assert(offsetof(UWBP_NodeSummaryPanel_C, NodePopulation) == 0x000410, "Member 'UWBP_NodeSummaryPanel_C::NodePopulation' has a wrong offset!");
+static_assert(offsetof(UWBP_NodeSummaryPanel_C, NodeStatusIcon) == 0x000418, "Member 'UWBP_NodeSummaryPanel_C::NodeStatusIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_NodeSummaryPanel_C, PolicyIcon1) == 0x000420, "Member 'UWBP_NodeSummaryPanel_C::PolicyIcon1' has a wrong offset!");
+static_assert(offsetof(UWBP_NodeSummaryPanel_C, PolicyIcon2) == 0x000428, "Member 'UWBP_NodeSummaryPanel_C::PolicyIcon2' has a wrong offset!");
+static_assert(offsetof(UWBP_NodeSummaryPanel_C, PolicyIcon3) == 0x000430, "Member 'UWBP_NodeSummaryPanel_C::PolicyIcon3' has a wrong offset!");
+static_assert(offsetof(UWBP_NodeSummaryPanel_C, PolicyIcon4) == 0x000438, "Member 'UWBP_NodeSummaryPanel_C::PolicyIcon4' has a wrong offset!");
 
 }
 

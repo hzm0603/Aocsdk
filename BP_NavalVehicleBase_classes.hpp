@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NavalVehicleBase.BP_NavalVehicleBase_C
-// 0x0010 (0x1690 - 0x1680)
+// 0x0010 (0x16B0 - 0x16A0)
 #pragma pack(push, 0x1)
 class alignas(0x10) ABP_NavalVehicleBase_C : public ABaseNavalVehicle
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1680(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x16A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_NavalVehicleBase(int32 EntryPoint);
@@ -42,8 +42,8 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(ABP_NavalVehicleBase_C) == 0x000010, "Wrong alignment on ABP_NavalVehicleBase_C");
-static_assert(sizeof(ABP_NavalVehicleBase_C) == 0x001690, "Wrong size on ABP_NavalVehicleBase_C");
-static_assert(offsetof(ABP_NavalVehicleBase_C, UberGraphFrame) == 0x001680, "Member 'ABP_NavalVehicleBase_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(ABP_NavalVehicleBase_C) == 0x0016B0, "Wrong size on ABP_NavalVehicleBase_C");
+static_assert(offsetof(ABP_NavalVehicleBase_C, UberGraphFrame) == 0x0016A0, "Member 'ABP_NavalVehicleBase_C::UberGraphFrame' has a wrong offset!");
 
 }
 

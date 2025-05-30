@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ScrollWindow_NoFrameNoPaddingNoVignettes.WBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C
-// 0x0008 (0x0340 - 0x0338)
+// 0x0008 (0x0348 - 0x0340)
 class UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C final : public UScrollWindow
 {
 public:
-	class UNamedSlot*                             NamedSlot;                                         // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNamedSlot*                             NamedSlot;                                         // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C) == 0x000008, "Wrong alignment on UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C");
-static_assert(sizeof(UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C) == 0x000340, "Wrong size on UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C");
-static_assert(offsetof(UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C, NamedSlot) == 0x000338, "Member 'UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C::NamedSlot' has a wrong offset!");
+static_assert(sizeof(UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C) == 0x000348, "Wrong size on UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C");
+static_assert(offsetof(UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C, NamedSlot) == 0x000340, "Member 'UWBP_ScrollWindow_NoFrameNoPaddingNoVignettes_C::NamedSlot' has a wrong offset!");
 
 }
 

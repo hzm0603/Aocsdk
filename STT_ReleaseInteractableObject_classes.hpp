@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STT_Base_classes.hpp"
 #include "Engine_structs.hpp"
+#include "STT_Base_classes.hpp"
 
 
 namespace SDK
@@ -27,8 +27,8 @@ public:
 	int32                                         InteractionPointIndex;                             // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_STT_ReleaseInteractableObject(int32 EntryPoint);
 	void ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition);
+	void ExecuteUbergraph_STT_ReleaseInteractableObject(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

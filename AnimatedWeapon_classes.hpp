@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass AnimatedWeapon.AnimatedWeapon_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class AAnimatedWeapon_C final : public AAshenHaunt_Lancer_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AAnimatedWeapon_C) == 0x000010, "Wrong alignment on AAnimatedWeapon_C");
-static_assert(sizeof(AAnimatedWeapon_C) == 0x001DB0, "Wrong size on AAnimatedWeapon_C");
+static_assert(sizeof(AAnimatedWeapon_C) == 0x001D70, "Wrong size on AAnimatedWeapon_C");
 
 }
 

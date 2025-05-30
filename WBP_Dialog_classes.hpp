@@ -17,24 +17,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Dialog.WBP_Dialog_C
-// 0x0080 (0x0508 - 0x0488)
+// 0x0080 (0x09E8 - 0x0968)
 class UWBP_Dialog_C final : public UDialogueWidget
 {
 public:
-	class UOverlay*                               ButtonsPanel;                                      // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_DialogueChoiceItem_C*              ResponseItem;                                      // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_DialogueChoiceItem_C*              ResponseItem_1;                                    // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_DialogueChoiceItem_C*              ResponseItem_2;                                    // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_DialogueChoiceItem_C*              ResponseItem_3;                                    // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_DialogueChoiceItem_C*              ResponseItem_4;                                    // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_DialogueChoiceItem_C*              ResponseItem_5;                                    // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_DialogueChoiceItem_C*              ResponseItem_6;                                    // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_DialogueChoiceItem_C*              ResponseItem_7;                                    // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollBox;                                         // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonButton_C*                        ScrollDownButton;                                  // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonButton_C*                        ScrollUpButton;                                    // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(int64 ChoiceId)> ChoiceFromDialog;                                 // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              CancelFromDialog;                                  // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UOverlay*                               ButtonsPanel;                                      // 0x0968(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_DialogueChoiceItem_C*              ResponseItem;                                      // 0x0970(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_DialogueChoiceItem_C*              ResponseItem_1;                                    // 0x0978(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_DialogueChoiceItem_C*              ResponseItem_2;                                    // 0x0980(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_DialogueChoiceItem_C*              ResponseItem_3;                                    // 0x0988(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_DialogueChoiceItem_C*              ResponseItem_4;                                    // 0x0990(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_DialogueChoiceItem_C*              ResponseItem_5;                                    // 0x0998(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_DialogueChoiceItem_C*              ResponseItem_6;                                    // 0x09A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_DialogueChoiceItem_C*              ResponseItem_7;                                    // 0x09A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollBox;                                         // 0x09B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonButton_C*                        ScrollDownButton;                                  // 0x09B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonButton_C*                        ScrollUpButton;                                    // 0x09C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(int64 ChoiceId)> ChoiceFromDialog;                                 // 0x09C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              CancelFromDialog;                                  // 0x09D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	static class UClass* StaticClass()
@@ -47,21 +47,21 @@ public:
 	}
 };
 static_assert(alignof(UWBP_Dialog_C) == 0x000008, "Wrong alignment on UWBP_Dialog_C");
-static_assert(sizeof(UWBP_Dialog_C) == 0x000508, "Wrong size on UWBP_Dialog_C");
-static_assert(offsetof(UWBP_Dialog_C, ButtonsPanel) == 0x000488, "Member 'UWBP_Dialog_C::ButtonsPanel' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ResponseItem) == 0x000490, "Member 'UWBP_Dialog_C::ResponseItem' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ResponseItem_1) == 0x000498, "Member 'UWBP_Dialog_C::ResponseItem_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ResponseItem_2) == 0x0004A0, "Member 'UWBP_Dialog_C::ResponseItem_2' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ResponseItem_3) == 0x0004A8, "Member 'UWBP_Dialog_C::ResponseItem_3' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ResponseItem_4) == 0x0004B0, "Member 'UWBP_Dialog_C::ResponseItem_4' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ResponseItem_5) == 0x0004B8, "Member 'UWBP_Dialog_C::ResponseItem_5' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ResponseItem_6) == 0x0004C0, "Member 'UWBP_Dialog_C::ResponseItem_6' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ResponseItem_7) == 0x0004C8, "Member 'UWBP_Dialog_C::ResponseItem_7' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ScrollBox) == 0x0004D0, "Member 'UWBP_Dialog_C::ScrollBox' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ScrollDownButton) == 0x0004D8, "Member 'UWBP_Dialog_C::ScrollDownButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ScrollUpButton) == 0x0004E0, "Member 'UWBP_Dialog_C::ScrollUpButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, ChoiceFromDialog) == 0x0004E8, "Member 'UWBP_Dialog_C::ChoiceFromDialog' has a wrong offset!");
-static_assert(offsetof(UWBP_Dialog_C, CancelFromDialog) == 0x0004F8, "Member 'UWBP_Dialog_C::CancelFromDialog' has a wrong offset!");
+static_assert(sizeof(UWBP_Dialog_C) == 0x0009E8, "Wrong size on UWBP_Dialog_C");
+static_assert(offsetof(UWBP_Dialog_C, ButtonsPanel) == 0x000968, "Member 'UWBP_Dialog_C::ButtonsPanel' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ResponseItem) == 0x000970, "Member 'UWBP_Dialog_C::ResponseItem' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ResponseItem_1) == 0x000978, "Member 'UWBP_Dialog_C::ResponseItem_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ResponseItem_2) == 0x000980, "Member 'UWBP_Dialog_C::ResponseItem_2' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ResponseItem_3) == 0x000988, "Member 'UWBP_Dialog_C::ResponseItem_3' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ResponseItem_4) == 0x000990, "Member 'UWBP_Dialog_C::ResponseItem_4' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ResponseItem_5) == 0x000998, "Member 'UWBP_Dialog_C::ResponseItem_5' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ResponseItem_6) == 0x0009A0, "Member 'UWBP_Dialog_C::ResponseItem_6' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ResponseItem_7) == 0x0009A8, "Member 'UWBP_Dialog_C::ResponseItem_7' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ScrollBox) == 0x0009B0, "Member 'UWBP_Dialog_C::ScrollBox' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ScrollDownButton) == 0x0009B8, "Member 'UWBP_Dialog_C::ScrollDownButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ScrollUpButton) == 0x0009C0, "Member 'UWBP_Dialog_C::ScrollUpButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, ChoiceFromDialog) == 0x0009C8, "Member 'UWBP_Dialog_C::ChoiceFromDialog' has a wrong offset!");
+static_assert(offsetof(UWBP_Dialog_C, CancelFromDialog) == 0x0009D8, "Member 'UWBP_Dialog_C::CancelFromDialog' has a wrong offset!");
 
 }
 

@@ -28,7 +28,7 @@ public:
 	class UStaticMeshComponent*                   Cube;                                              // 0x0528(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   WALL3;                                             // 0x0530(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   WALL2;                                             // 0x0538(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   wall1;                                             // 0x0540(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   WALL1;                                             // 0x0540(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   WALL;                                              // 0x0548(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	double                                        InitialZ;                                          // 0x0550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        TargetZ;                                           // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -58,7 +58,7 @@ static_assert(offsetof(ABP_Tank_Wall_C, Niagara) == 0x000520, "Member 'ABP_Tank_
 static_assert(offsetof(ABP_Tank_Wall_C, Cube) == 0x000528, "Member 'ABP_Tank_Wall_C::Cube' has a wrong offset!");
 static_assert(offsetof(ABP_Tank_Wall_C, WALL3) == 0x000530, "Member 'ABP_Tank_Wall_C::WALL3' has a wrong offset!");
 static_assert(offsetof(ABP_Tank_Wall_C, WALL2) == 0x000538, "Member 'ABP_Tank_Wall_C::WALL2' has a wrong offset!");
-static_assert(offsetof(ABP_Tank_Wall_C, wall1) == 0x000540, "Member 'ABP_Tank_Wall_C::wall1' has a wrong offset!");
+static_assert(offsetof(ABP_Tank_Wall_C, WALL1) == 0x000540, "Member 'ABP_Tank_Wall_C::WALL1' has a wrong offset!");
 static_assert(offsetof(ABP_Tank_Wall_C, WALL) == 0x000548, "Member 'ABP_Tank_Wall_C::WALL' has a wrong offset!");
 static_assert(offsetof(ABP_Tank_Wall_C, InitialZ) == 0x000550, "Member 'ABP_Tank_Wall_C::InitialZ' has a wrong offset!");
 static_assert(offsetof(ABP_Tank_Wall_C, TargetZ) == 0x000558, "Member 'ABP_Tank_Wall_C::TargetZ' has a wrong offset!");

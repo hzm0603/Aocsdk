@@ -17,6 +17,25 @@
 namespace SDK
 {
 
+// ScriptStruct SimpleAnimInstance.SimpleAnimInstance_C.AnimBlueprintGeneratedMutableData
+// 0x0005 (0x0006 - 0x0001)
+struct SimpleAnimInstance::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+public:
+	uint8                                         __ByteProperty;                                    // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         __ByteProperty_0;                                  // 0x0002(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         __ByteProperty_1;                                  // 0x0003(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         __ByteProperty_2;                                  // 0x0004(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         __ByteProperty_3;                                  // 0x0005(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on SimpleAnimInstance::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData) == 0x000006, "Wrong size on SimpleAnimInstance::FAnimBlueprintGeneratedMutableData");
+static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData, __ByteProperty) == 0x000001, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedMutableData::__ByteProperty' has a wrong offset!");
+static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData, __ByteProperty_0) == 0x000002, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedMutableData::__ByteProperty_0' has a wrong offset!");
+static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData, __ByteProperty_1) == 0x000003, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedMutableData::__ByteProperty_1' has a wrong offset!");
+static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData, __ByteProperty_2) == 0x000004, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedMutableData::__ByteProperty_2' has a wrong offset!");
+static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData, __ByteProperty_3) == 0x000005, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedMutableData::__ByteProperty_3' has a wrong offset!");
+
 // ScriptStruct SimpleAnimInstance.SimpleAnimInstance_C.AnimBlueprintGeneratedConstantData
 // 0x017F (0x0180 - 0x0001)
 struct SimpleAnimInstance::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
@@ -75,25 +94,6 @@ static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedConstantData, 
 static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedConstantData, __ArrayProperty_337) == 0x0000D8, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedConstantData::__ArrayProperty_337' has a wrong offset!");
 static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x0000E8, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
 static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x000168, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
-
-// ScriptStruct SimpleAnimInstance.SimpleAnimInstance_C.AnimBlueprintGeneratedMutableData
-// 0x0005 (0x0006 - 0x0001)
-struct SimpleAnimInstance::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-public:
-	uint8                                         __ByteProperty;                                    // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         __ByteProperty_0;                                  // 0x0002(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         __ByteProperty_1;                                  // 0x0003(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         __ByteProperty_2;                                  // 0x0004(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         __ByteProperty_3;                                  // 0x0005(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on SimpleAnimInstance::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData) == 0x000006, "Wrong size on SimpleAnimInstance::FAnimBlueprintGeneratedMutableData");
-static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData, __ByteProperty) == 0x000001, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedMutableData::__ByteProperty' has a wrong offset!");
-static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData, __ByteProperty_0) == 0x000002, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedMutableData::__ByteProperty_0' has a wrong offset!");
-static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData, __ByteProperty_1) == 0x000003, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedMutableData::__ByteProperty_1' has a wrong offset!");
-static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData, __ByteProperty_2) == 0x000004, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedMutableData::__ByteProperty_2' has a wrong offset!");
-static_assert(offsetof(SimpleAnimInstance::FAnimBlueprintGeneratedMutableData, __ByteProperty_3) == 0x000005, "Member 'SimpleAnimInstance::FAnimBlueprintGeneratedMutableData::__ByteProperty_3' has a wrong offset!");
 
 }
 

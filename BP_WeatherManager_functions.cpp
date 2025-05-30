@@ -17,50 +17,191 @@
 namespace SDK
 {
 
-// Function BP_WeatherManager.BP_WeatherManager_C.Add Global Noise To Climate
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_WeatherManager.BP_WeatherManager_C.Absolute Humidity
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FSingleDayClimate                Singular_Day_Climate                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// double                                  TOD_for_Curves                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  In_TOY_in_hours                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Current_Temp_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Amount_of_Precipitation                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Current_Humidity                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Normalized_Temp_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Humidity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Dew_Pont                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_WeatherManager_C::Add_Global_Noise_To_Climate(const struct FSingleDayClimate& Singular_Day_Climate, double TOD_for_Curves, double In_TOY_in_hours, double* Current_Temp_0, double* Amount_of_Precipitation, double* Current_Humidity)
+void ABP_WeatherManager_C::Absolute_Humidity(double Normalized_Temp_0, double Humidity, double* Dew_Pont)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "Add Global Noise To Climate");
+		Func = Class->GetFunction("BP_WeatherManager_C", "Absolute Humidity");
 
-	Params::BP_WeatherManager_C_Add_Global_Noise_To_Climate Parms{};
+	Params::BP_WeatherManager_C_Absolute_Humidity Parms{};
 
-	Parms.Singular_Day_Climate = std::move(Singular_Day_Climate);
-	Parms.TOD_for_Curves = TOD_for_Curves;
-	Parms.In_TOY_in_hours = In_TOY_in_hours;
+	Parms.Normalized_Temp_0 = Normalized_Temp_0;
+	Parms.Humidity = Humidity;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Current_Temp_0 != nullptr)
-		*Current_Temp_0 = Parms.Current_Temp_0;
+	if (Dew_Pont != nullptr)
+		*Dew_Pont = Parms.Dew_Pont;
+}
 
-	if (Amount_of_Precipitation != nullptr)
-		*Amount_of_Precipitation = Parms.Amount_of_Precipitation;
 
-	if (Current_Humidity != nullptr)
-		*Current_Humidity = Parms.Current_Humidity;
+// Function BP_WeatherManager.BP_WeatherManager_C.Assign Fog Condition
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  Fog_in                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Weather_FogCondition*                 FogCondition_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::Assign_Fog_Condition(double Fog_in, E_Weather_FogCondition* FogCondition_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "Assign Fog Condition");
+
+	Params::BP_WeatherManager_C_Assign_Fog_Condition Parms{};
+
+	Parms.Fog_in = Fog_in;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (FogCondition_0 != nullptr)
+		*FogCondition_0 = Parms.FogCondition_0;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Assign Humidity Condition
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  Humidity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Weather_HumidityCondition*            HumidityCondition_0                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::Assign_Humidity_Condition(double Humidity, E_Weather_HumidityCondition* HumidityCondition_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "Assign Humidity Condition");
+
+	Params::BP_WeatherManager_C_Assign_Humidity_Condition Parms{};
+
+	Parms.Humidity = Humidity;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (HumidityCondition_0 != nullptr)
+		*HumidityCondition_0 = Parms.HumidityCondition_0;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Assign Precipitation Condition
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  Precipitation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Temperature                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Weather_RainCondition*                RainCondition_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Weather_SnowCondition*                SnowCondition_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::Assign_Precipitation_Condition(double Precipitation, double Temperature, E_Weather_RainCondition* RainCondition_0, E_Weather_SnowCondition* SnowCondition_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "Assign Precipitation Condition");
+
+	Params::BP_WeatherManager_C_Assign_Precipitation_Condition Parms{};
+
+	Parms.Precipitation = Precipitation;
+	Parms.Temperature = Temperature;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (RainCondition_0 != nullptr)
+		*RainCondition_0 = Parms.RainCondition_0;
+
+	if (SnowCondition_0 != nullptr)
+		*SnowCondition_0 = Parms.SnowCondition_0;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Assign Weather Conditions
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Temperature                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Precipitation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Humidity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Fog                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Wind_Speed                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Weather_RainCondition*                RainCondition_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Weather_SnowCondition*                SnowCondition_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Weather_WindCondition*                WindCondition_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Weather_HumidityCondition*            HumidityCondition_0                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Weather_FogCondition*                 FogCondition_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::Assign_Weather_Conditions(double Temperature, double Precipitation, double Humidity, double Fog, double Wind_Speed, E_Weather_RainCondition* RainCondition_0, E_Weather_SnowCondition* SnowCondition_0, E_Weather_WindCondition* WindCondition_0, E_Weather_HumidityCondition* HumidityCondition_0, E_Weather_FogCondition* FogCondition_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "Assign Weather Conditions");
+
+	Params::BP_WeatherManager_C_Assign_Weather_Conditions Parms{};
+
+	Parms.Temperature = Temperature;
+	Parms.Precipitation = Precipitation;
+	Parms.Humidity = Humidity;
+	Parms.Fog = Fog;
+	Parms.Wind_Speed = Wind_Speed;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (RainCondition_0 != nullptr)
+		*RainCondition_0 = Parms.RainCondition_0;
+
+	if (SnowCondition_0 != nullptr)
+		*SnowCondition_0 = Parms.SnowCondition_0;
+
+	if (WindCondition_0 != nullptr)
+		*WindCondition_0 = Parms.WindCondition_0;
+
+	if (HumidityCondition_0 != nullptr)
+		*HumidityCondition_0 = Parms.HumidityCondition_0;
+
+	if (FogCondition_0 != nullptr)
+		*FogCondition_0 = Parms.FogCondition_0;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Assign Wind Condition
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  WindSpeed                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Weather_WindCondition*                WindCondition_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::Assign_Wind_Condition(double WindSpeed, E_Weather_WindCondition* WindCondition_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "Assign Wind Condition");
+
+	Params::BP_WeatherManager_C_Assign_Wind_Condition Parms{};
+
+	Parms.WindSpeed = WindSpeed;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WindCondition_0 != nullptr)
+		*WindCondition_0 = Parms.WindCondition_0;
 }
 
 
 // Function BP_WeatherManager.BP_WeatherManager_C.Calculate Dew Point
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double                                  Current_Temp_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Normalized_Temp_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Current_Humidity                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DewPoint                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Wetness_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 NormalizedDewPoint                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_WeatherManager_C::Calculate_Dew_Point(double Current_Temp_0, double Current_Humidity, double* DewPoint)
+void ABP_WeatherManager_C::Calculate_Dew_Point(double Normalized_Temp_0, double Current_Humidity, double Wetness_0, double* NormalizedDewPoint)
 {
 	static class UFunction* Func = nullptr;
 
@@ -69,116 +210,333 @@ void ABP_WeatherManager_C::Calculate_Dew_Point(double Current_Temp_0, double Cur
 
 	Params::BP_WeatherManager_C_Calculate_Dew_Point Parms{};
 
-	Parms.Current_Temp_0 = Current_Temp_0;
+	Parms.Normalized_Temp_0 = Normalized_Temp_0;
 	Parms.Current_Humidity = Current_Humidity;
+	Parms.Wetness_0 = Wetness_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (DewPoint != nullptr)
-		*DewPoint = Parms.DewPoint;
+	if (NormalizedDewPoint != nullptr)
+		*NormalizedDewPoint = Parms.NormalizedDewPoint;
 }
 
 
-// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Weness
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Humidity
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// double                                  Precipitation_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-double ABP_WeatherManager_C::Calculate_Weness(double Precipitation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "Calculate Weness");
-
-	Params::BP_WeatherManager_C_Calculate_Weness Parms{};
-
-	Parms.Precipitation_0 = Precipitation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Cloud DA to Struct
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UBPDA_CloudPreset_C*              Cloud_DA_in                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_CloudParameters          StructOut                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_WeatherManager_C::Cloud_DA_to_Struct(class UBPDA_CloudPreset_C* Cloud_DA_in, struct FSTRUCT_CloudParameters* StructOut)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "Cloud DA to Struct");
-
-	Params::BP_WeatherManager_C_Cloud_DA_to_Struct Parms{};
-
-	Parms.Cloud_DA_in = Cloud_DA_in;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (StructOut != nullptr)
-		*StructOut = std::move(Parms.StructOut);
-}
-
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Cloud Logic
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  Humidity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Chance_Of_Precipitation                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DEBUG_Alpha_for_Blend                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Cloud_Vis_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_CloudParameters          StructOut                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVerraGlobalSkyVolumetricCloudSettingsReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
+// double                                  In_Time_of_Year_in_hours                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Wetness_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Normalized_Temp_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 RetHumidity_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-struct FVerraGlobalSkyVolumetricCloudSettings ABP_WeatherManager_C::Cloud_Logic(double Humidity, double Chance_Of_Precipitation, double* DEBUG_Alpha_for_Blend, bool* Cloud_Vis_0, struct FSTRUCT_CloudParameters* StructOut)
+double ABP_WeatherManager_C::Calculate_Humidity(double Humidity, double In_Time_of_Year_in_hours, double Wetness_0, double Normalized_Temp_0, double* RetHumidity_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "Cloud Logic");
+		Func = Class->GetFunction("BP_WeatherManager_C", "Calculate Humidity");
 
-	Params::BP_WeatherManager_C_Cloud_Logic Parms{};
+	Params::BP_WeatherManager_C_Calculate_Humidity Parms{};
 
 	Parms.Humidity = Humidity;
-	Parms.Chance_Of_Precipitation = Chance_Of_Precipitation;
+	Parms.In_Time_of_Year_in_hours = In_Time_of_Year_in_hours;
+	Parms.Wetness_0 = Wetness_0;
+	Parms.Normalized_Temp_0 = Normalized_Temp_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (DEBUG_Alpha_for_Blend != nullptr)
-		*DEBUG_Alpha_for_Blend = Parms.DEBUG_Alpha_for_Blend;
-
-	if (Cloud_Vis_0 != nullptr)
-		*Cloud_Vis_0 = Parms.Cloud_Vis_0;
-
-	if (StructOut != nullptr)
-		*StructOut = std::move(Parms.StructOut);
+	if (RetHumidity_0 != nullptr)
+		*RetHumidity_0 = Parms.RetHumidity_0;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function BP_WeatherManager.BP_WeatherManager_C.Determine Month
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Precipitation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double                                  In_Year                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomeType                              Current_Biome                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Chance_Of_Precipitation                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  In_TOY_in_hours                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  In_Precip_Amount                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Amount_Of_Precipitation_0                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-int32 ABP_WeatherManager_C::Determine_Month(double In_Year)
+void ABP_WeatherManager_C::Calculate_Precipitation(EBiomeType Current_Biome, double Chance_Of_Precipitation, double In_TOY_in_hours, double In_Precip_Amount, double* Amount_Of_Precipitation_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "Determine Month");
+		Func = Class->GetFunction("BP_WeatherManager_C", "Calculate Precipitation");
 
-	Params::BP_WeatherManager_C_Determine_Month Parms{};
+	Params::BP_WeatherManager_C_Calculate_Precipitation Parms{};
 
-	Parms.In_Year = In_Year;
+	Parms.Current_Biome = Current_Biome;
+	Parms.Chance_Of_Precipitation = Chance_Of_Precipitation;
+	Parms.In_TOY_in_hours = In_TOY_in_hours;
+	Parms.In_Precip_Amount = In_Precip_Amount;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Amount_Of_Precipitation_0 != nullptr)
+		*Amount_Of_Precipitation_0 = Parms.Amount_Of_Precipitation_0;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Saturation Point
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Temp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::Calculate_Saturation_Point(double Temp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "Calculate Saturation Point");
+
+	Params::BP_WeatherManager_C_Calculate_Saturation_Point Parms{};
+
+	Parms.Temp = Temp;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Temperature
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  Time_Of_Day_2400                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomeType                              Current_Biome                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Degrees_Low                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Degrees_High                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Normalized_Altitude                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  In_Time_of_Year_in_hours                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  AmountPrecip                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DeltaT                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Current_Temp                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Modified_Normalized_Temp                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 NonModified_Normalized_Temp                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::Calculate_Temperature(double Time_Of_Day_2400, EBiomeType Current_Biome, double Degrees_Low, double Degrees_High, double Normalized_Altitude, double In_Time_of_Year_in_hours, double AmountPrecip, double DeltaT, double* Current_Temp, double* Modified_Normalized_Temp, double* NonModified_Normalized_Temp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "Calculate Temperature");
+
+	Params::BP_WeatherManager_C_Calculate_Temperature Parms{};
+
+	Parms.Time_Of_Day_2400 = Time_Of_Day_2400;
+	Parms.Current_Biome = Current_Biome;
+	Parms.Degrees_Low = Degrees_Low;
+	Parms.Degrees_High = Degrees_High;
+	Parms.Normalized_Altitude = Normalized_Altitude;
+	Parms.In_Time_of_Year_in_hours = In_Time_of_Year_in_hours;
+	Parms.AmountPrecip = AmountPrecip;
+	Parms.DeltaT = DeltaT;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Current_Temp != nullptr)
+		*Current_Temp = Parms.Current_Temp;
+
+	if (Modified_Normalized_Temp != nullptr)
+		*Modified_Normalized_Temp = Parms.Modified_Normalized_Temp;
+
+	if (NonModified_Normalized_Temp != nullptr)
+		*NonModified_Normalized_Temp = Parms.NonModified_Normalized_Temp;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Weather
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FSingleDayClimate&         In_Climate                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// double                                  Time_Of_Day_2400                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  In_Time_of_Year_in_hours                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomeType                              Current_Biome                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bOverrideTemp                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bOverridePrecip                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bOverrideHumidity                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bOverrideFog                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Local_FogIn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Delta_Seconds                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Normalized_Temp_Return                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Amount_of_Precip_Return                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Humidity_Return                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Normalized_DewPoint_Return                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Wetness_Return                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Local_Fog_Return                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Cloud_Lerp_Return                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::Calculate_Weather(const struct FSingleDayClimate& In_Climate, double Time_Of_Day_2400, double In_Time_of_Year_in_hours, EBiomeType Current_Biome, bool bOverrideTemp, bool bOverridePrecip, bool bOverrideHumidity, bool bOverrideFog, double Local_FogIn, double Delta_Seconds, double* Normalized_Temp_Return, double* Amount_of_Precip_Return, double* Humidity_Return, double* Normalized_DewPoint_Return, double* Wetness_Return, double* Local_Fog_Return, double* Cloud_Lerp_Return)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "Calculate Weather");
+
+	Params::BP_WeatherManager_C_Calculate_Weather Parms{};
+
+	Parms.In_Climate = std::move(In_Climate);
+	Parms.Time_Of_Day_2400 = Time_Of_Day_2400;
+	Parms.In_Time_of_Year_in_hours = In_Time_of_Year_in_hours;
+	Parms.Current_Biome = Current_Biome;
+	Parms.bOverrideTemp = bOverrideTemp;
+	Parms.bOverridePrecip = bOverridePrecip;
+	Parms.bOverrideHumidity = bOverrideHumidity;
+	Parms.bOverrideFog = bOverrideFog;
+	Parms.Local_FogIn = Local_FogIn;
+	Parms.Delta_Seconds = Delta_Seconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Normalized_Temp_Return != nullptr)
+		*Normalized_Temp_Return = Parms.Normalized_Temp_Return;
+
+	if (Amount_of_Precip_Return != nullptr)
+		*Amount_of_Precip_Return = Parms.Amount_of_Precip_Return;
+
+	if (Humidity_Return != nullptr)
+		*Humidity_Return = Parms.Humidity_Return;
+
+	if (Normalized_DewPoint_Return != nullptr)
+		*Normalized_DewPoint_Return = Parms.Normalized_DewPoint_Return;
+
+	if (Wetness_Return != nullptr)
+		*Wetness_Return = Parms.Wetness_Return;
+
+	if (Local_Fog_Return != nullptr)
+		*Local_Fog_Return = Parms.Local_Fog_Return;
+
+	if (Cloud_Lerp_Return != nullptr)
+		*Cloud_Lerp_Return = Parms.Cloud_Lerp_Return;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Wetness
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  Precipitation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Normalized_Temp_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Wetness_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 WetnessRet                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::Calculate_Wetness(double Precipitation, double Normalized_Temp_0, double Wetness_0, double* WetnessRet)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "Calculate Wetness");
+
+	Params::BP_WeatherManager_C_Calculate_Wetness Parms{};
+
+	Parms.Precipitation = Precipitation;
+	Parms.Normalized_Temp_0 = Normalized_Temp_0;
+	Parms.Wetness_0 = Wetness_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WetnessRet != nullptr)
+		*WetnessRet = Parms.WetnessRet;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.CalculateCloudLerp
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  Humidity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Normalized_Precip                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Sunshine_Hours                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Cloud_Lerp                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::CalculateCloudLerp(double Humidity, double Normalized_Precip, int32 Sunshine_Hours, double* Cloud_Lerp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "CalculateCloudLerp");
+
+	Params::BP_WeatherManager_C_CalculateCloudLerp Parms{};
+
+	Parms.Humidity = Humidity;
+	Parms.Normalized_Precip = Normalized_Precip;
+	Parms.Sunshine_Hours = Sunshine_Hours;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Cloud_Lerp != nullptr)
+		*Cloud_Lerp = Parms.Cloud_Lerp;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.CalculateLocalFog
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  Normalized_DewPoint                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Normalized_Temperature                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Local_Fog                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::CalculateLocalFog(double Normalized_DewPoint, double Normalized_Temperature, double* Local_Fog)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "CalculateLocalFog");
+
+	Params::BP_WeatherManager_C_CalculateLocalFog Parms{};
+
+	Parms.Normalized_DewPoint = Normalized_DewPoint;
+	Parms.Normalized_Temperature = Normalized_Temperature;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Local_Fog != nullptr)
+		*Local_Fog = Parms.Local_Fog;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.CalculateShouldLighting
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   CouldLightning                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeatherManager_C::CalculateShouldLighting(bool* CouldLightning)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "CalculateShouldLighting");
+
+	Params::BP_WeatherManager_C_CalculateShouldLighting Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (CouldLightning != nullptr)
+		*CouldLightning = Parms.CouldLightning;
+}
+
+
+// Function BP_WeatherManager.BP_WeatherManager_C.GaussianCurve
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FVector2D&                 Start_Peak                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+double ABP_WeatherManager_C::GaussianCurve(const struct FVector2D& Start_Peak, double Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "GaussianCurve");
+
+	Params::BP_WeatherManager_C_GaussianCurve Parms{};
+
+	Parms.Start_Peak = std::move(Start_Peak);
+	Parms.Time = Time;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -186,158 +544,74 @@ int32 ABP_WeatherManager_C::Determine_Month(double In_Year)
 }
 
 
-// Function BP_WeatherManager.BP_WeatherManager_C.LERP Clouds
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_WeatherManager.BP_WeatherManager_C.Get 0-1 TimeOfDay Normalized
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UBPDA_CloudPreset_C*              Clouds_1                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UBPDA_CloudPreset_C*              Clouds_2                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  ALPHA                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UBPDA_CloudPreset_C*              Cloud_Blend                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_CloudParameters          Cloud_Struct_IN                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    because_im_lazy_and_i_said_so                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UBPDA_CloudPreset_C*              OutputPin                                              (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_CloudParameters          Cloud_Struct_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Zero_1_Time_of_Day_Normalized                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_WeatherManager_C::LERP_Clouds(class UBPDA_CloudPreset_C* Clouds_1, class UBPDA_CloudPreset_C* Clouds_2, double ALPHA, class UBPDA_CloudPreset_C* Cloud_Blend, const struct FSTRUCT_CloudParameters& Cloud_Struct_IN, bool because_im_lazy_and_i_said_so, class UBPDA_CloudPreset_C** OutputPin, struct FSTRUCT_CloudParameters* Cloud_Struct_0)
+void ABP_WeatherManager_C::Get_0_1_TimeOfDay_Normalized(double Value, double* Zero_1_Time_of_Day_Normalized)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "LERP Clouds");
+		Func = Class->GetFunction("BP_WeatherManager_C", "Get 0-1 TimeOfDay Normalized");
 
-	Params::BP_WeatherManager_C_LERP_Clouds Parms{};
+	Params::BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized Parms{};
 
-	Parms.Clouds_1 = Clouds_1;
-	Parms.Clouds_2 = Clouds_2;
-	Parms.ALPHA = ALPHA;
-	Parms.Cloud_Blend = Cloud_Blend;
-	Parms.Cloud_Struct_IN = std::move(Cloud_Struct_IN);
-	Parms.because_im_lazy_and_i_said_so = because_im_lazy_and_i_said_so;
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (OutputPin != nullptr)
-		*OutputPin = Parms.OutputPin;
-
-	if (Cloud_Struct_0 != nullptr)
-		*Cloud_Struct_0 = std::move(Parms.Cloud_Struct_0);
+	if (Zero_1_Time_of_Day_Normalized != nullptr)
+		*Zero_1_Time_of_Day_Normalized = Parms.Zero_1_Time_of_Day_Normalized;
 }
 
 
-// Function BP_WeatherManager.BP_WeatherManager_C.LERP Clouds2
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_WeatherManager.BP_WeatherManager_C.GetBiomeNormalizedPrecipAmount
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double                                  ALPHA                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TMap<class FString, struct FSTRUCT_CloudParameters>CloudPack_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Cloud_A_Index                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Cloud_B_Index                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Use_Previous_Struct                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_CloudParameters          Previous_Cloud_Blend                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_CloudParameters          StructOut                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomeType                              Current_Biome                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  In_Precip                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Normalized_Precip_Amount_For_Biome                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_WeatherManager_C::LERP_Clouds2(double ALPHA, const TMap<class FString, struct FSTRUCT_CloudParameters>& CloudPack_0, int32 Cloud_A_Index, int32 Cloud_B_Index, bool Use_Previous_Struct, const struct FSTRUCT_CloudParameters& Previous_Cloud_Blend, struct FSTRUCT_CloudParameters* StructOut)
+void ABP_WeatherManager_C::GetBiomeNormalizedPrecipAmount(EBiomeType Current_Biome, double In_Precip, double* Normalized_Precip_Amount_For_Biome)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "LERP Clouds2");
+		Func = Class->GetFunction("BP_WeatherManager_C", "GetBiomeNormalizedPrecipAmount");
 
-	Params::BP_WeatherManager_C_LERP_Clouds2 Parms{};
+	Params::BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount Parms{};
 
-	Parms.ALPHA = ALPHA;
-	Parms.CloudPack_0 = std::move(CloudPack_0);
-	Parms.Cloud_A_Index = Cloud_A_Index;
-	Parms.Cloud_B_Index = Cloud_B_Index;
-	Parms.Use_Previous_Struct = Use_Previous_Struct;
-	Parms.Previous_Cloud_Blend = std::move(Previous_Cloud_Blend);
+	Parms.Current_Biome = Current_Biome;
+	Parms.In_Precip = In_Precip;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (StructOut != nullptr)
-		*StructOut = std::move(Parms.StructOut);
+	if (Normalized_Precip_Amount_For_Biome != nullptr)
+		*Normalized_Precip_Amount_For_Biome = Parms.Normalized_Precip_Amount_For_Biome;
 }
 
 
-// Function BP_WeatherManager.BP_WeatherManager_C.NatrualLog
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Target_Number                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_WeatherManager_C::NatrualLog(double Target_Number)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "NatrualLog");
-
-	Params::BP_WeatherManager_C_NatrualLog Parms{};
-
-	Parms.Target_Number = Target_Number;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Precip Logic
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FSTRUCT_SingularClimateData      Singular_Biome_Climate_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Current_Temp_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Current_AMOUNT_of_Precip                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Current_Humidity                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UBPDA_CloudPreset_C*              Value                                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_SingularClimateData      Singular_Biome_Climate1                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             Output_Get                                             (Parm, OutParm)
-// bool                                    Should_Precipitate_0                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_WeatherManager_C::Precip_Logic(const struct FSTRUCT_SingularClimateData& Singular_Biome_Climate_0, double Current_Temp_0, double Current_AMOUNT_of_Precip, double Current_Humidity, class UBPDA_CloudPreset_C** Value, struct FSTRUCT_SingularClimateData* Singular_Biome_Climate1, class FText* Output_Get, bool* Should_Precipitate_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "Precip Logic");
-
-	Params::BP_WeatherManager_C_Precip_Logic Parms{};
-
-	Parms.Singular_Biome_Climate_0 = std::move(Singular_Biome_Climate_0);
-	Parms.Current_Temp_0 = Current_Temp_0;
-	Parms.Current_AMOUNT_of_Precip = Current_AMOUNT_of_Precip;
-	Parms.Current_Humidity = Current_Humidity;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
-
-	if (Singular_Biome_Climate1 != nullptr)
-		*Singular_Biome_Climate1 = std::move(Parms.Singular_Biome_Climate1);
-
-	if (Output_Get != nullptr)
-		*Output_Get = std::move(Parms.Output_Get);
-
-	if (Should_Precipitate_0 != nullptr)
-		*Should_Precipitate_0 = Parms.Should_Precipitate_0;
-}
-
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Random Chance Of Precip
+// Function BP_WeatherManager.BP_WeatherManager_C.Random Weather Flucuations
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // double                                  In_Float                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  In_TOY_in_hours                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Post_Noise                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  In_Time_of_Year_in_hours                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Post_Noise                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_WeatherManager_C::Random_Chance_Of_Precip(double In_Float, double In_TOY_in_hours, double* Post_Noise)
+void ABP_WeatherManager_C::Random_Weather_Flucuations(double In_Float, double In_Time_of_Year_in_hours, double* Post_Noise)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "Random Chance Of Precip");
+		Func = Class->GetFunction("BP_WeatherManager_C", "Random Weather Flucuations");
 
-	Params::BP_WeatherManager_C_Random_Chance_Of_Precip Parms{};
+	Params::BP_WeatherManager_C_Random_Weather_Flucuations Parms{};
 
 	Parms.In_Float = In_Float;
-	Parms.In_TOY_in_hours = In_TOY_in_hours;
+	Parms.In_Time_of_Year_in_hours = In_Time_of_Year_in_hours;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -346,114 +620,40 @@ void ABP_WeatherManager_C::Random_Chance_Of_Precip(double In_Float, double In_TO
 }
 
 
-// Function BP_WeatherManager.BP_WeatherManager_C.Reset Temp Test
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_WeatherManager_C::Reset_Temp_Test()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "Reset Temp Test");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Run Weather BP Functions
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_WeatherManager.BP_WeatherManager_C.S Curve For Temp
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FSingleDayClimate                Singular_Day_Climate                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// double                                  TOD_for_Curves                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  In_TOY_in_hours                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    OverridePrecip                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    OverrideHumidity                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  NormalizePrecipitation                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  NormalizedTemperature                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Humidity                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DewPoint                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DEBUG_CurrentTemp                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DEBUG_Precipitation_Amount                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DEBUG_CurrentHumidity                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Cloud_Vis_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_CloudParameters          StructOut                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVerraGlobalSkyVolumetricCloudSettingsCloudScenarioStructOut                                 (Parm, OutParm, NoDestructor)
-// TMap<class FName, float>                ReturnValue                                            (Parm, OutParm, ReturnParm)
+// const struct FVector2D&                 Start_Peak                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-TMap<class FName, float> ABP_WeatherManager_C::Run_Weather_BP_Functions(const struct FSingleDayClimate& Singular_Day_Climate, double TOD_for_Curves, double In_TOY_in_hours, bool OverridePrecip, bool OverrideHumidity, double* NormalizePrecipitation, double* NormalizedTemperature, double* Humidity, double* DewPoint, double* DEBUG_CurrentTemp, double* DEBUG_Precipitation_Amount, double* DEBUG_CurrentHumidity, bool* Cloud_Vis_0, struct FSTRUCT_CloudParameters* StructOut, struct FVerraGlobalSkyVolumetricCloudSettings* CloudScenarioStructOut)
+double ABP_WeatherManager_C::S_Curve_For_Temp(const struct FVector2D& Start_Peak, double Time)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "Run Weather BP Functions");
+		Func = Class->GetFunction("BP_WeatherManager_C", "S Curve For Temp");
 
-	Params::BP_WeatherManager_C_Run_Weather_BP_Functions Parms{};
+	Params::BP_WeatherManager_C_S_Curve_For_Temp Parms{};
 
-	Parms.Singular_Day_Climate = std::move(Singular_Day_Climate);
-	Parms.TOD_for_Curves = TOD_for_Curves;
-	Parms.In_TOY_in_hours = In_TOY_in_hours;
-	Parms.OverridePrecip = OverridePrecip;
-	Parms.OverrideHumidity = OverrideHumidity;
+	Parms.Start_Peak = std::move(Start_Peak);
+	Parms.Time = Time;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (NormalizePrecipitation != nullptr)
-		*NormalizePrecipitation = Parms.NormalizePrecipitation;
-
-	if (NormalizedTemperature != nullptr)
-		*NormalizedTemperature = Parms.NormalizedTemperature;
-
-	if (Humidity != nullptr)
-		*Humidity = Parms.Humidity;
-
-	if (DewPoint != nullptr)
-		*DewPoint = Parms.DewPoint;
-
-	if (DEBUG_CurrentTemp != nullptr)
-		*DEBUG_CurrentTemp = Parms.DEBUG_CurrentTemp;
-
-	if (DEBUG_Precipitation_Amount != nullptr)
-		*DEBUG_Precipitation_Amount = Parms.DEBUG_Precipitation_Amount;
-
-	if (DEBUG_CurrentHumidity != nullptr)
-		*DEBUG_CurrentHumidity = Parms.DEBUG_CurrentHumidity;
-
-	if (Cloud_Vis_0 != nullptr)
-		*Cloud_Vis_0 = Parms.Cloud_Vis_0;
-
-	if (StructOut != nullptr)
-		*StructOut = std::move(Parms.StructOut);
-
-	if (CloudScenarioStructOut != nullptr)
-		*CloudScenarioStructOut = std::move(Parms.CloudScenarioStructOut);
-
 	return Parms.ReturnValue;
-}
-
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Select Cloud Set
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_WeatherManager_C::Select_Cloud_Set()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "Select Cloud Set");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function BP_WeatherManager.BP_WeatherManager_C.Set Days Climate Data
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FStruct_BiomeClimate             Biome_Data_Struct_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// double                                  Min                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Max                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_SingularClimateData      StructOut                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FStruct_BiomeClimate&      Biome_Data_Struct                                      (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// double*                                 Min                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Max                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_SingularClimateData*     StructOut                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_WeatherManager_C::Set_Days_Climate_Data(const struct FStruct_BiomeClimate& Biome_Data_Struct_0, double* Min, double* Max, struct FSTRUCT_SingularClimateData* StructOut)
+void ABP_WeatherManager_C::Set_Days_Climate_Data(const struct FStruct_BiomeClimate& Biome_Data_Struct, double* Min, double* Max, struct FSTRUCT_SingularClimateData* StructOut)
 {
 	static class UFunction* Func = nullptr;
 
@@ -462,7 +662,7 @@ void ABP_WeatherManager_C::Set_Days_Climate_Data(const struct FStruct_BiomeClima
 
 	Params::BP_WeatherManager_C_Set_Days_Climate_Data Parms{};
 
-	Parms.Biome_Data_Struct_0 = std::move(Biome_Data_Struct_0);
+	Parms.Biome_Data_Struct = std::move(Biome_Data_Struct);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -477,6 +677,20 @@ void ABP_WeatherManager_C::Set_Days_Climate_Data(const struct FStruct_BiomeClima
 }
 
 
+// Function BP_WeatherManager.BP_WeatherManager_C.UpdateMPC
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_WeatherManager_C::UpdateMPC()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeatherManager_C", "UpdateMPC");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_WeatherManager.BP_WeatherManager_C.UserConstructionScript
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -486,20 +700,6 @@ void ABP_WeatherManager_C::UserConstructionScript()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_WeatherManager_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_WeatherManager.BP_WeatherManager_C.WeatherOffsetMap
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_WeatherManager_C::WeatherOffsetMap()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WeatherManager_C", "WeatherOffsetMap");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

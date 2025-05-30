@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Birdperson_Zombie.Birdperson_Zombie_C
-// 0x0000 (0x1D90 - 0x1D90)
+// 0x0000 (0x1D50 - 0x1D50)
 class ABirdperson_Zombie_C final : public ANPCPawn_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABirdperson_Zombie_C) == 0x000010, "Wrong alignment on ABirdperson_Zombie_C");
-static_assert(sizeof(ABirdperson_Zombie_C) == 0x001D90, "Wrong size on ABirdperson_Zombie_C");
+static_assert(sizeof(ABirdperson_Zombie_C) == 0x001D50, "Wrong size on ABirdperson_Zombie_C");
 
 }
 

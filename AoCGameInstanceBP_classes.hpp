@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass AoCGameInstanceBP.AoCGameInstanceBP_C
-// 0x0068 (0x19B0 - 0x1948)
+// 0x0068 (0x1A10 - 0x19A8)
 class UAoCGameInstanceBP_C final : public UAoCGameInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1948(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UObject*                                LoginMenuWB;                                       // 0x1950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class FString, class AActor*>            ConstructionControllers;                           // 0x1958(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          ConstructionControllerMaps;                        // 0x19A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x19A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UObject*                                LoginMenuWB;                                       // 0x19B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class FString, class AActor*>            ConstructionControllers;                           // 0x19B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          ConstructionControllerMaps;                        // 0x1A08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DestroySessionCaller(class AAoCPlayerController* PlayerController);
@@ -44,11 +44,11 @@ public:
 	}
 };
 static_assert(alignof(UAoCGameInstanceBP_C) == 0x000008, "Wrong alignment on UAoCGameInstanceBP_C");
-static_assert(sizeof(UAoCGameInstanceBP_C) == 0x0019B0, "Wrong size on UAoCGameInstanceBP_C");
-static_assert(offsetof(UAoCGameInstanceBP_C, UberGraphFrame) == 0x001948, "Member 'UAoCGameInstanceBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAoCGameInstanceBP_C, LoginMenuWB) == 0x001950, "Member 'UAoCGameInstanceBP_C::LoginMenuWB' has a wrong offset!");
-static_assert(offsetof(UAoCGameInstanceBP_C, ConstructionControllers) == 0x001958, "Member 'UAoCGameInstanceBP_C::ConstructionControllers' has a wrong offset!");
-static_assert(offsetof(UAoCGameInstanceBP_C, ConstructionControllerMaps) == 0x0019A8, "Member 'UAoCGameInstanceBP_C::ConstructionControllerMaps' has a wrong offset!");
+static_assert(sizeof(UAoCGameInstanceBP_C) == 0x001A10, "Wrong size on UAoCGameInstanceBP_C");
+static_assert(offsetof(UAoCGameInstanceBP_C, UberGraphFrame) == 0x0019A8, "Member 'UAoCGameInstanceBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAoCGameInstanceBP_C, LoginMenuWB) == 0x0019B0, "Member 'UAoCGameInstanceBP_C::LoginMenuWB' has a wrong offset!");
+static_assert(offsetof(UAoCGameInstanceBP_C, ConstructionControllers) == 0x0019B8, "Member 'UAoCGameInstanceBP_C::ConstructionControllers' has a wrong offset!");
+static_assert(offsetof(UAoCGameInstanceBP_C, ConstructionControllerMaps) == 0x001A08, "Member 'UAoCGameInstanceBP_C::ConstructionControllerMaps' has a wrong offset!");
 
 }
 

@@ -22,9 +22,9 @@ namespace SDK
 class UWebBrowser final : public UWidget
 {
 public:
-	TMulticastInlineDelegate<void(class FText& Text)> OnUrlChanged;                                      // 0x01B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& URL, const class FString& Frame)> OnBeforePopup;                                     // 0x01C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& Message, const class FString& Source, int32 Line)> OnConsoleMessage;                                  // 0x01D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FText& Text)> OnUrlChanged;                            // 0x01B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& URL, const class FString& Frame)> OnBeforePopup; // 0x01C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& Message, const class FString& Source, int32 Line)> OnConsoleMessage; // 0x01D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class FString                                 InitialURL;                                        // 0x01E0(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bSupportsTransparency;                             // 0x01F0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_1F1[0x17];                                     // 0x01F1(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])

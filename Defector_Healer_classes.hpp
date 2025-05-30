@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Defector_Healer.Defector_Healer_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class ADefector_Healer_C final : public AHumanoidMonsterMaster_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ADefector_Healer_C) == 0x000010, "Wrong alignment on ADefector_Healer_C");
-static_assert(sizeof(ADefector_Healer_C) == 0x001DA0, "Wrong size on ADefector_Healer_C");
+static_assert(sizeof(ADefector_Healer_C) == 0x001D60, "Wrong size on ADefector_Healer_C");
 
 }
 

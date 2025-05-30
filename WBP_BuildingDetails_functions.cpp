@@ -17,39 +17,39 @@
 namespace SDK
 {
 
-// Function WBP_BuildingDetails.WBP_BuildingDetails_C.ExecuteUbergraph_WBP_BuildingDetails
-// (Final, UbergraphFunction)
+// Function WBP_BuildingDetails.WBP_BuildingDetails_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_BuildingDetails_C::ExecuteUbergraph_WBP_BuildingDetails(int32 EntryPoint)
+void UWBP_BuildingDetails_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BuildingDetails_C", "ExecuteUbergraph_WBP_BuildingDetails");
+		Func = Class->GetFunction("WBP_BuildingDetails_C", "PreConstruct");
 
-	Params::WBP_BuildingDetails_C_ExecuteUbergraph_WBP_BuildingDetails Parms{};
+	Params::WBP_BuildingDetails_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_BuildingDetails.WBP_BuildingDetails_C.GetBorderContainer
+// Function WBP_BuildingDetails.WBP_BuildingDetails_C.GetOddBorderStyle
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// TSubclassOf<class UCommonBorderStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
-class UPanelWidget* UWBP_BuildingDetails_C::GetBorderContainer()
+TSubclassOf<class UCommonBorderStyle> UWBP_BuildingDetails_C::GetOddBorderStyle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BuildingDetails_C", "GetBorderContainer");
+		Func = Class->GetFunction("WBP_BuildingDetails_C", "GetOddBorderStyle");
 
-	Params::WBP_BuildingDetails_C_GetBorderContainer Parms{};
+	Params::WBP_BuildingDetails_C_GetOddBorderStyle Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -77,19 +77,19 @@ TSubclassOf<class UCommonBorderStyle> UWBP_BuildingDetails_C::GetEvenBorderStyle
 }
 
 
-// Function WBP_BuildingDetails.WBP_BuildingDetails_C.GetOddBorderStyle
+// Function WBP_BuildingDetails.WBP_BuildingDetails_C.GetBorderContainer
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TSubclassOf<class UCommonBorderStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-TSubclassOf<class UCommonBorderStyle> UWBP_BuildingDetails_C::GetOddBorderStyle()
+class UPanelWidget* UWBP_BuildingDetails_C::GetBorderContainer()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BuildingDetails_C", "GetOddBorderStyle");
+		Func = Class->GetFunction("WBP_BuildingDetails_C", "GetBorderContainer");
 
-	Params::WBP_BuildingDetails_C_GetOddBorderStyle Parms{};
+	Params::WBP_BuildingDetails_C_GetBorderContainer Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -97,21 +97,21 @@ TSubclassOf<class UCommonBorderStyle> UWBP_BuildingDetails_C::GetOddBorderStyle(
 }
 
 
-// Function WBP_BuildingDetails.WBP_BuildingDetails_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_BuildingDetails.WBP_BuildingDetails_C.ExecuteUbergraph_WBP_BuildingDetails
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_BuildingDetails_C::PreConstruct(bool IsDesignTime)
+void UWBP_BuildingDetails_C::ExecuteUbergraph_WBP_BuildingDetails(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BuildingDetails_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_BuildingDetails_C", "ExecuteUbergraph_WBP_BuildingDetails");
 
-	Params::WBP_BuildingDetails_C_PreConstruct Parms{};
+	Params::WBP_BuildingDetails_C_ExecuteUbergraph_WBP_BuildingDetails Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -27,8 +27,8 @@ public:
 	class UHorizontalBox*                         Row2;                                              // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_CurrencyTiersItem(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_CurrencyTiersItem(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -124,6 +124,26 @@ class USplineComponent* ABP_Audio_SplineFollowPlayer_C::GetSplineComponent()
 }
 
 
+// Function BP_Audio_SplineFollowPlayer.BP_Audio_SplineFollowPlayer_C.GetSplineEmitterComponent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USceneComponent*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class USceneComponent* ABP_Audio_SplineFollowPlayer_C::GetSplineEmitterComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Audio_SplineFollowPlayer_C", "GetSplineEmitterComponent");
+
+	Params::BP_Audio_SplineFollowPlayer_C_GetSplineEmitterComponent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_Audio_SplineFollowPlayer.BP_Audio_SplineFollowPlayer_C.PostNodeInit
 // (BlueprintCallable, BlueprintEvent)
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SStartStopAudioEvents_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SStartStopAudioEvents_structs.hpp"
 
 
 namespace SDK::Params
@@ -221,6 +221,17 @@ public:
 static_assert(alignof(BP_Audio_SplineInteriorOverride_C_GetSplineComponent) == 0x000008, "Wrong alignment on BP_Audio_SplineInteriorOverride_C_GetSplineComponent");
 static_assert(sizeof(BP_Audio_SplineInteriorOverride_C_GetSplineComponent) == 0x000008, "Wrong size on BP_Audio_SplineInteriorOverride_C_GetSplineComponent");
 static_assert(offsetof(BP_Audio_SplineInteriorOverride_C_GetSplineComponent, ReturnValue) == 0x000000, "Member 'BP_Audio_SplineInteriorOverride_C_GetSplineComponent::ReturnValue' has a wrong offset!");
+
+// Function BP_Audio_SplineInteriorOverride.BP_Audio_SplineInteriorOverride_C.GetSplineEmitterComponent
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Audio_SplineInteriorOverride_C_GetSplineEmitterComponent final
+{
+public:
+	class USceneComponent*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_Audio_SplineInteriorOverride_C_GetSplineEmitterComponent) == 0x000008, "Wrong alignment on BP_Audio_SplineInteriorOverride_C_GetSplineEmitterComponent");
+static_assert(sizeof(BP_Audio_SplineInteriorOverride_C_GetSplineEmitterComponent) == 0x000008, "Wrong size on BP_Audio_SplineInteriorOverride_C_GetSplineEmitterComponent");
+static_assert(offsetof(BP_Audio_SplineInteriorOverride_C_GetSplineEmitterComponent, ReturnValue) == 0x000000, "Member 'BP_Audio_SplineInteriorOverride_C_GetSplineEmitterComponent::ReturnValue' has a wrong offset!");
 
 // Function BP_Audio_SplineInteriorOverride.BP_Audio_SplineInteriorOverride_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)

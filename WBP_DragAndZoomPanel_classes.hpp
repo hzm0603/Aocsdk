@@ -22,7 +22,7 @@ class UWBP_DragAndZoomPanel_C final : public UDragAndZoomPanel
 {
 public:
 	class UNamedSlot*                             NamedSlot_61;                                      // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               O_SkillsContainer;                                 // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           RootCanvas;                                        // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UWidget* GetTargetDraggableWidget();
@@ -40,7 +40,7 @@ public:
 static_assert(alignof(UWBP_DragAndZoomPanel_C) == 0x000008, "Wrong alignment on UWBP_DragAndZoomPanel_C");
 static_assert(sizeof(UWBP_DragAndZoomPanel_C) == 0x0003A0, "Wrong size on UWBP_DragAndZoomPanel_C");
 static_assert(offsetof(UWBP_DragAndZoomPanel_C, NamedSlot_61) == 0x000390, "Member 'UWBP_DragAndZoomPanel_C::NamedSlot_61' has a wrong offset!");
-static_assert(offsetof(UWBP_DragAndZoomPanel_C, O_SkillsContainer) == 0x000398, "Member 'UWBP_DragAndZoomPanel_C::O_SkillsContainer' has a wrong offset!");
+static_assert(offsetof(UWBP_DragAndZoomPanel_C, RootCanvas) == 0x000398, "Member 'UWBP_DragAndZoomPanel_C::RootCanvas' has a wrong offset!");
 
 }
 

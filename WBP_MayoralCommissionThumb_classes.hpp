@@ -17,19 +17,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MayoralCommissionThumb.WBP_MayoralCommissionThumb_C
-// 0x0048 (0x03E0 - 0x0398)
+// 0x0028 (0x04B0 - 0x0488)
 class UWBP_MayoralCommissionThumb_C final : public UMayoralCommissionCard
 {
 public:
-	class UImage*                                 BaseBackgroundImage;                               // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    CommissionTitle;                                   // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 CommissionTypeIcon;                                // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ExperienceBarFrame;                                // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    LevelTextBlock;                                    // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 RarityBackgroundImage;                             // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 RarityBorder;                                      // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 StatusImage;                                       // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_SlotCooldownLabel;                              // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BaseBackgroundImage;                               // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CommissionLevelBG;                                 // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ExperienceBarFrame;                                // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 RarityBorder;                                      // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               StatusImageContainer;                              // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -42,16 +38,12 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MayoralCommissionThumb_C) == 0x000008, "Wrong alignment on UWBP_MayoralCommissionThumb_C");
-static_assert(sizeof(UWBP_MayoralCommissionThumb_C) == 0x0003E0, "Wrong size on UWBP_MayoralCommissionThumb_C");
-static_assert(offsetof(UWBP_MayoralCommissionThumb_C, BaseBackgroundImage) == 0x000398, "Member 'UWBP_MayoralCommissionThumb_C::BaseBackgroundImage' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionThumb_C, CommissionTitle) == 0x0003A0, "Member 'UWBP_MayoralCommissionThumb_C::CommissionTitle' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionThumb_C, CommissionTypeIcon) == 0x0003A8, "Member 'UWBP_MayoralCommissionThumb_C::CommissionTypeIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionThumb_C, ExperienceBarFrame) == 0x0003B0, "Member 'UWBP_MayoralCommissionThumb_C::ExperienceBarFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionThumb_C, LevelTextBlock) == 0x0003B8, "Member 'UWBP_MayoralCommissionThumb_C::LevelTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionThumb_C, RarityBackgroundImage) == 0x0003C0, "Member 'UWBP_MayoralCommissionThumb_C::RarityBackgroundImage' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionThumb_C, RarityBorder) == 0x0003C8, "Member 'UWBP_MayoralCommissionThumb_C::RarityBorder' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionThumb_C, StatusImage) == 0x0003D0, "Member 'UWBP_MayoralCommissionThumb_C::StatusImage' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionThumb_C, TB_SlotCooldownLabel) == 0x0003D8, "Member 'UWBP_MayoralCommissionThumb_C::TB_SlotCooldownLabel' has a wrong offset!");
+static_assert(sizeof(UWBP_MayoralCommissionThumb_C) == 0x0004B0, "Wrong size on UWBP_MayoralCommissionThumb_C");
+static_assert(offsetof(UWBP_MayoralCommissionThumb_C, BaseBackgroundImage) == 0x000488, "Member 'UWBP_MayoralCommissionThumb_C::BaseBackgroundImage' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionThumb_C, CommissionLevelBG) == 0x000490, "Member 'UWBP_MayoralCommissionThumb_C::CommissionLevelBG' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionThumb_C, ExperienceBarFrame) == 0x000498, "Member 'UWBP_MayoralCommissionThumb_C::ExperienceBarFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionThumb_C, RarityBorder) == 0x0004A0, "Member 'UWBP_MayoralCommissionThumb_C::RarityBorder' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionThumb_C, StatusImageContainer) == 0x0004A8, "Member 'UWBP_MayoralCommissionThumb_C::StatusImageContainer' has a wrong offset!");
 
 }
 

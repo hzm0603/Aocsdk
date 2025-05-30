@@ -17,9 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_NotificationsViewAll.WBP_NotificationsViewAll_C
-// 0x0000 (0x0350 - 0x0350)
+// 0x0010 (0x0348 - 0x0338)
 class UWBP_NotificationsViewAll_C final : public UNotificationsViewAll
 {
+public:
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   NotifcationsScrollingList;                         // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SubPanelIndicatorTextBlock;                        // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -31,7 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_NotificationsViewAll_C) == 0x000008, "Wrong alignment on UWBP_NotificationsViewAll_C");
-static_assert(sizeof(UWBP_NotificationsViewAll_C) == 0x000350, "Wrong size on UWBP_NotificationsViewAll_C");
+static_assert(sizeof(UWBP_NotificationsViewAll_C) == 0x000348, "Wrong size on UWBP_NotificationsViewAll_C");
+static_assert(offsetof(UWBP_NotificationsViewAll_C, NotifcationsScrollingList) == 0x000338, "Member 'UWBP_NotificationsViewAll_C::NotifcationsScrollingList' has a wrong offset!");
+static_assert(offsetof(UWBP_NotificationsViewAll_C, SubPanelIndicatorTextBlock) == 0x000340, "Member 'UWBP_NotificationsViewAll_C::SubPanelIndicatorTextBlock' has a wrong offset!");
 
 }
 

@@ -17,13 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CommonSliderRow.WBP_CommonSliderRow_C
-// 0x0028 (0x0410 - 0x03E8)
+// 0x0018 (0x0410 - 0x03F8)
 class UWBP_CommonSliderRow_C final : public UCommonSliderRow
 {
 public:
-	class UCommonBorder*                          B_AlternatingBG;                                   // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonButton_C*                        DecreaseButton;                                    // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonButton_C*                        IncreaseButton;                                    // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          B_AlternatingBG;                                   // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 SliderGlow;                                        // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UEditableText*                          ValueTextBlockEditable;                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
@@ -42,9 +40,7 @@ public:
 };
 static_assert(alignof(UWBP_CommonSliderRow_C) == 0x000008, "Wrong alignment on UWBP_CommonSliderRow_C");
 static_assert(sizeof(UWBP_CommonSliderRow_C) == 0x000410, "Wrong size on UWBP_CommonSliderRow_C");
-static_assert(offsetof(UWBP_CommonSliderRow_C, B_AlternatingBG) == 0x0003E8, "Member 'UWBP_CommonSliderRow_C::B_AlternatingBG' has a wrong offset!");
-static_assert(offsetof(UWBP_CommonSliderRow_C, DecreaseButton) == 0x0003F0, "Member 'UWBP_CommonSliderRow_C::DecreaseButton' has a wrong offset!");
-static_assert(offsetof(UWBP_CommonSliderRow_C, IncreaseButton) == 0x0003F8, "Member 'UWBP_CommonSliderRow_C::IncreaseButton' has a wrong offset!");
+static_assert(offsetof(UWBP_CommonSliderRow_C, B_AlternatingBG) == 0x0003F8, "Member 'UWBP_CommonSliderRow_C::B_AlternatingBG' has a wrong offset!");
 static_assert(offsetof(UWBP_CommonSliderRow_C, SliderGlow) == 0x000400, "Member 'UWBP_CommonSliderRow_C::SliderGlow' has a wrong offset!");
 static_assert(offsetof(UWBP_CommonSliderRow_C, ValueTextBlockEditable) == 0x000408, "Member 'UWBP_CommonSliderRow_C::ValueTextBlockEditable' has a wrong offset!");
 

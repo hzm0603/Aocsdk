@@ -28,10 +28,10 @@ public:
 	class UTextBlock*                             SavePrefabButtonText;                              // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item);
-	void Construct();
-	void ExecuteUbergraph_WBP_PlayerHousingDebugUI(int32 EntryPoint);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void ExecuteUbergraph_WBP_PlayerHousingDebugUI(int32 EntryPoint);
+	void Construct();
+	void BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item);
 
 public:
 	static class UClass* StaticClass()

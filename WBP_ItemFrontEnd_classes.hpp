@@ -17,26 +17,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ItemFrontEnd.WBP_ItemFrontEnd_C
-// 0x0080 (0x05C0 - 0x0540)
+// 0x0080 (0x0610 - 0x0590)
 class UWBP_ItemFrontEnd_C final : public UItemFrontEnd
 {
 public:
-	class UImage*                                 ArrowImage;                                        // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 BGVignette;                                        // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommonTextAccordion_C*             CommonAccordionButton;                             // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ItemIcon_C*                        ContainerEquipmentSlot;                            // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    ContainerLabelTextBlock;                           // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    CounterText;                                       // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C;                          // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_1;                        // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_2;                        // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_3;                        // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_4;                        // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_8;                        // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_9;                        // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_15;                       // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisInventorySlot;                           // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisInventorySlot_1;                         // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ArrowImage;                                        // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BGVignette;                                        // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CommonTextAccordion_C*             CommonAccordionButton;                             // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemIcon_C*                        ContainerEquipmentSlot;                            // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    ContainerLabelTextBlock;                           // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    CounterText;                                       // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C;                          // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_1;                        // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_2;                        // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_3;                        // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_4;                        // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_8;                        // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_9;                        // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisFrontEndSlot_C_15;                       // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisInventorySlot;                           // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TetrisFrontEndSlot_C*              WBP_TetrisInventorySlot_1;                         // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -49,23 +49,23 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ItemFrontEnd_C) == 0x000010, "Wrong alignment on UWBP_ItemFrontEnd_C");
-static_assert(sizeof(UWBP_ItemFrontEnd_C) == 0x0005C0, "Wrong size on UWBP_ItemFrontEnd_C");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, ArrowImage) == 0x000540, "Member 'UWBP_ItemFrontEnd_C::ArrowImage' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, BGVignette) == 0x000548, "Member 'UWBP_ItemFrontEnd_C::BGVignette' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, CommonAccordionButton) == 0x000550, "Member 'UWBP_ItemFrontEnd_C::CommonAccordionButton' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, ContainerEquipmentSlot) == 0x000558, "Member 'UWBP_ItemFrontEnd_C::ContainerEquipmentSlot' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, ContainerLabelTextBlock) == 0x000560, "Member 'UWBP_ItemFrontEnd_C::ContainerLabelTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, CounterText) == 0x000568, "Member 'UWBP_ItemFrontEnd_C::CounterText' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C) == 0x000570, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_1) == 0x000578, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_2) == 0x000580, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_2' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_3) == 0x000588, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_3' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_4) == 0x000590, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_4' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_8) == 0x000598, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_8' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_9) == 0x0005A0, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_9' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_15) == 0x0005A8, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_15' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisInventorySlot) == 0x0005B0, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisInventorySlot' has a wrong offset!");
-static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisInventorySlot_1) == 0x0005B8, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisInventorySlot_1' has a wrong offset!");
+static_assert(sizeof(UWBP_ItemFrontEnd_C) == 0x000610, "Wrong size on UWBP_ItemFrontEnd_C");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, ArrowImage) == 0x000590, "Member 'UWBP_ItemFrontEnd_C::ArrowImage' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, BGVignette) == 0x000598, "Member 'UWBP_ItemFrontEnd_C::BGVignette' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, CommonAccordionButton) == 0x0005A0, "Member 'UWBP_ItemFrontEnd_C::CommonAccordionButton' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, ContainerEquipmentSlot) == 0x0005A8, "Member 'UWBP_ItemFrontEnd_C::ContainerEquipmentSlot' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, ContainerLabelTextBlock) == 0x0005B0, "Member 'UWBP_ItemFrontEnd_C::ContainerLabelTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, CounterText) == 0x0005B8, "Member 'UWBP_ItemFrontEnd_C::CounterText' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C) == 0x0005C0, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_1) == 0x0005C8, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_2) == 0x0005D0, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_2' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_3) == 0x0005D8, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_3' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_4) == 0x0005E0, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_4' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_8) == 0x0005E8, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_8' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_9) == 0x0005F0, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_9' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisFrontEndSlot_C_15) == 0x0005F8, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisFrontEndSlot_C_15' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisInventorySlot) == 0x000600, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisInventorySlot' has a wrong offset!");
+static_assert(offsetof(UWBP_ItemFrontEnd_C, WBP_TetrisInventorySlot_1) == 0x000608, "Member 'UWBP_ItemFrontEnd_C::WBP_TetrisInventorySlot_1' has a wrong offset!");
 
 }
 

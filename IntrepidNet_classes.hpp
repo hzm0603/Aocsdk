@@ -144,7 +144,7 @@ class UIntrepidNetDriver final : public UIpNetDriver
 public:
 	class UIntrepidNetServerPackageMap*           ServerPackageMap;                                  // 0x08A8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_8B0[0x360];                                    // 0x08B0(0x0360)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FGuid, TWeakObjectPtr<class APlayerController>> TimingOutPlayers;                                  // 0x0C10(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<struct FGuid, TWeakObjectPtr<class APlayerController>> TimingOutPlayers;                    // 0x0C10(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -257,7 +257,7 @@ static_assert(sizeof(UIntrepidNetReplicationGraphNode_LargeCullDistance) == 0x00
 class UIntrepidNetReplicationGraphConnection final : public UNetReplicationGraphConnection
 {
 public:
-	class UIntrepidNetReplicationGraphNode_AlwaysRelevant_ForConnection* AlwaysRelevantForConnectionNode;                   // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UIntrepidNetReplicationGraphNode_AlwaysRelevant_ForConnection* AlwaysRelevantForConnectionNode; // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -373,8 +373,8 @@ class UIntrepidNetServiceManager final : public UTickableWorldSubsystem
 {
 public:
 	TArray<class UIntrepidNetCoreService*>        ServicesToTick;                                    // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TMap<class UClass*, class UIntrepidNetCoreService*> ServicesRunning;                                   // 0x0070(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<class UClass*, struct FIntrepidNetCoreServiceConfig> ServiceConfigurations;                             // 0x00C0(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class UClass*, class UIntrepidNetCoreService*> ServicesRunning;                             // 0x0070(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class UClass*, struct FIntrepidNetCoreServiceConfig> ServiceConfigurations;                 // 0x00C0(0x0050)(NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()

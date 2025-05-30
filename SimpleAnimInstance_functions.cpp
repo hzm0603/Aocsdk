@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function SimpleAnimInstance.SimpleAnimInstance_C.ExecuteUbergraph_SimpleAnimInstance
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USimpleAnimInstance_C::ExecuteUbergraph_SimpleAnimInstance(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SimpleAnimInstance_C", "ExecuteUbergraph_SimpleAnimInstance");
+
+	Params::SimpleAnimInstance_C_ExecuteUbergraph_SimpleAnimInstance Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function SimpleAnimInstance.SimpleAnimInstance_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -35,26 +55,6 @@ void USimpleAnimInstance_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 	if (AnimGraph_0 != nullptr)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
-}
-
-
-// Function SimpleAnimInstance.SimpleAnimInstance_C.ExecuteUbergraph_SimpleAnimInstance
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USimpleAnimInstance_C::ExecuteUbergraph_SimpleAnimInstance(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SimpleAnimInstance_C", "ExecuteUbergraph_SimpleAnimInstance");
-
-	Params::SimpleAnimInstance_C_ExecuteUbergraph_SimpleAnimInstance Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

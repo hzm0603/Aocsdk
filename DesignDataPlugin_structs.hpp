@@ -120,6 +120,17 @@ enum class EExpressionContextIdentifier : uint8
 	EExpressionContextIdentifier_MAX         = 82,
 };
 
+// ScriptStruct DesignDataPlugin.IntrepidDuration
+// 0x0008 (0x0008 - 0x0000)
+struct FIntrepidDuration final
+{
+public:
+	int64                                         Duration;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FIntrepidDuration) == 0x000008, "Wrong alignment on FIntrepidDuration");
+static_assert(sizeof(FIntrepidDuration) == 0x000008, "Wrong size on FIntrepidDuration");
+static_assert(offsetof(FIntrepidDuration, Duration) == 0x000000, "Member 'FIntrepidDuration::Duration' has a wrong offset!");
+
 // ScriptStruct DesignDataPlugin.DesignDataObjectId
 // 0x0018 (0x0018 - 0x0000)
 struct FDesignDataObjectId
@@ -242,17 +253,6 @@ public:
 };
 static_assert(alignof(FDesignDataRecordId) == 0x000008, "Wrong alignment on FDesignDataRecordId");
 static_assert(sizeof(FDesignDataRecordId) == 0x000010, "Wrong size on FDesignDataRecordId");
-
-// ScriptStruct DesignDataPlugin.IntrepidDuration
-// 0x0008 (0x0008 - 0x0000)
-struct FIntrepidDuration final
-{
-public:
-	int64                                         Duration;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FIntrepidDuration) == 0x000008, "Wrong alignment on FIntrepidDuration");
-static_assert(sizeof(FIntrepidDuration) == 0x000008, "Wrong size on FIntrepidDuration");
-static_assert(offsetof(FIntrepidDuration, Duration) == 0x000000, "Member 'FIntrepidDuration::Duration' has a wrong offset!");
 
 // ScriptStruct DesignDataPlugin.StatValue
 // 0x0004 (0x0004 - 0x0000)

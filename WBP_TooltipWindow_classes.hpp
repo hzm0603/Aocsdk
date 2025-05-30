@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TooltipWindow.WBP_TooltipWindow_C
-// 0x0018 (0x04F8 - 0x04E0)
+// 0x0018 (0x0500 - 0x04E8)
 class UWBP_TooltipWindow_C final : public UTooltip
 {
 public:
-	class UIntrepidCommonBorder*                  B_SalePriceInfo;                                   // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_126;                                         // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TooltipSetEffectsBlock_C*          SetEffectsBlock;                                   // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIntrepidCommonBorder*                  B_SalePriceInfo;                                   // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_126;                                         // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TooltipSetEffectsBlock_C*          SetEffectsBlock;                                   // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,10 +36,10 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TooltipWindow_C) == 0x000008, "Wrong alignment on UWBP_TooltipWindow_C");
-static_assert(sizeof(UWBP_TooltipWindow_C) == 0x0004F8, "Wrong size on UWBP_TooltipWindow_C");
-static_assert(offsetof(UWBP_TooltipWindow_C, B_SalePriceInfo) == 0x0004E0, "Member 'UWBP_TooltipWindow_C::B_SalePriceInfo' has a wrong offset!");
-static_assert(offsetof(UWBP_TooltipWindow_C, Image_126) == 0x0004E8, "Member 'UWBP_TooltipWindow_C::Image_126' has a wrong offset!");
-static_assert(offsetof(UWBP_TooltipWindow_C, SetEffectsBlock) == 0x0004F0, "Member 'UWBP_TooltipWindow_C::SetEffectsBlock' has a wrong offset!");
+static_assert(sizeof(UWBP_TooltipWindow_C) == 0x000500, "Wrong size on UWBP_TooltipWindow_C");
+static_assert(offsetof(UWBP_TooltipWindow_C, B_SalePriceInfo) == 0x0004E8, "Member 'UWBP_TooltipWindow_C::B_SalePriceInfo' has a wrong offset!");
+static_assert(offsetof(UWBP_TooltipWindow_C, Image_126) == 0x0004F0, "Member 'UWBP_TooltipWindow_C::Image_126' has a wrong offset!");
+static_assert(offsetof(UWBP_TooltipWindow_C, SetEffectsBlock) == 0x0004F8, "Member 'UWBP_TooltipWindow_C::SetEffectsBlock' has a wrong offset!");
 
 }
 

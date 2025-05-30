@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function WBP_ServiceBuildingStatWidget.WBP_ServiceBuildingStatWidget_C.ExecuteUbergraph_WBP_ServiceBuildingStatWidget
-// (Final, UbergraphFunction)
+// Function WBP_ServiceBuildingStatWidget.WBP_ServiceBuildingStatWidget_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ServiceBuildingStatWidget_C::ExecuteUbergraph_WBP_ServiceBuildingStatWidget(int32 EntryPoint)
+void UWBP_ServiceBuildingStatWidget_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ServiceBuildingStatWidget_C", "ExecuteUbergraph_WBP_ServiceBuildingStatWidget");
+		Func = Class->GetFunction("WBP_ServiceBuildingStatWidget_C", "PreConstruct");
 
-	Params::WBP_ServiceBuildingStatWidget_C_ExecuteUbergraph_WBP_ServiceBuildingStatWidget Parms{};
+	Params::WBP_ServiceBuildingStatWidget_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -57,21 +57,21 @@ class UCommonBorder* UWBP_ServiceBuildingStatWidget_C::GetBorder()
 }
 
 
-// Function WBP_ServiceBuildingStatWidget.WBP_ServiceBuildingStatWidget_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_ServiceBuildingStatWidget.WBP_ServiceBuildingStatWidget_C.ExecuteUbergraph_WBP_ServiceBuildingStatWidget
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ServiceBuildingStatWidget_C::PreConstruct(bool IsDesignTime)
+void UWBP_ServiceBuildingStatWidget_C::ExecuteUbergraph_WBP_ServiceBuildingStatWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ServiceBuildingStatWidget_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_ServiceBuildingStatWidget_C", "ExecuteUbergraph_WBP_ServiceBuildingStatWidget");
 
-	Params::WBP_ServiceBuildingStatWidget_C_PreConstruct Parms{};
+	Params::WBP_ServiceBuildingStatWidget_C_ExecuteUbergraph_WBP_ServiceBuildingStatWidget Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -149,6 +149,26 @@ class USplineComponent* ABP_Audio_SplineInteriorOverride_C::GetSplineComponent()
 }
 
 
+// Function BP_Audio_SplineInteriorOverride.BP_Audio_SplineInteriorOverride_C.GetSplineEmitterComponent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USceneComponent*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class USceneComponent* ABP_Audio_SplineInteriorOverride_C::GetSplineEmitterComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Audio_SplineInteriorOverride_C", "GetSplineEmitterComponent");
+
+	Params::BP_Audio_SplineInteriorOverride_C_GetSplineEmitterComponent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_Audio_SplineInteriorOverride.BP_Audio_SplineInteriorOverride_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 

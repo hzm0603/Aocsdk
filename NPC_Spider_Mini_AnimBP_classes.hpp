@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass NPC_Spider_Mini_AnimBP.NPC_Spider_Mini_AnimBP_C
-// 0x0000 (0x36F0 - 0x36F0)
+// 0x0000 (0x3740 - 0x3740)
 class UNPC_Spider_Mini_AnimBP_C : public UNPC_Spider_AnimBP_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UNPC_Spider_Mini_AnimBP_C) == 0x000010, "Wrong alignment on UNPC_Spider_Mini_AnimBP_C");
-static_assert(sizeof(UNPC_Spider_Mini_AnimBP_C) == 0x0036F0, "Wrong size on UNPC_Spider_Mini_AnimBP_C");
+static_assert(sizeof(UNPC_Spider_Mini_AnimBP_C) == 0x003740, "Wrong size on UNPC_Spider_Mini_AnimBP_C");
 
 }
 

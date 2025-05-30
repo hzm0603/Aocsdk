@@ -17,41 +17,25 @@
 namespace SDK
 {
 
-// Function STT_RotateToTarget.STT_RotateToTarget_C.ExecuteUbergraph_STT_RotateToTarget
-// (Final, UbergraphFunction, HasDefaults)
+// Function STT_RotateToTarget.STT_RotateToTarget_C.RotateToTarget
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   TargetVec                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  YawDelta                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USTT_RotateToTarget_C::ExecuteUbergraph_STT_RotateToTarget(int32 EntryPoint)
+void USTT_RotateToTarget_C::RotateToTarget(const struct FVector& TargetVec, class AActor* Source, double YawDelta)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STT_RotateToTarget_C", "ExecuteUbergraph_STT_RotateToTarget");
+		Func = Class->GetFunction("STT_RotateToTarget_C", "RotateToTarget");
 
-	Params::STT_RotateToTarget_C_ExecuteUbergraph_STT_RotateToTarget Parms{};
+	Params::STT_RotateToTarget_C_RotateToTarget Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function STT_RotateToTarget.STT_RotateToTarget_C.ReceiveLatentEnterState
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-
-void USTT_RotateToTarget_C::ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STT_RotateToTarget_C", "ReceiveLatentEnterState");
-
-	Params::STT_RotateToTarget_C_ReceiveLatentEnterState Parms{};
-
-	Parms.Transition = std::move(Transition);
+	Parms.TargetVec = std::move(TargetVec);
+	Parms.Source = Source;
+	Parms.YawDelta = YawDelta;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,25 +61,41 @@ void USTT_RotateToTarget_C::ReceiveLatentTick(const float DeltaTime)
 }
 
 
-// Function STT_RotateToTarget.STT_RotateToTarget_C.RotateToTarget
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function STT_RotateToTarget.STT_RotateToTarget_C.ReceiveLatentEnterState
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FVector&                   TargetVec                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  YawDelta                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
-void USTT_RotateToTarget_C::RotateToTarget(const struct FVector& TargetVec, class AActor* Source, double YawDelta)
+void USTT_RotateToTarget_C::ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STT_RotateToTarget_C", "RotateToTarget");
+		Func = Class->GetFunction("STT_RotateToTarget_C", "ReceiveLatentEnterState");
 
-	Params::STT_RotateToTarget_C_RotateToTarget Parms{};
+	Params::STT_RotateToTarget_C_ReceiveLatentEnterState Parms{};
 
-	Parms.TargetVec = std::move(TargetVec);
-	Parms.Source = Source;
-	Parms.YawDelta = YawDelta;
+	Parms.Transition = std::move(Transition);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function STT_RotateToTarget.STT_RotateToTarget_C.ExecuteUbergraph_STT_RotateToTarget
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USTT_RotateToTarget_C::ExecuteUbergraph_STT_RotateToTarget(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_RotateToTarget_C", "ExecuteUbergraph_STT_RotateToTarget");
+
+	Params::STT_RotateToTarget_C_ExecuteUbergraph_STT_RotateToTarget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

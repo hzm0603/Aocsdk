@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "GameSystemsPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK::Params
@@ -29,151 +30,162 @@ static_assert(sizeof(WBP_BuckFloatingTextManager_C_AbilitySystem_OnHit) == 0x000
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AbilitySystem_OnHit, HitInst) == 0x000000, "Member 'WBP_BuckFloatingTextManager_C_AbilitySystem_OnHit::HitInst' has a wrong offset!");
 
 // Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.AddFloaterToTarget
-// 0x0D38 (0x0D38 - 0x0000)
+// 0x0D40 (0x0D40 - 0x0000)
 struct WBP_BuckFloatingTextManager_C_AddFloaterToTarget final
 {
 public:
 	struct FStatModInst                           StatMod;                                           // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	class ABaseCharacter*                         Target;                                            // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FHitTargetInst                         HitTargetInst;                                     // 0x0030(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	struct FAbilityHitRecord                      HitRecord;                                         // 0x00E8(0x0A28)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int64                                         SourceRecordType;                                  // 0x0B10(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          hitting_OtherwiseGettingHit_;                      // 0x0B18(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B19[0x7];                                      // 0x0B19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 hitStr;                                            // 0x0B20(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0B30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0B34(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B35[0x3];                                      // 0x0B35(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0B38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0B3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B3D[0x3];                                      // 0x0B3D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UCharacterFloaterData*            CallFunc_GetCharacterFloaterData_ReturnValue;      // 0x0B40(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0B48(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0B4C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B4D[0x3];                                      // 0x0B4D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0B50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0B54(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0B58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0B5C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B5D[0x3];                                      // 0x0B5D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_2;             // 0x0B60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NearlyEqual_FloatFloat_ReturnValue;       // 0x0B64(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B65[0x3];                                      // 0x0B65(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStatModRecord                         CallFunc_GetStatModRecordByGuid_ReturnValue;       // 0x0B68(0x0110)(ConstParm)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0C78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C79[0x3];                                      // 0x0C79(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAbilityHitRecord                      HitRecord;                                         // 0x00E8(0x0A30)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int64                                         SourceRecordType;                                  // 0x0B18(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          hitting_OtherwiseGettingHit_;                      // 0x0B20(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B21[0x7];                                      // 0x0B21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 hitStr_0;                                          // 0x0B28(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          resist;                                            // 0x0B38(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          immune;                                            // 0x0B39(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0B3A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0B3B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckHitTags_weaponHit;                   // 0x0B3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckHitTags_isPhysical;                  // 0x0B3D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckHitTags_isMagical;                   // 0x0B3E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B3F[0x1];                                      // 0x0B3F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0B40(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0B44(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_2;             // 0x0B48(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B4C[0x4];                                      // 0x0B4C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UCharacterFloaterData*            CallFunc_GetCharacterFloaterData_ReturnValue;      // 0x0B50(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0B58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NearlyEqual_FloatFloat_ReturnValue;       // 0x0B59(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0B5A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5B[0x5];                                      // 0x0B5B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStatModRecord                         CallFunc_GetStatModRecordByGuid_ReturnValue;       // 0x0B60(0x0110)(ConstParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0C70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0C74(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C75[0x3];                                      // 0x0C75(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0C78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0C7C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0C80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C81[0x7];                                      // 0x0C81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0C80(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C84[0x4];                                      // 0x0C84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBuckFloatingTextWidget*                CallFunc_Array_Get_Item;                           // 0x0C88(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_BuckFloatingText_C*                K2Node_DynamicCast_AsWBP_Buck_Floating_Text;       // 0x0C90(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0C98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0C99(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9A[0x6];                                      // 0x0C9A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0C99(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0C9A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9B[0x5];                                      // 0x0C9B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0CA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0CA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0CA9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CAA[0x2];                                      // 0x0CAA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0CAC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBuckFloatingTextWidget*                CallFunc_Array_Get_Item_1;                         // 0x0CB0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_BuckFloatingText_C*                K2Node_DynamicCast_AsWBP_Buck_Floating_Text_1;     // 0x0CB8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0CC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0CC1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC2[0x6];                                      // 0x0CC2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_BuckFloatingText_C*                CallFunc_GetNextFloaterBP_ret;                     // 0x0CC8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0CD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0CD4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0CD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CD9[0x3];                                      // 0x0CD9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0CDC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0CE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0CE1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CE2[0x2];                                      // 0x0CE2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_3;             // 0x0CE4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_And_IntInt_ReturnValue;                   // 0x0CE8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_4;             // 0x0CEC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0CF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CF1[0x3];                                      // 0x0CF1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_And_IntInt_ReturnValue_1;                 // 0x0CF4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_2;            // 0x0CF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_IntToBool_ReturnValue_1;             // 0x0CF9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CFA[0x2];                                      // 0x0CFA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_5;             // 0x0CFC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA9[0x3];                                      // 0x0CA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0CAC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0CB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB1[0x3];                                      // 0x0CB1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0CB4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBuckFloatingTextWidget*                CallFunc_Array_Get_Item_1;                         // 0x0CB8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_BuckFloatingText_C*                K2Node_DynamicCast_AsWBP_Buck_Floating_Text_1;     // 0x0CC0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0CC8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0CC9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0CCA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CCB[0x5];                                      // 0x0CCB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_BuckFloatingText_C*                CallFunc_GetNextFloaterBP_ret;                     // 0x0CD0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_3;             // 0x0CD8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0CDC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_And_IntInt_ReturnValue;                   // 0x0CE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0CE4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0CE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0CE9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CEA[0x2];                                      // 0x0CEA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0CEC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0CF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_2;            // 0x0CF1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CF2[0x2];                                      // 0x0CF2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_4;             // 0x0CF4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_5;             // 0x0CF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_And_IntInt_ReturnValue_1;                 // 0x0CFC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_And_IntInt_ReturnValue_2;                 // 0x0D00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_IntToBool_ReturnValue_2;             // 0x0D04(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0D05(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0D06(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D07[0x1];                                      // 0x0D07(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_NearlyEqual_FloatFloat_A_ImplicitCast;    // 0x0D08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetFloater_value_ImplicitCast;            // 0x0D10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetFloater_rawValue_ImplicitCast;         // 0x0D18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetFloater_rawValue_ImplicitCast_1;       // 0x0D20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x0D28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0D30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue_1;             // 0x0D04(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue_2;             // 0x0D05(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0D06(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0D07(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0D08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0D09(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D0A[0x6];                                      // 0x0D0A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_NearlyEqual_FloatFloat_A_ImplicitCast;    // 0x0D10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetFloater_value_ImplicitCast;            // 0x0D18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetFloater_rawValue_ImplicitCast;         // 0x0D20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetFloater_rawValue_ImplicitCast_1;       // 0x0D28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x0D30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0D38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget) == 0x000008, "Wrong alignment on WBP_BuckFloatingTextManager_C_AddFloaterToTarget");
-static_assert(sizeof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget) == 0x000D38, "Wrong size on WBP_BuckFloatingTextManager_C_AddFloaterToTarget");
+static_assert(sizeof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget) == 0x000D40, "Wrong size on WBP_BuckFloatingTextManager_C_AddFloaterToTarget");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, StatMod) == 0x000000, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::StatMod' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, Target) == 0x000028, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::Target' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, HitTargetInst) == 0x000030, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::HitTargetInst' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, HitRecord) == 0x0000E8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::HitRecord' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, SourceRecordType) == 0x000B10, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::SourceRecordType' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, hitting_OtherwiseGettingHit_) == 0x000B18, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::hitting_OtherwiseGettingHit_' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, hitStr) == 0x000B20, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::hitStr' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, Temp_int_Loop_Counter_Variable) == 0x000B30, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_IsEmpty_ReturnValue) == 0x000B34, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Add_IntInt_ReturnValue) == 0x000B38, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Not_PreBool_ReturnValue) == 0x000B3C, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_GetCharacterFloaterData_ReturnValue) == 0x000B40, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_GetCharacterFloaterData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000B48, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_IsValid_ReturnValue) == 0x000B4C, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Array_Length_ReturnValue) == 0x000B50, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Array_Length_ReturnValue_1) == 0x000B54, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x000B58, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Less_IntInt_ReturnValue) == 0x000B5C, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue_2) == 0x000B60, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_NearlyEqual_FloatFloat_ReturnValue) == 0x000B64, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_NearlyEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_GetStatModRecordByGuid_ReturnValue) == 0x000B68, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_GetStatModRecordByGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Not_PreBool_ReturnValue_1) == 0x000C78, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, SourceRecordType) == 0x000B18, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::SourceRecordType' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, hitting_OtherwiseGettingHit_) == 0x000B20, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::hitting_OtherwiseGettingHit_' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, hitStr_0) == 0x000B28, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::hitStr_0' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, resist) == 0x000B38, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::resist' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, immune) == 0x000B39, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::immune' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_IsEmpty_ReturnValue) == 0x000B3A, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Not_PreBool_ReturnValue) == 0x000B3B, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_CheckHitTags_weaponHit) == 0x000B3C, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_CheckHitTags_weaponHit' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_CheckHitTags_isPhysical) == 0x000B3D, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_CheckHitTags_isPhysical' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_CheckHitTags_isMagical) == 0x000B3E, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_CheckHitTags_isMagical' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000B40, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x000B44, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue_2) == 0x000B48, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_GetCharacterFloaterData_ReturnValue) == 0x000B50, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_GetCharacterFloaterData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_IsValid_ReturnValue) == 0x000B58, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_NearlyEqual_FloatFloat_ReturnValue) == 0x000B59, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_NearlyEqual_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Not_PreBool_ReturnValue_1) == 0x000B5A, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_GetStatModRecordByGuid_ReturnValue) == 0x000B60, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_GetStatModRecordByGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Array_Length_ReturnValue) == 0x000C70, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_BooleanAND_ReturnValue) == 0x000C74, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Array_Length_ReturnValue_1) == 0x000C78, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, Temp_int_Array_Index_Variable) == 0x000C7C, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_BooleanAND_ReturnValue) == 0x000C80, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, Temp_int_Loop_Counter_Variable) == 0x000C80, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Array_Get_Item) == 0x000C88, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, K2Node_DynamicCast_AsWBP_Buck_Floating_Text) == 0x000C90, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::K2Node_DynamicCast_AsWBP_Buck_Floating_Text' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, K2Node_DynamicCast_bSuccess) == 0x000C98, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000C99, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Less_IntInt_ReturnValue) == 0x000C99, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000C9A, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000CA0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_EqualEqual_Int64Int64_ReturnValue) == 0x000CA8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_EqualEqual_Int64Int64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_BooleanAND_ReturnValue_1) == 0x000CA9, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, Temp_int_Array_Index_Variable_1) == 0x000CAC, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Array_Get_Item_1) == 0x000CB0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, K2Node_DynamicCast_AsWBP_Buck_Floating_Text_1) == 0x000CB8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::K2Node_DynamicCast_AsWBP_Buck_Floating_Text_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, K2Node_DynamicCast_bSuccess_1) == 0x000CC0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000CC1, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_GetNextFloaterBP_ret) == 0x000CC8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_GetNextFloaterBP_ret' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, Temp_int_Loop_Counter_Variable_1) == 0x000CD0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Array_Add_ReturnValue) == 0x000CD4, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Less_IntInt_ReturnValue_1) == 0x000CD8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Add_IntInt_ReturnValue_1) == 0x000CDC, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_MakeLiteralByte_ReturnValue) == 0x000CE0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x000CE1, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue_3) == 0x000CE4, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_And_IntInt_ReturnValue) == 0x000CE8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_And_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue_4) == 0x000CEC, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_IntToBool_ReturnValue) == 0x000CF0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_And_IntInt_ReturnValue_1) == 0x000CF4, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_And_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_MakeLiteralByte_ReturnValue_2) == 0x000CF8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_MakeLiteralByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_IntToBool_ReturnValue_1) == 0x000CF9, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_IntToBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue_5) == 0x000CFC, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Add_IntInt_ReturnValue) == 0x000CAC, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_BooleanAND_ReturnValue_1) == 0x000CB0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, Temp_int_Array_Index_Variable_1) == 0x000CB4, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Array_Get_Item_1) == 0x000CB8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, K2Node_DynamicCast_AsWBP_Buck_Floating_Text_1) == 0x000CC0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::K2Node_DynamicCast_AsWBP_Buck_Floating_Text_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, K2Node_DynamicCast_bSuccess_1) == 0x000CC8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000CC9, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_MakeLiteralByte_ReturnValue) == 0x000CCA, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_GetNextFloaterBP_ret) == 0x000CD0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_GetNextFloaterBP_ret' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue_3) == 0x000CD8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Array_Add_ReturnValue) == 0x000CDC, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_And_IntInt_ReturnValue) == 0x000CE0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_And_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, Temp_int_Loop_Counter_Variable_1) == 0x000CE4, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_IntToBool_ReturnValue) == 0x000CE8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Less_IntInt_ReturnValue_1) == 0x000CE9, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Add_IntInt_ReturnValue_1) == 0x000CEC, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x000CF0, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_MakeLiteralByte_ReturnValue_2) == 0x000CF1, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_MakeLiteralByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue_4) == 0x000CF4, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_ByteToInt_ReturnValue_5) == 0x000CF8, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_ByteToInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_And_IntInt_ReturnValue_1) == 0x000CFC, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_And_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_And_IntInt_ReturnValue_2) == 0x000D00, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_And_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_IntToBool_ReturnValue_2) == 0x000D04, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_IntToBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Not_PreBool_ReturnValue_2) == 0x000D05, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_BooleanAND_ReturnValue_2) == 0x000D06, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_NearlyEqual_FloatFloat_A_ImplicitCast) == 0x000D08, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_NearlyEqual_FloatFloat_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_SetFloater_value_ImplicitCast) == 0x000D10, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_SetFloater_value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_SetFloater_rawValue_ImplicitCast) == 0x000D18, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_SetFloater_rawValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_SetFloater_rawValue_ImplicitCast_1) == 0x000D20, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_SetFloater_rawValue_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x000D28, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000D30, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_IntToBool_ReturnValue_1) == 0x000D04, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_IntToBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Conv_IntToBool_ReturnValue_2) == 0x000D05, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Conv_IntToBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_BooleanOR_ReturnValue) == 0x000D06, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_BooleanOR_ReturnValue_1) == 0x000D07, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Not_PreBool_ReturnValue_2) == 0x000D08, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_BooleanAND_ReturnValue_2) == 0x000D09, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_NearlyEqual_FloatFloat_A_ImplicitCast) == 0x000D10, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_NearlyEqual_FloatFloat_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_SetFloater_value_ImplicitCast) == 0x000D18, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_SetFloater_value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_SetFloater_rawValue_ImplicitCast) == 0x000D20, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_SetFloater_rawValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_SetFloater_rawValue_ImplicitCast_1) == 0x000D28, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_SetFloater_rawValue_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x000D30, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_AddFloaterToTarget, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000D38, "Member 'WBP_BuckFloatingTextManager_C_AddFloaterToTarget::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.CacheCharsBP
 // 0x0028 (0x0028 - 0x0000)
@@ -196,6 +208,48 @@ static_assert(offsetof(WBP_BuckFloatingTextManager_C_CacheCharsBP, K2Node_Dynami
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_CacheCharsBP, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WBP_BuckFloatingTextManager_C_CacheCharsBP::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_CacheCharsBP, CallFunc_GetBaseCharacter_ReturnValue) == 0x000020, "Member 'WBP_BuckFloatingTextManager_C_CacheCharsBP::CallFunc_GetBaseCharacter_ReturnValue' has a wrong offset!");
 
+// Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.CheckHitTags
+// 0x0038 (0x0038 - 0x0000)
+struct WBP_BuckFloatingTextManager_C_CheckHitTags final
+{
+public:
+	TArray<struct FGameplayTag>                   hitTags;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          weaponHit;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isPhysical;                                        // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isMagical;                                         // 0x0012(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          mag;                                               // 0x0013(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          phys;                                              // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          wep;                                               // 0x0015(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x0024(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesTag_ReturnValue;                   // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesTag_ReturnValue_1;                 // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_BuckFloatingTextManager_C_CheckHitTags) == 0x000008, "Wrong alignment on WBP_BuckFloatingTextManager_C_CheckHitTags");
+static_assert(sizeof(WBP_BuckFloatingTextManager_C_CheckHitTags) == 0x000038, "Wrong size on WBP_BuckFloatingTextManager_C_CheckHitTags");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, hitTags) == 0x000000, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::hitTags' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, weaponHit) == 0x000010, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::weaponHit' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, isPhysical) == 0x000011, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::isPhysical' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, isMagical) == 0x000012, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::isMagical' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, mag) == 0x000013, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::mag' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, phys) == 0x000014, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::phys' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, wep) == 0x000015, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::wep' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, CallFunc_Array_Get_Item) == 0x000024, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x00002C, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, CallFunc_MatchesTag_ReturnValue) == 0x00002D, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::CallFunc_MatchesTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, CallFunc_MatchesTag_ReturnValue_1) == 0x00002E, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::CallFunc_MatchesTag_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, CallFunc_Less_IntInt_ReturnValue) == 0x00002F, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_CheckHitTags, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'WBP_BuckFloatingTextManager_C_CheckHitTags::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
 // Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.EnsureDataBP
 // 0x0020 (0x0020 - 0x0000)
 struct WBP_BuckFloatingTextManager_C_EnsureDataBP final
@@ -215,148 +269,193 @@ static_assert(offsetof(WBP_BuckFloatingTextManager_C_EnsureDataBP, CallFunc_Map_
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_EnsureDataBP, CallFunc_SpawnObject_ReturnValue) == 0x000018, "Member 'WBP_BuckFloatingTextManager_C_EnsureDataBP::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
 
 // Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.ExecuteUbergraph_WBP_BuckFloatingTextManager
-// 0x2080 (0x2080 - 0x0000)
+// 0x45E8 (0x45E8 - 0x0000)
 struct WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySubsystem*                      CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FHitInst& HitInst)> UniqueObjectNameForCooking_OutputDelegate;       // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitInst                               K2Node_CustomEvent_HitInst;                        // 0x0038(0x0050)(ConstParm, ContainsInstancedReference)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitTargetInst                         CallFunc_Array_Get_Item;                           // 0x0090(0x00B8)(ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14D[0x3];                                      // 0x014D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_155[0x3];                                      // 0x0155(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStatModInst                           CallFunc_Array_Get_Item_1;                         // 0x0158(0x0028)(NoDestructor)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_1;           // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0185(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0186(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0187(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character;               // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character_1;             // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A9[0x3];                                      // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue;             // 0x01AC(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue_1;           // 0x01BC(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAbilityHitRecord                      CallFunc_GetHitRecordByGuid_ReturnValue;           // 0x01D0(0x0A28)(ConstParm)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0BF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BFC[0x4];                                      // 0x0BFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Trim_ReturnValue;                         // 0x0C00(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_TrimTrailing_ReturnValue;                 // 0x0C10(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0C20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0C21(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0C22(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C23[0x1];                                      // 0x0C23(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0C24(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_And_IntInt_ReturnValue;                   // 0x0C28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue_2;           // 0x0C2C(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0C3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_GuidGuid_ReturnValue;          // 0x0C3D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0C3E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0C3F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0C40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C41[0x7];                                      // 0x0C41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitTargetInst                         Temp_struct_Variable;                              // 0x0C48(0x00B8)(ContainsInstancedReference)
-	struct FAbilityHitRecord                      Temp_struct_Variable_1;                            // 0x0D00(0x0A28)()
-	TDelegate<void(class UAoCStatsComponent* AoCStatsComponent, const struct FEffectInst& EffectInst)> UniqueObjectNameForCooking_OutputDelegate_1; // 0x1728(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x1738(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1739[0x7];                                     // 0x1739(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAoCStatsComponent*                     K2Node_CustomEvent_AoCStatsComponent;              // 0x1740(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FEffectInst                            K2Node_CustomEvent_EffectInst;                     // 0x1748(0x0168)(ConstParm, ContainsInstancedReference)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x18B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FEffectRecord                          CallFunc_GetEffectRecordByGuid_ReturnValue;        // 0x18B8(0x0788)(ConstParm)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x2040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2041[0x7];                                     // 0x2041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Trim_ReturnValue_1;                       // 0x2048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character_2;             // 0x2058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x2060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2061[0x7];                                     // 0x2061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_TrimTrailing_ReturnValue_1;               // 0x2068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_GuidGuid_ReturnValue_1;        // 0x2078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue_1;                    // 0x2079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x207A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x207B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAbilityHitRecord                      Temp_struct_Variable;                              // 0x0008(0x0A30)()
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue;             // 0x0A38(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitTargetInst                         Temp_struct_Variable_1;                            // 0x0A48(0x00B8)(ContainsInstancedReference)
+	struct FAbilityHitRecord                      Temp_struct_Variable_2;                            // 0x0B00(0x0A30)()
+	struct FHitTargetInst                         Temp_struct_Variable_3;                            // 0x1530(0x00B8)(ContainsInstancedReference)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x15E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FEffectRecord& EffectRecord, const class AActor* Instigator, const class AActor* Target)> UniqueObjectNameForCooking_OutputDelegate; // 0x15EC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x15FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x1600(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x1604(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAbilitySubsystem*                      CallFunc_GetWorldSubsystem_ReturnValue;            // 0x1608(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x1610(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x1614(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1615[0x3];                                     // 0x1615(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x1618(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FHitInst& HitInst)> UniqueObjectNameForCooking_OutputDelegate_1;     // 0x161C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_162C[0x4];                                     // 0x162C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitInst                               K2Node_CustomEvent_HitInst;                        // 0x1630(0x0050)(ConstParm, ContainsInstancedReference)
+	TDelegate<void(const struct FEffectRecord& EffectRecord, const class AActor* Instigator, const class AActor* Target)> UniqueObjectNameForCooking_OutputDelegate_2; // 0x1680(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FHitTargetInst                         CallFunc_Array_Get_Item;                           // 0x1690(0x00B8)(ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x1748(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x174C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x1750(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x1751(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1752[0x6];                                     // 0x1752(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStatModInst                           CallFunc_Array_Get_Item_1;                         // 0x1758(0x0028)(NoDestructor)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x1780(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_1;           // 0x1784(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x1785(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x1786(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x1787(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x1788(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character;               // 0x1790(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x1798(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1799[0x7];                                     // 0x1799(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character_1;             // 0x17A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x17A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17A9[0x7];                                     // 0x17A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAbilityHitRecord                      CallFunc_GetHitRecordByGuid_ReturnValue;           // 0x17B0(0x0A30)(ConstParm)
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue_1;           // 0x21E0(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Trim_ReturnValue;                         // 0x21F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_TrimTrailing_ReturnValue;                 // 0x2200(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x2210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x2211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x2212(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2213[0x5];                                     // 0x2213(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitTargetInst                         Temp_struct_Variable_4;                            // 0x2218(0x00B8)(ContainsInstancedReference)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x22D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22D4[0x4];                                     // 0x22D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAbilityHitRecord                      Temp_struct_Variable_5;                            // 0x22D8(0x0A30)()
+	int32                                         CallFunc_And_IntInt_ReturnValue;                   // 0x2D08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D0C[0x4];                                     // 0x2D0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAoCStatsComponent*                     K2Node_CustomEvent_AoCStatsComponent;              // 0x2D10(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FEffectInst                            K2Node_CustomEvent_EffectInst;                     // 0x2D18(0x0168)(ConstParm, ContainsInstancedReference)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x2E80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x2E81(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E82[0x6];                                     // 0x2E82(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEffectRecord                          CallFunc_GetEffectRecordByGuid_ReturnValue;        // 0x2E88(0x0788)(ConstParm)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x3610(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3611[0x7];                                     // 0x3611(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Trim_ReturnValue_1;                       // 0x3618(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_TrimTrailing_ReturnValue_1;               // 0x3628(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x3638(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue_1;                    // 0x3640(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x3641(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3642[0x6];                                     // 0x3642(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character_2;             // 0x3648(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x3650(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3651[0x3];                                     // 0x3651(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UAoCStatsComponent* AoCStatsComponent, const struct FEffectInst& EffectInst)> UniqueObjectNameForCooking_OutputDelegate_3; // 0x3654(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShouldShowAndHitting_shouldShow;       // 0x3664(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShouldShowAndHitting_hitting;          // 0x3665(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3666[0x2];                                     // 0x3666(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEffectRecord                          K2Node_CustomEvent_EffectRecord_1;                 // 0x3668(0x0788)(ConstParm)
+	const class AActor*                           K2Node_CustomEvent_Instigator_1;                   // 0x3DF0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class AActor*                           K2Node_CustomEvent_Target_1;                       // 0x3DF8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FEffectRecord                          K2Node_CustomEvent_EffectRecord;                   // 0x3E00(0x0788)(ConstParm)
+	const class AActor*                           K2Node_CustomEvent_Instigator;                     // 0x4588(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class AActor*                           K2Node_CustomEvent_Target;                         // 0x4590(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x4598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x4599(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_459A[0x6];                                     // 0x459A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character_3;             // 0x45A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x45A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45A9[0x7];                                     // 0x45A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character_4;             // 0x45B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x45B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShouldShowAndHitting_shouldShow_1;     // 0x45B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShouldShowAndHitting_hitting_1;        // 0x45BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45BB[0x1];                                     // 0x45BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue_2;           // 0x45BC(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShouldShowAndHitting_shouldShow_2;     // 0x45CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShouldShowAndHitting_hitting_2;        // 0x45CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45CE[0x2];                                     // 0x45CE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue_3;           // 0x45D0(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShouldShowAndHitting_shouldShow_3;     // 0x45E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShouldShowAndHitting_hitting_3;        // 0x45E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager) == 0x000008, "Wrong alignment on WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager");
-static_assert(sizeof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager) == 0x002080, "Wrong size on WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager");
+static_assert(sizeof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager) == 0x0045E8, "Wrong size on WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, EntryPoint) == 0x000000, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_int_Array_Index_Variable) == 0x000004, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_int_Array_Index_Variable_1) == 0x000010, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000018, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, UniqueObjectNameForCooking_OutputDelegate) == 0x000024, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_HitInst) == 0x000038, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_HitInst' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_int_Loop_Counter_Variable_1) == 0x000088, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_Get_Item) == 0x000090, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_Length_ReturnValue) == 0x000148, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Less_IntInt_ReturnValue) == 0x00014C, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000150, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000154, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_Get_Item_1) == 0x000158, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_Length_ReturnValue_1) == 0x000180, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_IsNotEmpty_ReturnValue_1) == 0x000184, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_IsNotEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Less_IntInt_ReturnValue_1) == 0x000185, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_BooleanOR_ReturnValue) == 0x000186, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsValid_ReturnValue_1) == 0x000187, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetOwner_ReturnValue) == 0x000188, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_AsBase_Character) == 0x000190, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_AsBase_Character' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_bSuccess) == 0x000198, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_AsBase_Character_1) == 0x0001A0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_AsBase_Character_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_bSuccess_1) == 0x0001A8, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetCharacterGuid_ReturnValue) == 0x0001AC, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetCharacterGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetCharacterGuid_ReturnValue_1) == 0x0001BC, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetCharacterGuid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetHitRecordByGuid_ReturnValue) == 0x0001D0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetHitRecordByGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Add_IntInt_ReturnValue_1) == 0x000BF8, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Trim_ReturnValue) == 0x000C00, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Trim_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_TrimTrailing_ReturnValue) == 0x000C10, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_TrimTrailing_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_MakeLiteralByte_ReturnValue) == 0x000C20, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsEmpty_ReturnValue) == 0x000C21, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Not_PreBool_ReturnValue) == 0x000C22, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x000C24, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_And_IntInt_ReturnValue) == 0x000C28, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_And_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetCharacterGuid_ReturnValue_2) == 0x000C2C, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetCharacterGuid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Conv_IntToBool_ReturnValue) == 0x000C3C, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_EqualEqual_GuidGuid_ReturnValue) == 0x000C3D, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_EqualEqual_GuidGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_BooleanOR_ReturnValue_1) == 0x000C3E, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Not_PreBool_ReturnValue_1) == 0x000C3F, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_BooleanOR_ReturnValue_2) == 0x000C40, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_struct_Variable) == 0x000C48, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_struct_Variable_1) == 0x000D00, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, UniqueObjectNameForCooking_OutputDelegate_1) == 0x001728, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::UniqueObjectNameForCooking_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsValid_ReturnValue_2) == 0x001738, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_AoCStatsComponent) == 0x001740, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_AoCStatsComponent' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_EffectInst) == 0x001748, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_EffectInst' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetOwner_ReturnValue_1) == 0x0018B0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetEffectRecordByGuid_ReturnValue) == 0x0018B8, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetEffectRecordByGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsValid_ReturnValue_3) == 0x002040, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Trim_ReturnValue_1) == 0x002048, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Trim_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_AsBase_Character_2) == 0x002058, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_AsBase_Character_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_bSuccess_2) == 0x002060, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_TrimTrailing_ReturnValue_1) == 0x002068, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_TrimTrailing_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_EqualEqual_GuidGuid_ReturnValue_1) == 0x002078, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_EqualEqual_GuidGuid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsEmpty_ReturnValue_1) == 0x002079, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_BooleanAND_ReturnValue) == 0x00207A, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_BooleanOR_ReturnValue_3) == 0x00207B, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_struct_Variable) == 0x000008, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetCharacterGuid_ReturnValue) == 0x000A38, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetCharacterGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_struct_Variable_1) == 0x000A48, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_struct_Variable_2) == 0x000B00, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_struct_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_struct_Variable_3) == 0x001530, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_struct_Variable_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_int_Loop_Counter_Variable) == 0x0015E8, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, UniqueObjectNameForCooking_OutputDelegate) == 0x0015EC, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Add_IntInt_ReturnValue) == 0x0015FC, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_int_Array_Index_Variable) == 0x001600, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_int_Array_Index_Variable_1) == 0x001604, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetWorldSubsystem_ReturnValue) == 0x001608, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_int_Loop_Counter_Variable_1) == 0x001610, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsValid_ReturnValue) == 0x001614, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Add_IntInt_ReturnValue_1) == 0x001618, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, UniqueObjectNameForCooking_OutputDelegate_1) == 0x00161C, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::UniqueObjectNameForCooking_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_HitInst) == 0x001630, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_HitInst' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, UniqueObjectNameForCooking_OutputDelegate_2) == 0x001680, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::UniqueObjectNameForCooking_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_Get_Item) == 0x001690, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_Length_ReturnValue) == 0x001748, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00174C, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Less_IntInt_ReturnValue) == 0x001750, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x001751, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_Get_Item_1) == 0x001758, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_Length_ReturnValue_1) == 0x001780, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Array_IsNotEmpty_ReturnValue_1) == 0x001784, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Array_IsNotEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Less_IntInt_ReturnValue_1) == 0x001785, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_BooleanOR_ReturnValue) == 0x001786, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsValid_ReturnValue_1) == 0x001787, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetOwner_ReturnValue) == 0x001788, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_AsBase_Character) == 0x001790, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_AsBase_Character' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_bSuccess) == 0x001798, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_AsBase_Character_1) == 0x0017A0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_AsBase_Character_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_bSuccess_1) == 0x0017A8, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetHitRecordByGuid_ReturnValue) == 0x0017B0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetHitRecordByGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetCharacterGuid_ReturnValue_1) == 0x0021E0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetCharacterGuid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Trim_ReturnValue) == 0x0021F0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Trim_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_TrimTrailing_ReturnValue) == 0x002200, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_TrimTrailing_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsEmpty_ReturnValue) == 0x002210, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Not_PreBool_ReturnValue) == 0x002211, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_MakeLiteralByte_ReturnValue) == 0x002212, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_struct_Variable_4) == 0x002218, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_struct_Variable_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x0022D0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, Temp_struct_Variable_5) == 0x0022D8, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::Temp_struct_Variable_5' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_And_IntInt_ReturnValue) == 0x002D08, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_And_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_AoCStatsComponent) == 0x002D10, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_AoCStatsComponent' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_EffectInst) == 0x002D18, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_EffectInst' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Conv_IntToBool_ReturnValue) == 0x002E80, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_BooleanOR_ReturnValue_1) == 0x002E81, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetEffectRecordByGuid_ReturnValue) == 0x002E88, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetEffectRecordByGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_BooleanOR_ReturnValue_2) == 0x003610, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_Trim_ReturnValue_1) == 0x003618, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_Trim_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_TrimTrailing_ReturnValue_1) == 0x003628, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_TrimTrailing_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetOwner_ReturnValue_1) == 0x003638, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsEmpty_ReturnValue_1) == 0x003640, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsValid_ReturnValue_2) == 0x003641, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_AsBase_Character_2) == 0x003648, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_AsBase_Character_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_bSuccess_2) == 0x003650, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, UniqueObjectNameForCooking_OutputDelegate_3) == 0x003654, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::UniqueObjectNameForCooking_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetShouldShowAndHitting_shouldShow) == 0x003664, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetShouldShowAndHitting_shouldShow' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetShouldShowAndHitting_hitting) == 0x003665, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetShouldShowAndHitting_hitting' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_EffectRecord_1) == 0x003668, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_EffectRecord_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_Instigator_1) == 0x003DF0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_Instigator_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_Target_1) == 0x003DF8, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_Target_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_EffectRecord) == 0x003E00, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_EffectRecord' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_Instigator) == 0x004588, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_Instigator' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_CustomEvent_Target) == 0x004590, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_CustomEvent_Target' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsValid_ReturnValue_3) == 0x004598, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_IsValid_ReturnValue_4) == 0x004599, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_AsBase_Character_3) == 0x0045A0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_AsBase_Character_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_bSuccess_3) == 0x0045A8, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_AsBase_Character_4) == 0x0045B0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_AsBase_Character_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, K2Node_DynamicCast_bSuccess_4) == 0x0045B8, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetShouldShowAndHitting_shouldShow_1) == 0x0045B9, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetShouldShowAndHitting_shouldShow_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetShouldShowAndHitting_hitting_1) == 0x0045BA, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetShouldShowAndHitting_hitting_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetCharacterGuid_ReturnValue_2) == 0x0045BC, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetCharacterGuid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetShouldShowAndHitting_shouldShow_2) == 0x0045CC, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetShouldShowAndHitting_shouldShow_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetShouldShowAndHitting_hitting_2) == 0x0045CD, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetShouldShowAndHitting_hitting_2' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetCharacterGuid_ReturnValue_3) == 0x0045D0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetCharacterGuid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetShouldShowAndHitting_shouldShow_3) == 0x0045E0, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetShouldShowAndHitting_shouldShow_3' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager, CallFunc_GetShouldShowAndHitting_hitting_3) == 0x0045E1, "Member 'WBP_BuckFloatingTextManager_C_ExecuteUbergraph_WBP_BuckFloatingTextManager::CallFunc_GetShouldShowAndHitting_hitting_3' has a wrong offset!");
 
 // Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.GetNextFloaterBP
 // 0x0050 (0x0050 - 0x0000)
@@ -391,6 +490,67 @@ static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetNextFloaterBP, K2Node_Dy
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetNextFloaterBP, CallFunc_Create_ReturnValue) == 0x000040, "Member 'WBP_BuckFloatingTextManager_C_GetNextFloaterBP::CallFunc_Create_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetNextFloaterBP, CallFunc_AddChildToCanvas_ReturnValue) == 0x000048, "Member 'WBP_BuckFloatingTextManager_C_GetNextFloaterBP::CallFunc_AddChildToCanvas_ReturnValue' has a wrong offset!");
 
+// Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.GetShouldShowAndHitting
+// 0x0050 (0x0050 - 0x0000)
+struct WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting final
+{
+public:
+	class ABaseCharacter*                         me;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABaseCharacter*                         Target;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  InstigatorGuid_0;                                  // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          shouldShow;                                        // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          hitting;                                           // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue;             // 0x0024(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EStealthPerceptionState                       CallFunc_StealthPerceptionCheck_ReturnValue;       // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue_1;           // 0x0038(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GuidGuid_ReturnValue;          // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GuidGuid_ReturnValue_1;        // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x004E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting) == 0x000008, "Wrong alignment on WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting");
+static_assert(sizeof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting) == 0x000050, "Wrong size on WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, me) == 0x000000, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::me' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, Target) == 0x000008, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::Target' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, InstigatorGuid_0) == 0x000010, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::InstigatorGuid_0' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, shouldShow) == 0x000020, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::shouldShow' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, hitting) == 0x000021, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::hitting' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_GetCharacterGuid_ReturnValue) == 0x000024, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_GetCharacterGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_StealthPerceptionCheck_ReturnValue) == 0x000034, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_StealthPerceptionCheck_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_IsValid_ReturnValue) == 0x000035, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000036, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000037, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_GetCharacterGuid_ReturnValue_1) == 0x000038, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_GetCharacterGuid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_BooleanOR_ReturnValue) == 0x000048, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_EqualEqual_GuidGuid_ReturnValue) == 0x000049, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_EqualEqual_GuidGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_EqualEqual_GuidGuid_ReturnValue_1) == 0x00004A, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_EqualEqual_GuidGuid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_BooleanAND_ReturnValue) == 0x00004B, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_Not_PreBool_ReturnValue) == 0x00004C, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_BooleanOR_ReturnValue_1) == 0x00004D, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting, CallFunc_BooleanAND_ReturnValue_1) == 0x00004E, "Member 'WBP_BuckFloatingTextManager_C_GetShouldShowAndHitting::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+
+// Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.OnClientEffectImmune
+// 0x0798 (0x0798 - 0x0000)
+struct WBP_BuckFloatingTextManager_C_OnClientEffectImmune final
+{
+public:
+	struct FEffectRecord                          EffectRecord;                                      // 0x0000(0x0788)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	const class AActor*                           Instigator;                                        // 0x0788(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class AActor*                           Target;                                            // 0x0790(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_BuckFloatingTextManager_C_OnClientEffectImmune) == 0x000008, "Wrong alignment on WBP_BuckFloatingTextManager_C_OnClientEffectImmune");
+static_assert(sizeof(WBP_BuckFloatingTextManager_C_OnClientEffectImmune) == 0x000798, "Wrong size on WBP_BuckFloatingTextManager_C_OnClientEffectImmune");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_OnClientEffectImmune, EffectRecord) == 0x000000, "Member 'WBP_BuckFloatingTextManager_C_OnClientEffectImmune::EffectRecord' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_OnClientEffectImmune, Instigator) == 0x000788, "Member 'WBP_BuckFloatingTextManager_C_OnClientEffectImmune::Instigator' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_OnClientEffectImmune, Target) == 0x000790, "Member 'WBP_BuckFloatingTextManager_C_OnClientEffectImmune::Target' has a wrong offset!");
+
 // Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.OnClientEffectInstigated
 // 0x0170 (0x0170 - 0x0000)
 struct WBP_BuckFloatingTextManager_C_OnClientEffectInstigated final
@@ -404,39 +564,51 @@ static_assert(sizeof(WBP_BuckFloatingTextManager_C_OnClientEffectInstigated) == 
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_OnClientEffectInstigated, AoCStatsComponent) == 0x000000, "Member 'WBP_BuckFloatingTextManager_C_OnClientEffectInstigated::AoCStatsComponent' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_OnClientEffectInstigated, EffectInst) == 0x000008, "Member 'WBP_BuckFloatingTextManager_C_OnClientEffectInstigated::EffectInst' has a wrong offset!");
 
+// Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.OnClientEffectResisted
+// 0x0798 (0x0798 - 0x0000)
+struct WBP_BuckFloatingTextManager_C_OnClientEffectResisted final
+{
+public:
+	struct FEffectRecord                          EffectRecord;                                      // 0x0000(0x0788)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	const class AActor*                           Instigator;                                        // 0x0788(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class AActor*                           Target;                                            // 0x0790(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_BuckFloatingTextManager_C_OnClientEffectResisted) == 0x000008, "Wrong alignment on WBP_BuckFloatingTextManager_C_OnClientEffectResisted");
+static_assert(sizeof(WBP_BuckFloatingTextManager_C_OnClientEffectResisted) == 0x000798, "Wrong size on WBP_BuckFloatingTextManager_C_OnClientEffectResisted");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_OnClientEffectResisted, EffectRecord) == 0x000000, "Member 'WBP_BuckFloatingTextManager_C_OnClientEffectResisted::EffectRecord' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_OnClientEffectResisted, Instigator) == 0x000788, "Member 'WBP_BuckFloatingTextManager_C_OnClientEffectResisted::Instigator' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_OnClientEffectResisted, Target) == 0x000790, "Member 'WBP_BuckFloatingTextManager_C_OnClientEffectResisted::Target' has a wrong offset!");
+
 // Function WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C.UpdateRunningAvgBP
-// 0x0058 (0x0058 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP final
 {
 public:
 	double                                        Val;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        avg;                                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         hitCount;                                          // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Min_ReturnValue;                          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_RunningAverageHit_ImplicitCast; // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Min_ReturnValue;                          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP) == 0x000008, "Wrong alignment on WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP");
-static_assert(sizeof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP) == 0x000058, "Wrong size on WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP");
+static_assert(sizeof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP) == 0x000048, "Wrong size on WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, Val) == 0x000000, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::Val' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Abs_ReturnValue) == 0x000008, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, avg) == 0x000008, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::avg' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, hitCount) == 0x000010, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::hitCount' has a wrong offset!");
 static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, Temp_int_Variable) == 0x000014, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000018, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Min_ReturnValue) == 0x000020, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Min_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000028, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000030, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000038, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x000040, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000048, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, K2Node_VariableSet_RunningAverageHit_ImplicitCast) == 0x000050, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::K2Node_VariableSet_RunningAverageHit_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Min_ReturnValue) == 0x00001C, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Min_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000020, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Abs_ReturnValue) == 0x000028, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000030, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000038, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000040, "Member 'WBP_BuckFloatingTextManager_C_UpdateRunningAvgBP::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 
 }
 

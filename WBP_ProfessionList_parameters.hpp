@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_ProfessionList.WBP_ProfessionList_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_ProfessionList_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_ProfessionList_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_ProfessionList_C_PreConstruct");
+static_assert(sizeof(WBP_ProfessionList_C_PreConstruct) == 0x000001, "Wrong size on WBP_ProfessionList_C_PreConstruct");
+static_assert(offsetof(WBP_ProfessionList_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_ProfessionList_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WBP_ProfessionList.WBP_ProfessionList_C.ExecuteUbergraph_WBP_ProfessionList
 // 0x0040 (0x0040 - 0x0000)
 struct WBP_ProfessionList_C_ExecuteUbergraph_WBP_ProfessionList final
@@ -45,17 +56,6 @@ static_assert(offsetof(WBP_ProfessionList_C_ExecuteUbergraph_WBP_ProfessionList,
 static_assert(offsetof(WBP_ProfessionList_C_ExecuteUbergraph_WBP_ProfessionList, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000035, "Member 'WBP_ProfessionList_C_ExecuteUbergraph_WBP_ProfessionList::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_ProfessionList_C_ExecuteUbergraph_WBP_ProfessionList, CallFunc_Add_IntInt_ReturnValue) == 0x000038, "Member 'WBP_ProfessionList_C_ExecuteUbergraph_WBP_ProfessionList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_ProfessionList_C_ExecuteUbergraph_WBP_ProfessionList, K2Node_Event_IsDesignTime) == 0x00003C, "Member 'WBP_ProfessionList_C_ExecuteUbergraph_WBP_ProfessionList::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WBP_ProfessionList.WBP_ProfessionList_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_ProfessionList_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_ProfessionList_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_ProfessionList_C_PreConstruct");
-static_assert(sizeof(WBP_ProfessionList_C_PreConstruct) == 0x000001, "Wrong size on WBP_ProfessionList_C_PreConstruct");
-static_assert(offsetof(WBP_ProfessionList_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_ProfessionList_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

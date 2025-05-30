@@ -21,9 +21,9 @@ namespace SDK
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
 // class FName                             bone_name                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       foot_transform                                         (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                foot_transform                                         (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   height_difference                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FHitResult                       hit_info                                               (Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// const struct FHitResult&                hit_info                                               (Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 void UDragonIKFootStepsComponent::CallFootSteps(class FName bone_name, const struct FTransform& foot_transform, float height_difference, const struct FHitResult& hit_info)
 {
@@ -66,7 +66,7 @@ void UDragonIKPhysicsComponent::CacheSimulationStates()
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             bone_name                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       override_transform                                     (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                override_transform                                     (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Enable                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UDragonIKPhysicsComponent::Control_Bone_Handle(class FName bone_name, const struct FTransform& override_transform, bool Enable)
@@ -119,7 +119,7 @@ void UDragonIKPhysicsComponent::FirstTimeInitialization(class USkeletalMeshCompo
 // Function DragonIKPlugin.DragonIKPhysicsComponent.Modify_Reset_Bone_Info
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class FName>                     bone_list                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              bone_list                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 
 void UDragonIKPhysicsComponent::Modify_Reset_Bone_Info(const TArray<class FName>& bone_list)
 {
@@ -164,7 +164,7 @@ void UDragonIKPhysicsComponent::Multicast_CacheSimulationStates()
 // (Net, Native, Event, NetMulticast, Public, HasDefaults, NetValidate)
 // Parameters:
 // class FName                             bone_name                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       override_transform                                     (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                override_transform                                     (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Enable                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UDragonIKPhysicsComponent::Multicast_Control_Bone_Handle(class FName bone_name, const struct FTransform& override_transform, bool Enable)
@@ -246,7 +246,7 @@ void UDragonIKPhysicsComponent::Multicast_FirstTimeInitialization(class USkeleta
 // Function DragonIKPlugin.DragonIKPhysicsComponent.Multicast_Modify_Reset_Bone_Info
 // (Net, Native, Event, NetMulticast, Public, NetValidate)
 // Parameters:
-// TArray<class FName>                     bone_list                                              (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              bone_list                                              (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UDragonIKPhysicsComponent::Multicast_Modify_Reset_Bone_Info(const TArray<class FName>& bone_list)
 {
@@ -271,11 +271,11 @@ void UDragonIKPhysicsComponent::Multicast_Modify_Reset_Bone_Info(const TArray<cl
 // Function DragonIKPlugin.DragonIKPhysicsComponent.Multicast_OnHitCallback
 // (Net, Native, Event, NetMulticast, Public, HasDefaults, NetValidate)
 // Parameters:
-// struct FHitResult                       Hit                                                    (ConstParm, Parm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-// class FName                             Optional_Override_Hit_Bone_Name                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          hit_location                                           (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          hit_impulse_direction                                  (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             hit_bone_name                                          (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FHitResult&                Hit                                                    (ConstParm, Parm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// const class FName                       Optional_Override_Hit_Bone_Name                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   hit_location                                           (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   hit_impulse_direction                                  (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      hit_bone_name                                          (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UDragonIKPhysicsComponent::Multicast_OnHitCallback(const struct FHitResult& Hit, const class FName Optional_Override_Hit_Bone_Name, const struct FVector& hit_location, const struct FVector& hit_impulse_direction, const class FName& hit_bone_name)
 {
@@ -435,11 +435,11 @@ void UDragonIKPhysicsComponent::Multicast_UpdatePhysanimData(int32 LinearStrengt
 // Function DragonIKPlugin.DragonIKPhysicsComponent.OnHitCallback
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FHitResult                       Hit                                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// const struct FHitResult&                Hit                                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 // class FName                             Optional_Override_Hit_Bone_Name                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          hit_location                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          hit_impulse_direction                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             hit_bone_name                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         hit_location                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         hit_impulse_direction                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            hit_bone_name                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UDragonIKPhysicsComponent::OnHitCallback(const struct FHitResult& Hit, class FName Optional_Override_Hit_Bone_Name, struct FVector* hit_location, struct FVector* hit_impulse_direction, class FName* hit_bone_name)
 {
@@ -569,7 +569,7 @@ void UDragonIKPhysicsComponent::Server_CacheSimulationStates()
 // (Net, Native, Event, Public, NetServer, HasDefaults, BlueprintCallable, NetValidate)
 // Parameters:
 // class FName                             bone_name                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       override_transform                                     (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                override_transform                                     (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Enable                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UDragonIKPhysicsComponent::Server_Control_Bone_Handle(class FName bone_name, const struct FTransform& override_transform, bool Enable)
@@ -651,7 +651,7 @@ void UDragonIKPhysicsComponent::Server_FirstTimeInitialization(class USkeletalMe
 // Function DragonIKPlugin.DragonIKPhysicsComponent.Server_Modify_Reset_Bone_Info
 // (Net, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// TArray<class FName>                     bone_list                                              (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              bone_list                                              (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UDragonIKPhysicsComponent::Server_Modify_Reset_Bone_Info(const TArray<class FName>& bone_list)
 {
@@ -676,11 +676,11 @@ void UDragonIKPhysicsComponent::Server_Modify_Reset_Bone_Info(const TArray<class
 // Function DragonIKPlugin.DragonIKPhysicsComponent.Server_OnHitCallback
 // (Net, Native, Event, Public, NetServer, HasDefaults, NetValidate)
 // Parameters:
-// struct FHitResult                       Hit                                                    (ConstParm, Parm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-// class FName                             Optional_Override_Hit_Bone_Name                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          hit_location                                           (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          hit_impulse_direction                                  (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             hit_bone_name                                          (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FHitResult&                Hit                                                    (ConstParm, Parm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// const class FName                       Optional_Override_Hit_Bone_Name                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   hit_location                                           (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   hit_impulse_direction                                  (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      hit_bone_name                                          (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UDragonIKPhysicsComponent::Server_OnHitCallback(const struct FHitResult& Hit, const class FName Optional_Override_Hit_Bone_Name, const struct FVector& hit_location, const struct FVector& hit_impulse_direction, const class FName& hit_bone_name)
 {
@@ -896,7 +896,7 @@ void UDragonIKPhysicsComponent::UpdatePhysanimData(int32 LinearStrength, int32 A
 // Function DragonIKPlugin.DragonIKTraceManagerComponent.SpineSolverTraceData
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// TArray<struct FDragonIKTraceKeyValuePair>hit_data_pair                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// const TArray<struct FDragonIKTraceKeyValuePair>&hit_data_pair                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 void UDragonIKTraceManagerComponent::SpineSolverTraceData(const TArray<struct FDragonIKTraceKeyValuePair>& hit_data_pair)
 {
@@ -1292,7 +1292,7 @@ void UDragonIKWeaponPhysicsComponent::Multicast_Release_Hand_Only(class FName ha
 // (Net, Native, Event, NetMulticast, Public, HasDefaults, NetValidate)
 // Parameters:
 // class FName                             hand_bone                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       hand_transform                                         (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                hand_transform                                         (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    override_hand_location                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Override_Hand_Rotation                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1376,7 +1376,7 @@ void UDragonIKWeaponPhysicsComponent::Multicast_Unfreeze_Elbows_Function(class F
 // Function DragonIKPlugin.DragonIKWeaponPhysicsComponent.Multicast_Weapon_Transform_Override
 // (Net, Native, Event, NetMulticast, Public, HasDefaults, NetValidate)
 // Parameters:
-// struct FTransform                       Weapon_Transform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Weapon_Transform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bShould_Override_Weapon_Transform                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UDragonIKWeaponPhysicsComponent::Multicast_Weapon_Transform_Override(const struct FTransform& Weapon_Transform, bool bShould_Override_Weapon_Transform)
@@ -1429,7 +1429,7 @@ void UDragonIKWeaponPhysicsComponent::Release_Hand_Only(class FName hand_bone)
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             hand_bone                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       hand_transform                                         (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                hand_transform                                         (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    override_hand_location                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Override_Hand_Rotation                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1689,7 +1689,7 @@ void UDragonIKWeaponPhysicsComponent::Server_Release_Hand_Only(class FName hand_
 // (Net, Native, Event, Public, NetServer, HasDefaults, BlueprintCallable, NetValidate)
 // Parameters:
 // class FName                             hand_bone                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       hand_transform                                         (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                hand_transform                                         (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    override_hand_location                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Override_Hand_Rotation                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1773,7 +1773,7 @@ void UDragonIKWeaponPhysicsComponent::Server_Unfreeze_Elbows_Function(class FNam
 // Function DragonIKPlugin.DragonIKWeaponPhysicsComponent.Server_Weapon_Transform_Override
 // (Net, Native, Event, Public, NetServer, HasDefaults, BlueprintCallable, NetValidate)
 // Parameters:
-// struct FTransform                       Weapon_Transform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Weapon_Transform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bShould_Override_Weapon_Transform                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UDragonIKWeaponPhysicsComponent::Server_Weapon_Transform_Override(const struct FTransform& Weapon_Transform, bool bShould_Override_Weapon_Transform)
@@ -1825,7 +1825,7 @@ void UDragonIKWeaponPhysicsComponent::Unfreeze_Elbows_Function(class FName hand_
 // Function DragonIKPlugin.DragonIKWeaponPhysicsComponent.Weapon_Transform_Override
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FTransform                       Weapon_Transform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Weapon_Transform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bShould_Override_Weapon_Transform                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UDragonIKWeaponPhysicsComponent::Weapon_Transform_Override(const struct FTransform& Weapon_Transform, bool bShould_Override_Weapon_Transform)
@@ -1852,8 +1852,8 @@ void UDragonIKWeaponPhysicsComponent::Weapon_Transform_Override(const struct FTr
 // Function DragonIKPlugin.DragonIK_Library.CustomLookRotation
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FVector                          lookAt                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          upDirection                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   lookAt                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   upDirection                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FRotator UDragonIK_Library::CustomLookRotation(const struct FVector& lookAt, const struct FVector& upDirection)
@@ -1882,9 +1882,9 @@ struct FRotator UDragonIK_Library::CustomLookRotation(const struct FVector& look
 // Function DragonIKPlugin.DragonIK_Library.LookAtRotation_V3
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FVector                          Source                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Target                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          UpVector                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Source                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Target                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   UpVector                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FRotator UDragonIK_Library::LookAtRotation_V3(const struct FVector& Source, const struct FVector& Target, const struct FVector& UpVector)
@@ -1914,9 +1914,9 @@ struct FRotator UDragonIK_Library::LookAtRotation_V3(const struct FVector& Sourc
 // Function DragonIKPlugin.DragonIK_Library.LookAtVector_V2
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FVector                          Source_Location                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          lookAt                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          upDirection                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Source_Location                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   lookAt                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   upDirection                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FRotator UDragonIK_Library::LookAtVector_V2(const struct FVector& Source_Location, const struct FVector& lookAt, const struct FVector& upDirection)
@@ -1946,8 +1946,8 @@ struct FRotator UDragonIK_Library::LookAtVector_V2(const struct FVector& Source_
 // Function DragonIKPlugin.DragonIK_Library.QuatLookXatLocation
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FTransform                       LookAtFromTransform                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          LookAtTarget                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                LookAtFromTransform                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   LookAtTarget                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FTransform UDragonIK_Library::QuatLookXatLocation(const struct FTransform& LookAtFromTransform, const struct FVector& LookAtTarget)

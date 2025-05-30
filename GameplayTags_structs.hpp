@@ -85,6 +85,16 @@ static_assert(alignof(FGameplayTag) == 0x000004, "Wrong alignment on FGameplayTa
 static_assert(sizeof(FGameplayTag) == 0x000008, "Wrong size on FGameplayTag");
 static_assert(offsetof(FGameplayTag, TagName) == 0x000000, "Member 'FGameplayTag::TagName' has a wrong offset!");
 
+// ScriptStruct GameplayTags.GameplayTagCreationWidgetHelper
+// 0x0001 (0x0001 - 0x0000)
+struct FGameplayTagCreationWidgetHelper final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong alignment on FGameplayTagCreationWidgetHelper");
+static_assert(sizeof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong size on FGameplayTagCreationWidgetHelper");
+
 // ScriptStruct GameplayTags.GameplayTagContainer
 // 0x0020 (0x0020 - 0x0000)
 struct FGameplayTagContainer final
@@ -98,29 +108,15 @@ static_assert(sizeof(FGameplayTagContainer) == 0x000020, "Wrong size on FGamepla
 static_assert(offsetof(FGameplayTagContainer, GameplayTags) == 0x000000, "Member 'FGameplayTagContainer::GameplayTags' has a wrong offset!");
 static_assert(offsetof(FGameplayTagContainer, ParentTags) == 0x000010, "Member 'FGameplayTagContainer::ParentTags' has a wrong offset!");
 
-// ScriptStruct GameplayTags.GameplayTagContainerNetSerializerSerializationHelper
-// 0x0010 (0x0010 - 0x0000)
-struct FGameplayTagContainerNetSerializerSerializationHelper final
+// ScriptStruct GameplayTags.GameplayTagContainerNetSerializerConfig
+// 0x0001 (0x0001 - 0x0000)
+struct FGameplayTagContainerNetSerializerConfig final : public FNetSerializerConfig
 {
 public:
-	TArray<struct FGameplayTag>                   GameplayTags;                                      // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayTagContainerNetSerializerSerializationHelper) == 0x000008, "Wrong alignment on FGameplayTagContainerNetSerializerSerializationHelper");
-static_assert(sizeof(FGameplayTagContainerNetSerializerSerializationHelper) == 0x000010, "Wrong size on FGameplayTagContainerNetSerializerSerializationHelper");
-static_assert(offsetof(FGameplayTagContainerNetSerializerSerializationHelper, GameplayTags) == 0x000000, "Member 'FGameplayTagContainerNetSerializerSerializationHelper::GameplayTags' has a wrong offset!");
-
-// ScriptStruct GameplayTags.GameplayTagTableRow
-// 0x0018 (0x0020 - 0x0008)
-struct FGameplayTagTableRow : public FTableRowBase
-{
-public:
-	class FName                                   Tag;                                               // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DevComment;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayTagTableRow) == 0x000008, "Wrong alignment on FGameplayTagTableRow");
-static_assert(sizeof(FGameplayTagTableRow) == 0x000020, "Wrong size on FGameplayTagTableRow");
-static_assert(offsetof(FGameplayTagTableRow, Tag) == 0x000008, "Member 'FGameplayTagTableRow::Tag' has a wrong offset!");
-static_assert(offsetof(FGameplayTagTableRow, DevComment) == 0x000010, "Member 'FGameplayTagTableRow::DevComment' has a wrong offset!");
+static_assert(alignof(FGameplayTagContainerNetSerializerConfig) == 0x000001, "Wrong alignment on FGameplayTagContainerNetSerializerConfig");
+static_assert(sizeof(FGameplayTagContainerNetSerializerConfig) == 0x000001, "Wrong size on FGameplayTagContainerNetSerializerConfig");
 
 // ScriptStruct GameplayTags.GameplayTagQuery
 // 0x0048 (0x0048 - 0x0000)
@@ -142,6 +138,17 @@ static_assert(offsetof(FGameplayTagQuery, QueryTokenStream) == 0x000018, "Member
 static_assert(offsetof(FGameplayTagQuery, UserDescription) == 0x000028, "Member 'FGameplayTagQuery::UserDescription' has a wrong offset!");
 static_assert(offsetof(FGameplayTagQuery, AutoDescription) == 0x000038, "Member 'FGameplayTagQuery::AutoDescription' has a wrong offset!");
 
+// ScriptStruct GameplayTags.GameplayTagContainerNetSerializerSerializationHelper
+// 0x0010 (0x0010 - 0x0000)
+struct FGameplayTagContainerNetSerializerSerializationHelper final
+{
+public:
+	TArray<struct FGameplayTag>                   GameplayTags;                                      // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGameplayTagContainerNetSerializerSerializationHelper) == 0x000008, "Wrong alignment on FGameplayTagContainerNetSerializerSerializationHelper");
+static_assert(sizeof(FGameplayTagContainerNetSerializerSerializationHelper) == 0x000010, "Wrong size on FGameplayTagContainerNetSerializerSerializationHelper");
+static_assert(offsetof(FGameplayTagContainerNetSerializerSerializationHelper, GameplayTags) == 0x000000, "Member 'FGameplayTagContainerNetSerializerSerializationHelper::GameplayTags' has a wrong offset!");
+
 // ScriptStruct GameplayTags.GameplayTagRedirect
 // 0x0010 (0x0010 - 0x0000)
 struct FGameplayTagRedirect final
@@ -155,25 +162,18 @@ static_assert(sizeof(FGameplayTagRedirect) == 0x000010, "Wrong size on FGameplay
 static_assert(offsetof(FGameplayTagRedirect, OldTagName) == 0x000000, "Member 'FGameplayTagRedirect::OldTagName' has a wrong offset!");
 static_assert(offsetof(FGameplayTagRedirect, NewTagName) == 0x000008, "Member 'FGameplayTagRedirect::NewTagName' has a wrong offset!");
 
-// ScriptStruct GameplayTags.GameplayTagCreationWidgetHelper
-// 0x0001 (0x0001 - 0x0000)
-struct FGameplayTagCreationWidgetHelper final
+// ScriptStruct GameplayTags.GameplayTagTableRow
+// 0x0018 (0x0020 - 0x0008)
+struct FGameplayTagTableRow : public FTableRowBase
 {
 public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   Tag;                                               // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DevComment;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong alignment on FGameplayTagCreationWidgetHelper");
-static_assert(sizeof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong size on FGameplayTagCreationWidgetHelper");
-
-// ScriptStruct GameplayTags.GameplayTagContainerNetSerializerConfig
-// 0x0001 (0x0001 - 0x0000)
-struct FGameplayTagContainerNetSerializerConfig final : public FNetSerializerConfig
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayTagContainerNetSerializerConfig) == 0x000001, "Wrong alignment on FGameplayTagContainerNetSerializerConfig");
-static_assert(sizeof(FGameplayTagContainerNetSerializerConfig) == 0x000001, "Wrong size on FGameplayTagContainerNetSerializerConfig");
+static_assert(alignof(FGameplayTagTableRow) == 0x000008, "Wrong alignment on FGameplayTagTableRow");
+static_assert(sizeof(FGameplayTagTableRow) == 0x000020, "Wrong size on FGameplayTagTableRow");
+static_assert(offsetof(FGameplayTagTableRow, Tag) == 0x000008, "Member 'FGameplayTagTableRow::Tag' has a wrong offset!");
+static_assert(offsetof(FGameplayTagTableRow, DevComment) == 0x000010, "Member 'FGameplayTagTableRow::DevComment' has a wrong offset!");
 
 // ScriptStruct GameplayTags.RestrictedGameplayTagTableRow
 // 0x0008 (0x0028 - 0x0020)

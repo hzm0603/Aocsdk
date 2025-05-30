@@ -21,7 +21,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_StatInspector.WBP_StatInspector_C
-// 0x01E8 (0x04D8 - 0x02F0)
+// 0x01F0 (0x04E0 - 0x02F0)
 class UWBP_StatInspector_C final : public UUserWidget
 {
 public:
@@ -36,51 +36,52 @@ public:
 	class USizeBox*                               Column3Text_SizeBox_1;                             // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             Column4Text;                                       // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             EffectsText;                                       // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCheckBox*                              HideZeros;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_77;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             InspectSelfText;                                   // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             InspectTargetText;                                 // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Toggle_C*                          InspectToggle;                                     // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             InstigatorTitle;                                   // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       SearchBox;                                         // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UComboBoxString*                        ShowStatDropdown;                                  // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Toggle_C*                          StatsEffectsToggle;                                // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             StatsText;                                         // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             StatTitle;                                         // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TargetBPName;                                      // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           TargetStatVertBox;                                 // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_Gradient_C*           WBP_ScrollWindow;                                  // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class FName>                           StatList;                                          // 0x03B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FName, int32>                      StatIndexMap;                                      // 0x03C8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FName, class FName>                WaterfallMap;                                      // 0x0418(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FName, struct FColor>              WaterfallStats;                                    // 0x0468(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGuid                                  CurrentCharacter;                                  // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           NonPercentStats;                                   // 0x04C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UCheckBox*                              HideOnes;                                          // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCheckBox*                              HideZeros;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_77;                                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             InspectSelfText;                                   // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             InspectTargetText;                                 // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Toggle_C*                          InspectToggle;                                     // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             InstigatorTitle;                                   // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       SearchBox;                                         // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UComboBoxString*                        ShowStatDropdown;                                  // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Toggle_C*                          StatsEffectsToggle;                                // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             StatsText;                                         // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             StatTitle;                                         // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TargetBPName;                                      // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           TargetStatVertBox;                                 // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_Gradient_C*           WBP_ScrollWindow;                                  // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class FName>                           StatList;                                          // 0x03C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, int32>                      StatIndexMap;                                      // 0x03D0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, class FName>                WaterfallMap;                                      // 0x0420(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, struct FColor>              WaterfallStats;                                    // 0x0470(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGuid                                  CurrentCharacter;                                  // 0x04C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           NonPercentStats;                                   // 0x04D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void BndEvt__StatInspector_InspectToggle_K2Node_ComponentBoundEvent_1_OnToggle__DelegateSignature(const bool bToggledOn);
-	void BndEvt__StatInspector_SearchBox_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text);
-	void BndEvt__WBP_StatInspector_Button_EquipLoadout_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_StatInspector_StatsEffectsToggle_K2Node_ComponentBoundEvent_0_OnToggle__DelegateSignature(const bool bToggledOn);
-	void Construct();
-	void ExecuteUbergraph_WBP_StatInspector(int32 EntryPoint);
-	void FilterNames(const class FText& Filter, TArray<class FName>& In, TArray<class FName>* Out);
-	void FormatAndSetText(double Value, class UTextBlock* Text, bool& SetBool);
-	void Get_Rating_Stat_Name(class FName StatName, class FName* RatingStatName, bool* hasRating);
-	void GetBar(int32 Index_0, class UVerticalBox* vertBox, class UWBP_StatInspectorBar_C** bar);
-	void GetColorForStat(class FName Stat, struct FSlateColor* Color);
-	void GetFormattedText(double Value, bool isPercent, class FText* Text);
-	void GetStatLookup(class UAoCStatsComponent* Stats, class FName Name_0, int32 Index_0, bool byServer, double* Value, bool* Valid, double* ratingValue, bool* hasRating);
-	void LogServerStats(class UAoCStatsComponent* Stats, const class FString& Name_0);
-	void SetEffectsForActor(class AActor* Actor, class UVerticalBox* vertBox);
-	void SetStatsForActor(class AActor* Actor, class UVerticalBox* vertBox);
-	void SetTargetClassName(class ABaseCharacter* BaseChar);
-	void SetTextColorByValue(class UTextBlock* Text, double Value);
-	void SetToggleTextColor(bool isSelf);
-	void TrimBars(int32 NumBars, class UVerticalBox* vertBox);
-	void UpdateServerStats();
-	void UpdateStatNameIndex();
 	void UpdateUI();
+	void UpdateStatNameIndex();
+	void UpdateServerStats();
+	void TrimBars(int32 NumBars, class UVerticalBox* vertBox);
+	void SetToggleTextColor(bool isSelf);
+	void SetTextColorByValue(class UTextBlock* Text, double Value);
+	void SetTargetClassName(class ABaseCharacter* BaseChar);
+	void SetStatsForActor(class AActor* Actor, class UVerticalBox* vertBox);
+	void SetEffectsForActor(class AActor* Actor, class UVerticalBox* vertBox);
+	void LogServerStats(class UAoCStatsComponent* Stats, const class FString& Name_0);
+	void GetStatLookup(class UAoCStatsComponent* Stats, class FName Name_0, int32 Index_0, bool byServer, double* Value, bool* Valid, double* ratingValue, bool* hasRating);
+	void GetFormattedText(double Value, bool isPercent, class FText* Text);
+	void GetColorForStat(class FName Stat, struct FSlateColor* Color);
+	void GetBar(int32 Index_0, class UVerticalBox* vertBox, class UWBP_StatInspectorBar_C** bar);
+	void Get_Rating_Stat_Name(class FName StatName, class FName* RatingStatName, bool* hasRating);
+	void FormatAndSetText(double Value, class UTextBlock* Text, bool& setZeroBool, bool& setOneBool);
+	void FilterNames(const class FText& Filter, TArray<class FName>& In, TArray<class FName>* Out);
+	void ExecuteUbergraph_WBP_StatInspector(int32 EntryPoint);
+	void Construct();
+	void BndEvt__WBP_StatInspector_StatsEffectsToggle_K2Node_ComponentBoundEvent_0_OnToggle__DelegateSignature(const bool bToggledOn);
+	void BndEvt__WBP_StatInspector_Button_EquipLoadout_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__StatInspector_SearchBox_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text);
+	void BndEvt__StatInspector_InspectToggle_K2Node_ComponentBoundEvent_1_OnToggle__DelegateSignature(const bool bToggledOn);
 
 public:
 	static class UClass* StaticClass()
@@ -93,7 +94,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_StatInspector_C) == 0x000008, "Wrong alignment on UWBP_StatInspector_C");
-static_assert(sizeof(UWBP_StatInspector_C) == 0x0004D8, "Wrong size on UWBP_StatInspector_C");
+static_assert(sizeof(UWBP_StatInspector_C) == 0x0004E0, "Wrong size on UWBP_StatInspector_C");
 static_assert(offsetof(UWBP_StatInspector_C, UberGraphFrame) == 0x0002F0, "Member 'UWBP_StatInspector_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_StatInspector_C, Button_EquipLoadout) == 0x0002F8, "Member 'UWBP_StatInspector_C::Button_EquipLoadout' has a wrong offset!");
 static_assert(offsetof(UWBP_StatInspector_C, Column1Text) == 0x000300, "Member 'UWBP_StatInspector_C::Column1Text' has a wrong offset!");
@@ -105,26 +106,27 @@ static_assert(offsetof(UWBP_StatInspector_C, Column3Text_SizeBox) == 0x000328, "
 static_assert(offsetof(UWBP_StatInspector_C, Column3Text_SizeBox_1) == 0x000330, "Member 'UWBP_StatInspector_C::Column3Text_SizeBox_1' has a wrong offset!");
 static_assert(offsetof(UWBP_StatInspector_C, Column4Text) == 0x000338, "Member 'UWBP_StatInspector_C::Column4Text' has a wrong offset!");
 static_assert(offsetof(UWBP_StatInspector_C, EffectsText) == 0x000340, "Member 'UWBP_StatInspector_C::EffectsText' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, HideZeros) == 0x000348, "Member 'UWBP_StatInspector_C::HideZeros' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, Image_77) == 0x000350, "Member 'UWBP_StatInspector_C::Image_77' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, InspectSelfText) == 0x000358, "Member 'UWBP_StatInspector_C::InspectSelfText' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, InspectTargetText) == 0x000360, "Member 'UWBP_StatInspector_C::InspectTargetText' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, InspectToggle) == 0x000368, "Member 'UWBP_StatInspector_C::InspectToggle' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, InstigatorTitle) == 0x000370, "Member 'UWBP_StatInspector_C::InstigatorTitle' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, SearchBox) == 0x000378, "Member 'UWBP_StatInspector_C::SearchBox' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, ShowStatDropdown) == 0x000380, "Member 'UWBP_StatInspector_C::ShowStatDropdown' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, StatsEffectsToggle) == 0x000388, "Member 'UWBP_StatInspector_C::StatsEffectsToggle' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, StatsText) == 0x000390, "Member 'UWBP_StatInspector_C::StatsText' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, StatTitle) == 0x000398, "Member 'UWBP_StatInspector_C::StatTitle' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, TargetBPName) == 0x0003A0, "Member 'UWBP_StatInspector_C::TargetBPName' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, TargetStatVertBox) == 0x0003A8, "Member 'UWBP_StatInspector_C::TargetStatVertBox' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, WBP_ScrollWindow) == 0x0003B0, "Member 'UWBP_StatInspector_C::WBP_ScrollWindow' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, StatList) == 0x0003B8, "Member 'UWBP_StatInspector_C::StatList' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, StatIndexMap) == 0x0003C8, "Member 'UWBP_StatInspector_C::StatIndexMap' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, WaterfallMap) == 0x000418, "Member 'UWBP_StatInspector_C::WaterfallMap' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, WaterfallStats) == 0x000468, "Member 'UWBP_StatInspector_C::WaterfallStats' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, CurrentCharacter) == 0x0004B8, "Member 'UWBP_StatInspector_C::CurrentCharacter' has a wrong offset!");
-static_assert(offsetof(UWBP_StatInspector_C, NonPercentStats) == 0x0004C8, "Member 'UWBP_StatInspector_C::NonPercentStats' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, HideOnes) == 0x000348, "Member 'UWBP_StatInspector_C::HideOnes' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, HideZeros) == 0x000350, "Member 'UWBP_StatInspector_C::HideZeros' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, Image_77) == 0x000358, "Member 'UWBP_StatInspector_C::Image_77' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, InspectSelfText) == 0x000360, "Member 'UWBP_StatInspector_C::InspectSelfText' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, InspectTargetText) == 0x000368, "Member 'UWBP_StatInspector_C::InspectTargetText' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, InspectToggle) == 0x000370, "Member 'UWBP_StatInspector_C::InspectToggle' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, InstigatorTitle) == 0x000378, "Member 'UWBP_StatInspector_C::InstigatorTitle' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, SearchBox) == 0x000380, "Member 'UWBP_StatInspector_C::SearchBox' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, ShowStatDropdown) == 0x000388, "Member 'UWBP_StatInspector_C::ShowStatDropdown' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, StatsEffectsToggle) == 0x000390, "Member 'UWBP_StatInspector_C::StatsEffectsToggle' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, StatsText) == 0x000398, "Member 'UWBP_StatInspector_C::StatsText' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, StatTitle) == 0x0003A0, "Member 'UWBP_StatInspector_C::StatTitle' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, TargetBPName) == 0x0003A8, "Member 'UWBP_StatInspector_C::TargetBPName' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, TargetStatVertBox) == 0x0003B0, "Member 'UWBP_StatInspector_C::TargetStatVertBox' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, WBP_ScrollWindow) == 0x0003B8, "Member 'UWBP_StatInspector_C::WBP_ScrollWindow' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, StatList) == 0x0003C0, "Member 'UWBP_StatInspector_C::StatList' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, StatIndexMap) == 0x0003D0, "Member 'UWBP_StatInspector_C::StatIndexMap' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, WaterfallMap) == 0x000420, "Member 'UWBP_StatInspector_C::WaterfallMap' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, WaterfallStats) == 0x000470, "Member 'UWBP_StatInspector_C::WaterfallStats' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, CurrentCharacter) == 0x0004C0, "Member 'UWBP_StatInspector_C::CurrentCharacter' has a wrong offset!");
+static_assert(offsetof(UWBP_StatInspector_C, NonPercentStats) == 0x0004D0, "Member 'UWBP_StatInspector_C::NonPercentStats' has a wrong offset!");
 
 }
 

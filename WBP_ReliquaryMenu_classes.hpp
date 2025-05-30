@@ -17,23 +17,31 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ReliquaryMenu.WBP_ReliquaryMenu_C
-// 0x0068 (0x0490 - 0x0428)
+// 0x00A8 (0x0510 - 0x0468)
 class UWBP_ReliquaryMenu_C final : public UReliquaryMenu
 {
 public:
-	class USizeBox*                               SzB_MainWidth;                                     // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_NodeEssenceLabel;                               // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_NodeEssenceLabel_1;                             // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_1;                                   // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_2;                                   // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_3;                                   // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_4;                                   // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_5;                                   // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_6;                                   // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_7;                                   // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_8;                                   // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_9;                                   // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_147;                                 // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SzB_MainWidth;                                     // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_NodeEssenceLabel;                               // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_NodeEssenceLabel_1;                             // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem;                                     // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_1;                                   // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_2;                                   // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_3;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_4;                                   // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_5;                                   // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_6;                                   // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_7;                                   // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_8;                                   // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_9;                                   // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_10;                                  // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_11;                                  // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_12;                                  // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_13;                                  // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_14;                                  // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_15;                                  // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_16;                                  // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RelicItemSlot_C*                   WBP_RelicItem_147;                                 // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -46,20 +54,28 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ReliquaryMenu_C) == 0x000008, "Wrong alignment on UWBP_ReliquaryMenu_C");
-static_assert(sizeof(UWBP_ReliquaryMenu_C) == 0x000490, "Wrong size on UWBP_ReliquaryMenu_C");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, SzB_MainWidth) == 0x000428, "Member 'UWBP_ReliquaryMenu_C::SzB_MainWidth' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, TB_NodeEssenceLabel) == 0x000430, "Member 'UWBP_ReliquaryMenu_C::TB_NodeEssenceLabel' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, TB_NodeEssenceLabel_1) == 0x000438, "Member 'UWBP_ReliquaryMenu_C::TB_NodeEssenceLabel_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_1) == 0x000440, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_2) == 0x000448, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_2' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_3) == 0x000450, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_3' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_4) == 0x000458, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_4' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_5) == 0x000460, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_5' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_6) == 0x000468, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_6' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_7) == 0x000470, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_7' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_8) == 0x000478, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_8' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_9) == 0x000480, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_9' has a wrong offset!");
-static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_147) == 0x000488, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_147' has a wrong offset!");
+static_assert(sizeof(UWBP_ReliquaryMenu_C) == 0x000510, "Wrong size on UWBP_ReliquaryMenu_C");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, SzB_MainWidth) == 0x000468, "Member 'UWBP_ReliquaryMenu_C::SzB_MainWidth' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, TB_NodeEssenceLabel) == 0x000470, "Member 'UWBP_ReliquaryMenu_C::TB_NodeEssenceLabel' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, TB_NodeEssenceLabel_1) == 0x000478, "Member 'UWBP_ReliquaryMenu_C::TB_NodeEssenceLabel_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem) == 0x000480, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_1) == 0x000488, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_2) == 0x000490, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_2' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_3) == 0x000498, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_3' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_4) == 0x0004A0, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_4' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_5) == 0x0004A8, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_5' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_6) == 0x0004B0, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_6' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_7) == 0x0004B8, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_7' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_8) == 0x0004C0, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_8' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_9) == 0x0004C8, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_9' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_10) == 0x0004D0, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_10' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_11) == 0x0004D8, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_11' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_12) == 0x0004E0, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_12' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_13) == 0x0004E8, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_13' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_14) == 0x0004F0, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_14' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_15) == 0x0004F8, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_15' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_16) == 0x000500, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_16' has a wrong offset!");
+static_assert(offsetof(UWBP_ReliquaryMenu_C, WBP_RelicItem_147) == 0x000508, "Member 'UWBP_ReliquaryMenu_C::WBP_RelicItem_147' has a wrong offset!");
 
 }
 

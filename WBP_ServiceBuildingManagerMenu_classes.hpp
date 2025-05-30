@@ -17,18 +17,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ServiceBuildingManagerMenu.WBP_ServiceBuildingManagerMenu_C
-// 0x0040 (0x0620 - 0x05E0)
+// 0x0038 (0x06C0 - 0x0688)
 class UWBP_ServiceBuildingManagerMenu_C final : public UNodeBuildingManagerMenu
 {
 public:
-	class UAoCCommonTextBlock*                    BuildingManagementLabel;                           // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   BuildingsScrollBox;                                // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         ExpansionPointsPanel;                              // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalShiftingBox;                             // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextButton_C*                    PlotsMapButton;                                    // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       SubPanelIndicatorTextBlock;                        // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_AvailableLabel;                                 // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_ExpansionTreeLabel;                             // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    BuildingManagementLabel;                           // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   BuildingsScrollBox;                                // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         ExpansionPointsPanel;                              // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalShiftingBox;                             // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextButton_C*                    PlotsMapButton;                                    // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SubPanelIndicatorTextBlock;                        // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_ExpansionTreeLabel;                             // 0x06B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -41,15 +40,14 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ServiceBuildingManagerMenu_C) == 0x000008, "Wrong alignment on UWBP_ServiceBuildingManagerMenu_C");
-static_assert(sizeof(UWBP_ServiceBuildingManagerMenu_C) == 0x000620, "Wrong size on UWBP_ServiceBuildingManagerMenu_C");
-static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, BuildingManagementLabel) == 0x0005E0, "Member 'UWBP_ServiceBuildingManagerMenu_C::BuildingManagementLabel' has a wrong offset!");
-static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, BuildingsScrollBox) == 0x0005E8, "Member 'UWBP_ServiceBuildingManagerMenu_C::BuildingsScrollBox' has a wrong offset!");
-static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, ExpansionPointsPanel) == 0x0005F0, "Member 'UWBP_ServiceBuildingManagerMenu_C::ExpansionPointsPanel' has a wrong offset!");
-static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, HorizontalShiftingBox) == 0x0005F8, "Member 'UWBP_ServiceBuildingManagerMenu_C::HorizontalShiftingBox' has a wrong offset!");
-static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, PlotsMapButton) == 0x000600, "Member 'UWBP_ServiceBuildingManagerMenu_C::PlotsMapButton' has a wrong offset!");
-static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, SubPanelIndicatorTextBlock) == 0x000608, "Member 'UWBP_ServiceBuildingManagerMenu_C::SubPanelIndicatorTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, TB_AvailableLabel) == 0x000610, "Member 'UWBP_ServiceBuildingManagerMenu_C::TB_AvailableLabel' has a wrong offset!");
-static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, TB_ExpansionTreeLabel) == 0x000618, "Member 'UWBP_ServiceBuildingManagerMenu_C::TB_ExpansionTreeLabel' has a wrong offset!");
+static_assert(sizeof(UWBP_ServiceBuildingManagerMenu_C) == 0x0006C0, "Wrong size on UWBP_ServiceBuildingManagerMenu_C");
+static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, BuildingManagementLabel) == 0x000688, "Member 'UWBP_ServiceBuildingManagerMenu_C::BuildingManagementLabel' has a wrong offset!");
+static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, BuildingsScrollBox) == 0x000690, "Member 'UWBP_ServiceBuildingManagerMenu_C::BuildingsScrollBox' has a wrong offset!");
+static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, ExpansionPointsPanel) == 0x000698, "Member 'UWBP_ServiceBuildingManagerMenu_C::ExpansionPointsPanel' has a wrong offset!");
+static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, HorizontalShiftingBox) == 0x0006A0, "Member 'UWBP_ServiceBuildingManagerMenu_C::HorizontalShiftingBox' has a wrong offset!");
+static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, PlotsMapButton) == 0x0006A8, "Member 'UWBP_ServiceBuildingManagerMenu_C::PlotsMapButton' has a wrong offset!");
+static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, SubPanelIndicatorTextBlock) == 0x0006B0, "Member 'UWBP_ServiceBuildingManagerMenu_C::SubPanelIndicatorTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_ServiceBuildingManagerMenu_C, TB_ExpansionTreeLabel) == 0x0006B8, "Member 'UWBP_ServiceBuildingManagerMenu_C::TB_ExpansionTreeLabel' has a wrong offset!");
 
 }
 

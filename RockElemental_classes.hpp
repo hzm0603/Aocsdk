@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass RockElemental.RockElemental_C
-// 0x0010 (0x1DA0 - 0x1D90)
+// 0x0010 (0x1D60 - 0x1D50)
 class ARockElemental_C : public ANPCPawn_C
 {
 public:
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1D90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
@@ -37,8 +37,8 @@ public:
 	}
 };
 static_assert(alignof(ARockElemental_C) == 0x000010, "Wrong alignment on ARockElemental_C");
-static_assert(sizeof(ARockElemental_C) == 0x001DA0, "Wrong size on ARockElemental_C");
-static_assert(offsetof(ARockElemental_C, Blackboard) == 0x001D90, "Member 'ARockElemental_C::Blackboard' has a wrong offset!");
+static_assert(sizeof(ARockElemental_C) == 0x001D60, "Wrong size on ARockElemental_C");
+static_assert(offsetof(ARockElemental_C, Blackboard) == 0x001D50, "Member 'ARockElemental_C::Blackboard' has a wrong offset!");
 
 }
 

@@ -10,71 +10,101 @@
 
 #include "Basic.hpp"
 
+#include "E_Weather_HumidityCondition_structs.hpp"
+#include "STRUCT_PostProcessDefaultSettings_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ENUM_SunPosition_structs.hpp"
+#include "Engine_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
-#include "Engine_structs.hpp"
-#include "ENUM_SunPosition_structs.hpp"
-#include "STRUCT_PostProcessDefaultSettings_structs.hpp"
+#include "E_Weather_RainCondition_structs.hpp"
+#include "E_Weather_WindCondition_structs.hpp"
+#include "E_Weather_SnowCondition_structs.hpp"
+#include "E_Weather_FogCondition_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C
-// 0x0280 (0x0F40 - 0x0CC0)
+// 0x0318 (0x0FE0 - 0x0CC8)
 class ABP_VerraWorld_GlobalSky_C final : public AIntrepidSkyBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UChildActorComponent*                   BP_GrassForceCapture;                              // 0x0CC8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   WindSource;                                        // 0x0CD0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_LandscapeSampler;                               // 0x0CD8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_SampleLandscape;                                // 0x0CE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   BP_BiomeManager_V2;                                // 0x0CE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   BP_GlobalAtmosphere_V2;                            // 0x0CF0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   BP_AudioManager;                                   // 0x0CF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   BP_ConstellationManager;                           // 0x0D00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   BP_WeatherManager;                                 // 0x0D08(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_CalculateWind;                                  // 0x0D10(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  Post_Process___DayTime;                            // 0x0D18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        NEW_Intrepid_Sky_Components;                       // 0x0D20(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBillboardComponent*                    Billboard_Icon;                                    // 0x0D28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0D30(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class APlayerCharacter*                       Local_Player_Old;                                  // 0x0D38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_LocalFX_C*                          Local_FX_Actor_Old;                                // 0x0D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UWindDirectionalSourceComponent*        WindDirectional_Component;                         // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class ABP_WeatherEvent_C*>             Weather_Actors_Old;                                // 0x0D50(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class ABP_WaterInfoRenderer_C*                WaterInfoRendererRef_Old;                          // 0x0D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	class ABP_BiomeManager_C*                     As_BP_Biome_Manager_Old;                           // 0x0D68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_GlobalAtmospherics_C*               As_BP_Global_Atmospherics_Old;                     // 0x0D70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_WeatherManager_C*                   As_BP_Weather_Manager_Old;                         // 0x0D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_ConstellationManager_C*             As_BP_Constellation_Manager_Old;                   // 0x0D80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_AudioManager_C*                     BP_Audio_Manager_Old;                              // 0x0D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AGlobalAtmosphere*                      As_Global_Atmosphere_V2_Old;                       // 0x0D90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	ENUM_SunPosition                              SunAltitudePhase_Old;                              // 0x0D98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D99[0x7];                                      // 0x0D99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              Sun_Altitude_Phase_Change;                         // 0x0DA0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class ABiomeManager*                          As_BP_Biome_Manager_V2_Old;                        // 0x0DB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              Lighting_Strike;                                   // 0x0DB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UBPDA_PostProcessSettings_C*            DA_PostProcess_Old;                                // 0x0DC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(const struct FAtmoBlendSettings& Blend_Settings, int32 Override_Volmume_Hash)> Send_Override_Blend_Data;                          // 0x0DD0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(int32 Hash_Name, double Current_Transition)> Send_Current_Transition;                           // 0x0DE0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(int32 Hash_Name)> Remove_Override_Blend_Data;                        // 0x0DF0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UMaterialInterface*                     PPV_Biome_LUT_Material;                            // 0x0E00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               Biome_PPV_MID;                                     // 0x0E08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<EBiomeType, struct FSTRUCT_PostProcessDefaultSettings> Biome_Post_Process_Defaults;                       // 0x0E10(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<int32, class UMaterialInstanceDynamic*>  PPV_MIDs;                                          // 0x0E60(0x0050)(Edit, BlueprintVisible)
-	class UVolumeTexture*                         PreviousLUT;                                       // 0x0EB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UVolumeTexture*                         IncomingLUT;                                       // 0x0EB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<int32, class UTexture*>                  PPV_LUTS;                                          // 0x0EC0(0x0050)(Edit, BlueprintVisible)
-	class UBPDA_BiomePostProcess_C*               BiomePostProcessDA;                                // 0x0F10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               TwoWayPPVLUTMID;                                   // 0x0F18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bOverrideBiome;                                    // 0x0F20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBiomeType                                    Override_Biome;                                    // 0x0F21(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUseNeutral;                                       // 0x0F22(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F23[0x5];                                      // 0x0F23(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAtmoBlendSettings                     NeutralBlend;                                      // 0x0F28(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	class UPostProcessComponent*                  Natural_PPV;                                       // 0x0F38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CC8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UChildActorComponent*                   BP_GrassForceCapture;                              // 0x0CD0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   WindSource;                                        // 0x0CD8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   BP_BiomeManager_V2;                                // 0x0CE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   BP_GlobalAtmosphere_V2;                            // 0x0CE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   BP_AudioManager;                                   // 0x0CF0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   BP_ConstellationManager;                           // 0x0CF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   BP_WeatherManager;                                 // 0x0D00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_CalculateWind;                                  // 0x0D08(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPostProcessComponent*                  Post_Process___DayTime;                            // 0x0D10(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        NEW_Intrepid_Sky_Components;                       // 0x0D18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBillboardComponent*                    Billboard_Icon;                                    // 0x0D20(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0D28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class APlayerCharacter*                       Local_Player_Old;                                  // 0x0D30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_LocalFX_C*                          Local_FX_Actor_Old;                                // 0x0D38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWindDirectionalSourceComponent*        WindDirectional_Component;                         // 0x0D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class ABP_WeatherEvent_C*>             Weather_Actors_Old;                                // 0x0D48(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class ABP_WaterInfoRenderer_C*                WaterInfoRendererRef_Old;                          // 0x0D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	class ABP_BiomeManager_C*                     As_BP_Biome_Manager_Old;                           // 0x0D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_GlobalAtmospherics_C*               As_BP_Global_Atmospherics_Old;                     // 0x0D68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_WeatherManager_C*                   As_BP_Weather_Manager_Old;                         // 0x0D70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_ConstellationManager_C*             As_BP_Constellation_Manager_Old;                   // 0x0D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_AudioManager_C*                     BP_Audio_Manager_Old;                              // 0x0D80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AGlobalAtmosphere*                      As_Global_Atmosphere_V2_Old;                       // 0x0D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	ENUM_SunPosition                              SunAltitudePhase_Old;                              // 0x0D90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D91[0x7];                                      // 0x0D91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              Sun_Altitude_Phase_Change;                         // 0x0D98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class ABiomeManager*                          As_BP_Biome_Manager_V2_Old;                        // 0x0DA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              Lighting_Strike;                                   // 0x0DB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UBPDA_PostProcessSettings_C*            DA_PostProcess_Old;                                // 0x0DC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(const struct FAtmoBlendSettings& Blend_Settings, int32 Override_Volmume_Hash)> Send_Override_Blend_Data; // 0x0DC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(int32 Hash_Name, double Current_Transition)> Send_Current_Transition; // 0x0DD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(int32 Hash_Name)> Remove_Override_Blend_Data;                      // 0x0DE8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UMaterialInterface*                     PPV_Biome_LUT_Material;                            // 0x0DF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               Biome_PPV_MID;                                     // 0x0E00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<EBiomeType, struct FSTRUCT_PostProcessDefaultSettings> Biome_Post_Process_Defaults;         // 0x0E08(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<int32, class UMaterialInstanceDynamic*>  PPV_MIDs;                                          // 0x0E58(0x0050)(Edit, BlueprintVisible)
+	class UVolumeTexture*                         PreviousLUT;                                       // 0x0EA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UVolumeTexture*                         IncomingLUT;                                       // 0x0EB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<int32, class UTexture*>                  PPV_LUTS;                                          // 0x0EB8(0x0050)(Edit, BlueprintVisible)
+	class UBPDA_BiomePostProcess_C*               BiomePostProcessDA;                                // 0x0F08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               TwoWayPPVLUTMID;                                   // 0x0F10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideBiome;                                    // 0x0F18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBiomeType                                    Override_Biome;                                    // 0x0F19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseNeutral;                                       // 0x0F1A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1B[0x5];                                      // 0x0F1B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAtmoBlendSettings                     NeutralBlend;                                      // 0x0F20(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UPostProcessComponent*                  Natural_PPV;                                       // 0x0F30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Dew_Point_Return;                       // 0x0F38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wetness_Return;                                    // 0x0F40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Local_Fog_Return;                                  // 0x0F48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideFog;                                      // 0x0F50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F51[0x7];                                      // 0x0F51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Fog_Amount;                                        // 0x0F58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                NewVar;                                            // 0x0F60(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_RainCondition                       Rain_Condition;                                    // 0x0F78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_WindCondition                       Wind_Condition;                                    // 0x0F79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_HumidityCondition                   Humidity_Condition;                                // 0x0F7A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_SnowCondition                       Snow_Condition;                                    // 0x0F7B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_FogCondition                        Fog_Condition;                                     // 0x0F7C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F7D[0x3];                                      // 0x0F7D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TestFloat;                                         // 0x0F80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Weather_Fluctuation_Speed;                         // 0x0F88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GaussainCore;                                      // 0x0F90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Center;                                            // 0x0F98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WidthScale;                                        // 0x0FA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Peak;                                              // 0x0FA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Start;                                             // 0x0FB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        T;                                                 // 0x0FB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Steepness;                                         // 0x0FC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Exp;                                               // 0x0FC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideWetness;                                  // 0x0FD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FD1[0x7];                                      // 0x0FD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Weather_Frequency_Modifier;                        // 0x0FD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Adjust_Weather(double Custom_Humidity_Max, double Custom_Humidity_Min, double Custom_Precipitation_Amount_Max, double Custom_Precipitation_Amount_Min, double Custom_Temp_Max, double Custom_Temp_Min, double Custom_WindSpeed_Max, double Custom_Wind_Speed_Min, double Custom_Chance_Of_Precip_Max, double Custom_Chance_Of_Precip_Min);
@@ -86,6 +116,7 @@ public:
 	void BiomePPVValidChecks(const struct FSTRUCT_PostProcessDefaultSettings& STRUCT_PostProcessDefaultSettings, const class FString& Biome_Color, float BiomeAmount);
 	void Blend_Current_Atmosphere_With_Biomes();
 	void Blend_Current_Atmosphere_With_Overrides();
+	double BlendCurrentAtmoAndWeather();
 	void Calculate_WInd();
 	void Cast(bool* Cast_Is_Valid);
 	void Clear_Weather_RT();
@@ -95,6 +126,8 @@ public:
 	void Event___Current_Tranistion(int32 Hash_Name, double Current_Transition);
 	void Event___Remove_Blend(int32 Hash_Name);
 	void Event_Set_Biome(bool Set_Biome, EBiomeType Biome);
+	void Event_Set_Fog(double Fog_Amount_0);
+	void EventSetWetness(double Wetness_0);
 	void ExecuteUbergraph_BP_VerraWorld_GlobalSky(int32 EntryPoint);
 	void ExposureComp();
 	void ExtendBPtoDebug();
@@ -116,6 +149,7 @@ public:
 	void Initialize_Global_Atmosphere(bool* Sun_is_in_the_RIght_Spot);
 	void Initialize_PPV();
 	void Initialize_Weather();
+	void LandscapeSamplerUpdate();
 	struct FVector4 Lerp_4Vector(const struct FVector4& in_Vector_A, const struct FVector4& in_Vector_B, double ALPHA);
 	void Lerp_Color_Grade_Per_Range(const struct FColorGradePerRangeSettings& ColorGradePerRangeSettings_A, const struct FColorGradePerRangeSettings& ColorGradePerRangeSettings_B, double ALPHA, struct FColorGradePerRangeSettings* StructOut);
 	void Manage_BP_LocalFX();
@@ -125,11 +159,13 @@ public:
 	void Post_Process_Blend_Day_Night(double ALPHA, double* Output_Get);
 	float PostProcessBlendDayNightNative(float ALPHA);
 	void PreThrottleTick();
+	void Random_Weather_Flucuations___Test_Deletemelater(double In_Float, double In_Time_of_Year_in_hours, double* Post_Noise);
 	void ReceiveBeginPlay();
 	void ReceiveParticleData(const TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, const struct FVector& SimulationPositionOffset);
 	void ReceiveTick(float DeltaSeconds);
 	void Refresh();
 	void Register_InfoWaterRender(class ABP_WaterInfoRenderer_C* Ref);
+	double S_Curve(double In);
 	void Set_Final_Outputs(double Current_Temp, double Precipitation_Amount, double Normalized_Temperature, double Final_Humidity);
 	void SetAudioInEditor(bool bIsEnabled);
 	void SetChanceOfRain(float ChanceOfPrecipitation);
@@ -145,9 +181,10 @@ public:
 	void SetWindSpeed(float WindSpeed);
 	void SpawnLightning();
 	void Sun_Positions_Function();
-	void TEST_LightningRT();
+	void TEST_Lightning();
 	void Toggle_Volumetric_Clouds_2();
 	void ToggleVolumetricClouds();
+	void Update_Atmo_Based_On_Weather();
 	void Update_Audio();
 	struct FVerraGlobalSkyVolumetricCloudSettings Update_Cloud_Blend(float ALPHA, double* ReturnValue1);
 	void Update_Global_Atmosphere_Settings();
@@ -172,55 +209,76 @@ public:
 	}
 };
 static_assert(alignof(ABP_VerraWorld_GlobalSky_C) == 0x000008, "Wrong alignment on ABP_VerraWorld_GlobalSky_C");
-static_assert(sizeof(ABP_VerraWorld_GlobalSky_C) == 0x000F40, "Wrong size on ABP_VerraWorld_GlobalSky_C");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, UberGraphFrame) == 0x000CC0, "Member 'ABP_VerraWorld_GlobalSky_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_GrassForceCapture) == 0x000CC8, "Member 'ABP_VerraWorld_GlobalSky_C::BP_GrassForceCapture' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, WindSource) == 0x000CD0, "Member 'ABP_VerraWorld_GlobalSky_C::WindSource' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, NS_LandscapeSampler) == 0x000CD8, "Member 'ABP_VerraWorld_GlobalSky_C::NS_LandscapeSampler' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, NS_SampleLandscape) == 0x000CE0, "Member 'ABP_VerraWorld_GlobalSky_C::NS_SampleLandscape' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_BiomeManager_V2) == 0x000CE8, "Member 'ABP_VerraWorld_GlobalSky_C::BP_BiomeManager_V2' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_GlobalAtmosphere_V2) == 0x000CF0, "Member 'ABP_VerraWorld_GlobalSky_C::BP_GlobalAtmosphere_V2' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_AudioManager) == 0x000CF8, "Member 'ABP_VerraWorld_GlobalSky_C::BP_AudioManager' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_ConstellationManager) == 0x000D00, "Member 'ABP_VerraWorld_GlobalSky_C::BP_ConstellationManager' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_WeatherManager) == 0x000D08, "Member 'ABP_VerraWorld_GlobalSky_C::BP_WeatherManager' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, NS_CalculateWind) == 0x000D10, "Member 'ABP_VerraWorld_GlobalSky_C::NS_CalculateWind' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Post_Process___DayTime) == 0x000D18, "Member 'ABP_VerraWorld_GlobalSky_C::Post_Process___DayTime' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, NEW_Intrepid_Sky_Components) == 0x000D20, "Member 'ABP_VerraWorld_GlobalSky_C::NEW_Intrepid_Sky_Components' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Billboard_Icon) == 0x000D28, "Member 'ABP_VerraWorld_GlobalSky_C::Billboard_Icon' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, DefaultSceneRoot) == 0x000D30, "Member 'ABP_VerraWorld_GlobalSky_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Local_Player_Old) == 0x000D38, "Member 'ABP_VerraWorld_GlobalSky_C::Local_Player_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Local_FX_Actor_Old) == 0x000D40, "Member 'ABP_VerraWorld_GlobalSky_C::Local_FX_Actor_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, WindDirectional_Component) == 0x000D48, "Member 'ABP_VerraWorld_GlobalSky_C::WindDirectional_Component' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Weather_Actors_Old) == 0x000D50, "Member 'ABP_VerraWorld_GlobalSky_C::Weather_Actors_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, WaterInfoRendererRef_Old) == 0x000D60, "Member 'ABP_VerraWorld_GlobalSky_C::WaterInfoRendererRef_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_BP_Biome_Manager_Old) == 0x000D68, "Member 'ABP_VerraWorld_GlobalSky_C::As_BP_Biome_Manager_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_BP_Global_Atmospherics_Old) == 0x000D70, "Member 'ABP_VerraWorld_GlobalSky_C::As_BP_Global_Atmospherics_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_BP_Weather_Manager_Old) == 0x000D78, "Member 'ABP_VerraWorld_GlobalSky_C::As_BP_Weather_Manager_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_BP_Constellation_Manager_Old) == 0x000D80, "Member 'ABP_VerraWorld_GlobalSky_C::As_BP_Constellation_Manager_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_Audio_Manager_Old) == 0x000D88, "Member 'ABP_VerraWorld_GlobalSky_C::BP_Audio_Manager_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_Global_Atmosphere_V2_Old) == 0x000D90, "Member 'ABP_VerraWorld_GlobalSky_C::As_Global_Atmosphere_V2_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, SunAltitudePhase_Old) == 0x000D98, "Member 'ABP_VerraWorld_GlobalSky_C::SunAltitudePhase_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Sun_Altitude_Phase_Change) == 0x000DA0, "Member 'ABP_VerraWorld_GlobalSky_C::Sun_Altitude_Phase_Change' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_BP_Biome_Manager_V2_Old) == 0x000DB0, "Member 'ABP_VerraWorld_GlobalSky_C::As_BP_Biome_Manager_V2_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Lighting_Strike) == 0x000DB8, "Member 'ABP_VerraWorld_GlobalSky_C::Lighting_Strike' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, DA_PostProcess_Old) == 0x000DC8, "Member 'ABP_VerraWorld_GlobalSky_C::DA_PostProcess_Old' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Send_Override_Blend_Data) == 0x000DD0, "Member 'ABP_VerraWorld_GlobalSky_C::Send_Override_Blend_Data' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Send_Current_Transition) == 0x000DE0, "Member 'ABP_VerraWorld_GlobalSky_C::Send_Current_Transition' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Remove_Override_Blend_Data) == 0x000DF0, "Member 'ABP_VerraWorld_GlobalSky_C::Remove_Override_Blend_Data' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, PPV_Biome_LUT_Material) == 0x000E00, "Member 'ABP_VerraWorld_GlobalSky_C::PPV_Biome_LUT_Material' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Biome_PPV_MID) == 0x000E08, "Member 'ABP_VerraWorld_GlobalSky_C::Biome_PPV_MID' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Biome_Post_Process_Defaults) == 0x000E10, "Member 'ABP_VerraWorld_GlobalSky_C::Biome_Post_Process_Defaults' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, PPV_MIDs) == 0x000E60, "Member 'ABP_VerraWorld_GlobalSky_C::PPV_MIDs' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, PreviousLUT) == 0x000EB0, "Member 'ABP_VerraWorld_GlobalSky_C::PreviousLUT' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, IncomingLUT) == 0x000EB8, "Member 'ABP_VerraWorld_GlobalSky_C::IncomingLUT' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, PPV_LUTS) == 0x000EC0, "Member 'ABP_VerraWorld_GlobalSky_C::PPV_LUTS' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BiomePostProcessDA) == 0x000F10, "Member 'ABP_VerraWorld_GlobalSky_C::BiomePostProcessDA' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, TwoWayPPVLUTMID) == 0x000F18, "Member 'ABP_VerraWorld_GlobalSky_C::TwoWayPPVLUTMID' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, bOverrideBiome) == 0x000F20, "Member 'ABP_VerraWorld_GlobalSky_C::bOverrideBiome' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Override_Biome) == 0x000F21, "Member 'ABP_VerraWorld_GlobalSky_C::Override_Biome' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, bUseNeutral) == 0x000F22, "Member 'ABP_VerraWorld_GlobalSky_C::bUseNeutral' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, NeutralBlend) == 0x000F28, "Member 'ABP_VerraWorld_GlobalSky_C::NeutralBlend' has a wrong offset!");
-static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Natural_PPV) == 0x000F38, "Member 'ABP_VerraWorld_GlobalSky_C::Natural_PPV' has a wrong offset!");
+static_assert(sizeof(ABP_VerraWorld_GlobalSky_C) == 0x000FE0, "Wrong size on ABP_VerraWorld_GlobalSky_C");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, UberGraphFrame) == 0x000CC8, "Member 'ABP_VerraWorld_GlobalSky_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_GrassForceCapture) == 0x000CD0, "Member 'ABP_VerraWorld_GlobalSky_C::BP_GrassForceCapture' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, WindSource) == 0x000CD8, "Member 'ABP_VerraWorld_GlobalSky_C::WindSource' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_BiomeManager_V2) == 0x000CE0, "Member 'ABP_VerraWorld_GlobalSky_C::BP_BiomeManager_V2' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_GlobalAtmosphere_V2) == 0x000CE8, "Member 'ABP_VerraWorld_GlobalSky_C::BP_GlobalAtmosphere_V2' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_AudioManager) == 0x000CF0, "Member 'ABP_VerraWorld_GlobalSky_C::BP_AudioManager' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_ConstellationManager) == 0x000CF8, "Member 'ABP_VerraWorld_GlobalSky_C::BP_ConstellationManager' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_WeatherManager) == 0x000D00, "Member 'ABP_VerraWorld_GlobalSky_C::BP_WeatherManager' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, NS_CalculateWind) == 0x000D08, "Member 'ABP_VerraWorld_GlobalSky_C::NS_CalculateWind' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Post_Process___DayTime) == 0x000D10, "Member 'ABP_VerraWorld_GlobalSky_C::Post_Process___DayTime' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, NEW_Intrepid_Sky_Components) == 0x000D18, "Member 'ABP_VerraWorld_GlobalSky_C::NEW_Intrepid_Sky_Components' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Billboard_Icon) == 0x000D20, "Member 'ABP_VerraWorld_GlobalSky_C::Billboard_Icon' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, DefaultSceneRoot) == 0x000D28, "Member 'ABP_VerraWorld_GlobalSky_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Local_Player_Old) == 0x000D30, "Member 'ABP_VerraWorld_GlobalSky_C::Local_Player_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Local_FX_Actor_Old) == 0x000D38, "Member 'ABP_VerraWorld_GlobalSky_C::Local_FX_Actor_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, WindDirectional_Component) == 0x000D40, "Member 'ABP_VerraWorld_GlobalSky_C::WindDirectional_Component' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Weather_Actors_Old) == 0x000D48, "Member 'ABP_VerraWorld_GlobalSky_C::Weather_Actors_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, WaterInfoRendererRef_Old) == 0x000D58, "Member 'ABP_VerraWorld_GlobalSky_C::WaterInfoRendererRef_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_BP_Biome_Manager_Old) == 0x000D60, "Member 'ABP_VerraWorld_GlobalSky_C::As_BP_Biome_Manager_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_BP_Global_Atmospherics_Old) == 0x000D68, "Member 'ABP_VerraWorld_GlobalSky_C::As_BP_Global_Atmospherics_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_BP_Weather_Manager_Old) == 0x000D70, "Member 'ABP_VerraWorld_GlobalSky_C::As_BP_Weather_Manager_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_BP_Constellation_Manager_Old) == 0x000D78, "Member 'ABP_VerraWorld_GlobalSky_C::As_BP_Constellation_Manager_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BP_Audio_Manager_Old) == 0x000D80, "Member 'ABP_VerraWorld_GlobalSky_C::BP_Audio_Manager_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_Global_Atmosphere_V2_Old) == 0x000D88, "Member 'ABP_VerraWorld_GlobalSky_C::As_Global_Atmosphere_V2_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, SunAltitudePhase_Old) == 0x000D90, "Member 'ABP_VerraWorld_GlobalSky_C::SunAltitudePhase_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Sun_Altitude_Phase_Change) == 0x000D98, "Member 'ABP_VerraWorld_GlobalSky_C::Sun_Altitude_Phase_Change' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, As_BP_Biome_Manager_V2_Old) == 0x000DA8, "Member 'ABP_VerraWorld_GlobalSky_C::As_BP_Biome_Manager_V2_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Lighting_Strike) == 0x000DB0, "Member 'ABP_VerraWorld_GlobalSky_C::Lighting_Strike' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, DA_PostProcess_Old) == 0x000DC0, "Member 'ABP_VerraWorld_GlobalSky_C::DA_PostProcess_Old' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Send_Override_Blend_Data) == 0x000DC8, "Member 'ABP_VerraWorld_GlobalSky_C::Send_Override_Blend_Data' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Send_Current_Transition) == 0x000DD8, "Member 'ABP_VerraWorld_GlobalSky_C::Send_Current_Transition' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Remove_Override_Blend_Data) == 0x000DE8, "Member 'ABP_VerraWorld_GlobalSky_C::Remove_Override_Blend_Data' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, PPV_Biome_LUT_Material) == 0x000DF8, "Member 'ABP_VerraWorld_GlobalSky_C::PPV_Biome_LUT_Material' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Biome_PPV_MID) == 0x000E00, "Member 'ABP_VerraWorld_GlobalSky_C::Biome_PPV_MID' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Biome_Post_Process_Defaults) == 0x000E08, "Member 'ABP_VerraWorld_GlobalSky_C::Biome_Post_Process_Defaults' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, PPV_MIDs) == 0x000E58, "Member 'ABP_VerraWorld_GlobalSky_C::PPV_MIDs' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, PreviousLUT) == 0x000EA8, "Member 'ABP_VerraWorld_GlobalSky_C::PreviousLUT' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, IncomingLUT) == 0x000EB0, "Member 'ABP_VerraWorld_GlobalSky_C::IncomingLUT' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, PPV_LUTS) == 0x000EB8, "Member 'ABP_VerraWorld_GlobalSky_C::PPV_LUTS' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, BiomePostProcessDA) == 0x000F08, "Member 'ABP_VerraWorld_GlobalSky_C::BiomePostProcessDA' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, TwoWayPPVLUTMID) == 0x000F10, "Member 'ABP_VerraWorld_GlobalSky_C::TwoWayPPVLUTMID' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, bOverrideBiome) == 0x000F18, "Member 'ABP_VerraWorld_GlobalSky_C::bOverrideBiome' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Override_Biome) == 0x000F19, "Member 'ABP_VerraWorld_GlobalSky_C::Override_Biome' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, bUseNeutral) == 0x000F1A, "Member 'ABP_VerraWorld_GlobalSky_C::bUseNeutral' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, NeutralBlend) == 0x000F20, "Member 'ABP_VerraWorld_GlobalSky_C::NeutralBlend' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Natural_PPV) == 0x000F30, "Member 'ABP_VerraWorld_GlobalSky_C::Natural_PPV' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Normalized_Dew_Point_Return) == 0x000F38, "Member 'ABP_VerraWorld_GlobalSky_C::Normalized_Dew_Point_Return' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Wetness_Return) == 0x000F40, "Member 'ABP_VerraWorld_GlobalSky_C::Wetness_Return' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Local_Fog_Return) == 0x000F48, "Member 'ABP_VerraWorld_GlobalSky_C::Local_Fog_Return' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, bOverrideFog) == 0x000F50, "Member 'ABP_VerraWorld_GlobalSky_C::bOverrideFog' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Fog_Amount) == 0x000F58, "Member 'ABP_VerraWorld_GlobalSky_C::Fog_Amount' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, NewVar) == 0x000F60, "Member 'ABP_VerraWorld_GlobalSky_C::NewVar' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Rain_Condition) == 0x000F78, "Member 'ABP_VerraWorld_GlobalSky_C::Rain_Condition' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Wind_Condition) == 0x000F79, "Member 'ABP_VerraWorld_GlobalSky_C::Wind_Condition' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Humidity_Condition) == 0x000F7A, "Member 'ABP_VerraWorld_GlobalSky_C::Humidity_Condition' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Snow_Condition) == 0x000F7B, "Member 'ABP_VerraWorld_GlobalSky_C::Snow_Condition' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Fog_Condition) == 0x000F7C, "Member 'ABP_VerraWorld_GlobalSky_C::Fog_Condition' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, TestFloat) == 0x000F80, "Member 'ABP_VerraWorld_GlobalSky_C::TestFloat' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Weather_Fluctuation_Speed) == 0x000F88, "Member 'ABP_VerraWorld_GlobalSky_C::Weather_Fluctuation_Speed' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, GaussainCore) == 0x000F90, "Member 'ABP_VerraWorld_GlobalSky_C::GaussainCore' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Center) == 0x000F98, "Member 'ABP_VerraWorld_GlobalSky_C::Center' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, WidthScale) == 0x000FA0, "Member 'ABP_VerraWorld_GlobalSky_C::WidthScale' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Peak) == 0x000FA8, "Member 'ABP_VerraWorld_GlobalSky_C::Peak' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Start) == 0x000FB0, "Member 'ABP_VerraWorld_GlobalSky_C::Start' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, T) == 0x000FB8, "Member 'ABP_VerraWorld_GlobalSky_C::T' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Steepness) == 0x000FC0, "Member 'ABP_VerraWorld_GlobalSky_C::Steepness' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Exp) == 0x000FC8, "Member 'ABP_VerraWorld_GlobalSky_C::Exp' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, bOverrideWetness) == 0x000FD0, "Member 'ABP_VerraWorld_GlobalSky_C::bOverrideWetness' has a wrong offset!");
+static_assert(offsetof(ABP_VerraWorld_GlobalSky_C, Weather_Frequency_Modifier) == 0x000FD8, "Member 'ABP_VerraWorld_GlobalSky_C::Weather_Frequency_Modifier' has a wrong offset!");
 
 }
 

@@ -16,16 +16,18 @@
 namespace SDK::Params
 {
 
-// Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature final
+// Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_PlayerHousingDebugUI_C_Tick final
 {
 public:
-	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature) == 0x000008, "Wrong alignment on WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature");
-static_assert(sizeof(WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature) == 0x000008, "Wrong size on WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature");
-static_assert(offsetof(WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature, Item) == 0x000000, "Member 'WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature::Item' has a wrong offset!");
+static_assert(alignof(WBP_PlayerHousingDebugUI_C_Tick) == 0x000004, "Wrong alignment on WBP_PlayerHousingDebugUI_C_Tick");
+static_assert(sizeof(WBP_PlayerHousingDebugUI_C_Tick) == 0x00003C, "Wrong size on WBP_PlayerHousingDebugUI_C_Tick");
+static_assert(offsetof(WBP_PlayerHousingDebugUI_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_PlayerHousingDebugUI_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_PlayerHousingDebugUI_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_PlayerHousingDebugUI_C_Tick::InDeltaTime' has a wrong offset!");
 
 // Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.ExecuteUbergraph_WBP_PlayerHousingDebugUI
 // 0x0048 (0x0048 - 0x0000)
@@ -44,18 +46,16 @@ static_assert(offsetof(WBP_PlayerHousingDebugUI_C_ExecuteUbergraph_WBP_PlayerHou
 static_assert(offsetof(WBP_PlayerHousingDebugUI_C_ExecuteUbergraph_WBP_PlayerHousingDebugUI, K2Node_Event_InDeltaTime) == 0x00003C, "Member 'WBP_PlayerHousingDebugUI_C_ExecuteUbergraph_WBP_PlayerHousingDebugUI::K2Node_Event_InDeltaTime' has a wrong offset!");
 static_assert(offsetof(WBP_PlayerHousingDebugUI_C_ExecuteUbergraph_WBP_PlayerHousingDebugUI, K2Node_ComponentBoundEvent_Item) == 0x000040, "Member 'WBP_PlayerHousingDebugUI_C_ExecuteUbergraph_WBP_PlayerHousingDebugUI::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
 
-// Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_PlayerHousingDebugUI_C_Tick final
+// Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_PlayerHousingDebugUI_C_Tick) == 0x000004, "Wrong alignment on WBP_PlayerHousingDebugUI_C_Tick");
-static_assert(sizeof(WBP_PlayerHousingDebugUI_C_Tick) == 0x00003C, "Wrong size on WBP_PlayerHousingDebugUI_C_Tick");
-static_assert(offsetof(WBP_PlayerHousingDebugUI_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_PlayerHousingDebugUI_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(WBP_PlayerHousingDebugUI_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_PlayerHousingDebugUI_C_Tick::InDeltaTime' has a wrong offset!");
+static_assert(alignof(WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature) == 0x000008, "Wrong alignment on WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature");
+static_assert(sizeof(WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature) == 0x000008, "Wrong size on WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature");
+static_assert(offsetof(WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature, Item) == 0x000000, "Member 'WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature::Item' has a wrong offset!");
 
 }
 

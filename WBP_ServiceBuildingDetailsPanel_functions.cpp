@@ -17,8 +17,28 @@
 namespace SDK
 {
 
+// Function WBP_ServiceBuildingDetailsPanel.WBP_ServiceBuildingDetailsPanel_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ServiceBuildingDetailsPanel_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ServiceBuildingDetailsPanel_C", "PreConstruct");
+
+	Params::WBP_ServiceBuildingDetailsPanel_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ServiceBuildingDetailsPanel.WBP_ServiceBuildingDetailsPanel_C.ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -32,28 +52,6 @@ void UWBP_ServiceBuildingDetailsPanel_C::ExecuteUbergraph_WBP_ServiceBuildingDet
 	Params::WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ServiceBuildingDetailsPanel.WBP_ServiceBuildingDetailsPanel_C.SetSectionLabelBP
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// class UUserWidget*                      SectionWidget                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const class FText&                      SectionLabel                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_ServiceBuildingDetailsPanel_C::SetSectionLabelBP(class UUserWidget* SectionWidget, const class FText& SectionLabel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ServiceBuildingDetailsPanel_C", "SetSectionLabelBP");
-
-	Params::WBP_ServiceBuildingDetailsPanel_C_SetSectionLabelBP Parms{};
-
-	Parms.SectionWidget = SectionWidget;
-	Parms.SectionLabel = std::move(SectionLabel);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

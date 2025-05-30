@@ -17,18 +17,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CommissionBoard.WBP_CommissionBoard_C
-// 0x0040 (0x0430 - 0x03F0)
+// 0x0040 (0x0448 - 0x0408)
 class UWBP_CommissionBoard_C final : public UCommissionBoardMaster
 {
 public:
-	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard;                          // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_1;                        // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_2;                        // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_3;                        // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_4;                        // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_5;                        // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_6;                        // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_7;                        // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard;                          // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_1;                        // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_2;                        // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_3;                        // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_4;                        // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_5;                        // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_6;                        // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActiveCommissionCard_C*            WBP_ActiveCommissionCard_7;                        // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -41,15 +41,15 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CommissionBoard_C) == 0x000008, "Wrong alignment on UWBP_CommissionBoard_C");
-static_assert(sizeof(UWBP_CommissionBoard_C) == 0x000430, "Wrong size on UWBP_CommissionBoard_C");
-static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard) == 0x0003F0, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard' has a wrong offset!");
-static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_1) == 0x0003F8, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_1' has a wrong offset!");
-static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_2) == 0x000400, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_2' has a wrong offset!");
-static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_3) == 0x000408, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_3' has a wrong offset!");
-static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_4) == 0x000410, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_4' has a wrong offset!");
-static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_5) == 0x000418, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_5' has a wrong offset!");
-static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_6) == 0x000420, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_6' has a wrong offset!");
-static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_7) == 0x000428, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_7' has a wrong offset!");
+static_assert(sizeof(UWBP_CommissionBoard_C) == 0x000448, "Wrong size on UWBP_CommissionBoard_C");
+static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard) == 0x000408, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard' has a wrong offset!");
+static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_1) == 0x000410, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_1' has a wrong offset!");
+static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_2) == 0x000418, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_2' has a wrong offset!");
+static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_3) == 0x000420, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_3' has a wrong offset!");
+static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_4) == 0x000428, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_4' has a wrong offset!");
+static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_5) == 0x000430, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_5' has a wrong offset!");
+static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_6) == 0x000438, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_6' has a wrong offset!");
+static_assert(offsetof(UWBP_CommissionBoard_C, WBP_ActiveCommissionCard_7) == 0x000440, "Member 'UWBP_CommissionBoard_C::WBP_ActiveCommissionCard_7' has a wrong offset!");
 
 }
 

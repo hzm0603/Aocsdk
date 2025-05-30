@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "STT_Base_classes.hpp"
-#include "Engine_structs.hpp"
 #include "EElderDragon_Fire_AirBehaviorStrategy_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK

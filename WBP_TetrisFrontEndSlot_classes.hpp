@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TetrisFrontEndSlot.WBP_TetrisFrontEndSlot_C
-// 0x0000 (0x04E8 - 0x04E8)
+// 0x0000 (0x0520 - 0x0520)
 class UWBP_TetrisFrontEndSlot_C final : public UTetrisFrontEndSlot
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TetrisFrontEndSlot_C) == 0x000008, "Wrong alignment on UWBP_TetrisFrontEndSlot_C");
-static_assert(sizeof(UWBP_TetrisFrontEndSlot_C) == 0x0004E8, "Wrong size on UWBP_TetrisFrontEndSlot_C");
+static_assert(sizeof(UWBP_TetrisFrontEndSlot_C) == 0x000520, "Wrong size on UWBP_TetrisFrontEndSlot_C");
 
 }
 

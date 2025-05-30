@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Class AppleImageUtils.AppleImageInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IAppleImageInterface final : public IInterface
 {
 public:
@@ -31,8 +31,8 @@ public:
 		return GetDefaultObjImpl<IAppleImageInterface>();
 	}
 };
-static_assert(alignof(IAppleImageInterface) == 0x000008, "Wrong alignment on IAppleImageInterface");
-static_assert(sizeof(IAppleImageInterface) == 0x000048, "Wrong size on IAppleImageInterface");
+static_assert(alignof(IAppleImageInterface) == 0x000001, "Wrong alignment on IAppleImageInterface");
+static_assert(sizeof(IAppleImageInterface) == 0x000001, "Wrong size on IAppleImageInterface");
 
 // Class AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy
 // 0x0060 (0x00A8 - 0x0048)
@@ -40,8 +40,8 @@ class UAppleImageUtilsBaseAsyncTaskBlueprintProxy final : public UObject
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(struct FAppleImageUtilsImageConversionResult& ConversionResult)> OnSuccess;                                         // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FAppleImageUtilsImageConversionResult& ConversionResult)> OnFailure;                                         // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FAppleImageUtilsImageConversionResult& ConversionResult)> OnSuccess; // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FAppleImageUtilsImageConversionResult& ConversionResult)> OnFailure; // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAppleImageUtilsImageConversionResult  ConversionResult;                                  // 0x0080(0x0020)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])

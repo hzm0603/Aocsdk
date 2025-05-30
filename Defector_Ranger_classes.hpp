@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Defector_Ranger.Defector_Ranger_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ADefector_Ranger_C final : public ABandit_Archer_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ADefector_Ranger_C) == 0x000010, "Wrong alignment on ADefector_Ranger_C");
-static_assert(sizeof(ADefector_Ranger_C) == 0x001DB0, "Wrong size on ADefector_Ranger_C");
+static_assert(sizeof(ADefector_Ranger_C) == 0x001D70, "Wrong size on ADefector_Ranger_C");
 
 }
 

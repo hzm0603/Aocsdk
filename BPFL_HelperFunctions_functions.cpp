@@ -17,12 +17,38 @@
 namespace SDK
 {
 
+// Function BPFL_HelperFunctions.BPFL_HelperFunctions_C.ColorTempToRGB
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Temp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Return_Color                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_HelperFunctions_C::ColorTempToRGB(double Temp, class UObject* __WorldContext, struct FLinearColor* Return_Color)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_HelperFunctions_C", "ColorTempToRGB");
+
+	Params::BPFL_HelperFunctions_C_ColorTempToRGB Parms{};
+
+	Parms.Temp = Temp;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Return_Color != nullptr)
+		*Return_Color = std::move(Parms.Return_Color);
+}
+
+
 // Function BPFL_HelperFunctions.BPFL_HelperFunctions_C.Get Biome From Location
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D                        Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// EBiomeType                              Biome                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomeType*                             Biome                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UBPFL_HelperFunctions_C::Get_Biome_From_Location(const struct FVector2D& Location, class UObject* __WorldContext, EBiomeType* Biome)
 {
@@ -46,9 +72,9 @@ void UBPFL_HelperFunctions_C::Get_Biome_From_Location(const struct FVector2D& Lo
 // Function BPFL_HelperFunctions.BPFL_HelperFunctions_C.Get Zone From Location
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D                        Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// EZone                                   Zone                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EZone*                                  Zone                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UBPFL_HelperFunctions_C::Get_Zone_From_Location(const struct FVector2D& Location, class UObject* __WorldContext, EZone* Zone)
 {
@@ -73,7 +99,7 @@ void UBPFL_HelperFunctions_C::Get_Zone_From_Location(const struct FVector2D& Loc
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AIntrepidSkyBase*                 IntrepidSky                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AIntrepidSkyBase**                IntrepidSky                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void UBPFL_HelperFunctions_C::GetIntrepidSkyInstance(class UObject* __WorldContext, class AIntrepidSkyBase** IntrepidSky)
 {
@@ -97,7 +123,7 @@ void UBPFL_HelperFunctions_C::GetIntrepidSkyInstance(class UObject* __WorldConte
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AIntrepidSkyBase*                 VerraGlobalSky                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AIntrepidSkyBase**                VerraGlobalSky                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void UBPFL_HelperFunctions_C::GetVerraGlobalSkyInstance(class UObject* __WorldContext, class AIntrepidSkyBase** VerraGlobalSky)
 {
@@ -122,7 +148,7 @@ void UBPFL_HelperFunctions_C::GetVerraGlobalSkyInstance(class UObject* __WorldCo
 // Parameters:
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Local_Player                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Local_Player                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UBPFL_HelperFunctions_C::IsLocalPlayer(class AActor* Actor, class UObject* __WorldContext, bool* Local_Player)
 {
@@ -146,16 +172,16 @@ void UBPFL_HelperFunctions_C::IsLocalPlayer(class AActor* Actor, class UObject* 
 // Function BPFL_HelperFunctions.BPFL_HelperFunctions_C.Get Biomes From Location
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D                        Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// EBiomeType                              Red_Category_Name                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// uint8                                   Red_Category_Amount                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBiomeType                              Green_Category_Name                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// uint8                                   Green_Category_Amount                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBiomeType                              Blue_Category_Name                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// uint8                                   Blue_Category_Amount                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBiomeType                              Alpha_Category_Name                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// uint8                                   Alpha_Category_Amount                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomeType*                             Red_Category_Name                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8*                                  Red_Category_Amount                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomeType*                             Green_Category_Name                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8*                                  Green_Category_Amount                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomeType*                             Blue_Category_Name                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8*                                  Blue_Category_Amount                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBiomeType*                             Alpha_Category_Name                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8*                                  Alpha_Category_Amount                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UBPFL_HelperFunctions_C::Get_Biomes_From_Location(const struct FVector2D& Location, class UObject* __WorldContext, EBiomeType* Red_Category_Name, uint8* Red_Category_Amount, EBiomeType* Green_Category_Name, uint8* Green_Category_Amount, EBiomeType* Blue_Category_Name, uint8* Blue_Category_Amount, EBiomeType* Alpha_Category_Name, uint8* Alpha_Category_Amount)
 {

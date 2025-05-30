@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass RVR_SPH_Cultist_ST.RVR_SPH_Cultist_ST_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ARVR_SPH_Cultist_ST_C : public ACultist_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ARVR_SPH_Cultist_ST_C) == 0x000010, "Wrong alignment on ARVR_SPH_Cultist_ST_C");
-static_assert(sizeof(ARVR_SPH_Cultist_ST_C) == 0x001DB0, "Wrong size on ARVR_SPH_Cultist_ST_C");
+static_assert(sizeof(ARVR_SPH_Cultist_ST_C) == 0x001D70, "Wrong size on ARVR_SPH_Cultist_ST_C");
 
 }
 

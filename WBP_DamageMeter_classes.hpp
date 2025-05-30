@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ST_DamageMeterHitInfo_structs.hpp"
 #include "ST_DamageMeterData_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ST_DamageMeterBarData_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "ST_DamageMeterBarData_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 
@@ -69,44 +69,44 @@ public:
 	class UWBP_DamageMeterHealthLog_C*            DamageMeterHealthLog;                              // 0x0528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AddDataToMap(struct FST_DamageMeterMapData& Map, double Value, double EffectiveValue, int64 HitGuid, uint8 Flags_0);
-	void AddDataToMaps(struct FST_DamageMeterMapData& Map, TMap<struct FGuid, int32>& indexMap, TArray<struct FST_DamageMeterMapData>& targetArary, const struct FGuid& Target, double Value, double EffectiveValue, int64 HitGuid, uint8 Flags_0);
-	void AddDataToTargetMap(TMap<struct FGuid, int32>& TargetIndexMap, TArray<struct FST_DamageMeterMapData>& TargetMap, const struct FGuid& Target, double Value, double EffectiveValue, int64 HitGuid, uint8 Flags_0);
-	void AddMissToMap(struct FST_DamageMeterMapData& Map, int64 HitGuid);
-	void AddMissToTargetMap(TMap<struct FGuid, int32>& TargetIndexMap, TArray<struct FST_DamageMeterMapData>& TargetMap, const struct FGuid& Target, int64 HitGuid);
-	void BarClicked(int32 Index_0, bool isMain, bool rightMouse);
-	void BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
-	void BndEvt__DamageMeter_DeathLogButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
-	void BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
-	void BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
-	void CalcCombatTime(const struct FGuid& PlayerGuid, double* Time, bool* IsActive);
-	void CalcHitColorName(TArray<struct FGameplayTag>& Tags, class FName* hitName);
-	void Construct();
-	void Destruct();
-	void EnsureCharacterData(class ABaseCharacter* instigatorChar, bool* Success);
-	void ExecuteUbergraph_WBP_DamageMeter(int32 EntryPoint);
-	void FindMinMax(TArray<struct FST_DamageMeterBarData>& BarData_0, double* dataMax, double* dataTotal);
-	void GetAbilityTotals();
-	void GetBarAtIndex(int32 Index_0, TArray<class UWBP_DamageMeterBar_C*>& barList, class UVerticalBox* vertBox, class UWBP_DamageMeterBar_C** bar);
-	void GetInstigatorInfo(class ABaseCharacter* Instigator, struct FLinearColor* Color, ECharacterClass* Class_0);
-	void GetPlayerTotals();
-	void GetTargetTotals();
-	void Handle_Window_Content_Loaded(class UAoCWindow* Window);
-	void InsertExtraBars();
-	void InsertFlagBars(TMap<int64, struct FST_DamageMeterHitData>& Map);
-	void InsertIntoBarData(struct FST_DamageMeterBarData& Data, TArray<struct FST_DamageMeterBarData>& BarData_0, int32* Index_0);
-	void OnAbilityEventBP_Event(const struct FHitInst& HitInst);
-	void OnClicked_Event();
-	void ProcessHit(const struct FHitInst& HitInst);
-	void SetAbilityData(TMap<int64, struct FST_DamageMeterHitData>& Map);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Trim_Bars(TArray<class UWBP_DamageMeterBar_C*>& Bars_0, int32 needed, class UVerticalBox* vertBox);
-	void UpdateBars(double dataMax, double dataTotal, TArray<struct FST_DamageMeterBarData>& BarData_0, TArray<class UWBP_DamageMeterBar_C*>& barList, class UVerticalBox* VerticalBox);
-	void UpdateDPS(TArray<struct FST_DamageMeterBarData>& BarData_0, TArray<class UWBP_DamageMeterBar_C*>& Bars_0, class UVerticalBox* vertBox);
-	void UpdateHoverText();
-	void UpdateMeter();
 	void UpdateTitleText();
+	void UpdateMeter();
+	void UpdateHoverText();
+	void UpdateDPS(TArray<struct FST_DamageMeterBarData>& BarData_0, TArray<class UWBP_DamageMeterBar_C*>& Bars_0, class UVerticalBox* vertBox);
+	void UpdateBars(double dataMax, double dataTotal, TArray<struct FST_DamageMeterBarData>& BarData_0, TArray<class UWBP_DamageMeterBar_C*>& barList, class UVerticalBox* VerticalBox);
+	void Trim_Bars(TArray<class UWBP_DamageMeterBar_C*>& Bars_0, int32 needed, class UVerticalBox* vertBox);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void SetAbilityData(TMap<int64, struct FST_DamageMeterHitData>& Map);
+	void ProcessHit(const struct FHitInst& HitInst);
+	void OnClicked_Event();
+	void OnAbilityEventBP_Event(const struct FHitInst& HitInst);
+	void InsertIntoBarData(struct FST_DamageMeterBarData& Data, TArray<struct FST_DamageMeterBarData>& BarData_0, int32* Index_0);
+	void InsertFlagBars(TMap<int64, struct FST_DamageMeterHitData>& Map);
+	void InsertExtraBars();
+	void Handle_Window_Content_Loaded(class UAoCWindow* Window);
+	void GetTargetTotals();
+	void GetPlayerTotals();
+	void GetInstigatorInfo(class ABaseCharacter* Instigator, struct FLinearColor* Color, ECharacterClass* Class_0);
+	void GetBarAtIndex(int32 Index_0, TArray<class UWBP_DamageMeterBar_C*>& barList, class UVerticalBox* vertBox, class UWBP_DamageMeterBar_C** bar);
+	void GetAbilityTotals();
+	void FindMinMax(TArray<struct FST_DamageMeterBarData>& BarData_0, double* dataMax, double* dataTotal);
+	void ExecuteUbergraph_WBP_DamageMeter(int32 EntryPoint);
+	void EnsureCharacterData(class ABaseCharacter* instigatorChar, bool* Success);
+	void Destruct();
+	void Construct();
+	void CalcHitColorName(TArray<struct FGameplayTag>& Tags, class FName* hitName);
+	void CalcCombatTime(const struct FGuid& PlayerGuid, double* Time, bool* IsActive);
+	void BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
+	void BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
+	void BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
+	void BndEvt__DamageMeter_DeathLogButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
+	void BarClicked(int32 Index_0, bool isMain, bool rightMouse);
+	void AddMissToTargetMap(TMap<struct FGuid, int32>& TargetIndexMap, TArray<struct FST_DamageMeterMapData>& TargetMap, const struct FGuid& Target, int64 HitGuid);
+	void AddMissToMap(struct FST_DamageMeterMapData& Map, int64 HitGuid);
+	void AddDataToTargetMap(TMap<struct FGuid, int32>& TargetIndexMap, TArray<struct FST_DamageMeterMapData>& TargetMap, const struct FGuid& Target, double Value, double EffectiveValue, int64 HitGuid, uint8 Flags_0);
+	void AddDataToMaps(struct FST_DamageMeterMapData& Map, TMap<struct FGuid, int32>& indexMap, TArray<struct FST_DamageMeterMapData>& targetArary, const struct FGuid& Target, double Value, double EffectiveValue, int64 HitGuid, uint8 Flags_0);
+	void AddDataToMap(struct FST_DamageMeterMapData& Map, double Value, double EffectiveValue, int64 HitGuid, uint8 Flags_0);
 
 public:
 	static class UClass* StaticClass()

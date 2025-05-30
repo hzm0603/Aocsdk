@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Healer2.Bandit_Healer2_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ABandit_Healer2_C : public ABandit_Healer_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Healer2_C) == 0x000010, "Wrong alignment on ABandit_Healer2_C");
-static_assert(sizeof(ABandit_Healer2_C) == 0x001DB0, "Wrong size on ABandit_Healer2_C");
+static_assert(sizeof(ABandit_Healer2_C) == 0x001D70, "Wrong size on ABandit_Healer2_C");
 
 }
 

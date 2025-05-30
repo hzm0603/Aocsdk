@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function Ashes_MMO_InvisibleWall.Ashes_MMO_InvisibleWall_C.ExecuteUbergraph_Ashes_MMO_InvisibleWall
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Ashes_MMO_InvisibleWall.Ashes_MMO_InvisibleWall_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void AAshes_MMO_InvisibleWall_C::ExecuteUbergraph_Ashes_MMO_InvisibleWall(int32 EntryPoint)
+void AAshes_MMO_InvisibleWall_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Ashes_MMO_InvisibleWall_C", "ExecuteUbergraph_Ashes_MMO_InvisibleWall");
+		Func = Class->GetFunction("Ashes_MMO_InvisibleWall_C", "UserConstructionScript");
 
-	Params::Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -51,17 +45,23 @@ void AAshes_MMO_InvisibleWall_C::ReceiveBeginPlay()
 }
 
 
-// Function Ashes_MMO_InvisibleWall.Ashes_MMO_InvisibleWall_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Ashes_MMO_InvisibleWall.Ashes_MMO_InvisibleWall_C.ExecuteUbergraph_Ashes_MMO_InvisibleWall
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AAshes_MMO_InvisibleWall_C::UserConstructionScript()
+void AAshes_MMO_InvisibleWall_C::ExecuteUbergraph_Ashes_MMO_InvisibleWall(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Ashes_MMO_InvisibleWall_C", "UserConstructionScript");
+		Func = Class->GetFunction("Ashes_MMO_InvisibleWall_C", "ExecuteUbergraph_Ashes_MMO_InvisibleWall");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Ashes_MMO_InvisibleWall_C_ExecuteUbergraph_Ashes_MMO_InvisibleWall Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

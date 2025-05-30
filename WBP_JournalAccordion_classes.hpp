@@ -29,13 +29,13 @@ public:
 	class UWBP_JournalItem_C*                     WBP_JournalItem_2;                                 // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_JournalAccordion(int32 EntryPoint);
-	class UWidget* GetBreadcrumbWidget();
-	class UPanelWidget* GetButtonContainer();
-	TSubclassOf<class UCommonButtonStyle> GetEvenButtonStyle();
-	TSubclassOf<class UCommonButtonStyle> GetOddButtonStyle();
-	void Set_Chapter_Text(const class FText& Chapter_Text);
 	void Set_Story_Arc_Type_Icon(class UTexture2D* Story_Arc_Type_Icon);
+	void Set_Chapter_Text(const class FText& Chapter_Text);
+	TSubclassOf<class UCommonButtonStyle> GetOddButtonStyle();
+	TSubclassOf<class UCommonButtonStyle> GetEvenButtonStyle();
+	class UPanelWidget* GetButtonContainer();
+	class UWidget* GetBreadcrumbWidget();
+	void ExecuteUbergraph_WBP_JournalAccordion(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

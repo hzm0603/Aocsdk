@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass WeaponCombo_RngWnd_Projectile_Action.WeaponCombo_RngWnd_Projectile_Action_C
-// 0x0018 (0x05C0 - 0x05A8)
+// 0x0018 (0x05C8 - 0x05B0)
 class AWeaponCombo_RngWnd_Projectile_Action_C final : public AWeaponCombo_RngWnd_Projectile_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        Audio_0;                                           // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               ParticleSystem1_0;                                 // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        Audio_0;                                           // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               ParticleSystem1_0;                                 // 0x05C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DeactivateParticleSystems();
@@ -41,10 +41,10 @@ public:
 	}
 };
 static_assert(alignof(AWeaponCombo_RngWnd_Projectile_Action_C) == 0x000008, "Wrong alignment on AWeaponCombo_RngWnd_Projectile_Action_C");
-static_assert(sizeof(AWeaponCombo_RngWnd_Projectile_Action_C) == 0x0005C0, "Wrong size on AWeaponCombo_RngWnd_Projectile_Action_C");
-static_assert(offsetof(AWeaponCombo_RngWnd_Projectile_Action_C, UberGraphFrame) == 0x0005A8, "Member 'AWeaponCombo_RngWnd_Projectile_Action_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngWnd_Projectile_Action_C, Audio_0) == 0x0005B0, "Member 'AWeaponCombo_RngWnd_Projectile_Action_C::Audio_0' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngWnd_Projectile_Action_C, ParticleSystem1_0) == 0x0005B8, "Member 'AWeaponCombo_RngWnd_Projectile_Action_C::ParticleSystem1_0' has a wrong offset!");
+static_assert(sizeof(AWeaponCombo_RngWnd_Projectile_Action_C) == 0x0005C8, "Wrong size on AWeaponCombo_RngWnd_Projectile_Action_C");
+static_assert(offsetof(AWeaponCombo_RngWnd_Projectile_Action_C, UberGraphFrame) == 0x0005B0, "Member 'AWeaponCombo_RngWnd_Projectile_Action_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngWnd_Projectile_Action_C, Audio_0) == 0x0005B8, "Member 'AWeaponCombo_RngWnd_Projectile_Action_C::Audio_0' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngWnd_Projectile_Action_C, ParticleSystem1_0) == 0x0005C0, "Member 'AWeaponCombo_RngWnd_Projectile_Action_C::ParticleSystem1_0' has a wrong offset!");
 
 }
 

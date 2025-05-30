@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "InterchangeCore_classes.hpp"
-#include "CoreUObject_classes.hpp"
 #include "InterchangeNodes_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -320,6 +320,56 @@ public:
 };
 static_assert(alignof(UInterchangeLightNode) == 0x000008, "Wrong alignment on UInterchangeLightNode");
 static_assert(sizeof(UInterchangeLightNode) == 0x0000F0, "Wrong size on UInterchangeLightNode");
+
+// Class InterchangeNodes.InterchangeShaderNode
+// 0x0010 (0x0090 - 0x0080)
+class UInterchangeShaderNode : public UInterchangeBaseNode
+{
+public:
+	uint8                                         Pad_80[0x10];                                      // 0x0080(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomShaderType(const class FString& AttributeValue);
+
+	bool GetCustomShaderType(class FString* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InterchangeShaderNode">();
+	}
+	static class UInterchangeShaderNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeShaderNode>();
+	}
+};
+static_assert(alignof(UInterchangeShaderNode) == 0x000008, "Wrong alignment on UInterchangeShaderNode");
+static_assert(sizeof(UInterchangeShaderNode) == 0x000090, "Wrong size on UInterchangeShaderNode");
+
+// Class InterchangeNodes.InterchangeFunctionCallShaderNode
+// 0x0010 (0x00A0 - 0x0090)
+class UInterchangeFunctionCallShaderNode final : public UInterchangeShaderNode
+{
+public:
+	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomMaterialFunction(const class FString& AttributeValue);
+
+	bool GetCustomMaterialFunction(class FString* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InterchangeFunctionCallShaderNode">();
+	}
+	static class UInterchangeFunctionCallShaderNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeFunctionCallShaderNode>();
+	}
+};
+static_assert(alignof(UInterchangeFunctionCallShaderNode) == 0x000008, "Wrong alignment on UInterchangeFunctionCallShaderNode");
+static_assert(sizeof(UInterchangeFunctionCallShaderNode) == 0x0000A0, "Wrong size on UInterchangeFunctionCallShaderNode");
 
 // Class InterchangeNodes.InterchangePointLightNode
 // 0x0020 (0x0110 - 0x00F0)
@@ -772,56 +822,6 @@ public:
 };
 static_assert(alignof(UInterchangeShaderPortsAPI) == 0x000008, "Wrong alignment on UInterchangeShaderPortsAPI");
 static_assert(sizeof(UInterchangeShaderPortsAPI) == 0x000048, "Wrong size on UInterchangeShaderPortsAPI");
-
-// Class InterchangeNodes.InterchangeShaderNode
-// 0x0010 (0x0090 - 0x0080)
-class UInterchangeShaderNode : public UInterchangeBaseNode
-{
-public:
-	uint8                                         Pad_80[0x10];                                      // 0x0080(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomShaderType(const class FString& AttributeValue);
-
-	bool GetCustomShaderType(class FString* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InterchangeShaderNode">();
-	}
-	static class UInterchangeShaderNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeShaderNode>();
-	}
-};
-static_assert(alignof(UInterchangeShaderNode) == 0x000008, "Wrong alignment on UInterchangeShaderNode");
-static_assert(sizeof(UInterchangeShaderNode) == 0x000090, "Wrong size on UInterchangeShaderNode");
-
-// Class InterchangeNodes.InterchangeFunctionCallShaderNode
-// 0x0010 (0x00A0 - 0x0090)
-class UInterchangeFunctionCallShaderNode final : public UInterchangeShaderNode
-{
-public:
-	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomMaterialFunction(const class FString& AttributeValue);
-
-	bool GetCustomMaterialFunction(class FString* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InterchangeFunctionCallShaderNode">();
-	}
-	static class UInterchangeFunctionCallShaderNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeFunctionCallShaderNode>();
-	}
-};
-static_assert(alignof(UInterchangeFunctionCallShaderNode) == 0x000008, "Wrong alignment on UInterchangeFunctionCallShaderNode");
-static_assert(sizeof(UInterchangeFunctionCallShaderNode) == 0x0000A0, "Wrong size on UInterchangeFunctionCallShaderNode");
 
 // Class InterchangeNodes.InterchangeShaderGraphNode
 // 0x0050 (0x00E0 - 0x0090)

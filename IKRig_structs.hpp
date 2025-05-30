@@ -250,7 +250,7 @@ public:
 	class FName                                   SourceRetargetPoseName;                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyChainSettings;                               // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FTargetChainSettings> ChainSettings;                                     // 0x0020(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FTargetChainSettings> ChainSettings;                                    // 0x0020(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bApplyRootSettings;                                // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTargetRootSettings                    RootSettings;                                      // 0x0078(0x0068)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
@@ -345,6 +345,19 @@ static_assert(offsetof(FAnimNode_IKRig, AlphaScaleBiasClamp) == 0x0000E0, "Membe
 static_assert(offsetof(FAnimNode_IKRig, IKRigProcessor) == 0x000110, "Member 'FAnimNode_IKRig::IKRigProcessor' has a wrong offset!");
 static_assert(offsetof(FAnimNode_IKRig, ActualAlpha) == 0x0001D8, "Member 'FAnimNode_IKRig::ActualAlpha' has a wrong offset!");
 
+// ScriptStruct IKRig.IKRetargetPose
+// 0x0068 (0x0068 - 0x0000)
+struct FIKRetargetPose final
+{
+public:
+	struct FVector                                RootTranslationOffset;                             // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FQuat>               BoneRotationOffsets;                               // 0x0018(0x0050)(Edit, NativeAccessSpecifierPrivate)
+};
+static_assert(alignof(FIKRetargetPose) == 0x000008, "Wrong alignment on FIKRetargetPose");
+static_assert(sizeof(FIKRetargetPose) == 0x000068, "Wrong size on FIKRetargetPose");
+static_assert(offsetof(FIKRetargetPose, RootTranslationOffset) == 0x000000, "Member 'FIKRetargetPose::RootTranslationOffset' has a wrong offset!");
+static_assert(offsetof(FIKRetargetPose, BoneRotationOffsets) == 0x000018, "Member 'FIKRetargetPose::BoneRotationOffsets' has a wrong offset!");
+
 // ScriptStruct IKRig.AnimNode_RetargetPoseFromMesh
 // 0x01C8 (0x01D8 - 0x0010)
 struct FAnimNode_RetargetPoseFromMesh final : public FAnimNode_Base
@@ -383,19 +396,6 @@ static_assert(alignof(FRetargetChainMap) == 0x000004, "Wrong alignment on FRetar
 static_assert(sizeof(FRetargetChainMap) == 0x000010, "Wrong size on FRetargetChainMap");
 static_assert(offsetof(FRetargetChainMap, SourceChain) == 0x000000, "Member 'FRetargetChainMap::SourceChain' has a wrong offset!");
 static_assert(offsetof(FRetargetChainMap, TargetChain) == 0x000008, "Member 'FRetargetChainMap::TargetChain' has a wrong offset!");
-
-// ScriptStruct IKRig.IKRetargetPose
-// 0x0068 (0x0068 - 0x0000)
-struct FIKRetargetPose final
-{
-public:
-	struct FVector                                RootTranslationOffset;                             // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FQuat>               BoneRotationOffsets;                               // 0x0018(0x0050)(Edit, NativeAccessSpecifierPrivate)
-};
-static_assert(alignof(FIKRetargetPose) == 0x000008, "Wrong alignment on FIKRetargetPose");
-static_assert(sizeof(FIKRetargetPose) == 0x000068, "Wrong size on FIKRetargetPose");
-static_assert(offsetof(FIKRetargetPose, RootTranslationOffset) == 0x000000, "Member 'FIKRetargetPose::RootTranslationOffset' has a wrong offset!");
-static_assert(offsetof(FIKRetargetPose, BoneRotationOffsets) == 0x000018, "Member 'FIKRetargetPose::BoneRotationOffsets' has a wrong offset!");
 
 // ScriptStruct IKRig.IKRigGoalContainer
 // 0x0010 (0x0010 - 0x0000)

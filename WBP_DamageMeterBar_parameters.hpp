@@ -18,19 +18,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_DamageMeterBar.WBP_DamageMeterBar_C.ExecuteUbergraph_WBP_DamageMeterBar
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar) == 0x000004, "Wrong alignment on WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar");
-static_assert(sizeof(WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar) == 0x000008, "Wrong size on WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar");
-static_assert(offsetof(WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar, EntryPoint) == 0x000000, "Member 'WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000004, "Member 'WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-
 // Function WBP_DamageMeterBar.WBP_DamageMeterBar_C.OnMouseButtonDown
 // 0x0240 (0x0240 - 0x0000)
 struct WBP_DamageMeterBar_C_OnMouseButtonDown final
@@ -52,6 +39,19 @@ static_assert(offsetof(WBP_DamageMeterBar_C_OnMouseButtonDown, ReturnValue) == 0
 static_assert(offsetof(WBP_DamageMeterBar_C_OnMouseButtonDown, CallFunc_PointerEvent_GetEffectingButton_ReturnValue) == 0x000168, "Member 'WBP_DamageMeterBar_C_OnMouseButtonDown::CallFunc_PointerEvent_GetEffectingButton_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_DamageMeterBar_C_OnMouseButtonDown, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000180, "Member 'WBP_DamageMeterBar_C_OnMouseButtonDown::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_DamageMeterBar_C_OnMouseButtonDown, CallFunc_Handled_ReturnValue) == 0x000188, "Member 'WBP_DamageMeterBar_C_OnMouseButtonDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeterBar.WBP_DamageMeterBar_C.ExecuteUbergraph_WBP_DamageMeterBar
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar) == 0x000004, "Wrong alignment on WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar");
+static_assert(sizeof(WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar) == 0x000008, "Wrong size on WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar");
+static_assert(offsetof(WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar, EntryPoint) == 0x000000, "Member 'WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000004, "Member 'WBP_DamageMeterBar_C_ExecuteUbergraph_WBP_DamageMeterBar::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

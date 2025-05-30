@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Raven.Raven_C
-// 0x0010 (0x1DA0 - 0x1D90)
+// 0x0010 (0x1D60 - 0x1D50)
 class ARaven_C : public ANPCPawn_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Raven_C;                            // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1D98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Raven_C;                            // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Raven(int32 EntryPoint);
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(ARaven_C) == 0x000010, "Wrong alignment on ARaven_C");
-static_assert(sizeof(ARaven_C) == 0x001DA0, "Wrong size on ARaven_C");
-static_assert(offsetof(ARaven_C, UberGraphFrame_Raven_C) == 0x001D90, "Member 'ARaven_C::UberGraphFrame_Raven_C' has a wrong offset!");
-static_assert(offsetof(ARaven_C, Blackboard) == 0x001D98, "Member 'ARaven_C::Blackboard' has a wrong offset!");
+static_assert(sizeof(ARaven_C) == 0x001D60, "Wrong size on ARaven_C");
+static_assert(offsetof(ARaven_C, UberGraphFrame_Raven_C) == 0x001D50, "Member 'ARaven_C::UberGraphFrame_Raven_C' has a wrong offset!");
+static_assert(offsetof(ARaven_C, Blackboard) == 0x001D58, "Member 'ARaven_C::Blackboard' has a wrong offset!");
 
 }
 

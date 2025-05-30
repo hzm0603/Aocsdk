@@ -23,6 +23,7 @@ namespace SDK
 class UBPFL_HelperFunctions_C final : public UBlueprintFunctionLibrary
 {
 public:
+	static void ColorTempToRGB(double Temp, class UObject* __WorldContext, struct FLinearColor* Return_Color);
 	static void Get_Biome_From_Location(const struct FVector2D& Location, class UObject* __WorldContext, EBiomeType* Biome);
 	static void Get_Zone_From_Location(const struct FVector2D& Location, class UObject* __WorldContext, EZone* Zone);
 	static void GetIntrepidSkyInstance(class UObject* __WorldContext, class AIntrepidSkyBase** IntrepidSky);

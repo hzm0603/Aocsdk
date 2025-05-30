@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "HumanoidMonsterMaster_classes.hpp"
 #include "Engine_structs.hpp"
 #include "SpawnerAnimInfo_structs.hpp"
+#include "HumanoidMonsterMaster_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Node_NPC_Master.Node_NPC_Master_C
-// 0x0030 (0x1DD0 - 0x1DA0)
+// 0x0030 (0x1D90 - 0x1D60)
 #pragma pack(push, 0x1)
 class alignas(0x10) ANode_NPC_Master_C : public AHumanoidMonsterMaster_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Node_NPC_Master_C;                  // 0x1DA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMulticastInlineDelegate<void(const struct FSpawnerAnimInfo& AnimInfo)> NPCAnimationsSet;        // 0x1DA8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FString                                 NpcName;                                           // 0x1DB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Node_NPC_Master_C;                  // 0x1D60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TMulticastInlineDelegate<void(const struct FSpawnerAnimInfo& AnimInfo)> NPCAnimationsSet;        // 0x1D68(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FString                                 NpcName;                                           // 0x1D78(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void ReceiveBeginPlay();
@@ -44,10 +44,10 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(ANode_NPC_Master_C) == 0x000010, "Wrong alignment on ANode_NPC_Master_C");
-static_assert(sizeof(ANode_NPC_Master_C) == 0x001DD0, "Wrong size on ANode_NPC_Master_C");
-static_assert(offsetof(ANode_NPC_Master_C, UberGraphFrame_Node_NPC_Master_C) == 0x001DA0, "Member 'ANode_NPC_Master_C::UberGraphFrame_Node_NPC_Master_C' has a wrong offset!");
-static_assert(offsetof(ANode_NPC_Master_C, NPCAnimationsSet) == 0x001DA8, "Member 'ANode_NPC_Master_C::NPCAnimationsSet' has a wrong offset!");
-static_assert(offsetof(ANode_NPC_Master_C, NpcName) == 0x001DB8, "Member 'ANode_NPC_Master_C::NpcName' has a wrong offset!");
+static_assert(sizeof(ANode_NPC_Master_C) == 0x001D90, "Wrong size on ANode_NPC_Master_C");
+static_assert(offsetof(ANode_NPC_Master_C, UberGraphFrame_Node_NPC_Master_C) == 0x001D60, "Member 'ANode_NPC_Master_C::UberGraphFrame_Node_NPC_Master_C' has a wrong offset!");
+static_assert(offsetof(ANode_NPC_Master_C, NPCAnimationsSet) == 0x001D68, "Member 'ANode_NPC_Master_C::NPCAnimationsSet' has a wrong offset!");
+static_assert(offsetof(ANode_NPC_Master_C, NpcName) == 0x001D78, "Member 'ANode_NPC_Master_C::NpcName' has a wrong offset!");
 
 }
 

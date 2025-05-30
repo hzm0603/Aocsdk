@@ -18,23 +18,23 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MagmaGolem_Bellowsmasher.MagmaGolem_Bellowsmasher_C
-// 0x0040 (0x1DE0 - 0x1DA0)
+// 0x0040 (0x1DA0 - 0x1D60)
 class AMagmaGolem_Bellowsmasher_C final : public AMagmaGolem_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_MagmaGolem_Bellowsmasher_C;         // 0x1D98(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Timeline_0_LERP_839C00174CFCE91DE0F31B9B959E5272;  // 0x1DA0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_0__Direction_839C00174CFCE91DE0F31B9B959E5272; // 0x1DA4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DA5[0x3];                                     // 0x1DA5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_0;                                        // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         Timeline_EmissiveStrength_BF5EF5B84791AC2779383BB557F9B828; // 0x1DB0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Timeline_Lerp_BF5EF5B84791AC2779383BB557F9B828;    // 0x1DB4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline__Direction_BF5EF5B84791AC2779383BB557F9B828; // 0x1DB8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DB9[0x7];                                     // 0x1DB9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline;                                          // 0x1DC0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ABefallenForge_Bellow_C*                Bellow;                                            // 0x1DC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          Solidified;                                        // 0x1DD0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          LastSolidified;                                    // 0x1DD1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_MagmaGolem_Bellowsmasher_C;         // 0x1D58(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Timeline_0_LERP_839C00174CFCE91DE0F31B9B959E5272;  // 0x1D60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_0__Direction_839C00174CFCE91DE0F31B9B959E5272; // 0x1D64(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D65[0x3];                                     // 0x1D65(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_0;                                        // 0x1D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_EmissiveStrength_BF5EF5B84791AC2779383BB557F9B828; // 0x1D70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_Lerp_BF5EF5B84791AC2779383BB557F9B828;    // 0x1D74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline__Direction_BF5EF5B84791AC2779383BB557F9B828; // 0x1D78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D79[0x7];                                     // 0x1D79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline;                                          // 0x1D80(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ABefallenForge_Bellow_C*                Bellow;                                            // 0x1D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          Solidified;                                        // 0x1D90(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LastSolidified;                                    // 0x1D91(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_MagmaGolem_Bellowsmasher(int32 EntryPoint);
@@ -57,18 +57,18 @@ public:
 	}
 };
 static_assert(alignof(AMagmaGolem_Bellowsmasher_C) == 0x000010, "Wrong alignment on AMagmaGolem_Bellowsmasher_C");
-static_assert(sizeof(AMagmaGolem_Bellowsmasher_C) == 0x001DE0, "Wrong size on AMagmaGolem_Bellowsmasher_C");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, UberGraphFrame_MagmaGolem_Bellowsmasher_C) == 0x001D98, "Member 'AMagmaGolem_Bellowsmasher_C::UberGraphFrame_MagmaGolem_Bellowsmasher_C' has a wrong offset!");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline_0_LERP_839C00174CFCE91DE0F31B9B959E5272) == 0x001DA0, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline_0_LERP_839C00174CFCE91DE0F31B9B959E5272' has a wrong offset!");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline_0__Direction_839C00174CFCE91DE0F31B9B959E5272) == 0x001DA4, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline_0__Direction_839C00174CFCE91DE0F31B9B959E5272' has a wrong offset!");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline_0) == 0x001DA8, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline_0' has a wrong offset!");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline_EmissiveStrength_BF5EF5B84791AC2779383BB557F9B828) == 0x001DB0, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline_EmissiveStrength_BF5EF5B84791AC2779383BB557F9B828' has a wrong offset!");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline_Lerp_BF5EF5B84791AC2779383BB557F9B828) == 0x001DB4, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline_Lerp_BF5EF5B84791AC2779383BB557F9B828' has a wrong offset!");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline__Direction_BF5EF5B84791AC2779383BB557F9B828) == 0x001DB8, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline__Direction_BF5EF5B84791AC2779383BB557F9B828' has a wrong offset!");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline) == 0x001DC0, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline' has a wrong offset!");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Bellow) == 0x001DC8, "Member 'AMagmaGolem_Bellowsmasher_C::Bellow' has a wrong offset!");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Solidified) == 0x001DD0, "Member 'AMagmaGolem_Bellowsmasher_C::Solidified' has a wrong offset!");
-static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, LastSolidified) == 0x001DD1, "Member 'AMagmaGolem_Bellowsmasher_C::LastSolidified' has a wrong offset!");
+static_assert(sizeof(AMagmaGolem_Bellowsmasher_C) == 0x001DA0, "Wrong size on AMagmaGolem_Bellowsmasher_C");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, UberGraphFrame_MagmaGolem_Bellowsmasher_C) == 0x001D58, "Member 'AMagmaGolem_Bellowsmasher_C::UberGraphFrame_MagmaGolem_Bellowsmasher_C' has a wrong offset!");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline_0_LERP_839C00174CFCE91DE0F31B9B959E5272) == 0x001D60, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline_0_LERP_839C00174CFCE91DE0F31B9B959E5272' has a wrong offset!");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline_0__Direction_839C00174CFCE91DE0F31B9B959E5272) == 0x001D64, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline_0__Direction_839C00174CFCE91DE0F31B9B959E5272' has a wrong offset!");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline_0) == 0x001D68, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline_0' has a wrong offset!");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline_EmissiveStrength_BF5EF5B84791AC2779383BB557F9B828) == 0x001D70, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline_EmissiveStrength_BF5EF5B84791AC2779383BB557F9B828' has a wrong offset!");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline_Lerp_BF5EF5B84791AC2779383BB557F9B828) == 0x001D74, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline_Lerp_BF5EF5B84791AC2779383BB557F9B828' has a wrong offset!");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline__Direction_BF5EF5B84791AC2779383BB557F9B828) == 0x001D78, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline__Direction_BF5EF5B84791AC2779383BB557F9B828' has a wrong offset!");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Timeline) == 0x001D80, "Member 'AMagmaGolem_Bellowsmasher_C::Timeline' has a wrong offset!");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Bellow) == 0x001D88, "Member 'AMagmaGolem_Bellowsmasher_C::Bellow' has a wrong offset!");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, Solidified) == 0x001D90, "Member 'AMagmaGolem_Bellowsmasher_C::Solidified' has a wrong offset!");
+static_assert(offsetof(AMagmaGolem_Bellowsmasher_C, LastSolidified) == 0x001D91, "Member 'AMagmaGolem_Bellowsmasher_C::LastSolidified' has a wrong offset!");
 
 }
 

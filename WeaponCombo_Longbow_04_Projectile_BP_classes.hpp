@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass WeaponCombo_Longbow_04_Projectile_BP.WeaponCombo_Longbow_04_Projectile_BP_C
-// 0x0000 (0x0590 - 0x0590)
+// 0x0000 (0x0598 - 0x0598)
 class AWeaponCombo_Longbow_04_Projectile_BP_C final : public AAoCAbilityProjectile
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AWeaponCombo_Longbow_04_Projectile_BP_C) == 0x000008, "Wrong alignment on AWeaponCombo_Longbow_04_Projectile_BP_C");
-static_assert(sizeof(AWeaponCombo_Longbow_04_Projectile_BP_C) == 0x000590, "Wrong size on AWeaponCombo_Longbow_04_Projectile_BP_C");
+static_assert(sizeof(AWeaponCombo_Longbow_04_Projectile_BP_C) == 0x000598, "Wrong size on AWeaponCombo_Longbow_04_Projectile_BP_C");
 
 }
 

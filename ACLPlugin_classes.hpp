@@ -100,23 +100,6 @@ public:
 static_assert(alignof(UAnimBoneCompressionCodec_ACLCustom) == 0x000008, "Wrong alignment on UAnimBoneCompressionCodec_ACLCustom");
 static_assert(sizeof(UAnimBoneCompressionCodec_ACLCustom) == 0x000058, "Wrong size on UAnimBoneCompressionCodec_ACLCustom");
 
-// Class ACLPlugin.AnimBoneCompressionCodec_ACLSafe
-// 0x0000 (0x0058 - 0x0058)
-class UAnimBoneCompressionCodec_ACLSafe final : public UAnimBoneCompressionCodec_ACLBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AnimBoneCompressionCodec_ACLSafe">();
-	}
-	static class UAnimBoneCompressionCodec_ACLSafe* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimBoneCompressionCodec_ACLSafe>();
-	}
-};
-static_assert(alignof(UAnimBoneCompressionCodec_ACLSafe) == 0x000008, "Wrong alignment on UAnimBoneCompressionCodec_ACLSafe");
-static_assert(sizeof(UAnimBoneCompressionCodec_ACLSafe) == 0x000058, "Wrong size on UAnimBoneCompressionCodec_ACLSafe");
-
 // Class ACLPlugin.AnimBoneCompressionCodec_ACLDatabase
 // 0x0008 (0x0060 - 0x0058)
 class UAnimBoneCompressionCodec_ACLDatabase final : public UAnimBoneCompressionCodec_ACLBase
@@ -137,6 +120,23 @@ public:
 static_assert(alignof(UAnimBoneCompressionCodec_ACLDatabase) == 0x000008, "Wrong alignment on UAnimBoneCompressionCodec_ACLDatabase");
 static_assert(sizeof(UAnimBoneCompressionCodec_ACLDatabase) == 0x000060, "Wrong size on UAnimBoneCompressionCodec_ACLDatabase");
 static_assert(offsetof(UAnimBoneCompressionCodec_ACLDatabase, DatabaseAsset) == 0x000058, "Member 'UAnimBoneCompressionCodec_ACLDatabase::DatabaseAsset' has a wrong offset!");
+
+// Class ACLPlugin.AnimBoneCompressionCodec_ACLSafe
+// 0x0000 (0x0058 - 0x0058)
+class UAnimBoneCompressionCodec_ACLSafe final : public UAnimBoneCompressionCodec_ACLBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AnimBoneCompressionCodec_ACLSafe">();
+	}
+	static class UAnimBoneCompressionCodec_ACLSafe* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimBoneCompressionCodec_ACLSafe>();
+	}
+};
+static_assert(alignof(UAnimBoneCompressionCodec_ACLSafe) == 0x000008, "Wrong alignment on UAnimBoneCompressionCodec_ACLSafe");
+static_assert(sizeof(UAnimBoneCompressionCodec_ACLSafe) == 0x000058, "Wrong size on UAnimBoneCompressionCodec_ACLSafe");
 
 // Class ACLPlugin.AnimCurveCompressionCodec_ACL
 // 0x0000 (0x0058 - 0x0058)

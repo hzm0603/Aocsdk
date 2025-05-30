@@ -52,6 +52,26 @@ void UNPC_GraveyardGolem_AnimBP_C::AnimNotify_NPCNotAttacking()
 }
 
 
+// Function NPC_GraveyardGolem_AnimBP.NPC_GraveyardGolem_AnimBP_C.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UNPC_GraveyardGolem_AnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NPC_GraveyardGolem_AnimBP_C", "BlueprintUpdateAnimation");
+
+	Params::NPC_GraveyardGolem_AnimBP_C_BlueprintUpdateAnimation Parms{};
+
+	Parms.DeltaTimeX = DeltaTimeX;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function NPC_GraveyardGolem_AnimBP.NPC_GraveyardGolem_AnimBP_C.ExecuteUbergraph_NPC_GraveyardGolem_AnimBP
 // (Final, UbergraphFunction)
 // Parameters:

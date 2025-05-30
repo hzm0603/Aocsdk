@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "MovieRenderPipelineCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -1505,7 +1505,7 @@ static_assert(offsetof(MoviePipelineRenderLayer_GetCollectionByName, ReturnValue
 struct MoviePipelineRenderLayer_GetModifiers final
 {
 public:
-	TArray<class UMoviePipelineCollectionModifier*> ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	TArray<class UMoviePipelineCollectionModifier*> ReturnValue;                                     // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MoviePipelineRenderLayer_GetModifiers) == 0x000008, "Wrong alignment on MoviePipelineRenderLayer_GetModifiers");
 static_assert(sizeof(MoviePipelineRenderLayer_GetModifiers) == 0x000010, "Wrong size on MoviePipelineRenderLayer_GetModifiers");

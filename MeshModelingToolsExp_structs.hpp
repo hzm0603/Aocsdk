@@ -1094,17 +1094,6 @@ enum class EWeldMeshEdgesAttributeUIMode : uint8
 	EWeldMeshEdgesAttributeUIMode_MAX        = 3,
 };
 
-// ScriptStruct MeshModelingToolsExp.PhysicsLevelSetData
-// 0x0030 (0x0030 - 0x0000)
-struct FPhysicsLevelSetData final
-{
-public:
-	struct FKShapeElem                            Element;                                           // 0x0000(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPhysicsLevelSetData) == 0x000008, "Wrong alignment on FPhysicsLevelSetData");
-static_assert(sizeof(FPhysicsLevelSetData) == 0x000030, "Wrong size on FPhysicsLevelSetData");
-static_assert(offsetof(FPhysicsLevelSetData, Element) == 0x000000, "Member 'FPhysicsLevelSetData::Element' has a wrong offset!");
-
 // ScriptStruct MeshModelingToolsExp.BakeMultiMeshDetailProperties
 // 0x0018 (0x0018 - 0x0000)
 struct FBakeMultiMeshDetailProperties final
@@ -1121,21 +1110,6 @@ static_assert(offsetof(FBakeMultiMeshDetailProperties, SourceMesh) == 0x000000, 
 static_assert(offsetof(FBakeMultiMeshDetailProperties, SourceTexture) == 0x000008, "Member 'FBakeMultiMeshDetailProperties::SourceTexture' has a wrong offset!");
 static_assert(offsetof(FBakeMultiMeshDetailProperties, SourceTextureUVLayer) == 0x000010, "Member 'FBakeMultiMeshDetailProperties::SourceTextureUVLayer' has a wrong offset!");
 
-// ScriptStruct MeshModelingToolsExp.PhysicsConvexData
-// 0x0038 (0x0038 - 0x0000)
-struct FPhysicsConvexData final
-{
-public:
-	int32                                         NumVertices;                                       // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumFaces;                                          // 0x0004(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKShapeElem                            Element;                                           // 0x0008(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPhysicsConvexData) == 0x000008, "Wrong alignment on FPhysicsConvexData");
-static_assert(sizeof(FPhysicsConvexData) == 0x000038, "Wrong size on FPhysicsConvexData");
-static_assert(offsetof(FPhysicsConvexData, NumVertices) == 0x000000, "Member 'FPhysicsConvexData::NumVertices' has a wrong offset!");
-static_assert(offsetof(FPhysicsConvexData, NumFaces) == 0x000004, "Member 'FPhysicsConvexData::NumFaces' has a wrong offset!");
-static_assert(offsetof(FPhysicsConvexData, Element) == 0x000008, "Member 'FPhysicsConvexData::Element' has a wrong offset!");
-
 // ScriptStruct MeshModelingToolsExp.PerlinLayerProperties
 // 0x0008 (0x0008 - 0x0000)
 struct FPerlinLayerProperties final
@@ -1148,24 +1122,6 @@ static_assert(alignof(FPerlinLayerProperties) == 0x000004, "Wrong alignment on F
 static_assert(sizeof(FPerlinLayerProperties) == 0x000008, "Wrong size on FPerlinLayerProperties");
 static_assert(offsetof(FPerlinLayerProperties, Frequency) == 0x000000, "Member 'FPerlinLayerProperties::Frequency' has a wrong offset!");
 static_assert(offsetof(FPerlinLayerProperties, Intensity) == 0x000004, "Member 'FPerlinLayerProperties::Intensity' has a wrong offset!");
-
-// ScriptStruct MeshModelingToolsExp.PhysicsCapsuleData
-// 0x00A0 (0x00A0 - 0x0000)
-struct FPhysicsCapsuleData final
-{
-public:
-	float                                         Radius;                                            // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Length;                                            // 0x0004(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKShapeElem                            Element;                                           // 0x0070(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPhysicsCapsuleData) == 0x000010, "Wrong alignment on FPhysicsCapsuleData");
-static_assert(sizeof(FPhysicsCapsuleData) == 0x0000A0, "Wrong size on FPhysicsCapsuleData");
-static_assert(offsetof(FPhysicsCapsuleData, Radius) == 0x000000, "Member 'FPhysicsCapsuleData::Radius' has a wrong offset!");
-static_assert(offsetof(FPhysicsCapsuleData, Length) == 0x000004, "Member 'FPhysicsCapsuleData::Length' has a wrong offset!");
-static_assert(offsetof(FPhysicsCapsuleData, Transform) == 0x000010, "Member 'FPhysicsCapsuleData::Transform' has a wrong offset!");
-static_assert(offsetof(FPhysicsCapsuleData, Element) == 0x000070, "Member 'FPhysicsCapsuleData::Element' has a wrong offset!");
 
 // ScriptStruct MeshModelingToolsExp.EditPivotTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -1211,6 +1167,50 @@ static_assert(sizeof(FPhysicsBoxData) == 0x0000B0, "Wrong size on FPhysicsBoxDat
 static_assert(offsetof(FPhysicsBoxData, Dimensions) == 0x000000, "Member 'FPhysicsBoxData::Dimensions' has a wrong offset!");
 static_assert(offsetof(FPhysicsBoxData, Transform) == 0x000020, "Member 'FPhysicsBoxData::Transform' has a wrong offset!");
 static_assert(offsetof(FPhysicsBoxData, Element) == 0x000080, "Member 'FPhysicsBoxData::Element' has a wrong offset!");
+
+// ScriptStruct MeshModelingToolsExp.PhysicsCapsuleData
+// 0x00A0 (0x00A0 - 0x0000)
+struct FPhysicsCapsuleData final
+{
+public:
+	float                                         Radius;                                            // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Length;                                            // 0x0004(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKShapeElem                            Element;                                           // 0x0070(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPhysicsCapsuleData) == 0x000010, "Wrong alignment on FPhysicsCapsuleData");
+static_assert(sizeof(FPhysicsCapsuleData) == 0x0000A0, "Wrong size on FPhysicsCapsuleData");
+static_assert(offsetof(FPhysicsCapsuleData, Radius) == 0x000000, "Member 'FPhysicsCapsuleData::Radius' has a wrong offset!");
+static_assert(offsetof(FPhysicsCapsuleData, Length) == 0x000004, "Member 'FPhysicsCapsuleData::Length' has a wrong offset!");
+static_assert(offsetof(FPhysicsCapsuleData, Transform) == 0x000010, "Member 'FPhysicsCapsuleData::Transform' has a wrong offset!");
+static_assert(offsetof(FPhysicsCapsuleData, Element) == 0x000070, "Member 'FPhysicsCapsuleData::Element' has a wrong offset!");
+
+// ScriptStruct MeshModelingToolsExp.PhysicsConvexData
+// 0x0038 (0x0038 - 0x0000)
+struct FPhysicsConvexData final
+{
+public:
+	int32                                         NumVertices;                                       // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumFaces;                                          // 0x0004(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKShapeElem                            Element;                                           // 0x0008(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPhysicsConvexData) == 0x000008, "Wrong alignment on FPhysicsConvexData");
+static_assert(sizeof(FPhysicsConvexData) == 0x000038, "Wrong size on FPhysicsConvexData");
+static_assert(offsetof(FPhysicsConvexData, NumVertices) == 0x000000, "Member 'FPhysicsConvexData::NumVertices' has a wrong offset!");
+static_assert(offsetof(FPhysicsConvexData, NumFaces) == 0x000004, "Member 'FPhysicsConvexData::NumFaces' has a wrong offset!");
+static_assert(offsetof(FPhysicsConvexData, Element) == 0x000008, "Member 'FPhysicsConvexData::Element' has a wrong offset!");
+
+// ScriptStruct MeshModelingToolsExp.PhysicsLevelSetData
+// 0x0030 (0x0030 - 0x0000)
+struct FPhysicsLevelSetData final
+{
+public:
+	struct FKShapeElem                            Element;                                           // 0x0000(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPhysicsLevelSetData) == 0x000008, "Wrong alignment on FPhysicsLevelSetData");
+static_assert(sizeof(FPhysicsLevelSetData) == 0x000030, "Wrong size on FPhysicsLevelSetData");
+static_assert(offsetof(FPhysicsLevelSetData, Element) == 0x000000, "Member 'FPhysicsLevelSetData::Element' has a wrong offset!");
 
 // ScriptStruct MeshModelingToolsExp.BrushToolRadius
 // 0x0014 (0x0014 - 0x0000)

@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function Bandit_Melee_Base.Bandit_Melee_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABandit_Melee_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Bandit_Melee_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Bandit_Melee_Base.Bandit_Melee_Base_C.ExecuteUbergraph_Bandit_Melee_Base
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void ABandit_Melee_Base_C::ExecuteUbergraph_Bandit_Melee_Base(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Bandit_Melee_Base.Bandit_Melee_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABandit_Melee_Base_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Bandit_Melee_Base_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

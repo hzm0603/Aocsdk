@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "STT_Base_classes.hpp"
 #include "Engine_structs.hpp"
 #include "DesignDataPlugin_structs.hpp"
+#include "STT_Base_classes.hpp"
 
 
 namespace SDK
@@ -35,10 +35,10 @@ public:
 	double                                        LastYawDiff;                                       // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_STT_RotateToTarget(int32 EntryPoint);
-	void ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition);
-	void ReceiveLatentTick(const float DeltaTime);
 	void RotateToTarget(const struct FVector& TargetVec, class AActor* Source, double YawDelta);
+	void ReceiveLatentTick(const float DeltaTime);
+	void ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition);
+	void ExecuteUbergraph_STT_RotateToTarget(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

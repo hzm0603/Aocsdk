@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Test_ProjectileDamageBP.Test_ProjectileDamageBP_C
-// 0x0008 (0x0598 - 0x0590)
+// 0x0008 (0x05A0 - 0x0598)
 class ATest_ProjectileDamageBP_C final : public AAoCAbilityProjectile
 {
 public:
-	class UAudioComponent*                        Audio;                                             // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Audio;                                             // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ATest_ProjectileDamageBP_C) == 0x000008, "Wrong alignment on ATest_ProjectileDamageBP_C");
-static_assert(sizeof(ATest_ProjectileDamageBP_C) == 0x000598, "Wrong size on ATest_ProjectileDamageBP_C");
-static_assert(offsetof(ATest_ProjectileDamageBP_C, Audio) == 0x000590, "Member 'ATest_ProjectileDamageBP_C::Audio' has a wrong offset!");
+static_assert(sizeof(ATest_ProjectileDamageBP_C) == 0x0005A0, "Wrong size on ATest_ProjectileDamageBP_C");
+static_assert(offsetof(ATest_ProjectileDamageBP_C, Audio) == 0x000598, "Member 'ATest_ProjectileDamageBP_C::Audio' has a wrong offset!");
 
 }
 

@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Minotaur_Summoner_Wolf.Minotaur_Summoner_Wolf_C
-// 0x0010 (0x1DA0 - 0x1D90)
+// 0x0010 (0x1D60 - 0x1D50)
 class AMinotaur_Summoner_Wolf_C : public AWolf_C
 {
 public:
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1D90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      Spawn;                                             // 0x1D98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      Spawn;                                             // 0x1D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(AMinotaur_Summoner_Wolf_C) == 0x000010, "Wrong alignment on AMinotaur_Summoner_Wolf_C");
-static_assert(sizeof(AMinotaur_Summoner_Wolf_C) == 0x001DA0, "Wrong size on AMinotaur_Summoner_Wolf_C");
-static_assert(offsetof(AMinotaur_Summoner_Wolf_C, Blackboard) == 0x001D90, "Member 'AMinotaur_Summoner_Wolf_C::Blackboard' has a wrong offset!");
-static_assert(offsetof(AMinotaur_Summoner_Wolf_C, Spawn) == 0x001D98, "Member 'AMinotaur_Summoner_Wolf_C::Spawn' has a wrong offset!");
+static_assert(sizeof(AMinotaur_Summoner_Wolf_C) == 0x001D60, "Wrong size on AMinotaur_Summoner_Wolf_C");
+static_assert(offsetof(AMinotaur_Summoner_Wolf_C, Blackboard) == 0x001D50, "Member 'AMinotaur_Summoner_Wolf_C::Blackboard' has a wrong offset!");
+static_assert(offsetof(AMinotaur_Summoner_Wolf_C, Spawn) == 0x001D58, "Member 'AMinotaur_Summoner_Wolf_C::Spawn' has a wrong offset!");
 
 }
 

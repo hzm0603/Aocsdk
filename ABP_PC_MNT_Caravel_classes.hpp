@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "ABP_PC_MNT_Caravel_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
 
 
@@ -25,7 +25,7 @@ class UABP_PC_MNT_Caravel_C final : public UAoCRiderAnimInstance
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2800(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct ABP_PC_MNT_Caravel::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x2808(0x0008)(HasGetValueTypeHash)
+	struct ABP_PC_MNT_Caravel::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;           // 0x2808(0x0008)(HasGetValueTypeHash)
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x2810(0x0008)()
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x2818(0x0008)()
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x2820(0x0020)()

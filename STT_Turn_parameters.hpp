@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "TurnAngleAnimationMap_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "StateTreeModule_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 

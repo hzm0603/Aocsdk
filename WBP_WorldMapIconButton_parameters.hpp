@@ -16,6 +16,41 @@
 namespace SDK::Params
 {
 
+// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_WorldMapIconButton_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_WorldMapIconButton_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_WorldMapIconButton_C_PreConstruct");
+static_assert(sizeof(WBP_WorldMapIconButton_C_PreConstruct) == 0x000001, "Wrong size on WBP_WorldMapIconButton_C_PreConstruct");
+static_assert(offsetof(WBP_WorldMapIconButton_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_WorldMapIconButton_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.OnMouseLeave
+// 0x0078 (0x0078 - 0x0000)
+struct WBP_WorldMapIconButton_C_OnMouseLeave final
+{
+public:
+	struct FPointerEvent                          MouseEvent;                                        // 0x0000(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(WBP_WorldMapIconButton_C_OnMouseLeave) == 0x000008, "Wrong alignment on WBP_WorldMapIconButton_C_OnMouseLeave");
+static_assert(sizeof(WBP_WorldMapIconButton_C_OnMouseLeave) == 0x000078, "Wrong size on WBP_WorldMapIconButton_C_OnMouseLeave");
+static_assert(offsetof(WBP_WorldMapIconButton_C_OnMouseLeave, MouseEvent) == 0x000000, "Member 'WBP_WorldMapIconButton_C_OnMouseLeave::MouseEvent' has a wrong offset!");
+
+// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.OnMouseEnter
+// 0x00B0 (0x00B0 - 0x0000)
+struct WBP_WorldMapIconButton_C_OnMouseEnter final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(WBP_WorldMapIconButton_C_OnMouseEnter) == 0x000008, "Wrong alignment on WBP_WorldMapIconButton_C_OnMouseEnter");
+static_assert(sizeof(WBP_WorldMapIconButton_C_OnMouseEnter) == 0x0000B0, "Wrong size on WBP_WorldMapIconButton_C_OnMouseEnter");
+static_assert(offsetof(WBP_WorldMapIconButton_C_OnMouseEnter, MyGeometry) == 0x000000, "Member 'WBP_WorldMapIconButton_C_OnMouseEnter::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_WorldMapIconButton_C_OnMouseEnter, MouseEvent) == 0x000038, "Member 'WBP_WorldMapIconButton_C_OnMouseEnter::MouseEvent' has a wrong offset!");
+
 // Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.ExecuteUbergraph_WBP_WorldMapIconButton
 // 0x0138 (0x0138 - 0x0000)
 struct WBP_WorldMapIconButton_C_ExecuteUbergraph_WBP_WorldMapIconButton final
@@ -39,41 +74,6 @@ static_assert(offsetof(WBP_WorldMapIconButton_C_ExecuteUbergraph_WBP_WorldMapIco
 static_assert(offsetof(WBP_WorldMapIconButton_C_ExecuteUbergraph_WBP_WorldMapIconButton, K2Node_Event_MouseEvent) == 0x0000B8, "Member 'WBP_WorldMapIconButton_C_ExecuteUbergraph_WBP_WorldMapIconButton::K2Node_Event_MouseEvent' has a wrong offset!");
 static_assert(offsetof(WBP_WorldMapIconButton_C_ExecuteUbergraph_WBP_WorldMapIconButton, K2Node_Event_IsDesignTime) == 0x000130, "Member 'WBP_WorldMapIconButton_C_ExecuteUbergraph_WBP_WorldMapIconButton::K2Node_Event_IsDesignTime' has a wrong offset!");
 static_assert(offsetof(WBP_WorldMapIconButton_C_ExecuteUbergraph_WBP_WorldMapIconButton, CallFunc_IsValid_ReturnValue_1) == 0x000131, "Member 'WBP_WorldMapIconButton_C_ExecuteUbergraph_WBP_WorldMapIconButton::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-
-// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.OnMouseEnter
-// 0x00B0 (0x00B0 - 0x0000)
-struct WBP_WorldMapIconButton_C_OnMouseEnter final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(WBP_WorldMapIconButton_C_OnMouseEnter) == 0x000008, "Wrong alignment on WBP_WorldMapIconButton_C_OnMouseEnter");
-static_assert(sizeof(WBP_WorldMapIconButton_C_OnMouseEnter) == 0x0000B0, "Wrong size on WBP_WorldMapIconButton_C_OnMouseEnter");
-static_assert(offsetof(WBP_WorldMapIconButton_C_OnMouseEnter, MyGeometry) == 0x000000, "Member 'WBP_WorldMapIconButton_C_OnMouseEnter::MyGeometry' has a wrong offset!");
-static_assert(offsetof(WBP_WorldMapIconButton_C_OnMouseEnter, MouseEvent) == 0x000038, "Member 'WBP_WorldMapIconButton_C_OnMouseEnter::MouseEvent' has a wrong offset!");
-
-// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.OnMouseLeave
-// 0x0078 (0x0078 - 0x0000)
-struct WBP_WorldMapIconButton_C_OnMouseLeave final
-{
-public:
-	struct FPointerEvent                          MouseEvent;                                        // 0x0000(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(WBP_WorldMapIconButton_C_OnMouseLeave) == 0x000008, "Wrong alignment on WBP_WorldMapIconButton_C_OnMouseLeave");
-static_assert(sizeof(WBP_WorldMapIconButton_C_OnMouseLeave) == 0x000078, "Wrong size on WBP_WorldMapIconButton_C_OnMouseLeave");
-static_assert(offsetof(WBP_WorldMapIconButton_C_OnMouseLeave, MouseEvent) == 0x000000, "Member 'WBP_WorldMapIconButton_C_OnMouseLeave::MouseEvent' has a wrong offset!");
-
-// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_WorldMapIconButton_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_WorldMapIconButton_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_WorldMapIconButton_C_PreConstruct");
-static_assert(sizeof(WBP_WorldMapIconButton_C_PreConstruct) == 0x000001, "Wrong size on WBP_WorldMapIconButton_C_PreConstruct");
-static_assert(offsetof(WBP_WorldMapIconButton_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_WorldMapIconButton_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

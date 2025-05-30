@@ -52,18 +52,6 @@ static_assert(offsetof(FTypedElementSelectionOptions, bAllowLegacyNotifications)
 static_assert(offsetof(FTypedElementSelectionOptions, bWarnIfLocked) == 0x000003, "Member 'FTypedElementSelectionOptions::bWarnIfLocked' has a wrong offset!");
 static_assert(offsetof(FTypedElementSelectionOptions, ChildElementInclusionMethod) == 0x000004, "Member 'FTypedElementSelectionOptions::ChildElementInclusionMethod' has a wrong offset!");
 
-// ScriptStruct TypedElementRuntime.TypedElementSelectionSetState
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FTypedElementSelectionSetState final
-{
-public:
-	TWeakObjectPtr<class UTypedElementSelectionSet> CreatedFromSelectionSet;                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FTypedElementSelectionSetState) == 0x000008, "Wrong alignment on FTypedElementSelectionSetState");
-static_assert(sizeof(FTypedElementSelectionSetState) == 0x000018, "Wrong size on FTypedElementSelectionSetState");
-static_assert(offsetof(FTypedElementSelectionSetState, CreatedFromSelectionSet) == 0x000000, "Member 'FTypedElementSelectionSetState::CreatedFromSelectionSet' has a wrong offset!");
-
 // ScriptStruct TypedElementRuntime.TypedElementSelectionNormalizationOptions
 // 0x0002 (0x0002 - 0x0000)
 struct FTypedElementSelectionNormalizationOptions final
@@ -76,6 +64,18 @@ static_assert(alignof(FTypedElementSelectionNormalizationOptions) == 0x000001, "
 static_assert(sizeof(FTypedElementSelectionNormalizationOptions) == 0x000002, "Wrong size on FTypedElementSelectionNormalizationOptions");
 static_assert(offsetof(FTypedElementSelectionNormalizationOptions, bExpandGroups) == 0x000000, "Member 'FTypedElementSelectionNormalizationOptions::bExpandGroups' has a wrong offset!");
 static_assert(offsetof(FTypedElementSelectionNormalizationOptions, bFollowAttachment) == 0x000001, "Member 'FTypedElementSelectionNormalizationOptions::bFollowAttachment' has a wrong offset!");
+
+// ScriptStruct TypedElementRuntime.TypedElementSelectionSetState
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FTypedElementSelectionSetState final
+{
+public:
+	TWeakObjectPtr<class UTypedElementSelectionSet> CreatedFromSelectionSet;                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTypedElementSelectionSetState) == 0x000008, "Wrong alignment on FTypedElementSelectionSetState");
+static_assert(sizeof(FTypedElementSelectionSetState) == 0x000018, "Wrong size on FTypedElementSelectionSetState");
+static_assert(offsetof(FTypedElementSelectionSetState, CreatedFromSelectionSet) == 0x000000, "Member 'FTypedElementSelectionSetState::CreatedFromSelectionSet' has a wrong offset!");
 
 // ScriptStruct TypedElementRuntime.TypedElementIsSelectedOptions
 // 0x0001 (0x0001 - 0x0000)

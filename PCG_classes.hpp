@@ -571,7 +571,7 @@ static_assert(offsetof(UPCGMatchAndSetWeighted, bShouldMutateSeed) == 0x000060, 
 class UPCGExternalDataSettings : public UPCGSettings
 {
 public:
-	TMap<class FString, struct FPCGAttributePropertyInputSelector> AttributeMapping;                                  // 0x0170(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FPCGAttributePropertyInputSelector> AttributeMapping;                 // 0x0170(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -850,7 +850,7 @@ public:
 	uint8                                         Pad_160[0x8];                                      // 0x0160(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBox                                   LastGeneratedBounds;                               // 0x0168(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
 	struct FPCGDataCollection                     GeneratedGraphOutput;                              // 0x01A0(0x0020)(NativeAccessSpecifierPrivate)
-	TMap<class FString, struct FPCGDataCollection> PerPinGeneratedOutput;                             // 0x01C0(0x0050)(Edit, Transient, EditConst, AdvancedDisplay, NativeAccessSpecifierPrivate)
+	TMap<class FString, struct FPCGDataCollection> PerPinGeneratedOutput;                            // 0x01C0(0x0050)(Edit, Transient, EditConst, AdvancedDisplay, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_210[0x18];                                     // 0x0210(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bIsComponentLocal;                                 // 0x0228(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_229[0x2F];                                     // 0x0229(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -1690,7 +1690,7 @@ static_assert(offsetof(UPCGLandscapeData, bUseMetadata) == 0x000199, "Member 'UP
 class UPCGLandscapeSplineData final : public UPCGPolyLineData
 {
 public:
-	TWeakObjectPtr<class ULandscapeSplinesComponent> Spline;                                            // 0x00E8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class ULandscapeSplinesComponent> Spline;                                         // 0x00E8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -2557,7 +2557,7 @@ static_assert(offsetof(UPCGAddAttributeSettings, OutputTarget) == 0x000310, "Mem
 class UPCGCreateAttributeSetSettings final : public UPCGCreateAttributeBaseSettings
 {
 public:
-	struct FPCGAttributePropertyOutputNoSourceSelector OutputTarget;                                      // 0x0310(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyOutputNoSourceSelector OutputTarget;                                 // 0x0310(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	uint8                                         Pad_338[0x8];                                      // 0x0338(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2854,7 +2854,7 @@ static_assert(offsetof(UPCGDifferenceSettings, bDiffMetadata) == 0x000172, "Memb
 
 // Class PCG.PCGBlueprintElement
 // 0x0040 (0x0088 - 0x0048)
-class UPCGBlueprintElement final : public UObject
+class UPCGBlueprintElement : public UObject
 {
 public:
 	bool                                          bIsCacheable;                                      // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3364,12 +3364,12 @@ public:
 	uint8                                         Pad_17D[0x3];                                      // 0x017D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Brightness;                                        // 0x0180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Contrast;                                          // 0x0184(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyOutputNoSourceSelector ValueTarget;                                       // 0x0188(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyOutputNoSourceSelector ValueTarget;                                  // 0x0188(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FVector                                RandomOffset;                                      // 0x01B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C8[0x8];                                      // 0x01C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x01D0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        VoronoiCellRandomness;                             // 0x0230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyOutputNoSourceSelector VoronoiCellIDTarget;                               // 0x0238(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyOutputNoSourceSelector VoronoiCellIDTarget;                          // 0x0238(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bVoronoiOrientSamplesToCellEdge;                   // 0x0260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_261[0x3];                                      // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TiledVoronoiResolution;                            // 0x0264(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3875,7 +3875,7 @@ class APCGPartitionActor final : public APartitionActor
 public:
 	struct FGuid                                  PCGGuid;                                           // 0x0348(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_358[0x50];                                     // 0x0358(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class UPCGComponent*, TSoftObjectPtr<class UPCGComponent>> LocalToOriginal;                                   // 0x03A8(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<class UPCGComponent*, TSoftObjectPtr<class UPCGComponent>> LocalToOriginal;                 // 0x03A8(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
 	uint32                                        PCGGridSize;                                       // 0x03F8(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bUse2DGrid;                                        // 0x03FC(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_3FD[0x3];                                      // 0x03FD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -4029,7 +4029,7 @@ public:
 	EPCGMetadataTypes                             MatchSourceType;                                   // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	EPCGMetadataTypesConstantStructStringMode     MatchSourceStringMode;                             // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPCGMatchAndSetByAttributeEntry> Entries;                                           // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPCGMatchAndSetByAttributeEntry> Entries;                                          // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -4057,7 +4057,7 @@ public:
 	EPCGMetadataTypes                             CategoryType;                                      // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	EPCGMetadataTypesConstantStructStringMode     CategoryStringMode;                                // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPCGMatchAndSetWeightedByCategoryEntryList> Categories;                                        // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPCGMatchAndSetWeightedByCategoryEntryList> Categories;                            // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bShouldMutateSeed;                                 // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -4113,7 +4113,7 @@ class UPCGMeshSelectorWeightedByCategory final : public UPCGMeshSelectorBase
 {
 public:
 	class FName                                   CategoryAttribute;                                 // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPCGWeightedByCategoryEntryList> Entries;                                           // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPCGWeightedByCategoryEntryList> Entries;                                          // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bUseAttributeMaterialOverrides;                    // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           MaterialOverrideAttributes;                        // 0x0068(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)

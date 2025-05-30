@@ -17,15 +17,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_NamePlateWidget.WBP_NamePlateWidget_C
-// 0x0028 (0x06D0 - 0x06A8)
+// 0x0028 (0x0770 - 0x0748)
 class UWBP_NamePlateWidget_C final : public UNameplateWidgetBase
 {
 public:
-	class UWidgetAnimation*                       FadeInAnim;                                        // 0x06A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UHorizontalBox*                         CharacterInfoContainer;                            // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 IMG_NameplateTargetShadow;                         // 0x06B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               NameOverlay;                                       // 0x06C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 QuestIcon;                                         // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeInAnim;                                        // 0x0748(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UHorizontalBox*                         CharacterInfoContainer;                            // 0x0750(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_NameplateTargetShadow;                         // 0x0758(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               NameOverlay;                                       // 0x0760(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 QuestIcon;                                         // 0x0768(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -38,12 +38,12 @@ public:
 	}
 };
 static_assert(alignof(UWBP_NamePlateWidget_C) == 0x000008, "Wrong alignment on UWBP_NamePlateWidget_C");
-static_assert(sizeof(UWBP_NamePlateWidget_C) == 0x0006D0, "Wrong size on UWBP_NamePlateWidget_C");
-static_assert(offsetof(UWBP_NamePlateWidget_C, FadeInAnim) == 0x0006A8, "Member 'UWBP_NamePlateWidget_C::FadeInAnim' has a wrong offset!");
-static_assert(offsetof(UWBP_NamePlateWidget_C, CharacterInfoContainer) == 0x0006B0, "Member 'UWBP_NamePlateWidget_C::CharacterInfoContainer' has a wrong offset!");
-static_assert(offsetof(UWBP_NamePlateWidget_C, IMG_NameplateTargetShadow) == 0x0006B8, "Member 'UWBP_NamePlateWidget_C::IMG_NameplateTargetShadow' has a wrong offset!");
-static_assert(offsetof(UWBP_NamePlateWidget_C, NameOverlay) == 0x0006C0, "Member 'UWBP_NamePlateWidget_C::NameOverlay' has a wrong offset!");
-static_assert(offsetof(UWBP_NamePlateWidget_C, QuestIcon) == 0x0006C8, "Member 'UWBP_NamePlateWidget_C::QuestIcon' has a wrong offset!");
+static_assert(sizeof(UWBP_NamePlateWidget_C) == 0x000770, "Wrong size on UWBP_NamePlateWidget_C");
+static_assert(offsetof(UWBP_NamePlateWidget_C, FadeInAnim) == 0x000748, "Member 'UWBP_NamePlateWidget_C::FadeInAnim' has a wrong offset!");
+static_assert(offsetof(UWBP_NamePlateWidget_C, CharacterInfoContainer) == 0x000750, "Member 'UWBP_NamePlateWidget_C::CharacterInfoContainer' has a wrong offset!");
+static_assert(offsetof(UWBP_NamePlateWidget_C, IMG_NameplateTargetShadow) == 0x000758, "Member 'UWBP_NamePlateWidget_C::IMG_NameplateTargetShadow' has a wrong offset!");
+static_assert(offsetof(UWBP_NamePlateWidget_C, NameOverlay) == 0x000760, "Member 'UWBP_NamePlateWidget_C::NameOverlay' has a wrong offset!");
+static_assert(offsetof(UWBP_NamePlateWidget_C, QuestIcon) == 0x000768, "Member 'UWBP_NamePlateWidget_C::QuestIcon' has a wrong offset!");
 
 }
 

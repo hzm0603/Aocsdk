@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Fighter10_AlertedGuards.Bandit_Fighter10_AlertedGuards_C
-// 0x0000 (0x1DC0 - 0x1DC0)
+// 0x0000 (0x1D80 - 0x1D80)
 class ABandit_Fighter10_AlertedGuards_C final : public ABandit_Fighter_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Fighter10_AlertedGuards_C) == 0x000010, "Wrong alignment on ABandit_Fighter10_AlertedGuards_C");
-static_assert(sizeof(ABandit_Fighter10_AlertedGuards_C) == 0x001DC0, "Wrong size on ABandit_Fighter10_AlertedGuards_C");
+static_assert(sizeof(ABandit_Fighter10_AlertedGuards_C) == 0x001D80, "Wrong size on ABandit_Fighter10_AlertedGuards_C");
 
 }
 

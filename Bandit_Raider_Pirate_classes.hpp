@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Raider_Pirate.Bandit_Raider_Pirate_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ABandit_Raider_Pirate_C final : public ABandit_Raider_C
 {
 public:
-	class UBlackboardComponent*                   Blackboard_0;                                      // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   Blackboard_0;                                      // 0x1D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Raider_Pirate_C) == 0x000010, "Wrong alignment on ABandit_Raider_Pirate_C");
-static_assert(sizeof(ABandit_Raider_Pirate_C) == 0x001DB0, "Wrong size on ABandit_Raider_Pirate_C");
-static_assert(offsetof(ABandit_Raider_Pirate_C, Blackboard_0) == 0x001DA8, "Member 'ABandit_Raider_Pirate_C::Blackboard_0' has a wrong offset!");
+static_assert(sizeof(ABandit_Raider_Pirate_C) == 0x001D70, "Wrong size on ABandit_Raider_Pirate_C");
+static_assert(offsetof(ABandit_Raider_Pirate_C, Blackboard_0) == 0x001D68, "Member 'ABandit_Raider_Pirate_C::Blackboard_0' has a wrong offset!");
 
 }
 

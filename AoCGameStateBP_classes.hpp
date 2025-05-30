@@ -11,25 +11,25 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "MinimapSettings_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
+#include "MinimapSettings_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass AoCGameStateBP.AoCGameStateBP_C
-// 0x0130 (0x16B0 - 0x1580)
+// 0x0130 (0x1670 - 0x1540)
 class AAoCGameStateBP_C final : public AAoCGameStateBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1580(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x1588(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FMinimapSettings                       LevelMinimap;                                      // 0x1590(0x0120)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1540(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x1548(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FMinimapSettings                       LevelMinimap;                                      // 0x1550(0x0120)(Edit, BlueprintVisible, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_AoCGameStateBP(int32 EntryPoint);
 	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_AoCGameStateBP(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -42,10 +42,10 @@ public:
 	}
 };
 static_assert(alignof(AAoCGameStateBP_C) == 0x000010, "Wrong alignment on AAoCGameStateBP_C");
-static_assert(sizeof(AAoCGameStateBP_C) == 0x0016B0, "Wrong size on AAoCGameStateBP_C");
-static_assert(offsetof(AAoCGameStateBP_C, UberGraphFrame) == 0x001580, "Member 'AAoCGameStateBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AAoCGameStateBP_C, DefaultSceneRoot) == 0x001588, "Member 'AAoCGameStateBP_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AAoCGameStateBP_C, LevelMinimap) == 0x001590, "Member 'AAoCGameStateBP_C::LevelMinimap' has a wrong offset!");
+static_assert(sizeof(AAoCGameStateBP_C) == 0x001670, "Wrong size on AAoCGameStateBP_C");
+static_assert(offsetof(AAoCGameStateBP_C, UberGraphFrame) == 0x001540, "Member 'AAoCGameStateBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AAoCGameStateBP_C, DefaultSceneRoot) == 0x001548, "Member 'AAoCGameStateBP_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AAoCGameStateBP_C, LevelMinimap) == 0x001550, "Member 'AAoCGameStateBP_C::LevelMinimap' has a wrong offset!");
 
 }
 

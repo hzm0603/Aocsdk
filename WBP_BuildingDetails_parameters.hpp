@@ -14,6 +14,50 @@
 namespace SDK::Params
 {
 
+// Function WBP_BuildingDetails.WBP_BuildingDetails_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BuildingDetails_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_BuildingDetails_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_BuildingDetails_C_PreConstruct");
+static_assert(sizeof(WBP_BuildingDetails_C_PreConstruct) == 0x000001, "Wrong size on WBP_BuildingDetails_C_PreConstruct");
+static_assert(offsetof(WBP_BuildingDetails_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_BuildingDetails_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_BuildingDetails.WBP_BuildingDetails_C.GetOddBorderStyle
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_BuildingDetails_C_GetOddBorderStyle final
+{
+public:
+	TSubclassOf<class UCommonBorderStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_BuildingDetails_C_GetOddBorderStyle) == 0x000008, "Wrong alignment on WBP_BuildingDetails_C_GetOddBorderStyle");
+static_assert(sizeof(WBP_BuildingDetails_C_GetOddBorderStyle) == 0x000008, "Wrong size on WBP_BuildingDetails_C_GetOddBorderStyle");
+static_assert(offsetof(WBP_BuildingDetails_C_GetOddBorderStyle, ReturnValue) == 0x000000, "Member 'WBP_BuildingDetails_C_GetOddBorderStyle::ReturnValue' has a wrong offset!");
+
+// Function WBP_BuildingDetails.WBP_BuildingDetails_C.GetEvenBorderStyle
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_BuildingDetails_C_GetEvenBorderStyle final
+{
+public:
+	TSubclassOf<class UCommonBorderStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_BuildingDetails_C_GetEvenBorderStyle) == 0x000008, "Wrong alignment on WBP_BuildingDetails_C_GetEvenBorderStyle");
+static_assert(sizeof(WBP_BuildingDetails_C_GetEvenBorderStyle) == 0x000008, "Wrong size on WBP_BuildingDetails_C_GetEvenBorderStyle");
+static_assert(offsetof(WBP_BuildingDetails_C_GetEvenBorderStyle, ReturnValue) == 0x000000, "Member 'WBP_BuildingDetails_C_GetEvenBorderStyle::ReturnValue' has a wrong offset!");
+
+// Function WBP_BuildingDetails.WBP_BuildingDetails_C.GetBorderContainer
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_BuildingDetails_C_GetBorderContainer final
+{
+public:
+	class UPanelWidget*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_BuildingDetails_C_GetBorderContainer) == 0x000008, "Wrong alignment on WBP_BuildingDetails_C_GetBorderContainer");
+static_assert(sizeof(WBP_BuildingDetails_C_GetBorderContainer) == 0x000008, "Wrong size on WBP_BuildingDetails_C_GetBorderContainer");
+static_assert(offsetof(WBP_BuildingDetails_C_GetBorderContainer, ReturnValue) == 0x000000, "Member 'WBP_BuildingDetails_C_GetBorderContainer::ReturnValue' has a wrong offset!");
+
 // Function WBP_BuildingDetails.WBP_BuildingDetails_C.ExecuteUbergraph_WBP_BuildingDetails
 // 0x0038 (0x0038 - 0x0000)
 struct WBP_BuildingDetails_C_ExecuteUbergraph_WBP_BuildingDetails final
@@ -44,50 +88,6 @@ static_assert(offsetof(WBP_BuildingDetails_C_ExecuteUbergraph_WBP_BuildingDetail
 static_assert(offsetof(WBP_BuildingDetails_C_ExecuteUbergraph_WBP_BuildingDetails, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000028, "Member 'WBP_BuildingDetails_C_ExecuteUbergraph_WBP_BuildingDetails::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuildingDetails_C_ExecuteUbergraph_WBP_BuildingDetails, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'WBP_BuildingDetails_C_ExecuteUbergraph_WBP_BuildingDetails::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_BuildingDetails_C_ExecuteUbergraph_WBP_BuildingDetails, K2Node_Event_IsDesignTime) == 0x000030, "Member 'WBP_BuildingDetails_C_ExecuteUbergraph_WBP_BuildingDetails::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WBP_BuildingDetails.WBP_BuildingDetails_C.GetBorderContainer
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_BuildingDetails_C_GetBorderContainer final
-{
-public:
-	class UPanelWidget*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_BuildingDetails_C_GetBorderContainer) == 0x000008, "Wrong alignment on WBP_BuildingDetails_C_GetBorderContainer");
-static_assert(sizeof(WBP_BuildingDetails_C_GetBorderContainer) == 0x000008, "Wrong size on WBP_BuildingDetails_C_GetBorderContainer");
-static_assert(offsetof(WBP_BuildingDetails_C_GetBorderContainer, ReturnValue) == 0x000000, "Member 'WBP_BuildingDetails_C_GetBorderContainer::ReturnValue' has a wrong offset!");
-
-// Function WBP_BuildingDetails.WBP_BuildingDetails_C.GetEvenBorderStyle
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_BuildingDetails_C_GetEvenBorderStyle final
-{
-public:
-	TSubclassOf<class UCommonBorderStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_BuildingDetails_C_GetEvenBorderStyle) == 0x000008, "Wrong alignment on WBP_BuildingDetails_C_GetEvenBorderStyle");
-static_assert(sizeof(WBP_BuildingDetails_C_GetEvenBorderStyle) == 0x000008, "Wrong size on WBP_BuildingDetails_C_GetEvenBorderStyle");
-static_assert(offsetof(WBP_BuildingDetails_C_GetEvenBorderStyle, ReturnValue) == 0x000000, "Member 'WBP_BuildingDetails_C_GetEvenBorderStyle::ReturnValue' has a wrong offset!");
-
-// Function WBP_BuildingDetails.WBP_BuildingDetails_C.GetOddBorderStyle
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_BuildingDetails_C_GetOddBorderStyle final
-{
-public:
-	TSubclassOf<class UCommonBorderStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_BuildingDetails_C_GetOddBorderStyle) == 0x000008, "Wrong alignment on WBP_BuildingDetails_C_GetOddBorderStyle");
-static_assert(sizeof(WBP_BuildingDetails_C_GetOddBorderStyle) == 0x000008, "Wrong size on WBP_BuildingDetails_C_GetOddBorderStyle");
-static_assert(offsetof(WBP_BuildingDetails_C_GetOddBorderStyle, ReturnValue) == 0x000000, "Member 'WBP_BuildingDetails_C_GetOddBorderStyle::ReturnValue' has a wrong offset!");
-
-// Function WBP_BuildingDetails.WBP_BuildingDetails_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_BuildingDetails_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_BuildingDetails_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_BuildingDetails_C_PreConstruct");
-static_assert(sizeof(WBP_BuildingDetails_C_PreConstruct) == 0x000001, "Wrong size on WBP_BuildingDetails_C_PreConstruct");
-static_assert(offsetof(WBP_BuildingDetails_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_BuildingDetails_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

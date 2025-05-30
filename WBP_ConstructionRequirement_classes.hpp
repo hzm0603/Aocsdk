@@ -17,14 +17,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ConstructionRequirement.WBP_ConstructionRequirement_C
-// 0x0008 (0x0390 - 0x0388)
+// 0x0020 (0x04B8 - 0x0498)
 class UWBP_ConstructionRequirement_C final : public UConstructionRequirement
 {
 public:
-	class UImage*                                 IMG_VerticalAccent;                                // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	class UAoCCommonButtonBase* GetButton();
+	class UImage*                                 AcquiredIcon_1;                                    // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       AcquiredTextBlock_1;                               // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          B_Material;                                        // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_VerticalAccent;                                // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,8 +37,11 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ConstructionRequirement_C) == 0x000008, "Wrong alignment on UWBP_ConstructionRequirement_C");
-static_assert(sizeof(UWBP_ConstructionRequirement_C) == 0x000390, "Wrong size on UWBP_ConstructionRequirement_C");
-static_assert(offsetof(UWBP_ConstructionRequirement_C, IMG_VerticalAccent) == 0x000388, "Member 'UWBP_ConstructionRequirement_C::IMG_VerticalAccent' has a wrong offset!");
+static_assert(sizeof(UWBP_ConstructionRequirement_C) == 0x0004B8, "Wrong size on UWBP_ConstructionRequirement_C");
+static_assert(offsetof(UWBP_ConstructionRequirement_C, AcquiredIcon_1) == 0x000498, "Member 'UWBP_ConstructionRequirement_C::AcquiredIcon_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ConstructionRequirement_C, AcquiredTextBlock_1) == 0x0004A0, "Member 'UWBP_ConstructionRequirement_C::AcquiredTextBlock_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ConstructionRequirement_C, B_Material) == 0x0004A8, "Member 'UWBP_ConstructionRequirement_C::B_Material' has a wrong offset!");
+static_assert(offsetof(UWBP_ConstructionRequirement_C, IMG_VerticalAccent) == 0x0004B0, "Member 'UWBP_ConstructionRequirement_C::IMG_VerticalAccent' has a wrong offset!");
 
 }
 

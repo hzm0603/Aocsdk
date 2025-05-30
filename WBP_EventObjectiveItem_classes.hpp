@@ -31,9 +31,9 @@ public:
 	class FText                                   Objective_Text;                                    // 0x0360(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void ExecuteUbergraph_WBP_EventObjectiveItem(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
 	void Setup();
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_EventObjectiveItem(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

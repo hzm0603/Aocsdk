@@ -11,19 +11,19 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Bandit_Arsonist_StateTree_classes.hpp"
+#include "Bandit_Arsonist_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Arsonist_Flame.Bandit_Arsonist_Flame_C
-// 0x0010 (0x1DC0 - 0x1DB0)
-class ABandit_Arsonist_Flame_C final : public ABandit_Arsonist_StateTree_C
+// 0x0010 (0x1D80 - 0x1D70)
+class ABandit_Arsonist_Flame_C final : public ABandit_Arsonist_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Bandit_Arsonist_Flame_C;            // 0x1DA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      CFX;                                               // 0x1DB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Bandit_Arsonist_Flame_C;            // 0x1D68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      CFX;                                               // 0x1D70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Bandit_Arsonist_Flame(int32 EntryPoint);
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Arsonist_Flame_C) == 0x000010, "Wrong alignment on ABandit_Arsonist_Flame_C");
-static_assert(sizeof(ABandit_Arsonist_Flame_C) == 0x001DC0, "Wrong size on ABandit_Arsonist_Flame_C");
-static_assert(offsetof(ABandit_Arsonist_Flame_C, UberGraphFrame_Bandit_Arsonist_Flame_C) == 0x001DA8, "Member 'ABandit_Arsonist_Flame_C::UberGraphFrame_Bandit_Arsonist_Flame_C' has a wrong offset!");
-static_assert(offsetof(ABandit_Arsonist_Flame_C, CFX) == 0x001DB0, "Member 'ABandit_Arsonist_Flame_C::CFX' has a wrong offset!");
+static_assert(sizeof(ABandit_Arsonist_Flame_C) == 0x001D80, "Wrong size on ABandit_Arsonist_Flame_C");
+static_assert(offsetof(ABandit_Arsonist_Flame_C, UberGraphFrame_Bandit_Arsonist_Flame_C) == 0x001D68, "Member 'ABandit_Arsonist_Flame_C::UberGraphFrame_Bandit_Arsonist_Flame_C' has a wrong offset!");
+static_assert(offsetof(ABandit_Arsonist_Flame_C, CFX) == 0x001D70, "Member 'ABandit_Arsonist_Flame_C::CFX' has a wrong offset!");
 
 }
 

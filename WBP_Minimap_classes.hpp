@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Minimap.WBP_Minimap_C
-// 0x0060 (0x1028 - 0x0FC8)
+// 0x0060 (0x10E8 - 0x1088)
 class UWBP_Minimap_C final : public UMinimapBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0FC8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0FD0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_1;                                 // 0x0FD8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_3;                                 // 0x0FE0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationPOI1;                                  // 0x0FE8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationPOI2;                                  // 0x0FF0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationPOI3;                                  // 0x0FF8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationPOI4;                                  // 0x1000(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationPOI5;                                  // 0x1008(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvB_ZoomControls;                                 // 0x1010(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           RetainerBox_2;                                     // 0x1018(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FTimerHandle                           InitTimer;                                         // 0x1020(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1088(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x1090(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_1;                                 // 0x1098(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_3;                                 // 0x10A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationPOI1;                                  // 0x10A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationPOI2;                                  // 0x10B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationPOI3;                                  // 0x10B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationPOI4;                                  // 0x10C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationPOI5;                                  // 0x10C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvB_ZoomControls;                                 // 0x10D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           RetainerBox_2;                                     // 0x10D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FTimerHandle                           InitTimer;                                         // 0x10E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -52,19 +52,19 @@ public:
 	}
 };
 static_assert(alignof(UWBP_Minimap_C) == 0x000008, "Wrong alignment on UWBP_Minimap_C");
-static_assert(sizeof(UWBP_Minimap_C) == 0x001028, "Wrong size on UWBP_Minimap_C");
-static_assert(offsetof(UWBP_Minimap_C, UberGraphFrame) == 0x000FC8, "Member 'UWBP_Minimap_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, InvalidationBox_0) == 0x000FD0, "Member 'UWBP_Minimap_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, InvalidationBox_1) == 0x000FD8, "Member 'UWBP_Minimap_C::InvalidationBox_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, InvalidationBox_3) == 0x000FE0, "Member 'UWBP_Minimap_C::InvalidationBox_3' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, InvalidationPOI1) == 0x000FE8, "Member 'UWBP_Minimap_C::InvalidationPOI1' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, InvalidationPOI2) == 0x000FF0, "Member 'UWBP_Minimap_C::InvalidationPOI2' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, InvalidationPOI3) == 0x000FF8, "Member 'UWBP_Minimap_C::InvalidationPOI3' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, InvalidationPOI4) == 0x001000, "Member 'UWBP_Minimap_C::InvalidationPOI4' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, InvalidationPOI5) == 0x001008, "Member 'UWBP_Minimap_C::InvalidationPOI5' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, InvB_ZoomControls) == 0x001010, "Member 'UWBP_Minimap_C::InvB_ZoomControls' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, RetainerBox_2) == 0x001018, "Member 'UWBP_Minimap_C::RetainerBox_2' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_C, InitTimer) == 0x001020, "Member 'UWBP_Minimap_C::InitTimer' has a wrong offset!");
+static_assert(sizeof(UWBP_Minimap_C) == 0x0010E8, "Wrong size on UWBP_Minimap_C");
+static_assert(offsetof(UWBP_Minimap_C, UberGraphFrame) == 0x001088, "Member 'UWBP_Minimap_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, InvalidationBox_0) == 0x001090, "Member 'UWBP_Minimap_C::InvalidationBox_0' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, InvalidationBox_1) == 0x001098, "Member 'UWBP_Minimap_C::InvalidationBox_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, InvalidationBox_3) == 0x0010A0, "Member 'UWBP_Minimap_C::InvalidationBox_3' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, InvalidationPOI1) == 0x0010A8, "Member 'UWBP_Minimap_C::InvalidationPOI1' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, InvalidationPOI2) == 0x0010B0, "Member 'UWBP_Minimap_C::InvalidationPOI2' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, InvalidationPOI3) == 0x0010B8, "Member 'UWBP_Minimap_C::InvalidationPOI3' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, InvalidationPOI4) == 0x0010C0, "Member 'UWBP_Minimap_C::InvalidationPOI4' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, InvalidationPOI5) == 0x0010C8, "Member 'UWBP_Minimap_C::InvalidationPOI5' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, InvB_ZoomControls) == 0x0010D0, "Member 'UWBP_Minimap_C::InvB_ZoomControls' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, RetainerBox_2) == 0x0010D8, "Member 'UWBP_Minimap_C::RetainerBox_2' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_C, InitTimer) == 0x0010E0, "Member 'UWBP_Minimap_C::InitTimer' has a wrong offset!");
 
 }
 

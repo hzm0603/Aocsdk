@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_CommodityCategoryGrid.WBP_CommodityCategoryGrid_C.ExecuteUbergraph_WBP_CommodityCategoryGrid
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CommodityCategoryGrid_C::ExecuteUbergraph_WBP_CommodityCategoryGrid(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CommodityCategoryGrid_C", "ExecuteUbergraph_WBP_CommodityCategoryGrid");
-
-	Params::WBP_CommodityCategoryGrid_C_ExecuteUbergraph_WBP_CommodityCategoryGrid Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_CommodityCategoryGrid.WBP_CommodityCategoryGrid_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_CommodityCategoryGrid_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_CommodityCategoryGrid_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CommodityCategoryGrid.WBP_CommodityCategoryGrid_C.ExecuteUbergraph_WBP_CommodityCategoryGrid
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CommodityCategoryGrid_C::ExecuteUbergraph_WBP_CommodityCategoryGrid(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CommodityCategoryGrid_C", "ExecuteUbergraph_WBP_CommodityCategoryGrid");
+
+	Params::WBP_CommodityCategoryGrid_C_ExecuteUbergraph_WBP_CommodityCategoryGrid Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

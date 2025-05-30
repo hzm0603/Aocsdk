@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CaravelBase.BP_CaravelBase_C
-// 0x0020 (0x16B0 - 0x1690)
+// 0x0020 (0x16D0 - 0x16B0)
 class ABP_CaravelBase_C final : public ABP_NavalVehicleBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_CaravelBase_C;                   // 0x1688(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMovementAkComponent*                   MovementAk_Sail1;                                  // 0x1690(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMovementAkComponent*                   MovementAk_Sail2;                                  // 0x1698(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMovementAkComponent*                   MovementAk_Base;                                   // 0x16A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_CaravelBase_C;                   // 0x16A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMovementAkComponent*                   MovementAk_Sail1;                                  // 0x16B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMovementAkComponent*                   MovementAk_Sail2;                                  // 0x16B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMovementAkComponent*                   MovementAk_Base;                                   // 0x16C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_CaravelBase(int32 EntryPoint);
@@ -42,11 +42,11 @@ public:
 	}
 };
 static_assert(alignof(ABP_CaravelBase_C) == 0x000010, "Wrong alignment on ABP_CaravelBase_C");
-static_assert(sizeof(ABP_CaravelBase_C) == 0x0016B0, "Wrong size on ABP_CaravelBase_C");
-static_assert(offsetof(ABP_CaravelBase_C, UberGraphFrame_BP_CaravelBase_C) == 0x001688, "Member 'ABP_CaravelBase_C::UberGraphFrame_BP_CaravelBase_C' has a wrong offset!");
-static_assert(offsetof(ABP_CaravelBase_C, MovementAk_Sail1) == 0x001690, "Member 'ABP_CaravelBase_C::MovementAk_Sail1' has a wrong offset!");
-static_assert(offsetof(ABP_CaravelBase_C, MovementAk_Sail2) == 0x001698, "Member 'ABP_CaravelBase_C::MovementAk_Sail2' has a wrong offset!");
-static_assert(offsetof(ABP_CaravelBase_C, MovementAk_Base) == 0x0016A0, "Member 'ABP_CaravelBase_C::MovementAk_Base' has a wrong offset!");
+static_assert(sizeof(ABP_CaravelBase_C) == 0x0016D0, "Wrong size on ABP_CaravelBase_C");
+static_assert(offsetof(ABP_CaravelBase_C, UberGraphFrame_BP_CaravelBase_C) == 0x0016A8, "Member 'ABP_CaravelBase_C::UberGraphFrame_BP_CaravelBase_C' has a wrong offset!");
+static_assert(offsetof(ABP_CaravelBase_C, MovementAk_Sail1) == 0x0016B0, "Member 'ABP_CaravelBase_C::MovementAk_Sail1' has a wrong offset!");
+static_assert(offsetof(ABP_CaravelBase_C, MovementAk_Sail2) == 0x0016B8, "Member 'ABP_CaravelBase_C::MovementAk_Sail2' has a wrong offset!");
+static_assert(offsetof(ABP_CaravelBase_C, MovementAk_Base) == 0x0016C0, "Member 'ABP_CaravelBase_C::MovementAk_Base' has a wrong offset!");
 
 }
 

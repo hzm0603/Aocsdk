@@ -20,7 +20,7 @@ namespace SDK
 // Function EnhancedInput.EnhancedPlayerMappableKeyProfile.ResetMappingToDefault
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FName                             InMappingName                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       InMappingName                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UEnhancedPlayerMappableKeyProfile::ResetMappingToDefault(const class FName InMappingName)
 {
@@ -64,7 +64,7 @@ void UEnhancedPlayerMappableKeyProfile::ResetToDefault()
 // Function EnhancedInput.EnhancedPlayerMappableKeyProfile.SetDisplayName
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FText                             NewDisplayName                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FText&                      NewDisplayName                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UEnhancedPlayerMappableKeyProfile::SetDisplayName(const class FText& NewDisplayName)
 {
@@ -89,8 +89,8 @@ void UEnhancedPlayerMappableKeyProfile::SetDisplayName(const class FText& NewDis
 // Function EnhancedInput.EnhancedPlayerMappableKeyProfile.DoesMappingPassQueryOptions
 // (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPlayerKeyMapping                PlayerMapping                                          (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPlayerMappableKeyQueryOptions   Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPlayerKeyMapping&         PlayerMapping                                          (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPlayerMappableKeyQueryOptions&Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UEnhancedPlayerMappableKeyProfile::DoesMappingPassQueryOptions(const struct FPlayerKeyMapping& PlayerMapping, const struct FPlayerMappableKeyQueryOptions& Options) const
@@ -138,8 +138,8 @@ void UEnhancedPlayerMappableKeyProfile::DumpProfileToLog() const
 // Function EnhancedInput.EnhancedPlayerMappableKeyProfile.GetMappedKeysInRow
 // (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FKey>                     OutKeys                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FKey>*                    OutKeys                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 UEnhancedPlayerMappableKeyProfile::GetMappedKeysInRow(const class FName MappingName, TArray<struct FKey>* OutKeys) const
@@ -170,8 +170,8 @@ int32 UEnhancedPlayerMappableKeyProfile::GetMappedKeysInRow(const class FName Ma
 // Function EnhancedInput.EnhancedPlayerMappableKeyProfile.GetMappingNamesForKey
 // (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FKey                             InKey                                                  (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FName>                     OutMappingNames                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const struct FKey&                      InKey                                                  (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>*                    OutMappingNames                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 UEnhancedPlayerMappableKeyProfile::GetMappingNamesForKey(const struct FKey& InKey, TArray<class FName>* OutMappingNames) const
@@ -277,8 +277,8 @@ const struct FGameplayTag UEnhancedPlayerMappableKeyProfile::GetProfileIdentifer
 // Function EnhancedInput.EnhancedPlayerMappableKeyProfile.K2_FindKeyMapping
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPlayerKeyMapping                OutKeyMapping                                          (Parm, OutParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMapPlayerKeyArgs                InArgs                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FPlayerKeyMapping*               OutKeyMapping                                          (Parm, OutParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMapPlayerKeyArgs&         InArgs                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UEnhancedPlayerMappableKeyProfile::K2_FindKeyMapping(struct FPlayerKeyMapping* OutKeyMapping, const struct FMapPlayerKeyArgs& InArgs) const
 {
@@ -306,8 +306,8 @@ void UEnhancedPlayerMappableKeyProfile::K2_FindKeyMapping(struct FPlayerKeyMappi
 // Function EnhancedInput.EnhancedPlayerMappableKeyProfile.QueryPlayerMappedKeys
 // (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPlayerMappableKeyQueryOptions   Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FKey>                     OutKeys                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const struct FPlayerMappableKeyQueryOptions&Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FKey>*                    OutKeys                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 UEnhancedPlayerMappableKeyProfile::QueryPlayerMappedKeys(const struct FPlayerMappableKeyQueryOptions& Options, TArray<struct FKey>* OutKeys) const
@@ -401,7 +401,7 @@ void UEnhancedInputUserSettings::AsyncSaveSettings()
 // Function EnhancedInput.EnhancedInputUserSettings.CreateNewKeyProfile
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPlayerMappableKeyProfileCreationArgsInArgs                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPlayerMappableKeyProfileCreationArgs&InArgs                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UEnhancedPlayerMappableKeyProfile*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UEnhancedPlayerMappableKeyProfile* UEnhancedInputUserSettings::CreateNewKeyProfile(const struct FPlayerMappableKeyProfileCreationArgs& InArgs)
@@ -429,8 +429,8 @@ class UEnhancedPlayerMappableKeyProfile* UEnhancedInputUserSettings::CreateNewKe
 // Function EnhancedInput.EnhancedInputUserSettings.MapPlayerKey
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FMapPlayerKeyArgs                InArgs                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FGameplayTagContainer            FailureReason                                          (Parm, OutParm, NativeAccessSpecifierPublic)
+// const struct FMapPlayerKeyArgs&         InArgs                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGameplayTagContainer*           FailureReason                                          (Parm, OutParm, NativeAccessSpecifierPublic)
 
 void UEnhancedInputUserSettings::MapPlayerKey(const struct FMapPlayerKeyArgs& InArgs, struct FGameplayTagContainer* FailureReason)
 {
@@ -458,7 +458,7 @@ void UEnhancedInputUserSettings::MapPlayerKey(const struct FMapPlayerKeyArgs& In
 // Function EnhancedInput.EnhancedInputUserSettings.RegisterInputMappingContext
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UInputMappingContext*             IMC                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputMappingContext*       IMC                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UEnhancedInputUserSettings::RegisterInputMappingContext(const class UInputMappingContext* IMC)
@@ -486,7 +486,7 @@ bool UEnhancedInputUserSettings::RegisterInputMappingContext(const class UInputM
 // Function EnhancedInput.EnhancedInputUserSettings.RegisterInputMappingContexts
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TSet<class UInputMappingContext*>       MappingContexts                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class UInputMappingContext*>&MappingContexts                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UEnhancedInputUserSettings::RegisterInputMappingContexts(const TSet<class UInputMappingContext*>& MappingContexts)
@@ -514,8 +514,8 @@ bool UEnhancedInputUserSettings::RegisterInputMappingContexts(const TSet<class U
 // Function EnhancedInput.EnhancedInputUserSettings.ResetAllPlayerKeysInRow
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FMapPlayerKeyArgs                InArgs                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FGameplayTagContainer            FailureReason                                          (Parm, OutParm, NativeAccessSpecifierPublic)
+// const struct FMapPlayerKeyArgs&         InArgs                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGameplayTagContainer*           FailureReason                                          (Parm, OutParm, NativeAccessSpecifierPublic)
 
 void UEnhancedInputUserSettings::ResetAllPlayerKeysInRow(const struct FMapPlayerKeyArgs& InArgs, struct FGameplayTagContainer* FailureReason)
 {
@@ -543,8 +543,8 @@ void UEnhancedInputUserSettings::ResetAllPlayerKeysInRow(const struct FMapPlayer
 // Function EnhancedInput.EnhancedInputUserSettings.ResetKeyProfileToDefault
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FGameplayTag                     ProfileId                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGameplayTagContainer            FailureReason                                          (Parm, OutParm, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              ProfileId                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGameplayTagContainer*           FailureReason                                          (Parm, OutParm, NativeAccessSpecifierPublic)
 
 void UEnhancedInputUserSettings::ResetKeyProfileToDefault(const struct FGameplayTag& ProfileId, struct FGameplayTagContainer* FailureReason)
 {
@@ -591,7 +591,7 @@ void UEnhancedInputUserSettings::SaveSettings()
 // Function EnhancedInput.EnhancedInputUserSettings.SetKeyProfile
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FGameplayTag                     InProfileId                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              InProfileId                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UEnhancedInputUserSettings::SetKeyProfile(const struct FGameplayTag& InProfileId)
@@ -619,8 +619,8 @@ bool UEnhancedInputUserSettings::SetKeyProfile(const struct FGameplayTag& InProf
 // Function EnhancedInput.EnhancedInputUserSettings.UnMapPlayerKey
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FMapPlayerKeyArgs                InArgs                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FGameplayTagContainer            FailureReason                                          (Parm, OutParm, NativeAccessSpecifierPublic)
+// const struct FMapPlayerKeyArgs&         InArgs                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGameplayTagContainer*           FailureReason                                          (Parm, OutParm, NativeAccessSpecifierPublic)
 
 void UEnhancedInputUserSettings::UnMapPlayerKey(const struct FMapPlayerKeyArgs& InArgs, struct FGameplayTagContainer* FailureReason)
 {
@@ -648,7 +648,7 @@ void UEnhancedInputUserSettings::UnMapPlayerKey(const struct FMapPlayerKeyArgs& 
 // Function EnhancedInput.EnhancedInputUserSettings.UnregisterInputMappingContext
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UInputMappingContext*             IMC                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputMappingContext*       IMC                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UEnhancedInputUserSettings::UnregisterInputMappingContext(const class UInputMappingContext* IMC)
@@ -676,7 +676,7 @@ bool UEnhancedInputUserSettings::UnregisterInputMappingContext(const class UInpu
 // Function EnhancedInput.EnhancedInputUserSettings.UnregisterInputMappingContexts
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TSet<class UInputMappingContext*>       MappingContexts                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class UInputMappingContext*>&MappingContexts                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UEnhancedInputUserSettings::UnregisterInputMappingContexts(const TSet<class UInputMappingContext*>& MappingContexts)
@@ -704,7 +704,7 @@ bool UEnhancedInputUserSettings::UnregisterInputMappingContexts(const TSet<class
 // Function EnhancedInput.EnhancedInputUserSettings.FindMappingsInRow
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TSet<struct FPlayerKeyMapping>    ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 const TSet<struct FPlayerKeyMapping> UEnhancedInputUserSettings::FindMappingsInRow(const class FName MappingName) const
@@ -782,7 +782,7 @@ const struct FGameplayTag UEnhancedInputUserSettings::GetCurrentKeyProfileIdenti
 // Function EnhancedInput.EnhancedInputUserSettings.GetKeyProfileWithIdentifier
 // (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FGameplayTag                     ProfileId                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              ProfileId                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UEnhancedPlayerMappableKeyProfile*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UEnhancedPlayerMappableKeyProfile* UEnhancedInputUserSettings::GetKeyProfileWithIdentifier(const struct FGameplayTag& ProfileId) const
@@ -810,7 +810,7 @@ class UEnhancedPlayerMappableKeyProfile* UEnhancedInputUserSettings::GetKeyProfi
 // Function EnhancedInput.EnhancedInputUserSettings.IsMappingContextRegistered
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UInputMappingContext*             IMC                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputMappingContext*       IMC                                                    (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UEnhancedInputUserSettings::IsMappingContextRegistered(const class UInputMappingContext* IMC) const
@@ -838,7 +838,7 @@ bool UEnhancedInputUserSettings::IsMappingContextRegistered(const class UInputMa
 // Function EnhancedInput.EnhancedInputComponent.GetBoundActionValue
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FInputActionValue                ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FInputActionValue UEnhancedInputComponent::GetBoundActionValue(const class UInputAction* Action) const
@@ -866,11 +866,11 @@ struct FInputActionValue UEnhancedInputComponent::GetBoundActionValue(const clas
 // Function EnhancedInput.EnhancedInputLibrary.BreakInputActionValue
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FInputActionValue                InActionValue                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// double                                  X                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Y                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Z                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EInputActionValueType                   Type                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         InActionValue                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// double*                                 X                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double*                                 Y                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double*                                 Z                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EInputActionValueType*                  Type                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UEnhancedInputLibrary::BreakInputActionValue(const struct FInputActionValue& InActionValue, double* X, double* Y, double* Z, EInputActionValueType* Type)
 {
@@ -907,7 +907,7 @@ void UEnhancedInputLibrary::BreakInputActionValue(const struct FInputActionValue
 // Function EnhancedInput.EnhancedInputLibrary.Conv_InputActionValueToAxis1D
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FInputActionValue                InValue                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         InValue                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 double UEnhancedInputLibrary::Conv_InputActionValueToAxis1D(const struct FInputActionValue& InValue)
@@ -935,7 +935,7 @@ double UEnhancedInputLibrary::Conv_InputActionValueToAxis1D(const struct FInputA
 // Function EnhancedInput.EnhancedInputLibrary.Conv_InputActionValueToAxis2D
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FInputActionValue                InValue                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         InValue                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FVector2D UEnhancedInputLibrary::Conv_InputActionValueToAxis2D(const struct FInputActionValue& InValue)
@@ -963,7 +963,7 @@ struct FVector2D UEnhancedInputLibrary::Conv_InputActionValueToAxis2D(const stru
 // Function EnhancedInput.EnhancedInputLibrary.Conv_InputActionValueToAxis3D
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FInputActionValue                ActionValue                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         ActionValue                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FVector UEnhancedInputLibrary::Conv_InputActionValueToAxis3D(const struct FInputActionValue& ActionValue)
@@ -991,7 +991,7 @@ struct FVector UEnhancedInputLibrary::Conv_InputActionValueToAxis3D(const struct
 // Function EnhancedInput.EnhancedInputLibrary.Conv_InputActionValueToBool
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FInputActionValue                InValue                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         InValue                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UEnhancedInputLibrary::Conv_InputActionValueToBool(const struct FInputActionValue& InValue)
@@ -1019,7 +1019,7 @@ bool UEnhancedInputLibrary::Conv_InputActionValueToBool(const struct FInputActio
 // Function EnhancedInput.EnhancedInputLibrary.Conv_InputActionValueToString
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FInputActionValue                ActionValue                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         ActionValue                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FString UEnhancedInputLibrary::Conv_InputActionValueToString(const struct FInputActionValue& ActionValue)
@@ -1048,7 +1048,7 @@ class FString UEnhancedInputLibrary::Conv_InputActionValueToString(const struct 
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FInputActionValue                ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FInputActionValue UEnhancedInputLibrary::GetBoundActionValue(class AActor* Actor, const class UInputAction* Action)
@@ -1127,7 +1127,7 @@ struct FPlayerMappableKeySlot UEnhancedInputLibrary::GetFourthPlayerMappableKeyS
 // Function EnhancedInput.EnhancedInputLibrary.GetMappingName
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FEnhancedActionKeyMapping        ActionKeyMapping                                       (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FEnhancedActionKeyMapping& ActionKeyMapping                                       (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FName UEnhancedInputLibrary::GetMappingName(const struct FEnhancedActionKeyMapping& ActionKeyMapping)
@@ -1155,7 +1155,7 @@ class FName UEnhancedInputLibrary::GetMappingName(const struct FEnhancedActionKe
 // Function EnhancedInput.EnhancedInputLibrary.GetPlayerMappableKeySettings
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FEnhancedActionKeyMapping        ActionKeyMapping                                       (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FEnhancedActionKeyMapping& ActionKeyMapping                                       (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPlayerMappableKeySettings*       ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UPlayerMappableKeySettings* UEnhancedInputLibrary::GetPlayerMappableKeySettings(const struct FEnhancedActionKeyMapping& ActionKeyMapping)
@@ -1233,7 +1233,7 @@ struct FPlayerMappableKeySlot UEnhancedInputLibrary::GetThirdPlayerMappableKeySl
 // Function EnhancedInput.EnhancedInputLibrary.IsActionKeyMappingPlayerMappable
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FEnhancedActionKeyMapping        ActionKeyMapping                                       (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FEnhancedActionKeyMapping& ActionKeyMapping                                       (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UEnhancedInputLibrary::IsActionKeyMappingPlayerMappable(const struct FEnhancedActionKeyMapping& ActionKeyMapping)
@@ -1264,7 +1264,7 @@ bool UEnhancedInputLibrary::IsActionKeyMappingPlayerMappable(const struct FEnhan
 // double                                  X                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  Y                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  Z                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FInputActionValue                MatchValueType                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         MatchValueType                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FInputActionValue                ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FInputActionValue UEnhancedInputLibrary::MakeInputActionValue(double X, double Y, double Z, const struct FInputActionValue& MatchValueType)
@@ -1298,7 +1298,7 @@ struct FInputActionValue UEnhancedInputLibrary::MakeInputActionValue(double X, d
 // double                                  X                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  Y                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  Z                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EInputActionValueType                   ValueType                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EInputActionValueType             ValueType                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FInputActionValue                ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FInputActionValue UEnhancedInputLibrary::MakeInputActionValueOfType(double X, double Y, double Z, const EInputActionValueType ValueType)
@@ -1329,7 +1329,7 @@ struct FInputActionValue UEnhancedInputLibrary::MakeInputActionValueOfType(doubl
 // Function EnhancedInput.EnhancedInputLibrary.RequestRebuildControlMappingsUsingContext
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UInputMappingContext*             Context                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputMappingContext*       Context                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bForceImmediately                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UEnhancedInputLibrary::RequestRebuildControlMappingsUsingContext(const class UInputMappingContext* Context, bool bForceImmediately)
@@ -1384,9 +1384,9 @@ const class UInputMappingContext* UEnhancedInputPlatformData::GetContextRedirect
 // Function EnhancedInput.EnhancedInputSubsystemInterface.AddMappingContext
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UInputMappingContext*             MappingContext                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputMappingContext*       MappingContext                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Priority                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FModifyContextOptions            Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FModifyContextOptions&     Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::AddMappingContext(const class UInputMappingContext* MappingContext, int32 Priority, const struct FModifyContextOptions& Options)
 {
@@ -1413,8 +1413,8 @@ void IEnhancedInputSubsystemInterface::AddMappingContext(const class UInputMappi
 // Function EnhancedInput.EnhancedInputSubsystemInterface.AddPlayerMappableConfig
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UPlayerMappableInputConfig*       Config                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FModifyContextOptions            Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPlayerMappableInputConfig* Config                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FModifyContextOptions&     Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::AddPlayerMappableConfig(const class UPlayerMappableInputConfig* Config, const struct FModifyContextOptions& Options)
 {
@@ -1459,10 +1459,10 @@ void IEnhancedInputSubsystemInterface::ClearAllMappings()
 // Function EnhancedInput.EnhancedInputSubsystemInterface.InjectInputForAction
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FInputActionValue                RawValue                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// TArray<class UInputModifier*>           Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class UInputTrigger*>            Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         RawValue                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const TArray<class UInputModifier*>&    Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class UInputTrigger*>&     Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::InjectInputForAction(const class UInputAction* Action, const struct FInputActionValue& RawValue, const TArray<class UInputModifier*>& Modifiers, const TArray<class UInputTrigger*>& Triggers)
 {
@@ -1490,10 +1490,10 @@ void IEnhancedInputSubsystemInterface::InjectInputForAction(const class UInputAc
 // Function EnhancedInput.EnhancedInputSubsystemInterface.InjectInputForPlayerMapping
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FInputActionValue                RawValue                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// TArray<class UInputModifier*>           Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class UInputTrigger*>            Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         RawValue                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const TArray<class UInputModifier*>&    Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class UInputTrigger*>&     Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::InjectInputForPlayerMapping(const class FName MappingName, const struct FInputActionValue& RawValue, const TArray<class UInputModifier*>& Modifiers, const TArray<class UInputTrigger*>& Triggers)
 {
@@ -1521,10 +1521,10 @@ void IEnhancedInputSubsystemInterface::InjectInputForPlayerMapping(const class F
 // Function EnhancedInput.EnhancedInputSubsystemInterface.InjectInputVectorForAction
 // (Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class UInputModifier*>           Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class UInputTrigger*>            Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class UInputModifier*>&    Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class UInputTrigger*>&     Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::InjectInputVectorForAction(const class UInputAction* Action, const struct FVector& Value, const TArray<class UInputModifier*>& Modifiers, const TArray<class UInputTrigger*>& Triggers)
 {
@@ -1552,10 +1552,10 @@ void IEnhancedInputSubsystemInterface::InjectInputVectorForAction(const class UI
 // Function EnhancedInput.EnhancedInputSubsystemInterface.InjectInputVectorForPlayerMapping
 // (Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class UInputModifier*>           Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class UInputTrigger*>            Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class UInputModifier*>&    Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class UInputTrigger*>&     Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::InjectInputVectorForPlayerMapping(const class FName MappingName, const struct FVector& Value, const TArray<class UInputModifier*>& Modifiers, const TArray<class UInputTrigger*>& Triggers)
 {
@@ -1583,10 +1583,10 @@ void IEnhancedInputSubsystemInterface::InjectInputVectorForPlayerMapping(const c
 // Function EnhancedInput.EnhancedInputSubsystemInterface.K2_AddPlayerMappedKeyInSlot
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FKey                             NewKey                                                 (ConstParm, Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPlayerMappableKeySlot           KeySlot                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FModifyContextOptions            Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FKey&                      NewKey                                                 (ConstParm, Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPlayerMappableKeySlot&    KeySlot                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FModifyContextOptions&     Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 IEnhancedInputSubsystemInterface::K2_AddPlayerMappedKeyInSlot(const class FName MappingName, const struct FKey& NewKey, const struct FPlayerMappableKeySlot& KeySlot, const struct FModifyContextOptions& Options)
@@ -1617,9 +1617,9 @@ int32 IEnhancedInputSubsystemInterface::K2_AddPlayerMappedKeyInSlot(const class 
 // Function EnhancedInput.EnhancedInputSubsystemInterface.K2_RemovePlayerMappedKeyInSlot
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPlayerMappableKeySlot           KeySlot                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FModifyContextOptions            Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPlayerMappableKeySlot&    KeySlot                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FModifyContextOptions&     Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 IEnhancedInputSubsystemInterface::K2_RemovePlayerMappedKeyInSlot(const class FName MappingName, const struct FPlayerMappableKeySlot& KeySlot, const struct FModifyContextOptions& Options)
@@ -1649,7 +1649,7 @@ int32 IEnhancedInputSubsystemInterface::K2_RemovePlayerMappedKeyInSlot(const cla
 // Function EnhancedInput.EnhancedInputSubsystemInterface.OnUserKeyProfileChanged
 // (Native, Protected)
 // Parameters:
-// class UEnhancedPlayerMappableKeyProfile*InNewProfile                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UEnhancedPlayerMappableKeyProfile*InNewProfile                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::OnUserKeyProfileChanged(const class UEnhancedPlayerMappableKeyProfile* InNewProfile)
 {
@@ -1699,10 +1699,10 @@ void IEnhancedInputSubsystemInterface::OnUserSettingsChanged(class UEnhancedInpu
 // Function EnhancedInput.EnhancedInputSubsystemInterface.QueryMapKeyInActiveContextSet
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UInputMappingContext*             InputContext                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FKey                             Key                                                    (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMappingQueryIssue>       OutIssues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const class UInputMappingContext*       InputContext                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FKey&                      Key                                                    (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMappingQueryIssue>*      OutIssues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // EMappingQueryIssue                      BlockingIssues                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EMappingQueryResult                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1737,11 +1737,11 @@ EMappingQueryResult IEnhancedInputSubsystemInterface::QueryMapKeyInActiveContext
 // Function EnhancedInput.EnhancedInputSubsystemInterface.QueryMapKeyInContextSet
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<class UInputMappingContext*>     PrioritizedActiveContexts                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class UInputMappingContext*             InputContext                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FKey                             Key                                                    (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMappingQueryIssue>       OutIssues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const TArray<class UInputMappingContext*>&PrioritizedActiveContexts                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UInputMappingContext*       InputContext                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FKey&                      Key                                                    (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMappingQueryIssue>*      OutIssues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // EMappingQueryIssue                      BlockingIssues                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EMappingQueryResult                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1777,7 +1777,7 @@ EMappingQueryResult IEnhancedInputSubsystemInterface::QueryMapKeyInContextSet(co
 // Function EnhancedInput.EnhancedInputSubsystemInterface.RemoveAllPlayerMappedKeys
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FModifyContextOptions            Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FModifyContextOptions&     Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::RemoveAllPlayerMappedKeys(const struct FModifyContextOptions& Options)
 {
@@ -1802,8 +1802,8 @@ void IEnhancedInputSubsystemInterface::RemoveAllPlayerMappedKeys(const struct FM
 // Function EnhancedInput.EnhancedInputSubsystemInterface.RemoveAllPlayerMappedKeysForMapping
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FModifyContextOptions            Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FModifyContextOptions&     Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 IEnhancedInputSubsystemInterface::RemoveAllPlayerMappedKeysForMapping(const class FName MappingName, const struct FModifyContextOptions& Options)
@@ -1832,8 +1832,8 @@ int32 IEnhancedInputSubsystemInterface::RemoveAllPlayerMappedKeysForMapping(cons
 // Function EnhancedInput.EnhancedInputSubsystemInterface.RemoveMappingContext
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UInputMappingContext*             MappingContext                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FModifyContextOptions            Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UInputMappingContext*       MappingContext                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FModifyContextOptions&     Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::RemoveMappingContext(const class UInputMappingContext* MappingContext, const struct FModifyContextOptions& Options)
 {
@@ -1859,8 +1859,8 @@ void IEnhancedInputSubsystemInterface::RemoveMappingContext(const class UInputMa
 // Function EnhancedInput.EnhancedInputSubsystemInterface.RemovePlayerMappableConfig
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UPlayerMappableInputConfig*       Config                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FModifyContextOptions            Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UPlayerMappableInputConfig* Config                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FModifyContextOptions&     Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::RemovePlayerMappableConfig(const class UPlayerMappableInputConfig* Config, const struct FModifyContextOptions& Options)
 {
@@ -1886,7 +1886,7 @@ void IEnhancedInputSubsystemInterface::RemovePlayerMappableConfig(const class UP
 // Function EnhancedInput.EnhancedInputSubsystemInterface.RequestRebuildControlMappings
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FModifyContextOptions            Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FModifyContextOptions&     Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // EInputMappingRebuildType                RebuildType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::RequestRebuildControlMappings(const struct FModifyContextOptions& Options, EInputMappingRebuildType RebuildType)
@@ -1913,10 +1913,10 @@ void IEnhancedInputSubsystemInterface::RequestRebuildControlMappings(const struc
 // Function EnhancedInput.EnhancedInputSubsystemInterface.StartContinuousInputInjectionForAction
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FInputActionValue                RawValue                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// TArray<class UInputModifier*>           Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class UInputTrigger*>            Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         RawValue                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const TArray<class UInputModifier*>&    Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class UInputTrigger*>&     Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::StartContinuousInputInjectionForAction(const class UInputAction* Action, const struct FInputActionValue& RawValue, const TArray<class UInputModifier*>& Modifiers, const TArray<class UInputTrigger*>& Triggers)
 {
@@ -1944,10 +1944,10 @@ void IEnhancedInputSubsystemInterface::StartContinuousInputInjectionForAction(co
 // Function EnhancedInput.EnhancedInputSubsystemInterface.StartContinuousInputInjectionForPlayerMapping
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FInputActionValue                RawValue                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// TArray<class UInputModifier*>           Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class UInputTrigger*>            Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         RawValue                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const TArray<class UInputModifier*>&    Modifiers                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class UInputTrigger*>&     Triggers                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::StartContinuousInputInjectionForPlayerMapping(const class FName MappingName, const struct FInputActionValue& RawValue, const TArray<class UInputModifier*>& Modifiers, const TArray<class UInputTrigger*>& Triggers)
 {
@@ -1975,7 +1975,7 @@ void IEnhancedInputSubsystemInterface::StartContinuousInputInjectionForPlayerMap
 // Function EnhancedInput.EnhancedInputSubsystemInterface.StopContinuousInputInjectionForAction
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::StopContinuousInputInjectionForAction(const class UInputAction* Action)
 {
@@ -2000,7 +2000,7 @@ void IEnhancedInputSubsystemInterface::StopContinuousInputInjectionForAction(con
 // Function EnhancedInput.EnhancedInputSubsystemInterface.StopContinuousInputInjectionForPlayerMapping
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void IEnhancedInputSubsystemInterface::StopContinuousInputInjectionForPlayerMapping(const class FName MappingName)
 {
@@ -2050,7 +2050,7 @@ TArray<struct FEnhancedActionKeyMapping> IEnhancedInputSubsystemInterface::GetAl
 // Function EnhancedInput.EnhancedInputSubsystemInterface.GetAllPlayerMappedKeys
 // (BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FKey>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FKey> IEnhancedInputSubsystemInterface::GetAllPlayerMappedKeys(const class FName MappingName) const
@@ -2103,8 +2103,8 @@ class UEnhancedInputUserSettings* IEnhancedInputSubsystemInterface::GetUserSetti
 // Function EnhancedInput.EnhancedInputSubsystemInterface.HasMappingContext
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UInputMappingContext*             MappingContext                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   OutFoundPriority                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputMappingContext*       MappingContext                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  OutFoundPriority                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool IEnhancedInputSubsystemInterface::HasMappingContext(const class UInputMappingContext* MappingContext, int32* OutFoundPriority) const
@@ -2135,8 +2135,8 @@ bool IEnhancedInputSubsystemInterface::HasMappingContext(const class UInputMappi
 // Function EnhancedInput.EnhancedInputSubsystemInterface.K2_GetPlayerMappedKeyInSlot
 // (BlueprintCosmetic, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPlayerMappableKeySlot           KeySlot                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPlayerMappableKeySlot&    KeySlot                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FKey                             ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FKey IEnhancedInputSubsystemInterface::K2_GetPlayerMappedKeyInSlot(const class FName MappingName, const struct FPlayerMappableKeySlot& KeySlot) const
@@ -2165,7 +2165,7 @@ struct FKey IEnhancedInputSubsystemInterface::K2_GetPlayerMappedKeyInSlot(const 
 // Function EnhancedInput.EnhancedInputSubsystemInterface.QueryKeysMappedToAction
 // (BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FKey>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FKey> IEnhancedInputSubsystemInterface::QueryKeysMappedToAction(const class UInputAction* Action) const
@@ -2246,8 +2246,8 @@ bool UEnhancedInputWorldSubsystem::RemoveActorInputComponent(class AActor* Actor
 // Function EnhancedInput.InputMappingContext.MapKey
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FKey                             ToKey                                                  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FKey&                      ToKey                                                  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FEnhancedActionKeyMapping        ReturnValue                                            (Parm, OutParm, ReturnParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FEnhancedActionKeyMapping UInputMappingContext::MapKey(const class UInputAction* Action, const struct FKey& ToKey)
@@ -2276,7 +2276,7 @@ struct FEnhancedActionKeyMapping UInputMappingContext::MapKey(const class UInput
 // Function EnhancedInput.InputMappingContext.UnmapAction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UInputMappingContext::UnmapAction(const class UInputAction* Action)
 {
@@ -2320,7 +2320,7 @@ void UInputMappingContext::UnmapAll()
 // Function EnhancedInput.InputMappingContext.UnmapAllKeysFromAction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UInputMappingContext::UnmapAllKeysFromAction(const class UInputAction* Action)
 {
@@ -2345,8 +2345,8 @@ void UInputMappingContext::UnmapAllKeysFromAction(const class UInputAction* Acti
 // Function EnhancedInput.InputMappingContext.UnmapKey
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FKey                             Key                                                    (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FKey&                      Key                                                    (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UInputMappingContext::UnmapKey(const class UInputAction* Action, const struct FKey& Key)
 {
@@ -2372,8 +2372,8 @@ void UInputMappingContext::UnmapKey(const class UInputAction* Action, const stru
 // Function EnhancedInput.InputModifier.GetVisualizationColor
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FInputActionValue                SampleValue                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FInputActionValue                FinalValue                                             (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         SampleValue                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         FinalValue                                             (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FLinearColor UInputModifier::GetVisualizationColor(const struct FInputActionValue& SampleValue, const struct FInputActionValue& FinalValue) const
@@ -2402,8 +2402,8 @@ struct FLinearColor UInputModifier::GetVisualizationColor(const struct FInputAct
 // Function EnhancedInput.InputModifier.ModifyRaw
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class UEnhancedPlayerInput*             PlayerInput                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FInputActionValue                CurrentValue                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UEnhancedPlayerInput*       PlayerInput                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         CurrentValue                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FInputActionValue                ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2434,8 +2434,8 @@ struct FInputActionValue UInputModifier::ModifyRaw(const class UEnhancedPlayerIn
 // Function EnhancedInput.InputTrigger.UpdateState
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UEnhancedPlayerInput*             PlayerInput                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FInputActionValue                ModifiedValue                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UEnhancedPlayerInput*       PlayerInput                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         ModifiedValue                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ETriggerState                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2491,7 +2491,7 @@ ETriggerType UInputTrigger::GetTriggerType() const
 // Function EnhancedInput.InputTrigger.IsActuated
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FInputActionValue                ForValue                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputActionValue&         ForValue                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UInputTrigger::IsActuated(const struct FInputActionValue& ForValue) const
@@ -2588,7 +2588,7 @@ const class FText UPlayerMappableInputConfig::GetDisplayName() const
 // Function EnhancedInput.PlayerMappableInputConfig.GetKeysBoundToAction
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UInputAction*                     InAction                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInputAction*               InAction                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FEnhancedActionKeyMapping>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 TArray<struct FEnhancedActionKeyMapping> UPlayerMappableInputConfig::GetKeysBoundToAction(const class UInputAction* InAction) const
@@ -2616,7 +2616,7 @@ TArray<struct FEnhancedActionKeyMapping> UPlayerMappableInputConfig::GetKeysBoun
 // Function EnhancedInput.PlayerMappableInputConfig.GetMappingByName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FEnhancedActionKeyMapping        ReturnValue                                            (Parm, OutParm, ReturnParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FEnhancedActionKeyMapping UPlayerMappableInputConfig::GetMappingByName(const class FName MappingName) const

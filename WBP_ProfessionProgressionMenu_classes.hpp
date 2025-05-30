@@ -40,9 +40,9 @@ public:
 	class UWBP_EquipmentSlot_C*                   TrapSlot;                                          // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	class UPanelWidget* GetButtonContainer();
-	TSubclassOf<class UCommonButtonStyle> GetEvenButtonStyle();
 	TSubclassOf<class UCommonButtonStyle> GetOddButtonStyle();
+	TSubclassOf<class UCommonButtonStyle> GetEvenButtonStyle();
+	class UPanelWidget* GetButtonContainer();
 
 public:
 	static class UClass* StaticClass()

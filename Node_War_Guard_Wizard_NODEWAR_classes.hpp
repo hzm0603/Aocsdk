@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Node_War_Guard_Wizard_NODEWAR.Node_War_Guard_Wizard_NODEWAR_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ANode_War_Guard_Wizard_NODEWAR_C final : public ANode_War_Guard_Wizard_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ANode_War_Guard_Wizard_NODEWAR_C) == 0x000010, "Wrong alignment on ANode_War_Guard_Wizard_NODEWAR_C");
-static_assert(sizeof(ANode_War_Guard_Wizard_NODEWAR_C) == 0x001DB0, "Wrong size on ANode_War_Guard_Wizard_NODEWAR_C");
+static_assert(sizeof(ANode_War_Guard_Wizard_NODEWAR_C) == 0x001D70, "Wrong size on ANode_War_Guard_Wizard_NODEWAR_C");
 
 }
 

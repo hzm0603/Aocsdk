@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
 
 
@@ -18,21 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CitizenshipWindow.WBP_CitizenshipWindow_C
-// 0x0038 (0x0580 - 0x0548)
+// 0x0018 (0x0590 - 0x0578)
 class UWBP_CitizenshipWindow_C final : public UCitizenshipWindow
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0548(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       ConnectingText;                                    // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScW_Content;                                       // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScW_NearbyNodes;                                   // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextButton_C*                    ShowAllButton;                                     // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       SubPanelIndicatorTextBlock;                        // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   Text;                                              // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_WBP_CitizenshipWindow(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScW_Content;                                       // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextButton_C*                    ShowAllButton;                                     // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SubPanelIndicatorTextBlock;                        // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -45,14 +36,10 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CitizenshipWindow_C) == 0x000008, "Wrong alignment on UWBP_CitizenshipWindow_C");
-static_assert(sizeof(UWBP_CitizenshipWindow_C) == 0x000580, "Wrong size on UWBP_CitizenshipWindow_C");
-static_assert(offsetof(UWBP_CitizenshipWindow_C, UberGraphFrame) == 0x000548, "Member 'UWBP_CitizenshipWindow_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_CitizenshipWindow_C, ConnectingText) == 0x000550, "Member 'UWBP_CitizenshipWindow_C::ConnectingText' has a wrong offset!");
-static_assert(offsetof(UWBP_CitizenshipWindow_C, ScW_Content) == 0x000558, "Member 'UWBP_CitizenshipWindow_C::ScW_Content' has a wrong offset!");
-static_assert(offsetof(UWBP_CitizenshipWindow_C, ScW_NearbyNodes) == 0x000560, "Member 'UWBP_CitizenshipWindow_C::ScW_NearbyNodes' has a wrong offset!");
-static_assert(offsetof(UWBP_CitizenshipWindow_C, ShowAllButton) == 0x000568, "Member 'UWBP_CitizenshipWindow_C::ShowAllButton' has a wrong offset!");
-static_assert(offsetof(UWBP_CitizenshipWindow_C, SubPanelIndicatorTextBlock) == 0x000570, "Member 'UWBP_CitizenshipWindow_C::SubPanelIndicatorTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_CitizenshipWindow_C, Text) == 0x000578, "Member 'UWBP_CitizenshipWindow_C::Text' has a wrong offset!");
+static_assert(sizeof(UWBP_CitizenshipWindow_C) == 0x000590, "Wrong size on UWBP_CitizenshipWindow_C");
+static_assert(offsetof(UWBP_CitizenshipWindow_C, ScW_Content) == 0x000578, "Member 'UWBP_CitizenshipWindow_C::ScW_Content' has a wrong offset!");
+static_assert(offsetof(UWBP_CitizenshipWindow_C, ShowAllButton) == 0x000580, "Member 'UWBP_CitizenshipWindow_C::ShowAllButton' has a wrong offset!");
+static_assert(offsetof(UWBP_CitizenshipWindow_C, SubPanelIndicatorTextBlock) == 0x000588, "Member 'UWBP_CitizenshipWindow_C::SubPanelIndicatorTextBlock' has a wrong offset!");
 
 }
 

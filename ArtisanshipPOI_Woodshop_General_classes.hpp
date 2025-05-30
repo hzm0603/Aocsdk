@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ArtisanshipPOI_Woodshop_General.ArtisanshipPOI_Woodshop_General_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class AArtisanshipPOI_Woodshop_General_C final : public ANode_NPC_Master_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AArtisanshipPOI_Woodshop_General_C) == 0x000010, "Wrong alignment on AArtisanshipPOI_Woodshop_General_C");
-static_assert(sizeof(AArtisanshipPOI_Woodshop_General_C) == 0x001DD0, "Wrong size on AArtisanshipPOI_Woodshop_General_C");
+static_assert(sizeof(AArtisanshipPOI_Woodshop_General_C) == 0x001D90, "Wrong size on AArtisanshipPOI_Woodshop_General_C");
 
 }
 

@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function BP_NodeTree_Blueprint.BP_NodeTree_Blueprint_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_NodeTree_Blueprint_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_NodeTree_Blueprint_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_NodeTree_Blueprint.BP_NodeTree_Blueprint_C.ExecuteUbergraph_BP_NodeTree_Blueprint
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void ABP_NodeTree_Blueprint_C::ExecuteUbergraph_BP_NodeTree_Blueprint(int32 Entr
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_NodeTree_Blueprint.BP_NodeTree_Blueprint_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_NodeTree_Blueprint_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NodeTree_Blueprint_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

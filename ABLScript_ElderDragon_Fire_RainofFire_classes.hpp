@@ -10,41 +10,41 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "ElderDragon_Fire_RainofFireQueryPoint_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
+#include "Engine_structs.hpp"
+#include "ElderDragon_Fire_RainofFireQueryPoint_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass ABLScript_ElderDragon_Fire_RainofFire.ABLScript_ElderDragon_Fire_RainofFire_C
-// 0x00B0 (0x1118 - 0x1068)
+// 0x00B0 (0x1120 - 0x1070)
 class UABLScript_ElderDragon_Fire_RainofFire_C final : public UAoCNotifyBlueprint
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1068(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        Max_Range;                                         // 0x1070(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Min_Range;                                         // 0x1078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Denial_Raidus;                                     // 0x1080(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Query_Point_Gap;                                   // 0x1088(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RandomOffset;                                      // 0x1090(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxNumberofMeteor;                                 // 0x1098(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_109C[0x4];                                     // 0x109C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FElderDragon_Fire_RainofFireQueryPoint> QueryPoints;                               // 0x10A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FElderDragon_Fire_RainofFireQueryPoint> ValidQueryPoints;                          // 0x10B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FElderDragon_Fire_RainofFireQueryPoint> PickedQueryPoints;                         // 0x10C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AElderDragon_Fire_C*                    Agent;                                             // 0x10D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         Wave_Number;                                       // 0x10D8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentSpawnIndex;                                 // 0x10DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLingeringEffectId                     RainofFireZone;                                    // 0x10E0(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash)
-	int32                                         GridSize;                                          // 0x10F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         DenialLength;                                      // 0x10FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Spawn_Number;                                      // 0x1100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentWaveIndex;                                  // 0x1104(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Timer;                                             // 0x1108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Interval;                                          // 0x1110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1070(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        Max_Range;                                         // 0x1078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Min_Range;                                         // 0x1080(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Denial_Raidus;                                     // 0x1088(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Query_Point_Gap;                                   // 0x1090(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RandomOffset;                                      // 0x1098(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxNumberofMeteor;                                 // 0x10A0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10A4[0x4];                                     // 0x10A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FElderDragon_Fire_RainofFireQueryPoint> QueryPoints;                               // 0x10A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FElderDragon_Fire_RainofFireQueryPoint> ValidQueryPoints;                          // 0x10B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FElderDragon_Fire_RainofFireQueryPoint> PickedQueryPoints;                         // 0x10C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AElderDragon_Fire_C*                    Agent;                                             // 0x10D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         Wave_Number;                                       // 0x10E0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentSpawnIndex;                                 // 0x10E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLingeringEffectId                     RainofFireZone;                                    // 0x10E8(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash)
+	int32                                         GridSize;                                          // 0x1100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         DenialLength;                                      // 0x1104(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Spawn_Number;                                      // 0x1108(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentWaveIndex;                                  // 0x110C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Timer;                                             // 0x1110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Interval;                                          // 0x1118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ABLScript_ElderDragon_Fire_RainofFire(int32 EntryPoint);
@@ -67,27 +67,27 @@ public:
 	}
 };
 static_assert(alignof(UABLScript_ElderDragon_Fire_RainofFire_C) == 0x000008, "Wrong alignment on UABLScript_ElderDragon_Fire_RainofFire_C");
-static_assert(sizeof(UABLScript_ElderDragon_Fire_RainofFire_C) == 0x001118, "Wrong size on UABLScript_ElderDragon_Fire_RainofFire_C");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, UberGraphFrame) == 0x001068, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Max_Range) == 0x001070, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Max_Range' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Min_Range) == 0x001078, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Min_Range' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Denial_Raidus) == 0x001080, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Denial_Raidus' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Query_Point_Gap) == 0x001088, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Query_Point_Gap' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, RandomOffset) == 0x001090, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::RandomOffset' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, MaxNumberofMeteor) == 0x001098, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::MaxNumberofMeteor' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, QueryPoints) == 0x0010A0, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::QueryPoints' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, ValidQueryPoints) == 0x0010B0, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::ValidQueryPoints' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, PickedQueryPoints) == 0x0010C0, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::PickedQueryPoints' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Agent) == 0x0010D0, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Agent' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Wave_Number) == 0x0010D8, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Wave_Number' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, CurrentSpawnIndex) == 0x0010DC, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::CurrentSpawnIndex' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, RainofFireZone) == 0x0010E0, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::RainofFireZone' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, GridSize) == 0x0010F8, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::GridSize' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, DenialLength) == 0x0010FC, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::DenialLength' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Spawn_Number) == 0x001100, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Spawn_Number' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, CurrentWaveIndex) == 0x001104, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::CurrentWaveIndex' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Timer) == 0x001108, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Timer' has a wrong offset!");
-static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Interval) == 0x001110, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Interval' has a wrong offset!");
+static_assert(sizeof(UABLScript_ElderDragon_Fire_RainofFire_C) == 0x001120, "Wrong size on UABLScript_ElderDragon_Fire_RainofFire_C");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, UberGraphFrame) == 0x001070, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Max_Range) == 0x001078, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Max_Range' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Min_Range) == 0x001080, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Min_Range' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Denial_Raidus) == 0x001088, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Denial_Raidus' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Query_Point_Gap) == 0x001090, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Query_Point_Gap' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, RandomOffset) == 0x001098, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::RandomOffset' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, MaxNumberofMeteor) == 0x0010A0, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::MaxNumberofMeteor' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, QueryPoints) == 0x0010A8, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::QueryPoints' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, ValidQueryPoints) == 0x0010B8, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::ValidQueryPoints' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, PickedQueryPoints) == 0x0010C8, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::PickedQueryPoints' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Agent) == 0x0010D8, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Agent' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Wave_Number) == 0x0010E0, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Wave_Number' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, CurrentSpawnIndex) == 0x0010E4, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::CurrentSpawnIndex' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, RainofFireZone) == 0x0010E8, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::RainofFireZone' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, GridSize) == 0x001100, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::GridSize' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, DenialLength) == 0x001104, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::DenialLength' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Spawn_Number) == 0x001108, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Spawn_Number' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, CurrentWaveIndex) == 0x00110C, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::CurrentWaveIndex' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Timer) == 0x001110, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Timer' has a wrong offset!");
+static_assert(offsetof(UABLScript_ElderDragon_Fire_RainofFire_C, Interval) == 0x001118, "Member 'UABLScript_ElderDragon_Fire_RainofFire_C::Interval' has a wrong offset!");
 
 }
 

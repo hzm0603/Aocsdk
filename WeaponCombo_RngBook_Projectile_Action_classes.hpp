@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass WeaponCombo_RngBook_Projectile_Action.WeaponCombo_RngBook_Projectile_Action_C
-// 0x0000 (0x0630 - 0x0630)
+// 0x0000 (0x0638 - 0x0638)
 class AWeaponCombo_RngBook_Projectile_Action_C final : public AWeaponCombo_RngBook_Projectile_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AWeaponCombo_RngBook_Projectile_Action_C) == 0x000008, "Wrong alignment on AWeaponCombo_RngBook_Projectile_Action_C");
-static_assert(sizeof(AWeaponCombo_RngBook_Projectile_Action_C) == 0x000630, "Wrong size on AWeaponCombo_RngBook_Projectile_Action_C");
+static_assert(sizeof(AWeaponCombo_RngBook_Projectile_Action_C) == 0x000638, "Wrong size on AWeaponCombo_RngBook_Projectile_Action_C");
 
 }
 

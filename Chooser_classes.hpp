@@ -67,7 +67,7 @@ static_assert(offsetof(UChooserColumnBool, InputValue) == 0x000050, "Member 'UCh
 static_assert(offsetof(UChooserColumnBool, RowValues) == 0x000060, "Member 'UChooserColumnBool::RowValues' has a wrong offset!");
 
 // Class Chooser.HasContextClass
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IHasContextClass final : public IInterface
 {
 public:
@@ -80,8 +80,8 @@ public:
 		return GetDefaultObjImpl<IHasContextClass>();
 	}
 };
-static_assert(alignof(IHasContextClass) == 0x000008, "Wrong alignment on IHasContextClass");
-static_assert(sizeof(IHasContextClass) == 0x000048, "Wrong size on IHasContextClass");
+static_assert(alignof(IHasContextClass) == 0x000001, "Wrong alignment on IHasContextClass");
+static_assert(sizeof(IHasContextClass) == 0x000001, "Wrong size on IHasContextClass");
 
 // Class Chooser.ChooserParameterEnum_ContextProperty
 // 0x0018 (0x0060 - 0x0048)
@@ -157,7 +157,7 @@ class UChooserColumnFloatRange final : public UObject
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IChooserParameterFloat> InputValue;                                        // 0x0050(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class IChooserParameterFloat> InputValue;                                       // 0x0050(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FChooserFloatRangeRowData>      RowValues;                                         // 0x0060(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
@@ -203,7 +203,7 @@ class UChooserColumnGameplayTag final : public UObject
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IChooserParameterGameplayTag> InputValue;                                        // 0x0050(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class IChooserParameterGameplayTag> InputValue;                                 // 0x0050(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGameplayContainerMatchType                   TagMatchType;                                      // 0x0060(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FGameplayTagContainer>          RowValues;                                         // 0x0068(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -225,7 +225,7 @@ static_assert(offsetof(UChooserColumnGameplayTag, TagMatchType) == 0x000060, "Me
 static_assert(offsetof(UChooserColumnGameplayTag, RowValues) == 0x000068, "Member 'UChooserColumnGameplayTag::RowValues' has a wrong offset!");
 
 // Class Chooser.ChooserColumn
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IChooserColumn final : public IInterface
 {
 public:
@@ -238,11 +238,11 @@ public:
 		return GetDefaultObjImpl<IChooserColumn>();
 	}
 };
-static_assert(alignof(IChooserColumn) == 0x000008, "Wrong alignment on IChooserColumn");
-static_assert(sizeof(IChooserColumn) == 0x000048, "Wrong size on IChooserColumn");
+static_assert(alignof(IChooserColumn) == 0x000001, "Wrong alignment on IChooserColumn");
+static_assert(sizeof(IChooserColumn) == 0x000001, "Wrong size on IChooserColumn");
 
 // Class Chooser.ChooserParameterBool
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IChooserParameterBool final : public IInterface
 {
 public:
@@ -255,11 +255,11 @@ public:
 		return GetDefaultObjImpl<IChooserParameterBool>();
 	}
 };
-static_assert(alignof(IChooserParameterBool) == 0x000008, "Wrong alignment on IChooserParameterBool");
-static_assert(sizeof(IChooserParameterBool) == 0x000048, "Wrong size on IChooserParameterBool");
+static_assert(alignof(IChooserParameterBool) == 0x000001, "Wrong alignment on IChooserParameterBool");
+static_assert(sizeof(IChooserParameterBool) == 0x000001, "Wrong size on IChooserParameterBool");
 
 // Class Chooser.ChooserParameterEnum
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IChooserParameterEnum final : public IInterface
 {
 public:
@@ -272,11 +272,11 @@ public:
 		return GetDefaultObjImpl<IChooserParameterEnum>();
 	}
 };
-static_assert(alignof(IChooserParameterEnum) == 0x000008, "Wrong alignment on IChooserParameterEnum");
-static_assert(sizeof(IChooserParameterEnum) == 0x000048, "Wrong size on IChooserParameterEnum");
+static_assert(alignof(IChooserParameterEnum) == 0x000001, "Wrong alignment on IChooserParameterEnum");
+static_assert(sizeof(IChooserParameterEnum) == 0x000001, "Wrong size on IChooserParameterEnum");
 
 // Class Chooser.ChooserParameterFloat
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IChooserParameterFloat final : public IInterface
 {
 public:
@@ -289,11 +289,11 @@ public:
 		return GetDefaultObjImpl<IChooserParameterFloat>();
 	}
 };
-static_assert(alignof(IChooserParameterFloat) == 0x000008, "Wrong alignment on IChooserParameterFloat");
-static_assert(sizeof(IChooserParameterFloat) == 0x000048, "Wrong size on IChooserParameterFloat");
+static_assert(alignof(IChooserParameterFloat) == 0x000001, "Wrong alignment on IChooserParameterFloat");
+static_assert(sizeof(IChooserParameterFloat) == 0x000001, "Wrong size on IChooserParameterFloat");
 
 // Class Chooser.ChooserParameterGameplayTag
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IChooserParameterGameplayTag final : public IInterface
 {
 public:
@@ -306,11 +306,11 @@ public:
 		return GetDefaultObjImpl<IChooserParameterGameplayTag>();
 	}
 };
-static_assert(alignof(IChooserParameterGameplayTag) == 0x000008, "Wrong alignment on IChooserParameterGameplayTag");
-static_assert(sizeof(IChooserParameterGameplayTag) == 0x000048, "Wrong size on IChooserParameterGameplayTag");
+static_assert(alignof(IChooserParameterGameplayTag) == 0x000001, "Wrong alignment on IChooserParameterGameplayTag");
+static_assert(sizeof(IChooserParameterGameplayTag) == 0x000001, "Wrong size on IChooserParameterGameplayTag");
 
 // Class Chooser.ObjectChooser
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IObjectChooser final : public IInterface
 {
 public:
@@ -323,8 +323,8 @@ public:
 		return GetDefaultObjImpl<IObjectChooser>();
 	}
 };
-static_assert(alignof(IObjectChooser) == 0x000008, "Wrong alignment on IObjectChooser");
-static_assert(sizeof(IObjectChooser) == 0x000048, "Wrong size on IObjectChooser");
+static_assert(alignof(IObjectChooser) == 0x000001, "Wrong alignment on IObjectChooser");
+static_assert(sizeof(IObjectChooser) == 0x000001, "Wrong size on IObjectChooser");
 
 // Class Chooser.ObjectChooser_Asset
 // 0x0010 (0x0058 - 0x0048)

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Ranger_ThunderingShot_Projectile_BP.Ranger_ThunderingShot_Projectile_BP_C
-// 0x0000 (0x0590 - 0x0590)
+// 0x0000 (0x0598 - 0x0598)
 class ARanger_ThunderingShot_Projectile_BP_C final : public AAoCAbilityProjectile
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ARanger_ThunderingShot_Projectile_BP_C) == 0x000008, "Wrong alignment on ARanger_ThunderingShot_Projectile_BP_C");
-static_assert(sizeof(ARanger_ThunderingShot_Projectile_BP_C) == 0x000590, "Wrong size on ARanger_ThunderingShot_Projectile_BP_C");
+static_assert(sizeof(ARanger_ThunderingShot_Projectile_BP_C) == 0x000598, "Wrong size on ARanger_ThunderingShot_Projectile_BP_C");
 
 }
 

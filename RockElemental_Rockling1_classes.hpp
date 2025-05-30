@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass RockElemental_Rockling1.RockElemental_Rockling1_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class ARockElemental_Rockling1_C final : public ARockElemental_Rockling_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ARockElemental_Rockling1_C) == 0x000010, "Wrong alignment on ARockElemental_Rockling1_C");
-static_assert(sizeof(ARockElemental_Rockling1_C) == 0x001DA0, "Wrong size on ARockElemental_Rockling1_C");
+static_assert(sizeof(ARockElemental_Rockling1_C) == 0x001D60, "Wrong size on ARockElemental_Rockling1_C");
 
 }
 

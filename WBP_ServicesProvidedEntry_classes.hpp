@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ServicesProvidedEntry.WBP_ServicesProvidedEntry_C
-// 0x0008 (0x0308 - 0x0300)
+// 0x0008 (0x0338 - 0x0330)
 class UWBP_ServicesProvidedEntry_C final : public UServicesProvidedEntry
 {
 public:
-	class UCommonBorder*                          AlternatingBG;                                     // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          AlternatingBG;                                     // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UCommonBorder* GetBorder();
@@ -37,8 +37,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ServicesProvidedEntry_C) == 0x000008, "Wrong alignment on UWBP_ServicesProvidedEntry_C");
-static_assert(sizeof(UWBP_ServicesProvidedEntry_C) == 0x000308, "Wrong size on UWBP_ServicesProvidedEntry_C");
-static_assert(offsetof(UWBP_ServicesProvidedEntry_C, AlternatingBG) == 0x000300, "Member 'UWBP_ServicesProvidedEntry_C::AlternatingBG' has a wrong offset!");
+static_assert(sizeof(UWBP_ServicesProvidedEntry_C) == 0x000338, "Wrong size on UWBP_ServicesProvidedEntry_C");
+static_assert(offsetof(UWBP_ServicesProvidedEntry_C, AlternatingBG) == 0x000330, "Member 'UWBP_ServicesProvidedEntry_C::AlternatingBG' has a wrong offset!");
 
 }
 

@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Projectile_SpellStaffAOE.BP_Projectile_SpellStaffAOE_C
-// 0x0010 (0x05A0 - 0x0590)
+// 0x0010 (0x05A8 - 0x0598)
 class ABP_Projectile_SpellStaffAOE_C final : public AAoCAbilityProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        Scale;                                             // 0x0598(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        Scale;                                             // 0x05A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Projectile_SpellStaffAOE(int32 EntryPoint);
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_Projectile_SpellStaffAOE_C) == 0x000008, "Wrong alignment on ABP_Projectile_SpellStaffAOE_C");
-static_assert(sizeof(ABP_Projectile_SpellStaffAOE_C) == 0x0005A0, "Wrong size on ABP_Projectile_SpellStaffAOE_C");
-static_assert(offsetof(ABP_Projectile_SpellStaffAOE_C, UberGraphFrame) == 0x000590, "Member 'ABP_Projectile_SpellStaffAOE_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Projectile_SpellStaffAOE_C, Scale) == 0x000598, "Member 'ABP_Projectile_SpellStaffAOE_C::Scale' has a wrong offset!");
+static_assert(sizeof(ABP_Projectile_SpellStaffAOE_C) == 0x0005A8, "Wrong size on ABP_Projectile_SpellStaffAOE_C");
+static_assert(offsetof(ABP_Projectile_SpellStaffAOE_C, UberGraphFrame) == 0x000598, "Member 'ABP_Projectile_SpellStaffAOE_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_Projectile_SpellStaffAOE_C, Scale) == 0x0005A0, "Member 'ABP_Projectile_SpellStaffAOE_C::Scale' has a wrong offset!");
 
 }
 

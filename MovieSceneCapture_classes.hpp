@@ -157,7 +157,7 @@ static_assert(offsetof(UCompositionGraphCaptureProtocol, bDisableScreenPercentag
 static_assert(offsetof(UCompositionGraphCaptureProtocol, PostProcessingMaterialPtr) == 0x0000C0, "Member 'UCompositionGraphCaptureProtocol::PostProcessingMaterialPtr' has a wrong offset!");
 
 // Class MovieSceneCapture.MovieSceneCaptureInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IMovieSceneCaptureInterface final : public IInterface
 {
 public:
@@ -170,8 +170,8 @@ public:
 		return GetDefaultObjImpl<IMovieSceneCaptureInterface>();
 	}
 };
-static_assert(alignof(IMovieSceneCaptureInterface) == 0x000008, "Wrong alignment on IMovieSceneCaptureInterface");
-static_assert(sizeof(IMovieSceneCaptureInterface) == 0x000048, "Wrong size on IMovieSceneCaptureInterface");
+static_assert(alignof(IMovieSceneCaptureInterface) == 0x000001, "Wrong alignment on IMovieSceneCaptureInterface");
+static_assert(sizeof(IMovieSceneCaptureInterface) == 0x000001, "Wrong size on IMovieSceneCaptureInterface");
 
 // Class MovieSceneCapture.FrameGrabberProtocol
 // 0x0010 (0x0088 - 0x0078)

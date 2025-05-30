@@ -45,6 +45,20 @@ void ABP_LandscapeBrushRoadIntersection_C::Add_Grass_Hiding_Spline_Meshes()
 }
 
 
+// Function BP_LandscapeBrushRoadIntersection.BP_LandscapeBrushRoadIntersection_C.Add Middle Path Decals
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_LandscapeBrushRoadIntersection_C::Add_Middle_Path_Decals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LandscapeBrushRoadIntersection_C", "Add Middle Path Decals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_LandscapeBrushRoadIntersection.BP_LandscapeBrushRoadIntersection_C.Adjust Connected Road Endpoints
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -54,6 +68,20 @@ void ABP_LandscapeBrushRoadIntersection_C::Adjust_Connected_Road_Endpoints()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_LandscapeBrushRoadIntersection_C", "Adjust Connected Road Endpoints");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_LandscapeBrushRoadIntersection.BP_LandscapeBrushRoadIntersection_C.Apply Set Dressing
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_LandscapeBrushRoadIntersection_C::Apply_Set_Dressing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LandscapeBrushRoadIntersection_C", "Apply Set Dressing");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -215,6 +243,20 @@ void ABP_LandscapeBrushRoadIntersection_C::Capture_On()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_LandscapeBrushRoadIntersection_C", "Capture On");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_LandscapeBrushRoadIntersection.BP_LandscapeBrushRoadIntersection_C.Clear All PCG Data
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_LandscapeBrushRoadIntersection_C::Clear_All_PCG_Data()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LandscapeBrushRoadIntersection_C", "Clear All PCG Data");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -465,7 +507,7 @@ void ABP_LandscapeBrushRoadIntersection_C::Refresh_Road_Connections()
 
 
 // Function BP_LandscapeBrushRoadIntersection.BP_LandscapeBrushRoadIntersection_C.Update Base Visible Spline Meshes
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_LandscapeBrushRoadIntersection_C::Update_Base_Visible_Spline_Meshes()
 {
@@ -479,7 +521,7 @@ void ABP_LandscapeBrushRoadIntersection_C::Update_Base_Visible_Spline_Meshes()
 
 
 // Function BP_LandscapeBrushRoadIntersection.BP_LandscapeBrushRoadIntersection_C.Update Grass Hiding Spline Meshes
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_LandscapeBrushRoadIntersection_C::Update_Grass_Hiding_Spline_Meshes()
 {
@@ -501,6 +543,20 @@ void ABP_LandscapeBrushRoadIntersection_C::Update_Intersection()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_LandscapeBrushRoadIntersection_C", "Update Intersection");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_LandscapeBrushRoadIntersection.BP_LandscapeBrushRoadIntersection_C.Update PCG Data
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_LandscapeBrushRoadIntersection_C::Update_PCG_Data()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LandscapeBrushRoadIntersection_C", "Update PCG Data");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

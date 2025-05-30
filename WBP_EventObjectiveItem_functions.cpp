@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function WBP_EventObjectiveItem.WBP_EventObjectiveItem_C.ExecuteUbergraph_WBP_EventObjectiveItem
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_EventObjectiveItem.WBP_EventObjectiveItem_C.Setup
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_EventObjectiveItem_C::ExecuteUbergraph_WBP_EventObjectiveItem(int32 EntryPoint)
+void UWBP_EventObjectiveItem_C::Setup()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventObjectiveItem_C", "ExecuteUbergraph_WBP_EventObjectiveItem");
+		Func = Class->GetFunction("WBP_EventObjectiveItem_C", "Setup");
 
-	Params::WBP_EventObjectiveItem_C_ExecuteUbergraph_WBP_EventObjectiveItem Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -57,17 +51,23 @@ void UWBP_EventObjectiveItem_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function WBP_EventObjectiveItem.WBP_EventObjectiveItem_C.Setup
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_EventObjectiveItem.WBP_EventObjectiveItem_C.ExecuteUbergraph_WBP_EventObjectiveItem
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_EventObjectiveItem_C::Setup()
+void UWBP_EventObjectiveItem_C::ExecuteUbergraph_WBP_EventObjectiveItem(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventObjectiveItem_C", "Setup");
+		Func = Class->GetFunction("WBP_EventObjectiveItem_C", "ExecuteUbergraph_WBP_EventObjectiveItem");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_EventObjectiveItem_C_ExecuteUbergraph_WBP_EventObjectiveItem Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

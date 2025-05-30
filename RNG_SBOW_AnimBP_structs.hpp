@@ -16,14 +16,6 @@
 namespace SDK
 {
 
-// ScriptStruct RNG_SBOW_AnimBP.RNG_SBOW_AnimBP_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct RNG_SBOW_AnimBP::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(RNG_SBOW_AnimBP::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on RNG_SBOW_AnimBP::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(RNG_SBOW_AnimBP::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on RNG_SBOW_AnimBP::FAnimBlueprintGeneratedMutableData");
-
 // ScriptStruct RNG_SBOW_AnimBP.RNG_SBOW_AnimBP_C.AnimBlueprintGeneratedConstantData
 // 0x00CF (0x00D0 - 0x0001)
 struct RNG_SBOW_AnimBP::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData

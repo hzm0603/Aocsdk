@@ -116,7 +116,7 @@ public:
 	bool                                          bSupportsTouch;                                    // 0x0015(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TSoftClassPtr<class UClass>>           ControllerData;                                    // 0x0018(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<TSubclassOf<class UCommonInputBaseControllerData>> ControllerDataClasses;                             // 0x0028(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<TSubclassOf<class UCommonInputBaseControllerData>> ControllerDataClasses;                 // 0x0028(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 };
 static_assert(alignof(FCommonInputPlatformBaseData) == 0x000008, "Wrong alignment on FCommonInputPlatformBaseData");
 static_assert(sizeof(FCommonInputPlatformBaseData) == 0x000038, "Wrong size on FCommonInputPlatformBaseData");

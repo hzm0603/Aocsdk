@@ -27,9 +27,9 @@ public:
 	class UCommonTextButton_C*                    ResetWindowsButton;                                // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void ExecuteUbergraph_WBP_HUDEditorResetWindowPositions(int32 EntryPoint);
 	class UCommonBorder* GetBorder();
+	void ExecuteUbergraph_WBP_HUDEditorResetWindowPositions(int32 EntryPoint);
+	void BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 
 public:
 	static class UClass* StaticClass()

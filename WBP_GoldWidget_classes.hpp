@@ -17,12 +17,9 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_GoldWidget.WBP_GoldWidget_C
-// 0x0008 (0x0440 - 0x0438)
+// 0x0000 (0x0448 - 0x0448)
 class UWBP_GoldWidget_C final : public UGoldWidgetBase
 {
-public:
-	class UImage*                                 BGFrame;                                           // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -34,8 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_GoldWidget_C) == 0x000008, "Wrong alignment on UWBP_GoldWidget_C");
-static_assert(sizeof(UWBP_GoldWidget_C) == 0x000440, "Wrong size on UWBP_GoldWidget_C");
-static_assert(offsetof(UWBP_GoldWidget_C, BGFrame) == 0x000438, "Member 'UWBP_GoldWidget_C::BGFrame' has a wrong offset!");
+static_assert(sizeof(UWBP_GoldWidget_C) == 0x000448, "Wrong size on UWBP_GoldWidget_C");
 
 }
 

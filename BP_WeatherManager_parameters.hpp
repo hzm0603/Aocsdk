@@ -10,832 +10,1015 @@
 
 #include "Basic.hpp"
 
-#include "STRUCT_CloudParameters_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Struct_BiomeClimate_structs.hpp"
+#include "E_Weather_HumidityCondition_structs.hpp"
+#include "E_Weather_FogCondition_structs.hpp"
+#include "E_Weather_WindCondition_structs.hpp"
+#include "E_Weather_SnowCondition_structs.hpp"
+#include "E_Weather_RainCondition_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 #include "STRUCT_SingularClimateData_structs.hpp"
-#include "Struct_BiomeClimate_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function BP_WeatherManager.BP_WeatherManager_C.Add Global Noise To Climate
-// 0x0168 (0x0168 - 0x0000)
-struct BP_WeatherManager_C_Add_Global_Noise_To_Climate final
+// Function BP_WeatherManager.BP_WeatherManager_C.Absolute Humidity
+// 0x00A0 (0x00A0 - 0x0000)
+struct BP_WeatherManager_C_Absolute_Humidity final
 {
 public:
-	struct FSingleDayClimate                      Singular_Day_Climate;                              // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm)
-	double                                        TOD_for_Curves;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        In_TOY_in_hours;                                   // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Current_Temp_0;                                    // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Amount_of_Precipitation;                           // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Current_Humidity;                                  // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetPI_ReturnValue;                        // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Random_Chance_Of_Precip_Post_Noise;       // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Sin_ReturnValue;                          // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMin_ReturnValue;                         // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue;          // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue;                         // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMin_ReturnValue_1;                       // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue_1;        // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue_2;        // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_B_ImplicitCast;                      // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_A_ImplicitCast;                      // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Random_Chance_Of_Precip_In_Float_ImplicitCast; // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMin_A_ImplicitCast;                      // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WeatherManager_C_Add_Global_Noise_To_Climate) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Add_Global_Noise_To_Climate");
-static_assert(sizeof(BP_WeatherManager_C_Add_Global_Noise_To_Climate) == 0x000168, "Wrong size on BP_WeatherManager_C_Add_Global_Noise_To_Climate");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, Singular_Day_Climate) == 0x000000, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::Singular_Day_Climate' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, TOD_for_Curves) == 0x000028, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::TOD_for_Curves' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, In_TOY_in_hours) == 0x000030, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::In_TOY_in_hours' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, Current_Temp_0) == 0x000038, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::Current_Temp_0' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, Amount_of_Precipitation) == 0x000040, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::Amount_of_Precipitation' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, Current_Humidity) == 0x000048, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::Current_Humidity' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_GetPI_ReturnValue) == 0x000050, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_GetPI_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000058, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Random_Chance_Of_Precip_Post_Noise) == 0x000060, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Random_Chance_Of_Precip_Post_Noise' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000068, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000070, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000078, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_FClamp_ReturnValue) == 0x000080, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Sin_ReturnValue) == 0x000088, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Sin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_FMin_ReturnValue) == 0x000090, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_FMin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000098, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Conv_DoubleToString_ReturnValue) == 0x0000A0, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Conv_DoubleToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000B0, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Concat_StrStr_ReturnValue) == 0x0000B8, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Lerp_ReturnValue) == 0x0000C8, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_FClamp_ReturnValue_1) == 0x0000D0, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000D8, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0000E0, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0000E8, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_FMin_ReturnValue_1) == 0x0000F0, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_FMin_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Conv_DoubleToString_ReturnValue_1) == 0x0000F8, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Conv_DoubleToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Conv_DoubleToString_ReturnValue_2) == 0x000108, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Conv_DoubleToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000118, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000128, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Lerp_B_ImplicitCast) == 0x000138, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Lerp_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Lerp_A_ImplicitCast) == 0x000140, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Lerp_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000148, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Random_Chance_Of_Precip_In_Float_ImplicitCast) == 0x000150, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Random_Chance_Of_Precip_In_Float_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_FMin_A_ImplicitCast) == 0x000158, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_FMin_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Add_Global_Noise_To_Climate, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000160, "Member 'BP_WeatherManager_C_Add_Global_Noise_To_Climate::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Dew Point
-// 0x0038 (0x0038 - 0x0000)
-struct BP_WeatherManager_C_Calculate_Dew_Point final
-{
-public:
-	double                                        Current_Temp_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Current_Humidity;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DewPoint;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Temp_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Humidity;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Dew_Pont;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Exp_ReturnValue;                          // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Exp_ReturnValue_1;                        // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeatherManager_C_Calculate_Dew_Point) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Calculate_Dew_Point");
-static_assert(sizeof(BP_WeatherManager_C_Calculate_Dew_Point) == 0x000038, "Wrong size on BP_WeatherManager_C_Calculate_Dew_Point");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, Current_Temp_0) == 0x000000, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::Current_Temp_0' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, Current_Humidity) == 0x000008, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::Current_Humidity' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, DewPoint) == 0x000010, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::DewPoint' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000028, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000030, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(BP_WeatherManager_C_Absolute_Humidity) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Absolute_Humidity");
+static_assert(sizeof(BP_WeatherManager_C_Absolute_Humidity) == 0x0000A0, "Wrong size on BP_WeatherManager_C_Absolute_Humidity");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, Normalized_Temp_0) == 0x000000, "Member 'BP_WeatherManager_C_Absolute_Humidity::Normalized_Temp_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, Humidity) == 0x000008, "Member 'BP_WeatherManager_C_Absolute_Humidity::Humidity' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, Dew_Pont) == 0x000010, "Member 'BP_WeatherManager_C_Absolute_Humidity::Dew_Pont' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000028, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000030, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000038, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000040, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000048, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000050, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000058, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000060, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000068, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000070, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Exp_ReturnValue) == 0x000078, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Exp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Exp_ReturnValue_1) == 0x000080, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Exp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x000088, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x000090, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Absolute_Humidity, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x000098, "Member 'BP_WeatherManager_C_Absolute_Humidity::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
 
-// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Weness
-// 0x0020 (0x0020 - 0x0000)
-struct BP_WeatherManager_C_Calculate_Weness final
+// Function BP_WeatherManager.BP_WeatherManager_C.Assign Fog Condition
+// 0x0028 (0x0028 - 0x0000)
+struct BP_WeatherManager_C_Assign_Fog_Condition final
 {
 public:
-	double                                        Precipitation_0;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Fog_in;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_FogCondition                        FogCondition_0;                                    // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Fog;                                               // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2;  // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3;  // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4;  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_2;     // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeatherManager_C_Calculate_Weness) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Calculate_Weness");
-static_assert(sizeof(BP_WeatherManager_C_Calculate_Weness) == 0x000020, "Wrong size on BP_WeatherManager_C_Calculate_Weness");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Weness, Precipitation_0) == 0x000000, "Member 'BP_WeatherManager_C_Calculate_Weness::Precipitation_0' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Weness, ReturnValue) == 0x000008, "Member 'BP_WeatherManager_C_Calculate_Weness::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Weness, CallFunc_Lerp_ReturnValue) == 0x000010, "Member 'BP_WeatherManager_C_Calculate_Weness::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Calculate_Weness, CallFunc_Lerp_ReturnValue_1) == 0x000018, "Member 'BP_WeatherManager_C_Calculate_Weness::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(BP_WeatherManager_C_Assign_Fog_Condition) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Assign_Fog_Condition");
+static_assert(sizeof(BP_WeatherManager_C_Assign_Fog_Condition) == 0x000028, "Wrong size on BP_WeatherManager_C_Assign_Fog_Condition");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, Fog_in) == 0x000000, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::Fog_in' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, FogCondition_0) == 0x000008, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::FogCondition_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, Fog) == 0x000010, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::Fog' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1) == 0x000019, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2) == 0x00001A, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x00001B, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_BooleanAND_ReturnValue) == 0x00001C, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3) == 0x00001D, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x00001E, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_BooleanAND_ReturnValue_1) == 0x00001F, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4) == 0x000020, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue_2) == 0x000021, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Fog_Condition, CallFunc_BooleanAND_ReturnValue_2) == 0x000022, "Member 'BP_WeatherManager_C_Assign_Fog_Condition::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
 
-// Function BP_WeatherManager.BP_WeatherManager_C.Cloud DA to Struct
-// 0x0330 (0x0330 - 0x0000)
-struct BP_WeatherManager_C_Cloud_DA_to_Struct final
-{
-public:
-	class UBPDA_CloudPreset_C*                    Cloud_DA_in;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                StructOut;                                         // 0x0008(0x0190)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                Cloud_Sturct;                                      // 0x0198(0x0190)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FColor                                 CallFunc_Conv_LinearColorToColor_ReturnValue;      // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FColor                                 CallFunc_Conv_LinearColorToColor_ReturnValue_1;    // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WeatherManager_C_Cloud_DA_to_Struct) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Cloud_DA_to_Struct");
-static_assert(sizeof(BP_WeatherManager_C_Cloud_DA_to_Struct) == 0x000330, "Wrong size on BP_WeatherManager_C_Cloud_DA_to_Struct");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_DA_to_Struct, Cloud_DA_in) == 0x000000, "Member 'BP_WeatherManager_C_Cloud_DA_to_Struct::Cloud_DA_in' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_DA_to_Struct, StructOut) == 0x000008, "Member 'BP_WeatherManager_C_Cloud_DA_to_Struct::StructOut' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_DA_to_Struct, Cloud_Sturct) == 0x000198, "Member 'BP_WeatherManager_C_Cloud_DA_to_Struct::Cloud_Sturct' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_DA_to_Struct, CallFunc_Conv_LinearColorToColor_ReturnValue) == 0x000328, "Member 'BP_WeatherManager_C_Cloud_DA_to_Struct::CallFunc_Conv_LinearColorToColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_DA_to_Struct, CallFunc_Conv_LinearColorToColor_ReturnValue_1) == 0x00032C, "Member 'BP_WeatherManager_C_Cloud_DA_to_Struct::CallFunc_Conv_LinearColorToColor_ReturnValue_1' has a wrong offset!");
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Cloud Logic
-// 0x0788 (0x0788 - 0x0000)
-struct BP_WeatherManager_C_Cloud_Logic final
+// Function BP_WeatherManager.BP_WeatherManager_C.Assign Humidity Condition
+// 0x0028 (0x0028 - 0x0000)
+struct BP_WeatherManager_C_Assign_Humidity_Condition final
 {
 public:
 	double                                        Humidity;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Chance_Of_Precipitation;                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DEBUG_Alpha_for_Blend;                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Cloud_Vis_0;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTRUCT_CloudParameters                StructOut;                                         // 0x0020(0x0190)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVerraGlobalSkyVolumetricCloudSettings ReturnValue;                                       // 0x01B0(0x012C)(Parm, OutParm, ReturnParm, NoDestructor)
-	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTRUCT_CloudParameters                Cloud_Blend_B;                                     // 0x02E0(0x0190)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                Cloud_Blend_A;                                     // 0x0470(0x0190)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_601[0x7];                                      // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, float>                      CallFunc_BlendClouds_ReturnValue;                  // 0x0608(0x0050)()
-	struct FVerraGlobalSkyVolumetricCloudSettings CallFunc_ConvertMapToStruct_ReturnValue;           // 0x0658(0x012C)(NoDestructor)
-	float                                         CallFunc_BlendClouds_Alpha_ImplicitCast;           // 0x0784(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_HumidityCondition                   HumidityCondition_0;                               // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Hum;                                               // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2;  // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3;  // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4;  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_2;     // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeatherManager_C_Cloud_Logic) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Cloud_Logic");
-static_assert(sizeof(BP_WeatherManager_C_Cloud_Logic) == 0x000788, "Wrong size on BP_WeatherManager_C_Cloud_Logic");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, Humidity) == 0x000000, "Member 'BP_WeatherManager_C_Cloud_Logic::Humidity' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, Chance_Of_Precipitation) == 0x000008, "Member 'BP_WeatherManager_C_Cloud_Logic::Chance_Of_Precipitation' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, DEBUG_Alpha_for_Blend) == 0x000010, "Member 'BP_WeatherManager_C_Cloud_Logic::DEBUG_Alpha_for_Blend' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, Cloud_Vis_0) == 0x000018, "Member 'BP_WeatherManager_C_Cloud_Logic::Cloud_Vis_0' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, StructOut) == 0x000020, "Member 'BP_WeatherManager_C_Cloud_Logic::StructOut' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, ReturnValue) == 0x0001B0, "Member 'BP_WeatherManager_C_Cloud_Logic::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, Cloud_Blend_B) == 0x0002E0, "Member 'BP_WeatherManager_C_Cloud_Logic::Cloud_Blend_B' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, Cloud_Blend_A) == 0x000470, "Member 'BP_WeatherManager_C_Cloud_Logic::Cloud_Blend_A' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000600, "Member 'BP_WeatherManager_C_Cloud_Logic::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, CallFunc_BlendClouds_ReturnValue) == 0x000608, "Member 'BP_WeatherManager_C_Cloud_Logic::CallFunc_BlendClouds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, CallFunc_ConvertMapToStruct_ReturnValue) == 0x000658, "Member 'BP_WeatherManager_C_Cloud_Logic::CallFunc_ConvertMapToStruct_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Cloud_Logic, CallFunc_BlendClouds_Alpha_ImplicitCast) == 0x000784, "Member 'BP_WeatherManager_C_Cloud_Logic::CallFunc_BlendClouds_Alpha_ImplicitCast' has a wrong offset!");
+static_assert(alignof(BP_WeatherManager_C_Assign_Humidity_Condition) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Assign_Humidity_Condition");
+static_assert(sizeof(BP_WeatherManager_C_Assign_Humidity_Condition) == 0x000028, "Wrong size on BP_WeatherManager_C_Assign_Humidity_Condition");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, Humidity) == 0x000000, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::Humidity' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, HumidityCondition_0) == 0x000008, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::HumidityCondition_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, Hum) == 0x000010, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::Hum' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1) == 0x000019, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2) == 0x00001A, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x00001B, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_BooleanAND_ReturnValue) == 0x00001C, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3) == 0x00001D, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x00001E, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_BooleanAND_ReturnValue_1) == 0x00001F, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4) == 0x000020, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue_2) == 0x000021, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Humidity_Condition, CallFunc_BooleanAND_ReturnValue_2) == 0x000022, "Member 'BP_WeatherManager_C_Assign_Humidity_Condition::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
 
-// Function BP_WeatherManager.BP_WeatherManager_C.Determine Month
-// 0x0020 (0x0020 - 0x0000)
-struct BP_WeatherManager_C_Determine_Month final
-{
-public:
-	double                                        In_Year;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WeatherManager_C_Determine_Month) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Determine_Month");
-static_assert(sizeof(BP_WeatherManager_C_Determine_Month) == 0x000020, "Wrong size on BP_WeatherManager_C_Determine_Month");
-static_assert(offsetof(BP_WeatherManager_C_Determine_Month, In_Year) == 0x000000, "Member 'BP_WeatherManager_C_Determine_Month::In_Year' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Determine_Month, ReturnValue) == 0x000008, "Member 'BP_WeatherManager_C_Determine_Month::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Determine_Month, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_WeatherManager_C_Determine_Month::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Determine_Month, CallFunc_FTrunc_ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_Determine_Month::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-
-// Function BP_WeatherManager.BP_WeatherManager_C.LERP Clouds
-// 0x0760 (0x0760 - 0x0000)
-struct BP_WeatherManager_C_LERP_Clouds final
-{
-public:
-	class UBPDA_CloudPreset_C*                    Clouds_1;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBPDA_CloudPreset_C*                    Clouds_2;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        ALPHA;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBPDA_CloudPreset_C*                    Cloud_Blend;                                       // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                Cloud_Struct_IN;                                   // 0x0020(0x0190)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          because_im_lazy_and_i_said_so;                     // 0x01B0(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBPDA_CloudPreset_C*                    OutputPin;                                         // 0x01B8(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                Cloud_Struct_0;                                    // 0x01C0(0x0190)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                LV_CloudStruct2;                                   // 0x0350(0x0190)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                LV_CloudStruct;                                    // 0x04E0(0x0190)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0670(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0678(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0679(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_67A[0x6];                                      // 0x067A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default;                             // 0x0680(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_1;                           // 0x0688(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x0690(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_2;                       // 0x0698(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x06A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x06A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A2[0x6];                                      // 0x06A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_2;                           // 0x06A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_3;                           // 0x06B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_3;                       // 0x06B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_4;                       // 0x06C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x06C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_5;                              // 0x06C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6CA[0x6];                                      // 0x06CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_4;                           // 0x06D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_5;                           // 0x06D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_5;                       // 0x06E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_6;                       // 0x06E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_6;                              // 0x06F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x06F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6F2[0x6];                                      // 0x06F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_6;                           // 0x06F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_7;                           // 0x0700(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_7;                       // 0x0708(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_8;                              // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_9;                              // 0x0711(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_712[0x6];                                      // 0x0712(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_8;                           // 0x0718(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_9;                           // 0x0720(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_8;                       // 0x0728(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_9;                       // 0x0730(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_10;                             // 0x0738(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_11;                             // 0x0739(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_73A[0x6];                                      // 0x073A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_10;                          // 0x0740(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_11;                          // 0x0748(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_10;                      // 0x0750(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_11;                      // 0x0758(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WeatherManager_C_LERP_Clouds) == 0x000008, "Wrong alignment on BP_WeatherManager_C_LERP_Clouds");
-static_assert(sizeof(BP_WeatherManager_C_LERP_Clouds) == 0x000760, "Wrong size on BP_WeatherManager_C_LERP_Clouds");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Clouds_1) == 0x000000, "Member 'BP_WeatherManager_C_LERP_Clouds::Clouds_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Clouds_2) == 0x000008, "Member 'BP_WeatherManager_C_LERP_Clouds::Clouds_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, ALPHA) == 0x000010, "Member 'BP_WeatherManager_C_LERP_Clouds::ALPHA' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Cloud_Blend) == 0x000018, "Member 'BP_WeatherManager_C_LERP_Clouds::Cloud_Blend' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Cloud_Struct_IN) == 0x000020, "Member 'BP_WeatherManager_C_LERP_Clouds::Cloud_Struct_IN' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, because_im_lazy_and_i_said_so) == 0x0001B0, "Member 'BP_WeatherManager_C_LERP_Clouds::because_im_lazy_and_i_said_so' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, OutputPin) == 0x0001B8, "Member 'BP_WeatherManager_C_LERP_Clouds::OutputPin' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Cloud_Struct_0) == 0x0001C0, "Member 'BP_WeatherManager_C_LERP_Clouds::Cloud_Struct_0' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, LV_CloudStruct2) == 0x000350, "Member 'BP_WeatherManager_C_LERP_Clouds::LV_CloudStruct2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, LV_CloudStruct) == 0x0004E0, "Member 'BP_WeatherManager_C_LERP_Clouds::LV_CloudStruct' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue) == 0x000670, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable) == 0x000678, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_1) == 0x000679, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default) == 0x000680, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_1) == 0x000688, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_1) == 0x000690, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_2) == 0x000698, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_2) == 0x0006A0, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_3) == 0x0006A1, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_2) == 0x0006A8, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_3) == 0x0006B0, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_3) == 0x0006B8, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_4) == 0x0006C0, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_4) == 0x0006C8, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_5) == 0x0006C9, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_4) == 0x0006D0, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_5) == 0x0006D8, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_5' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_5) == 0x0006E0, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_6) == 0x0006E8, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_6) == 0x0006F0, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_6' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_7) == 0x0006F1, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_6) == 0x0006F8, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_6' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_7) == 0x000700, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_7' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_7) == 0x000708, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_8) == 0x000710, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_8' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_9) == 0x000711, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_9' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_8) == 0x000718, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_8' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_9) == 0x000720, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_9' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_8) == 0x000728, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_9) == 0x000730, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_10) == 0x000738, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_10' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, Temp_bool_Variable_11) == 0x000739, "Member 'BP_WeatherManager_C_LERP_Clouds::Temp_bool_Variable_11' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_10) == 0x000740, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_10' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, K2Node_Select_Default_11) == 0x000748, "Member 'BP_WeatherManager_C_LERP_Clouds::K2Node_Select_Default_11' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_10) == 0x000750, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds, CallFunc_Lerp_ReturnValue_11) == 0x000758, "Member 'BP_WeatherManager_C_LERP_Clouds::CallFunc_Lerp_ReturnValue_11' has a wrong offset!");
-
-// Function BP_WeatherManager.BP_WeatherManager_C.LERP Clouds2
-// 0x0BE8 (0x0BE8 - 0x0000)
-struct BP_WeatherManager_C_LERP_Clouds2 final
-{
-public:
-	double                                        ALPHA;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FString, struct FSTRUCT_CloudParameters> CloudPack_0;                                       // 0x0008(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         Cloud_A_Index;                                     // 0x0058(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Cloud_B_Index;                                     // 0x005C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Use_Previous_Struct;                               // 0x0060(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTRUCT_CloudParameters                Previous_Cloud_Blend;                              // 0x0068(0x0190)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                StructOut;                                         // 0x01F8(0x0190)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                LV_Cloud_Struct;                                   // 0x0388(0x0190)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_519[0x7];                                      // 0x0519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSTRUCT_CloudParameters>        CallFunc_Map_Values_Values;                        // 0x0520(0x0010)(ReferenceParm)
-	struct FSTRUCT_CloudParameters                CallFunc_Array_Get_Item;                           // 0x0530(0x0190)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                CallFunc_Array_Get_Item_1;                         // 0x06C0(0x0190)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                K2Node_Select_Default;                             // 0x0850(0x0190)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x09E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue;                         // 0x09F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x09F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_2;                       // 0x0A00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_3;                       // 0x0A08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_4;                       // 0x0A10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_5;                       // 0x0A18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_6;                       // 0x0A20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_7;                       // 0x0A28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_8;                       // 0x0A30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_9;                       // 0x0A38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_10;                      // 0x0A40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_11;                      // 0x0A48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_12;                      // 0x0A50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_13;                      // 0x0A58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_14;                      // 0x0A60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_15;                      // 0x0A68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_16;                      // 0x0A70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_LinearColorLerp_ReturnValue;              // 0x0A78(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_17;                      // 0x0A88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_18;                      // 0x0A90(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_19;                      // 0x0A98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_20;                      // 0x0AA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_21;                      // 0x0AA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_22;                      // 0x0AB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_23;                      // 0x0AB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_24;                      // 0x0AC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_25;                      // 0x0AC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_26;                      // 0x0AD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_27;                      // 0x0AD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_28;                      // 0x0AE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_LinearColorLerp_ReturnValue_1;            // 0x0AE8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_29;                      // 0x0AF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_30;                      // 0x0B00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_31;                      // 0x0B08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_32;                      // 0x0B10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_1;    // 0x0B18(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_2;    // 0x0B28(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_LinearColorLerp_ReturnValue_2;            // 0x0B38(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_33;                      // 0x0B48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FColor                                 CallFunc_Conv_LinearColorToColor_ReturnValue;      // 0x0B50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B54[0x4];                                      // 0x0B54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Lerp_ReturnValue_34;                      // 0x0B58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_35;                      // 0x0B60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_36;                      // 0x0B68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_37;                      // 0x0B70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_38;                      // 0x0B78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_39;                      // 0x0B80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_40;                      // 0x0B88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_41;                      // 0x0B90(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_42;                      // 0x0B98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_43;                      // 0x0BA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_44;                      // 0x0BA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_3;    // 0x0BB0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_LinearColorLerp_ReturnValue_3;            // 0x0BC0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FColor                                 CallFunc_Conv_LinearColorToColor_ReturnValue_1;    // 0x0BD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_LinearColorLerp_Alpha_ImplicitCast;       // 0x0BD4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_LinearColorLerp_Alpha_ImplicitCast_1;     // 0x0BD8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_LinearColorLerp_Alpha_ImplicitCast_2;     // 0x0BDC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_LinearColorLerp_Alpha_ImplicitCast_3;     // 0x0BE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WeatherManager_C_LERP_Clouds2) == 0x000008, "Wrong alignment on BP_WeatherManager_C_LERP_Clouds2");
-static_assert(sizeof(BP_WeatherManager_C_LERP_Clouds2) == 0x000BE8, "Wrong size on BP_WeatherManager_C_LERP_Clouds2");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, ALPHA) == 0x000000, "Member 'BP_WeatherManager_C_LERP_Clouds2::ALPHA' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CloudPack_0) == 0x000008, "Member 'BP_WeatherManager_C_LERP_Clouds2::CloudPack_0' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, Cloud_A_Index) == 0x000058, "Member 'BP_WeatherManager_C_LERP_Clouds2::Cloud_A_Index' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, Cloud_B_Index) == 0x00005C, "Member 'BP_WeatherManager_C_LERP_Clouds2::Cloud_B_Index' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, Use_Previous_Struct) == 0x000060, "Member 'BP_WeatherManager_C_LERP_Clouds2::Use_Previous_Struct' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, Previous_Cloud_Blend) == 0x000068, "Member 'BP_WeatherManager_C_LERP_Clouds2::Previous_Cloud_Blend' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, StructOut) == 0x0001F8, "Member 'BP_WeatherManager_C_LERP_Clouds2::StructOut' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, LV_Cloud_Struct) == 0x000388, "Member 'BP_WeatherManager_C_LERP_Clouds2::LV_Cloud_Struct' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, Temp_bool_Variable) == 0x000518, "Member 'BP_WeatherManager_C_LERP_Clouds2::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Map_Values_Values) == 0x000520, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Array_Get_Item) == 0x000530, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Array_Get_Item_1) == 0x0006C0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, K2Node_Select_Default) == 0x000850, "Member 'BP_WeatherManager_C_LERP_Clouds2::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Conv_ColorToLinearColor_ReturnValue) == 0x0009E0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Conv_ColorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue) == 0x0009F0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_1) == 0x0009F8, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_2) == 0x000A00, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_3) == 0x000A08, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_4) == 0x000A10, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_5) == 0x000A18, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_6) == 0x000A20, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_7) == 0x000A28, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_8) == 0x000A30, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_9) == 0x000A38, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_10) == 0x000A40, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_11) == 0x000A48, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_12) == 0x000A50, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_13) == 0x000A58, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_14) == 0x000A60, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_15) == 0x000A68, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_16) == 0x000A70, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_LinearColorLerp_ReturnValue) == 0x000A78, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_LinearColorLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_17) == 0x000A88, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_18) == 0x000A90, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_19) == 0x000A98, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_20) == 0x000AA0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_20' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_21) == 0x000AA8, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_21' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_22) == 0x000AB0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_22' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_23) == 0x000AB8, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_23' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_24) == 0x000AC0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_24' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_25) == 0x000AC8, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_25' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_26) == 0x000AD0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_26' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_27) == 0x000AD8, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_27' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_28) == 0x000AE0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_28' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_LinearColorLerp_ReturnValue_1) == 0x000AE8, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_LinearColorLerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_29) == 0x000AF8, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_29' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_30) == 0x000B00, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_30' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_31) == 0x000B08, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_31' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_32) == 0x000B10, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_32' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Conv_ColorToLinearColor_ReturnValue_1) == 0x000B18, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Conv_ColorToLinearColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Conv_ColorToLinearColor_ReturnValue_2) == 0x000B28, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Conv_ColorToLinearColor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_LinearColorLerp_ReturnValue_2) == 0x000B38, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_LinearColorLerp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_33) == 0x000B48, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_33' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Conv_LinearColorToColor_ReturnValue) == 0x000B50, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Conv_LinearColorToColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_34) == 0x000B58, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_34' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_35) == 0x000B60, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_35' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_36) == 0x000B68, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_36' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_37) == 0x000B70, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_37' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_38) == 0x000B78, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_38' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_39) == 0x000B80, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_39' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_40) == 0x000B88, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_40' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_41) == 0x000B90, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_41' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_42) == 0x000B98, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_42' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_43) == 0x000BA0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_43' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Lerp_ReturnValue_44) == 0x000BA8, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Lerp_ReturnValue_44' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Conv_ColorToLinearColor_ReturnValue_3) == 0x000BB0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Conv_ColorToLinearColor_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_LinearColorLerp_ReturnValue_3) == 0x000BC0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_LinearColorLerp_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_Conv_LinearColorToColor_ReturnValue_1) == 0x000BD0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_Conv_LinearColorToColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_LinearColorLerp_Alpha_ImplicitCast) == 0x000BD4, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_LinearColorLerp_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_LinearColorLerp_Alpha_ImplicitCast_1) == 0x000BD8, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_LinearColorLerp_Alpha_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_LinearColorLerp_Alpha_ImplicitCast_2) == 0x000BDC, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_LinearColorLerp_Alpha_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_LERP_Clouds2, CallFunc_LinearColorLerp_Alpha_ImplicitCast_3) == 0x000BE0, "Member 'BP_WeatherManager_C_LERP_Clouds2::CallFunc_LinearColorLerp_Alpha_ImplicitCast_3' has a wrong offset!");
-
-// Function BP_WeatherManager.BP_WeatherManager_C.NatrualLog
-// 0x0068 (0x0068 - 0x0000)
-struct BP_WeatherManager_C_NatrualLog final
-{
-public:
-	double                                        Target_Number;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Epsilon;                                           // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Stop_Looping;                                      // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Learning_Rate;                                     // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Guess_Adjustment;                                  // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Difference;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Current_Guess;                                     // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Iteration_Variable;                                // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A[0x2];                                       // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WeatherManager_C_NatrualLog) == 0x000008, "Wrong alignment on BP_WeatherManager_C_NatrualLog");
-static_assert(sizeof(BP_WeatherManager_C_NatrualLog) == 0x000068, "Wrong size on BP_WeatherManager_C_NatrualLog");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, Target_Number) == 0x000000, "Member 'BP_WeatherManager_C_NatrualLog::Target_Number' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, Epsilon) == 0x000008, "Member 'BP_WeatherManager_C_NatrualLog::Epsilon' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, Stop_Looping) == 0x000010, "Member 'BP_WeatherManager_C_NatrualLog::Stop_Looping' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, Learning_Rate) == 0x000018, "Member 'BP_WeatherManager_C_NatrualLog::Learning_Rate' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, Guess_Adjustment) == 0x000020, "Member 'BP_WeatherManager_C_NatrualLog::Guess_Adjustment' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, Difference) == 0x000028, "Member 'BP_WeatherManager_C_NatrualLog::Difference' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, Current_Guess) == 0x000030, "Member 'BP_WeatherManager_C_NatrualLog::Current_Guess' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, Iteration_Variable) == 0x000038, "Member 'BP_WeatherManager_C_NatrualLog::Iteration_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, CallFunc_Abs_ReturnValue) == 0x000040, "Member 'BP_WeatherManager_C_NatrualLog::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, Temp_int_Variable) == 0x000048, "Member 'BP_WeatherManager_C_NatrualLog::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, CallFunc_Abs_ReturnValue_1) == 0x000050, "Member 'BP_WeatherManager_C_NatrualLog::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000058, "Member 'BP_WeatherManager_C_NatrualLog::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000059, "Member 'BP_WeatherManager_C_NatrualLog::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, CallFunc_Add_IntInt_ReturnValue) == 0x00005C, "Member 'BP_WeatherManager_C_NatrualLog::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_NatrualLog, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000060, "Member 'BP_WeatherManager_C_NatrualLog::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Precip Logic
-// 0x0138 (0x0138 - 0x0000)
-struct BP_WeatherManager_C_Precip_Logic final
-{
-public:
-	struct FSTRUCT_SingularClimateData            Singular_Biome_Climate_0;                          // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Current_Temp_0;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Current_AMOUNT_of_Precip;                          // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Current_Humidity;                                  // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBPDA_CloudPreset_C*                    Value;                                             // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_SingularClimateData            Singular_Biome_Climate1;                           // 0x0050(0x0030)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   Output_Get;                                        // 0x0080(0x0018)(Parm, OutParm)
-	bool                                          Should_Precipitate_0;                              // 0x0098(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LV_Current_Humidity;                               // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LV_Modified_Chance_Of_Precip;                      // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_SingularClimateData            LV_Singular_Biome_Climate;                         // 0x00B0(0x0030)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LV_Current_Temp;                                   // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LV_Chance_Of_Precipitation;                        // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LV_Percipitation_Amount;                           // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Array_Get_Item;                           // 0x0100(0x0018)()
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Array_Get_Item_1;                         // 0x0120(0x0018)()
-};
-static_assert(alignof(BP_WeatherManager_C_Precip_Logic) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Precip_Logic");
-static_assert(sizeof(BP_WeatherManager_C_Precip_Logic) == 0x000138, "Wrong size on BP_WeatherManager_C_Precip_Logic");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, Singular_Biome_Climate_0) == 0x000000, "Member 'BP_WeatherManager_C_Precip_Logic::Singular_Biome_Climate_0' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, Current_Temp_0) == 0x000030, "Member 'BP_WeatherManager_C_Precip_Logic::Current_Temp_0' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, Current_AMOUNT_of_Precip) == 0x000038, "Member 'BP_WeatherManager_C_Precip_Logic::Current_AMOUNT_of_Precip' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, Current_Humidity) == 0x000040, "Member 'BP_WeatherManager_C_Precip_Logic::Current_Humidity' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, Value) == 0x000048, "Member 'BP_WeatherManager_C_Precip_Logic::Value' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, Singular_Biome_Climate1) == 0x000050, "Member 'BP_WeatherManager_C_Precip_Logic::Singular_Biome_Climate1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, Output_Get) == 0x000080, "Member 'BP_WeatherManager_C_Precip_Logic::Output_Get' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, Should_Precipitate_0) == 0x000098, "Member 'BP_WeatherManager_C_Precip_Logic::Should_Precipitate_0' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, LV_Current_Humidity) == 0x0000A0, "Member 'BP_WeatherManager_C_Precip_Logic::LV_Current_Humidity' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, LV_Modified_Chance_Of_Precip) == 0x0000A8, "Member 'BP_WeatherManager_C_Precip_Logic::LV_Modified_Chance_Of_Precip' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, LV_Singular_Biome_Climate) == 0x0000B0, "Member 'BP_WeatherManager_C_Precip_Logic::LV_Singular_Biome_Climate' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, LV_Current_Temp) == 0x0000E0, "Member 'BP_WeatherManager_C_Precip_Logic::LV_Current_Temp' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, LV_Chance_Of_Precipitation) == 0x0000E8, "Member 'BP_WeatherManager_C_Precip_Logic::LV_Chance_Of_Precipitation' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, LV_Percipitation_Amount) == 0x0000F0, "Member 'BP_WeatherManager_C_Precip_Logic::LV_Percipitation_Amount' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x0000F8, "Member 'BP_WeatherManager_C_Precip_Logic::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000F9, "Member 'BP_WeatherManager_C_Precip_Logic::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x0000FA, "Member 'BP_WeatherManager_C_Precip_Logic::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, CallFunc_BooleanAND_ReturnValue) == 0x0000FB, "Member 'BP_WeatherManager_C_Precip_Logic::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, CallFunc_Array_Get_Item) == 0x000100, "Member 'BP_WeatherManager_C_Precip_Logic::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, CallFunc_BooleanAND_ReturnValue_1) == 0x000118, "Member 'BP_WeatherManager_C_Precip_Logic::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Precip_Logic, CallFunc_Array_Get_Item_1) == 0x000120, "Member 'BP_WeatherManager_C_Precip_Logic::CallFunc_Array_Get_Item_1' has a wrong offset!");
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Random Chance Of Precip
+// Function BP_WeatherManager.BP_WeatherManager_C.Assign Precipitation Condition
 // 0x0048 (0x0048 - 0x0000)
-struct BP_WeatherManager_C_Random_Chance_Of_Precip final
+struct BP_WeatherManager_C_Assign_Precipitation_Condition final
+{
+public:
+	double                                        Precipitation;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temperature;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_RainCondition                       RainCondition_0;                                   // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_SnowCondition                       SnowCondition_0;                                   // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Precip;                                            // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2;  // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3;  // 0x002F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4;  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_4;        // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_5;        // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_5;  // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_6;  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_7;  // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_8;  // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_2;     // 0x003E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_9;  // 0x003F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_3;     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_10; // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_9;                 // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_10;                // 0x0043(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_11; // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Assign_Precipitation_Condition) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Assign_Precipitation_Condition");
+static_assert(sizeof(BP_WeatherManager_C_Assign_Precipitation_Condition) == 0x000048, "Wrong size on BP_WeatherManager_C_Assign_Precipitation_Condition");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, Precipitation) == 0x000000, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::Precipitation' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, Temperature) == 0x000008, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::Temperature' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, RainCondition_0) == 0x000010, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::RainCondition_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, SnowCondition_0) == 0x000011, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::SnowCondition_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, Precip) == 0x000018, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::Precip' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000021, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_Not_PreBool_ReturnValue) == 0x000022, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_Not_PreBool_ReturnValue_1) == 0x000023, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue) == 0x000024, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue_1) == 0x000025, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue_2) == 0x000026, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue_3) == 0x000027, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000028, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1) == 0x000029, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x00002A, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x00002B, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanOR_ReturnValue) == 0x00002C, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2) == 0x00002D, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue_4) == 0x00002E, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3) == 0x00002F, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4) == 0x000030, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_EqualEqual_ByteByte_ReturnValue_4) == 0x000031, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_EqualEqual_ByteByte_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue_5) == 0x000032, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_EqualEqual_ByteByte_ReturnValue_5) == 0x000033, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_EqualEqual_ByteByte_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanOR_ReturnValue_1) == 0x000034, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue_6) == 0x000035, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_5) == 0x000036, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000037, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_6) == 0x000038, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue_7) == 0x000039, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_7) == 0x00003A, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x00003B, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue_8) == 0x00003C, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_8) == 0x00003D, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue_2) == 0x00003E, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_9) == 0x00003F, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue_3) == 0x000040, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_10) == 0x000041, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue_9) == 0x000042, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_BooleanAND_ReturnValue_10) == 0x000043, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_BooleanAND_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Precipitation_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_11) == 0x000044, "Member 'BP_WeatherManager_C_Assign_Precipitation_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_11' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Assign Weather Conditions
+// 0x0038 (0x0038 - 0x0000)
+struct BP_WeatherManager_C_Assign_Weather_Conditions final
+{
+public:
+	double                                        Temperature;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Precipitation;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Humidity;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Fog;                                               // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wind_Speed;                                        // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_RainCondition                       RainCondition_0;                                   // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_SnowCondition                       SnowCondition_0;                                   // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_WindCondition                       WindCondition_0;                                   // 0x002A(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_HumidityCondition                   HumidityCondition_0;                               // 0x002B(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_FogCondition                        FogCondition_0;                                    // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_RainCondition                       CallFunc_Assign_Precipitation_Condition_RainCondition; // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_SnowCondition                       CallFunc_Assign_Precipitation_Condition_SnowCondition; // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_WindCondition                       CallFunc_Assign_Wind_Condition_WindCondition;      // 0x002F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_FogCondition                        CallFunc_Assign_Fog_Condition_FogCondition;        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_HumidityCondition                   CallFunc_Assign_Humidity_Condition_HumidityCondition; // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Assign_Weather_Conditions) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Assign_Weather_Conditions");
+static_assert(sizeof(BP_WeatherManager_C_Assign_Weather_Conditions) == 0x000038, "Wrong size on BP_WeatherManager_C_Assign_Weather_Conditions");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, Temperature) == 0x000000, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::Temperature' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, Precipitation) == 0x000008, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::Precipitation' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, Humidity) == 0x000010, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::Humidity' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, Fog) == 0x000018, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::Fog' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, Wind_Speed) == 0x000020, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::Wind_Speed' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, RainCondition_0) == 0x000028, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::RainCondition_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, SnowCondition_0) == 0x000029, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::SnowCondition_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, WindCondition_0) == 0x00002A, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::WindCondition_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, HumidityCondition_0) == 0x00002B, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::HumidityCondition_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, FogCondition_0) == 0x00002C, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::FogCondition_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, CallFunc_Assign_Precipitation_Condition_RainCondition) == 0x00002D, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::CallFunc_Assign_Precipitation_Condition_RainCondition' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, CallFunc_Assign_Precipitation_Condition_SnowCondition) == 0x00002E, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::CallFunc_Assign_Precipitation_Condition_SnowCondition' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, CallFunc_Assign_Wind_Condition_WindCondition) == 0x00002F, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::CallFunc_Assign_Wind_Condition_WindCondition' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, CallFunc_Assign_Fog_Condition_FogCondition) == 0x000030, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::CallFunc_Assign_Fog_Condition_FogCondition' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Weather_Conditions, CallFunc_Assign_Humidity_Condition_HumidityCondition) == 0x000031, "Member 'BP_WeatherManager_C_Assign_Weather_Conditions::CallFunc_Assign_Humidity_Condition_HumidityCondition' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Assign Wind Condition
+// 0x0028 (0x0028 - 0x0000)
+struct BP_WeatherManager_C_Assign_Wind_Condition final
+{
+public:
+	double                                        WindSpeed;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Weather_WindCondition                       WindCondition_0;                                   // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Speed;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2;  // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3;  // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_2;     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4;  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Assign_Wind_Condition) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Assign_Wind_Condition");
+static_assert(sizeof(BP_WeatherManager_C_Assign_Wind_Condition) == 0x000028, "Wrong size on BP_WeatherManager_C_Assign_Wind_Condition");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, WindSpeed) == 0x000000, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::WindSpeed' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, WindCondition_0) == 0x000008, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::WindCondition_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, Speed) == 0x000010, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::Speed' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1) == 0x000019, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x00001A, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2) == 0x00001B, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_BooleanAND_ReturnValue) == 0x00001C, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x00001D, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3) == 0x00001E, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_BooleanAND_ReturnValue_1) == 0x00001F, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_LessEqual_DoubleDouble_ReturnValue_2) == 0x000020, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_LessEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4) == 0x000021, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Assign_Wind_Condition, CallFunc_BooleanAND_ReturnValue_2) == 0x000022, "Member 'BP_WeatherManager_C_Assign_Wind_Condition::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Dew Point
+// 0x0050 (0x0050 - 0x0000)
+struct BP_WeatherManager_C_Calculate_Dew_Point final
+{
+public:
+	double                                        Normalized_Temp_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Current_Humidity;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wetness_0;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        NormalizedDewPoint;                                // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Calculate_Dew_Point) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Calculate_Dew_Point");
+static_assert(sizeof(BP_WeatherManager_C_Calculate_Dew_Point) == 0x000050, "Wrong size on BP_WeatherManager_C_Calculate_Dew_Point");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, Normalized_Temp_0) == 0x000000, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::Normalized_Temp_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, Current_Humidity) == 0x000008, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::Current_Humidity' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, Wetness_0) == 0x000010, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::Wetness_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, NormalizedDewPoint) == 0x000018, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::NormalizedDewPoint' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000028, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000030, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000038, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000040, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Dew_Point, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000048, "Member 'BP_WeatherManager_C_Calculate_Dew_Point::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Humidity
+// 0x0068 (0x0068 - 0x0000)
+struct BP_WeatherManager_C_Calculate_Humidity final
+{
+public:
+	double                                        Humidity;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        In_Time_of_Year_in_hours;                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wetness_0;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Temp_0;                                 // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RetHumidity_0;                                     // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Random_Weather_Flucuations_Post_Noise;    // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Calculate_Humidity) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Calculate_Humidity");
+static_assert(sizeof(BP_WeatherManager_C_Calculate_Humidity) == 0x000068, "Wrong size on BP_WeatherManager_C_Calculate_Humidity");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, Humidity) == 0x000000, "Member 'BP_WeatherManager_C_Calculate_Humidity::Humidity' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, In_Time_of_Year_in_hours) == 0x000008, "Member 'BP_WeatherManager_C_Calculate_Humidity::In_Time_of_Year_in_hours' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, Wetness_0) == 0x000010, "Member 'BP_WeatherManager_C_Calculate_Humidity::Wetness_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, Normalized_Temp_0) == 0x000018, "Member 'BP_WeatherManager_C_Calculate_Humidity::Normalized_Temp_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, RetHumidity_0) == 0x000020, "Member 'BP_WeatherManager_C_Calculate_Humidity::RetHumidity_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, ReturnValue) == 0x000028, "Member 'BP_WeatherManager_C_Calculate_Humidity::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000030, "Member 'BP_WeatherManager_C_Calculate_Humidity::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000038, "Member 'BP_WeatherManager_C_Calculate_Humidity::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, CallFunc_Random_Weather_Flucuations_Post_Noise) == 0x000040, "Member 'BP_WeatherManager_C_Calculate_Humidity::CallFunc_Random_Weather_Flucuations_Post_Noise' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000048, "Member 'BP_WeatherManager_C_Calculate_Humidity::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000050, "Member 'BP_WeatherManager_C_Calculate_Humidity::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000058, "Member 'BP_WeatherManager_C_Calculate_Humidity::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Humidity, CallFunc_FClamp_ReturnValue) == 0x000060, "Member 'BP_WeatherManager_C_Calculate_Humidity::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Precipitation
+// 0x0048 (0x0048 - 0x0000)
+struct BP_WeatherManager_C_Calculate_Precipitation final
+{
+public:
+	EBiomeType                                    Current_Biome;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Chance_Of_Precipitation;                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        In_TOY_in_hours;                                   // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        In_Precip_Amount;                                  // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Amount_Of_Precipitation_0;                         // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Random_Weather_Flucuations_Post_Noise;    // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetBiomeNormalizedPrecipAmount_Normalized_Precip_Amount_For_Biome; // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMin_ReturnValue;                         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Calculate_Precipitation) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Calculate_Precipitation");
+static_assert(sizeof(BP_WeatherManager_C_Calculate_Precipitation) == 0x000048, "Wrong size on BP_WeatherManager_C_Calculate_Precipitation");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Precipitation, Current_Biome) == 0x000000, "Member 'BP_WeatherManager_C_Calculate_Precipitation::Current_Biome' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Precipitation, Chance_Of_Precipitation) == 0x000008, "Member 'BP_WeatherManager_C_Calculate_Precipitation::Chance_Of_Precipitation' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Precipitation, In_TOY_in_hours) == 0x000010, "Member 'BP_WeatherManager_C_Calculate_Precipitation::In_TOY_in_hours' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Precipitation, In_Precip_Amount) == 0x000018, "Member 'BP_WeatherManager_C_Calculate_Precipitation::In_Precip_Amount' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Precipitation, Amount_Of_Precipitation_0) == 0x000020, "Member 'BP_WeatherManager_C_Calculate_Precipitation::Amount_Of_Precipitation_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Precipitation, CallFunc_Random_Weather_Flucuations_Post_Noise) == 0x000028, "Member 'BP_WeatherManager_C_Calculate_Precipitation::CallFunc_Random_Weather_Flucuations_Post_Noise' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Precipitation, CallFunc_GetBiomeNormalizedPrecipAmount_Normalized_Precip_Amount_For_Biome) == 0x000030, "Member 'BP_WeatherManager_C_Calculate_Precipitation::CallFunc_GetBiomeNormalizedPrecipAmount_Normalized_Precip_Amount_For_Biome' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Precipitation, CallFunc_FClamp_ReturnValue) == 0x000038, "Member 'BP_WeatherManager_C_Calculate_Precipitation::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Precipitation, CallFunc_FMin_ReturnValue) == 0x000040, "Member 'BP_WeatherManager_C_Calculate_Precipitation::CallFunc_FMin_ReturnValue' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Saturation Point
+// 0x0008 (0x0008 - 0x0000)
+struct BP_WeatherManager_C_Calculate_Saturation_Point final
+{
+public:
+	double                                        Temp;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Calculate_Saturation_Point) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Calculate_Saturation_Point");
+static_assert(sizeof(BP_WeatherManager_C_Calculate_Saturation_Point) == 0x000008, "Wrong size on BP_WeatherManager_C_Calculate_Saturation_Point");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Saturation_Point, Temp) == 0x000000, "Member 'BP_WeatherManager_C_Calculate_Saturation_Point::Temp' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Temperature
+// 0x0118 (0x0118 - 0x0000)
+struct BP_WeatherManager_C_Calculate_Temperature final
+{
+public:
+	double                                        Time_Of_Day_2400;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBiomeType                                    Current_Biome;                                     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Degrees_Low;                                       // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Degrees_High;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Altitude;                               // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        In_Time_of_Year_in_hours;                          // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AmountPrecip;                                      // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DeltaT;                                            // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Current_Temp;                                      // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Modified_Normalized_Temp;                          // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        NonModified_Normalized_Temp;                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              LocalClimate;                                      // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WetnessRet;                                        // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DeltaSec;                                          // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBiomeType                                    Temp_byte_Variable;                                // 0x0078(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Map_Find_Value;                           // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_Map_Find_Value_1;                         // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GaussianCurve_ReturnValue;                // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_ReturnValue;                         // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Wetness_WetnessRet;             // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_3;      // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Random_Weather_Flucuations_Post_Noise;    // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Calculate_Temperature) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Calculate_Temperature");
+static_assert(sizeof(BP_WeatherManager_C_Calculate_Temperature) == 0x000118, "Wrong size on BP_WeatherManager_C_Calculate_Temperature");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, Time_Of_Day_2400) == 0x000000, "Member 'BP_WeatherManager_C_Calculate_Temperature::Time_Of_Day_2400' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, Current_Biome) == 0x000008, "Member 'BP_WeatherManager_C_Calculate_Temperature::Current_Biome' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, Degrees_Low) == 0x000010, "Member 'BP_WeatherManager_C_Calculate_Temperature::Degrees_Low' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, Degrees_High) == 0x000018, "Member 'BP_WeatherManager_C_Calculate_Temperature::Degrees_High' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, Normalized_Altitude) == 0x000020, "Member 'BP_WeatherManager_C_Calculate_Temperature::Normalized_Altitude' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, In_Time_of_Year_in_hours) == 0x000028, "Member 'BP_WeatherManager_C_Calculate_Temperature::In_Time_of_Year_in_hours' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, AmountPrecip) == 0x000030, "Member 'BP_WeatherManager_C_Calculate_Temperature::AmountPrecip' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, DeltaT) == 0x000038, "Member 'BP_WeatherManager_C_Calculate_Temperature::DeltaT' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, Current_Temp) == 0x000040, "Member 'BP_WeatherManager_C_Calculate_Temperature::Current_Temp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, Modified_Normalized_Temp) == 0x000048, "Member 'BP_WeatherManager_C_Calculate_Temperature::Modified_Normalized_Temp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, NonModified_Normalized_Temp) == 0x000050, "Member 'BP_WeatherManager_C_Calculate_Temperature::NonModified_Normalized_Temp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, LocalClimate) == 0x000058, "Member 'BP_WeatherManager_C_Calculate_Temperature::LocalClimate' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, WetnessRet) == 0x000068, "Member 'BP_WeatherManager_C_Calculate_Temperature::WetnessRet' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, DeltaSec) == 0x000070, "Member 'BP_WeatherManager_C_Calculate_Temperature::DeltaSec' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, Temp_byte_Variable) == 0x000078, "Member 'BP_WeatherManager_C_Calculate_Temperature::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000080, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000088, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Map_Find_Value) == 0x000090, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Map_Find_Value_1) == 0x0000A8, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Map_Find_ReturnValue_1) == 0x0000B8, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_GaussianCurve_ReturnValue) == 0x0000C0, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_GaussianCurve_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Lerp_ReturnValue) == 0x0000C8, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Lerp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x0000D0, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000D8, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Calculate_Wetness_WetnessRet) == 0x0000E0, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Calculate_Wetness_WetnessRet' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Subtract_DoubleDouble_ReturnValue_3) == 0x0000F0, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Subtract_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000F8, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Random_Weather_Flucuations_Post_Noise) == 0x000100, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Random_Weather_Flucuations_Post_Noise' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000108, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Temperature, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000110, "Member 'BP_WeatherManager_C_Calculate_Temperature::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Weather
+// 0x0218 (0x0218 - 0x0000)
+struct BP_WeatherManager_C_Calculate_Weather final
+{
+public:
+	struct FSingleDayClimate                      In_Climate;                                        // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm)
+	double                                        Time_Of_Day_2400;                                  // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        In_Time_of_Year_in_hours;                          // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBiomeType                                    Current_Biome;                                     // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideTemp;                                     // 0x0039(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverridePrecip;                                   // 0x003A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideHumidity;                                 // 0x003B(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideFog;                                      // 0x003C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Local_FogIn;                                       // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Delta_Seconds;                                     // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Temp_Return;                            // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Amount_of_Precip_Return;                           // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Humidity_Return;                                   // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_DewPoint_Return;                        // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wetness_Return;                                    // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Local_Fog_Return;                                  // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Cloud_Lerp_Return;                                 // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DeltaT;                                            // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_increasing;                                     // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LocalWetness;                                      // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        NewLocalVar;                                       // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Dew_Point;                              // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Cloud_Lerp;                                        // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Local_Fog;                                         // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_DewPoint;                               // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DewPoint;                                          // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Humidity;                                          // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Amount_of_Precip;                                  // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Temp___Local;                           // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Current_Temp;                                      // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBiomeType                                    Biome;                                             // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TOY_In_Hours;                                      // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TOD_24Hrs;                                         // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSingleDayClimate                      Climate;                                           // 0x0108(0x0028)(Edit, BlueprintVisible)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Absolute_Humidity_Dew_Pont;               // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_162[0x6];                                      // 0x0162(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Dew_Point_NormalizedDewPoint;   // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_CalculateCloudLerp_Cloud_Lerp;            // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Humidity_RetHumidity;           // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Humidity_ReturnValue;           // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Wetness_WetnessRet;             // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Precipitation_Amount_Of_Precipitation; // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Temperature_Current_Temp;       // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Temperature_Modified_Normalized_Temp; // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Temperature_NonModified_Normalized_Temp; // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Humidity_Humidity_ImplicitCast; // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_Humidity_ImplicitCast;          // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_Amount_of_Precip_ImplicitCast;  // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Precipitation_In_Precip_Amount_ImplicitCast; // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Precipitation_Chance_Of_Precipitation_ImplicitCast; // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Temperature_Degrees_High_ImplicitCast; // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_Normalized_Temp___Local_ImplicitCast; // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Calculate_Temperature_Degrees_Low_ImplicitCast; // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Calculate_Weather) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Calculate_Weather");
+static_assert(sizeof(BP_WeatherManager_C_Calculate_Weather) == 0x000218, "Wrong size on BP_WeatherManager_C_Calculate_Weather");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, In_Climate) == 0x000000, "Member 'BP_WeatherManager_C_Calculate_Weather::In_Climate' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Time_Of_Day_2400) == 0x000028, "Member 'BP_WeatherManager_C_Calculate_Weather::Time_Of_Day_2400' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, In_Time_of_Year_in_hours) == 0x000030, "Member 'BP_WeatherManager_C_Calculate_Weather::In_Time_of_Year_in_hours' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Current_Biome) == 0x000038, "Member 'BP_WeatherManager_C_Calculate_Weather::Current_Biome' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, bOverrideTemp) == 0x000039, "Member 'BP_WeatherManager_C_Calculate_Weather::bOverrideTemp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, bOverridePrecip) == 0x00003A, "Member 'BP_WeatherManager_C_Calculate_Weather::bOverridePrecip' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, bOverrideHumidity) == 0x00003B, "Member 'BP_WeatherManager_C_Calculate_Weather::bOverrideHumidity' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, bOverrideFog) == 0x00003C, "Member 'BP_WeatherManager_C_Calculate_Weather::bOverrideFog' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Local_FogIn) == 0x000040, "Member 'BP_WeatherManager_C_Calculate_Weather::Local_FogIn' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Delta_Seconds) == 0x000048, "Member 'BP_WeatherManager_C_Calculate_Weather::Delta_Seconds' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Normalized_Temp_Return) == 0x000050, "Member 'BP_WeatherManager_C_Calculate_Weather::Normalized_Temp_Return' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Amount_of_Precip_Return) == 0x000058, "Member 'BP_WeatherManager_C_Calculate_Weather::Amount_of_Precip_Return' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Humidity_Return) == 0x000060, "Member 'BP_WeatherManager_C_Calculate_Weather::Humidity_Return' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Normalized_DewPoint_Return) == 0x000068, "Member 'BP_WeatherManager_C_Calculate_Weather::Normalized_DewPoint_Return' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Wetness_Return) == 0x000070, "Member 'BP_WeatherManager_C_Calculate_Weather::Wetness_Return' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Local_Fog_Return) == 0x000078, "Member 'BP_WeatherManager_C_Calculate_Weather::Local_Fog_Return' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Cloud_Lerp_Return) == 0x000080, "Member 'BP_WeatherManager_C_Calculate_Weather::Cloud_Lerp_Return' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, DeltaT) == 0x000088, "Member 'BP_WeatherManager_C_Calculate_Weather::DeltaT' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Is_increasing) == 0x000090, "Member 'BP_WeatherManager_C_Calculate_Weather::Is_increasing' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, LocalWetness) == 0x000098, "Member 'BP_WeatherManager_C_Calculate_Weather::LocalWetness' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, NewLocalVar) == 0x0000A0, "Member 'BP_WeatherManager_C_Calculate_Weather::NewLocalVar' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Normalized_Dew_Point) == 0x0000A8, "Member 'BP_WeatherManager_C_Calculate_Weather::Normalized_Dew_Point' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Cloud_Lerp) == 0x0000B0, "Member 'BP_WeatherManager_C_Calculate_Weather::Cloud_Lerp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Local_Fog) == 0x0000B8, "Member 'BP_WeatherManager_C_Calculate_Weather::Local_Fog' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Normalized_DewPoint) == 0x0000C0, "Member 'BP_WeatherManager_C_Calculate_Weather::Normalized_DewPoint' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, DewPoint) == 0x0000C8, "Member 'BP_WeatherManager_C_Calculate_Weather::DewPoint' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Humidity) == 0x0000D0, "Member 'BP_WeatherManager_C_Calculate_Weather::Humidity' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Amount_of_Precip) == 0x0000D8, "Member 'BP_WeatherManager_C_Calculate_Weather::Amount_of_Precip' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Normalized_Temp___Local) == 0x0000E0, "Member 'BP_WeatherManager_C_Calculate_Weather::Normalized_Temp___Local' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Current_Temp) == 0x0000E8, "Member 'BP_WeatherManager_C_Calculate_Weather::Current_Temp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Biome) == 0x0000F0, "Member 'BP_WeatherManager_C_Calculate_Weather::Biome' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, TOY_In_Hours) == 0x0000F8, "Member 'BP_WeatherManager_C_Calculate_Weather::TOY_In_Hours' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, TOD_24Hrs) == 0x000100, "Member 'BP_WeatherManager_C_Calculate_Weather::TOD_24Hrs' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, Climate) == 0x000108, "Member 'BP_WeatherManager_C_Calculate_Weather::Climate' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000130, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Absolute_Humidity_Dew_Pont) == 0x000138, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Absolute_Humidity_Dew_Pont' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Lerp_ReturnValue) == 0x000140, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Lerp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Lerp_ReturnValue_1) == 0x000148, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000150, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000158, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000160, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_BooleanOR_ReturnValue) == 0x000161, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000168, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_FClamp_ReturnValue) == 0x000170, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000178, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000180, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Dew_Point_NormalizedDewPoint) == 0x000188, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Dew_Point_NormalizedDewPoint' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000190, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_CalculateCloudLerp_Cloud_Lerp) == 0x000198, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_CalculateCloudLerp_Cloud_Lerp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Humidity_RetHumidity) == 0x0001A0, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Humidity_RetHumidity' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Humidity_ReturnValue) == 0x0001A8, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Humidity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Wetness_WetnessRet) == 0x0001B0, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Wetness_WetnessRet' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Precipitation_Amount_Of_Precipitation) == 0x0001B8, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Precipitation_Amount_Of_Precipitation' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Temperature_Current_Temp) == 0x0001C0, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Temperature_Current_Temp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Temperature_Modified_Normalized_Temp) == 0x0001C8, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Temperature_Modified_Normalized_Temp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Temperature_NonModified_Normalized_Temp) == 0x0001D0, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Temperature_NonModified_Normalized_Temp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Humidity_Humidity_ImplicitCast) == 0x0001D8, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Humidity_Humidity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, K2Node_VariableSet_Humidity_ImplicitCast) == 0x0001E0, "Member 'BP_WeatherManager_C_Calculate_Weather::K2Node_VariableSet_Humidity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, K2Node_VariableSet_Amount_of_Precip_ImplicitCast) == 0x0001E8, "Member 'BP_WeatherManager_C_Calculate_Weather::K2Node_VariableSet_Amount_of_Precip_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Precipitation_In_Precip_Amount_ImplicitCast) == 0x0001F0, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Precipitation_In_Precip_Amount_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Precipitation_Chance_Of_Precipitation_ImplicitCast) == 0x0001F8, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Precipitation_Chance_Of_Precipitation_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Temperature_Degrees_High_ImplicitCast) == 0x000200, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Temperature_Degrees_High_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, K2Node_VariableSet_Normalized_Temp___Local_ImplicitCast) == 0x000208, "Member 'BP_WeatherManager_C_Calculate_Weather::K2Node_VariableSet_Normalized_Temp___Local_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Weather, CallFunc_Calculate_Temperature_Degrees_Low_ImplicitCast) == 0x000210, "Member 'BP_WeatherManager_C_Calculate_Weather::CallFunc_Calculate_Temperature_Degrees_Low_ImplicitCast' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Calculate Wetness
+// 0x0030 (0x0030 - 0x0000)
+struct BP_WeatherManager_C_Calculate_Wetness final
+{
+public:
+	double                                        Precipitation;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Temp_0;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Wetness_0;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WetnessRet;                                        // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Calculate_Wetness) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Calculate_Wetness");
+static_assert(sizeof(BP_WeatherManager_C_Calculate_Wetness) == 0x000030, "Wrong size on BP_WeatherManager_C_Calculate_Wetness");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Wetness, Precipitation) == 0x000000, "Member 'BP_WeatherManager_C_Calculate_Wetness::Precipitation' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Wetness, Normalized_Temp_0) == 0x000008, "Member 'BP_WeatherManager_C_Calculate_Wetness::Normalized_Temp_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Wetness, Wetness_0) == 0x000010, "Member 'BP_WeatherManager_C_Calculate_Wetness::Wetness_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Wetness, WetnessRet) == 0x000018, "Member 'BP_WeatherManager_C_Calculate_Wetness::WetnessRet' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Wetness, CallFunc_Lerp_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_Calculate_Wetness::CallFunc_Lerp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Calculate_Wetness, CallFunc_Lerp_ReturnValue_1) == 0x000028, "Member 'BP_WeatherManager_C_Calculate_Wetness::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.CalculateCloudLerp
+// 0x0050 (0x0050 - 0x0000)
+struct BP_WeatherManager_C_CalculateCloudLerp final
+{
+public:
+	double                                        Humidity;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Precip;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Sunshine_Hours;                                    // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Cloud_Lerp;                                        // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_CalculateCloudLerp) == 0x000008, "Wrong alignment on BP_WeatherManager_C_CalculateCloudLerp");
+static_assert(sizeof(BP_WeatherManager_C_CalculateCloudLerp) == 0x000050, "Wrong size on BP_WeatherManager_C_CalculateCloudLerp");
+static_assert(offsetof(BP_WeatherManager_C_CalculateCloudLerp, Humidity) == 0x000000, "Member 'BP_WeatherManager_C_CalculateCloudLerp::Humidity' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateCloudLerp, Normalized_Precip) == 0x000008, "Member 'BP_WeatherManager_C_CalculateCloudLerp::Normalized_Precip' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateCloudLerp, Sunshine_Hours) == 0x000010, "Member 'BP_WeatherManager_C_CalculateCloudLerp::Sunshine_Hours' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateCloudLerp, Cloud_Lerp) == 0x000018, "Member 'BP_WeatherManager_C_CalculateCloudLerp::Cloud_Lerp' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateCloudLerp, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_CalculateCloudLerp::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateCloudLerp, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000028, "Member 'BP_WeatherManager_C_CalculateCloudLerp::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateCloudLerp, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000030, "Member 'BP_WeatherManager_C_CalculateCloudLerp::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateCloudLerp, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000038, "Member 'BP_WeatherManager_C_CalculateCloudLerp::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateCloudLerp, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000040, "Member 'BP_WeatherManager_C_CalculateCloudLerp::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateCloudLerp, CallFunc_FClamp_ReturnValue) == 0x000048, "Member 'BP_WeatherManager_C_CalculateCloudLerp::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.CalculateLocalFog
+// 0x0028 (0x0028 - 0x0000)
+struct BP_WeatherManager_C_CalculateLocalFog final
+{
+public:
+	double                                        Normalized_DewPoint;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Temperature;                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Local_Fog;                                         // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_CalculateLocalFog) == 0x000008, "Wrong alignment on BP_WeatherManager_C_CalculateLocalFog");
+static_assert(sizeof(BP_WeatherManager_C_CalculateLocalFog) == 0x000028, "Wrong size on BP_WeatherManager_C_CalculateLocalFog");
+static_assert(offsetof(BP_WeatherManager_C_CalculateLocalFog, Normalized_DewPoint) == 0x000000, "Member 'BP_WeatherManager_C_CalculateLocalFog::Normalized_DewPoint' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateLocalFog, Normalized_Temperature) == 0x000008, "Member 'BP_WeatherManager_C_CalculateLocalFog::Normalized_Temperature' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateLocalFog, Local_Fog) == 0x000010, "Member 'BP_WeatherManager_C_CalculateLocalFog::Local_Fog' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateLocalFog, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_CalculateLocalFog::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateLocalFog, CallFunc_MapRangeClamped_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_CalculateLocalFog::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.CalculateShouldLighting
+// 0x0068 (0x0068 - 0x0000)
+struct BP_WeatherManager_C_CalculateShouldLighting final
+{
+public:
+	bool                                          CouldLightning;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Lerp_A_ImplicitCast;                      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_1;        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_LightningMOD_ImplicitCast;      // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_CalculateShouldLighting) == 0x000008, "Wrong alignment on BP_WeatherManager_C_CalculateShouldLighting");
+static_assert(sizeof(BP_WeatherManager_C_CalculateShouldLighting) == 0x000068, "Wrong size on BP_WeatherManager_C_CalculateShouldLighting");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CouldLightning) == 0x000000, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CouldLightning' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_Lerp_ReturnValue) == 0x000008, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_Lerp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000018, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_FClamp_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_FClamp_ReturnValue_1) == 0x000028, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000030, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1) == 0x000031, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_Lerp_ReturnValue_1) == 0x000038, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_BooleanAND_ReturnValue) == 0x000040, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_Lerp_A_ImplicitCast) == 0x000048, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_Lerp_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x000050, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, CallFunc_Add_DoubleDouble_B_ImplicitCast_1) == 0x000058, "Member 'BP_WeatherManager_C_CalculateShouldLighting::CallFunc_Add_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_CalculateShouldLighting, K2Node_VariableSet_LightningMOD_ImplicitCast) == 0x000060, "Member 'BP_WeatherManager_C_CalculateShouldLighting::K2Node_VariableSet_LightningMOD_ImplicitCast' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.GaussianCurve
+// 0x00D8 (0x00D8 - 0x0000)
+struct BP_WeatherManager_C_GaussianCurve final
+{
+public:
+	struct FVector2D                              Start_Peak;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Time;                                              // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GaussainCore;                                      // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Center;                                            // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WidthScale;                                        // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SigNormalized;                                     // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SigZero;                                           // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Sig;                                               // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Offset;                                            // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Steepness;                                         // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        T;                                                 // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Peak;                                              // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Start;                                             // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X;                          // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_GaussianCurve) == 0x000008, "Wrong alignment on BP_WeatherManager_C_GaussianCurve");
+static_assert(sizeof(BP_WeatherManager_C_GaussianCurve) == 0x0000D8, "Wrong size on BP_WeatherManager_C_GaussianCurve");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, Start_Peak) == 0x000000, "Member 'BP_WeatherManager_C_GaussianCurve::Start_Peak' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, Time) == 0x000010, "Member 'BP_WeatherManager_C_GaussianCurve::Time' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_GaussianCurve::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, GaussainCore) == 0x000020, "Member 'BP_WeatherManager_C_GaussianCurve::GaussainCore' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, Center) == 0x000028, "Member 'BP_WeatherManager_C_GaussianCurve::Center' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, WidthScale) == 0x000030, "Member 'BP_WeatherManager_C_GaussianCurve::WidthScale' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, SigNormalized) == 0x000038, "Member 'BP_WeatherManager_C_GaussianCurve::SigNormalized' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, SigZero) == 0x000040, "Member 'BP_WeatherManager_C_GaussianCurve::SigZero' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, Sig) == 0x000048, "Member 'BP_WeatherManager_C_GaussianCurve::Sig' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, Offset) == 0x000050, "Member 'BP_WeatherManager_C_GaussianCurve::Offset' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, Steepness) == 0x000058, "Member 'BP_WeatherManager_C_GaussianCurve::Steepness' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, T) == 0x000060, "Member 'BP_WeatherManager_C_GaussianCurve::T' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, Peak) == 0x000068, "Member 'BP_WeatherManager_C_GaussianCurve::Peak' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, Start) == 0x000070, "Member 'BP_WeatherManager_C_GaussianCurve::Start' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_BreakVector2D_X) == 0x000078, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_BreakVector2D_Y) == 0x000080, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_FClamp_ReturnValue) == 0x000088, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_FClamp_ReturnValue_1) == 0x000090, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000098, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000A0, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x0000A8, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000B0, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x0000B8, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0000C0, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0000C8, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GaussianCurve, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0000D0, "Member 'BP_WeatherManager_C_GaussianCurve::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Get 0-1 TimeOfDay Normalized
+// 0x0018 (0x0018 - 0x0000)
+struct BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Zero_1_Time_of_Day_Normalized;                     // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized");
+static_assert(sizeof(BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized) == 0x000018, "Wrong size on BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized");
+static_assert(offsetof(BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized, Value) == 0x000000, "Member 'BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized::Value' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized, Zero_1_Time_of_Day_Normalized) == 0x000008, "Member 'BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized::Zero_1_Time_of_Day_Normalized' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized, CallFunc_MapRangeClamped_ReturnValue) == 0x000010, "Member 'BP_WeatherManager_C_Get_0_1_TimeOfDay_Normalized::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.GetBiomeNormalizedPrecipAmount
+// 0x00F0 (0x00F0 - 0x0000)
+struct BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount final
+{
+public:
+	EBiomeType                                    Current_Biome;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        In_Precip;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Normalized_Precip_Amount_For_Biome;                // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBiomeType                                    Temp_byte_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable;                                // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_1;                              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_2;                              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_3;                              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_4;                              // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_5;                              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_6;                              // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_7;                              // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_8;                              // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_9;                              // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_10;                             // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_11;                             // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_12;                             // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_13;                             // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_14;                             // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_15;                             // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_16;                             // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_17;                             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_18;                             // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_19;                             // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_20;                             // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_21;                             // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default;                             // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount) == 0x000008, "Wrong alignment on BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount");
+static_assert(sizeof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount) == 0x0000F0, "Wrong size on BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Current_Biome) == 0x000000, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Current_Biome' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, In_Precip) == 0x000008, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::In_Precip' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Normalized_Precip_Amount_For_Biome) == 0x000010, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Normalized_Precip_Amount_For_Biome' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_byte_Variable) == 0x000018, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable) == 0x000028, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_1) == 0x000030, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_2) == 0x000038, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_3) == 0x000040, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_4) == 0x000048, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_4' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_5) == 0x000050, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_5' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_6) == 0x000058, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_6' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_7) == 0x000060, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_7' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_8) == 0x000068, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_8' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_9) == 0x000070, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_9' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_10) == 0x000078, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_10' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_11) == 0x000080, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_11' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_12) == 0x000088, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_12' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_13) == 0x000090, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_13' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_14) == 0x000098, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_14' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_15) == 0x0000A0, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_15' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_16) == 0x0000A8, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_16' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_17) == 0x0000B0, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_17' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_18) == 0x0000B8, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_18' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_19) == 0x0000C0, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_19' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_20) == 0x0000C8, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_20' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, Temp_real_Variable_21) == 0x0000D0, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::Temp_real_Variable_21' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, K2Node_Select_Default) == 0x0000D8, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0000E0, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'BP_WeatherManager_C_GetBiomeNormalizedPrecipAmount::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+
+// Function BP_WeatherManager.BP_WeatherManager_C.Random Weather Flucuations
+// 0x0050 (0x0050 - 0x0000)
+struct BP_WeatherManager_C_Random_Weather_Flucuations final
 {
 public:
 	double                                        In_Float;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        In_TOY_in_hours;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        In_Time_of_Year_in_hours;                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Post_Noise;                                        // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_MakePerlinNoiseAndRemap_ReturnValue;   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_MakePerlinNoiseAndRemap_Value_ImplicitCast; // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_MakePerlinNoiseAndRemap_ReturnValue;   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_MakePerlinNoiseAndRemap_RangeOutMax_ImplicitCast; // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_MakePerlinNoiseAndRemap_Value_ImplicitCast; // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeatherManager_C_Random_Chance_Of_Precip) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Random_Chance_Of_Precip");
-static_assert(sizeof(BP_WeatherManager_C_Random_Chance_Of_Precip) == 0x000048, "Wrong size on BP_WeatherManager_C_Random_Chance_Of_Precip");
-static_assert(offsetof(BP_WeatherManager_C_Random_Chance_Of_Precip, In_Float) == 0x000000, "Member 'BP_WeatherManager_C_Random_Chance_Of_Precip::In_Float' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Random_Chance_Of_Precip, In_TOY_in_hours) == 0x000008, "Member 'BP_WeatherManager_C_Random_Chance_Of_Precip::In_TOY_in_hours' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Random_Chance_Of_Precip, Post_Noise) == 0x000010, "Member 'BP_WeatherManager_C_Random_Chance_Of_Precip::Post_Noise' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Random_Chance_Of_Precip, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_Random_Chance_Of_Precip::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Random_Chance_Of_Precip, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_Random_Chance_Of_Precip::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Random_Chance_Of_Precip, CallFunc_K2_MakePerlinNoiseAndRemap_ReturnValue) == 0x000028, "Member 'BP_WeatherManager_C_Random_Chance_Of_Precip::CallFunc_K2_MakePerlinNoiseAndRemap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Random_Chance_Of_Precip, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000030, "Member 'BP_WeatherManager_C_Random_Chance_Of_Precip::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Random_Chance_Of_Precip, CallFunc_K2_MakePerlinNoiseAndRemap_Value_ImplicitCast) == 0x000038, "Member 'BP_WeatherManager_C_Random_Chance_Of_Precip::CallFunc_K2_MakePerlinNoiseAndRemap_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Random_Chance_Of_Precip, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000040, "Member 'BP_WeatherManager_C_Random_Chance_Of_Precip::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(alignof(BP_WeatherManager_C_Random_Weather_Flucuations) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Random_Weather_Flucuations");
+static_assert(sizeof(BP_WeatherManager_C_Random_Weather_Flucuations) == 0x000050, "Wrong size on BP_WeatherManager_C_Random_Weather_Flucuations");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, In_Float) == 0x000000, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::In_Float' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, In_Time_of_Year_in_hours) == 0x000008, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::In_Time_of_Year_in_hours' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, Post_Noise) == 0x000010, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::Post_Noise' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000020, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000028, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, CallFunc_K2_MakePerlinNoiseAndRemap_ReturnValue) == 0x000030, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::CallFunc_K2_MakePerlinNoiseAndRemap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000038, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, CallFunc_K2_MakePerlinNoiseAndRemap_RangeOutMax_ImplicitCast) == 0x000040, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::CallFunc_K2_MakePerlinNoiseAndRemap_RangeOutMax_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, CallFunc_K2_MakePerlinNoiseAndRemap_Value_ImplicitCast) == 0x000044, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::CallFunc_K2_MakePerlinNoiseAndRemap_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Random_Weather_Flucuations, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000048, "Member 'BP_WeatherManager_C_Random_Weather_Flucuations::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
-// Function BP_WeatherManager.BP_WeatherManager_C.Run Weather BP Functions
-// 0x0730 (0x0730 - 0x0000)
-struct BP_WeatherManager_C_Run_Weather_BP_Functions final
+// Function BP_WeatherManager.BP_WeatherManager_C.S Curve For Temp
+// 0x0128 (0x0128 - 0x0000)
+struct BP_WeatherManager_C_S_Curve_For_Temp final
 {
 public:
-	struct FSingleDayClimate                      Singular_Day_Climate;                              // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm)
-	double                                        TOD_for_Curves;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        In_TOY_in_hours;                                   // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OverridePrecip;                                    // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OverrideHumidity;                                  // 0x0039(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        NormalizePrecipitation;                            // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        NormalizedTemperature;                             // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Humidity;                                          // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DewPoint;                                          // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DEBUG_CurrentTemp;                                 // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DEBUG_Precipitation_Amount;                        // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DEBUG_CurrentHumidity;                             // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Cloud_Vis_0;                                       // 0x0078(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTRUCT_CloudParameters                StructOut;                                         // 0x0080(0x0190)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVerraGlobalSkyVolumetricCloudSettings CloudScenarioStructOut;                            // 0x0210(0x012C)(Parm, OutParm, NoDestructor)
-	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, float>                      ReturnValue;                                       // 0x0340(0x0050)(Parm, OutParm, ReturnParm)
-	double                                        LV_CurrentPrecip;                                  // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LV_CurrentHumidity;                                // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_Global_Noise_To_Climate_Current_Temp; // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_Global_Noise_To_Climate_Amount_of_Precipitation; // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_Global_Noise_To_Climate_Current_Humidity; // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Calculate_Weness_ReturnValue;             // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Cloud_Logic_DEBUG_Alpha_for_Blend;        // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Cloud_Logic_Cloud_Vis;                    // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTRUCT_CloudParameters                CallFunc_Cloud_Logic_StructOut;                    // 0x03D8(0x0190)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVerraGlobalSkyVolumetricCloudSettings CallFunc_Cloud_Logic_ReturnValue;                  // 0x0568(0x012C)(NoDestructor)
-	bool                                          Temp_bool_Variable;                                // 0x0694(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0695(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_696[0x2];                                      // 0x0696(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0698(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default;                             // 0x06A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x06A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_3;      // 0x06B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x06B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_4;      // 0x06C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x06C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x06D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_5;      // 0x06D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Calculate_Dew_Point_DewPoint;             // 0x06E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x06E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_1;                           // 0x06F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_6;      // 0x06F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_7;      // 0x0700(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0708(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0710(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x0718(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Option_1_ImplicitCast;               // 0x0720(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Option_1_ImplicitCast_1;             // 0x0728(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              Start_Peak;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Time;                                              // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SigNormalized;                                     // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SigZero;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Sig;                                               // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Offset;                                            // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Steepness;                                         // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        T;                                                 // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Peak;                                              // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Start;                                             // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X;                          // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Exp_ReturnValue;                          // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Exp_ReturnValue_1;                        // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_3;      // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Loge_ReturnValue;                         // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_4;      // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_4;        // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeatherManager_C_Run_Weather_BP_Functions) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Run_Weather_BP_Functions");
-static_assert(sizeof(BP_WeatherManager_C_Run_Weather_BP_Functions) == 0x000730, "Wrong size on BP_WeatherManager_C_Run_Weather_BP_Functions");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, Singular_Day_Climate) == 0x000000, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::Singular_Day_Climate' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, TOD_for_Curves) == 0x000028, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::TOD_for_Curves' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, In_TOY_in_hours) == 0x000030, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::In_TOY_in_hours' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, OverridePrecip) == 0x000038, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::OverridePrecip' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, OverrideHumidity) == 0x000039, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::OverrideHumidity' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, NormalizePrecipitation) == 0x000040, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::NormalizePrecipitation' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, NormalizedTemperature) == 0x000048, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::NormalizedTemperature' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, Humidity) == 0x000050, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::Humidity' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, DewPoint) == 0x000058, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::DewPoint' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, DEBUG_CurrentTemp) == 0x000060, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::DEBUG_CurrentTemp' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, DEBUG_Precipitation_Amount) == 0x000068, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::DEBUG_Precipitation_Amount' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, DEBUG_CurrentHumidity) == 0x000070, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::DEBUG_CurrentHumidity' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, Cloud_Vis_0) == 0x000078, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::Cloud_Vis_0' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, StructOut) == 0x000080, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::StructOut' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CloudScenarioStructOut) == 0x000210, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CloudScenarioStructOut' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, ReturnValue) == 0x000340, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, LV_CurrentPrecip) == 0x000390, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::LV_CurrentPrecip' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, LV_CurrentHumidity) == 0x000398, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::LV_CurrentHumidity' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Add_Global_Noise_To_Climate_Current_Temp) == 0x0003A0, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Add_Global_Noise_To_Climate_Current_Temp' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Add_Global_Noise_To_Climate_Amount_of_Precipitation) == 0x0003A8, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Add_Global_Noise_To_Climate_Amount_of_Precipitation' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Add_Global_Noise_To_Climate_Current_Humidity) == 0x0003B0, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Add_Global_Noise_To_Climate_Current_Humidity' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0003B8, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Calculate_Weness_ReturnValue) == 0x0003C0, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Calculate_Weness_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Cloud_Logic_DEBUG_Alpha_for_Blend) == 0x0003C8, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Cloud_Logic_DEBUG_Alpha_for_Blend' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Cloud_Logic_Cloud_Vis) == 0x0003D0, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Cloud_Logic_Cloud_Vis' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Cloud_Logic_StructOut) == 0x0003D8, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Cloud_Logic_StructOut' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Cloud_Logic_ReturnValue) == 0x000568, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Cloud_Logic_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, Temp_bool_Variable) == 0x000694, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, Temp_bool_Variable_1) == 0x000695, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000698, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, K2Node_Select_Default) == 0x0006A0, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x0006A8, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Subtract_DoubleDouble_ReturnValue_3) == 0x0006B0, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Subtract_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0006B8, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Subtract_DoubleDouble_ReturnValue_4) == 0x0006C0, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Subtract_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_FClamp_ReturnValue) == 0x0006C8, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0006D0, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Subtract_DoubleDouble_ReturnValue_5) == 0x0006D8, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Subtract_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Calculate_Dew_Point_DewPoint) == 0x0006E0, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Calculate_Dew_Point_DewPoint' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0006E8, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, K2Node_Select_Default_1) == 0x0006F0, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Subtract_DoubleDouble_ReturnValue_6) == 0x0006F8, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Subtract_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Subtract_DoubleDouble_ReturnValue_7) == 0x000700, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Subtract_DoubleDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000708, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000710, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, CallFunc_MapRangeClamped_ReturnValue) == 0x000718, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, K2Node_Select_Option_1_ImplicitCast) == 0x000720, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::K2Node_Select_Option_1_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Run_Weather_BP_Functions, K2Node_Select_Option_1_ImplicitCast_1) == 0x000728, "Member 'BP_WeatherManager_C_Run_Weather_BP_Functions::K2Node_Select_Option_1_ImplicitCast_1' has a wrong offset!");
-
-// Function BP_WeatherManager.BP_WeatherManager_C.Select Cloud Set
-// 0x0AD8 (0x0AD8 - 0x0000)
-struct BP_WeatherManager_C_Select_Cloud_Set final
-{
-public:
-	TArray<struct FSTRUCT_CloudParameters>        LV_Cloud_Pack;                                     // 0x0000(0x0010)(Edit, BlueprintVisible)
-	TArray<class UBPDA_CloudPreset_C*>            Storm_Array;                                       // 0x0010(0x0010)(Edit, BlueprintVisible)
-	TArray<class UBPDA_CloudPreset_C*>            Overcast_Array;                                    // 0x0020(0x0010)(Edit, BlueprintVisible)
-	TArray<class UBPDA_CloudPreset_C*>            More_Cloud_Array;                                  // 0x0030(0x0010)(Edit, BlueprintVisible)
-	TArray<class UBPDA_CloudPreset_C*>            Partially_Clear_Array;                             // 0x0040(0x0010)(Edit, BlueprintVisible)
-	TArray<class UBPDA_CloudPreset_C*>            Semi_Clear_Array;                                  // 0x0050(0x0010)(Edit, BlueprintVisible)
-	class FString                                 Temp_string_Variable;                              // 0x0060(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTRUCT_CloudParameters                CallFunc_Cloud_DA_to_Struct_StructOut;             // 0x0080(0x0190)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_1;                            // 0x0210(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_LastIndex_ReturnValue_1;            // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBPDA_CloudPreset_C*                    CallFunc_Array_Get_Item;                           // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue_1;       // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTRUCT_CloudParameters                CallFunc_Cloud_DA_to_Struct_StructOut_1;           // 0x0240(0x0190)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBPDA_CloudPreset_C*                    CallFunc_Array_Get_Item_1;                         // 0x03D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_2;                            // 0x03D8(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                CallFunc_Cloud_DA_to_Struct_StructOut_2;           // 0x03E8(0x0190)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_LastIndex_ReturnValue_2;            // 0x0578(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue_2;       // 0x057C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_LastIndex_ReturnValue_3;            // 0x0580(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_584[0x4];                                      // 0x0584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBPDA_CloudPreset_C*                    CallFunc_Array_Get_Item_2;                         // 0x0588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue_3;       // 0x0590(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_594[0x4];                                      // 0x0594(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTRUCT_CloudParameters                CallFunc_Cloud_DA_to_Struct_StructOut_3;           // 0x0598(0x0190)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBPDA_CloudPreset_C*                    CallFunc_Array_Get_Item_3;                         // 0x0728(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                CallFunc_Cloud_DA_to_Struct_StructOut_4;           // 0x0730(0x0190)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_LastIndex_ReturnValue_4;            // 0x08C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C4[0x4];                                      // 0x08C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Temp_string_Variable_3;                            // 0x08C8(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue_4;       // 0x08D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8DC[0x4];                                      // 0x08DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBPDA_CloudPreset_C*                    CallFunc_Array_Get_Item_4;                         // 0x08E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSTRUCT_CloudParameters                CallFunc_Cloud_DA_to_Struct_StructOut_5;           // 0x08E8(0x0190)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_4;                            // 0x0A78(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_5;                            // 0x0A88(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0A98(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9C[0x4];                                      // 0x0A9C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBPDA_CloudPreset_C*                    CallFunc_Array_Get_Item_5;                         // 0x0AA0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0AA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AA9[0x3];                                      // 0x0AA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0AAC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0AB0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_2;            // 0x0AB4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_3;            // 0x0AB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_4;            // 0x0ABC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0AC0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0AD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue_1;                   // 0x0AD1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue_2;                   // 0x0AD2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue_3;                   // 0x0AD3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue_4;                   // 0x0AD4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WeatherManager_C_Select_Cloud_Set) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Select_Cloud_Set");
-static_assert(sizeof(BP_WeatherManager_C_Select_Cloud_Set) == 0x000AD8, "Wrong size on BP_WeatherManager_C_Select_Cloud_Set");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, LV_Cloud_Pack) == 0x000000, "Member 'BP_WeatherManager_C_Select_Cloud_Set::LV_Cloud_Pack' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Storm_Array) == 0x000010, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Storm_Array' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Overcast_Array) == 0x000020, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Overcast_Array' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, More_Cloud_Array) == 0x000030, "Member 'BP_WeatherManager_C_Select_Cloud_Set::More_Cloud_Array' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Partially_Clear_Array) == 0x000040, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Partially_Clear_Array' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Semi_Clear_Array) == 0x000050, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Semi_Clear_Array' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Temp_string_Variable) == 0x000060, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Temp_int_Array_Index_Variable) == 0x000070, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Temp_int_Loop_Counter_Variable) == 0x000074, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Add_IntInt_ReturnValue) == 0x000078, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Cloud_DA_to_Struct_StructOut) == 0x000080, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Cloud_DA_to_Struct_StructOut' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Temp_string_Variable_1) == 0x000210, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Temp_string_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_LastIndex_ReturnValue) == 0x000220, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_RandomIntegerInRange_ReturnValue) == 0x000224, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_RandomIntegerInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_LastIndex_ReturnValue_1) == 0x000228, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_LastIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_Get_Item) == 0x000230, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_RandomIntegerInRange_ReturnValue_1) == 0x000238, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_RandomIntegerInRange_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Cloud_DA_to_Struct_StructOut_1) == 0x000240, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Cloud_DA_to_Struct_StructOut_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_Get_Item_1) == 0x0003D0, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Temp_string_Variable_2) == 0x0003D8, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Temp_string_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Cloud_DA_to_Struct_StructOut_2) == 0x0003E8, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Cloud_DA_to_Struct_StructOut_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_LastIndex_ReturnValue_2) == 0x000578, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_LastIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_RandomIntegerInRange_ReturnValue_2) == 0x00057C, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_RandomIntegerInRange_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_LastIndex_ReturnValue_3) == 0x000580, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_LastIndex_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_Get_Item_2) == 0x000588, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_RandomIntegerInRange_ReturnValue_3) == 0x000590, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_RandomIntegerInRange_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Cloud_DA_to_Struct_StructOut_3) == 0x000598, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Cloud_DA_to_Struct_StructOut_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_Get_Item_3) == 0x000728, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Cloud_DA_to_Struct_StructOut_4) == 0x000730, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Cloud_DA_to_Struct_StructOut_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_LastIndex_ReturnValue_4) == 0x0008C0, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_LastIndex_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Temp_string_Variable_3) == 0x0008C8, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Temp_string_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_RandomIntegerInRange_ReturnValue_4) == 0x0008D8, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_RandomIntegerInRange_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_Get_Item_4) == 0x0008E0, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Cloud_DA_to_Struct_StructOut_5) == 0x0008E8, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Cloud_DA_to_Struct_StructOut_5' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Temp_string_Variable_4) == 0x000A78, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Temp_string_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, Temp_string_Variable_5) == 0x000A88, "Member 'BP_WeatherManager_C_Select_Cloud_Set::Temp_string_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_Length_ReturnValue) == 0x000A98, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_Get_Item_5) == 0x000AA0, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_Get_Item_5' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Less_IntInt_ReturnValue) == 0x000AA8, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_AddUnique_ReturnValue) == 0x000AAC, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000AB0, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_AddUnique_ReturnValue_2) == 0x000AB4, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_AddUnique_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_AddUnique_ReturnValue_3) == 0x000AB8, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_AddUnique_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Array_AddUnique_ReturnValue_4) == 0x000ABC, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Array_AddUnique_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_GetObjectName_ReturnValue) == 0x000AC0, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Contains_ReturnValue) == 0x000AD0, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Contains_ReturnValue_1) == 0x000AD1, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Contains_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Contains_ReturnValue_2) == 0x000AD2, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Contains_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Contains_ReturnValue_3) == 0x000AD3, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Contains_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeatherManager_C_Select_Cloud_Set, CallFunc_Contains_ReturnValue_4) == 0x000AD4, "Member 'BP_WeatherManager_C_Select_Cloud_Set::CallFunc_Contains_ReturnValue_4' has a wrong offset!");
+static_assert(alignof(BP_WeatherManager_C_S_Curve_For_Temp) == 0x000008, "Wrong alignment on BP_WeatherManager_C_S_Curve_For_Temp");
+static_assert(sizeof(BP_WeatherManager_C_S_Curve_For_Temp) == 0x000128, "Wrong size on BP_WeatherManager_C_S_Curve_For_Temp");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, Start_Peak) == 0x000000, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::Start_Peak' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, Time) == 0x000010, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::Time' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, ReturnValue) == 0x000018, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, SigNormalized) == 0x000020, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::SigNormalized' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, SigZero) == 0x000028, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::SigZero' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, Sig) == 0x000030, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::Sig' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, Offset) == 0x000038, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::Offset' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, Steepness) == 0x000040, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::Steepness' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, T) == 0x000048, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::T' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, Peak) == 0x000050, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::Peak' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, Start) == 0x000058, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::Start' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_BreakVector2D_X) == 0x000060, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_BreakVector2D_Y) == 0x000068, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_FClamp_ReturnValue) == 0x000070, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_FClamp_ReturnValue_1) == 0x000078, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000080, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000088, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000090, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000098, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Exp_ReturnValue) == 0x0000A0, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Exp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x0000B0, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0000B8, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0000C0, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x0000C8, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Exp_ReturnValue_1) == 0x0000D0, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Exp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Subtract_DoubleDouble_ReturnValue_3) == 0x0000D8, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Subtract_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000E0, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0000E8, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x0000F0, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_FMax_ReturnValue) == 0x0000F8, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000100, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Loge_ReturnValue) == 0x000108, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Loge_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Subtract_DoubleDouble_ReturnValue_4) == 0x000110, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Subtract_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000118, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_S_Curve_For_Temp, CallFunc_Divide_DoubleDouble_ReturnValue_4) == 0x000120, "Member 'BP_WeatherManager_C_S_Curve_For_Temp::CallFunc_Divide_DoubleDouble_ReturnValue_4' has a wrong offset!");
 
 // Function BP_WeatherManager.BP_WeatherManager_C.Set Days Climate Data
 // 0x01B0 (0x01B0 - 0x0000)
 struct BP_WeatherManager_C_Set_Days_Climate_Data final
 {
 public:
-	struct FStruct_BiomeClimate                   Biome_Data_Struct_0;                               // 0x0000(0x0070)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FStruct_BiomeClimate                   Biome_Data_Struct;                                 // 0x0000(0x0070)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	double                                        Min;                                               // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Max;                                               // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTRUCT_SingularClimateData            StructOut;                                         // 0x0080(0x0030)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -886,7 +1069,7 @@ public:
 };
 static_assert(alignof(BP_WeatherManager_C_Set_Days_Climate_Data) == 0x000008, "Wrong alignment on BP_WeatherManager_C_Set_Days_Climate_Data");
 static_assert(sizeof(BP_WeatherManager_C_Set_Days_Climate_Data) == 0x0001B0, "Wrong size on BP_WeatherManager_C_Set_Days_Climate_Data");
-static_assert(offsetof(BP_WeatherManager_C_Set_Days_Climate_Data, Biome_Data_Struct_0) == 0x000000, "Member 'BP_WeatherManager_C_Set_Days_Climate_Data::Biome_Data_Struct_0' has a wrong offset!");
+static_assert(offsetof(BP_WeatherManager_C_Set_Days_Climate_Data, Biome_Data_Struct) == 0x000000, "Member 'BP_WeatherManager_C_Set_Days_Climate_Data::Biome_Data_Struct' has a wrong offset!");
 static_assert(offsetof(BP_WeatherManager_C_Set_Days_Climate_Data, Min) == 0x000070, "Member 'BP_WeatherManager_C_Set_Days_Climate_Data::Min' has a wrong offset!");
 static_assert(offsetof(BP_WeatherManager_C_Set_Days_Climate_Data, Max) == 0x000078, "Member 'BP_WeatherManager_C_Set_Days_Climate_Data::Max' has a wrong offset!");
 static_assert(offsetof(BP_WeatherManager_C_Set_Days_Climate_Data, StructOut) == 0x000080, "Member 'BP_WeatherManager_C_Set_Days_Climate_Data::StructOut' has a wrong offset!");

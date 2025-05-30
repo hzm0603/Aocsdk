@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MapEventPOIW.WBP_MapEventPOIW_C
-// 0x0008 (0x0A18 - 0x0A10)
+// 0x0008 (0x0A70 - 0x0A68)
 class UWBP_MapEventPOIW_C final : public UMapEventPOIW
 {
 public:
-	class UBorder*                                MainBorder;                                        // 0x0A10(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                MainBorder;                                        // 0x0A68(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MapEventPOIW_C) == 0x000008, "Wrong alignment on UWBP_MapEventPOIW_C");
-static_assert(sizeof(UWBP_MapEventPOIW_C) == 0x000A18, "Wrong size on UWBP_MapEventPOIW_C");
-static_assert(offsetof(UWBP_MapEventPOIW_C, MainBorder) == 0x000A10, "Member 'UWBP_MapEventPOIW_C::MainBorder' has a wrong offset!");
+static_assert(sizeof(UWBP_MapEventPOIW_C) == 0x000A70, "Wrong size on UWBP_MapEventPOIW_C");
+static_assert(offsetof(UWBP_MapEventPOIW_C, MainBorder) == 0x000A68, "Member 'UWBP_MapEventPOIW_C::MainBorder' has a wrong offset!");
 
 }
 

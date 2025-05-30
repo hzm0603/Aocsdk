@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Zombie_Disease_Scholar1.Zombie_Disease_Scholar1_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class AZombie_Disease_Scholar1_C : public AZombie_Disease_Scholar_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AZombie_Disease_Scholar1_C) == 0x000010, "Wrong alignment on AZombie_Disease_Scholar1_C");
-static_assert(sizeof(AZombie_Disease_Scholar1_C) == 0x001DA0, "Wrong size on AZombie_Disease_Scholar1_C");
+static_assert(sizeof(AZombie_Disease_Scholar1_C) == 0x001D60, "Wrong size on AZombie_Disease_Scholar1_C");
 
 }
 

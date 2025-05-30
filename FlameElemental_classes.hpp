@@ -10,22 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "HumanoidMonsterMaster_classes.hpp"
 #include "Engine_structs.hpp"
+#include "HumanoidMonsterMaster_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass FlameElemental.FlameElemental_C
-// 0x0020 (0x1DC0 - 0x1DA0)
+// 0x0020 (0x1D80 - 0x1D60)
 #pragma pack(push, 0x1)
 class alignas(0x10) AFlameElemental_C : public AHumanoidMonsterMaster_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_FlameElemental_C;                   // 0x1DA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_FlameMinion_CFX;                                // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Audio_Loop;                                        // 0x1DB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_FlameElemental_C;                   // 0x1D60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      NS_FlameMinion_CFX;                                // 0x1D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Audio_Loop;                                        // 0x1D70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_FlameElemental(int32 EntryPoint);
@@ -44,10 +44,10 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AFlameElemental_C) == 0x000010, "Wrong alignment on AFlameElemental_C");
-static_assert(sizeof(AFlameElemental_C) == 0x001DC0, "Wrong size on AFlameElemental_C");
-static_assert(offsetof(AFlameElemental_C, UberGraphFrame_FlameElemental_C) == 0x001DA0, "Member 'AFlameElemental_C::UberGraphFrame_FlameElemental_C' has a wrong offset!");
-static_assert(offsetof(AFlameElemental_C, NS_FlameMinion_CFX) == 0x001DA8, "Member 'AFlameElemental_C::NS_FlameMinion_CFX' has a wrong offset!");
-static_assert(offsetof(AFlameElemental_C, Audio_Loop) == 0x001DB0, "Member 'AFlameElemental_C::Audio_Loop' has a wrong offset!");
+static_assert(sizeof(AFlameElemental_C) == 0x001D80, "Wrong size on AFlameElemental_C");
+static_assert(offsetof(AFlameElemental_C, UberGraphFrame_FlameElemental_C) == 0x001D60, "Member 'AFlameElemental_C::UberGraphFrame_FlameElemental_C' has a wrong offset!");
+static_assert(offsetof(AFlameElemental_C, NS_FlameMinion_CFX) == 0x001D68, "Member 'AFlameElemental_C::NS_FlameMinion_CFX' has a wrong offset!");
+static_assert(offsetof(AFlameElemental_C, Audio_Loop) == 0x001D70, "Member 'AFlameElemental_C::Audio_Loop' has a wrong offset!");
 
 }
 

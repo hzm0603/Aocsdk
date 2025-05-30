@@ -40,7 +40,7 @@ public:
 	struct FVector                                RTLocation;                                        // 0x03B8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Rerender_Distance;                                 // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   DMs;                                               // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<TSoftObjectPtr<class ABP_WaterSpline_C>> Rivers;                                            // 0x03E0(0x0010)(Edit, BlueprintVisible)
+	TArray<TSoftObjectPtr<class ABP_WaterSpline_C>> Rivers;                                          // 0x03E0(0x0010)(Edit, BlueprintVisible)
 	TArray<TSoftObjectPtr<class ABP_WaterLake_C>> Lakes;                                             // 0x03F0(0x0010)(Edit, BlueprintVisible)
 	TArray<class ABP_WaterSpline_C*>              RiversToRender;                                    // 0x0400(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TArray<class ABP_WaterLake_C*>                LakesToRender;                                     // 0x0410(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)

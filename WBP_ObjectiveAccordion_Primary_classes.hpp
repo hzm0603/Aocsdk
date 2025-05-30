@@ -26,13 +26,13 @@ public:
 	class UNamedSlot*                             NamedSlot;                                         // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_ObjectiveAccordion_Primary(int32 EntryPoint);
-	class UWidget* GetBreadcrumbWidget();
-	class UPanelWidget* GetButtonContainer();
-	TSubclassOf<class UCommonButtonStyle> GetEvenButtonStyle();
-	TSubclassOf<class UCommonButtonStyle> GetOddButtonStyle();
-	void OnInitialized();
 	void PreConstruct(bool IsDesignTime);
+	void OnInitialized();
+	TSubclassOf<class UCommonButtonStyle> GetOddButtonStyle();
+	TSubclassOf<class UCommonButtonStyle> GetEvenButtonStyle();
+	class UPanelWidget* GetButtonContainer();
+	class UWidget* GetBreadcrumbWidget();
+	void ExecuteUbergraph_WBP_ObjectiveAccordion_Primary(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -18,65 +18,652 @@
 namespace SDK::Params
 {
 
-// Function BP_InteriorVolume.BP_InteriorVolume_C.Brush Begin Overlap
-// 0x0108 (0x0108 - 0x0000)
-struct BP_InteriorVolume_C_Brush_Begin_Overlap final
+// Function BP_InteriorVolume.BP_InteriorVolume_C.UserConstructionScript
+// 0x1310 (0x1310 - 0x0000)
+struct BP_InteriorVolume_C_UserConstructionScript final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0090(0x0018)()
+	int32                                         Temp_int_Variable;                                 // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable;                                // 0x00B0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_2;                               // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UArrowComponent*                        CallFunc_AddComponent_ReturnValue;                 // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0108(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0138(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_1;              // 0x0150(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_1;               // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B9[0x3];                                      // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_3;                               // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_4;                               // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue_1;               // 0x01CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1CD[0x3];                                      // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_5;                               // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             Temp_struct_Variable;                              // 0x01F0(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_2;               // 0x0258(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26A[0x2];                                      // 0x026A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNameHashIndex_ReturnValue;             // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_271[0x3];                                      // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_6;                               // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_2;           // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_279[0x3];                                      // 0x0279(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_7;                 // 0x027C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x02B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x02D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue_2;               // 0x02D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x02D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D4[0x4];                                      // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue_3;               // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x02E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x02E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E3[0x5];                                      // 0x02E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_NegateRotator_ReturnValue;                // 0x02E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_4;               // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue_4;               // 0x0309(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_30A[0x2];                                      // 0x030A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x030C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_Array_Get_Item;                           // 0x0310(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_319[0x7];                                      // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x0320(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x0338(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x0350(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_354[0xC];                                      // 0x0354(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_Array_Get_Item_1;                         // 0x0360(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x03C0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_4A8[0x8];                                      // 0x04A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_SelectTransform_ReturnValue;              // 0x04B0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_3;               // 0x0510(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_2;                // 0x0518(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_2;                // 0x0530(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_2;                   // 0x0548(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0560(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_564[0xC];                                      // 0x0564(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_2;              // 0x0570(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextRenderComponent*                   CallFunc_AddComponent_ReturnValue_4;               // 0x05D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x05D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5DC[0x4];                                      // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x05E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x05F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0608(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0620(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0630(0x0018)()
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_5;               // 0x0648(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0650(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_651[0x7];                                      // 0x0651(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_1;                              // 0x0658(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0660(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_664[0x4];                                      // 0x0664(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x0668(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0680(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_681[0xF];                                      // 0x0681(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_3;              // 0x0690(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_2;                              // 0x06F0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_2;        // 0x06F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue_5;               // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_711[0x3];                                      // 0x0711(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0714(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_2;            // 0x0718(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_3;           // 0x071C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71D[0x3];                                      // 0x071D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_4;              // 0x0720(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_5;              // 0x0780(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          CallFunc_AddComponent_ReturnValue_5;               // 0x07E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_4;          // 0x07E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E9[0x7];                                      // 0x07E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakTransform_Location_3;                // 0x07F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_3;                // 0x0808(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_3;                   // 0x0820(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x0838(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x0920(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_921[0x3];                                      // 0x0921(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x0924(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_4;                // 0x0928(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_4;                // 0x0940(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_4;                   // 0x0958(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_5;                // 0x0970(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_5;                // 0x0988(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_5;                   // 0x09A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_TransformLocation_ReturnValue;            // 0x09B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_TransformLocation_ReturnValue_1;          // 0x09D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          CallFunc_Array_Get_Item_2;                         // 0x09E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_3;         // 0x09F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9F1[0xF];                                      // 0x09F1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetRelativeTransform_ReturnValue;         // 0x0A00(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0A60(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_B48[0x8];                                      // 0x0B48(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Temp_struct_Variable_1;                            // 0x0B50(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_3;            // 0x0BB0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BB4[0x4];                                      // 0x0BB4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_6;               // 0x0BB8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_4;           // 0x0BC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BC1[0x3];                                      // 0x0BC1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x0BC4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_3;        // 0x0BC8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x0BE0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0BF8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0C10(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C28[0x8];                                      // 0x0C28(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_6;              // 0x0C30(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GreaterGreater_VectorRotator_ReturnValue; // 0x0C90(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_7;               // 0x0CA8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Divide_VectorVector_ReturnValue;          // 0x0CB0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x0CC8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Divide_VectorVector_ReturnValue_1;        // 0x0CE0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_4;        // 0x0CF8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0D10(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_2;      // 0x0DF8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_7;              // 0x0E10(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_8;              // 0x0E70(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_8;               // 0x0ED0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_5;        // 0x0ED8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_3;      // 0x0EF0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F08[0x8];                                      // 0x0F08(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_9;              // 0x0F10(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_9;               // 0x0F70(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x0F78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F7C[0x4];                                      // 0x0F7C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_3;                              // 0x0F80(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F88[0x8];                                      // 0x0F88(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_Array_Get_Item_3;                         // 0x0F90(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_7;                  // 0x0FF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FF4[0xC];                                      // 0x0FF4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_SelectTransform_ReturnValue_1;            // 0x1000(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          CallFunc_AddComponent_ReturnValue_10;              // 0x1060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_6;                // 0x1068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_6;                // 0x1080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_6;                   // 0x1098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x10B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10B4[0xC];                                     // 0x10B4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_10;             // 0x10C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x1120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1121[0x7];                                     // 0x1121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextRenderComponent*                   CallFunc_AddComponent_ReturnValue_11;              // 0x1128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentBounds_Origin_1;              // 0x1130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentBounds_BoxExtent_1;           // 0x1148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetComponentBounds_SphereRadius_1;        // 0x1160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_8;                  // 0x1164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_3;           // 0x1168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult_1;     // 0x1180(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Add_ReturnValue_9;                  // 0x1268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x126C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_6;               // 0x1270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x1274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_4;            // 0x1278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x127C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_127D[0x3];                                     // 0x127D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_8;                 // 0x1280(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1284[0xC];                                     // 0x1284(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_11;             // 0x1290(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_5;           // 0x12F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12F1[0x3];                                     // 0x12F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_10;                 // 0x12F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_5;            // 0x12F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_11;                 // 0x12FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_6;           // 0x1300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1301[0x3];                                     // 0x1301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetCustomPrimitiveDataFloat_Value_ImplicitCast; // 0x1304(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetCustomPrimitiveDataFloat_Value_ImplicitCast_1; // 0x1308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_InteriorVolume_C_Brush_Begin_Overlap) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Brush_Begin_Overlap");
-static_assert(sizeof(BP_InteriorVolume_C_Brush_Begin_Overlap) == 0x000108, "Wrong size on BP_InteriorVolume_C_Brush_Begin_Overlap");
-static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, OverlappedComponent) == 0x000000, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, OtherActor) == 0x000008, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, OtherComp) == 0x000010, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, OtherBodyIndex) == 0x000018, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, bFromSweep) == 0x00001C, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::bFromSweep' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, SweepResult) == 0x000020, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::SweepResult' has a wrong offset!");
+static_assert(alignof(BP_InteriorVolume_C_UserConstructionScript) == 0x000010, "Wrong alignment on BP_InteriorVolume_C_UserConstructionScript");
+static_assert(sizeof(BP_InteriorVolume_C_UserConstructionScript) == 0x001310, "Wrong size on BP_InteriorVolume_C_UserConstructionScript");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue) == 0x000010, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_IntToString_ReturnValue) == 0x000070, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Concat_StrStr_ReturnValue) == 0x000080, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_StringToText_ReturnValue) == 0x000090, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable) == 0x0000A8, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue) == 0x0000AC, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_real_Variable) == 0x0000B0, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable_1) == 0x0000B8, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000BC, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue) == 0x0000C0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Loop_Counter_Variable) == 0x0000C4, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_2) == 0x0000C8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue) == 0x0000D0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue) == 0x0000D8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable_2) == 0x0000DC, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_3) == 0x0000E0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue) == 0x0000E4, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue) == 0x0000E8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location) == 0x0000F0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation) == 0x000108, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale) == 0x000120, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000138, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_1) == 0x000150, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_1) == 0x0001B0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0001B8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable_3) == 0x0001BC, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001C0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_4) == 0x0001C4, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable_4) == 0x0001C8, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue_1) == 0x0001CC, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_5) == 0x0001D0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue) == 0x0001D4, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_1) == 0x0001D8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable_5) == 0x0001DC, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_2) == 0x0001E0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_IntInt_ReturnValue) == 0x0001E4, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_6) == 0x0001E8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x0001EC, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_struct_Variable) == 0x0001F0, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000250, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_2) == 0x000258, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue_1) == 0x000260, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_1) == 0x000268, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_2) == 0x000269, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetNameHashIndex_ReturnValue) == 0x00026C, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetNameHashIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x000270, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable_6) == 0x000274, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue_2) == 0x000278, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_7) == 0x00027C, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location_1) == 0x000280, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation_1) == 0x000298, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale_1) == 0x0002B0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue_2) == 0x0002C8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_3) == 0x0002D0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x0002D1, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue_2) == 0x0002D2, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0002D3, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue_3) == 0x0002D8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue_3) == 0x0002E0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_4) == 0x0002E1, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x0002E2, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_NegateRotator_ReturnValue) == 0x0002E8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_NegateRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue_4) == 0x000300, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_5) == 0x000308, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue_4) == 0x000309, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Array_Index_Variable_1) == 0x00030C, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Get_Item) == 0x000310, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000318, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetComponentBounds_Origin) == 0x000320, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetComponentBounds_Origin' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetComponentBounds_BoxExtent) == 0x000338, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetComponentBounds_BoxExtent' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetComponentBounds_SphereRadius) == 0x000350, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetComponentBounds_SphereRadius' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Get_Item_1) == 0x000360, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x0003C0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_SelectTransform_ReturnValue) == 0x0004B0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_SelectTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_3) == 0x000510, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location_2) == 0x000518, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation_2) == 0x000530, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale_2) == 0x000548, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_1) == 0x000560, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_2) == 0x000570, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_4) == 0x0005D0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_2) == 0x0005D8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x0005E0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_IntToString_ReturnValue_1) == 0x0005F8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_VectorVector_ReturnValue) == 0x000608, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000620, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000630, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue_5) == 0x000648, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_6) == 0x000650, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_real_Variable_1) == 0x000658, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_real_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_3) == 0x000660, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x000668, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_7) == 0x000680, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_3) == 0x000690, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_real_Variable_2) == 0x0006F0, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_real_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue_2) == 0x0006F8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue_5) == 0x000710, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_3) == 0x000714, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_IntInt_ReturnValue_2) == 0x000718, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue_3) == 0x00071C, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_4) == 0x000720, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_5) == 0x000780, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_5) == 0x0007E0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_EqualEqual_IntInt_ReturnValue_4) == 0x0007E8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_EqualEqual_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location_3) == 0x0007F0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation_3) == 0x000808, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale_3) == 0x000820, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x000838, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_IsValidIndex_ReturnValue_2) == 0x000920, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_IsValidIndex_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_4) == 0x000924, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location_4) == 0x000928, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation_4) == 0x000940, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale_4) == 0x000958, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location_5) == 0x000970, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation_5) == 0x000988, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale_5) == 0x0009A0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_TransformLocation_ReturnValue) == 0x0009B8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_TransformLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_TransformLocation_ReturnValue_1) == 0x0009D0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_TransformLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Get_Item_2) == 0x0009E8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_IsValidIndex_ReturnValue_3) == 0x0009F0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_IsValidIndex_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetRelativeTransform_ReturnValue) == 0x000A00, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetRelativeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x000A60, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_struct_Variable_1) == 0x000B50, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_IntInt_ReturnValue_3) == 0x000BB0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_6) == 0x000BB8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue_4) == 0x000BC0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_5) == 0x000BC4, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue_3) == 0x000BC8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x000BE0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000BF8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000C10, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_6) == 0x000C30, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GreaterGreater_VectorRotator_ReturnValue) == 0x000C90, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GreaterGreater_VectorRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_7) == 0x000CA8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Divide_VectorVector_ReturnValue) == 0x000CB0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Divide_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_VectorVector_ReturnValue_2) == 0x000CC8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Divide_VectorVector_ReturnValue_1) == 0x000CE0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Divide_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue_4) == 0x000CF8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000D10, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Multiply_VectorVector_ReturnValue_2) == 0x000DF8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Multiply_VectorVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_7) == 0x000E10, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_8) == 0x000E70, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_8) == 0x000ED0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue_5) == 0x000ED8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Multiply_VectorVector_ReturnValue_3) == 0x000EF0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Multiply_VectorVector_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_9) == 0x000F10, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_9) == 0x000F70, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_6) == 0x000F78, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_real_Variable_3) == 0x000F80, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_real_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Get_Item_3) == 0x000F90, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_7) == 0x000FF0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_SelectTransform_ReturnValue_1) == 0x001000, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_SelectTransform_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_10) == 0x001060, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location_6) == 0x001068, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation_6) == 0x001080, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale_6) == 0x001098, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_4) == 0x0010B0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_10) == 0x0010C0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Less_IntInt_ReturnValue) == 0x001120, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_11) == 0x001128, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetComponentBounds_Origin_1) == 0x001130, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetComponentBounds_Origin_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetComponentBounds_BoxExtent_1) == 0x001148, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetComponentBounds_BoxExtent_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetComponentBounds_SphereRadius_1) == 0x001160, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetComponentBounds_SphereRadius_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_8) == 0x001164, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_VectorVector_ReturnValue_3) == 0x001168, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_VectorVector_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_K2_SetWorldLocation_SweepHitResult_1) == 0x001180, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_K2_SetWorldLocation_SweepHitResult_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_9) == 0x001268, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_5) == 0x00126C, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_6) == 0x001270, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Loop_Counter_Variable_1) == 0x001274, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_IntInt_ReturnValue_4) == 0x001278, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Less_IntInt_ReturnValue_1) == 0x00127C, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_8) == 0x001280, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_11) == 0x001290, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue_5) == 0x0012F0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_10) == 0x0012F4, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_IntInt_ReturnValue_5) == 0x0012F8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_11) == 0x0012FC, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue_6) == 0x001300, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_SetCustomPrimitiveDataFloat_Value_ImplicitCast) == 0x001304, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_SetCustomPrimitiveDataFloat_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_SetCustomPrimitiveDataFloat_Value_ImplicitCast_1) == 0x001308, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_SetCustomPrimitiveDataFloat_Value_ImplicitCast_1' has a wrong offset!");
 
-// Function BP_InteriorVolume.BP_InteriorVolume_C.Brush End Overlap
+// Function BP_InteriorVolume.BP_InteriorVolume_C.Update Blending Editor Time
+// 0x00B0 (0x00B0 - 0x0000)
+struct BP_InteriorVolume_C_Update_Blending_Editor_Time final
+{
+public:
+	bool                                          Overlap_;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetEditorCameraPosition_CameraLocation;   // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetEditorCameraPosition_CameraRotation;   // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetClosestPointOnCollision_OutPointOnBody; // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetClosestPointOnCollision_ReturnValue;   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBoxComponent*                          CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetClosestPointOnCollision_OutPointOnBody_1; // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetClosestPointOnCollision_ReturnValue_1; // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue_1;    // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x009E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9F[0x1];                                       // 0x009F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast;   // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1; // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_InteriorVolume_C_Update_Blending_Editor_Time) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Update_Blending_Editor_Time");
+static_assert(sizeof(BP_InteriorVolume_C_Update_Blending_Editor_Time) == 0x0000B0, "Wrong size on BP_InteriorVolume_C_Update_Blending_Editor_Time");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, Overlap_) == 0x000000, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::Overlap_' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_Conv_BoolToDouble_ReturnValue) == 0x000010, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_Conv_BoolToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetEditorCameraPosition_CameraLocation) == 0x000018, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetEditorCameraPosition_CameraLocation' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetEditorCameraPosition_CameraRotation) == 0x000030, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetEditorCameraPosition_CameraRotation' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetClosestPointOnCollision_OutPointOnBody) == 0x000050, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetClosestPointOnCollision_OutPointOnBody' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetClosestPointOnCollision_ReturnValue) == 0x000068, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetClosestPointOnCollision_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x00006C, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_Array_Get_Item) == 0x000070, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_Array_Length_ReturnValue) == 0x000078, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetClosestPointOnCollision_OutPointOnBody_1) == 0x000080, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetClosestPointOnCollision_OutPointOnBody_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetClosestPointOnCollision_ReturnValue_1) == 0x000098, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetClosestPointOnCollision_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_Less_IntInt_ReturnValue) == 0x00009C, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_EqualEqual_DoubleDouble_ReturnValue_1) == 0x00009D, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_EqualEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_BooleanOR_ReturnValue) == 0x00009E, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast) == 0x0000A0, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1) == 0x0000A8, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+
+// Function BP_InteriorVolume.BP_InteriorVolume_C.Toggle Interior Map
 // 0x0020 (0x0020 - 0x0000)
-struct BP_InteriorVolume_C_Brush_End_Overlap final
+struct BP_InteriorVolume_C_Toggle_Interior_Map final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Show;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_InteriorVolume_C_Brush_End_Overlap) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Brush_End_Overlap");
-static_assert(sizeof(BP_InteriorVolume_C_Brush_End_Overlap) == 0x000020, "Wrong size on BP_InteriorVolume_C_Brush_End_Overlap");
-static_assert(offsetof(BP_InteriorVolume_C_Brush_End_Overlap, OverlappedComponent) == 0x000000, "Member 'BP_InteriorVolume_C_Brush_End_Overlap::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Brush_End_Overlap, OtherActor) == 0x000008, "Member 'BP_InteriorVolume_C_Brush_End_Overlap::OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Brush_End_Overlap, OtherComp) == 0x000010, "Member 'BP_InteriorVolume_C_Brush_End_Overlap::OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Brush_End_Overlap, OtherBodyIndex) == 0x000018, "Member 'BP_InteriorVolume_C_Brush_End_Overlap::OtherBodyIndex' has a wrong offset!");
+static_assert(alignof(BP_InteriorVolume_C_Toggle_Interior_Map) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Toggle_Interior_Map");
+static_assert(sizeof(BP_InteriorVolume_C_Toggle_Interior_Map) == 0x000020, "Wrong size on BP_InteriorVolume_C_Toggle_Interior_Map");
+static_assert(offsetof(BP_InteriorVolume_C_Toggle_Interior_Map, Show) == 0x000000, "Member 'BP_InteriorVolume_C_Toggle_Interior_Map::Show' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Toggle_Interior_Map, CallFunc_GetPlayerController_ReturnValue) == 0x000008, "Member 'BP_InteriorVolume_C_Toggle_Interior_Map::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Toggle_Interior_Map, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000010, "Member 'BP_InteriorVolume_C_Toggle_Interior_Map::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Toggle_Interior_Map, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_InteriorVolume_C_Toggle_Interior_Map::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Toggle_Interior_Map, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x000019, "Member 'BP_InteriorVolume_C_Toggle_Interior_Map::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
 
-// Function BP_InteriorVolume.BP_InteriorVolume_C.Catch Initial Overlaps
-// 0x0008 (0x0008 - 0x0000)
-struct BP_InteriorVolume_C_Catch_Initial_Overlaps final
+// Function BP_InteriorVolume.BP_InteriorVolume_C.Start Previewing
+// 0x0001 (0x0001 - 0x0000)
+struct BP_InteriorVolume_C_Start_Previewing final
 {
 public:
-	class UPrimitiveComponent*                    Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_InteriorVolume_C_Catch_Initial_Overlaps) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Catch_Initial_Overlaps");
-static_assert(sizeof(BP_InteriorVolume_C_Catch_Initial_Overlaps) == 0x000008, "Wrong size on BP_InteriorVolume_C_Catch_Initial_Overlaps");
-static_assert(offsetof(BP_InteriorVolume_C_Catch_Initial_Overlaps, Component) == 0x000000, "Member 'BP_InteriorVolume_C_Catch_Initial_Overlaps::Component' has a wrong offset!");
+static_assert(alignof(BP_InteriorVolume_C_Start_Previewing) == 0x000001, "Wrong alignment on BP_InteriorVolume_C_Start_Previewing");
+static_assert(sizeof(BP_InteriorVolume_C_Start_Previewing) == 0x000001, "Wrong size on BP_InteriorVolume_C_Start_Previewing");
+static_assert(offsetof(BP_InteriorVolume_C_Start_Previewing, CallFunc_IsWithEditor_ReturnValue) == 0x000000, "Member 'BP_InteriorVolume_C_Start_Previewing::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
+
+// Function BP_InteriorVolume.BP_InteriorVolume_C.Set Master Value
+// 0x0008 (0x0008 - 0x0000)
+struct BP_InteriorVolume_C_Set_Master_Value final
+{
+public:
+	double                                        Master_Value_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_InteriorVolume_C_Set_Master_Value) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Set_Master_Value");
+static_assert(sizeof(BP_InteriorVolume_C_Set_Master_Value) == 0x000008, "Wrong size on BP_InteriorVolume_C_Set_Master_Value");
+static_assert(offsetof(BP_InteriorVolume_C_Set_Master_Value, Master_Value_0) == 0x000000, "Member 'BP_InteriorVolume_C_Set_Master_Value::Master_Value_0' has a wrong offset!");
+
+// Function BP_InteriorVolume.BP_InteriorVolume_C.RevertToWorldDefaults
+// 0x0038 (0x0038 - 0x0000)
+struct BP_InteriorVolume_C_RevertToWorldDefaults final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_AudioManager_C*                     K2Node_DynamicCast_AsBP_Audio_Manager;             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_InteriorVolume_C_RevertToWorldDefaults) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_RevertToWorldDefaults");
+static_assert(sizeof(BP_InteriorVolume_C_RevertToWorldDefaults) == 0x000038, "Wrong size on BP_InteriorVolume_C_RevertToWorldDefaults");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000008, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_BooleanAND_ReturnValue) == 0x000010, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000018, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_2) == 0x000021, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, K2Node_DynamicCast_AsBP_Audio_Manager) == 0x000028, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::K2Node_DynamicCast_AsBP_Audio_Manager' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000031, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_3) == 0x000032, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+
+// Function BP_InteriorVolume.BP_InteriorVolume_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_InteriorVolume_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_InteriorVolume_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_InteriorVolume_C_ReceiveTick");
+static_assert(sizeof(BP_InteriorVolume_C_ReceiveTick) == 0x000004, "Wrong size on BP_InteriorVolume_C_ReceiveTick");
+static_assert(offsetof(BP_InteriorVolume_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_InteriorVolume_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_InteriorVolume.BP_InteriorVolume_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_InteriorVolume_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_InteriorVolume_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_InteriorVolume_C_ReceiveEndPlay");
+static_assert(sizeof(BP_InteriorVolume_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_InteriorVolume_C_ReceiveEndPlay");
+static_assert(offsetof(BP_InteriorVolume_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_InteriorVolume_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+
+// Function BP_InteriorVolume.BP_InteriorVolume_C.PreviewModifications
+// 0x00C0 (0x00C0 - 0x0000)
+struct BP_InteriorVolume_C_PreviewModifications final
+{
+public:
+	bool                                          Overlap_;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Temp_struct_Variable;                              // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextRenderComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A3[0x5];                                       // 0x00A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_AudioManager_C*                     K2Node_DynamicCast_AsBP_Audio_Manager;             // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x00B8(0x0008)(NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_InteriorVolume_C_PreviewModifications) == 0x000010, "Wrong alignment on BP_InteriorVolume_C_PreviewModifications");
+static_assert(sizeof(BP_InteriorVolume_C_PreviewModifications) == 0x0000C0, "Wrong size on BP_InteriorVolume_C_PreviewModifications");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, Overlap_) == 0x000000, "Member 'BP_InteriorVolume_C_PreviewModifications::Overlap_' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, Temp_struct_Variable) == 0x000010, "Member 'BP_InteriorVolume_C_PreviewModifications::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_IsValid_ReturnValue) == 0x000070, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_AddComponent_ReturnValue) == 0x000078, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_IsValid_ReturnValue_1) == 0x000080, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000088, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_IsValid_ReturnValue_2) == 0x000090, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000098, "Member 'BP_InteriorVolume_C_PreviewModifications::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, K2Node_DynamicCast_bSuccess) == 0x0000A0, "Member 'BP_InteriorVolume_C_PreviewModifications::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_BooleanAND_ReturnValue) == 0x0000A1, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_IsValid_ReturnValue_3) == 0x0000A2, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, K2Node_DynamicCast_AsBP_Audio_Manager) == 0x0000A8, "Member 'BP_InteriorVolume_C_PreviewModifications::K2Node_DynamicCast_AsBP_Audio_Manager' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, K2Node_DynamicCast_bSuccess_1) == 0x0000B0, "Member 'BP_InteriorVolume_C_PreviewModifications::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_K2_SetTimer_ReturnValue) == 0x0000B8, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
+
+// Function BP_InteriorVolume.BP_InteriorVolume_C.PPV Blend
+// 0x0700 (0x0700 - 0x0000)
+struct BP_InteriorVolume_C_PPV_Blend final
+{
+public:
+	float                                         Blend_Weight;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Enabled;                                           // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UIntrepidGameUserSettings*              CallFunc_GetIntrepidGameUserSettings_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetGlobalIlluminationQuality_ReturnValue; // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPostProcessSettings                   K2Node_Select_Default;                             // 0x0020(0x06E0)()
+};
+static_assert(alignof(BP_InteriorVolume_C_PPV_Blend) == 0x000010, "Wrong alignment on BP_InteriorVolume_C_PPV_Blend");
+static_assert(sizeof(BP_InteriorVolume_C_PPV_Blend) == 0x000700, "Wrong size on BP_InteriorVolume_C_PPV_Blend");
+static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, Blend_Weight) == 0x000000, "Member 'BP_InteriorVolume_C_PPV_Blend::Blend_Weight' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, Enabled) == 0x000004, "Member 'BP_InteriorVolume_C_PPV_Blend::Enabled' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, CallFunc_GetIntrepidGameUserSettings_ReturnValue) == 0x000008, "Member 'BP_InteriorVolume_C_PPV_Blend::CallFunc_GetIntrepidGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, Temp_bool_Variable) == 0x000010, "Member 'BP_InteriorVolume_C_PPV_Blend::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, CallFunc_GetGlobalIlluminationQuality_ReturnValue) == 0x000014, "Member 'BP_InteriorVolume_C_PPV_Blend::CallFunc_GetGlobalIlluminationQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000018, "Member 'BP_InteriorVolume_C_PPV_Blend::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, CallFunc_BooleanAND_ReturnValue) == 0x000019, "Member 'BP_InteriorVolume_C_PPV_Blend::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, K2Node_Select_Default) == 0x000020, "Member 'BP_InteriorVolume_C_PPV_Blend::K2Node_Select_Default' has a wrong offset!");
 
 // Function BP_InteriorVolume.BP_InteriorVolume_C.ExecuteUbergraph_BP_InteriorVolume
-// 0x05B0 (0x05B0 - 0x0000)
+// 0x0618 (0x0618 - 0x0000)
 struct BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, struct FHitResult& SweepResult)> K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)> UniqueObjectNameForCooking_OutputDelegate; // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -153,7 +740,7 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x022B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_22D[0x3];                                      // 0x022D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0230(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)> UniqueObjectNameForCooking_OutputDelegate_1; // 0x0230(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x0242(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -168,7 +755,7 @@ public:
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_13;                   // 0x026A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_26B[0x1];                                      // 0x026B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x026C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate_2;       // 0x026C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBoxComponent*                          CallFunc_Array_Get_Item_1;                         // 0x0280(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -198,42 +785,42 @@ public:
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x03C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3D9[0x7];                                      // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCalloutQueueInfo                      K2Node_MakeStruct_CalloutQueueInfo;                // 0x03E0(0x0138)()
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0518(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x0520(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0528(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0538(0x0008)(NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0540(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0544(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_545[0x3];                                      // 0x0545(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0548(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_15;                   // 0x054C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54D[0x3];                                      // 0x054D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerPawn_C*                          K2Node_DynamicCast_AsPlayer_Pawn;                  // 0x0550(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0558(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_16;                   // 0x0559(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_55A[0x6];                                      // 0x055A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetClosestPointOnCollision_OutPointOnBody; // 0x0560(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetClosestPointOnCollision_ReturnValue;   // 0x0578(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C[0x4];                                      // 0x057C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0580(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0588(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMin_ReturnValue;                         // 0x0590(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_17;                   // 0x0598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x0599(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59A[0x2];                                      // 0x059A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x059C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PPV_Blend_Blend_Weight_ImplicitCast;      // 0x05A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x05A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x05A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FCalloutQueueInfo                      K2Node_MakeStruct_CalloutQueueInfo;                // 0x03E0(0x01A0)()
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0580(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x0588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_591[0x7];                                      // 0x0591(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0598(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x05A0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x05A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x05AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5AD[0x3];                                      // 0x05AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x05B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_15;                   // 0x05B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B5[0x3];                                      // 0x05B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerPawn_C*                          K2Node_DynamicCast_AsPlayer_Pawn;                  // 0x05B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x05C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_16;                   // 0x05C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C2[0x6];                                      // 0x05C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetClosestPointOnCollision_OutPointOnBody; // 0x05C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetClosestPointOnCollision_ReturnValue;   // 0x05E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5E4[0x4];                                      // 0x05E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x05E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x05F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMin_ReturnValue;                         // 0x05F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_17;                   // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x0601(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_602[0x2];                                      // 0x0602(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x0604(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PPV_Blend_Blend_Weight_ImplicitCast;      // 0x0608(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x060C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0610(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume");
-static_assert(sizeof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume) == 0x0005B0, "Wrong size on BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume");
+static_assert(sizeof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume) == 0x000618, "Wrong size on BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, EntryPoint) == 0x000000, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000008, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_CreateDelegate_OutputDelegate) == 0x000020, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, UniqueObjectNameForCooking_OutputDelegate) == 0x000020, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, Temp_int_Loop_Counter_Variable) == 0x000030, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Add_IntInt_ReturnValue) == 0x000034, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, Temp_int_Array_Index_Variable) == 0x000038, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::Temp_int_Array_Index_Variable' has a wrong offset!");
@@ -295,7 +882,7 @@ static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, C
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_BooleanAND_ReturnValue_2) == 0x00022A, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_BooleanAND_ReturnValue_3) == 0x00022B, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Not_PreBool_ReturnValue_2) == 0x00022C, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_CreateDelegate_OutputDelegate_1) == 0x000230, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, UniqueObjectNameForCooking_OutputDelegate_1) == 0x000230, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::UniqueObjectNameForCooking_OutputDelegate_1' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_IsValid_ReturnValue_9) == 0x000240, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_Event_EndPlayReason) == 0x000241, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_Event_EndPlayReason' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_IsValid_ReturnValue_10) == 0x000242, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
@@ -308,7 +895,7 @@ static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, C
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_IsValid_ReturnValue_12) == 0x000268, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000269, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_IsValid_ReturnValue_13) == 0x00026A, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_IsValid_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_CreateDelegate_OutputDelegate_2) == 0x00026C, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, UniqueObjectNameForCooking_OutputDelegate_2) == 0x00026C, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::UniqueObjectNameForCooking_OutputDelegate_2' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Array_Get_Item_1) == 0x000280, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Array_Get_Item_1' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Array_Length_ReturnValue_1) == 0x000288, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Less_IntInt_ReturnValue) == 0x00028C, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
@@ -332,540 +919,79 @@ static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, C
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Conv_TextToString_ReturnValue) == 0x0003C8, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_BooleanAND_ReturnValue_5) == 0x0003D8, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
 static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_MakeStruct_CalloutQueueInfo) == 0x0003E0, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_MakeStruct_CalloutQueueInfo' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_GetPlayerController_ReturnValue) == 0x000518, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000520, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_DynamicCast_bSuccess_6) == 0x000528, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000530, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000538, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, Temp_int_Loop_Counter_Variable_3) == 0x000540, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Less_IntInt_ReturnValue_4) == 0x000544, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Add_IntInt_ReturnValue_4) == 0x000548, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_IsValid_ReturnValue_15) == 0x00054C, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_IsValid_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_DynamicCast_AsPlayer_Pawn) == 0x000550, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_DynamicCast_AsPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_DynamicCast_bSuccess_7) == 0x000558, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_IsValid_ReturnValue_16) == 0x000559, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_IsValid_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_GetClosestPointOnCollision_OutPointOnBody) == 0x000560, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_GetClosestPointOnCollision_OutPointOnBody' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_GetClosestPointOnCollision_ReturnValue) == 0x000578, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_GetClosestPointOnCollision_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000580, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000588, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_FMin_ReturnValue) == 0x000590, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_FMin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_IsValid_ReturnValue_17) == 0x000598, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_IsValid_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_BooleanAND_ReturnValue_6) == 0x000599, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x00059C, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_PPV_Blend_Blend_Weight_ImplicitCast) == 0x0005A0, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_PPV_Blend_Blend_Weight_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x0005A4, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x0005A8, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_GetPlayerController_ReturnValue) == 0x000580, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000588, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_DynamicCast_bSuccess_6) == 0x000590, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000598, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x0005A0, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, Temp_int_Loop_Counter_Variable_3) == 0x0005A8, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Less_IntInt_ReturnValue_4) == 0x0005AC, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Add_IntInt_ReturnValue_4) == 0x0005B0, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_IsValid_ReturnValue_15) == 0x0005B4, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_IsValid_ReturnValue_15' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_DynamicCast_AsPlayer_Pawn) == 0x0005B8, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_DynamicCast_AsPlayer_Pawn' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, K2Node_DynamicCast_bSuccess_7) == 0x0005C0, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_IsValid_ReturnValue_16) == 0x0005C1, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_IsValid_ReturnValue_16' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_GetClosestPointOnCollision_OutPointOnBody) == 0x0005C8, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_GetClosestPointOnCollision_OutPointOnBody' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_GetClosestPointOnCollision_ReturnValue) == 0x0005E0, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_GetClosestPointOnCollision_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0005E8, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0005F0, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_FMin_ReturnValue) == 0x0005F8, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_FMin_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_IsValid_ReturnValue_17) == 0x000600, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_IsValid_ReturnValue_17' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_BooleanAND_ReturnValue_6) == 0x000601, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x000604, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_PPV_Blend_Blend_Weight_ImplicitCast) == 0x000608, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_PPV_Blend_Blend_Weight_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x00060C, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000610, "Member 'BP_InteriorVolume_C_ExecuteUbergraph_BP_InteriorVolume::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
-// Function BP_InteriorVolume.BP_InteriorVolume_C.PPV Blend
-// 0x0700 (0x0700 - 0x0000)
-struct BP_InteriorVolume_C_PPV_Blend final
-{
-public:
-	float                                         Blend_Weight;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Enabled;                                           // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UIntrepidGameUserSettings*              CallFunc_GetIntrepidGameUserSettings_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetGlobalIlluminationQuality_ReturnValue; // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPostProcessSettings                   K2Node_Select_Default;                             // 0x0020(0x06E0)()
-};
-static_assert(alignof(BP_InteriorVolume_C_PPV_Blend) == 0x000010, "Wrong alignment on BP_InteriorVolume_C_PPV_Blend");
-static_assert(sizeof(BP_InteriorVolume_C_PPV_Blend) == 0x000700, "Wrong size on BP_InteriorVolume_C_PPV_Blend");
-static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, Blend_Weight) == 0x000000, "Member 'BP_InteriorVolume_C_PPV_Blend::Blend_Weight' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, Enabled) == 0x000004, "Member 'BP_InteriorVolume_C_PPV_Blend::Enabled' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, CallFunc_GetIntrepidGameUserSettings_ReturnValue) == 0x000008, "Member 'BP_InteriorVolume_C_PPV_Blend::CallFunc_GetIntrepidGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, Temp_bool_Variable) == 0x000010, "Member 'BP_InteriorVolume_C_PPV_Blend::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, CallFunc_GetGlobalIlluminationQuality_ReturnValue) == 0x000014, "Member 'BP_InteriorVolume_C_PPV_Blend::CallFunc_GetGlobalIlluminationQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000018, "Member 'BP_InteriorVolume_C_PPV_Blend::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, CallFunc_BooleanAND_ReturnValue) == 0x000019, "Member 'BP_InteriorVolume_C_PPV_Blend::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PPV_Blend, K2Node_Select_Default) == 0x000020, "Member 'BP_InteriorVolume_C_PPV_Blend::K2Node_Select_Default' has a wrong offset!");
-
-// Function BP_InteriorVolume.BP_InteriorVolume_C.PreviewModifications
-// 0x00C0 (0x00C0 - 0x0000)
-struct BP_InteriorVolume_C_PreviewModifications final
-{
-public:
-	bool                                          Overlap_;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Temp_struct_Variable;                              // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextRenderComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A3[0x5];                                       // 0x00A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_AudioManager_C*                     K2Node_DynamicCast_AsBP_Audio_Manager;             // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x00B8(0x0008)(NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_InteriorVolume_C_PreviewModifications) == 0x000010, "Wrong alignment on BP_InteriorVolume_C_PreviewModifications");
-static_assert(sizeof(BP_InteriorVolume_C_PreviewModifications) == 0x0000C0, "Wrong size on BP_InteriorVolume_C_PreviewModifications");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, Overlap_) == 0x000000, "Member 'BP_InteriorVolume_C_PreviewModifications::Overlap_' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, Temp_struct_Variable) == 0x000010, "Member 'BP_InteriorVolume_C_PreviewModifications::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_IsValid_ReturnValue) == 0x000070, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_AddComponent_ReturnValue) == 0x000078, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_IsValid_ReturnValue_1) == 0x000080, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000088, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_IsValid_ReturnValue_2) == 0x000090, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000098, "Member 'BP_InteriorVolume_C_PreviewModifications::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, K2Node_DynamicCast_bSuccess) == 0x0000A0, "Member 'BP_InteriorVolume_C_PreviewModifications::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_BooleanAND_ReturnValue) == 0x0000A1, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_IsValid_ReturnValue_3) == 0x0000A2, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, K2Node_DynamicCast_AsBP_Audio_Manager) == 0x0000A8, "Member 'BP_InteriorVolume_C_PreviewModifications::K2Node_DynamicCast_AsBP_Audio_Manager' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, K2Node_DynamicCast_bSuccess_1) == 0x0000B0, "Member 'BP_InteriorVolume_C_PreviewModifications::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_PreviewModifications, CallFunc_K2_SetTimer_ReturnValue) == 0x0000B8, "Member 'BP_InteriorVolume_C_PreviewModifications::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-
-// Function BP_InteriorVolume.BP_InteriorVolume_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_InteriorVolume_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_InteriorVolume_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_InteriorVolume_C_ReceiveEndPlay");
-static_assert(sizeof(BP_InteriorVolume_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_InteriorVolume_C_ReceiveEndPlay");
-static_assert(offsetof(BP_InteriorVolume_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_InteriorVolume_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
-
-// Function BP_InteriorVolume.BP_InteriorVolume_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_InteriorVolume_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_InteriorVolume_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_InteriorVolume_C_ReceiveTick");
-static_assert(sizeof(BP_InteriorVolume_C_ReceiveTick) == 0x000004, "Wrong size on BP_InteriorVolume_C_ReceiveTick");
-static_assert(offsetof(BP_InteriorVolume_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_InteriorVolume_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_InteriorVolume.BP_InteriorVolume_C.RevertToWorldDefaults
-// 0x0038 (0x0038 - 0x0000)
-struct BP_InteriorVolume_C_RevertToWorldDefaults final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AIntrepidSkyBase*                       CallFunc_GetIntrepidSkyInstance_IntrepidSky;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_VerraWorld_GlobalSky_C*             K2Node_DynamicCast_AsBP_Verra_World_Global_Sky;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_AudioManager_C*                     K2Node_DynamicCast_AsBP_Audio_Manager;             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_InteriorVolume_C_RevertToWorldDefaults) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_RevertToWorldDefaults");
-static_assert(sizeof(BP_InteriorVolume_C_RevertToWorldDefaults) == 0x000038, "Wrong size on BP_InteriorVolume_C_RevertToWorldDefaults");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_GetIntrepidSkyInstance_IntrepidSky) == 0x000008, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_GetIntrepidSkyInstance_IntrepidSky' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_BooleanAND_ReturnValue) == 0x000010, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, K2Node_DynamicCast_AsBP_Verra_World_Global_Sky) == 0x000018, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::K2Node_DynamicCast_AsBP_Verra_World_Global_Sky' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_2) == 0x000021, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, K2Node_DynamicCast_AsBP_Audio_Manager) == 0x000028, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::K2Node_DynamicCast_AsBP_Audio_Manager' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000031, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_RevertToWorldDefaults, CallFunc_IsValid_ReturnValue_3) == 0x000032, "Member 'BP_InteriorVolume_C_RevertToWorldDefaults::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-
-// Function BP_InteriorVolume.BP_InteriorVolume_C.Set Master Value
+// Function BP_InteriorVolume.BP_InteriorVolume_C.Catch Initial Overlaps
 // 0x0008 (0x0008 - 0x0000)
-struct BP_InteriorVolume_C_Set_Master_Value final
+struct BP_InteriorVolume_C_Catch_Initial_Overlaps final
 {
 public:
-	double                                        Master_Value_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_InteriorVolume_C_Set_Master_Value) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Set_Master_Value");
-static_assert(sizeof(BP_InteriorVolume_C_Set_Master_Value) == 0x000008, "Wrong size on BP_InteriorVolume_C_Set_Master_Value");
-static_assert(offsetof(BP_InteriorVolume_C_Set_Master_Value, Master_Value_0) == 0x000000, "Member 'BP_InteriorVolume_C_Set_Master_Value::Master_Value_0' has a wrong offset!");
+static_assert(alignof(BP_InteriorVolume_C_Catch_Initial_Overlaps) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Catch_Initial_Overlaps");
+static_assert(sizeof(BP_InteriorVolume_C_Catch_Initial_Overlaps) == 0x000008, "Wrong size on BP_InteriorVolume_C_Catch_Initial_Overlaps");
+static_assert(offsetof(BP_InteriorVolume_C_Catch_Initial_Overlaps, Component) == 0x000000, "Member 'BP_InteriorVolume_C_Catch_Initial_Overlaps::Component' has a wrong offset!");
 
-// Function BP_InteriorVolume.BP_InteriorVolume_C.Start Previewing
-// 0x0001 (0x0001 - 0x0000)
-struct BP_InteriorVolume_C_Start_Previewing final
-{
-public:
-	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_InteriorVolume_C_Start_Previewing) == 0x000001, "Wrong alignment on BP_InteriorVolume_C_Start_Previewing");
-static_assert(sizeof(BP_InteriorVolume_C_Start_Previewing) == 0x000001, "Wrong size on BP_InteriorVolume_C_Start_Previewing");
-static_assert(offsetof(BP_InteriorVolume_C_Start_Previewing, CallFunc_IsWithEditor_ReturnValue) == 0x000000, "Member 'BP_InteriorVolume_C_Start_Previewing::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
-
-// Function BP_InteriorVolume.BP_InteriorVolume_C.Toggle Interior Map
+// Function BP_InteriorVolume.BP_InteriorVolume_C.Brush End Overlap
 // 0x0020 (0x0020 - 0x0000)
-struct BP_InteriorVolume_C_Toggle_Interior_Map final
+struct BP_InteriorVolume_C_Brush_End_Overlap final
 {
 public:
-	bool                                          Show;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_InteriorVolume_C_Toggle_Interior_Map) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Toggle_Interior_Map");
-static_assert(sizeof(BP_InteriorVolume_C_Toggle_Interior_Map) == 0x000020, "Wrong size on BP_InteriorVolume_C_Toggle_Interior_Map");
-static_assert(offsetof(BP_InteriorVolume_C_Toggle_Interior_Map, Show) == 0x000000, "Member 'BP_InteriorVolume_C_Toggle_Interior_Map::Show' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Toggle_Interior_Map, CallFunc_GetPlayerController_ReturnValue) == 0x000008, "Member 'BP_InteriorVolume_C_Toggle_Interior_Map::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Toggle_Interior_Map, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000010, "Member 'BP_InteriorVolume_C_Toggle_Interior_Map::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Toggle_Interior_Map, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_InteriorVolume_C_Toggle_Interior_Map::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Toggle_Interior_Map, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x000019, "Member 'BP_InteriorVolume_C_Toggle_Interior_Map::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_InteriorVolume_C_Brush_End_Overlap) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Brush_End_Overlap");
+static_assert(sizeof(BP_InteriorVolume_C_Brush_End_Overlap) == 0x000020, "Wrong size on BP_InteriorVolume_C_Brush_End_Overlap");
+static_assert(offsetof(BP_InteriorVolume_C_Brush_End_Overlap, OverlappedComponent) == 0x000000, "Member 'BP_InteriorVolume_C_Brush_End_Overlap::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Brush_End_Overlap, OtherActor) == 0x000008, "Member 'BP_InteriorVolume_C_Brush_End_Overlap::OtherActor' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Brush_End_Overlap, OtherComp) == 0x000010, "Member 'BP_InteriorVolume_C_Brush_End_Overlap::OtherComp' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Brush_End_Overlap, OtherBodyIndex) == 0x000018, "Member 'BP_InteriorVolume_C_Brush_End_Overlap::OtherBodyIndex' has a wrong offset!");
 
-// Function BP_InteriorVolume.BP_InteriorVolume_C.Update Blending Editor Time
-// 0x00B0 (0x00B0 - 0x0000)
-struct BP_InteriorVolume_C_Update_Blending_Editor_Time final
+// Function BP_InteriorVolume.BP_InteriorVolume_C.Brush Begin Overlap
+// 0x0108 (0x0108 - 0x0000)
+struct BP_InteriorVolume_C_Brush_Begin_Overlap final
 {
 public:
-	bool                                          Overlap_;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetEditorCameraPosition_CameraLocation;   // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetEditorCameraPosition_CameraRotation;   // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetClosestPointOnCollision_OutPointOnBody; // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetClosestPointOnCollision_ReturnValue;   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBoxComponent*                          CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetClosestPointOnCollision_OutPointOnBody_1; // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetClosestPointOnCollision_ReturnValue_1; // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue_1;    // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x009E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9F[0x1];                                       // 0x009F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast;   // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1; // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_InteriorVolume_C_Update_Blending_Editor_Time) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Update_Blending_Editor_Time");
-static_assert(sizeof(BP_InteriorVolume_C_Update_Blending_Editor_Time) == 0x0000B0, "Wrong size on BP_InteriorVolume_C_Update_Blending_Editor_Time");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, Overlap_) == 0x000000, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::Overlap_' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_Conv_BoolToDouble_ReturnValue) == 0x000010, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_Conv_BoolToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetEditorCameraPosition_CameraLocation) == 0x000018, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetEditorCameraPosition_CameraLocation' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetEditorCameraPosition_CameraRotation) == 0x000030, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetEditorCameraPosition_CameraRotation' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetClosestPointOnCollision_OutPointOnBody) == 0x000050, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetClosestPointOnCollision_OutPointOnBody' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetClosestPointOnCollision_ReturnValue) == 0x000068, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetClosestPointOnCollision_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x00006C, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_Array_Get_Item) == 0x000070, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_Array_Length_ReturnValue) == 0x000078, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetClosestPointOnCollision_OutPointOnBody_1) == 0x000080, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetClosestPointOnCollision_OutPointOnBody_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_GetClosestPointOnCollision_ReturnValue_1) == 0x000098, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_GetClosestPointOnCollision_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_Less_IntInt_ReturnValue) == 0x00009C, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_EqualEqual_DoubleDouble_ReturnValue_1) == 0x00009D, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_EqualEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_BooleanOR_ReturnValue) == 0x00009E, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast) == 0x0000A0, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_Update_Blending_Editor_Time, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1) == 0x0000A8, "Member 'BP_InteriorVolume_C_Update_Blending_Editor_Time::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-
-// Function BP_InteriorVolume.BP_InteriorVolume_C.UserConstructionScript
-// 0x0D50 (0x0D50 - 0x0000)
-struct BP_InteriorVolume_C_UserConstructionScript final
-{
-public:
-	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNameHashIndex_ReturnValue;             // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x00B0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0110(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable;                                // 0x0118(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_125[0x3];                                      // 0x0125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue_1;              // 0x0130(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0194(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_195[0x3];                                      // 0x0195(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A2[0x6];                                      // 0x01A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x01A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x01B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x01C8(0x0018)()
-	struct FRotator                               CallFunc_NegateRotator_ReturnValue;                // 0x01E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0239(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x023A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23B[0x1];                                      // 0x023B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_3;                               // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_4;                               // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x3];                                      // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithEditor_ReturnValue_1;               // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25A[0x6];                                      // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x0260(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x0278(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x0290(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakTransform_Location_2;                // 0x02B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_2;                // 0x02C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_2;                   // 0x02E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location_3;                // 0x02F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_3;                // 0x0310(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_3;                   // 0x0328(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_TransformLocation_ReturnValue;            // 0x0340(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_TransformLocation_ReturnValue_1;          // 0x0358(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          CallFunc_Array_Get_Item;                           // 0x0370(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetRelativeTransform_ReturnValue;         // 0x0380(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x03E0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_IsWithEditor_ReturnValue_2;               // 0x04C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C9[0x3];                                      // 0x04C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x04CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_2;           // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D1[0x7];                                      // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_2;        // 0x04D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x04F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_508[0x8];                                      // 0x0508(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue_2;              // 0x0510(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue_3;              // 0x0570(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_1;               // 0x05D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_1;                              // 0x05D8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_3;        // 0x05E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x05F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0610(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GreaterGreater_VectorRotator_ReturnValue; // 0x0628(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Divide_VectorVector_ReturnValue;          // 0x0640(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Divide_VectorVector_ReturnValue_1;        // 0x0658(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0670(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_IsWithEditor_ReturnValue_3;               // 0x0758(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_759[0x7];                                      // 0x0759(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue_4;              // 0x0760(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x07C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C1[0x7];                                      // 0x07C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBoxComponent*                          CallFunc_AddComponent_ReturnValue_2;               // 0x07C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x07D0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x08B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8BC[0x4];                                      // 0x08BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_4;               // 0x08C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C8[0x8];                                      // 0x08C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue_5;              // 0x08D0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0930(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_931[0x3];                                      // 0x0931(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0934(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0938(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_939[0x3];                                      // 0x0939(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x093C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             Temp_struct_Variable;                              // 0x0940(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_Array_Get_Item_1;                         // 0x09A0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_3;               // 0x0A00(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          CallFunc_AddComponent_ReturnValue_4;               // 0x0A08(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_SelectTransform_ReturnValue;              // 0x0A10(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0A70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A74[0x4];                                      // 0x0A74(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakTransform_Location_4;                // 0x0A78(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_4;                // 0x0A90(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_4;                   // 0x0AA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0AC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC1[0xF];                                      // 0x0AC1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue_6;              // 0x0AD0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextRenderComponent*                   CallFunc_AddComponent_ReturnValue_5;               // 0x0B30(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x0B38(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x0B50(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x0B68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x0B6C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0B70(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0B88(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0C70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x0C74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0C78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C7C[0x4];                                      // 0x0C7C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_4;        // 0x0C80(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_2;            // 0x0C98(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9C[0x4];                                      // 0x0C9C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_2;      // 0x0CA0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x0CB8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue_7;              // 0x0CD0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_3;           // 0x0D30(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D31[0x7];                                      // 0x0D31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue_6;               // 0x0D38(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_3;            // 0x0D40(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x0D44(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_4;           // 0x0D48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_InteriorVolume_C_UserConstructionScript) == 0x000010, "Wrong alignment on BP_InteriorVolume_C_UserConstructionScript");
-static_assert(sizeof(BP_InteriorVolume_C_UserConstructionScript) == 0x000D50, "Wrong size on BP_InteriorVolume_C_UserConstructionScript");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable) == 0x000000, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000008, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue) == 0x000024, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetNameHashIndex_ReturnValue) == 0x000028, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetNameHashIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue) == 0x000030, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_1) == 0x000038, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue_1) == 0x000040, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_2) == 0x000048, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location) == 0x000050, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation) == 0x000068, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale) == 0x000080, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000098, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue) == 0x0000B0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue) == 0x000110, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_real_Variable) == 0x000118, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_real_Variable' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue) == 0x000120, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000124, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable_1) == 0x000128, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_1) == 0x00012C, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_1) == 0x000130, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable_2) == 0x000190, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000194, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_2) == 0x000198, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Array_Index_Variable) == 0x00019C, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001A0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001A1, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_IntToString_ReturnValue) == 0x0001A8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Concat_StrStr_ReturnValue) == 0x0001B8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_StringToText_ReturnValue) == 0x0001C8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_NegateRotator_ReturnValue) == 0x0001E0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_NegateRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Loop_Counter_Variable) == 0x0001F8, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_3) == 0x0001FC, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue_2) == 0x000200, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_3) == 0x000208, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue_3) == 0x000210, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_4) == 0x000218, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x000220, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Not_PreBool_ReturnValue) == 0x000238, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue) == 0x000239, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_5) == 0x00023A, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable_3) == 0x00023C, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_4) == 0x000240, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue) == 0x000244, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_int_Variable_4) == 0x000248, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_int_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_IntInt_ReturnValue) == 0x00024C, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x000250, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue_5) == 0x000254, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue_1) == 0x000258, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000259, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location_1) == 0x000260, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation_1) == 0x000278, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale_1) == 0x000290, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x0002A8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location_2) == 0x0002B0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation_2) == 0x0002C8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale_2) == 0x0002E0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location_3) == 0x0002F8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation_3) == 0x000310, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale_3) == 0x000328, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_TransformLocation_ReturnValue) == 0x000340, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_TransformLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_TransformLocation_ReturnValue_1) == 0x000358, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_TransformLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Get_Item) == 0x000370, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_IsValidIndex_ReturnValue_2) == 0x000378, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_IsValidIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetRelativeTransform_ReturnValue) == 0x000380, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetRelativeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x0003E0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue_2) == 0x0004C8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x0004CC, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue_2) == 0x0004D0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue_2) == 0x0004D8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x0004F0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_2) == 0x000510, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_3) == 0x000570, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_1) == 0x0005D0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_real_Variable_1) == 0x0005D8, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_real_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue_3) == 0x0005E0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0005F8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_VectorVector_ReturnValue) == 0x000610, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GreaterGreater_VectorRotator_ReturnValue) == 0x000628, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GreaterGreater_VectorRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Divide_VectorVector_ReturnValue) == 0x000640, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Divide_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Divide_VectorVector_ReturnValue_1) == 0x000658, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Divide_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000670, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue_3) == 0x000758, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_4) == 0x000760, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BooleanAND_ReturnValue) == 0x0007C0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_2) == 0x0007C8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x0007D0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_1) == 0x0008B8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue_4) == 0x0008C0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_5) == 0x0008D0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_6) == 0x000930, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_2) == 0x000934, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Not_PreBool_ReturnValue_1) == 0x000938, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_3) == 0x00093C, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, Temp_struct_Variable) == 0x000940, "Member 'BP_InteriorVolume_C_UserConstructionScript::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Get_Item_1) == 0x0009A0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_3) == 0x000A00, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_4) == 0x000A08, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_SelectTransform_ReturnValue) == 0x000A10, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_SelectTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_1) == 0x000A70, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Location_4) == 0x000A78, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Location_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Rotation_4) == 0x000A90, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Rotation_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_BreakTransform_Scale_4) == 0x000AA8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_BreakTransform_Scale_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Less_IntInt_ReturnValue) == 0x000AC0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_6) == 0x000AD0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_5) == 0x000B30, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetComponentBounds_Origin) == 0x000B38, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetComponentBounds_Origin' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetComponentBounds_BoxExtent) == 0x000B50, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetComponentBounds_BoxExtent' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_GetComponentBounds_SphereRadius) == 0x000B68, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_GetComponentBounds_SphereRadius' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_4) == 0x000B6C, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000B70, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x000B88, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_2) == 0x000C70, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_5) == 0x000C74, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_3) == 0x000C78, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue_4) == 0x000C80, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_IntInt_ReturnValue_2) == 0x000C98, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Multiply_VectorVector_ReturnValue_2) == 0x000CA0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Multiply_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Add_VectorVector_ReturnValue_2) == 0x000CB8, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_MakeTransform_ReturnValue_7) == 0x000CD0, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_MakeTransform_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue_3) == 0x000D30, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue_6) == 0x000D38, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Subtract_IntInt_ReturnValue_3) == 0x000D40, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Subtract_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue_6) == 0x000D44, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_InteriorVolume_C_UserConstructionScript, CallFunc_LessEqual_IntInt_ReturnValue_4) == 0x000D48, "Member 'BP_InteriorVolume_C_UserConstructionScript::CallFunc_LessEqual_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(alignof(BP_InteriorVolume_C_Brush_Begin_Overlap) == 0x000008, "Wrong alignment on BP_InteriorVolume_C_Brush_Begin_Overlap");
+static_assert(sizeof(BP_InteriorVolume_C_Brush_Begin_Overlap) == 0x000108, "Wrong size on BP_InteriorVolume_C_Brush_Begin_Overlap");
+static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, OverlappedComponent) == 0x000000, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, OtherActor) == 0x000008, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::OtherActor' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, OtherComp) == 0x000010, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::OtherComp' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, OtherBodyIndex) == 0x000018, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, bFromSweep) == 0x00001C, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::bFromSweep' has a wrong offset!");
+static_assert(offsetof(BP_InteriorVolume_C_Brush_Begin_Overlap, SweepResult) == 0x000020, "Member 'BP_InteriorVolume_C_Brush_Begin_Overlap::SweepResult' has a wrong offset!");
 
 }
 

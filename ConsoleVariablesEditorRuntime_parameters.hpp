@@ -58,7 +58,7 @@ static_assert(offsetof(ConsoleVariablesAsset_RemoveConsoleVariable, ReturnValue)
 struct ConsoleVariablesAsset_ReplaceSavedCommands final
 {
 public:
-	TArray<struct FConsoleVariablesEditorAssetSaveData> Replacement;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FConsoleVariablesEditorAssetSaveData> Replacement;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ConsoleVariablesAsset_ReplaceSavedCommands) == 0x000008, "Wrong alignment on ConsoleVariablesAsset_ReplaceSavedCommands");
 static_assert(sizeof(ConsoleVariablesAsset_ReplaceSavedCommands) == 0x000010, "Wrong size on ConsoleVariablesAsset_ReplaceSavedCommands");
@@ -112,7 +112,7 @@ static_assert(offsetof(ConsoleVariablesAsset_FindSavedDataByCommandString, Retur
 struct ConsoleVariablesAsset_GetSavedCommands final
 {
 public:
-	TArray<struct FConsoleVariablesEditorAssetSaveData> ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FConsoleVariablesEditorAssetSaveData> ReturnValue;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ConsoleVariablesAsset_GetSavedCommands) == 0x000008, "Wrong alignment on ConsoleVariablesAsset_GetSavedCommands");
 static_assert(sizeof(ConsoleVariablesAsset_GetSavedCommands) == 0x000010, "Wrong size on ConsoleVariablesAsset_GetSavedCommands");

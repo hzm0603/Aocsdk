@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Raider_Elite_EventScaled.Bandit_Raider_Elite_EventScaled_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ABandit_Raider_Elite_EventScaled_C final : public ABandit_Raider_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Raider_Elite_EventScaled_C) == 0x000010, "Wrong alignment on ABandit_Raider_Elite_EventScaled_C");
-static_assert(sizeof(ABandit_Raider_Elite_EventScaled_C) == 0x001DB0, "Wrong size on ABandit_Raider_Elite_EventScaled_C");
+static_assert(sizeof(ABandit_Raider_Elite_EventScaled_C) == 0x001D70, "Wrong size on ABandit_Raider_Elite_EventScaled_C");
 
 }
 

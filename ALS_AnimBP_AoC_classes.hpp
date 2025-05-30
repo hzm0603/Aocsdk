@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "ALS_AnimBP_AoC_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
+#include "ALS_AnimBP_AoC_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "ControlRig_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -28,7 +28,7 @@ class UALS_AnimBP_AoC_C : public UAoCPlayerAnimInstance
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2430(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct ALS_AnimBP_AoC::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x2438(0x02EC)(HasGetValueTypeHash)
+	struct ALS_AnimBP_AoC::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;               // 0x2438(0x02EC)(HasGetValueTypeHash)
 	uint8                                         Pad_2724[0x4];                                     // 0x2724(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x2728(0x0008)()
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x2730(0x0008)()

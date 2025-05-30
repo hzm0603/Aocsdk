@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MultipurchaseModal.WBP_MultipurchaseModal_C
-// 0x0010 (0x0478 - 0x0468)
+// 0x0010 (0x04A0 - 0x0490)
 class UWBP_MultipurchaseModal_C final : public UMultiPurchaseModalPanel
 {
 public:
-	class UCommonButton_C*                        DecreaseButton;                                    // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonButton_C*                        IncreaseButton;                                    // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonButton_C*                        DecreaseButton;                                    // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonButton_C*                        IncreaseButton;                                    // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MultipurchaseModal_C) == 0x000008, "Wrong alignment on UWBP_MultipurchaseModal_C");
-static_assert(sizeof(UWBP_MultipurchaseModal_C) == 0x000478, "Wrong size on UWBP_MultipurchaseModal_C");
-static_assert(offsetof(UWBP_MultipurchaseModal_C, DecreaseButton) == 0x000468, "Member 'UWBP_MultipurchaseModal_C::DecreaseButton' has a wrong offset!");
-static_assert(offsetof(UWBP_MultipurchaseModal_C, IncreaseButton) == 0x000470, "Member 'UWBP_MultipurchaseModal_C::IncreaseButton' has a wrong offset!");
+static_assert(sizeof(UWBP_MultipurchaseModal_C) == 0x0004A0, "Wrong size on UWBP_MultipurchaseModal_C");
+static_assert(offsetof(UWBP_MultipurchaseModal_C, DecreaseButton) == 0x000490, "Member 'UWBP_MultipurchaseModal_C::DecreaseButton' has a wrong offset!");
+static_assert(offsetof(UWBP_MultipurchaseModal_C, IncreaseButton) == 0x000498, "Member 'UWBP_MultipurchaseModal_C::IncreaseButton' has a wrong offset!");
 
 }
 

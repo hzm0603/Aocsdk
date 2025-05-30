@@ -17,37 +17,25 @@
 namespace SDK
 {
 
-// Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PlayerHousingDebugUI_C::BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item)
+void UWBP_PlayerHousingDebugUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PlayerHousingDebugUI_C", "BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature");
+		Func = Class->GetFunction("WBP_PlayerHousingDebugUI_C", "Tick");
 
-	Params::WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature Parms{};
+	Params::WBP_PlayerHousingDebugUI_C_Tick Parms{};
 
-	Parms.Item = Item;
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_PlayerHousingDebugUI_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PlayerHousingDebugUI_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -71,23 +59,35 @@ void UWBP_PlayerHousingDebugUI_C::ExecuteUbergraph_WBP_PlayerHousingDebugUI(int3
 }
 
 
-// Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.Tick
+// Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PlayerHousingDebugUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWBP_PlayerHousingDebugUI_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PlayerHousingDebugUI_C", "Tick");
+		Func = Class->GetFunction("WBP_PlayerHousingDebugUI_C", "Construct");
 
-	Params::WBP_PlayerHousingDebugUI_C_Tick Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+
+// Function WBP_PlayerHousingDebugUI.WBP_PlayerHousingDebugUI_C.BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PlayerHousingDebugUI_C::BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PlayerHousingDebugUI_C", "BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature");
+
+	Params::WBP_PlayerHousingDebugUI_C_BndEvt__PlayerHousingUI_PropListView_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature Parms{};
+
+	Parms.Item = Item;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Minotaur_Summoner_Wolf2.Minotaur_Summoner_Wolf2_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class AMinotaur_Summoner_Wolf2_C final : public AMinotaur_Summoner_Wolf1_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AMinotaur_Summoner_Wolf2_C) == 0x000010, "Wrong alignment on AMinotaur_Summoner_Wolf2_C");
-static_assert(sizeof(AMinotaur_Summoner_Wolf2_C) == 0x001DA0, "Wrong size on AMinotaur_Summoner_Wolf2_C");
+static_assert(sizeof(AMinotaur_Summoner_Wolf2_C) == 0x001D60, "Wrong size on AMinotaur_Summoner_Wolf2_C");
 
 }
 

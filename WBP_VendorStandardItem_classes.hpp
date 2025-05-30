@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_VendorStandardItem.WBP_VendorStandardItem_C
-// 0x0008 (0x04D8 - 0x04D0)
+// 0x0008 (0x0500 - 0x04F8)
 class UWBP_VendorStandardItem_C final : public UVendorStandardItem
 {
 public:
-	class UCommonBorder*                          AlternatingBorder;                                 // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          AlternatingBorder;                                 // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UCommonBorder* GetBorder();
@@ -37,8 +37,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_VendorStandardItem_C) == 0x000008, "Wrong alignment on UWBP_VendorStandardItem_C");
-static_assert(sizeof(UWBP_VendorStandardItem_C) == 0x0004D8, "Wrong size on UWBP_VendorStandardItem_C");
-static_assert(offsetof(UWBP_VendorStandardItem_C, AlternatingBorder) == 0x0004D0, "Member 'UWBP_VendorStandardItem_C::AlternatingBorder' has a wrong offset!");
+static_assert(sizeof(UWBP_VendorStandardItem_C) == 0x000500, "Wrong size on UWBP_VendorStandardItem_C");
+static_assert(offsetof(UWBP_VendorStandardItem_C, AlternatingBorder) == 0x0004F8, "Member 'UWBP_VendorStandardItem_C::AlternatingBorder' has a wrong offset!");
 
 }
 

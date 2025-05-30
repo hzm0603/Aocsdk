@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "UMG_classes.hpp"
-#include "MovieRenderPipelineCore_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MovieRenderPipelineCore_classes.hpp"
 #include "MovieRenderPipelineSettings_structs.hpp"
 
 
@@ -72,11 +72,11 @@ static_assert(offsetof(UMoviePipelineBurnInSetting, BurnInWidgetInstances) == 0x
 class UMoviePipelineConsoleVariableSetting final : public UMoviePipelineSetting
 {
 public:
-	TArray<TScriptInterface<class IMovieSceneConsoleVariableTrackInterface>> ConsoleVariablePresets;                            // 0x0068(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TScriptInterface<class IMovieSceneConsoleVariableTrackInterface>> ConsoleVariablePresets; // 0x0068(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	TMap<class FString, float>                    ConsoleVariables;                                  // 0x0078(0x0050)(Deprecated, NativeAccessSpecifierPublic)
 	TArray<class FString>                         StartConsoleCommands;                              // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         EndConsoleCommands;                                // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FMoviePipelineConsoleVariableEntry> CVars;                                             // 0x00E8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FMoviePipelineConsoleVariableEntry> CVars;                                         // 0x00E8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_F8[0x20];                                      // 0x00F8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

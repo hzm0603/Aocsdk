@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Second_Sword_Soldier.Second_Sword_Soldier_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class ASecond_Sword_Soldier_C final : public ANode_War_Guard_Soldier_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ASecond_Sword_Soldier_C) == 0x000010, "Wrong alignment on ASecond_Sword_Soldier_C");
-static_assert(sizeof(ASecond_Sword_Soldier_C) == 0x001DA0, "Wrong size on ASecond_Sword_Soldier_C");
+static_assert(sizeof(ASecond_Sword_Soldier_C) == 0x001D60, "Wrong size on ASecond_Sword_Soldier_C");
 
 }
 

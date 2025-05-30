@@ -18,95 +18,91 @@ namespace SDK
 {
 
 // ScriptStruct SK_Mushroom_AnimBP.SK_Mushroom_AnimBP_C.AnimBlueprintGeneratedConstantData
-// 0x01DF (0x01E0 - 0x0001)
+// 0x01CF (0x01D0 - 0x0001)
 struct SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData : public FAnimBlueprintConstantData
 {
 public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_503;                                // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_488;                                // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 __ArrayProperty_504;                               // 0x0010(0x0010)(BlueprintVisible, EditFixedSize)
-	class FName                                   __NameProperty_505;                                // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_506;                                // 0x0028(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_507;                                // 0x0030(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_508;                                 // 0x0038(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_509;                                // 0x003C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_510;                                // 0x0044(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_511;                                // 0x004C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 __ArrayProperty_512;                               // 0x0058(0x0010)(BlueprintVisible, EditFixedSize)
-	class FName                                   __NameProperty_513;                                // 0x0068(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<float>                                 __ArrayProperty_514;                               // 0x0070(0x0010)(BlueprintVisible, EditFixedSize)
-	struct FInputScaleBiasClampConstants          __StructProperty_515;                              // 0x0080(0x002C)(BlueprintVisible, NoDestructor)
-	EAnimSyncMethod                               __EnumProperty_516;                                // 0x00AC(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_517;                                // 0x00B0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_518;                                // 0x00B8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_519;                                 // 0x00C0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_520;                                // 0x00C4(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty_521;                               // 0x00C8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_522;                               // 0x00CC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAnimSyncMethod                               __EnumProperty_523;                                // 0x00D0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAnimGroupRole                                __ByteProperty_524;                                // 0x00D1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D2[0x2];                                       // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_525;                                // 0x00D4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_526;                                // 0x00DC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_527;                                // 0x00E4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_528;                                 // 0x00EC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<float>                                 __ArrayProperty_529;                               // 0x00F0(0x0010)(BlueprintVisible, EditFixedSize)
-	class UBlendProfile*                          __BlendProfile_530;                                // 0x0100(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UCurveFloat*                            __CurveFloat_531;                                  // 0x0108(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          __BoolProperty_532;                                // 0x0110(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAlphaBlendOption                             __EnumProperty_533;                                // 0x0111(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBlendListTransitionType                      __EnumProperty_534;                                // 0x0112(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_113[0x5];                                      // 0x0113(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 __ArrayProperty_535;                               // 0x0118(0x0010)(BlueprintVisible, EditFixedSize)
-	struct FAnimNodeFunctionRef                   __StructProperty_536;                              // 0x0128(0x0020)(BlueprintVisible, NoDestructor)
-	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x0148(0x0080)()
-	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x01C8(0x0018)()
+	TArray<float>                                 __ArrayProperty_489;                               // 0x0010(0x0010)(BlueprintVisible, EditFixedSize)
+	class FName                                   __NameProperty_490;                                // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_491;                                // 0x0028(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_492;                                // 0x0030(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_493;                                 // 0x0038(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_494;                                // 0x003C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_495;                                // 0x0044(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 __ArrayProperty_496;                               // 0x0050(0x0010)(BlueprintVisible, EditFixedSize)
+	TArray<float>                                 __ArrayProperty_497;                               // 0x0060(0x0010)(BlueprintVisible, EditFixedSize)
+	struct FInputScaleBiasClampConstants          __StructProperty_498;                              // 0x0070(0x002C)(BlueprintVisible, NoDestructor)
+	EAnimSyncMethod                               __EnumProperty_499;                                // 0x009C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   __NameProperty_500;                                // 0x00A0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_501;                                // 0x00A8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_502;                                 // 0x00B0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_503;                                // 0x00B4(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         __FloatProperty_504;                               // 0x00B8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_505;                               // 0x00BC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAnimSyncMethod                               __EnumProperty_506;                                // 0x00C0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAnimGroupRole                                __ByteProperty_507;                                // 0x00C1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C2[0x2];                                       // 0x00C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   __NameProperty_508;                                // 0x00C4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_509;                                // 0x00CC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_510;                                // 0x00D4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_511;                                 // 0x00DC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<float>                                 __ArrayProperty_512;                               // 0x00E0(0x0010)(BlueprintVisible, EditFixedSize)
+	class UBlendProfile*                          __BlendProfile_513;                                // 0x00F0(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UCurveFloat*                            __CurveFloat_514;                                  // 0x00F8(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	bool                                          __BoolProperty_515;                                // 0x0100(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAlphaBlendOption                             __EnumProperty_516;                                // 0x0101(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBlendListTransitionType                      __EnumProperty_517;                                // 0x0102(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_103[0x5];                                      // 0x0103(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 __ArrayProperty_518;                               // 0x0108(0x0010)(BlueprintVisible, EditFixedSize)
+	struct FAnimNodeFunctionRef                   __StructProperty_519;                              // 0x0118(0x0020)(BlueprintVisible, NoDestructor)
+	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x0138(0x0080)()
+	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x01B8(0x0018)()
 };
 static_assert(alignof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData) == 0x0001E0, "Wrong size on SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_503) == 0x000004, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_503' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ArrayProperty_504) == 0x000010, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ArrayProperty_504' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_505) == 0x000020, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_505' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_506) == 0x000028, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_506' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_507) == 0x000030, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_507' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __IntProperty_508) == 0x000038, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__IntProperty_508' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_509) == 0x00003C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_509' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_510) == 0x000044, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_510' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_511) == 0x00004C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_511' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ArrayProperty_512) == 0x000058, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ArrayProperty_512' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_513) == 0x000068, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_513' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ArrayProperty_514) == 0x000070, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ArrayProperty_514' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __StructProperty_515) == 0x000080, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__StructProperty_515' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __EnumProperty_516) == 0x0000AC, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__EnumProperty_516' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_517) == 0x0000B0, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_517' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_518) == 0x0000B8, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_518' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __IntProperty_519) == 0x0000C0, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__IntProperty_519' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __BoolProperty_520) == 0x0000C4, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__BoolProperty_520' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __FloatProperty_521) == 0x0000C8, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__FloatProperty_521' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __FloatProperty_522) == 0x0000CC, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__FloatProperty_522' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __EnumProperty_523) == 0x0000D0, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__EnumProperty_523' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ByteProperty_524) == 0x0000D1, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ByteProperty_524' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_525) == 0x0000D4, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_525' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_526) == 0x0000DC, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_526' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_527) == 0x0000E4, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_527' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __IntProperty_528) == 0x0000EC, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__IntProperty_528' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ArrayProperty_529) == 0x0000F0, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ArrayProperty_529' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __BlendProfile_530) == 0x000100, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__BlendProfile_530' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __CurveFloat_531) == 0x000108, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__CurveFloat_531' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __BoolProperty_532) == 0x000110, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__BoolProperty_532' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __EnumProperty_533) == 0x000111, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__EnumProperty_533' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __EnumProperty_534) == 0x000112, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__EnumProperty_534' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ArrayProperty_535) == 0x000118, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ArrayProperty_535' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __StructProperty_536) == 0x000128, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__StructProperty_536' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x000148, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x0001C8, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(sizeof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData) == 0x0001D0, "Wrong size on SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_488) == 0x000004, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_488' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ArrayProperty_489) == 0x000010, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ArrayProperty_489' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_490) == 0x000020, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_490' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_491) == 0x000028, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_491' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_492) == 0x000030, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_492' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __IntProperty_493) == 0x000038, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__IntProperty_493' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_494) == 0x00003C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_494' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_495) == 0x000044, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_495' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ArrayProperty_496) == 0x000050, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ArrayProperty_496' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ArrayProperty_497) == 0x000060, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ArrayProperty_497' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __StructProperty_498) == 0x000070, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__StructProperty_498' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __EnumProperty_499) == 0x00009C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__EnumProperty_499' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_500) == 0x0000A0, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_500' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_501) == 0x0000A8, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_501' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __IntProperty_502) == 0x0000B0, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__IntProperty_502' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __BoolProperty_503) == 0x0000B4, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__BoolProperty_503' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __FloatProperty_504) == 0x0000B8, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__FloatProperty_504' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __FloatProperty_505) == 0x0000BC, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__FloatProperty_505' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __EnumProperty_506) == 0x0000C0, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__EnumProperty_506' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ByteProperty_507) == 0x0000C1, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ByteProperty_507' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_508) == 0x0000C4, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_508' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_509) == 0x0000CC, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_509' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __NameProperty_510) == 0x0000D4, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__NameProperty_510' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __IntProperty_511) == 0x0000DC, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__IntProperty_511' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ArrayProperty_512) == 0x0000E0, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ArrayProperty_512' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __BlendProfile_513) == 0x0000F0, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__BlendProfile_513' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __CurveFloat_514) == 0x0000F8, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__CurveFloat_514' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __BoolProperty_515) == 0x000100, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__BoolProperty_515' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __EnumProperty_516) == 0x000101, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__EnumProperty_516' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __EnumProperty_517) == 0x000102, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__EnumProperty_517' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __ArrayProperty_518) == 0x000108, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__ArrayProperty_518' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, __StructProperty_519) == 0x000118, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::__StructProperty_519' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x000138, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x0001B8, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
 
 // ScriptStruct SK_Mushroom_AnimBP.SK_Mushroom_AnimBP_C.AnimBlueprintGeneratedMutableData
-// 0x005B (0x005C - 0x0001)
+// 0x005F (0x0060 - 0x0001)
 struct SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
 {
 public:
@@ -117,54 +113,57 @@ public:
 	float                                         __FloatProperty_2;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_3;                                 // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_4;                                 // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_5;                                   // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_6;                                 // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_5;                                  // 0x0014(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         __IntProperty_6;                                   // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_7;                                 // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_8;                                 // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_9;                                 // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_10;                                 // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty_11;                                // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_10;                                // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_11;                                 // 0x002C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         __FloatProperty_12;                                // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_13;                                // 0x0034(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_14;                                // 0x0038(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_15;                                // 0x003C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_16;                                // 0x0040(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_17;                                // 0x0044(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_18;                                 // 0x0048(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         __IntProperty_19;                                  // 0x004C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_20;                                 // 0x0050(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         __IntProperty_21;                                  // 0x0054(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_22;                                 // 0x0058(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_18;                                // 0x0048(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_19;                                 // 0x004C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         __IntProperty_20;                                  // 0x0050(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_21;                                 // 0x0054(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         __IntProperty_22;                                  // 0x0058(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_23;                                 // 0x005C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData) == 0x000004, "Wrong alignment on SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData) == 0x00005C, "Wrong size on SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData) == 0x000060, "Wrong size on SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty) == 0x000001, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_0) == 0x000002, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_0' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_1) == 0x000004, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_1' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_2) == 0x000008, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_2' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_3) == 0x00000C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_3' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_4) == 0x000010, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_4' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __IntProperty_5) == 0x000014, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__IntProperty_5' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_6) == 0x000018, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_6' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_5) == 0x000014, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_5' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __IntProperty_6) == 0x000018, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__IntProperty_6' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_7) == 0x00001C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_7' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_8) == 0x000020, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_8' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_9) == 0x000024, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_9' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_10) == 0x000028, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_10' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_11) == 0x00002C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_11' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_10) == 0x000028, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_10' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_11) == 0x00002C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_11' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_12) == 0x000030, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_12' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_13) == 0x000034, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_13' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_14) == 0x000038, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_14' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_15) == 0x00003C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_15' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_16) == 0x000040, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_16' has a wrong offset!");
 static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_17) == 0x000044, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_17' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_18) == 0x000048, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_18' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __IntProperty_19) == 0x00004C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__IntProperty_19' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_20) == 0x000050, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_20' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __IntProperty_21) == 0x000054, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__IntProperty_21' has a wrong offset!");
-static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_22) == 0x000058, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_22' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __FloatProperty_18) == 0x000048, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__FloatProperty_18' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_19) == 0x00004C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_19' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __IntProperty_20) == 0x000050, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__IntProperty_20' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_21) == 0x000054, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_21' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __IntProperty_22) == 0x000058, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__IntProperty_22' has a wrong offset!");
+static_assert(offsetof(SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData, __BoolProperty_23) == 0x00005C, "Member 'SK_Mushroom_AnimBP::FAnimBlueprintGeneratedMutableData::__BoolProperty_23' has a wrong offset!");
 
 }
 

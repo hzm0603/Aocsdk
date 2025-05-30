@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass AbsorptionField_Projectile.AbsorptionField_Projectile_C
-// 0x0008 (0x0598 - 0x0590)
+// 0x0008 (0x05A0 - 0x0598)
 class AAbsorptionField_Projectile_C final : public AAoCAbilityProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_AbsorptionField_Projectile(int32 EntryPoint);
@@ -40,8 +40,8 @@ public:
 	}
 };
 static_assert(alignof(AAbsorptionField_Projectile_C) == 0x000008, "Wrong alignment on AAbsorptionField_Projectile_C");
-static_assert(sizeof(AAbsorptionField_Projectile_C) == 0x000598, "Wrong size on AAbsorptionField_Projectile_C");
-static_assert(offsetof(AAbsorptionField_Projectile_C, UberGraphFrame) == 0x000590, "Member 'AAbsorptionField_Projectile_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(AAbsorptionField_Projectile_C) == 0x0005A0, "Wrong size on AAbsorptionField_Projectile_C");
+static_assert(offsetof(AAbsorptionField_Projectile_C, UberGraphFrame) == 0x000598, "Member 'AAbsorptionField_Projectile_C::UberGraphFrame' has a wrong offset!");
 
 }
 

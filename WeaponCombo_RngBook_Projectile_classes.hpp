@@ -19,24 +19,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass WeaponCombo_RngBook_Projectile.WeaponCombo_RngBook_Projectile_C
-// 0x00A0 (0x0630 - 0x0590)
+// 0x00A0 (0x0638 - 0x0598)
 class AWeaponCombo_RngBook_Projectile_C : public AAoCAbilityProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               P_Book_Cast_Circle;                                // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               P_Book_Page_Magic_Circle;                          // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               ParticleSystem2;                                   // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               ParticleSystem;                                    // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Audio;                                             // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               ParticleSystem1;                                   // 0x05C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     NewVar_0;                                          // 0x05C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Param;                                             // 0x05D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Param_0;                                           // 0x05E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                RGBVector;                                         // 0x05F0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               NewVar_1;                                          // 0x0608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                use;                                               // 0x0610(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Projectile_Inherits_Weapon_Color;                  // 0x0628(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               P_Book_Cast_Circle;                                // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               P_Book_Page_Magic_Circle;                          // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               ParticleSystem2;                                   // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               ParticleSystem;                                    // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Audio;                                             // 0x05C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               ParticleSystem1;                                   // 0x05C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     NewVar_0;                                          // 0x05D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Param;                                             // 0x05D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Param_0;                                           // 0x05E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                RGBVector;                                         // 0x05F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               NewVar_1;                                          // 0x0610(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                use;                                               // 0x0618(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Projectile_Inherits_Weapon_Color;                  // 0x0630(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DeactivateParticleSystems();
@@ -55,21 +55,21 @@ public:
 	}
 };
 static_assert(alignof(AWeaponCombo_RngBook_Projectile_C) == 0x000008, "Wrong alignment on AWeaponCombo_RngBook_Projectile_C");
-static_assert(sizeof(AWeaponCombo_RngBook_Projectile_C) == 0x000630, "Wrong size on AWeaponCombo_RngBook_Projectile_C");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, UberGraphFrame) == 0x000590, "Member 'AWeaponCombo_RngBook_Projectile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, P_Book_Cast_Circle) == 0x000598, "Member 'AWeaponCombo_RngBook_Projectile_C::P_Book_Cast_Circle' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, P_Book_Page_Magic_Circle) == 0x0005A0, "Member 'AWeaponCombo_RngBook_Projectile_C::P_Book_Page_Magic_Circle' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, ParticleSystem2) == 0x0005A8, "Member 'AWeaponCombo_RngBook_Projectile_C::ParticleSystem2' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, ParticleSystem) == 0x0005B0, "Member 'AWeaponCombo_RngBook_Projectile_C::ParticleSystem' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, Audio) == 0x0005B8, "Member 'AWeaponCombo_RngBook_Projectile_C::Audio' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, ParticleSystem1) == 0x0005C0, "Member 'AWeaponCombo_RngBook_Projectile_C::ParticleSystem1' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, NewVar_0) == 0x0005C8, "Member 'AWeaponCombo_RngBook_Projectile_C::NewVar_0' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, Param) == 0x0005D0, "Member 'AWeaponCombo_RngBook_Projectile_C::Param' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, Param_0) == 0x0005E0, "Member 'AWeaponCombo_RngBook_Projectile_C::Param_0' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, RGBVector) == 0x0005F0, "Member 'AWeaponCombo_RngBook_Projectile_C::RGBVector' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, NewVar_1) == 0x000608, "Member 'AWeaponCombo_RngBook_Projectile_C::NewVar_1' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, use) == 0x000610, "Member 'AWeaponCombo_RngBook_Projectile_C::use' has a wrong offset!");
-static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, Projectile_Inherits_Weapon_Color) == 0x000628, "Member 'AWeaponCombo_RngBook_Projectile_C::Projectile_Inherits_Weapon_Color' has a wrong offset!");
+static_assert(sizeof(AWeaponCombo_RngBook_Projectile_C) == 0x000638, "Wrong size on AWeaponCombo_RngBook_Projectile_C");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, UberGraphFrame) == 0x000598, "Member 'AWeaponCombo_RngBook_Projectile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, P_Book_Cast_Circle) == 0x0005A0, "Member 'AWeaponCombo_RngBook_Projectile_C::P_Book_Cast_Circle' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, P_Book_Page_Magic_Circle) == 0x0005A8, "Member 'AWeaponCombo_RngBook_Projectile_C::P_Book_Page_Magic_Circle' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, ParticleSystem2) == 0x0005B0, "Member 'AWeaponCombo_RngBook_Projectile_C::ParticleSystem2' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, ParticleSystem) == 0x0005B8, "Member 'AWeaponCombo_RngBook_Projectile_C::ParticleSystem' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, Audio) == 0x0005C0, "Member 'AWeaponCombo_RngBook_Projectile_C::Audio' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, ParticleSystem1) == 0x0005C8, "Member 'AWeaponCombo_RngBook_Projectile_C::ParticleSystem1' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, NewVar_0) == 0x0005D0, "Member 'AWeaponCombo_RngBook_Projectile_C::NewVar_0' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, Param) == 0x0005D8, "Member 'AWeaponCombo_RngBook_Projectile_C::Param' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, Param_0) == 0x0005E8, "Member 'AWeaponCombo_RngBook_Projectile_C::Param_0' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, RGBVector) == 0x0005F8, "Member 'AWeaponCombo_RngBook_Projectile_C::RGBVector' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, NewVar_1) == 0x000610, "Member 'AWeaponCombo_RngBook_Projectile_C::NewVar_1' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, use) == 0x000618, "Member 'AWeaponCombo_RngBook_Projectile_C::use' has a wrong offset!");
+static_assert(offsetof(AWeaponCombo_RngBook_Projectile_C, Projectile_Inherits_Weapon_Color) == 0x000630, "Member 'AWeaponCombo_RngBook_Projectile_C::Projectile_Inherits_Weapon_Color' has a wrong offset!");
 
 }
 

@@ -11,107 +11,107 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GameSystemsPlugin_classes.hpp"
 #include "Crab01_AnimBP_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "GameSystemsPlugin_classes.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass Crab01_AnimBP.Crab01_AnimBP_C
-// 0x1750 (0x3390 - 0x1C40)
+// 0x1750 (0x33A0 - 0x1C50)
 class UCrab01_AnimBP_C final : public UAoCNPCAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1C40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct Crab01_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                // 0x1C48(0x0038)(HasGetValueTypeHash)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x1C80(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1C88(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1C90(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_16;                 // 0x1CB0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_15;                 // 0x1CD8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_14;                 // 0x1D00(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_13;                 // 0x1D28(0x0028)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_9;                       // 0x1D50(0x0020)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_4;                   // 0x1D70(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_6;                    // 0x1DB8(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_5;                    // 0x1E00(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_8;                       // 0x1E48(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_12;                 // 0x1E68(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_11;                 // 0x1E90(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_10;                 // 0x1EB8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_9;                  // 0x1EE0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_8;                  // 0x1F08(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_7;                  // 0x1F30(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_6;                  // 0x1F58(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x1F80(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x1FA8(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_4;                    // 0x1FD0(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_7;                       // 0x2018(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x2038(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x2060(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x2088(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x20B0(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x20D8(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_6;                       // 0x2120(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x2140(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_5;                       // 0x2188(0x0020)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_4;                       // 0x21A8(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_2;                      // 0x21C8(0x00C8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x2290(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x22B0(0x0048)()
-	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_2;                    // 0x22F8(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x2340(0x0048)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_3;                   // 0x2388(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x23D0(0x0020)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x23F0(0x0070)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x2460(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_1;                      // 0x2480(0x00C8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x2548(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x2568(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x2630(0x0080)()
-	struct FAnimNode_RotationOffsetBlendSpace     AnimGraphNode_RotationOffsetBlendSpace;            // 0x26B0(0x0118)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_10;                             // 0x27C8(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_17;                    // 0x2810(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x2838(0x0080)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_2;                   // 0x28B8(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_9;                              // 0x2900(0x0048)()
-	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_1;                    // 0x2948(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_8;                              // 0x2990(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_7;                              // 0x29D8(0x0048)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0x2A20(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_6;                              // 0x2A68(0x0048)()
-	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt;                      // 0x2AB0(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_5;                              // 0x2AF8(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x2B40(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0x2B88(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_16;                    // 0x2BD0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_15;                    // 0x2BF8(0x0028)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x2C20(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_14;                    // 0x2C68(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_13;                    // 0x2C90(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_12;                    // 0x2CB8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_11;                    // 0x2CE0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_10;                    // 0x2D08(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x2D30(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x2D78(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0x2DC0(0x0028)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x2DE8(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0x2E30(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x2E58(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x2E80(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x2F00(0x0028)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0x2F28(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x3018(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_1;                       // 0x3040(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x3108(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x3130(0x0028)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x3158(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x3248(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x3270(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x3338(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x3360(0x0028)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1C50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct Crab01_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                // 0x1C58(0x0038)(HasGetValueTypeHash)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x1C90(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1C98(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1CA0(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_16;                 // 0x1CC0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_15;                 // 0x1CE8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_14;                 // 0x1D10(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_13;                 // 0x1D38(0x0028)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_9;                       // 0x1D60(0x0020)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_4;                   // 0x1D80(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_6;                    // 0x1DC8(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_5;                    // 0x1E10(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_8;                       // 0x1E58(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_12;                 // 0x1E78(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_11;                 // 0x1EA0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_10;                 // 0x1EC8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_9;                  // 0x1EF0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_8;                  // 0x1F18(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_7;                  // 0x1F40(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_6;                  // 0x1F68(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x1F90(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x1FB8(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_4;                    // 0x1FE0(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_7;                       // 0x2028(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x2048(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x2070(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x2098(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x20C0(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x20E8(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_6;                       // 0x2130(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x2150(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_5;                       // 0x2198(0x0020)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_4;                       // 0x21B8(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_2;                      // 0x21D8(0x00C8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x22A0(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x22C0(0x0048)()
+	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_2;                    // 0x2308(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x2350(0x0048)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_3;                   // 0x2398(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x23E0(0x0020)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x2400(0x0070)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x2470(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_1;                      // 0x2490(0x00C8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x2558(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x2578(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x2640(0x0080)()
+	struct FAnimNode_RotationOffsetBlendSpace     AnimGraphNode_RotationOffsetBlendSpace;            // 0x26C0(0x0118)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_10;                             // 0x27D8(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_17;                    // 0x2820(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x2848(0x0080)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_2;                   // 0x28C8(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_9;                              // 0x2910(0x0048)()
+	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_1;                    // 0x2958(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_8;                              // 0x29A0(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_7;                              // 0x29E8(0x0048)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0x2A30(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_6;                              // 0x2A78(0x0048)()
+	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt;                      // 0x2AC0(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_5;                              // 0x2B08(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x2B50(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0x2B98(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_16;                    // 0x2BE0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_15;                    // 0x2C08(0x0028)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x2C30(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_14;                    // 0x2C78(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_13;                    // 0x2CA0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_12;                    // 0x2CC8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_11;                    // 0x2CF0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_10;                    // 0x2D18(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x2D40(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x2D88(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0x2DD0(0x0028)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x2DF8(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0x2E40(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x2E68(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x2E90(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x2F10(0x0028)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0x2F38(0x00F0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x3028(0x0028)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_1;                       // 0x3050(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x3118(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x3140(0x0028)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x3168(0x00F0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x3258(0x0028)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x3280(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x3348(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x3370(0x0028)()
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -129,95 +129,95 @@ public:
 	}
 };
 static_assert(alignof(UCrab01_AnimBP_C) == 0x000010, "Wrong alignment on UCrab01_AnimBP_C");
-static_assert(sizeof(UCrab01_AnimBP_C) == 0x003390, "Wrong size on UCrab01_AnimBP_C");
-static_assert(offsetof(UCrab01_AnimBP_C, UberGraphFrame) == 0x001C40, "Member 'UCrab01_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, __AnimBlueprintMutables) == 0x001C48, "Member 'UCrab01_AnimBP_C::__AnimBlueprintMutables' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimBlueprintExtension_PropertyAccess) == 0x001C80, "Member 'UCrab01_AnimBP_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimBlueprintExtension_Base) == 0x001C88, "Member 'UCrab01_AnimBP_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Root) == 0x001C90, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_16) == 0x001CB0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_16' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_15) == 0x001CD8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_15' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_14) == 0x001D00, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_14' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_13) == 0x001D28, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_13' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_9) == 0x001D50, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_9' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByBool_4) == 0x001D70, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByBool_4' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_6) == 0x001DB8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_6' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_5) == 0x001E00, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_5' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_8) == 0x001E48, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_8' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_12) == 0x001E68, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_12' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_11) == 0x001E90, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_11' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_10) == 0x001EB8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_10' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_9) == 0x001EE0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_9' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_8) == 0x001F08, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_8' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_7) == 0x001F30, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_7' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_6) == 0x001F58, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_6' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_5) == 0x001F80, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_5' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_4) == 0x001FA8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_4' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_4) == 0x001FD0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_4' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_7) == 0x002018, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_7' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_3) == 0x002038, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_2) == 0x002060, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_1) == 0x002088, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult) == 0x0020B0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_3) == 0x0020D8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_6) == 0x002120, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_6' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_2) == 0x002140, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_5) == 0x002188, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_5' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_4) == 0x0021A8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_4' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateMachine_2) == 0x0021C8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateMachine_2' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_3) == 0x002290, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_3' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_1) == 0x0022B0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByInt_2) == 0x0022F8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByInt_2' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer) == 0x002340, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByBool_3) == 0x002388, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByBool_3' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_2) == 0x0023D0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendSpacePlayer) == 0x0023F0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_1) == 0x002460, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateMachine_1) == 0x002480, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateMachine_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult) == 0x002548, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateMachine) == 0x002568, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SaveCachedPose_2) == 0x002630, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_RotationOffsetBlendSpace) == 0x0026B0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_RotationOffsetBlendSpace' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_10) == 0x0027C8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_10' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_17) == 0x002810, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_17' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SaveCachedPose_1) == 0x002838, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByBool_2) == 0x0028B8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByBool_2' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_9) == 0x002900, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_9' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByInt_1) == 0x002948, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByInt_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_8) == 0x002990, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_8' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_7) == 0x0029D8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_7' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByBool_1) == 0x002A20, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByBool_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_6) == 0x002A68, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_6' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByInt) == 0x002AB0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByInt' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_5) == 0x002AF8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_5' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_4) == 0x002B40, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_4' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_3) == 0x002B88, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_3' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_16) == 0x002BD0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_16' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_15) == 0x002BF8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_15' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_2) == 0x002C20, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_2' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_14) == 0x002C68, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_14' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_13) == 0x002C90, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_13' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_12) == 0x002CB8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_12' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_11) == 0x002CE0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_11' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_10) == 0x002D08, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_10' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByBool) == 0x002D30, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_1) == 0x002D78, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_9) == 0x002DC0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot) == 0x002DE8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_8) == 0x002E30, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_7) == 0x002E58, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SaveCachedPose) == 0x002E80, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_6) == 0x002F00, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_LayeredBoneBlend_1) == 0x002F28, "Member 'UCrab01_AnimBP_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_5) == 0x003018, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TwoWayBlend_1) == 0x003040, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TwoWayBlend_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_4) == 0x003108, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_3) == 0x003130, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_LayeredBoneBlend) == 0x003158, "Member 'UCrab01_AnimBP_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_2) == 0x003248, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TwoWayBlend) == 0x003270, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TwoWayBlend' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_1) == 0x003338, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose) == 0x003360, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
+static_assert(sizeof(UCrab01_AnimBP_C) == 0x0033A0, "Wrong size on UCrab01_AnimBP_C");
+static_assert(offsetof(UCrab01_AnimBP_C, UberGraphFrame) == 0x001C50, "Member 'UCrab01_AnimBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, __AnimBlueprintMutables) == 0x001C58, "Member 'UCrab01_AnimBP_C::__AnimBlueprintMutables' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimBlueprintExtension_PropertyAccess) == 0x001C90, "Member 'UCrab01_AnimBP_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimBlueprintExtension_Base) == 0x001C98, "Member 'UCrab01_AnimBP_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Root) == 0x001CA0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_16) == 0x001CC0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_16' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_15) == 0x001CE8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_15' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_14) == 0x001D10, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_14' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_13) == 0x001D38, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_13' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_9) == 0x001D60, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_9' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByBool_4) == 0x001D80, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByBool_4' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_6) == 0x001DC8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_6' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_5) == 0x001E10, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_5' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_8) == 0x001E58, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_8' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_12) == 0x001E78, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_12' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_11) == 0x001EA0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_11' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_10) == 0x001EC8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_10' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_9) == 0x001EF0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_9' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_8) == 0x001F18, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_8' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_7) == 0x001F40, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_7' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_6) == 0x001F68, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_6' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_5) == 0x001F90, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_5' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_4) == 0x001FB8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_4' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_4) == 0x001FE0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_4' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_7) == 0x002028, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_7' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_3) == 0x002048, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_2) == 0x002070, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult_1) == 0x002098, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TransitionResult) == 0x0020C0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TransitionResult' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_3) == 0x0020E8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_6) == 0x002130, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_6' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_2) == 0x002150, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_5) == 0x002198, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_5' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_4) == 0x0021B8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_4' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateMachine_2) == 0x0021D8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateMachine_2' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_3) == 0x0022A0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_3' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer_1) == 0x0022C0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByInt_2) == 0x002308, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByInt_2' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SequencePlayer) == 0x002350, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByBool_3) == 0x002398, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByBool_3' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_2) == 0x0023E0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_2' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendSpacePlayer) == 0x002400, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult_1) == 0x002470, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateMachine_1) == 0x002490, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateMachine_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateResult) == 0x002558, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateResult' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_StateMachine) == 0x002578, "Member 'UCrab01_AnimBP_C::AnimGraphNode_StateMachine' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SaveCachedPose_2) == 0x002640, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_RotationOffsetBlendSpace) == 0x0026C0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_RotationOffsetBlendSpace' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_10) == 0x0027D8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_10' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_17) == 0x002820, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_17' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SaveCachedPose_1) == 0x002848, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByBool_2) == 0x0028C8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByBool_2' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_9) == 0x002910, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_9' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByInt_1) == 0x002958, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByInt_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_8) == 0x0029A0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_8' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_7) == 0x0029E8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_7' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByBool_1) == 0x002A30, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByBool_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_6) == 0x002A78, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_6' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByInt) == 0x002AC0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByInt' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_5) == 0x002B08, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_5' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_4) == 0x002B50, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_4' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_3) == 0x002B98, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_3' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_16) == 0x002BE0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_16' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_15) == 0x002C08, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_15' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_2) == 0x002C30, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_2' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_14) == 0x002C78, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_14' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_13) == 0x002CA0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_13' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_12) == 0x002CC8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_12' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_11) == 0x002CF0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_11' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_10) == 0x002D18, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_10' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_BlendListByBool) == 0x002D40, "Member 'UCrab01_AnimBP_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot_1) == 0x002D88, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_9) == 0x002DD0, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_Slot) == 0x002DF8, "Member 'UCrab01_AnimBP_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_8) == 0x002E40, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_7) == 0x002E68, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_SaveCachedPose) == 0x002E90, "Member 'UCrab01_AnimBP_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_6) == 0x002F10, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_LayeredBoneBlend_1) == 0x002F38, "Member 'UCrab01_AnimBP_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_5) == 0x003028, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TwoWayBlend_1) == 0x003050, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TwoWayBlend_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_4) == 0x003118, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_3) == 0x003140, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_LayeredBoneBlend) == 0x003168, "Member 'UCrab01_AnimBP_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_2) == 0x003258, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_TwoWayBlend) == 0x003280, "Member 'UCrab01_AnimBP_C::AnimGraphNode_TwoWayBlend' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose_1) == 0x003348, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UCrab01_AnimBP_C, AnimGraphNode_UseCachedPose) == 0x003370, "Member 'UCrab01_AnimBP_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
 
 }
 

@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MA0015_TowerArcana.MA0015_TowerArcana_C
-// 0x0020 (0x1DB0 - 0x1D90)
+// 0x0020 (0x1D70 - 0x1D50)
 class AMA0015_TowerArcana_C final : public ANPCPawn_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_MA0015_TowerArcana_C;               // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x1D98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      FireFX_;                                           // 0x1DA0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UInteractableComponent*                 Interactable;                                      // 0x1DA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_MA0015_TowerArcana_C;               // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x1D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      FireFX_;                                           // 0x1D60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UInteractableComponent*                 Interactable;                                      // 0x1D68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ReceiveBeginPlay();
@@ -43,11 +43,11 @@ public:
 	}
 };
 static_assert(alignof(AMA0015_TowerArcana_C) == 0x000010, "Wrong alignment on AMA0015_TowerArcana_C");
-static_assert(sizeof(AMA0015_TowerArcana_C) == 0x001DB0, "Wrong size on AMA0015_TowerArcana_C");
-static_assert(offsetof(AMA0015_TowerArcana_C, UberGraphFrame_MA0015_TowerArcana_C) == 0x001D90, "Member 'AMA0015_TowerArcana_C::UberGraphFrame_MA0015_TowerArcana_C' has a wrong offset!");
-static_assert(offsetof(AMA0015_TowerArcana_C, StaticMesh) == 0x001D98, "Member 'AMA0015_TowerArcana_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(AMA0015_TowerArcana_C, FireFX_) == 0x001DA0, "Member 'AMA0015_TowerArcana_C::FireFX_' has a wrong offset!");
-static_assert(offsetof(AMA0015_TowerArcana_C, Interactable) == 0x001DA8, "Member 'AMA0015_TowerArcana_C::Interactable' has a wrong offset!");
+static_assert(sizeof(AMA0015_TowerArcana_C) == 0x001D70, "Wrong size on AMA0015_TowerArcana_C");
+static_assert(offsetof(AMA0015_TowerArcana_C, UberGraphFrame_MA0015_TowerArcana_C) == 0x001D50, "Member 'AMA0015_TowerArcana_C::UberGraphFrame_MA0015_TowerArcana_C' has a wrong offset!");
+static_assert(offsetof(AMA0015_TowerArcana_C, StaticMesh) == 0x001D58, "Member 'AMA0015_TowerArcana_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(AMA0015_TowerArcana_C, FireFX_) == 0x001D60, "Member 'AMA0015_TowerArcana_C::FireFX_' has a wrong offset!");
+static_assert(offsetof(AMA0015_TowerArcana_C, Interactable) == 0x001D68, "Member 'AMA0015_TowerArcana_C::Interactable' has a wrong offset!");
 
 }
 

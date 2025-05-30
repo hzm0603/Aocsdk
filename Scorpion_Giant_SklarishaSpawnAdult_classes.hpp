@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Scorpion_Giant_SklarishaSpawnAdult.Scorpion_Giant_SklarishaSpawnAdult_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class AScorpion_Giant_SklarishaSpawnAdult_C final : public AScorpion_Giant_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AScorpion_Giant_SklarishaSpawnAdult_C) == 0x000010, "Wrong alignment on AScorpion_Giant_SklarishaSpawnAdult_C");
-static_assert(sizeof(AScorpion_Giant_SklarishaSpawnAdult_C) == 0x001DA0, "Wrong size on AScorpion_Giant_SklarishaSpawnAdult_C");
+static_assert(sizeof(AScorpion_Giant_SklarishaSpawnAdult_C) == 0x001D60, "Wrong size on AScorpion_Giant_SklarishaSpawnAdult_C");
 
 }
 

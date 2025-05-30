@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass AnimBP_AoC_ALL_F_Child.AnimBP_AoC_ALL_F_Child_C
-// 0x0000 (0x26740 - 0x26740)
+// 0x0000 (0x27D20 - 0x27D20)
 class UAnimBP_AoC_ALL_F_Child_C final : public UALS_AnimBP_AoC_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UAnimBP_AoC_ALL_F_Child_C) == 0x000010, "Wrong alignment on UAnimBP_AoC_ALL_F_Child_C");
-static_assert(sizeof(UAnimBP_AoC_ALL_F_Child_C) == 0x026740, "Wrong size on UAnimBP_AoC_ALL_F_Child_C");
+static_assert(sizeof(UAnimBP_AoC_ALL_F_Child_C) == 0x027D20, "Wrong size on UAnimBP_AoC_ALL_F_Child_C");
 
 }
 

@@ -123,6 +123,17 @@ enum class EMoviePipelineShutterTiming : uint8
 	EMoviePipelineShutterTiming_MAX          = 3,
 };
 
+// ScriptStruct MovieRenderPipelineCore.MovieGraphRenderPassOutputData
+// 0x0010 (0x0010 - 0x0000)
+struct FMovieGraphRenderPassOutputData final
+{
+public:
+	TArray<class FString>                         FilePaths;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMovieGraphRenderPassOutputData) == 0x000008, "Wrong alignment on FMovieGraphRenderPassOutputData");
+static_assert(sizeof(FMovieGraphRenderPassOutputData) == 0x000010, "Wrong size on FMovieGraphRenderPassOutputData");
+static_assert(offsetof(FMovieGraphRenderPassOutputData, FilePaths) == 0x000000, "Member 'FMovieGraphRenderPassOutputData::FilePaths' has a wrong offset!");
+
 // ScriptStruct MovieRenderPipelineCore.MoviePipelinePassIdentifier
 // 0x0020 (0x0020 - 0x0000)
 struct FMoviePipelinePassIdentifier final
@@ -152,8 +163,8 @@ static_assert(offsetof(FMoviePipelineRenderPassOutputData, FilePaths) == 0x00000
 struct FMoviePipelineShotOutputData final
 {
 public:
-	TWeakObjectPtr<class UMoviePipelineExecutorShot> Shot;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<struct FMoviePipelinePassIdentifier, struct FMoviePipelineRenderPassOutputData> RenderPassData;                                    // 0x0008(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UMoviePipelineExecutorShot> Shot;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<struct FMoviePipelinePassIdentifier, struct FMoviePipelineRenderPassOutputData> RenderPassData; // 0x0008(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMoviePipelineShotOutputData) == 0x000008, "Wrong alignment on FMoviePipelineShotOutputData");
 static_assert(sizeof(FMoviePipelineShotOutputData) == 0x000058, "Wrong size on FMoviePipelineShotOutputData");
@@ -194,24 +205,11 @@ static_assert(offsetof(FMovieGraphEvaluatedSettingsStack, NodeInstances) == 0x00
 struct FMovieGraphEvaluatedBranchConfig final
 {
 public:
-	TMap<class FString, struct FMovieGraphEvaluatedSettingsStack> NamedNodes;                                        // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	TMap<class FString, struct FMovieGraphEvaluatedSettingsStack> NamedNodes;                        // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
 };
 static_assert(alignof(FMovieGraphEvaluatedBranchConfig) == 0x000008, "Wrong alignment on FMovieGraphEvaluatedBranchConfig");
 static_assert(sizeof(FMovieGraphEvaluatedBranchConfig) == 0x000050, "Wrong size on FMovieGraphEvaluatedBranchConfig");
 static_assert(offsetof(FMovieGraphEvaluatedBranchConfig, NamedNodes) == 0x000000, "Member 'FMovieGraphEvaluatedBranchConfig::NamedNodes' has a wrong offset!");
-
-// ScriptStruct MovieRenderPipelineCore.MovieGraphResolveArgs
-// 0x00A0 (0x00A0 - 0x0000)
-struct FMovieGraphResolveArgs final
-{
-public:
-	TMap<class FString, class FString>            FilenameArguments;                                 // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            FileMetadata;                                      // 0x0050(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMovieGraphResolveArgs) == 0x000008, "Wrong alignment on FMovieGraphResolveArgs");
-static_assert(sizeof(FMovieGraphResolveArgs) == 0x0000A0, "Wrong size on FMovieGraphResolveArgs");
-static_assert(offsetof(FMovieGraphResolveArgs, FilenameArguments) == 0x000000, "Member 'FMovieGraphResolveArgs::FilenameArguments' has a wrong offset!");
-static_assert(offsetof(FMovieGraphResolveArgs, FileMetadata) == 0x000050, "Member 'FMovieGraphResolveArgs::FileMetadata' has a wrong offset!");
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphRenderDataIdentifier
 // 0x0038 (0x0038 - 0x0000)
@@ -298,6 +296,51 @@ static_assert(offsetof(FMovieGraphEvaluationContext, VisitedNodes) == 0x000078, 
 static_assert(offsetof(FMovieGraphEvaluationContext, PinBeingFollowed) == 0x0000C8, "Member 'FMovieGraphEvaluationContext::PinBeingFollowed' has a wrong offset!");
 static_assert(offsetof(FMovieGraphEvaluationContext, SubgraphStack) == 0x0000D0, "Member 'FMovieGraphEvaluationContext::SubgraphStack' has a wrong offset!");
 
+// ScriptStruct MovieRenderPipelineCore.MoviePipelineFilenameResolveParams
+// 0x0118 (0x0118 - 0x0000)
+struct FMoviePipelineFilenameResolveParams final
+{
+public:
+	int32                                         FrameNumber;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FrameNumberShot;                                   // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FrameNumberRel;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FrameNumberShotRel;                                // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CameraNameOverride;                                // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ShotNameOverride;                                  // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ZeroPadFrameNumberCount;                           // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceRelativeFrameNumbers;                        // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 FileNameOverride;                                  // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            FileNameFormatOverrides;                           // 0x0048(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            FileMetadata;                                      // 0x0098(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FDateTime                              InitializationTime;                                // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InitializationVersion;                             // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMoviePipelineExecutorJob*              Job;                                               // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_100[0x8];                                      // 0x0100(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMoviePipelineExecutorShot*             ShotOverride;                                      // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AdditionalFrameNumberOffset;                       // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FMoviePipelineFilenameResolveParams) == 0x000008, "Wrong alignment on FMoviePipelineFilenameResolveParams");
+static_assert(sizeof(FMoviePipelineFilenameResolveParams) == 0x000118, "Wrong size on FMoviePipelineFilenameResolveParams");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, FrameNumber) == 0x000000, "Member 'FMoviePipelineFilenameResolveParams::FrameNumber' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, FrameNumberShot) == 0x000004, "Member 'FMoviePipelineFilenameResolveParams::FrameNumberShot' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, FrameNumberRel) == 0x000008, "Member 'FMoviePipelineFilenameResolveParams::FrameNumberRel' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, FrameNumberShotRel) == 0x00000C, "Member 'FMoviePipelineFilenameResolveParams::FrameNumberShotRel' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, CameraNameOverride) == 0x000010, "Member 'FMoviePipelineFilenameResolveParams::CameraNameOverride' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, ShotNameOverride) == 0x000020, "Member 'FMoviePipelineFilenameResolveParams::ShotNameOverride' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, ZeroPadFrameNumberCount) == 0x000030, "Member 'FMoviePipelineFilenameResolveParams::ZeroPadFrameNumberCount' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, bForceRelativeFrameNumbers) == 0x000034, "Member 'FMoviePipelineFilenameResolveParams::bForceRelativeFrameNumbers' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, FileNameOverride) == 0x000038, "Member 'FMoviePipelineFilenameResolveParams::FileNameOverride' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, FileNameFormatOverrides) == 0x000048, "Member 'FMoviePipelineFilenameResolveParams::FileNameFormatOverrides' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, FileMetadata) == 0x000098, "Member 'FMoviePipelineFilenameResolveParams::FileMetadata' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, InitializationTime) == 0x0000E8, "Member 'FMoviePipelineFilenameResolveParams::InitializationTime' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, InitializationVersion) == 0x0000F0, "Member 'FMoviePipelineFilenameResolveParams::InitializationVersion' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, Job) == 0x0000F8, "Member 'FMoviePipelineFilenameResolveParams::Job' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, ShotOverride) == 0x000108, "Member 'FMoviePipelineFilenameResolveParams::ShotOverride' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineFilenameResolveParams, AdditionalFrameNumberOffset) == 0x000110, "Member 'FMoviePipelineFilenameResolveParams::AdditionalFrameNumberOffset' has a wrong offset!");
+
 // ScriptStruct MovieRenderPipelineCore.MovieGraphInitConfig
 // 0x0020 (0x0020 - 0x0000)
 struct FMovieGraphInitConfig final
@@ -316,29 +359,31 @@ static_assert(offsetof(FMovieGraphInitConfig, RendererClass) == 0x000008, "Membe
 static_assert(offsetof(FMovieGraphInitConfig, DataSourceClass) == 0x000010, "Member 'FMovieGraphInitConfig::DataSourceClass' has a wrong offset!");
 static_assert(offsetof(FMovieGraphInitConfig, bRenderViewport) == 0x000018, "Member 'FMovieGraphInitConfig::bRenderViewport' has a wrong offset!");
 
-// ScriptStruct MovieRenderPipelineCore.MovieGraphRenderPassOutputData
-// 0x0010 (0x0010 - 0x0000)
-struct FMovieGraphRenderPassOutputData final
-{
-public:
-	TArray<class FString>                         FilePaths;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMovieGraphRenderPassOutputData) == 0x000008, "Wrong alignment on FMovieGraphRenderPassOutputData");
-static_assert(sizeof(FMovieGraphRenderPassOutputData) == 0x000010, "Wrong size on FMovieGraphRenderPassOutputData");
-static_assert(offsetof(FMovieGraphRenderPassOutputData, FilePaths) == 0x000000, "Member 'FMovieGraphRenderPassOutputData::FilePaths' has a wrong offset!");
-
 // ScriptStruct MovieRenderPipelineCore.MovieGraphRenderOutputData
 // 0x0058 (0x0058 - 0x0000)
 struct FMovieGraphRenderOutputData final
 {
 public:
-	TWeakObjectPtr<class UMoviePipelineExecutorShot> Shot;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<struct FMovieGraphRenderDataIdentifier, struct FMovieGraphRenderPassOutputData> RenderPassData;                                    // 0x0008(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UMoviePipelineExecutorShot> Shot;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<struct FMovieGraphRenderDataIdentifier, struct FMovieGraphRenderPassOutputData> RenderPassData; // 0x0008(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMovieGraphRenderOutputData) == 0x000008, "Wrong alignment on FMovieGraphRenderOutputData");
 static_assert(sizeof(FMovieGraphRenderOutputData) == 0x000058, "Wrong size on FMovieGraphRenderOutputData");
 static_assert(offsetof(FMovieGraphRenderOutputData, Shot) == 0x000000, "Member 'FMovieGraphRenderOutputData::Shot' has a wrong offset!");
 static_assert(offsetof(FMovieGraphRenderOutputData, RenderPassData) == 0x000008, "Member 'FMovieGraphRenderOutputData::RenderPassData' has a wrong offset!");
+
+// ScriptStruct MovieRenderPipelineCore.MovieGraphResolveArgs
+// 0x00A0 (0x00A0 - 0x0000)
+struct FMovieGraphResolveArgs final
+{
+public:
+	TMap<class FString, class FString>            FilenameArguments;                                 // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            FileMetadata;                                      // 0x0050(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMovieGraphResolveArgs) == 0x000008, "Wrong alignment on FMovieGraphResolveArgs");
+static_assert(sizeof(FMovieGraphResolveArgs) == 0x0000A0, "Wrong size on FMovieGraphResolveArgs");
+static_assert(offsetof(FMovieGraphResolveArgs, FilenameArguments) == 0x000000, "Member 'FMovieGraphResolveArgs::FilenameArguments' has a wrong offset!");
+static_assert(offsetof(FMovieGraphResolveArgs, FileMetadata) == 0x000050, "Member 'FMovieGraphResolveArgs::FileMetadata' has a wrong offset!");
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphFilenameResolveParams
 // 0x0128 (0x0128 - 0x0000)
@@ -492,51 +537,6 @@ static_assert(sizeof(FMoviePipelineFormatArgs) == 0x0000A8, "Wrong size on FMovi
 static_assert(offsetof(FMoviePipelineFormatArgs, FilenameArguments) == 0x000000, "Member 'FMoviePipelineFormatArgs::FilenameArguments' has a wrong offset!");
 static_assert(offsetof(FMoviePipelineFormatArgs, FileMetadata) == 0x000050, "Member 'FMoviePipelineFormatArgs::FileMetadata' has a wrong offset!");
 static_assert(offsetof(FMoviePipelineFormatArgs, InJob) == 0x0000A0, "Member 'FMoviePipelineFormatArgs::InJob' has a wrong offset!");
-
-// ScriptStruct MovieRenderPipelineCore.MoviePipelineFilenameResolveParams
-// 0x0118 (0x0118 - 0x0000)
-struct FMoviePipelineFilenameResolveParams final
-{
-public:
-	int32                                         FrameNumber;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FrameNumberShot;                                   // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FrameNumberRel;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FrameNumberShotRel;                                // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CameraNameOverride;                                // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ShotNameOverride;                                  // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ZeroPadFrameNumberCount;                           // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceRelativeFrameNumbers;                        // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 FileNameOverride;                                  // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            FileNameFormatOverrides;                           // 0x0048(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            FileMetadata;                                      // 0x0098(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FDateTime                              InitializationTime;                                // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InitializationVersion;                             // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMoviePipelineExecutorJob*              Job;                                               // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_100[0x8];                                      // 0x0100(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMoviePipelineExecutorShot*             ShotOverride;                                      // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AdditionalFrameNumberOffset;                       // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FMoviePipelineFilenameResolveParams) == 0x000008, "Wrong alignment on FMoviePipelineFilenameResolveParams");
-static_assert(sizeof(FMoviePipelineFilenameResolveParams) == 0x000118, "Wrong size on FMoviePipelineFilenameResolveParams");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, FrameNumber) == 0x000000, "Member 'FMoviePipelineFilenameResolveParams::FrameNumber' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, FrameNumberShot) == 0x000004, "Member 'FMoviePipelineFilenameResolveParams::FrameNumberShot' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, FrameNumberRel) == 0x000008, "Member 'FMoviePipelineFilenameResolveParams::FrameNumberRel' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, FrameNumberShotRel) == 0x00000C, "Member 'FMoviePipelineFilenameResolveParams::FrameNumberShotRel' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, CameraNameOverride) == 0x000010, "Member 'FMoviePipelineFilenameResolveParams::CameraNameOverride' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, ShotNameOverride) == 0x000020, "Member 'FMoviePipelineFilenameResolveParams::ShotNameOverride' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, ZeroPadFrameNumberCount) == 0x000030, "Member 'FMoviePipelineFilenameResolveParams::ZeroPadFrameNumberCount' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, bForceRelativeFrameNumbers) == 0x000034, "Member 'FMoviePipelineFilenameResolveParams::bForceRelativeFrameNumbers' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, FileNameOverride) == 0x000038, "Member 'FMoviePipelineFilenameResolveParams::FileNameOverride' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, FileNameFormatOverrides) == 0x000048, "Member 'FMoviePipelineFilenameResolveParams::FileNameFormatOverrides' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, FileMetadata) == 0x000098, "Member 'FMoviePipelineFilenameResolveParams::FileMetadata' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, InitializationTime) == 0x0000E8, "Member 'FMoviePipelineFilenameResolveParams::InitializationTime' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, InitializationVersion) == 0x0000F0, "Member 'FMoviePipelineFilenameResolveParams::InitializationVersion' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, Job) == 0x0000F8, "Member 'FMoviePipelineFilenameResolveParams::Job' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, ShotOverride) == 0x000108, "Member 'FMoviePipelineFilenameResolveParams::ShotOverride' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineFilenameResolveParams, AdditionalFrameNumberOffset) == 0x000110, "Member 'FMoviePipelineFilenameResolveParams::AdditionalFrameNumberOffset' has a wrong offset!");
 
 }
 

@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function Quest_NPC_Master.Quest_NPC_Master_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AQuest_NPC_Master_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Quest_NPC_Master_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Quest_NPC_Master.Quest_NPC_Master_C.ExecuteUbergraph_Quest_NPC_Master
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void AQuest_NPC_Master_C::ExecuteUbergraph_Quest_NPC_Master(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Quest_NPC_Master.Quest_NPC_Master_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AQuest_NPC_Master_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Quest_NPC_Master_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

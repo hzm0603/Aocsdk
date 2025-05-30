@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
-#include "SWorldManagerInfo_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ELocationType_structs.hpp"
+#include "SWorldManagerInfo_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK

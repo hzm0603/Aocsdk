@@ -25,7 +25,7 @@ public:
 	TArray<struct FAoCSplineMeshEntry>            FenceObjects_44_F5CF02F44C2F402BDD51E49AB86F588C;  // 0x0000(0x0010)(Edit, BlueprintVisible)
 	int32                                         RandomFenceSeed_49_8532FBFB4D4333965968A8A42994A6CC; // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          FenceRandom_45_0AC6BF9C49073A16EC2AD6B8C31EC8CE;   // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AffectedByExclusion_47_4F78E40445C930221421A4B80E0BDAB4; // 0x0015(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AffectedByExclusionPCGRoadExclusion_77_4F78E40445C930221421A4B80E0BDAB4; // 0x0015(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          FlipMeshes_51_1BE1CF8945C708B49E4DDDBFEB3463C5;    // 0x0016(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SnapToGround_52_E7CF61E34D4CB61AA401739946D033B3;  // 0x0017(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        FenceDensity_76_04EA821F426087E1ED74F0AD07E7807A;  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -39,7 +39,7 @@ static_assert(sizeof(FS_FenceSetDressData) == 0x000050, "Wrong size on FS_FenceS
 static_assert(offsetof(FS_FenceSetDressData, FenceObjects_44_F5CF02F44C2F402BDD51E49AB86F588C) == 0x000000, "Member 'FS_FenceSetDressData::FenceObjects_44_F5CF02F44C2F402BDD51E49AB86F588C' has a wrong offset!");
 static_assert(offsetof(FS_FenceSetDressData, RandomFenceSeed_49_8532FBFB4D4333965968A8A42994A6CC) == 0x000010, "Member 'FS_FenceSetDressData::RandomFenceSeed_49_8532FBFB4D4333965968A8A42994A6CC' has a wrong offset!");
 static_assert(offsetof(FS_FenceSetDressData, FenceRandom_45_0AC6BF9C49073A16EC2AD6B8C31EC8CE) == 0x000014, "Member 'FS_FenceSetDressData::FenceRandom_45_0AC6BF9C49073A16EC2AD6B8C31EC8CE' has a wrong offset!");
-static_assert(offsetof(FS_FenceSetDressData, AffectedByExclusion_47_4F78E40445C930221421A4B80E0BDAB4) == 0x000015, "Member 'FS_FenceSetDressData::AffectedByExclusion_47_4F78E40445C930221421A4B80E0BDAB4' has a wrong offset!");
+static_assert(offsetof(FS_FenceSetDressData, AffectedByExclusionPCGRoadExclusion_77_4F78E40445C930221421A4B80E0BDAB4) == 0x000015, "Member 'FS_FenceSetDressData::AffectedByExclusionPCGRoadExclusion_77_4F78E40445C930221421A4B80E0BDAB4' has a wrong offset!");
 static_assert(offsetof(FS_FenceSetDressData, FlipMeshes_51_1BE1CF8945C708B49E4DDDBFEB3463C5) == 0x000016, "Member 'FS_FenceSetDressData::FlipMeshes_51_1BE1CF8945C708B49E4DDDBFEB3463C5' has a wrong offset!");
 static_assert(offsetof(FS_FenceSetDressData, SnapToGround_52_E7CF61E34D4CB61AA401739946D033B3) == 0x000017, "Member 'FS_FenceSetDressData::SnapToGround_52_E7CF61E34D4CB61AA401739946D033B3' has a wrong offset!");
 static_assert(offsetof(FS_FenceSetDressData, FenceDensity_76_04EA821F426087E1ED74F0AD07E7807A) == 0x000018, "Member 'FS_FenceSetDressData::FenceDensity_76_04EA821F426087E1ED74F0AD07E7807A' has a wrong offset!");

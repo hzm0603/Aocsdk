@@ -22,6 +22,36 @@
 namespace SDK
 {
 
+// RigVMBlueprintGeneratedClass CR_PC_MASTER_Universal_Headlook_Low.CR_PC_MASTER_Universal_Headlook_Low_C
+// 0x0040 (0x0670 - 0x0630)
+class UCR_PC_MASTER_Universal_Headlook_Low_C final : public UControlRig
+{
+public:
+	bool                                          ShouldDoHeadLook;                                  // 0x0630(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsAiming;                                          // 0x0631(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_632[0x6];                                      // 0x0632(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                WorldLookAtLocation;                               // 0x0638(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CRLookAtLocation;                                  // 0x0650(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Weight_From_Anim;                                  // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticBPGeneratedClassImpl<"CR_PC_MASTER_Universal_Headlook_Low_C">();
+	}
+	static class UCR_PC_MASTER_Universal_Headlook_Low_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCR_PC_MASTER_Universal_Headlook_Low_C>();
+	}
+};
+static_assert(alignof(UCR_PC_MASTER_Universal_Headlook_Low_C) == 0x000008, "Wrong alignment on UCR_PC_MASTER_Universal_Headlook_Low_C");
+static_assert(sizeof(UCR_PC_MASTER_Universal_Headlook_Low_C) == 0x000670, "Wrong size on UCR_PC_MASTER_Universal_Headlook_Low_C");
+static_assert(offsetof(UCR_PC_MASTER_Universal_Headlook_Low_C, ShouldDoHeadLook) == 0x000630, "Member 'UCR_PC_MASTER_Universal_Headlook_Low_C::ShouldDoHeadLook' has a wrong offset!");
+static_assert(offsetof(UCR_PC_MASTER_Universal_Headlook_Low_C, IsAiming) == 0x000631, "Member 'UCR_PC_MASTER_Universal_Headlook_Low_C::IsAiming' has a wrong offset!");
+static_assert(offsetof(UCR_PC_MASTER_Universal_Headlook_Low_C, WorldLookAtLocation) == 0x000638, "Member 'UCR_PC_MASTER_Universal_Headlook_Low_C::WorldLookAtLocation' has a wrong offset!");
+static_assert(offsetof(UCR_PC_MASTER_Universal_Headlook_Low_C, CRLookAtLocation) == 0x000650, "Member 'UCR_PC_MASTER_Universal_Headlook_Low_C::CRLookAtLocation' has a wrong offset!");
+static_assert(offsetof(UCR_PC_MASTER_Universal_Headlook_Low_C, Weight_From_Anim) == 0x000668, "Member 'UCR_PC_MASTER_Universal_Headlook_Low_C::Weight_From_Anim' has a wrong offset!");
+
 // RigVMMemoryStorageGeneratorClass CR_PC_MASTER_Universal_Headlook_Low.RigVMMemory_Literal
 // 0x0618 (0x0660 - 0x0048)
 class CR_PC_MASTER_Universal_Headlook_Low::URigVMMemory_Literal final : public URigVMMemoryStorage
@@ -75,7 +105,7 @@ public:
 	struct FRigElementKey                         RigVMModel___SpawnControl_1_Parent__Const;         // 0x0328(0x000C)(Edit, EditConst, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class FName                                   RigVMModel___SpawnControl_1_Name__Const;           // 0x0334(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_1_Settings__Const;       // 0x0340(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_1_Settings__Const; // 0x0340(0x00D0)(Edit, EditConst, NonTransactional)
 	class FName                                   RigVMModel___SpawnControl_Name__Const;             // 0x0410(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FRigElementKey                         RigVMModel___SpawnControl_2_2_Parent__Const;       // 0x0418(0x000C)(Edit, EditConst, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class FName                                   RigVMModel___SpawnControl_2_2_Name__Const;         // 0x0424(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -83,11 +113,11 @@ public:
 	struct FTransform                             RigVMModel___SpawnControl_2_2_OffsetTransform__Const; // 0x0430(0x0060)(Edit, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                RigVMModel___Add_B__Const;                         // 0x0490(0x0018)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4A8[0x8];                                      // 0x04A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_2_2_Settings__Const;     // 0x04B0(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_2_2_Settings__Const; // 0x04B0(0x00D0)(Edit, EditConst, NonTransactional)
 	class FName                                   RigVMModel___SpawnControl_1_1_1_Name__Const;       // 0x0580(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	ERigVMTransformSpace                          RigVMModel___SpawnControl_1_1_1_OffsetSpace__Const; // 0x0588(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_589[0x7];                                      // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_1_1_1_Settings__Const;   // 0x0590(0x00D0)(Edit, EditConst, NonTransactional)
+	struct FRigUnit_HierarchyAddControlTransform_Settings RigVMModel___SpawnControl_1_1_1_Settings__Const; // 0x0590(0x00D0)(Edit, EditConst, NonTransactional)
 
 public:
 	static class UClass* StaticClass()
@@ -147,36 +177,6 @@ static_assert(offsetof(CR_PC_MASTER_Universal_Headlook_Low::URigVMMemory_Literal
 static_assert(offsetof(CR_PC_MASTER_Universal_Headlook_Low::URigVMMemory_Literal, RigVMModel___SpawnControl_1_1_1_Name__Const) == 0x000580, "Member 'CR_PC_MASTER_Universal_Headlook_Low::URigVMMemory_Literal::RigVMModel___SpawnControl_1_1_1_Name__Const' has a wrong offset!");
 static_assert(offsetof(CR_PC_MASTER_Universal_Headlook_Low::URigVMMemory_Literal, RigVMModel___SpawnControl_1_1_1_OffsetSpace__Const) == 0x000588, "Member 'CR_PC_MASTER_Universal_Headlook_Low::URigVMMemory_Literal::RigVMModel___SpawnControl_1_1_1_OffsetSpace__Const' has a wrong offset!");
 static_assert(offsetof(CR_PC_MASTER_Universal_Headlook_Low::URigVMMemory_Literal, RigVMModel___SpawnControl_1_1_1_Settings__Const) == 0x000590, "Member 'CR_PC_MASTER_Universal_Headlook_Low::URigVMMemory_Literal::RigVMModel___SpawnControl_1_1_1_Settings__Const' has a wrong offset!");
-
-// RigVMBlueprintGeneratedClass CR_PC_MASTER_Universal_Headlook_Low.CR_PC_MASTER_Universal_Headlook_Low_C
-// 0x0040 (0x0670 - 0x0630)
-class UCR_PC_MASTER_Universal_Headlook_Low_C final : public UControlRig
-{
-public:
-	bool                                          ShouldDoHeadLook;                                  // 0x0630(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsAiming;                                          // 0x0631(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_632[0x6];                                      // 0x0632(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                WorldLookAtLocation;                               // 0x0638(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CRLookAtLocation;                                  // 0x0650(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Weight_From_Anim;                                  // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticBPGeneratedClassImpl<"CR_PC_MASTER_Universal_Headlook_Low_C">();
-	}
-	static class UCR_PC_MASTER_Universal_Headlook_Low_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCR_PC_MASTER_Universal_Headlook_Low_C>();
-	}
-};
-static_assert(alignof(UCR_PC_MASTER_Universal_Headlook_Low_C) == 0x000008, "Wrong alignment on UCR_PC_MASTER_Universal_Headlook_Low_C");
-static_assert(sizeof(UCR_PC_MASTER_Universal_Headlook_Low_C) == 0x000670, "Wrong size on UCR_PC_MASTER_Universal_Headlook_Low_C");
-static_assert(offsetof(UCR_PC_MASTER_Universal_Headlook_Low_C, ShouldDoHeadLook) == 0x000630, "Member 'UCR_PC_MASTER_Universal_Headlook_Low_C::ShouldDoHeadLook' has a wrong offset!");
-static_assert(offsetof(UCR_PC_MASTER_Universal_Headlook_Low_C, IsAiming) == 0x000631, "Member 'UCR_PC_MASTER_Universal_Headlook_Low_C::IsAiming' has a wrong offset!");
-static_assert(offsetof(UCR_PC_MASTER_Universal_Headlook_Low_C, WorldLookAtLocation) == 0x000638, "Member 'UCR_PC_MASTER_Universal_Headlook_Low_C::WorldLookAtLocation' has a wrong offset!");
-static_assert(offsetof(UCR_PC_MASTER_Universal_Headlook_Low_C, CRLookAtLocation) == 0x000650, "Member 'UCR_PC_MASTER_Universal_Headlook_Low_C::CRLookAtLocation' has a wrong offset!");
-static_assert(offsetof(UCR_PC_MASTER_Universal_Headlook_Low_C, Weight_From_Anim) == 0x000668, "Member 'UCR_PC_MASTER_Universal_Headlook_Low_C::Weight_From_Anim' has a wrong offset!");
 
 // RigVMMemoryStorageGeneratorClass CR_PC_MASTER_Universal_Headlook_Low.RigVMMemory_Work
 // 0x0858 (0x08A0 - 0x0048)

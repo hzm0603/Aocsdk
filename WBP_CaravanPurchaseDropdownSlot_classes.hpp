@@ -22,6 +22,7 @@ class UWBP_CaravanPurchaseDropdownSlot_C final : public UCaravanPurchaseDropdown
 {
 public:
 	class UImage*                                 RarityFrame;                                       // 0x1770(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    StatusTextBlock;                                   // 0x1778(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,6 +37,7 @@ public:
 static_assert(alignof(UWBP_CaravanPurchaseDropdownSlot_C) == 0x000010, "Wrong alignment on UWBP_CaravanPurchaseDropdownSlot_C");
 static_assert(sizeof(UWBP_CaravanPurchaseDropdownSlot_C) == 0x001780, "Wrong size on UWBP_CaravanPurchaseDropdownSlot_C");
 static_assert(offsetof(UWBP_CaravanPurchaseDropdownSlot_C, RarityFrame) == 0x001770, "Member 'UWBP_CaravanPurchaseDropdownSlot_C::RarityFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanPurchaseDropdownSlot_C, StatusTextBlock) == 0x001778, "Member 'UWBP_CaravanPurchaseDropdownSlot_C::StatusTextBlock' has a wrong offset!");
 
 }
 

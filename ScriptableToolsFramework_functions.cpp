@@ -20,7 +20,7 @@ namespace SDK
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.AddLogMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FText                             Message                                                (Parm, NativeAccessSpecifierPublic)
+// const class FText&                      Message                                                (Parm, NativeAccessSpecifierPublic)
 // bool                                    bHighlighted                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::AddLogMessage(const class FText& Message, bool bHighlighted)
@@ -48,8 +48,8 @@ void UScriptableInteractiveTool::AddLogMessage(const class FText& Message, bool 
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class UScriptableInteractiveToolPropertySet>PropertySetType                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EToolsFrameworkOutcomePins              Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EToolsFrameworkOutcomePins*             Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::AddPropertySetOfType(TSubclassOf<class UScriptableInteractiveToolPropertySet> PropertySetType, const class FString& Identifier, EToolsFrameworkOutcomePins* Outcome)
@@ -108,10 +108,10 @@ void UScriptableInteractiveTool::ClearUserMessages(bool bHelpMessage, bool bWarn
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.CreateTRSGizmo
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// class FString                           Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       InitialTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FScriptableToolGizmoOptions      GizmoOptions                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// EToolsFrameworkOutcomePins              Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InitialTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FScriptableToolGizmoOptions&GizmoOptions                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// EToolsFrameworkOutcomePins*             Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::CreateTRSGizmo(const class FString& Identifier, const struct FTransform& InitialTransform, const struct FScriptableToolGizmoOptions& GizmoOptions, EToolsFrameworkOutcomePins* Outcome)
 {
@@ -141,8 +141,8 @@ void UScriptableInteractiveTool::CreateTRSGizmo(const class FString& Identifier,
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.DestroyTRSGizmo
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EToolsFrameworkOutcomePins              Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EToolsFrameworkOutcomePins*             Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::DestroyTRSGizmo(const class FString& Identifier, EToolsFrameworkOutcomePins* Outcome)
 {
@@ -170,7 +170,7 @@ void UScriptableInteractiveTool::DestroyTRSGizmo(const class FString& Identifier
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.DisplayUserHelpMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FText                             Message                                                (Parm, NativeAccessSpecifierPublic)
+// const class FText&                      Message                                                (Parm, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::DisplayUserHelpMessage(const class FText& Message)
 {
@@ -195,7 +195,7 @@ void UScriptableInteractiveTool::DisplayUserHelpMessage(const class FText& Messa
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.DisplayUserWarningMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FText                             Message                                                (Parm, NativeAccessSpecifierPublic)
+// const class FText&                      Message                                                (Parm, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::DisplayUserWarningMessage(const class FText& Message)
 {
@@ -220,7 +220,7 @@ void UScriptableInteractiveTool::DisplayUserWarningMessage(const class FText& Me
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.ForcePropertySetUpdateByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::ForcePropertySetUpdateByName(const class FString& Identifier)
 {
@@ -245,7 +245,7 @@ void UScriptableInteractiveTool::ForcePropertySetUpdateByName(const class FStrin
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.GetGizmoTransform
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class FString                           Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FTransform UScriptableInteractiveTool::GetGizmoTransform(const class FString& Identifier)
@@ -298,8 +298,8 @@ class UWorld* UScriptableInteractiveTool::GetToolWorld()
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.OnGizmoTransformChanged
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
-// class FString                           GizmoIdentifier                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       NewTransform                                           (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    GizmoIdentifier                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                NewTransform                                           (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::OnGizmoTransformChanged(const class FString& GizmoIdentifier, const struct FTransform& NewTransform)
 {
@@ -320,8 +320,8 @@ void UScriptableInteractiveTool::OnGizmoTransformChanged(const class FString& Gi
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.OnGizmoTransformStateChange
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
-// class FString                           GizmoIdentifier                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       CurrentTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    GizmoIdentifier                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                CurrentTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EScriptableToolGizmoStateChangeType     ChangeType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::OnGizmoTransformStateChange(const class FString& GizmoIdentifier, const struct FTransform& CurrentTransform, EScriptableToolGizmoStateChangeType ChangeType)
@@ -438,8 +438,8 @@ void UScriptableInteractiveTool::OnScriptTick(float DeltaTime)
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.RemovePropertySetByName
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EToolsFrameworkOutcomePins              Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EToolsFrameworkOutcomePins*             Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::RemovePropertySetByName(const class FString& Identifier, EToolsFrameworkOutcomePins* Outcome)
 {
@@ -469,7 +469,7 @@ void UScriptableInteractiveTool::RemovePropertySetByName(const class FString& Id
 // Parameters:
 // bool                                    bAccept                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bShowUserPopupMessage                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FText                             UserMessage                                            (Parm, NativeAccessSpecifierPublic)
+// const class FText&                      UserMessage                                            (Parm, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::RequestToolShutdown(bool bAccept, bool bShowUserPopupMessage, const class FText& UserMessage)
 {
@@ -497,7 +497,7 @@ void UScriptableInteractiveTool::RequestToolShutdown(bool bAccept, bool bShowUse
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UScriptableInteractiveToolPropertySet*PropertySet                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           SaveKey                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    SaveKey                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::RestorePropertySetSettings(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& SaveKey)
@@ -527,7 +527,7 @@ class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::Restore
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UScriptableInteractiveToolPropertySet*PropertySet                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           SaveKey                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    SaveKey                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::SavePropertySetSettings(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& SaveKey)
@@ -556,8 +556,8 @@ class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::SavePro
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.SetGizmoTransform
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class FString                           Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       NewTransform                                           (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                NewTransform                                           (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bUndoable                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::SetGizmoTransform(const class FString& Identifier, const struct FTransform& NewTransform, bool bUndoable)
@@ -585,7 +585,7 @@ void UScriptableInteractiveTool::SetGizmoTransform(const class FString& Identifi
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.SetGizmoVisible
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bVisible                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::SetGizmoVisible(const class FString& Identifier, bool bVisible)
@@ -612,7 +612,7 @@ void UScriptableInteractiveTool::SetGizmoVisible(const class FString& Identifier
 // Function ScriptableToolsFramework.ScriptableInteractiveTool.SetPropertySetVisibleByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Identifier                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bVisible                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UScriptableInteractiveTool::SetPropertySetVisibleByName(const class FString& Identifier, bool bVisible)
@@ -640,8 +640,8 @@ void UScriptableInteractiveTool::SetPropertySetVisibleByName(const class FString
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UScriptableInteractiveToolPropertySet*PropertySet                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, bool bNewValue)>OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, bool bNewValue)>&OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchBoolProperty(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, bool bNewValue)>& OnModified)
@@ -672,8 +672,8 @@ class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchBo
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UScriptableInteractiveToolPropertySet*PropertySet                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, uint8 NewValue)>OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, uint8 NewValue)>&OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchEnumProperty(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, uint8 NewValue)>& OnModified)
@@ -704,8 +704,8 @@ class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchEn
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UScriptableInteractiveToolPropertySet*PropertySet                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, double NewValue)>OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, double NewValue)>&OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchFloatProperty(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, double NewValue)>& OnModified)
@@ -736,8 +736,8 @@ class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchFl
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UScriptableInteractiveToolPropertySet*PropertySet                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, int32 NewValue)>OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, int32 NewValue)>&OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchIntProperty(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, int32 NewValue)>& OnModified)
@@ -768,8 +768,8 @@ class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchIn
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UScriptableInteractiveToolPropertySet*PropertySet                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, class FName NewValue)>OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, class FName NewValue)>&OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchNameProperty(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, class FName NewValue)>& OnModified)
@@ -800,8 +800,8 @@ class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchNa
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UScriptableInteractiveToolPropertySet*PropertySet                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, class UObject* NewValue)>OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, class UObject* NewValue)>&OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchObjectProperty(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, class UObject* NewValue)>& OnModified)
@@ -832,8 +832,8 @@ class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchOb
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UScriptableInteractiveToolPropertySet*PropertySet                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName)>OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName)>&OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchProperty(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName)>& OnModified)
@@ -864,8 +864,8 @@ class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchPr
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UScriptableInteractiveToolPropertySet*PropertySet                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const class FString& NewValue)>OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const class FString& NewValue)>&OnModified                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveToolPropertySet*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveToolPropertySet* UScriptableInteractiveTool::WatchStringProperty(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const class FString& NewValue)>& OnModified)
@@ -945,8 +945,8 @@ struct FScriptableToolModifierStates UScriptableClickDragTool::GetActiveModifier
 // Function ScriptableToolsFramework.ScriptableClickDragTool.OnDragBegin
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  StartPosition                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           StartPosition                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UScriptableClickDragTool::OnDragBegin(const struct FInputDeviceRay& StartPosition, const struct FScriptableToolModifierStates& Modifiers)
 {
@@ -972,8 +972,8 @@ void UScriptableClickDragTool::OnDragBegin(const struct FInputDeviceRay& StartPo
 // Function ScriptableToolsFramework.ScriptableClickDragTool.OnDragEnd
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  EndPosition                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           EndPosition                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UScriptableClickDragTool::OnDragEnd(const struct FInputDeviceRay& EndPosition, const struct FScriptableToolModifierStates& Modifiers)
 {
@@ -1018,8 +1018,8 @@ void UScriptableClickDragTool::OnDragSequenceCancelled()
 // Function ScriptableToolsFramework.ScriptableClickDragTool.OnDragUpdatePosition
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  NewPosition                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           NewPosition                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UScriptableClickDragTool::OnDragUpdatePosition(const struct FInputDeviceRay& NewPosition, const struct FScriptableToolModifierStates& Modifiers)
 {
@@ -1045,8 +1045,8 @@ void UScriptableClickDragTool::OnDragUpdatePosition(const struct FInputDeviceRay
 // Function ScriptableToolsFramework.ScriptableClickDragTool.OnHoverBegin
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UScriptableClickDragTool::OnHoverBegin(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
 {
@@ -1072,7 +1072,7 @@ void UScriptableClickDragTool::OnHoverBegin(const struct FInputDeviceRay& HoverP
 // Function ScriptableToolsFramework.ScriptableClickDragTool.OnHoverEnd
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UScriptableClickDragTool::OnHoverEnd(const struct FScriptableToolModifierStates& Modifiers)
 {
@@ -1097,8 +1097,8 @@ void UScriptableClickDragTool::OnHoverEnd(const struct FScriptableToolModifierSt
 // Function ScriptableToolsFramework.ScriptableClickDragTool.OnHoverHitTest
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FInputRayHit                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FInputRayHit UScriptableClickDragTool::OnHoverHitTest(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
@@ -1127,8 +1127,8 @@ struct FInputRayHit UScriptableClickDragTool::OnHoverHitTest(const struct FInput
 // Function ScriptableToolsFramework.ScriptableClickDragTool.OnHoverUpdate
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UScriptableClickDragTool::OnHoverUpdate(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
@@ -1157,8 +1157,8 @@ bool UScriptableClickDragTool::OnHoverUpdate(const struct FInputDeviceRay& Hover
 // Function ScriptableToolsFramework.ScriptableClickDragTool.TestIfCanBeginClickDrag
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  ClickPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           ClickPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FInputRayHit                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FInputRayHit UScriptableClickDragTool::TestIfCanBeginClickDrag(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers)
@@ -1312,9 +1312,9 @@ bool UScriptableClickDragTool::IsShiftDown() const
 // Function ScriptableToolsFramework.ScriptableTool_RenderAPI.DrawLine
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                          Start                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          End                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLinearColor                     Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Start                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   End                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Thickness                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   DepthBias                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bDepthTested                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1350,10 +1350,10 @@ class UScriptableTool_RenderAPI* UScriptableTool_RenderAPI::DrawLine(const struc
 // Function ScriptableToolsFramework.ScriptableTool_RenderAPI.DrawRectWidthHeightXY
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FTransform                       Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  Width                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  Height                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLinearColor                     Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   LineThickness                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   DepthBias                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bDepthTested                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1392,9 +1392,9 @@ class UScriptableTool_RenderAPI* UScriptableTool_RenderAPI::DrawRectWidthHeightX
 // Function ScriptableToolsFramework.ScriptableTool_HUDAPI.DrawTextArrayAtLocation
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                          Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>                   Strings                                                (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// struct FLinearColor                     Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            Strings                                                (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bCentered                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ShiftRowsY                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableTool_HUDAPI*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1428,9 +1428,9 @@ class UScriptableTool_HUDAPI* UScriptableTool_HUDAPI::DrawTextArrayAtLocation(co
 // Function ScriptableToolsFramework.ScriptableTool_HUDAPI.DrawTextAtLocation
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                          Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           String                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLinearColor                     Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    String                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bCentered                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ShiftRowsY                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableTool_HUDAPI*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1464,8 +1464,8 @@ class UScriptableTool_HUDAPI* UScriptableTool_HUDAPI::DrawTextAtLocation(const s
 // Function ScriptableToolsFramework.ScriptableTool_HUDAPI.GetCanvasLocation
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                          Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        CanvasLocation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D*                       CanvasLocation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableTool_HUDAPI*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableTool_HUDAPI* UScriptableTool_HUDAPI::GetCanvasLocation(const struct FVector& Location, struct FVector2D* CanvasLocation)
@@ -1496,7 +1496,7 @@ class UScriptableTool_HUDAPI* UScriptableTool_HUDAPI::GetCanvasLocation(const st
 // Function ScriptableToolsFramework.ScriptableInteractiveToolPropertySet.GetOwningTool
 // (Final, Native, Private, HasOutParams, BlueprintCallable)
 // Parameters:
-// EToolsFrameworkOutcomePins              Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EToolsFrameworkOutcomePins*             Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UScriptableInteractiveTool*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UScriptableInteractiveTool* UScriptableInteractiveToolPropertySet::GetOwningTool(EToolsFrameworkOutcomePins* Outcome)
@@ -1630,8 +1630,8 @@ struct FScriptableToolModifierStates UScriptableSingleClickTool::GetActiveModifi
 // Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHitByClick
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  ClickPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           ClickPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UScriptableSingleClickTool::OnHitByClick(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers)
 {
@@ -1657,8 +1657,8 @@ void UScriptableSingleClickTool::OnHitByClick(const struct FInputDeviceRay& Clic
 // Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverBegin
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UScriptableSingleClickTool::OnHoverBegin(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
 {
@@ -1684,7 +1684,7 @@ void UScriptableSingleClickTool::OnHoverBegin(const struct FInputDeviceRay& Hove
 // Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverEnd
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UScriptableSingleClickTool::OnHoverEnd(const struct FScriptableToolModifierStates& Modifiers)
 {
@@ -1709,8 +1709,8 @@ void UScriptableSingleClickTool::OnHoverEnd(const struct FScriptableToolModifier
 // Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverHitTest
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FInputRayHit                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FInputRayHit UScriptableSingleClickTool::OnHoverHitTest(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
@@ -1739,8 +1739,8 @@ struct FInputRayHit UScriptableSingleClickTool::OnHoverHitTest(const struct FInp
 // Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverUpdate
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UScriptableSingleClickTool::OnHoverUpdate(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
@@ -1769,8 +1769,8 @@ bool UScriptableSingleClickTool::OnHoverUpdate(const struct FInputDeviceRay& Hov
 // Function ScriptableToolsFramework.ScriptableSingleClickTool.TestIfHitByClick
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FInputDeviceRay                  ClickPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FScriptableToolModifierStates    Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FInputDeviceRay&           ClickPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FInputRayHit                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
 struct FInputRayHit UScriptableSingleClickTool::TestIfHitByClick(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers)

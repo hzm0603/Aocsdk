@@ -17,23 +17,27 @@
 namespace SDK
 {
 
-// Function STC_ElderDragon_Fire_CircleAOETargetSelector.STC_ElderDragon_Fire_CircleAOETargetSelector_C.ReceiveTestCondition
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Function STC_ElderDragon_Fire_CircleAOETargetSelector.STC_ElderDragon_Fire_CircleAOETargetSelector_C.Score Target
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABaseCharacter*                   Target_To_Score                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double*                                 Score                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool USTC_ElderDragon_Fire_CircleAOETargetSelector_C::ReceiveTestCondition() const
+void USTC_ElderDragon_Fire_CircleAOETargetSelector_C::Score_Target(class ABaseCharacter* Target_To_Score, double* Score) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STC_ElderDragon_Fire_CircleAOETargetSelector_C", "ReceiveTestCondition");
+		Func = Class->GetFunction("STC_ElderDragon_Fire_CircleAOETargetSelector_C", "Score Target");
 
-	Params::STC_ElderDragon_Fire_CircleAOETargetSelector_C_ReceiveTestCondition Parms{};
+	Params::STC_ElderDragon_Fire_CircleAOETargetSelector_C_Score_Target Parms{};
+
+	Parms.Target_To_Score = Target_To_Score;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
+	if (Score != nullptr)
+		*Score = Parms.Score;
 }
 
 
@@ -63,27 +67,23 @@ void USTC_ElderDragon_Fire_CircleAOETargetSelector_C::Score_Individual_Target(cl
 }
 
 
-// Function STC_ElderDragon_Fire_CircleAOETargetSelector.STC_ElderDragon_Fire_CircleAOETargetSelector_C.Score Target
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Function STC_ElderDragon_Fire_CircleAOETargetSelector.STC_ElderDragon_Fire_CircleAOETargetSelector_C.ReceiveTestCondition
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class ABaseCharacter*                   Target_To_Score                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double*                                 Score                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USTC_ElderDragon_Fire_CircleAOETargetSelector_C::Score_Target(class ABaseCharacter* Target_To_Score, double* Score) const
+bool USTC_ElderDragon_Fire_CircleAOETargetSelector_C::ReceiveTestCondition() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STC_ElderDragon_Fire_CircleAOETargetSelector_C", "Score Target");
+		Func = Class->GetFunction("STC_ElderDragon_Fire_CircleAOETargetSelector_C", "ReceiveTestCondition");
 
-	Params::STC_ElderDragon_Fire_CircleAOETargetSelector_C_Score_Target Parms{};
-
-	Parms.Target_To_Score = Target_To_Score;
+	Params::STC_ElderDragon_Fire_CircleAOETargetSelector_C_ReceiveTestCondition Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Score != nullptr)
-		*Score = Parms.Score;
+	return Parms.ReturnValue;
 }
 
 }

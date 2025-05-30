@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_NodeMayorMenu.WBP_NodeMayorMenu_C.ExecuteUbergraph_WBP_NodeMayorMenu
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_NodeMayorMenu_C::ExecuteUbergraph_WBP_NodeMayorMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NodeMayorMenu_C", "ExecuteUbergraph_WBP_NodeMayorMenu");
-
-	Params::WBP_NodeMayorMenu_C_ExecuteUbergraph_WBP_NodeMayorMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_NodeMayorMenu.WBP_NodeMayorMenu_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_NodeMayorMenu_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_NodeMayorMenu_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NodeMayorMenu.WBP_NodeMayorMenu_C.ExecuteUbergraph_WBP_NodeMayorMenu
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_NodeMayorMenu_C::ExecuteUbergraph_WBP_NodeMayorMenu(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NodeMayorMenu_C", "ExecuteUbergraph_WBP_NodeMayorMenu");
+
+	Params::WBP_NodeMayorMenu_C_ExecuteUbergraph_WBP_NodeMayorMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

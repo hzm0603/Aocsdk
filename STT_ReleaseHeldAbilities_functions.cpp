@@ -17,99 +17,23 @@
 namespace SDK
 {
 
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ExecuteUbergraph_STT_ReleaseHeldAbilities
-// (Final, UbergraphFunction, HasDefaults)
+// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReleaseHeldAbilitiesOnOuter
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EStateTreeRunStatus                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USTT_ReleaseHeldAbilities_C::ExecuteUbergraph_STT_ReleaseHeldAbilities(int32 EntryPoint)
+EStateTreeRunStatus USTT_ReleaseHeldAbilities_C::ReleaseHeldAbilitiesOnOuter()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STT_ReleaseHeldAbilities_C", "ExecuteUbergraph_STT_ReleaseHeldAbilities");
+		Func = Class->GetFunction("STT_ReleaseHeldAbilities_C", "ReleaseHeldAbilitiesOnOuter");
 
-	Params::STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.OnTimerFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void USTT_ReleaseHeldAbilities_C::OnTimerFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STT_ReleaseHeldAbilities_C", "OnTimerFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReceiveLatentEnterState
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-
-void USTT_ReleaseHeldAbilities_C::ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STT_ReleaseHeldAbilities_C", "ReceiveLatentEnterState");
-
-	Params::STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState Parms{};
-
-	Parms.Transition = std::move(Transition);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReceiveLatentTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const float                             DeltaTime                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USTT_ReleaseHeldAbilities_C::ReceiveLatentTick(const float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STT_ReleaseHeldAbilities_C", "ReceiveLatentTick");
-
-	Params::STT_ReleaseHeldAbilities_C_ReceiveLatentTick Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReceiveStateCompleted
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const EStateTreeRunStatus               CompletionStatus                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FStateTreeActiveStates&    CompletedActiveStates                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-
-void USTT_ReleaseHeldAbilities_C::ReceiveStateCompleted(const EStateTreeRunStatus CompletionStatus, const struct FStateTreeActiveStates& CompletedActiveStates)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STT_ReleaseHeldAbilities_C", "ReceiveStateCompleted");
-
-	Params::STT_ReleaseHeldAbilities_C_ReceiveStateCompleted Parms{};
-
-	Parms.CompletionStatus = CompletionStatus;
-	Parms.CompletedActiveStates = std::move(CompletedActiveStates);
-
-	UObject::ProcessEvent(Func, &Parms);
+	return Parms.ReturnValue;
 }
 
 
@@ -134,23 +58,63 @@ void USTT_ReleaseHeldAbilities_C::ReleaseHeldAbilities(bool* Succeeded)
 }
 
 
-// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReleaseHeldAbilitiesOnOuter
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReceiveLatentTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// EStateTreeRunStatus                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const float                             DeltaTime                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-EStateTreeRunStatus USTT_ReleaseHeldAbilities_C::ReleaseHeldAbilitiesOnOuter()
+void USTT_ReleaseHeldAbilities_C::ReceiveLatentTick(const float DeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STT_ReleaseHeldAbilities_C", "ReleaseHeldAbilitiesOnOuter");
+		Func = Class->GetFunction("STT_ReleaseHeldAbilities_C", "ReceiveLatentTick");
 
-	Params::STT_ReleaseHeldAbilities_C_ReleaseHeldAbilitiesOnOuter Parms{};
+	Params::STT_ReleaseHeldAbilities_C_ReceiveLatentTick Parms{};
+
+	Parms.DeltaTime = DeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	return Parms.ReturnValue;
+
+// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ReceiveLatentEnterState
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FStateTreeTransitionResult&Transition                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void USTT_ReleaseHeldAbilities_C::ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_ReleaseHeldAbilities_C", "ReceiveLatentEnterState");
+
+	Params::STT_ReleaseHeldAbilities_C_ReceiveLatentEnterState Parms{};
+
+	Parms.Transition = std::move(Transition);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function STT_ReleaseHeldAbilities.STT_ReleaseHeldAbilities_C.ExecuteUbergraph_STT_ReleaseHeldAbilities
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USTT_ReleaseHeldAbilities_C::ExecuteUbergraph_STT_ReleaseHeldAbilities(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STT_ReleaseHeldAbilities_C", "ExecuteUbergraph_STT_ReleaseHeldAbilities");
+
+	Params::STT_ReleaseHeldAbilities_C_ExecuteUbergraph_STT_ReleaseHeldAbilities Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

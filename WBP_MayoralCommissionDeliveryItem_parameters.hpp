@@ -14,6 +14,50 @@
 namespace SDK::Params
 {
 
+// Function WBP_MayoralCommissionDeliveryItem.WBP_MayoralCommissionDeliveryItem_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_MayoralCommissionDeliveryItem_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MayoralCommissionDeliveryItem_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_MayoralCommissionDeliveryItem_C_PreConstruct");
+static_assert(sizeof(WBP_MayoralCommissionDeliveryItem_C_PreConstruct) == 0x000001, "Wrong size on WBP_MayoralCommissionDeliveryItem_C_PreConstruct");
+static_assert(offsetof(WBP_MayoralCommissionDeliveryItem_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_MayoralCommissionDeliveryItem_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_MayoralCommissionDeliveryItem.WBP_MayoralCommissionDeliveryItem_C.GetOddBorderStyle
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_MayoralCommissionDeliveryItem_C_GetOddBorderStyle final
+{
+public:
+	TSubclassOf<class UCommonBorderStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MayoralCommissionDeliveryItem_C_GetOddBorderStyle) == 0x000008, "Wrong alignment on WBP_MayoralCommissionDeliveryItem_C_GetOddBorderStyle");
+static_assert(sizeof(WBP_MayoralCommissionDeliveryItem_C_GetOddBorderStyle) == 0x000008, "Wrong size on WBP_MayoralCommissionDeliveryItem_C_GetOddBorderStyle");
+static_assert(offsetof(WBP_MayoralCommissionDeliveryItem_C_GetOddBorderStyle, ReturnValue) == 0x000000, "Member 'WBP_MayoralCommissionDeliveryItem_C_GetOddBorderStyle::ReturnValue' has a wrong offset!");
+
+// Function WBP_MayoralCommissionDeliveryItem.WBP_MayoralCommissionDeliveryItem_C.GetEvenBorderStyle
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_MayoralCommissionDeliveryItem_C_GetEvenBorderStyle final
+{
+public:
+	TSubclassOf<class UCommonBorderStyle>         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MayoralCommissionDeliveryItem_C_GetEvenBorderStyle) == 0x000008, "Wrong alignment on WBP_MayoralCommissionDeliveryItem_C_GetEvenBorderStyle");
+static_assert(sizeof(WBP_MayoralCommissionDeliveryItem_C_GetEvenBorderStyle) == 0x000008, "Wrong size on WBP_MayoralCommissionDeliveryItem_C_GetEvenBorderStyle");
+static_assert(offsetof(WBP_MayoralCommissionDeliveryItem_C_GetEvenBorderStyle, ReturnValue) == 0x000000, "Member 'WBP_MayoralCommissionDeliveryItem_C_GetEvenBorderStyle::ReturnValue' has a wrong offset!");
+
+// Function WBP_MayoralCommissionDeliveryItem.WBP_MayoralCommissionDeliveryItem_C.GetBorderContainer
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_MayoralCommissionDeliveryItem_C_GetBorderContainer final
+{
+public:
+	class UPanelWidget*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MayoralCommissionDeliveryItem_C_GetBorderContainer) == 0x000008, "Wrong alignment on WBP_MayoralCommissionDeliveryItem_C_GetBorderContainer");
+static_assert(sizeof(WBP_MayoralCommissionDeliveryItem_C_GetBorderContainer) == 0x000008, "Wrong size on WBP_MayoralCommissionDeliveryItem_C_GetBorderContainer");
+static_assert(offsetof(WBP_MayoralCommissionDeliveryItem_C_GetBorderContainer, ReturnValue) == 0x000000, "Member 'WBP_MayoralCommissionDeliveryItem_C_GetBorderContainer::ReturnValue' has a wrong offset!");
+
 // Function WBP_MayoralCommissionDeliveryItem.WBP_MayoralCommissionDeliveryItem_C.ExecuteUbergraph_WBP_MayoralCommissionDeliveryItem
 // 0x0028 (0x0028 - 0x0000)
 struct WBP_MayoralCommissionDeliveryItem_C_ExecuteUbergraph_WBP_MayoralCommissionDeliveryItem final
@@ -43,17 +87,6 @@ static_assert(offsetof(WBP_MayoralCommissionDeliveryItem_C_ExecuteUbergraph_WBP_
 static_assert(offsetof(WBP_MayoralCommissionDeliveryItem_C_ExecuteUbergraph_WBP_MayoralCommissionDeliveryItem, CallFunc_HasAnyChildren_ReturnValue) == 0x00001D, "Member 'WBP_MayoralCommissionDeliveryItem_C_ExecuteUbergraph_WBP_MayoralCommissionDeliveryItem::CallFunc_HasAnyChildren_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_MayoralCommissionDeliveryItem_C_ExecuteUbergraph_WBP_MayoralCommissionDeliveryItem, CallFunc_IsValid_ReturnValue) == 0x00001E, "Member 'WBP_MayoralCommissionDeliveryItem_C_ExecuteUbergraph_WBP_MayoralCommissionDeliveryItem::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_MayoralCommissionDeliveryItem_C_ExecuteUbergraph_WBP_MayoralCommissionDeliveryItem, CallFunc_AddChild_ReturnValue) == 0x000020, "Member 'WBP_MayoralCommissionDeliveryItem_C_ExecuteUbergraph_WBP_MayoralCommissionDeliveryItem::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-
-// Function WBP_MayoralCommissionDeliveryItem.WBP_MayoralCommissionDeliveryItem_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_MayoralCommissionDeliveryItem_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MayoralCommissionDeliveryItem_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_MayoralCommissionDeliveryItem_C_PreConstruct");
-static_assert(sizeof(WBP_MayoralCommissionDeliveryItem_C_PreConstruct) == 0x000001, "Wrong size on WBP_MayoralCommissionDeliveryItem_C_PreConstruct");
-static_assert(offsetof(WBP_MayoralCommissionDeliveryItem_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_MayoralCommissionDeliveryItem_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

@@ -27,8 +27,8 @@ public:
 	class USoundBase*                             ResurrectSound;                                    // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_ResurrectAlertPrompt(int32 EntryPoint);
 	void PlayResurrectSoundBP();
+	void ExecuteUbergraph_WBP_ResurrectAlertPrompt(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

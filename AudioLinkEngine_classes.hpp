@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // Class AudioLinkEngine.AudioLinkBlueprintInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IAudioLinkBlueprintInterface final : public IInterface
 {
 public:
@@ -37,8 +37,8 @@ public:
 		return GetDefaultObjImpl<IAudioLinkBlueprintInterface>();
 	}
 };
-static_assert(alignof(IAudioLinkBlueprintInterface) == 0x000008, "Wrong alignment on IAudioLinkBlueprintInterface");
-static_assert(sizeof(IAudioLinkBlueprintInterface) == 0x000048, "Wrong size on IAudioLinkBlueprintInterface");
+static_assert(alignof(IAudioLinkBlueprintInterface) == 0x000001, "Wrong alignment on IAudioLinkBlueprintInterface");
+static_assert(sizeof(IAudioLinkBlueprintInterface) == 0x000001, "Wrong size on IAudioLinkBlueprintInterface");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Kaelar_Female_Priest.Kaelar_Female_Priest_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class AKaelar_Female_Priest_C final : public AFillerNPC_Base_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AKaelar_Female_Priest_C) == 0x000010, "Wrong alignment on AKaelar_Female_Priest_C");
-static_assert(sizeof(AKaelar_Female_Priest_C) == 0x001DB0, "Wrong size on AKaelar_Female_Priest_C");
+static_assert(sizeof(AKaelar_Female_Priest_C) == 0x001D70, "Wrong size on AKaelar_Female_Priest_C");
 
 }
 

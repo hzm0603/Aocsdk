@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CreateSaleListingModal.WBP_CreateSaleListingModal_C
-// 0x0010 (0x04B0 - 0x04A0)
+// 0x0010 (0x04D8 - 0x04C8)
 class UWBP_CreateSaleListingModal_C final : public UMarketplaceListItemModal
 {
 public:
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollWindow;                                      // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SliderSizeBox;                                     // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScrollWindow;                                      // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SliderSizeBox;                                     // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CreateSaleListingModal_C) == 0x000008, "Wrong alignment on UWBP_CreateSaleListingModal_C");
-static_assert(sizeof(UWBP_CreateSaleListingModal_C) == 0x0004B0, "Wrong size on UWBP_CreateSaleListingModal_C");
-static_assert(offsetof(UWBP_CreateSaleListingModal_C, ScrollWindow) == 0x0004A0, "Member 'UWBP_CreateSaleListingModal_C::ScrollWindow' has a wrong offset!");
-static_assert(offsetof(UWBP_CreateSaleListingModal_C, SliderSizeBox) == 0x0004A8, "Member 'UWBP_CreateSaleListingModal_C::SliderSizeBox' has a wrong offset!");
+static_assert(sizeof(UWBP_CreateSaleListingModal_C) == 0x0004D8, "Wrong size on UWBP_CreateSaleListingModal_C");
+static_assert(offsetof(UWBP_CreateSaleListingModal_C, ScrollWindow) == 0x0004C8, "Member 'UWBP_CreateSaleListingModal_C::ScrollWindow' has a wrong offset!");
+static_assert(offsetof(UWBP_CreateSaleListingModal_C, SliderSizeBox) == 0x0004D0, "Member 'UWBP_CreateSaleListingModal_C::SliderSizeBox' has a wrong offset!");
 
 }
 

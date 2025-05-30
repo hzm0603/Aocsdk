@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "S_EnvironmentSettings_structs.hpp"
+#include "S_EnvironmentSettingsSwitches_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "S_EnvironmentSettingsSwitches_structs.hpp"
+#include "S_EnvironmentSettings_structs.hpp"
 
 
 namespace SDK
@@ -22,7 +22,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_WeatherEvent.BP_WeatherEvent_C
 // 0x06C8 (0x0A10 - 0x0348)
-class ABP_WeatherEvent_C final : public AActor
+class ABP_WeatherEvent_C : public AActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

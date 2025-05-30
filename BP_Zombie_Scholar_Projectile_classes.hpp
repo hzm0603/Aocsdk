@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Zombie_Scholar_Projectile.BP_Zombie_Scholar_Projectile_C
-// 0x0008 (0x0598 - 0x0590)
+// 0x0008 (0x05A0 - 0x0598)
 class ABP_Zombie_Scholar_Projectile_C final : public AAoCAbilityProjectile
 {
 public:
-	class UAudioComponent*                        Audio;                                             // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Audio;                                             // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_Zombie_Scholar_Projectile_C) == 0x000008, "Wrong alignment on ABP_Zombie_Scholar_Projectile_C");
-static_assert(sizeof(ABP_Zombie_Scholar_Projectile_C) == 0x000598, "Wrong size on ABP_Zombie_Scholar_Projectile_C");
-static_assert(offsetof(ABP_Zombie_Scholar_Projectile_C, Audio) == 0x000590, "Member 'ABP_Zombie_Scholar_Projectile_C::Audio' has a wrong offset!");
+static_assert(sizeof(ABP_Zombie_Scholar_Projectile_C) == 0x0005A0, "Wrong size on ABP_Zombie_Scholar_Projectile_C");
+static_assert(offsetof(ABP_Zombie_Scholar_Projectile_C, Audio) == 0x000598, "Member 'ABP_Zombie_Scholar_Projectile_C::Audio' has a wrong offset!");
 
 }
 

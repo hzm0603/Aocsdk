@@ -18,15 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_BuyOrderFulfillmentMenu.WBP_BuyOrderFulfillmentMenu_C
-// 0x0008 (0x0500 - 0x04F8)
+// 0x0010 (0x05C0 - 0x05B0)
 class UWBP_BuyOrderFulfillmentMenu_C final : public UBuyOrderFulfillmentMenu
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_ContextualModal_C*                 FulfillmentSummaryModal;                           // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_BuyOrderFulfillmentMenu(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -39,8 +40,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_BuyOrderFulfillmentMenu_C) == 0x000008, "Wrong alignment on UWBP_BuyOrderFulfillmentMenu_C");
-static_assert(sizeof(UWBP_BuyOrderFulfillmentMenu_C) == 0x000500, "Wrong size on UWBP_BuyOrderFulfillmentMenu_C");
-static_assert(offsetof(UWBP_BuyOrderFulfillmentMenu_C, UberGraphFrame) == 0x0004F8, "Member 'UWBP_BuyOrderFulfillmentMenu_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(UWBP_BuyOrderFulfillmentMenu_C) == 0x0005C0, "Wrong size on UWBP_BuyOrderFulfillmentMenu_C");
+static_assert(offsetof(UWBP_BuyOrderFulfillmentMenu_C, UberGraphFrame) == 0x0005B0, "Member 'UWBP_BuyOrderFulfillmentMenu_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_BuyOrderFulfillmentMenu_C, FulfillmentSummaryModal) == 0x0005B8, "Member 'UWBP_BuyOrderFulfillmentMenu_C::FulfillmentSummaryModal' has a wrong offset!");
 
 }
 

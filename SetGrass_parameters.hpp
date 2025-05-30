@@ -11,90 +11,102 @@
 #include "Basic.hpp"
 
 #include "PCG_structs.hpp"
-#include "GameSystemsPlugin_structs.hpp"
+#include "S_RoadSetDressingData_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function SetGrass.SetGrass_C.ExecuteWithContext
-// 0x02E0 (0x02E0 - 0x0000)
+// 0x0360 (0x0360 - 0x0000)
 struct SetGrass_C_ExecuteWithContext final
 {
 public:
 	struct FPCGContext                            InContext;                                         // 0x0000(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FPCGDataCollection                     Input;                                             // 0x00B8(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FPCGDataCollection                     Output;                                            // 0x00D8(0x0020)(Parm, OutParm)
-	class UPCGMetadata*                           CallFunc_MutableMetadata_ReturnValue;              // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UPCGPointData*                    CallFunc_ToPointDataWithContext_ReturnValue;       // 0x0118(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FPCGPoint>                      CallFunc_GetPoints_ReturnValue;                    // 0x0120(0x0010)(ConstParm, ReferenceParm)
-	class UPCGComponent*                          CallFunc_GetComponent_ReturnValue;                 // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_PCGRoadTerrain_C> UniqueObjectNameForCooking_AsBPI_PCGRoad_Terrain;  // 0x0140(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UniqueObjectNameForCooking_bSuccess;               // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Intersection;                                   // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FS_RoadSetDressingData>         Incoming_Data;                                     // 0x0100(0x0010)(Edit, BlueprintVisible)
+	TSoftObjectPtr<class UObject>                 Obj;                                               // 0x0110(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPCGMetadata*                           CallFunc_MutableMetadata_ReturnValue;              // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UPCGPointData*                    CallFunc_ToPointDataWithContext_ReturnValue_1;     // 0x0158(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FAoCRoadTerrainEntry>           CallFunc_GetRoadTerrainData_Terrain_Objects;       // 0x0160(0x0010)(ReferenceParm)
-	TArray<struct FAoCRoadTerrainEntry>           CallFunc_GetRoadTerrainData_Grass_Objects;         // 0x0170(0x0010)(ReferenceParm)
-	class UPCGPointData*                          CallFunc_PointLoop_OutData;                        // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPCGTaggedData                         K2Node_MakeStruct_PCGTaggedData;                   // 0x0188(0x0068)()
-	struct FAoCRoadTerrainEntry                   CallFunc_Array_RandomFromStream_OutItem;           // 0x01F0(0x0050)()
-	int32                                         CallFunc_Array_RandomFromStream_OutIndex;          // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_SoftObjectReferenceToString_ReturnValue; // 0x0158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAoCRoadTerrainEntry                   CallFunc_Array_RandomFromStream_OutItem;           // 0x0170(0x0050)()
+	int32                                         CallFunc_Array_RandomFromStream_OutIndex;          // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UPCGPointData*                    CallFunc_ToPointDataWithContext_ReturnValue;       // 0x01C8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FPCGPoint>                      CallFunc_GetPoints_ReturnValue;                    // 0x01D0(0x0010)(ConstParm, ReferenceParm)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPCGComponent*                          CallFunc_GetComponent_ReturnValue;                 // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FAoCRoadTerrainEntry                   CallFunc_Array_RandomFromStream_OutItem_1;         // 0x01F0(0x0050)()
+	int32                                         CallFunc_Array_RandomFromStream_OutIndex_1;        // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPCGTaggedData>                 K2Node_MakeArray_Array;                            // 0x0248(0x0010)(ReferenceParm)
-	struct FPCGDataCollection                     K2Node_MakeStruct_PCGDataCollection;               // 0x0258(0x0020)()
-	class FString                                 CallFunc_Conv_SoftObjectReferenceToString_ReturnValue; // 0x0278(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRandomStream                          CallFunc_MakeRandomStream_ReturnValue;             // 0x028C(0x0008)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_294[0x4];                                      // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPCGTaggedData>                 CallFunc_GetInputs_ReturnValue;                    // 0x0298(0x0010)(ReferenceParm)
-	struct FPCGDataCollection                     K2Node_MakeStruct_PCGDataCollection_1;             // 0x02A8(0x0020)()
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPCGSpatialData*                        K2Node_DynamicCast_AsPCGSpatial_Data;              // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FS_RoadSetDressingData>         CallFunc_Retrieve_Set_Dressing_Data_Set_Dressing_Data; // 0x0250(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Retrieve_Set_Dressing_Data_Is_Intersection; // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UPCGPointData*                    CallFunc_ToPointDataWithContext_ReturnValue_1;     // 0x0268(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FRandomStream                          CallFunc_MakeRandomStream_ReturnValue;             // 0x0270(0x0008)(ZeroConstructor, NoDestructor)
+	class UPCGPointData*                          CallFunc_PointLoop_OutData;                        // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPCGTaggedData                         K2Node_MakeStruct_PCGTaggedData;                   // 0x0280(0x0068)()
+	TArray<struct FPCGTaggedData>                 K2Node_MakeArray_Array;                            // 0x02E8(0x0010)(ReferenceParm)
+	TArray<struct FPCGTaggedData>                 CallFunc_GetInputs_ReturnValue;                    // 0x02F8(0x0010)(ReferenceParm)
+	struct FPCGDataCollection                     K2Node_MakeStruct_PCGDataCollection;               // 0x0308(0x0020)()
+	struct FPCGDataCollection                     K2Node_MakeStruct_PCGDataCollection_1;             // 0x0328(0x0020)()
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPCGSpatialData*                        K2Node_DynamicCast_AsPCGSpatial_Data;              // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(SetGrass_C_ExecuteWithContext) == 0x000008, "Wrong alignment on SetGrass_C_ExecuteWithContext");
-static_assert(sizeof(SetGrass_C_ExecuteWithContext) == 0x0002E0, "Wrong size on SetGrass_C_ExecuteWithContext");
+static_assert(sizeof(SetGrass_C_ExecuteWithContext) == 0x000360, "Wrong size on SetGrass_C_ExecuteWithContext");
 static_assert(offsetof(SetGrass_C_ExecuteWithContext, InContext) == 0x000000, "Member 'SetGrass_C_ExecuteWithContext::InContext' has a wrong offset!");
 static_assert(offsetof(SetGrass_C_ExecuteWithContext, Input) == 0x0000B8, "Member 'SetGrass_C_ExecuteWithContext::Input' has a wrong offset!");
 static_assert(offsetof(SetGrass_C_ExecuteWithContext, Output) == 0x0000D8, "Member 'SetGrass_C_ExecuteWithContext::Output' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_MutableMetadata_ReturnValue) == 0x0000F8, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_MutableMetadata_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, Temp_int_Array_Index_Variable) == 0x000100, "Member 'SetGrass_C_ExecuteWithContext::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, Temp_int_Loop_Counter_Variable) == 0x000104, "Member 'SetGrass_C_ExecuteWithContext::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue) == 0x000108, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue) == 0x00010C, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue) == 0x000110, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_ToPointDataWithContext_ReturnValue) == 0x000118, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_ToPointDataWithContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_GetPoints_ReturnValue) == 0x000120, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_GetPoints_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_GetComponent_ReturnValue) == 0x000130, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_GetComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_GetOwner_ReturnValue) == 0x000138, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, UniqueObjectNameForCooking_AsBPI_PCGRoad_Terrain) == 0x000140, "Member 'SetGrass_C_ExecuteWithContext::UniqueObjectNameForCooking_AsBPI_PCGRoad_Terrain' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, UniqueObjectNameForCooking_bSuccess) == 0x000150, "Member 'SetGrass_C_ExecuteWithContext::UniqueObjectNameForCooking_bSuccess' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_ToPointDataWithContext_ReturnValue_1) == 0x000158, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_ToPointDataWithContext_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_GetRoadTerrainData_Terrain_Objects) == 0x000160, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_GetRoadTerrainData_Terrain_Objects' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_GetRoadTerrainData_Grass_Objects) == 0x000170, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_GetRoadTerrainData_Grass_Objects' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_PointLoop_OutData) == 0x000180, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_PointLoop_OutData' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_MakeStruct_PCGTaggedData) == 0x000188, "Member 'SetGrass_C_ExecuteWithContext::K2Node_MakeStruct_PCGTaggedData' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_RandomFromStream_OutItem) == 0x0001F0, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_RandomFromStream_OutItem' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_RandomFromStream_OutIndex) == 0x000240, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_RandomFromStream_OutIndex' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_MakeArray_Array) == 0x000248, "Member 'SetGrass_C_ExecuteWithContext::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_MakeStruct_PCGDataCollection) == 0x000258, "Member 'SetGrass_C_ExecuteWithContext::K2Node_MakeStruct_PCGDataCollection' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Conv_SoftObjectReferenceToString_ReturnValue) == 0x000278, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Conv_SoftObjectReferenceToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_Add_ReturnValue) == 0x000288, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_MakeRandomStream_ReturnValue) == 0x00028C, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_MakeRandomStream_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_GetInputs_ReturnValue) == 0x000298, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_GetInputs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_MakeStruct_PCGDataCollection_1) == 0x0002A8, "Member 'SetGrass_C_ExecuteWithContext::K2Node_MakeStruct_PCGDataCollection_1' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x0002C8, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_DynamicCast_AsPCGSpatial_Data) == 0x0002D0, "Member 'SetGrass_C_ExecuteWithContext::K2Node_DynamicCast_AsPCGSpatial_Data' has a wrong offset!");
-static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess) == 0x0002D8, "Member 'SetGrass_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, Is_Intersection) == 0x0000F8, "Member 'SetGrass_C_ExecuteWithContext::Is_Intersection' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, Incoming_Data) == 0x000100, "Member 'SetGrass_C_ExecuteWithContext::Incoming_Data' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, Obj) == 0x000110, "Member 'SetGrass_C_ExecuteWithContext::Obj' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, Temp_int_Array_Index_Variable) == 0x000138, "Member 'SetGrass_C_ExecuteWithContext::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, Temp_int_Loop_Counter_Variable) == 0x00013C, "Member 'SetGrass_C_ExecuteWithContext::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Add_IntInt_ReturnValue) == 0x000140, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_Length_ReturnValue) == 0x000144, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_MutableMetadata_ReturnValue) == 0x000148, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_MutableMetadata_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Less_IntInt_ReturnValue) == 0x000150, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Conv_SoftObjectReferenceToString_ReturnValue) == 0x000158, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Conv_SoftObjectReferenceToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000168, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_RandomFromStream_OutItem) == 0x000170, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_RandomFromStream_OutItem' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_RandomFromStream_OutIndex) == 0x0001C0, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_RandomFromStream_OutIndex' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_ToPointDataWithContext_ReturnValue) == 0x0001C8, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_ToPointDataWithContext_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_GetPoints_ReturnValue) == 0x0001D0, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_GetPoints_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_Add_ReturnValue) == 0x0001E0, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_GetComponent_ReturnValue) == 0x0001E8, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_GetComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_RandomFromStream_OutItem_1) == 0x0001F0, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_RandomFromStream_OutItem_1' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_RandomFromStream_OutIndex_1) == 0x000240, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_RandomFromStream_OutIndex_1' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_GetOwner_ReturnValue) == 0x000248, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Retrieve_Set_Dressing_Data_Set_Dressing_Data) == 0x000250, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Retrieve_Set_Dressing_Data_Set_Dressing_Data' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Retrieve_Set_Dressing_Data_Is_Intersection) == 0x000260, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Retrieve_Set_Dressing_Data_Is_Intersection' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_ToPointDataWithContext_ReturnValue_1) == 0x000268, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_ToPointDataWithContext_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_MakeRandomStream_ReturnValue) == 0x000270, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_MakeRandomStream_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_PointLoop_OutData) == 0x000278, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_PointLoop_OutData' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_MakeStruct_PCGTaggedData) == 0x000280, "Member 'SetGrass_C_ExecuteWithContext::K2Node_MakeStruct_PCGTaggedData' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_MakeArray_Array) == 0x0002E8, "Member 'SetGrass_C_ExecuteWithContext::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_GetInputs_ReturnValue) == 0x0002F8, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_GetInputs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_MakeStruct_PCGDataCollection) == 0x000308, "Member 'SetGrass_C_ExecuteWithContext::K2Node_MakeStruct_PCGDataCollection' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_MakeStruct_PCGDataCollection_1) == 0x000328, "Member 'SetGrass_C_ExecuteWithContext::K2Node_MakeStruct_PCGDataCollection_1' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000348, "Member 'SetGrass_C_ExecuteWithContext::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_DynamicCast_AsPCGSpatial_Data) == 0x000350, "Member 'SetGrass_C_ExecuteWithContext::K2Node_DynamicCast_AsPCGSpatial_Data' has a wrong offset!");
+static_assert(offsetof(SetGrass_C_ExecuteWithContext, K2Node_DynamicCast_bSuccess) == 0x000358, "Member 'SetGrass_C_ExecuteWithContext::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function SetGrass.SetGrass_C.PointLoopBody
 // 0x0270 (0x0270 - 0x0000)

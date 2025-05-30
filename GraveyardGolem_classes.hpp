@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GraveyardGolem.GraveyardGolem_C
-// 0x0010 (0x1DA0 - 0x1D90)
+// 0x0010 (0x1D60 - 0x1D50)
 #pragma pack(push, 0x1)
 class alignas(0x10) AGraveyardGolem_C : public ANPCPawn_C
 {
 public:
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1D90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,8 +36,8 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AGraveyardGolem_C) == 0x000010, "Wrong alignment on AGraveyardGolem_C");
-static_assert(sizeof(AGraveyardGolem_C) == 0x001DA0, "Wrong size on AGraveyardGolem_C");
-static_assert(offsetof(AGraveyardGolem_C, Blackboard) == 0x001D90, "Member 'AGraveyardGolem_C::Blackboard' has a wrong offset!");
+static_assert(sizeof(AGraveyardGolem_C) == 0x001D60, "Wrong size on AGraveyardGolem_C");
+static_assert(offsetof(AGraveyardGolem_C, Blackboard) == 0x001D50, "Member 'AGraveyardGolem_C::Blackboard' has a wrong offset!");
 
 }
 

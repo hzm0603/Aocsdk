@@ -13,15 +13,15 @@
 #include "S_RoadSetDressingData_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
-#include "SRoadSplineMeshActorSettings_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SRoadSplineMeshActorSettings_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C
-// 0x0500 (0x0978 - 0x0478)
+// 0x04B8 (0x0930 - 0x0478)
 class ABP_LandscapeBrushRoad_C : public ARoadActor
 {
 public:
@@ -73,8 +73,14 @@ public:
 	bool                                          IsAppReady;                                        // 0x082B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_82C[0x4];                                      // 0x082C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        DegreesToRadians;                                  // 0x0830(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FS_RoadSetDressingData                 Road_Set_Dressing_Data;                            // 0x0838(0x0138)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class UPCGComponent*                          Active_PCG_Comp;                                   // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UPCGComponent*                          Active_PCG_Comp;                                   // 0x0838(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Override_Biome;                                    // 0x0840(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBiomeType                                    Biome;                                             // 0x0841(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Enable_Middle_Path;                                // 0x0842(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_843[0x5];                                      // 0x0843(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_RoadSetDressingData                 Road_Set_Dressing_Data;                            // 0x0848(0x00D8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class UMaterialInterface*                     Active_Road_Material;                              // 0x0920(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        Road_Level_Float;                                  // 0x0928(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Build_Road();
@@ -86,11 +92,11 @@ public:
 	void OnUpdateLoadedRoadAppearance();
 	void Set_Road_Levels(int32 Road_Level);
 	void ExecuteUbergraph_BP_LandscapeBrushRoad(int32 EntryPoint);
-	void Get_Mesh_List(struct FAoCSplineMeshEntry* First_Override_Beginning_Mesh, struct FAoCSplineMeshEntry* First_Override_End_Mesh, TArray<struct FAoCSplineMeshEntry>* First_Fence_Objects, TArray<struct FAoCSplineDebrisEntry>* First_Debris_Objects, struct FAoCSplineMeshEntry* Second_Override_Beginning_Mesh, struct FAoCSplineMeshEntry* Second_Override_End_Mesh, TArray<struct FAoCSplineMeshEntry>* Second_Fence_Objects, TArray<struct FAoCSplineDebrisEntry>* Second_Debris_Objects);
-	void GetRoadTerrainData(TArray<struct FAoCRoadTerrainEntry>* Terrain_Objects, TArray<struct FAoCRoadTerrainEntry>* Grass_Objects);
+	void Clear_All_PCG_Data();
 	void Get_Road_Width_Based_on_Level(double Start_Alpha, double End_Alpha, double* Width_Start, double* Width_End);
 	void Get_Current_and_Next_DMI_Distance(int32 Current_Index, double* Current_Distance, double* Next_Distance);
-	bool Not_Connected_to_Intersection_or_Node();
+	bool End_Not_Connected_to_Intersection_or_Node();
+	bool Beginning_Not_Connected_to_Intersection_or_Node();
 	void Apply_Set_Dressing();
 	void Update_PCG_Data(const struct FS_RoadSetDressingData& S_RoadSetDressingData);
 	void Remove_Duplicate_Spline_Points();
@@ -119,10 +125,10 @@ public:
 	void Editor_Get_Road_Level_Settings();
 	void UserConstructionScript();
 	void EditorPrepForSceneCapture(const bool bIsCapturing, const class FName LayerName);
-	void EditorPreviewNodeAtLevel(int32 NodeLevel);
 	void EditorAddLandscapeBrushToManagerUpdateArray();
 	void EditorRemoveLandscapeBrushFromManagerUpdateArray();
 	void ReceiveBeginPlay();
+	void EditorPreviewNodeAtLevel(int32 NodeLevel);
 
 	void GetBaseAppearance(struct FLoadedRoadBaseAppearance* Appearance) const;
 
@@ -137,7 +143,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_LandscapeBrushRoad_C) == 0x000008, "Wrong alignment on ABP_LandscapeBrushRoad_C");
-static_assert(sizeof(ABP_LandscapeBrushRoad_C) == 0x000978, "Wrong size on ABP_LandscapeBrushRoad_C");
+static_assert(sizeof(ABP_LandscapeBrushRoad_C) == 0x000930, "Wrong size on ABP_LandscapeBrushRoad_C");
 static_assert(offsetof(ABP_LandscapeBrushRoad_C, UberGraphFrame) == 0x000478, "Member 'ABP_LandscapeBrushRoad_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(ABP_LandscapeBrushRoad_C, Billboard) == 0x000480, "Member 'ABP_LandscapeBrushRoad_C::Billboard' has a wrong offset!");
 static_assert(offsetof(ABP_LandscapeBrushRoad_C, Segment_Length) == 0x000488, "Member 'ABP_LandscapeBrushRoad_C::Segment_Length' has a wrong offset!");
@@ -181,8 +187,13 @@ static_assert(offsetof(ABP_LandscapeBrushRoad_C, IsActiveReady) == 0x000829, "Me
 static_assert(offsetof(ABP_LandscapeBrushRoad_C, IsBaseReady) == 0x00082A, "Member 'ABP_LandscapeBrushRoad_C::IsBaseReady' has a wrong offset!");
 static_assert(offsetof(ABP_LandscapeBrushRoad_C, IsAppReady) == 0x00082B, "Member 'ABP_LandscapeBrushRoad_C::IsAppReady' has a wrong offset!");
 static_assert(offsetof(ABP_LandscapeBrushRoad_C, DegreesToRadians) == 0x000830, "Member 'ABP_LandscapeBrushRoad_C::DegreesToRadians' has a wrong offset!");
-static_assert(offsetof(ABP_LandscapeBrushRoad_C, Road_Set_Dressing_Data) == 0x000838, "Member 'ABP_LandscapeBrushRoad_C::Road_Set_Dressing_Data' has a wrong offset!");
-static_assert(offsetof(ABP_LandscapeBrushRoad_C, Active_PCG_Comp) == 0x000970, "Member 'ABP_LandscapeBrushRoad_C::Active_PCG_Comp' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoad_C, Active_PCG_Comp) == 0x000838, "Member 'ABP_LandscapeBrushRoad_C::Active_PCG_Comp' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoad_C, Override_Biome) == 0x000840, "Member 'ABP_LandscapeBrushRoad_C::Override_Biome' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoad_C, Biome) == 0x000841, "Member 'ABP_LandscapeBrushRoad_C::Biome' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoad_C, Enable_Middle_Path) == 0x000842, "Member 'ABP_LandscapeBrushRoad_C::Enable_Middle_Path' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoad_C, Road_Set_Dressing_Data) == 0x000848, "Member 'ABP_LandscapeBrushRoad_C::Road_Set_Dressing_Data' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoad_C, Active_Road_Material) == 0x000920, "Member 'ABP_LandscapeBrushRoad_C::Active_Road_Material' has a wrong offset!");
+static_assert(offsetof(ABP_LandscapeBrushRoad_C, Road_Level_Float) == 0x000928, "Member 'ABP_LandscapeBrushRoad_C::Road_Level_Float' has a wrong offset!");
 
 }
 

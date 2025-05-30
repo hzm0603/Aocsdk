@@ -39,17 +39,19 @@ static_assert(sizeof(NPC_Spider_AnimBP_C_BlueprintUpdateAnimation) == 0x000004, 
 static_assert(offsetof(NPC_Spider_AnimBP_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'NPC_Spider_AnimBP_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
 
 // Function NPC_Spider_AnimBP.NPC_Spider_AnimBP_C.ExecuteUbergraph_NPC_Spider_AnimBP
-// 0x0008 (0x0008 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaTimeX;                           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP) == 0x000004, "Wrong alignment on NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP");
-static_assert(sizeof(NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP) == 0x000008, "Wrong size on NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP");
+static_assert(sizeof(NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP) == 0x00000C, "Wrong size on NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP");
 static_assert(offsetof(NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP, EntryPoint) == 0x000000, "Member 'NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP::EntryPoint' has a wrong offset!");
 static_assert(offsetof(NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP, K2Node_Event_DeltaTimeX) == 0x000004, "Member 'NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP::K2Node_Event_DeltaTimeX' has a wrong offset!");
+static_assert(offsetof(NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP, CallFunc_Round_ReturnValue) == 0x000008, "Member 'NPC_Spider_AnimBP_C_ExecuteUbergraph_NPC_Spider_AnimBP::CallFunc_Round_ReturnValue' has a wrong offset!");
 
 }
 

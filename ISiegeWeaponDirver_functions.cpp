@@ -20,7 +20,7 @@ namespace SDK
 // Function ISiegeWeaponDirver.ISiegeWeaponDirver_C.GetDrivenSiegeWeapon
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USiegeWeaponComponent*            SiegeWeaponComponent                                   (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class USiegeWeaponComponent**           SiegeWeaponComponent                                   (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 void IISiegeWeaponDirver_C::GetDrivenSiegeWeapon(class USiegeWeaponComponent** SiegeWeaponComponent)
 {

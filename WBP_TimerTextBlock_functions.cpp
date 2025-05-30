@@ -17,27 +17,21 @@
 namespace SDK
 {
 
-// Function WBP_TimerTextBlock.WBP_TimerTextBlock_C.ConstructSettings
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WBP_TimerTextBlock.WBP_TimerTextBlock_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// class UTextBlock*                       Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    HasPostfix                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TimerTextBlock_C::ConstructSettings(class UTextBlock* Widget, bool IsVisible_0, const class FString& Text, bool HasPostfix)
+void UWBP_TimerTextBlock_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimerTextBlock_C", "ConstructSettings");
+		Func = Class->GetFunction("WBP_TimerTextBlock_C", "PreConstruct");
 
-	Params::WBP_TimerTextBlock_C_ConstructSettings Parms{};
+	Params::WBP_TimerTextBlock_C_PreConstruct Parms{};
 
-	Parms.Widget = Widget;
-	Parms.IsVisible_0 = IsVisible_0;
-	Parms.Text = std::move(Text);
-	Parms.HasPostfix = HasPostfix;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -63,21 +57,27 @@ void UWBP_TimerTextBlock_C::ExecuteUbergraph_WBP_TimerTextBlock(int32 EntryPoint
 }
 
 
-// Function WBP_TimerTextBlock.WBP_TimerTextBlock_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_TimerTextBlock.WBP_TimerTextBlock_C.ConstructSettings
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTextBlock*                       Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    HasPostfix                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TimerTextBlock_C::PreConstruct(bool IsDesignTime)
+void UWBP_TimerTextBlock_C::ConstructSettings(class UTextBlock* Widget, bool IsVisible_0, const class FString& Text, bool HasPostfix)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimerTextBlock_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_TimerTextBlock_C", "ConstructSettings");
 
-	Params::WBP_TimerTextBlock_C_PreConstruct Parms{};
+	Params::WBP_TimerTextBlock_C_ConstructSettings Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.Widget = Widget;
+	Parms.IsVisible_0 = IsVisible_0;
+	Parms.Text = std::move(Text);
+	Parms.HasPostfix = HasPostfix;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

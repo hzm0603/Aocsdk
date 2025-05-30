@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass ElderDragon_Fire_RainofFire_FireBallDrop.ElderDragon_Fire_RainofFire_FireBallDrop_C
-// 0x0030 (0x0540 - 0x0510)
+// 0x0038 (0x0548 - 0x0510)
 class AElderDragon_Fire_RainofFire_FireBallDrop_C final : public AAoCAbilityLingeringEffect
 {
 public:
@@ -27,10 +27,12 @@ public:
 	struct FLingeringEffectId                     FlamePatchId;                                      // 0x0518(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class AElderDragon_Fire_C*                    OwnerDragon;                                       // 0x0530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 FlameMinionClass;                                  // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Timer;                                             // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ElderDragon_Fire_RainofFire_FireBallDrop(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()
@@ -43,11 +45,12 @@ public:
 	}
 };
 static_assert(alignof(AElderDragon_Fire_RainofFire_FireBallDrop_C) == 0x000008, "Wrong alignment on AElderDragon_Fire_RainofFire_FireBallDrop_C");
-static_assert(sizeof(AElderDragon_Fire_RainofFire_FireBallDrop_C) == 0x000540, "Wrong size on AElderDragon_Fire_RainofFire_FireBallDrop_C");
+static_assert(sizeof(AElderDragon_Fire_RainofFire_FireBallDrop_C) == 0x000548, "Wrong size on AElderDragon_Fire_RainofFire_FireBallDrop_C");
 static_assert(offsetof(AElderDragon_Fire_RainofFire_FireBallDrop_C, UberGraphFrame) == 0x000510, "Member 'AElderDragon_Fire_RainofFire_FireBallDrop_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(AElderDragon_Fire_RainofFire_FireBallDrop_C, FlamePatchId) == 0x000518, "Member 'AElderDragon_Fire_RainofFire_FireBallDrop_C::FlamePatchId' has a wrong offset!");
 static_assert(offsetof(AElderDragon_Fire_RainofFire_FireBallDrop_C, OwnerDragon) == 0x000530, "Member 'AElderDragon_Fire_RainofFire_FireBallDrop_C::OwnerDragon' has a wrong offset!");
 static_assert(offsetof(AElderDragon_Fire_RainofFire_FireBallDrop_C, FlameMinionClass) == 0x000538, "Member 'AElderDragon_Fire_RainofFire_FireBallDrop_C::FlameMinionClass' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Fire_RainofFire_FireBallDrop_C, Timer) == 0x000540, "Member 'AElderDragon_Fire_RainofFire_FireBallDrop_C::Timer' has a wrong offset!");
 
 }
 

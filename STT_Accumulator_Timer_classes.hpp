@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass STT_Accumulator_Timer.STT_Accumulator_Timer_C
-// 0x0000 (0x00F8 - 0x00F8)
+// 0x0000 (0x0108 - 0x0108)
 class USTT_Accumulator_Timer_C : public USTT_Accumulator_C
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(USTT_Accumulator_Timer_C) == 0x000008, "Wrong alignment on USTT_Accumulator_Timer_C");
-static_assert(sizeof(USTT_Accumulator_Timer_C) == 0x0000F8, "Wrong size on USTT_Accumulator_Timer_C");
+static_assert(sizeof(USTT_Accumulator_Timer_C) == 0x000108, "Wrong size on USTT_Accumulator_Timer_C");
 
 }
 

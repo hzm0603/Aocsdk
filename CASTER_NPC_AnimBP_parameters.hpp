@@ -17,28 +17,6 @@
 namespace SDK::Params
 {
 
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.AnimGraph
-// 0x0010 (0x0010 - 0x0000)
-struct CASTER_NPC_AnimBP_C_AnimGraph final
-{
-public:
-	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
-};
-static_assert(alignof(CASTER_NPC_AnimBP_C_AnimGraph) == 0x000008, "Wrong alignment on CASTER_NPC_AnimBP_C_AnimGraph");
-static_assert(sizeof(CASTER_NPC_AnimBP_C_AnimGraph) == 0x000010, "Wrong size on CASTER_NPC_AnimBP_C_AnimGraph");
-static_assert(offsetof(CASTER_NPC_AnimBP_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'CASTER_NPC_AnimBP_C_AnimGraph::AnimGraph_0' has a wrong offset!");
-
-// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.BlueprintUpdateAnimation
-// 0x0004 (0x0004 - 0x0000)
-struct CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation final
-{
-public:
-	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation");
-static_assert(sizeof(CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation");
-static_assert(offsetof(CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
-
 // Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.ExecuteUbergraph_CASTER_NPC_AnimBP
 // 0x0120 (0x0120 - 0x0000)
 struct CASTER_NPC_AnimBP_C_ExecuteUbergraph_CASTER_NPC_AnimBP final
@@ -212,6 +190,28 @@ static_assert(offsetof(CASTER_NPC_AnimBP_C_ExecuteUbergraph_CASTER_NPC_AnimBP, C
 static_assert(offsetof(CASTER_NPC_AnimBP_C_ExecuteUbergraph_CASTER_NPC_AnimBP, CallFunc_Less_DoubleDouble_A_ImplicitCast_5) == 0x000108, "Member 'CASTER_NPC_AnimBP_C_ExecuteUbergraph_CASTER_NPC_AnimBP::CallFunc_Less_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
 static_assert(offsetof(CASTER_NPC_AnimBP_C_ExecuteUbergraph_CASTER_NPC_AnimBP, CallFunc_Less_DoubleDouble_A_ImplicitCast_6) == 0x000110, "Member 'CASTER_NPC_AnimBP_C_ExecuteUbergraph_CASTER_NPC_AnimBP::CallFunc_Less_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
 static_assert(offsetof(CASTER_NPC_AnimBP_C_ExecuteUbergraph_CASTER_NPC_AnimBP, K2Node_VariableSet_TurnRate_ImplicitCast) == 0x000118, "Member 'CASTER_NPC_AnimBP_C_ExecuteUbergraph_CASTER_NPC_AnimBP::K2Node_VariableSet_TurnRate_ImplicitCast' has a wrong offset!");
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.BlueprintUpdateAnimation
+// 0x0004 (0x0004 - 0x0000)
+struct CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation final
+{
+public:
+	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation");
+static_assert(sizeof(CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation");
+static_assert(offsetof(CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'CASTER_NPC_AnimBP_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+
+// Function CASTER_NPC_AnimBP.CASTER_NPC_AnimBP_C.AnimGraph
+// 0x0010 (0x0010 - 0x0000)
+struct CASTER_NPC_AnimBP_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
+static_assert(alignof(CASTER_NPC_AnimBP_C_AnimGraph) == 0x000008, "Wrong alignment on CASTER_NPC_AnimBP_C_AnimGraph");
+static_assert(sizeof(CASTER_NPC_AnimBP_C_AnimGraph) == 0x000010, "Wrong size on CASTER_NPC_AnimBP_C_AnimGraph");
+static_assert(offsetof(CASTER_NPC_AnimBP_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'CASTER_NPC_AnimBP_C_AnimGraph::AnimGraph_0' has a wrong offset!");
 
 }
 

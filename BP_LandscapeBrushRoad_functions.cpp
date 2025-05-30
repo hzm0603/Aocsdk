@@ -130,7 +130,7 @@ void ABP_LandscapeBrushRoad_C::OnUpdateActiveRoadStatus()
 
 
 // Function BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C.OnUpdateLoadedRoadAppearance
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_LandscapeBrushRoad_C::OnUpdateLoadedRoadAppearance()
 {
@@ -183,77 +183,17 @@ void ABP_LandscapeBrushRoad_C::ExecuteUbergraph_BP_LandscapeBrushRoad(int32 Entr
 }
 
 
-// Function BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C.Get Mesh List
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FAoCSplineMeshEntry*             First_Override_Beginning_Mesh                          (Parm, OutParm)
-// struct FAoCSplineMeshEntry*             First_Override_End_Mesh                                (Parm, OutParm)
-// TArray<struct FAoCSplineMeshEntry>*     First_Fence_Objects                                    (Parm, OutParm)
-// TArray<struct FAoCSplineDebrisEntry>*   First_Debris_Objects                                   (Parm, OutParm)
-// struct FAoCSplineMeshEntry*             Second_Override_Beginning_Mesh                         (Parm, OutParm)
-// struct FAoCSplineMeshEntry*             Second_Override_End_Mesh                               (Parm, OutParm)
-// TArray<struct FAoCSplineMeshEntry>*     Second_Fence_Objects                                   (Parm, OutParm)
-// TArray<struct FAoCSplineDebrisEntry>*   Second_Debris_Objects                                  (Parm, OutParm)
+// Function BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C.Clear All PCG Data
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_LandscapeBrushRoad_C::Get_Mesh_List(struct FAoCSplineMeshEntry* First_Override_Beginning_Mesh, struct FAoCSplineMeshEntry* First_Override_End_Mesh, TArray<struct FAoCSplineMeshEntry>* First_Fence_Objects, TArray<struct FAoCSplineDebrisEntry>* First_Debris_Objects, struct FAoCSplineMeshEntry* Second_Override_Beginning_Mesh, struct FAoCSplineMeshEntry* Second_Override_End_Mesh, TArray<struct FAoCSplineMeshEntry>* Second_Fence_Objects, TArray<struct FAoCSplineDebrisEntry>* Second_Debris_Objects)
+void ABP_LandscapeBrushRoad_C::Clear_All_PCG_Data()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LandscapeBrushRoad_C", "Get Mesh List");
+		Func = Class->GetFunction("BP_LandscapeBrushRoad_C", "Clear All PCG Data");
 
-	Params::BP_LandscapeBrushRoad_C_Get_Mesh_List Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (First_Override_Beginning_Mesh != nullptr)
-		*First_Override_Beginning_Mesh = std::move(Parms.First_Override_Beginning_Mesh);
-
-	if (First_Override_End_Mesh != nullptr)
-		*First_Override_End_Mesh = std::move(Parms.First_Override_End_Mesh);
-
-	if (First_Fence_Objects != nullptr)
-		*First_Fence_Objects = std::move(Parms.First_Fence_Objects);
-
-	if (First_Debris_Objects != nullptr)
-		*First_Debris_Objects = std::move(Parms.First_Debris_Objects);
-
-	if (Second_Override_Beginning_Mesh != nullptr)
-		*Second_Override_Beginning_Mesh = std::move(Parms.Second_Override_Beginning_Mesh);
-
-	if (Second_Override_End_Mesh != nullptr)
-		*Second_Override_End_Mesh = std::move(Parms.Second_Override_End_Mesh);
-
-	if (Second_Fence_Objects != nullptr)
-		*Second_Fence_Objects = std::move(Parms.Second_Fence_Objects);
-
-	if (Second_Debris_Objects != nullptr)
-		*Second_Debris_Objects = std::move(Parms.Second_Debris_Objects);
-}
-
-
-// Function BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C.GetRoadTerrainData
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FAoCRoadTerrainEntry>*    Terrain_Objects                                        (Parm, OutParm)
-// TArray<struct FAoCRoadTerrainEntry>*    Grass_Objects                                          (Parm, OutParm)
-
-void ABP_LandscapeBrushRoad_C::GetRoadTerrainData(TArray<struct FAoCRoadTerrainEntry>* Terrain_Objects, TArray<struct FAoCRoadTerrainEntry>* Grass_Objects)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LandscapeBrushRoad_C", "GetRoadTerrainData");
-
-	Params::BP_LandscapeBrushRoad_C_GetRoadTerrainData Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Terrain_Objects != nullptr)
-		*Terrain_Objects = std::move(Parms.Terrain_Objects);
-
-	if (Grass_Objects != nullptr)
-		*Grass_Objects = std::move(Parms.Grass_Objects);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -315,19 +255,39 @@ void ABP_LandscapeBrushRoad_C::Get_Current_and_Next_DMI_Distance(int32 Current_I
 }
 
 
-// Function BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C.Not Connected to Intersection or Node
+// Function BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C.End Not Connected to Intersection or Node
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool ABP_LandscapeBrushRoad_C::Not_Connected_to_Intersection_or_Node()
+bool ABP_LandscapeBrushRoad_C::End_Not_Connected_to_Intersection_or_Node()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LandscapeBrushRoad_C", "Not Connected to Intersection or Node");
+		Func = Class->GetFunction("BP_LandscapeBrushRoad_C", "End Not Connected to Intersection or Node");
 
-	Params::BP_LandscapeBrushRoad_C_Not_Connected_to_Intersection_or_Node Parms{};
+	Params::BP_LandscapeBrushRoad_C_End_Not_Connected_to_Intersection_or_Node Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C.Beginning Not Connected to Intersection or Node
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_LandscapeBrushRoad_C::Beginning_Not_Connected_to_Intersection_or_Node()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LandscapeBrushRoad_C", "Beginning Not Connected to Intersection or Node");
+
+	Params::BP_LandscapeBrushRoad_C_Beginning_Not_Connected_to_Intersection_or_Node Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -759,26 +719,6 @@ void ABP_LandscapeBrushRoad_C::EditorPrepForSceneCapture(const bool bIsCapturing
 }
 
 
-// Function BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C.EditorPreviewNodeAtLevel
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// int32                                   NodeLevel                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_LandscapeBrushRoad_C::EditorPreviewNodeAtLevel(int32 NodeLevel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LandscapeBrushRoad_C", "EditorPreviewNodeAtLevel");
-
-	Params::BP_LandscapeBrushRoad_C_EditorPreviewNodeAtLevel Parms{};
-
-	Parms.NodeLevel = NodeLevel;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C.EditorAddLandscapeBrushToManagerUpdateArray
 // (Event, Protected, BlueprintEvent)
 
@@ -818,6 +758,26 @@ void ABP_LandscapeBrushRoad_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_LandscapeBrushRoad_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_LandscapeBrushRoad.BP_LandscapeBrushRoad_C.EditorPreviewNodeAtLevel
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   NodeLevel                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LandscapeBrushRoad_C::EditorPreviewNodeAtLevel(int32 NodeLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LandscapeBrushRoad_C", "EditorPreviewNodeAtLevel");
+
+	Params::BP_LandscapeBrushRoad_C_EditorPreviewNodeAtLevel Parms{};
+
+	Parms.NodeLevel = NodeLevel;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

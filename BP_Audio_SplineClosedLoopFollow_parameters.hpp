@@ -11,12 +11,137 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "AkAudio_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AkAudio_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_Audio_SplineClosedLoopFollow_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_ReceiveTick");
+static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_ReceiveTick) == 0x000004, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_ReceiveTick");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetSplineEmitterComponent
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Audio_SplineClosedLoopFollow_C_GetSplineEmitterComponent final
+{
+public:
+	class USceneComponent*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetSplineEmitterComponent) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetSplineEmitterComponent");
+static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetSplineEmitterComponent) == 0x000008, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetSplineEmitterComponent");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetSplineEmitterComponent, ReturnValue) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetSplineEmitterComponent::ReturnValue' has a wrong offset!");
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetSplineComponent
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent final
+{
+public:
+	class USplineComponent*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent");
+static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent) == 0x000008, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent, ReturnValue) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent::ReturnValue' has a wrong offset!");
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetPlayerControllerCameraRotation
+// 0x0038 (0x0038 - 0x0000)
+struct BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation final
+{
+public:
+	struct FRotator                               PlayerControllerCameraRotation;                    // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetCameraRotation_ReturnValue;            // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation");
+static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation) == 0x000038, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation, PlayerControllerCameraRotation) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation::PlayerControllerCameraRotation' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation, CallFunc_GetPlayerController_ReturnValue) == 0x000018, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation, CallFunc_GetCameraRotation_ReturnValue) == 0x000020, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation::CallFunc_GetCameraRotation_ReturnValue' has a wrong offset!");
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetInsideSpline
+// 0x0088 (0x0088 - 0x0000)
+struct BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline final
+{
+public:
+	bool                                          IsInsideSpine_;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInsideSplineChanged_;                            // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetControlledPawnLocation_ControlledPawnReference; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetControlledPawnLocation_ControlledPawnLocation; // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetControlledPawnLocation_ControlledPawnReference_1; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetControlledPawnLocation_ControlledPawnLocation_1; // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue; // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Dot_VectorVector_ReturnValue;             // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline");
+static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline) == 0x000088, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, IsInsideSpine_) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::IsInsideSpine_' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, IsInsideSplineChanged_) == 0x000001, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::IsInsideSplineChanged_' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_GetControlledPawnLocation_ControlledPawnReference) == 0x000008, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_GetControlledPawnLocation_ControlledPawnReference' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_GetControlledPawnLocation_ControlledPawnLocation) == 0x000010, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_GetControlledPawnLocation_ControlledPawnLocation' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_GetControlledPawnLocation_ControlledPawnReference_1) == 0x000028, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_GetControlledPawnLocation_ControlledPawnReference_1' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_GetControlledPawnLocation_ControlledPawnLocation_1) == 0x000030, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_GetControlledPawnLocation_ControlledPawnLocation_1' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue) == 0x000048, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000060, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_Dot_VectorVector_ReturnValue) == 0x000078, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_Dot_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000080, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000081, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetDistanceFromPlayerToClosestSplintPoint
+// 0x0058 (0x0058 - 0x0000)
+struct BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint final
+{
+public:
+	double                                        DistanceToPlayerFromClosestSpawnPoint;             // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize_ReturnValue;                        // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint");
+static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint) == 0x000058, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, DistanceToPlayerFromClosestSpawnPoint) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::DistanceToPlayerFromClosestSpawnPoint' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_GetPlayerController_ReturnValue) == 0x000008, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_K2_GetPawn_ReturnValue) == 0x000010, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000018, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000038, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_VSize_ReturnValue) == 0x000050, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_VSize_ReturnValue' has a wrong offset!");
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetControlledPawnLocation
+// 0x0050 (0x0050 - 0x0000)
+struct BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation final
+{
+public:
+	class APawn*                                  ControlledPawnReference;                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ControlledPawnLocation;                            // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation");
+static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation) == 0x000050, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, ControlledPawnReference) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::ControlledPawnReference' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, ControlledPawnLocation) == 0x000008, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::ControlledPawnLocation' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, CallFunc_GetPlayerController_ReturnValue) == 0x000020, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, CallFunc_K2_GetPawn_ReturnValue) == 0x000028, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000030, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow
 // 0x0478 (0x0478 - 0x0000)
@@ -150,120 +275,6 @@ static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_ExecuteUbergraph_BP_Aud
 static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x000468, "Member 'BP_Audio_SplineClosedLoopFollow_C_ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x00046C, "Member 'BP_Audio_SplineClosedLoopFollow_C_ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_1) == 0x000470, "Member 'BP_Audio_SplineClosedLoopFollow_C_ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_1' has a wrong offset!");
-
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetControlledPawnLocation
-// 0x0050 (0x0050 - 0x0000)
-struct BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation final
-{
-public:
-	class APawn*                                  ControlledPawnReference;                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ControlledPawnLocation;                            // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation");
-static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation) == 0x000050, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, ControlledPawnReference) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::ControlledPawnReference' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, ControlledPawnLocation) == 0x000008, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::ControlledPawnLocation' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, CallFunc_GetPlayerController_ReturnValue) == 0x000020, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, CallFunc_K2_GetPawn_ReturnValue) == 0x000028, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000030, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetDistanceFromPlayerToClosestSplintPoint
-// 0x0058 (0x0058 - 0x0000)
-struct BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint final
-{
-public:
-	double                                        DistanceToPlayerFromClosestSpawnPoint;             // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize_ReturnValue;                        // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint");
-static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint) == 0x000058, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, DistanceToPlayerFromClosestSpawnPoint) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::DistanceToPlayerFromClosestSpawnPoint' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_GetPlayerController_ReturnValue) == 0x000008, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_K2_GetPawn_ReturnValue) == 0x000010, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000018, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000038, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint, CallFunc_VSize_ReturnValue) == 0x000050, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint::CallFunc_VSize_ReturnValue' has a wrong offset!");
-
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetInsideSpline
-// 0x0088 (0x0088 - 0x0000)
-struct BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline final
-{
-public:
-	bool                                          IsInsideSpine_;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsInsideSplineChanged_;                            // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetControlledPawnLocation_ControlledPawnReference; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetControlledPawnLocation_ControlledPawnLocation; // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_GetControlledPawnLocation_ControlledPawnReference_1; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetControlledPawnLocation_ControlledPawnLocation_1; // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue; // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Dot_VectorVector_ReturnValue;             // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline");
-static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline) == 0x000088, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, IsInsideSpine_) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::IsInsideSpine_' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, IsInsideSplineChanged_) == 0x000001, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::IsInsideSplineChanged_' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_GetControlledPawnLocation_ControlledPawnReference) == 0x000008, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_GetControlledPawnLocation_ControlledPawnReference' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_GetControlledPawnLocation_ControlledPawnLocation) == 0x000010, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_GetControlledPawnLocation_ControlledPawnLocation' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_GetControlledPawnLocation_ControlledPawnReference_1) == 0x000028, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_GetControlledPawnLocation_ControlledPawnReference_1' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_GetControlledPawnLocation_ControlledPawnLocation_1) == 0x000030, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_GetControlledPawnLocation_ControlledPawnLocation_1' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue) == 0x000048, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_FindRightVectorClosestToWorldLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000060, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_Dot_VectorVector_ReturnValue) == 0x000078, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_Dot_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000080, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000081, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetInsideSpline::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
-
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetPlayerControllerCameraRotation
-// 0x0038 (0x0038 - 0x0000)
-struct BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation final
-{
-public:
-	struct FRotator                               PlayerControllerCameraRotation;                    // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetCameraRotation_ReturnValue;            // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation");
-static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation) == 0x000038, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation, PlayerControllerCameraRotation) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation::PlayerControllerCameraRotation' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation, CallFunc_GetPlayerController_ReturnValue) == 0x000018, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation, CallFunc_GetCameraRotation_ReturnValue) == 0x000020, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation::CallFunc_GetCameraRotation_ReturnValue' has a wrong offset!");
-
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetSplineComponent
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent final
-{
-public:
-	class USplineComponent*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent) == 0x000008, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent");
-static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent) == 0x000008, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent, ReturnValue) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent::ReturnValue' has a wrong offset!");
-
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_Audio_SplineClosedLoopFollow_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_Audio_SplineClosedLoopFollow_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_Audio_SplineClosedLoopFollow_C_ReceiveTick");
-static_assert(sizeof(BP_Audio_SplineClosedLoopFollow_C_ReceiveTick) == 0x000004, "Wrong size on BP_Audio_SplineClosedLoopFollow_C_ReceiveTick");
-static_assert(offsetof(BP_Audio_SplineClosedLoopFollow_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_Audio_SplineClosedLoopFollow_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 }
 

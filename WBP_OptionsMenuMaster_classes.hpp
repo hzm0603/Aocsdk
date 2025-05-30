@@ -17,12 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_OptionsMenuMaster.WBP_OptionsMenuMaster_C
-// 0x0010 (0x0950 - 0x0940)
+// 0x0008 (0x09A0 - 0x0998)
 class UWBP_OptionsMenuMaster_C final : public UOptionsMenuMaster
 {
 public:
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WBP_ScrollWindow_NoFrameNoPadding;                 // 0x0940(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WBP_ScrollWindow_NoFrameNoPadding_C_1;             // 0x0948(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WBP_ScrollWindow_NoFrameNoPadding_C_1;             // 0x0998(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_OptionsMenuMaster_C) == 0x000008, "Wrong alignment on UWBP_OptionsMenuMaster_C");
-static_assert(sizeof(UWBP_OptionsMenuMaster_C) == 0x000950, "Wrong size on UWBP_OptionsMenuMaster_C");
-static_assert(offsetof(UWBP_OptionsMenuMaster_C, WBP_ScrollWindow_NoFrameNoPadding) == 0x000940, "Member 'UWBP_OptionsMenuMaster_C::WBP_ScrollWindow_NoFrameNoPadding' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionsMenuMaster_C, WBP_ScrollWindow_NoFrameNoPadding_C_1) == 0x000948, "Member 'UWBP_OptionsMenuMaster_C::WBP_ScrollWindow_NoFrameNoPadding_C_1' has a wrong offset!");
+static_assert(sizeof(UWBP_OptionsMenuMaster_C) == 0x0009A0, "Wrong size on UWBP_OptionsMenuMaster_C");
+static_assert(offsetof(UWBP_OptionsMenuMaster_C, WBP_ScrollWindow_NoFrameNoPadding_C_1) == 0x000998, "Member 'UWBP_OptionsMenuMaster_C::WBP_ScrollWindow_NoFrameNoPadding_C_1' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPI_Water.BPI_Water_C
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IBPI_Water_C final : public IInterface
 {
 public:
@@ -35,8 +35,8 @@ public:
 		return GetDefaultObjImpl<IBPI_Water_C>();
 	}
 };
-static_assert(alignof(IBPI_Water_C) == 0x000008, "Wrong alignment on IBPI_Water_C");
-static_assert(sizeof(IBPI_Water_C) == 0x000048, "Wrong size on IBPI_Water_C");
+static_assert(alignof(IBPI_Water_C) == 0x000001, "Wrong alignment on IBPI_Water_C");
+static_assert(sizeof(IBPI_Water_C) == 0x000001, "Wrong size on IBPI_Water_C");
 
 }
 

@@ -14,38 +14,46 @@
 namespace SDK::Params
 {
 
+// Function WBP_ServiceBuildingDetailsPanel.WBP_ServiceBuildingDetailsPanel_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_ServiceBuildingDetailsPanel_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_ServiceBuildingDetailsPanel_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_ServiceBuildingDetailsPanel_C_PreConstruct");
+static_assert(sizeof(WBP_ServiceBuildingDetailsPanel_C_PreConstruct) == 0x000001, "Wrong size on WBP_ServiceBuildingDetailsPanel_C_PreConstruct");
+static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_ServiceBuildingDetailsPanel_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WBP_ServiceBuildingDetailsPanel.WBP_ServiceBuildingDetailsPanel_C.ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel
-// 0x0038 (0x0038 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            K2Node_Event_SectionWidget;                        // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Event_SectionLabel;                         // 0x0010(0x0018)(ConstParm)
-	class UWBP_BuildingManagerSection_C*          K2Node_DynamicCast_AsWBP_Building_Manager_Section; // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_ServiceBuildingStatWidget_C*       CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAnyChildren_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel) == 0x000008, "Wrong alignment on WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel");
-static_assert(sizeof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel) == 0x000038, "Wrong size on WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel");
+static_assert(sizeof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel) == 0x000030, "Wrong size on WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel");
 static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, EntryPoint) == 0x000000, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, K2Node_Event_SectionWidget) == 0x000008, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::K2Node_Event_SectionWidget' has a wrong offset!");
-static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, K2Node_Event_SectionLabel) == 0x000010, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::K2Node_Event_SectionLabel' has a wrong offset!");
-static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, K2Node_DynamicCast_AsWBP_Building_Manager_Section) == 0x000028, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::K2Node_DynamicCast_AsWBP_Building_Manager_Section' has a wrong offset!");
-static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function WBP_ServiceBuildingDetailsPanel.WBP_ServiceBuildingDetailsPanel_C.SetSectionLabelBP
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_ServiceBuildingDetailsPanel_C_SetSectionLabelBP final
-{
-public:
-	class UUserWidget*                            SectionWidget;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   SectionLabel;                                      // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(WBP_ServiceBuildingDetailsPanel_C_SetSectionLabelBP) == 0x000008, "Wrong alignment on WBP_ServiceBuildingDetailsPanel_C_SetSectionLabelBP");
-static_assert(sizeof(WBP_ServiceBuildingDetailsPanel_C_SetSectionLabelBP) == 0x000020, "Wrong size on WBP_ServiceBuildingDetailsPanel_C_SetSectionLabelBP");
-static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_SetSectionLabelBP, SectionWidget) == 0x000000, "Member 'WBP_ServiceBuildingDetailsPanel_C_SetSectionLabelBP::SectionWidget' has a wrong offset!");
-static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_SetSectionLabelBP, SectionLabel) == 0x000008, "Member 'WBP_ServiceBuildingDetailsPanel_C_SetSectionLabelBP::SectionLabel' has a wrong offset!");
+static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, CallFunc_Create_ReturnValue) == 0x000008, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, Temp_int_Variable) == 0x000010, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000014, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, K2Node_Event_IsDesignTime) == 0x00001C, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, CallFunc_IsValid_ReturnValue) == 0x00001D, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, CallFunc_AddChild_ReturnValue) == 0x000020, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::CallFunc_AddChild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel, CallFunc_HasAnyChildren_ReturnValue) == 0x000028, "Member 'WBP_ServiceBuildingDetailsPanel_C_ExecuteUbergraph_WBP_ServiceBuildingDetailsPanel::CallFunc_HasAnyChildren_ReturnValue' has a wrong offset!");
 
 }
 

@@ -17,11 +17,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CaravanPurchaseDropdown.WBP_CaravanPurchaseDropdown_C
-// 0x0008 (0x0400 - 0x03F8)
+// 0x0028 (0x0420 - 0x03F8)
 class UWBP_CaravanPurchaseDropdown_C final : public UCaravanPurchaseDropdown
 {
 public:
-	class UImage*                                 RarityFrame;                                       // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_HeaderBG;                                      // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_SlotFrame;                                     // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemDropdown_C*                    ItemDropdown;                                      // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 RarityFrame;                                       // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    StatusText;                                        // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +38,12 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CaravanPurchaseDropdown_C) == 0x000008, "Wrong alignment on UWBP_CaravanPurchaseDropdown_C");
-static_assert(sizeof(UWBP_CaravanPurchaseDropdown_C) == 0x000400, "Wrong size on UWBP_CaravanPurchaseDropdown_C");
-static_assert(offsetof(UWBP_CaravanPurchaseDropdown_C, RarityFrame) == 0x0003F8, "Member 'UWBP_CaravanPurchaseDropdown_C::RarityFrame' has a wrong offset!");
+static_assert(sizeof(UWBP_CaravanPurchaseDropdown_C) == 0x000420, "Wrong size on UWBP_CaravanPurchaseDropdown_C");
+static_assert(offsetof(UWBP_CaravanPurchaseDropdown_C, IMG_HeaderBG) == 0x0003F8, "Member 'UWBP_CaravanPurchaseDropdown_C::IMG_HeaderBG' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanPurchaseDropdown_C, IMG_SlotFrame) == 0x000400, "Member 'UWBP_CaravanPurchaseDropdown_C::IMG_SlotFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanPurchaseDropdown_C, ItemDropdown) == 0x000408, "Member 'UWBP_CaravanPurchaseDropdown_C::ItemDropdown' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanPurchaseDropdown_C, RarityFrame) == 0x000410, "Member 'UWBP_CaravanPurchaseDropdown_C::RarityFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanPurchaseDropdown_C, StatusText) == 0x000418, "Member 'UWBP_CaravanPurchaseDropdown_C::StatusText' has a wrong offset!");
 
 }
 

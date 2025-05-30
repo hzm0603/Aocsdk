@@ -13,188 +13,77 @@
 #include "SlateCore_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 #include "ST_DamageMeterHitInfo_structs.hpp"
-#include "ST_DamageMeterData_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
+#include "ST_DamageMeterData_structs.hpp"
 #include "ST_DamageMeterTimeData_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature final
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateInstigators
+// 0x0458 (0x0458 - 0x0000)
+struct WBP_DamageMeterHealthLog_C_UpdateInstigators final
 {
 public:
-	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         indexSave;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetOptionCount_ReturnValue;               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default;                             // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterData                    CallFunc_Array_Get_Item;                           // 0x0028(0x0410)(HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_439[0x7];                                      // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0440(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0450(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0454(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
-static_assert(sizeof(WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature) == 0x000018, "Wrong size on WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature, SelectedItem) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature::SelectedItem' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature, SelectionType) == 0x000010, "Member 'WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature::SelectionType' has a wrong offset!");
+static_assert(alignof(WBP_DamageMeterHealthLog_C_UpdateInstigators) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_UpdateInstigators");
+static_assert(sizeof(WBP_DamageMeterHealthLog_C_UpdateInstigators) == 0x000458, "Wrong size on WBP_DamageMeterHealthLog_C_UpdateInstigators");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, indexSave) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::indexSave' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, Temp_int_Variable) == 0x000004, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, Temp_int_Array_Index_Variable) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, Temp_bool_Variable) == 0x000014, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000015, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_GetOptionCount_ReturnValue) == 0x000018, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_GetOptionCount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_GetSelectedIndex_ReturnValue) == 0x00001C, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_GetSelectedIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, K2Node_Select_Default) == 0x000020, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Array_Length_ReturnValue) == 0x000024, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000438, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Conv_NameToString_ReturnValue) == 0x000440, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Array_Length_ReturnValue_1) == 0x000450, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Less_IntInt_ReturnValue) == 0x000454, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.ExecuteUbergraph_WBP_DamageMeterHealthLog
-// 0x0058 (0x0058 - 0x0000)
-struct WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog final
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateHoverText
+// 0x0A50 (0x0A50 - 0x0000)
+struct WBP_DamageMeterHealthLog_C_UpdateHoverText final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_ComponentBoundEvent_SelectedItem;           // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x001C(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAbilityHitRecord                      CallFunc_GetHitRecordByGuid_ReturnValue;           // 0x0008(0x0A30)(ConstParm)
+	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0A38(0x0018)()
 };
-static_assert(alignof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog");
-static_assert(sizeof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog) == 0x000058, "Wrong size on WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog, EntryPoint) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog, K2Node_ComponentBoundEvent_SelectedItem) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog::K2Node_ComponentBoundEvent_SelectedItem' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog, K2Node_ComponentBoundEvent_SelectionType) == 0x000018, "Member 'WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog::K2Node_ComponentBoundEvent_SelectionType' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog, K2Node_Event_MyGeometry) == 0x00001C, "Member 'WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog, K2Node_Event_InDeltaTime) == 0x000054, "Member 'WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog::K2Node_Event_InDeltaTime' has a wrong offset!");
-
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.GetBarAtIndex
-// 0x0050 (0x0050 - 0x0000)
-struct WBP_DamageMeterHealthLog_C_GetBarAtIndex final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWBP_DamageMeterHealthLogBar_C*> Bars_0;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	class UVerticalBox*                           Layout;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_DamageMeterHealthLogBar_C*         bar;                                               // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_DamageMeterHealthLogBar_C*         CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_DamageMeterHealthLogBar_C*         CallFunc_Create_ReturnValue;                       // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeterHealthLog_C_GetBarAtIndex) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_GetBarAtIndex");
-static_assert(sizeof(WBP_DamageMeterHealthLog_C_GetBarAtIndex) == 0x000050, "Wrong size on WBP_DamageMeterHealthLog_C_GetBarAtIndex");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, Index_0) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::Index_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, Bars_0) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::Bars_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, Layout) == 0x000018, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::Layout' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, bar) == 0x000020, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::bar' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000034, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_Create_ReturnValue) == 0x000038, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_Array_Add_ReturnValue) == 0x000040, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_AddChild_ReturnValue) == 0x000048, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.Initialize
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_DamageMeterHealthLog_C_Initialize final
-{
-public:
-	class UWBP_DamageMeter_C*                     DamageMeter_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeterHealthLog_C_Initialize) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_Initialize");
-static_assert(sizeof(WBP_DamageMeterHealthLog_C_Initialize) == 0x000008, "Wrong size on WBP_DamageMeterHealthLog_C_Initialize");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_Initialize, DamageMeter_0) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_Initialize::DamageMeter_0' has a wrong offset!");
-
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.RebaseBars
-// 0x0080 (0x0080 - 0x0000)
-struct WBP_DamageMeterHealthLog_C_RebaseBars final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_MakeLiteralInt64_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetGameStatFromGuid_ReturnValue;          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeterHealthLog_C_RebaseBars) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_RebaseBars");
-static_assert(sizeof(WBP_DamageMeterHealthLog_C_RebaseBars) == 0x000080, "Wrong size on WBP_DamageMeterHealthLog_C_RebaseBars");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_GetTimeSeconds_ReturnValue) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_MakeLiteralInt64_ReturnValue) == 0x000018, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_MakeLiteralInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_GetSelectedIndex_ReturnValue) == 0x000024, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_GetSelectedIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000028, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Array_Length_ReturnValue) == 0x00002C, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_GetGameStatFromGuid_ReturnValue) == 0x000030, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_GetGameStatFromGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Less_IntInt_ReturnValue) == 0x000034, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Array_Length_ReturnValue_1) == 0x000038, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_IsValid_ReturnValue) == 0x00003C, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Subtract_IntInt_ReturnValue) == 0x000040, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x000044, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000048, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000050, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Abs_ReturnValue) == 0x000058, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000060, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Not_PreBool_ReturnValue) == 0x000061, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000068, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000070, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_BooleanAND_ReturnValue) == 0x000071, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000078, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_DamageMeterHealthLog_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeterHealthLog_C_Tick) == 0x000004, "Wrong alignment on WBP_DamageMeterHealthLog_C_Tick");
-static_assert(sizeof(WBP_DamageMeterHealthLog_C_Tick) == 0x00003C, "Wrong size on WBP_DamageMeterHealthLog_C_Tick");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_DamageMeterHealthLog_C_Tick::InDeltaTime' has a wrong offset!");
-
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.TrimBars
-// 0x0014 (0x0014 - 0x0000)
-struct WBP_DamageMeterHealthLog_C_TrimBars final
-{
-public:
-	int32                                         needed;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RemoveChildAt_ReturnValue;                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeterHealthLog_C_TrimBars) == 0x000004, "Wrong alignment on WBP_DamageMeterHealthLog_C_TrimBars");
-static_assert(sizeof(WBP_DamageMeterHealthLog_C_TrimBars) == 0x000014, "Wrong size on WBP_DamageMeterHealthLog_C_TrimBars");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, needed) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::needed' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, CallFunc_Array_Length_ReturnValue) == 0x000004, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, CallFunc_Array_Length_ReturnValue_1) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, CallFunc_Subtract_IntInt_ReturnValue) == 0x00000C, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, CallFunc_Greater_IntInt_ReturnValue) == 0x000010, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, CallFunc_RemoveChildAt_ReturnValue) == 0x000011, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::CallFunc_RemoveChildAt_ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_DamageMeterHealthLog_C_UpdateHoverText) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_UpdateHoverText");
+static_assert(sizeof(WBP_DamageMeterHealthLog_C_UpdateHoverText) == 0x000A50, "Wrong size on WBP_DamageMeterHealthLog_C_UpdateHoverText");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateHoverText, CallFunc_GetSelectedIndex_ReturnValue) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_UpdateHoverText::CallFunc_GetSelectedIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateHoverText, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000004, "Member 'WBP_DamageMeterHealthLog_C_UpdateHoverText::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateHoverText, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x000005, "Member 'WBP_DamageMeterHealthLog_C_UpdateHoverText::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateHoverText, CallFunc_GetHitRecordByGuid_ReturnValue) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_UpdateHoverText::CallFunc_GetHitRecordByGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateHoverText, CallFunc_Conv_NameToText_ReturnValue) == 0x000A38, "Member 'WBP_DamageMeterHealthLog_C_UpdateHoverText::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
 
 // Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateBars
 // 0x03A0 (0x03A0 - 0x0000)
@@ -397,68 +286,179 @@ static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateBars, CallFunc_MakeColor
 static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateBars, CallFunc_MakeColor_G_ImplicitCast) == 0x000394, "Member 'WBP_DamageMeterHealthLog_C_UpdateBars::CallFunc_MakeColor_G_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateBars, CallFunc_MakeColor_R_ImplicitCast) == 0x000398, "Member 'WBP_DamageMeterHealthLog_C_UpdateBars::CallFunc_MakeColor_R_ImplicitCast' has a wrong offset!");
 
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateHoverText
-// 0x0A48 (0x0A48 - 0x0000)
-struct WBP_DamageMeterHealthLog_C_UpdateHoverText final
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.TrimBars
+// 0x0014 (0x0014 - 0x0000)
+struct WBP_DamageMeterHealthLog_C_TrimBars final
 {
 public:
-	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAbilityHitRecord                      CallFunc_GetHitRecordByGuid_ReturnValue;           // 0x0008(0x0A28)(ConstParm)
-	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0A30(0x0018)()
+	int32                                         needed;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RemoveChildAt_ReturnValue;                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_DamageMeterHealthLog_C_UpdateHoverText) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_UpdateHoverText");
-static_assert(sizeof(WBP_DamageMeterHealthLog_C_UpdateHoverText) == 0x000A48, "Wrong size on WBP_DamageMeterHealthLog_C_UpdateHoverText");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateHoverText, CallFunc_GetSelectedIndex_ReturnValue) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_UpdateHoverText::CallFunc_GetSelectedIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateHoverText, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000004, "Member 'WBP_DamageMeterHealthLog_C_UpdateHoverText::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateHoverText, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x000005, "Member 'WBP_DamageMeterHealthLog_C_UpdateHoverText::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateHoverText, CallFunc_GetHitRecordByGuid_ReturnValue) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_UpdateHoverText::CallFunc_GetHitRecordByGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateHoverText, CallFunc_Conv_NameToText_ReturnValue) == 0x000A30, "Member 'WBP_DamageMeterHealthLog_C_UpdateHoverText::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_DamageMeterHealthLog_C_TrimBars) == 0x000004, "Wrong alignment on WBP_DamageMeterHealthLog_C_TrimBars");
+static_assert(sizeof(WBP_DamageMeterHealthLog_C_TrimBars) == 0x000014, "Wrong size on WBP_DamageMeterHealthLog_C_TrimBars");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, needed) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::needed' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, CallFunc_Array_Length_ReturnValue) == 0x000004, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, CallFunc_Array_Length_ReturnValue_1) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, CallFunc_Subtract_IntInt_ReturnValue) == 0x00000C, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, CallFunc_Greater_IntInt_ReturnValue) == 0x000010, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_TrimBars, CallFunc_RemoveChildAt_ReturnValue) == 0x000011, "Member 'WBP_DamageMeterHealthLog_C_TrimBars::CallFunc_RemoveChildAt_ReturnValue' has a wrong offset!");
 
-// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.UpdateInstigators
-// 0x0458 (0x0458 - 0x0000)
-struct WBP_DamageMeterHealthLog_C_UpdateInstigators final
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_DamageMeterHealthLog_C_Tick final
 {
 public:
-	int32                                         indexSave;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetOptionCount_ReturnValue;               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default;                             // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterData                    CallFunc_Array_Get_Item;                           // 0x0028(0x0410)(HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_439[0x7];                                      // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0440(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0450(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0454(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_DamageMeterHealthLog_C_UpdateInstigators) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_UpdateInstigators");
-static_assert(sizeof(WBP_DamageMeterHealthLog_C_UpdateInstigators) == 0x000458, "Wrong size on WBP_DamageMeterHealthLog_C_UpdateInstigators");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, indexSave) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::indexSave' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, Temp_int_Variable) == 0x000004, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, Temp_int_Array_Index_Variable) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, Temp_bool_Variable) == 0x000014, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000015, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_GetOptionCount_ReturnValue) == 0x000018, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_GetOptionCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_GetSelectedIndex_ReturnValue) == 0x00001C, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_GetSelectedIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, K2Node_Select_Default) == 0x000020, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Array_Length_ReturnValue) == 0x000024, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000438, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Conv_NameToString_ReturnValue) == 0x000440, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Array_Length_ReturnValue_1) == 0x000450, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeterHealthLog_C_UpdateInstigators, CallFunc_Less_IntInt_ReturnValue) == 0x000454, "Member 'WBP_DamageMeterHealthLog_C_UpdateInstigators::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_DamageMeterHealthLog_C_Tick) == 0x000004, "Wrong alignment on WBP_DamageMeterHealthLog_C_Tick");
+static_assert(sizeof(WBP_DamageMeterHealthLog_C_Tick) == 0x00003C, "Wrong size on WBP_DamageMeterHealthLog_C_Tick");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_DamageMeterHealthLog_C_Tick::InDeltaTime' has a wrong offset!");
+
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.RebaseBars
+// 0x0080 (0x0080 - 0x0000)
+struct WBP_DamageMeterHealthLog_C_RebaseBars final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_MakeLiteralInt64_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetGameStatFromGuid_ReturnValue;          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeterHealthLog_C_RebaseBars) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_RebaseBars");
+static_assert(sizeof(WBP_DamageMeterHealthLog_C_RebaseBars) == 0x000080, "Wrong size on WBP_DamageMeterHealthLog_C_RebaseBars");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_GetTimeSeconds_ReturnValue) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_MakeLiteralInt64_ReturnValue) == 0x000018, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_MakeLiteralInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_GetSelectedIndex_ReturnValue) == 0x000024, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_GetSelectedIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000028, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Array_Length_ReturnValue) == 0x00002C, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_GetGameStatFromGuid_ReturnValue) == 0x000030, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_GetGameStatFromGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Less_IntInt_ReturnValue) == 0x000034, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Array_Length_ReturnValue_1) == 0x000038, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_IsValid_ReturnValue) == 0x00003C, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Subtract_IntInt_ReturnValue) == 0x000040, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x000044, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000048, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000050, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Abs_ReturnValue) == 0x000058, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000060, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Not_PreBool_ReturnValue) == 0x000061, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000068, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000070, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_BooleanAND_ReturnValue) == 0x000071, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_RebaseBars, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000078, "Member 'WBP_DamageMeterHealthLog_C_RebaseBars::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.Initialize
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_DamageMeterHealthLog_C_Initialize final
+{
+public:
+	class UWBP_DamageMeter_C*                     DamageMeter_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeterHealthLog_C_Initialize) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_Initialize");
+static_assert(sizeof(WBP_DamageMeterHealthLog_C_Initialize) == 0x000008, "Wrong size on WBP_DamageMeterHealthLog_C_Initialize");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_Initialize, DamageMeter_0) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_Initialize::DamageMeter_0' has a wrong offset!");
+
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.GetBarAtIndex
+// 0x0050 (0x0050 - 0x0000)
+struct WBP_DamageMeterHealthLog_C_GetBarAtIndex final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWBP_DamageMeterHealthLogBar_C*> Bars_0;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	class UVerticalBox*                           Layout;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_DamageMeterHealthLogBar_C*         bar;                                               // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_DamageMeterHealthLogBar_C*         CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_DamageMeterHealthLogBar_C*         CallFunc_Create_ReturnValue;                       // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeterHealthLog_C_GetBarAtIndex) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_GetBarAtIndex");
+static_assert(sizeof(WBP_DamageMeterHealthLog_C_GetBarAtIndex) == 0x000050, "Wrong size on WBP_DamageMeterHealthLog_C_GetBarAtIndex");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, Index_0) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::Index_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, Bars_0) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::Bars_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, Layout) == 0x000018, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::Layout' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, bar) == 0x000020, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::bar' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000034, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_Create_ReturnValue) == 0x000038, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_Array_Add_ReturnValue) == 0x000040, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_GetBarAtIndex, CallFunc_AddChild_ReturnValue) == 0x000048, "Member 'WBP_DamageMeterHealthLog_C_GetBarAtIndex::CallFunc_AddChild_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.ExecuteUbergraph_WBP_DamageMeterHealthLog
+// 0x0058 (0x0058 - 0x0000)
+struct WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_ComponentBoundEvent_SelectedItem;           // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x001C(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog");
+static_assert(sizeof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog) == 0x000058, "Wrong size on WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog, EntryPoint) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog, K2Node_ComponentBoundEvent_SelectedItem) == 0x000008, "Member 'WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog::K2Node_ComponentBoundEvent_SelectedItem' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog, K2Node_ComponentBoundEvent_SelectionType) == 0x000018, "Member 'WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog::K2Node_ComponentBoundEvent_SelectionType' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog, K2Node_Event_MyGeometry) == 0x00001C, "Member 'WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog, K2Node_Event_InDeltaTime) == 0x000054, "Member 'WBP_DamageMeterHealthLog_C_ExecuteUbergraph_WBP_DamageMeterHealthLog::K2Node_Event_InDeltaTime' has a wrong offset!");
+
+// Function WBP_DamageMeterHealthLog.WBP_DamageMeterHealthLog_C.BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature final
+{
+public:
+	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
+static_assert(sizeof(WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature) == 0x000018, "Wrong size on WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature, SelectedItem) == 0x000000, "Member 'WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature::SelectedItem' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature, SelectionType) == 0x000010, "Member 'WBP_DamageMeterHealthLog_C_BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature::SelectionType' has a wrong offset!");
 
 }
 

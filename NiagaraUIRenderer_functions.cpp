@@ -117,7 +117,7 @@ class UMaterialInterface* UNiagaraSystemWidget::GetRemapMaterial(class UMaterial
 // Function NiagaraUIRenderer.NiagaraSystemWidget.SetDesiredWidgetSize
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D                        NewDesiredSize                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 NewDesiredSize                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UNiagaraSystemWidget::SetDesiredWidgetSize(const struct FVector2D& NewDesiredSize)
 {

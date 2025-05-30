@@ -18,29 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CommodityCategoryGrid.WBP_CommodityCategoryGrid_C
-// 0x0088 (0x0388 - 0x0300)
+// 0x0028 (0x0388 - 0x0360)
 class UWBP_CommodityCategoryGrid_C final : public UCommodityCategoryGrid
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAoCCommonTextBlock*                    CategoryHeaderText;                                // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem;                             // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_1;                           // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_2;                           // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_3;                           // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_4;                           // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_5;                           // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_6;                           // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_7;                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_8;                           // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_9;                           // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_10;                          // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CommodityItem_C*                   WBP_CommodityListItem_11;                          // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAoCCommonTextBlock*                    CategoryHeaderText;                                // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class FText                                   Title;                                             // 0x0370(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
-	void ExecuteUbergraph_WBP_CommodityCategoryGrid(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_CommodityCategoryGrid(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -54,20 +42,8 @@ public:
 };
 static_assert(alignof(UWBP_CommodityCategoryGrid_C) == 0x000008, "Wrong alignment on UWBP_CommodityCategoryGrid_C");
 static_assert(sizeof(UWBP_CommodityCategoryGrid_C) == 0x000388, "Wrong size on UWBP_CommodityCategoryGrid_C");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, UberGraphFrame) == 0x000300, "Member 'UWBP_CommodityCategoryGrid_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, CategoryHeaderText) == 0x000308, "Member 'UWBP_CommodityCategoryGrid_C::CategoryHeaderText' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem) == 0x000310, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_1) == 0x000318, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_1' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_2) == 0x000320, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_2' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_3) == 0x000328, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_3' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_4) == 0x000330, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_4' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_5) == 0x000338, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_5' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_6) == 0x000340, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_6' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_7) == 0x000348, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_7' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_8) == 0x000350, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_8' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_9) == 0x000358, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_9' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_10) == 0x000360, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_10' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityCategoryGrid_C, WBP_CommodityListItem_11) == 0x000368, "Member 'UWBP_CommodityCategoryGrid_C::WBP_CommodityListItem_11' has a wrong offset!");
+static_assert(offsetof(UWBP_CommodityCategoryGrid_C, UberGraphFrame) == 0x000360, "Member 'UWBP_CommodityCategoryGrid_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_CommodityCategoryGrid_C, CategoryHeaderText) == 0x000368, "Member 'UWBP_CommodityCategoryGrid_C::CategoryHeaderText' has a wrong offset!");
 static_assert(offsetof(UWBP_CommodityCategoryGrid_C, Title) == 0x000370, "Member 'UWBP_CommodityCategoryGrid_C::Title' has a wrong offset!");
 
 }

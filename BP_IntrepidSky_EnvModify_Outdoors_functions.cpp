@@ -17,105 +17,187 @@
 namespace SDK
 {
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.AllowTrigger
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::AllowTrigger()
+void ABP_IntrepidSky_EnvModify_Outdoors_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "AllowTrigger");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Clear Spline Settings In IntrepidSky
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Update Blending Editor Time
+// (Private, BlueprintCallable, BlueprintEvent, BlueprintPure)
+
+void ABP_IntrepidSky_EnvModify_Outdoors_C::Update_Blending_Editor_Time()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Update Blending Editor Time");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Stop Previewing
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::Clear_Spline_Settings_In_IntrepidSky()
+void ABP_IntrepidSky_EnvModify_Outdoors_C::Stop_Previewing()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Clear Spline Settings In IntrepidSky");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Stop Previewing");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Editor Compute Blend
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Start Previewing
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::Editor_Compute_Blend()
+void ABP_IntrepidSky_EnvModify_Outdoors_C::Start_Previewing()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Editor Compute Blend");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Start Previewing");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Transition Value In IntrepidSky
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors(int32 EntryPoint)
+void ABP_IntrepidSky_EnvModify_Outdoors_C::Set_Transition_Value_In_IntrepidSky(double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Set Transition Value In IntrepidSky");
 
-	Params::BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors Parms{};
+	Params::BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.OnAudioActivated
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Spline Settings In IntrepidSky
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::OnAudioActivated()
+void ABP_IntrepidSky_EnvModify_Outdoors_C::Set_Spline_Settings_In_IntrepidSky()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "OnAudioActivated");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Set Spline Settings In IntrepidSky");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.OnAudioDeactivated
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Master Value
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Master_Value_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::OnAudioDeactivated()
+void ABP_IntrepidSky_EnvModify_Outdoors_C::Set_Master_Value(double Master_Value_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "OnAudioDeactivated");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Set Master Value");
+
+	Params::BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value Parms{};
+
+	Parms.Master_Value_0 = Master_Value_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.RevertToWorldDefaults
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_IntrepidSky_EnvModify_Outdoors_C::RevertToWorldDefaults()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "RevertToWorldDefaults");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.PostNodeInit
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Refresh Preview
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::PostNodeInit()
+void ABP_IntrepidSky_EnvModify_Outdoors_C::Refresh_Preview()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "PostNodeInit");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Refresh Preview");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_IntrepidSky_EnvModify_Outdoors_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "ReceiveTick");
+
+	Params::BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_IntrepidSky_EnvModify_Outdoors_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.PreviewModifications
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_IntrepidSky_EnvModify_Outdoors_C::PreviewModifications()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "PreviewModifications");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -143,187 +225,105 @@ void ABP_IntrepidSky_EnvModify_Outdoors_C::PPV_Blend(float Blend_Weight, bool Se
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.PreviewModifications
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.PostNodeInit
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::PreviewModifications()
+void ABP_IntrepidSky_EnvModify_Outdoors_C::PostNodeInit()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "PreviewModifications");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "PostNodeInit");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.OnAudioDeactivated
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::ReceiveBeginPlay()
+void ABP_IntrepidSky_EnvModify_Outdoors_C::OnAudioDeactivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "OnAudioDeactivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.OnAudioActivated
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_IntrepidSky_EnvModify_Outdoors_C::OnAudioActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "OnAudioActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::ReceiveTick(float DeltaSeconds)
+void ABP_IntrepidSky_EnvModify_Outdoors_C::ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors");
 
-	Params::BP_IntrepidSky_EnvModify_Outdoors_C_ReceiveTick Parms{};
+	Params::BP_IntrepidSky_EnvModify_Outdoors_C_ExecuteUbergraph_BP_IntrepidSky_EnvModify_Outdoors Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Refresh Preview
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Editor Compute Blend
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::Refresh_Preview()
+void ABP_IntrepidSky_EnvModify_Outdoors_C::Editor_Compute_Blend()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Refresh Preview");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Editor Compute Blend");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.RevertToWorldDefaults
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Clear Spline Settings In IntrepidSky
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::RevertToWorldDefaults()
+void ABP_IntrepidSky_EnvModify_Outdoors_C::Clear_Spline_Settings_In_IntrepidSky()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "RevertToWorldDefaults");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Clear Spline Settings In IntrepidSky");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Master Value
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Master_Value_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.AllowTrigger
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_IntrepidSky_EnvModify_Outdoors_C::Set_Master_Value(double Master_Value_0)
+void ABP_IntrepidSky_EnvModify_Outdoors_C::AllowTrigger()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Set Master Value");
-
-	Params::BP_IntrepidSky_EnvModify_Outdoors_C_Set_Master_Value Parms{};
-
-	Parms.Master_Value_0 = Master_Value_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Spline Settings In IntrepidSky
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_IntrepidSky_EnvModify_Outdoors_C::Set_Spline_Settings_In_IntrepidSky()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Set Spline Settings In IntrepidSky");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Set Transition Value In IntrepidSky
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_IntrepidSky_EnvModify_Outdoors_C::Set_Transition_Value_In_IntrepidSky(double Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Set Transition Value In IntrepidSky");
-
-	Params::BP_IntrepidSky_EnvModify_Outdoors_C_Set_Transition_Value_In_IntrepidSky Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Start Previewing
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_IntrepidSky_EnvModify_Outdoors_C::Start_Previewing()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Start Previewing");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Stop Previewing
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_IntrepidSky_EnvModify_Outdoors_C::Stop_Previewing()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Stop Previewing");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.Update Blending Editor Time
-// (Private, BlueprintCallable, BlueprintEvent, BlueprintPure)
-
-void ABP_IntrepidSky_EnvModify_Outdoors_C::Update_Blending_Editor_Time()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "Update Blending Editor Time");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_IntrepidSky_EnvModify_Outdoors.BP_IntrepidSky_EnvModify_Outdoors_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_IntrepidSky_EnvModify_Outdoors_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_IntrepidSky_EnvModify_Outdoors_C", "AllowTrigger");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

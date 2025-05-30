@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ElderDragon_Base.ElderDragon_Base_C
-// 0x0010 (0x1DA0 - 0x1D90)
+// 0x0010 (0x1D60 - 0x1D50)
 class AElderDragon_Base_C : public ANPCPawn_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_ElderDragon_Base_C;                 // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          FltingState;                                       // 0x1D98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Fully_Landed;                                      // 0x1D99(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Fully_Airborne;                                    // 0x1D9A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          RotateHead;                                        // 0x1D9B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_ElderDragon_Base_C;                 // 0x1D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          FltingState;                                       // 0x1D58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Fully_Landed;                                      // 0x1D59(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Fully_Airborne;                                    // 0x1D5A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RotateHead;                                        // 0x1D5B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ElderDragon_Base(int32 EntryPoint);
@@ -48,12 +48,12 @@ public:
 	}
 };
 static_assert(alignof(AElderDragon_Base_C) == 0x000010, "Wrong alignment on AElderDragon_Base_C");
-static_assert(sizeof(AElderDragon_Base_C) == 0x001DA0, "Wrong size on AElderDragon_Base_C");
-static_assert(offsetof(AElderDragon_Base_C, UberGraphFrame_ElderDragon_Base_C) == 0x001D90, "Member 'AElderDragon_Base_C::UberGraphFrame_ElderDragon_Base_C' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Base_C, FltingState) == 0x001D98, "Member 'AElderDragon_Base_C::FltingState' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Base_C, Fully_Landed) == 0x001D99, "Member 'AElderDragon_Base_C::Fully_Landed' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Base_C, Fully_Airborne) == 0x001D9A, "Member 'AElderDragon_Base_C::Fully_Airborne' has a wrong offset!");
-static_assert(offsetof(AElderDragon_Base_C, RotateHead) == 0x001D9B, "Member 'AElderDragon_Base_C::RotateHead' has a wrong offset!");
+static_assert(sizeof(AElderDragon_Base_C) == 0x001D60, "Wrong size on AElderDragon_Base_C");
+static_assert(offsetof(AElderDragon_Base_C, UberGraphFrame_ElderDragon_Base_C) == 0x001D50, "Member 'AElderDragon_Base_C::UberGraphFrame_ElderDragon_Base_C' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Base_C, FltingState) == 0x001D58, "Member 'AElderDragon_Base_C::FltingState' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Base_C, Fully_Landed) == 0x001D59, "Member 'AElderDragon_Base_C::Fully_Landed' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Base_C, Fully_Airborne) == 0x001D5A, "Member 'AElderDragon_Base_C::Fully_Airborne' has a wrong offset!");
+static_assert(offsetof(AElderDragon_Base_C, RotateHead) == 0x001D5B, "Member 'AElderDragon_Base_C::RotateHead' has a wrong offset!");
 
 }
 

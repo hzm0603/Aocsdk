@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Ocular_AncientSummon.Ocular_AncientSummon_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class AOcular_AncientSummon_C final : public AOcular_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AOcular_AncientSummon_C) == 0x000010, "Wrong alignment on AOcular_AncientSummon_C");
-static_assert(sizeof(AOcular_AncientSummon_C) == 0x001DA0, "Wrong size on AOcular_AncientSummon_C");
+static_assert(sizeof(AOcular_AncientSummon_C) == 0x001D60, "Wrong size on AOcular_AncientSummon_C");
 
 }
 

@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_InventorySlot.WBP_InventorySlot_C
-// 0x0008 (0x03B0 - 0x03A8)
+// 0x0008 (0x0500 - 0x04F8)
 class UWBP_InventorySlot_C final : public UInventorySlotBase
 {
 public:
-	class UMenuAnchor*                            SplitStackAnchor;                                  // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuAnchor*                            SplitStackAnchor;                                  // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_InventorySlot_C) == 0x000008, "Wrong alignment on UWBP_InventorySlot_C");
-static_assert(sizeof(UWBP_InventorySlot_C) == 0x0003B0, "Wrong size on UWBP_InventorySlot_C");
-static_assert(offsetof(UWBP_InventorySlot_C, SplitStackAnchor) == 0x0003A8, "Member 'UWBP_InventorySlot_C::SplitStackAnchor' has a wrong offset!");
+static_assert(sizeof(UWBP_InventorySlot_C) == 0x000500, "Wrong size on UWBP_InventorySlot_C");
+static_assert(offsetof(UWBP_InventorySlot_C, SplitStackAnchor) == 0x0004F8, "Member 'UWBP_InventorySlot_C::SplitStackAnchor' has a wrong offset!");
 
 }
 

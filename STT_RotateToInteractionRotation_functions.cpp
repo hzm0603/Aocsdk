@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function STT_RotateToInteractionRotation.STT_RotateToInteractionRotation_C.ExecuteUbergraph_STT_RotateToInteractionRotation
-// (Final, UbergraphFunction, HasDefaults)
+// Function STT_RotateToInteractionRotation.STT_RotateToInteractionRotation_C.ReceiveLatentTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const float                             DeltaTime                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USTT_RotateToInteractionRotation_C::ExecuteUbergraph_STT_RotateToInteractionRotation(int32 EntryPoint)
+void USTT_RotateToInteractionRotation_C::ReceiveLatentTick(const float DeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STT_RotateToInteractionRotation_C", "ExecuteUbergraph_STT_RotateToInteractionRotation");
+		Func = Class->GetFunction("STT_RotateToInteractionRotation_C", "ReceiveLatentTick");
 
-	Params::STT_RotateToInteractionRotation_C_ExecuteUbergraph_STT_RotateToInteractionRotation Parms{};
+	Params::STT_RotateToInteractionRotation_C_ReceiveLatentTick Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.DeltaTime = DeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -57,21 +57,21 @@ void USTT_RotateToInteractionRotation_C::ReceiveLatentEnterState(const struct FS
 }
 
 
-// Function STT_RotateToInteractionRotation.STT_RotateToInteractionRotation_C.ReceiveLatentTick
-// (Event, Public, BlueprintEvent)
+// Function STT_RotateToInteractionRotation.STT_RotateToInteractionRotation_C.ExecuteUbergraph_STT_RotateToInteractionRotation
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const float                             DeltaTime                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USTT_RotateToInteractionRotation_C::ReceiveLatentTick(const float DeltaTime)
+void USTT_RotateToInteractionRotation_C::ExecuteUbergraph_STT_RotateToInteractionRotation(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("STT_RotateToInteractionRotation_C", "ReceiveLatentTick");
+		Func = Class->GetFunction("STT_RotateToInteractionRotation_C", "ExecuteUbergraph_STT_RotateToInteractionRotation");
 
-	Params::STT_RotateToInteractionRotation_C_ReceiveLatentTick Parms{};
+	Params::STT_RotateToInteractionRotation_C_ExecuteUbergraph_STT_RotateToInteractionRotation Parms{};
 
-	Parms.DeltaTime = DeltaTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

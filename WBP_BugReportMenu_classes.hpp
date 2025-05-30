@@ -25,9 +25,9 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void Construct();
-	void ExecuteUbergraph_WBP_BugReportMenu(int32 EntryPoint);
 	void OnInitialized();
+	void ExecuteUbergraph_WBP_BugReportMenu(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

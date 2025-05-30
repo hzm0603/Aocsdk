@@ -18,27 +18,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_BuckFloatingText.WBP_BuckFloatingText_C
-// 0x0058 (0x03D0 - 0x0378)
+// 0x0050 (0x03C8 - 0x0378)
 class UWBP_BuckFloatingText_C final : public UBuckFloatingTextWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       MoveLeft;                                          // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       MoveRight;                                         // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SpawnCrit;                                         // 0x0390(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Spawn;                                             // 0x0398(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             FloatingText;                                      // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class AActor*                                 Owner;                                             // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        Value;                                             // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         StatModGuid;                                       // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Text;                                              // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SpawnCrit;                                         // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Spawn;                                             // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             FloatingText;                                      // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FloatingTextIcon;                                  // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AActor*                                 Owner;                                             // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         StatModGuid;                                       // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Text;                                              // 0x03B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void Construct();
 	void ExecuteUbergraph_WBP_BuckFloatingText(int32 EntryPoint);
-	void GetFloaterBaseOffset(class AActor* Owner_0, bool isText, bool Hitting, bool IsHealing, struct FVector* Offset_0);
-	void SetFloater(class AActor* Owner_0, bool isCrit, bool isMiss, bool isBlock, int64 StatModGuid_0, double Value_0, double RawValue, int64 SourceRecordType, bool hitting_OtherwiseGettingHit_, int64 statGuid, const class FString& Str);
-	void SetFloaterVisuals(bool Hitting, bool isCrit, int64 statGuid, double Value_0, double dynamicSizeMult, bool isText, const struct FLinearColor& colorIfText);
+	void GetFloaterBaseOffset(class AActor* Owner_0, bool isText, bool hitting, bool IsHealing, bool resist, struct FVector* Offset_0);
+	void SetFloater(class AActor* Owner_0, bool isCrit, bool isMiss, bool isBlock, bool isResist, bool isImmune, int64 StatModGuid_0, double Value_0, double RawValue, int64 SourceRecordType, bool hitting_OtherwiseGettingHit_, int64 statGuid, const class FString& Str, bool weaponHit, bool isPhysical, bool isMagical);
+	void SetFloaterVisuals(bool hitting, bool isCrit, int64 statGuid, double Value_0, double SizeMult, bool isText, bool ColorOverride, const struct FLinearColor& OverrideColor, bool weaponHit, bool isPhysical, bool isMagical);
 
 public:
 	static class UClass* StaticClass()
@@ -51,17 +50,16 @@ public:
 	}
 };
 static_assert(alignof(UWBP_BuckFloatingText_C) == 0x000008, "Wrong alignment on UWBP_BuckFloatingText_C");
-static_assert(sizeof(UWBP_BuckFloatingText_C) == 0x0003D0, "Wrong size on UWBP_BuckFloatingText_C");
+static_assert(sizeof(UWBP_BuckFloatingText_C) == 0x0003C8, "Wrong size on UWBP_BuckFloatingText_C");
 static_assert(offsetof(UWBP_BuckFloatingText_C, UberGraphFrame) == 0x000378, "Member 'UWBP_BuckFloatingText_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_BuckFloatingText_C, MoveLeft) == 0x000380, "Member 'UWBP_BuckFloatingText_C::MoveLeft' has a wrong offset!");
-static_assert(offsetof(UWBP_BuckFloatingText_C, MoveRight) == 0x000388, "Member 'UWBP_BuckFloatingText_C::MoveRight' has a wrong offset!");
-static_assert(offsetof(UWBP_BuckFloatingText_C, SpawnCrit) == 0x000390, "Member 'UWBP_BuckFloatingText_C::SpawnCrit' has a wrong offset!");
-static_assert(offsetof(UWBP_BuckFloatingText_C, Spawn) == 0x000398, "Member 'UWBP_BuckFloatingText_C::Spawn' has a wrong offset!");
-static_assert(offsetof(UWBP_BuckFloatingText_C, FloatingText) == 0x0003A0, "Member 'UWBP_BuckFloatingText_C::FloatingText' has a wrong offset!");
-static_assert(offsetof(UWBP_BuckFloatingText_C, Owner) == 0x0003A8, "Member 'UWBP_BuckFloatingText_C::Owner' has a wrong offset!");
-static_assert(offsetof(UWBP_BuckFloatingText_C, Value) == 0x0003B0, "Member 'UWBP_BuckFloatingText_C::Value' has a wrong offset!");
-static_assert(offsetof(UWBP_BuckFloatingText_C, StatModGuid) == 0x0003B8, "Member 'UWBP_BuckFloatingText_C::StatModGuid' has a wrong offset!");
-static_assert(offsetof(UWBP_BuckFloatingText_C, Text) == 0x0003C0, "Member 'UWBP_BuckFloatingText_C::Text' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingText_C, SpawnCrit) == 0x000380, "Member 'UWBP_BuckFloatingText_C::SpawnCrit' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingText_C, Spawn) == 0x000388, "Member 'UWBP_BuckFloatingText_C::Spawn' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingText_C, FloatingText) == 0x000390, "Member 'UWBP_BuckFloatingText_C::FloatingText' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingText_C, FloatingTextIcon) == 0x000398, "Member 'UWBP_BuckFloatingText_C::FloatingTextIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingText_C, Owner) == 0x0003A0, "Member 'UWBP_BuckFloatingText_C::Owner' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingText_C, Value) == 0x0003A8, "Member 'UWBP_BuckFloatingText_C::Value' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingText_C, StatModGuid) == 0x0003B0, "Member 'UWBP_BuckFloatingText_C::StatModGuid' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingText_C, Text) == 0x0003B8, "Member 'UWBP_BuckFloatingText_C::Text' has a wrong offset!");
 
 }
 

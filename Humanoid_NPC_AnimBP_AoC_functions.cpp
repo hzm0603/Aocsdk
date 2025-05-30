@@ -150,6 +150,26 @@ void UHumanoid_NPC_AnimBP_AoC_C::BasePoses(struct FPoseLink* BasePoses_0)
 }
 
 
+// Function Humanoid_NPC_AnimBP_AoC.Humanoid_NPC_AnimBP_AoC_C.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UHumanoid_NPC_AnimBP_AoC_C::BlueprintUpdateAnimation(float DeltaTimeX)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Humanoid_NPC_AnimBP_AoC_C", "BlueprintUpdateAnimation");
+
+	Params::Humanoid_NPC_AnimBP_AoC_C_BlueprintUpdateAnimation Parms{};
+
+	Parms.DeltaTimeX = DeltaTimeX;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Humanoid_NPC_AnimBP_AoC.Humanoid_NPC_AnimBP_AoC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Humanoid_NPC_AnimBP_AoC_AnimGraphNode_ApplyAdditive_A9CD2BFB47423DAF305F7EB6D287294A
 // (BlueprintEvent)
 

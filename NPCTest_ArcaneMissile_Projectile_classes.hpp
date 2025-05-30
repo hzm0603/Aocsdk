@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass NPCTest_ArcaneMissile_Projectile.NPCTest_ArcaneMissile_Projectile_C
-// 0x0000 (0x0590 - 0x0590)
+// 0x0000 (0x0598 - 0x0598)
 class ANPCTest_ArcaneMissile_Projectile_C final : public AAoCAbilityProjectile
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ANPCTest_ArcaneMissile_Projectile_C) == 0x000008, "Wrong alignment on ANPCTest_ArcaneMissile_Projectile_C");
-static_assert(sizeof(ANPCTest_ArcaneMissile_Projectile_C) == 0x000590, "Wrong size on ANPCTest_ArcaneMissile_Projectile_C");
+static_assert(sizeof(ANPCTest_ArcaneMissile_Projectile_C) == 0x000598, "Wrong size on ANPCTest_ArcaneMissile_Projectile_C");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Captain_Avenmoor.Captain_Avenmoor_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class ACaptain_Avenmoor_C final : public AHumanoidMonsterMaster_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ACaptain_Avenmoor_C) == 0x000010, "Wrong alignment on ACaptain_Avenmoor_C");
-static_assert(sizeof(ACaptain_Avenmoor_C) == 0x001DA0, "Wrong size on ACaptain_Avenmoor_C");
+static_assert(sizeof(ACaptain_Avenmoor_C) == 0x001D60, "Wrong size on ACaptain_Avenmoor_C");
 
 }
 

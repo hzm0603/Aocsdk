@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WBP_WorldMap.WBP_WorldMap_C.UpdateDebugText
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_WorldMap_C::UpdateDebugText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_WorldMap_C", "UpdateDebugText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_WorldMap.WBP_WorldMap_C.ExecuteUbergraph_WBP_WorldMap
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void UWBP_WorldMap_C::ExecuteUbergraph_WBP_WorldMap(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_WorldMap.WBP_WorldMap_C.UpdateDebugText
-// (Event, Protected, BlueprintEvent)
-
-void UWBP_WorldMap_C::UpdateDebugText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_WorldMap_C", "UpdateDebugText");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

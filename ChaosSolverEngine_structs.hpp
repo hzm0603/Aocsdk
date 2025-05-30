@@ -30,21 +30,6 @@ enum class EClusterConnectionTypeEnum : uint8
 	Chaos_MAX                                = 7,
 };
 
-// ScriptStruct ChaosSolverEngine.ChaosDebugSubstepControl
-// 0x0003 (0x0003 - 0x0000)
-struct FChaosDebugSubstepControl final
-{
-public:
-	bool                                          bPause;                                            // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSubstep;                                          // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStep;                                             // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FChaosDebugSubstepControl) == 0x000001, "Wrong alignment on FChaosDebugSubstepControl");
-static_assert(sizeof(FChaosDebugSubstepControl) == 0x000003, "Wrong size on FChaosDebugSubstepControl");
-static_assert(offsetof(FChaosDebugSubstepControl, bPause) == 0x000000, "Member 'FChaosDebugSubstepControl::bPause' has a wrong offset!");
-static_assert(offsetof(FChaosDebugSubstepControl, bSubstep) == 0x000001, "Member 'FChaosDebugSubstepControl::bSubstep' has a wrong offset!");
-static_assert(offsetof(FChaosDebugSubstepControl, bStep) == 0x000002, "Member 'FChaosDebugSubstepControl::bStep' has a wrong offset!");
-
 // ScriptStruct ChaosSolverEngine.ChaosPhysicsCollisionInfo
 // 0x00C0 (0x00C0 - 0x0000)
 struct FChaosPhysicsCollisionInfo final
@@ -117,6 +102,21 @@ public:
 static_assert(alignof(FChaosHandlerSet) == 0x000008, "Wrong alignment on FChaosHandlerSet");
 static_assert(sizeof(FChaosHandlerSet) == 0x000058, "Wrong size on FChaosHandlerSet");
 static_assert(offsetof(FChaosHandlerSet, ChaosHandlers) == 0x000008, "Member 'FChaosHandlerSet::ChaosHandlers' has a wrong offset!");
+
+// ScriptStruct ChaosSolverEngine.ChaosDebugSubstepControl
+// 0x0003 (0x0003 - 0x0000)
+struct FChaosDebugSubstepControl final
+{
+public:
+	bool                                          bPause;                                            // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSubstep;                                          // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStep;                                             // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FChaosDebugSubstepControl) == 0x000001, "Wrong alignment on FChaosDebugSubstepControl");
+static_assert(sizeof(FChaosDebugSubstepControl) == 0x000003, "Wrong size on FChaosDebugSubstepControl");
+static_assert(offsetof(FChaosDebugSubstepControl, bPause) == 0x000000, "Member 'FChaosDebugSubstepControl::bPause' has a wrong offset!");
+static_assert(offsetof(FChaosDebugSubstepControl, bSubstep) == 0x000001, "Member 'FChaosDebugSubstepControl::bSubstep' has a wrong offset!");
+static_assert(offsetof(FChaosDebugSubstepControl, bStep) == 0x000002, "Member 'FChaosDebugSubstepControl::bStep' has a wrong offset!");
 
 }
 

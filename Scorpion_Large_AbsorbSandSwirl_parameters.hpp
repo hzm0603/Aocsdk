@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function Scorpion_Large_AbsorbSandSwirl.Scorpion_Large_AbsorbSandSwirl_C.RunScript
-// 0x0AD8 (0x0AD8 - 0x0000)
+// 0x0AE0 (0x0AE0 - 0x0000)
 struct Scorpion_Large_AbsorbSandSwirl_C_RunScript final
 {
 public:
@@ -29,16 +29,16 @@ public:
 	struct FScriptTriggerInfo                     TriggerInfo;                                       // 0x0048(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	int32                                         ReturnValue;                                       // 0x0060(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAbilityHitRecord                      CallFunc_GetHitRecordById_ReturnValue;             // 0x0068(0x0A28)(ConstParm)
-	class AScorpion_Giant_C*                      K2Node_DynamicCast_AsScorpion_Giant;               // 0x0A90(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0A98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A99[0x7];                                      // 0x0A99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0AA0(0x0010)(ConstParm, ReferenceParm)
-	struct FHitHistory                            CallFunc_TriggerHitOnActors_HitHistory;            // 0x0AB0(0x0018)(ContainsInstancedReference)
-	TArray<struct FHitInst>                       CallFunc_TriggerHitOnActors_ReturnValue;           // 0x0AC8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	struct FAbilityHitRecord                      CallFunc_GetHitRecordById_ReturnValue;             // 0x0068(0x0A30)(ConstParm)
+	class AScorpion_Giant_C*                      K2Node_DynamicCast_AsScorpion_Giant;               // 0x0A98(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0AA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AA1[0x7];                                      // 0x0AA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0AA8(0x0010)(ConstParm, ReferenceParm)
+	struct FHitHistory                            CallFunc_TriggerHitOnActors_HitHistory;            // 0x0AB8(0x0018)(ContainsInstancedReference)
+	TArray<struct FHitInst>                       CallFunc_TriggerHitOnActors_ReturnValue;           // 0x0AD0(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
 static_assert(alignof(Scorpion_Large_AbsorbSandSwirl_C_RunScript) == 0x000008, "Wrong alignment on Scorpion_Large_AbsorbSandSwirl_C_RunScript");
-static_assert(sizeof(Scorpion_Large_AbsorbSandSwirl_C_RunScript) == 0x000AD8, "Wrong size on Scorpion_Large_AbsorbSandSwirl_C_RunScript");
+static_assert(sizeof(Scorpion_Large_AbsorbSandSwirl_C_RunScript) == 0x000AE0, "Wrong size on Scorpion_Large_AbsorbSandSwirl_C_RunScript");
 static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, Target) == 0x000000, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::Target' has a wrong offset!");
 static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, Instigator) == 0x000010, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::Instigator' has a wrong offset!");
 static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, Source) == 0x000020, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::Source' has a wrong offset!");
@@ -46,11 +46,11 @@ static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, AttackOrigin)
 static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, TriggerInfo) == 0x000048, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::TriggerInfo' has a wrong offset!");
 static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, ReturnValue) == 0x000060, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::ReturnValue' has a wrong offset!");
 static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, CallFunc_GetHitRecordById_ReturnValue) == 0x000068, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::CallFunc_GetHitRecordById_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, K2Node_DynamicCast_AsScorpion_Giant) == 0x000A90, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::K2Node_DynamicCast_AsScorpion_Giant' has a wrong offset!");
-static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, K2Node_DynamicCast_bSuccess) == 0x000A98, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, K2Node_MakeArray_Array) == 0x000AA0, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, CallFunc_TriggerHitOnActors_HitHistory) == 0x000AB0, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::CallFunc_TriggerHitOnActors_HitHistory' has a wrong offset!");
-static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, CallFunc_TriggerHitOnActors_ReturnValue) == 0x000AC8, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::CallFunc_TriggerHitOnActors_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, K2Node_DynamicCast_AsScorpion_Giant) == 0x000A98, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::K2Node_DynamicCast_AsScorpion_Giant' has a wrong offset!");
+static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, K2Node_DynamicCast_bSuccess) == 0x000AA0, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, K2Node_MakeArray_Array) == 0x000AA8, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, CallFunc_TriggerHitOnActors_HitHistory) == 0x000AB8, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::CallFunc_TriggerHitOnActors_HitHistory' has a wrong offset!");
+static_assert(offsetof(Scorpion_Large_AbsorbSandSwirl_C_RunScript, CallFunc_TriggerHitOnActors_ReturnValue) == 0x000AD0, "Member 'Scorpion_Large_AbsorbSandSwirl_C_RunScript::CallFunc_TriggerHitOnActors_ReturnValue' has a wrong offset!");
 
 }
 

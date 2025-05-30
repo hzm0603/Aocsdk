@@ -17,33 +17,16 @@
 namespace SDK::Params
 {
 
-// Function STT_GetInteractionMontageSoftObjectPath.STT_GetInteractionMontageSoftObjectPath_C.ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath
-// 0x0080 (0x0080 - 0x0000)
-struct STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath final
+// Function STT_GetInteractionMontageSoftObjectPath.STT_GetInteractionMontageSoftObjectPath_C.ReceiveLatentEnterState
+// 0x002E (0x002E - 0x0000)
+struct STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ANPCCharacter*                          K2Node_DynamicCast_AsNPCCharacter;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           CallFunc_Map_Keys_Keys;                            // 0x0018(0x0010)(ReferenceParm)
-	class FName                                   CallFunc_KeyNameContainsMatch_SelectedName;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSoftObjectPath                        CallFunc_Map_Find_Value;                           // 0x0030(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x1];                                       // 0x0051(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStateTreeTransitionResult             K2Node_Event_Transition;                           // 0x0052(0x002E)(ConstParm, NoDestructor)
+	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 };
-static_assert(alignof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath) == 0x000008, "Wrong alignment on STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath");
-static_assert(sizeof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath) == 0x000080, "Wrong size on STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath");
-static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, EntryPoint) == 0x000000, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::EntryPoint' has a wrong offset!");
-static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, K2Node_DynamicCast_AsNPCCharacter) == 0x000008, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::K2Node_DynamicCast_AsNPCCharacter' has a wrong offset!");
-static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, CallFunc_Map_Keys_Keys) == 0x000018, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, CallFunc_KeyNameContainsMatch_SelectedName) == 0x000028, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::CallFunc_KeyNameContainsMatch_SelectedName' has a wrong offset!");
-static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, CallFunc_Map_Find_Value) == 0x000030, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, CallFunc_Map_Find_ReturnValue) == 0x000050, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, K2Node_Event_Transition) == 0x000052, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::K2Node_Event_Transition' has a wrong offset!");
+static_assert(alignof(STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState");
+static_assert(sizeof(STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState");
+static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
 
 // Function STT_GetInteractionMontageSoftObjectPath.STT_GetInteractionMontageSoftObjectPath_C.KeyNameContainsMatch
 // 0x0088 (0x0088 - 0x0000)
@@ -89,16 +72,33 @@ static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_KeyNameContains
 static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_KeyNameContainsMatch, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000070, "Member 'STT_GetInteractionMontageSoftObjectPath_C_KeyNameContainsMatch::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_KeyNameContainsMatch, CallFunc_Contains_ReturnValue) == 0x000080, "Member 'STT_GetInteractionMontageSoftObjectPath_C_KeyNameContainsMatch::CallFunc_Contains_ReturnValue' has a wrong offset!");
 
-// Function STT_GetInteractionMontageSoftObjectPath.STT_GetInteractionMontageSoftObjectPath_C.ReceiveLatentEnterState
-// 0x002E (0x002E - 0x0000)
-struct STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState final
+// Function STT_GetInteractionMontageSoftObjectPath.STT_GetInteractionMontageSoftObjectPath_C.ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath
+// 0x0080 (0x0080 - 0x0000)
+struct STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath final
 {
 public:
-	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ANPCCharacter*                          K2Node_DynamicCast_AsNPCCharacter;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           CallFunc_Map_Keys_Keys;                            // 0x0018(0x0010)(ReferenceParm)
+	class FName                                   CallFunc_KeyNameContainsMatch_SelectedName;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSoftObjectPath                        CallFunc_Map_Find_Value;                           // 0x0030(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x1];                                       // 0x0051(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStateTreeTransitionResult             K2Node_Event_Transition;                           // 0x0052(0x002E)(ConstParm, NoDestructor)
 };
-static_assert(alignof(STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState");
-static_assert(sizeof(STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState");
-static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
+static_assert(alignof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath) == 0x000008, "Wrong alignment on STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath");
+static_assert(sizeof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath) == 0x000080, "Wrong size on STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath");
+static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, EntryPoint) == 0x000000, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::EntryPoint' has a wrong offset!");
+static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, K2Node_DynamicCast_AsNPCCharacter) == 0x000008, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::K2Node_DynamicCast_AsNPCCharacter' has a wrong offset!");
+static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, CallFunc_Map_Keys_Keys) == 0x000018, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, CallFunc_KeyNameContainsMatch_SelectedName) == 0x000028, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::CallFunc_KeyNameContainsMatch_SelectedName' has a wrong offset!");
+static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, CallFunc_Map_Find_Value) == 0x000030, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, CallFunc_Map_Find_ReturnValue) == 0x000050, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath, K2Node_Event_Transition) == 0x000052, "Member 'STT_GetInteractionMontageSoftObjectPath_C_ExecuteUbergraph_STT_GetInteractionMontageSoftObjectPath::K2Node_Event_Transition' has a wrong offset!");
 
 }
 

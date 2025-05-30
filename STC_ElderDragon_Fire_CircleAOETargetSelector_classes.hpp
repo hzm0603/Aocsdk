@@ -29,9 +29,9 @@ public:
 	class FName                                   BB_Storage;                                        // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool ReceiveTestCondition() const;
-	void Score_Individual_Target(class ABaseCharacter* TargetToScore, const struct FVector& ImpactLocation, double* Score) const;
 	void Score_Target(class ABaseCharacter* Target_To_Score, double* Score) const;
+	void Score_Individual_Target(class ABaseCharacter* TargetToScore, const struct FVector& ImpactLocation, double* Score) const;
+	bool ReceiveTestCondition() const;
 
 public:
 	static class UClass* StaticClass()

@@ -27,8 +27,8 @@ public:
 	class UAoCCommonTextBlock*                    TB_FuelValueLabel;                                 // 0x1728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	class UCommonBorder* GetBorder();
 	class UAoCCommonButtonBase* GetButton();
+	class UCommonBorder* GetBorder();
 
 public:
 	static class UClass* StaticClass()

@@ -28,8 +28,8 @@ public:
 	class UWBP_ListItem_C*                        WBP_ListItem_3;                                    // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	class UWidget* GetBreadcrumbWidget();
 	class UAoCCommonButtonBase* GetButton();
+	class UWidget* GetBreadcrumbWidget();
 
 public:
 	static class UClass* StaticClass()

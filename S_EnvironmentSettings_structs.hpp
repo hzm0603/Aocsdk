@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "S_ColorGradingSettings_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SStartStopAudioEvents_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "S_ColorGradingSettings_structs.hpp"
 
 
 namespace SDK

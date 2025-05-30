@@ -21,8 +21,8 @@ namespace SDK::Params
 struct AgonesComponent_Allocate final
 {
 public:
-	TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate;                          // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_Allocate) == 0x000004, "Wrong alignment on AgonesComponent_Allocate");
 static_assert(sizeof(AgonesComponent_Allocate) == 0x000020, "Wrong size on AgonesComponent_Allocate");
@@ -45,8 +45,8 @@ static_assert(offsetof(AgonesComponent_ConnectSuccess, GameServerResponse) == 0x
 struct AgonesComponent_GameServer final
 {
 public:
-	TDelegate<void(struct FGameServerResponse& Response)> SuccessDelegate;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FGameServerResponse& Response)> SuccessDelegate;                     // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_GameServer) == 0x000004, "Wrong alignment on AgonesComponent_GameServer");
 static_assert(sizeof(AgonesComponent_GameServer) == 0x000020, "Wrong size on AgonesComponent_GameServer");
@@ -58,8 +58,8 @@ static_assert(offsetof(AgonesComponent_GameServer, ErrorDelegate) == 0x000010, "
 struct AgonesComponent_GetConnectedPlayers final
 {
 public:
-	TDelegate<void(struct FConnectedPlayersResponse& Response)> SuccessDelegate;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FConnectedPlayersResponse& Response)> SuccessDelegate;               // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_GetConnectedPlayers) == 0x000004, "Wrong alignment on AgonesComponent_GetConnectedPlayers");
 static_assert(sizeof(AgonesComponent_GetConnectedPlayers) == 0x000020, "Wrong size on AgonesComponent_GetConnectedPlayers");
@@ -71,8 +71,8 @@ static_assert(offsetof(AgonesComponent_GetConnectedPlayers, ErrorDelegate) == 0x
 struct AgonesComponent_GetPlayerCapacity final
 {
 public:
-	TDelegate<void(struct FCountResponse& Response)> SuccessDelegate;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FCountResponse& Response)> SuccessDelegate;                          // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_GetPlayerCapacity) == 0x000004, "Wrong alignment on AgonesComponent_GetPlayerCapacity");
 static_assert(sizeof(AgonesComponent_GetPlayerCapacity) == 0x000020, "Wrong size on AgonesComponent_GetPlayerCapacity");
@@ -84,8 +84,8 @@ static_assert(offsetof(AgonesComponent_GetPlayerCapacity, ErrorDelegate) == 0x00
 struct AgonesComponent_GetPlayerCount final
 {
 public:
-	TDelegate<void(struct FCountResponse& Response)> SuccessDelegate;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FCountResponse& Response)> SuccessDelegate;                          // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_GetPlayerCount) == 0x000004, "Wrong alignment on AgonesComponent_GetPlayerCount");
 static_assert(sizeof(AgonesComponent_GetPlayerCount) == 0x000020, "Wrong size on AgonesComponent_GetPlayerCount");
@@ -97,8 +97,8 @@ static_assert(offsetof(AgonesComponent_GetPlayerCount, ErrorDelegate) == 0x00001
 struct AgonesComponent_Health final
 {
 public:
-	TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate;                          // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_Health) == 0x000004, "Wrong alignment on AgonesComponent_Health");
 static_assert(sizeof(AgonesComponent_Health) == 0x000020, "Wrong size on AgonesComponent_Health");
@@ -122,8 +122,8 @@ struct AgonesComponent_IsPlayerConnected final
 {
 public:
 	class FString                                 PlayerId;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FConnectedResponse& Response)> SuccessDelegate;                                   // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FConnectedResponse& Response)> SuccessDelegate;                      // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_IsPlayerConnected) == 0x000008, "Wrong alignment on AgonesComponent_IsPlayerConnected");
 static_assert(sizeof(AgonesComponent_IsPlayerConnected) == 0x000030, "Wrong size on AgonesComponent_IsPlayerConnected");
@@ -137,8 +137,8 @@ struct AgonesComponent_PlayerConnect final
 {
 public:
 	class FString                                 PlayerId;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FConnectedResponse& Response)> SuccessDelegate;                                   // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FConnectedResponse& Response)> SuccessDelegate;                      // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_PlayerConnect) == 0x000008, "Wrong alignment on AgonesComponent_PlayerConnect");
 static_assert(sizeof(AgonesComponent_PlayerConnect) == 0x000030, "Wrong size on AgonesComponent_PlayerConnect");
@@ -152,8 +152,8 @@ struct AgonesComponent_PlayerDisconnect final
 {
 public:
 	class FString                                 PlayerId;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FDisconnectResponse& Response)> SuccessDelegate;                                   // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FDisconnectResponse& Response)> SuccessDelegate;                     // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_PlayerDisconnect) == 0x000008, "Wrong alignment on AgonesComponent_PlayerDisconnect");
 static_assert(sizeof(AgonesComponent_PlayerDisconnect) == 0x000030, "Wrong size on AgonesComponent_PlayerDisconnect");
@@ -166,8 +166,8 @@ static_assert(offsetof(AgonesComponent_PlayerDisconnect, ErrorDelegate) == 0x000
 struct AgonesComponent_Ready final
 {
 public:
-	TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate;                          // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_Ready) == 0x000004, "Wrong alignment on AgonesComponent_Ready");
 static_assert(sizeof(AgonesComponent_Ready) == 0x000020, "Wrong size on AgonesComponent_Ready");
@@ -180,8 +180,8 @@ struct AgonesComponent_Reserve final
 {
 public:
 	int64                                         Seconds;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate;                                   // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate;                          // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0018(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_Reserve) == 0x000008, "Wrong alignment on AgonesComponent_Reserve");
 static_assert(sizeof(AgonesComponent_Reserve) == 0x000028, "Wrong size on AgonesComponent_Reserve");
@@ -196,8 +196,8 @@ struct AgonesComponent_SetAnnotation final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate;                                   // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0030(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate;                          // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0030(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_SetAnnotation) == 0x000008, "Wrong alignment on AgonesComponent_SetAnnotation");
 static_assert(sizeof(AgonesComponent_SetAnnotation) == 0x000040, "Wrong size on AgonesComponent_SetAnnotation");
@@ -213,8 +213,8 @@ struct AgonesComponent_SetLabel final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate;                                   // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0030(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate;                          // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0030(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_SetLabel) == 0x000008, "Wrong alignment on AgonesComponent_SetLabel");
 static_assert(sizeof(AgonesComponent_SetLabel) == 0x000040, "Wrong size on AgonesComponent_SetLabel");
@@ -229,8 +229,8 @@ struct AgonesComponent_SetPlayerCapacity final
 {
 public:
 	int64                                         Count;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate;                                   // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate;                          // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0018(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_SetPlayerCapacity) == 0x000008, "Wrong alignment on AgonesComponent_SetPlayerCapacity");
 static_assert(sizeof(AgonesComponent_SetPlayerCapacity) == 0x000028, "Wrong size on AgonesComponent_SetPlayerCapacity");
@@ -243,8 +243,8 @@ static_assert(offsetof(AgonesComponent_SetPlayerCapacity, ErrorDelegate) == 0x00
 struct AgonesComponent_Shutdown final
 {
 public:
-	TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(struct FAgonesError& Error)>   ErrorDelegate;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FEmptyResponse& Response)> SuccessDelegate;                          // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAgonesError& Error)> ErrorDelegate;                                 // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_Shutdown) == 0x000004, "Wrong alignment on AgonesComponent_Shutdown");
 static_assert(sizeof(AgonesComponent_Shutdown) == 0x000020, "Wrong size on AgonesComponent_Shutdown");
@@ -256,7 +256,7 @@ static_assert(offsetof(AgonesComponent_Shutdown, ErrorDelegate) == 0x000010, "Me
 struct AgonesComponent_WatchGameServer final
 {
 public:
-	TDelegate<void(struct FGameServerResponse& Response)> WatchDelegate;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FGameServerResponse& Response)> WatchDelegate;                       // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AgonesComponent_WatchGameServer) == 0x000004, "Wrong alignment on AgonesComponent_WatchGameServer");
 static_assert(sizeof(AgonesComponent_WatchGameServer) == 0x000010, "Wrong size on AgonesComponent_WatchGameServer");

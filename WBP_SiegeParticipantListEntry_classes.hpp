@@ -17,11 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_SiegeParticipantListEntry.WBP_SiegeParticipantListEntry_C
-// 0x0008 (0x0498 - 0x0490)
+// 0x0010 (0x04C0 - 0x04B0)
 class UWBP_SiegeParticipantListEntry_C final : public USiegeParticipantListEntry
 {
 public:
-	class UCommonBorder*                          B_AlternatingBG;                                   // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          B_AlternatingBG;                                   // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    StatusTextBlock;                                   // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UCommonBorder* GetBorder();
@@ -37,8 +38,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_SiegeParticipantListEntry_C) == 0x000008, "Wrong alignment on UWBP_SiegeParticipantListEntry_C");
-static_assert(sizeof(UWBP_SiegeParticipantListEntry_C) == 0x000498, "Wrong size on UWBP_SiegeParticipantListEntry_C");
-static_assert(offsetof(UWBP_SiegeParticipantListEntry_C, B_AlternatingBG) == 0x000490, "Member 'UWBP_SiegeParticipantListEntry_C::B_AlternatingBG' has a wrong offset!");
+static_assert(sizeof(UWBP_SiegeParticipantListEntry_C) == 0x0004C0, "Wrong size on UWBP_SiegeParticipantListEntry_C");
+static_assert(offsetof(UWBP_SiegeParticipantListEntry_C, B_AlternatingBG) == 0x0004B0, "Member 'UWBP_SiegeParticipantListEntry_C::B_AlternatingBG' has a wrong offset!");
+static_assert(offsetof(UWBP_SiegeParticipantListEntry_C, StatusTextBlock) == 0x0004B8, "Member 'UWBP_SiegeParticipantListEntry_C::StatusTextBlock' has a wrong offset!");
 
 }
 

@@ -17,59 +17,59 @@
 namespace SDK
 {
 
-// Function WBP_JournalAccordion.WBP_JournalAccordion_C.ExecuteUbergraph_WBP_JournalAccordion
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_JournalAccordion.WBP_JournalAccordion_C.Set Story Arc Type Icon
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTexture2D*                       Story_Arc_Type_Icon                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_JournalAccordion_C::ExecuteUbergraph_WBP_JournalAccordion(int32 EntryPoint)
+void UWBP_JournalAccordion_C::Set_Story_Arc_Type_Icon(class UTexture2D* Story_Arc_Type_Icon)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_JournalAccordion_C", "ExecuteUbergraph_WBP_JournalAccordion");
+		Func = Class->GetFunction("WBP_JournalAccordion_C", "Set Story Arc Type Icon");
 
-	Params::WBP_JournalAccordion_C_ExecuteUbergraph_WBP_JournalAccordion Parms{};
+	Params::WBP_JournalAccordion_C_Set_Story_Arc_Type_Icon Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Story_Arc_Type_Icon = Story_Arc_Type_Icon;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_JournalAccordion.WBP_JournalAccordion_C.GetBreadcrumbWidget
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function WBP_JournalAccordion.WBP_JournalAccordion_C.Set Chapter Text
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Chapter_Text                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-class UWidget* UWBP_JournalAccordion_C::GetBreadcrumbWidget()
+void UWBP_JournalAccordion_C::Set_Chapter_Text(const class FText& Chapter_Text)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_JournalAccordion_C", "GetBreadcrumbWidget");
+		Func = Class->GetFunction("WBP_JournalAccordion_C", "Set Chapter Text");
 
-	Params::WBP_JournalAccordion_C_GetBreadcrumbWidget Parms{};
+	Params::WBP_JournalAccordion_C_Set_Chapter_Text Parms{};
+
+	Parms.Chapter_Text = std::move(Chapter_Text);
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function WBP_JournalAccordion.WBP_JournalAccordion_C.GetButtonContainer
+// Function WBP_JournalAccordion.WBP_JournalAccordion_C.GetOddButtonStyle
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// TSubclassOf<class UCommonButtonStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
-class UPanelWidget* UWBP_JournalAccordion_C::GetButtonContainer()
+TSubclassOf<class UCommonButtonStyle> UWBP_JournalAccordion_C::GetOddButtonStyle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_JournalAccordion_C", "GetButtonContainer");
+		Func = Class->GetFunction("WBP_JournalAccordion_C", "GetOddButtonStyle");
 
-	Params::WBP_JournalAccordion_C_GetButtonContainer Parms{};
+	Params::WBP_JournalAccordion_C_GetOddButtonStyle Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -97,19 +97,19 @@ TSubclassOf<class UCommonButtonStyle> UWBP_JournalAccordion_C::GetEvenButtonStyl
 }
 
 
-// Function WBP_JournalAccordion.WBP_JournalAccordion_C.GetOddButtonStyle
+// Function WBP_JournalAccordion.WBP_JournalAccordion_C.GetButtonContainer
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TSubclassOf<class UCommonButtonStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-TSubclassOf<class UCommonButtonStyle> UWBP_JournalAccordion_C::GetOddButtonStyle()
+class UPanelWidget* UWBP_JournalAccordion_C::GetButtonContainer()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_JournalAccordion_C", "GetOddButtonStyle");
+		Func = Class->GetFunction("WBP_JournalAccordion_C", "GetButtonContainer");
 
-	Params::WBP_JournalAccordion_C_GetOddButtonStyle Parms{};
+	Params::WBP_JournalAccordion_C_GetButtonContainer Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -117,41 +117,41 @@ TSubclassOf<class UCommonButtonStyle> UWBP_JournalAccordion_C::GetOddButtonStyle
 }
 
 
-// Function WBP_JournalAccordion.WBP_JournalAccordion_C.Set Chapter Text
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_JournalAccordion.WBP_JournalAccordion_C.GetBreadcrumbWidget
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FText&                      Chapter_Text                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_JournalAccordion_C::Set_Chapter_Text(const class FText& Chapter_Text)
+class UWidget* UWBP_JournalAccordion_C::GetBreadcrumbWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_JournalAccordion_C", "Set Chapter Text");
+		Func = Class->GetFunction("WBP_JournalAccordion_C", "GetBreadcrumbWidget");
 
-	Params::WBP_JournalAccordion_C_Set_Chapter_Text Parms{};
-
-	Parms.Chapter_Text = std::move(Chapter_Text);
+	Params::WBP_JournalAccordion_C_GetBreadcrumbWidget Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
-// Function WBP_JournalAccordion.WBP_JournalAccordion_C.Set Story Arc Type Icon
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_JournalAccordion.WBP_JournalAccordion_C.ExecuteUbergraph_WBP_JournalAccordion
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UTexture2D*                       Story_Arc_Type_Icon                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_JournalAccordion_C::Set_Story_Arc_Type_Icon(class UTexture2D* Story_Arc_Type_Icon)
+void UWBP_JournalAccordion_C::ExecuteUbergraph_WBP_JournalAccordion(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_JournalAccordion_C", "Set Story Arc Type Icon");
+		Func = Class->GetFunction("WBP_JournalAccordion_C", "ExecuteUbergraph_WBP_JournalAccordion");
 
-	Params::WBP_JournalAccordion_C_Set_Story_Arc_Type_Icon Parms{};
+	Params::WBP_JournalAccordion_C_ExecuteUbergraph_WBP_JournalAccordion Parms{};
 
-	Parms.Story_Arc_Type_Icon = Story_Arc_Type_Icon;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,35 +17,35 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_DeclareWarModal.WBP_DeclareWarModal_C
-// 0x00C8 (0x0660 - 0x0598)
+// 0x00C8 (0x0690 - 0x05C8)
 class UWBP_DeclareWarModal_C final : public UDeclareWarModal
 {
 public:
-	class UAoCCommonTextBlock*                    AlertMessageTextBlock;                             // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    Phase2TextBlock;                                   // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    Phase3TextBlock;                                   // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    Phase4TextBlock;                                   // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    Phase5TextBlock;                                   // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_VerticalSeparator;                              // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_WarDurationLabel;                               // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    Title;                                             // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           WarDetailsContents;                                // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           WarTypeContents;                                   // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WarTypeScrollList;                                 // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_NodeWarCharge_C*                   WBP_NodeWarCharge;                                 // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_NodeWarCharge_C*                   WBP_NodeWarCharge_1;                               // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_NodeWarCharge_C*                   WBP_NodeWarCharge_2;                               // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarRuleItem_C*                     WBP_WarRuleItem;                                   // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarRuleItem_C*                     WBP_WarRuleItem_1;                                 // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarRuleItem_C*                     WBP_WarRuleItem_2;                                 // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem;                                   // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_1;                                 // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_2;                                 // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_3;                                 // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_4;                                 // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_5;                                 // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_6;                                 // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_7;                                 // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    AlertMessageTextBlock;                             // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    Phase2TextBlock;                                   // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    Phase3TextBlock;                                   // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    Phase4TextBlock;                                   // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    Phase5TextBlock;                                   // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_VerticalSeparator;                              // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_WarDurationLabel;                               // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    Title;                                             // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           WarDetailsContents;                                // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           WarTypeContents;                                   // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   WarTypeScrollList;                                 // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_NodeWarCharge_C*                   WBP_NodeWarCharge;                                 // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_NodeWarCharge_C*                   WBP_NodeWarCharge_1;                               // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_NodeWarCharge_C*                   WBP_NodeWarCharge_2;                               // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarRuleItem_C*                     WBP_WarRuleItem;                                   // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarRuleItem_C*                     WBP_WarRuleItem_1;                                 // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarRuleItem_C*                     WBP_WarRuleItem_2;                                 // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem;                                   // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_1;                                 // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_2;                                 // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_3;                                 // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_4;                                 // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_5;                                 // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_6;                                 // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_WarTypeItem_C*                     WBP_WarTypeItem_7;                                 // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -58,32 +58,32 @@ public:
 	}
 };
 static_assert(alignof(UWBP_DeclareWarModal_C) == 0x000008, "Wrong alignment on UWBP_DeclareWarModal_C");
-static_assert(sizeof(UWBP_DeclareWarModal_C) == 0x000660, "Wrong size on UWBP_DeclareWarModal_C");
-static_assert(offsetof(UWBP_DeclareWarModal_C, AlertMessageTextBlock) == 0x000598, "Member 'UWBP_DeclareWarModal_C::AlertMessageTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, Phase2TextBlock) == 0x0005A0, "Member 'UWBP_DeclareWarModal_C::Phase2TextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, Phase3TextBlock) == 0x0005A8, "Member 'UWBP_DeclareWarModal_C::Phase3TextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, Phase4TextBlock) == 0x0005B0, "Member 'UWBP_DeclareWarModal_C::Phase4TextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, Phase5TextBlock) == 0x0005B8, "Member 'UWBP_DeclareWarModal_C::Phase5TextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, TB_VerticalSeparator) == 0x0005C0, "Member 'UWBP_DeclareWarModal_C::TB_VerticalSeparator' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, TB_WarDurationLabel) == 0x0005C8, "Member 'UWBP_DeclareWarModal_C::TB_WarDurationLabel' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, Title) == 0x0005D0, "Member 'UWBP_DeclareWarModal_C::Title' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WarDetailsContents) == 0x0005D8, "Member 'UWBP_DeclareWarModal_C::WarDetailsContents' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WarTypeContents) == 0x0005E0, "Member 'UWBP_DeclareWarModal_C::WarTypeContents' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WarTypeScrollList) == 0x0005E8, "Member 'UWBP_DeclareWarModal_C::WarTypeScrollList' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_NodeWarCharge) == 0x0005F0, "Member 'UWBP_DeclareWarModal_C::WBP_NodeWarCharge' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_NodeWarCharge_1) == 0x0005F8, "Member 'UWBP_DeclareWarModal_C::WBP_NodeWarCharge_1' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_NodeWarCharge_2) == 0x000600, "Member 'UWBP_DeclareWarModal_C::WBP_NodeWarCharge_2' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarRuleItem) == 0x000608, "Member 'UWBP_DeclareWarModal_C::WBP_WarRuleItem' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarRuleItem_1) == 0x000610, "Member 'UWBP_DeclareWarModal_C::WBP_WarRuleItem_1' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarRuleItem_2) == 0x000618, "Member 'UWBP_DeclareWarModal_C::WBP_WarRuleItem_2' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem) == 0x000620, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_1) == 0x000628, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_1' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_2) == 0x000630, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_2' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_3) == 0x000638, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_3' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_4) == 0x000640, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_4' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_5) == 0x000648, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_5' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_6) == 0x000650, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_6' has a wrong offset!");
-static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_7) == 0x000658, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_7' has a wrong offset!");
+static_assert(sizeof(UWBP_DeclareWarModal_C) == 0x000690, "Wrong size on UWBP_DeclareWarModal_C");
+static_assert(offsetof(UWBP_DeclareWarModal_C, AlertMessageTextBlock) == 0x0005C8, "Member 'UWBP_DeclareWarModal_C::AlertMessageTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, Phase2TextBlock) == 0x0005D0, "Member 'UWBP_DeclareWarModal_C::Phase2TextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, Phase3TextBlock) == 0x0005D8, "Member 'UWBP_DeclareWarModal_C::Phase3TextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, Phase4TextBlock) == 0x0005E0, "Member 'UWBP_DeclareWarModal_C::Phase4TextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, Phase5TextBlock) == 0x0005E8, "Member 'UWBP_DeclareWarModal_C::Phase5TextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, TB_VerticalSeparator) == 0x0005F0, "Member 'UWBP_DeclareWarModal_C::TB_VerticalSeparator' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, TB_WarDurationLabel) == 0x0005F8, "Member 'UWBP_DeclareWarModal_C::TB_WarDurationLabel' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, Title) == 0x000600, "Member 'UWBP_DeclareWarModal_C::Title' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WarDetailsContents) == 0x000608, "Member 'UWBP_DeclareWarModal_C::WarDetailsContents' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WarTypeContents) == 0x000610, "Member 'UWBP_DeclareWarModal_C::WarTypeContents' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WarTypeScrollList) == 0x000618, "Member 'UWBP_DeclareWarModal_C::WarTypeScrollList' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_NodeWarCharge) == 0x000620, "Member 'UWBP_DeclareWarModal_C::WBP_NodeWarCharge' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_NodeWarCharge_1) == 0x000628, "Member 'UWBP_DeclareWarModal_C::WBP_NodeWarCharge_1' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_NodeWarCharge_2) == 0x000630, "Member 'UWBP_DeclareWarModal_C::WBP_NodeWarCharge_2' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarRuleItem) == 0x000638, "Member 'UWBP_DeclareWarModal_C::WBP_WarRuleItem' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarRuleItem_1) == 0x000640, "Member 'UWBP_DeclareWarModal_C::WBP_WarRuleItem_1' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarRuleItem_2) == 0x000648, "Member 'UWBP_DeclareWarModal_C::WBP_WarRuleItem_2' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem) == 0x000650, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_1) == 0x000658, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_1' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_2) == 0x000660, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_2' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_3) == 0x000668, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_3' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_4) == 0x000670, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_4' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_5) == 0x000678, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_5' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_6) == 0x000680, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_6' has a wrong offset!");
+static_assert(offsetof(UWBP_DeclareWarModal_C, WBP_WarTypeItem_7) == 0x000688, "Member 'UWBP_DeclareWarModal_C::WBP_WarTypeItem_7' has a wrong offset!");
 
 }
 

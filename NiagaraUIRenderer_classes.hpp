@@ -25,7 +25,7 @@ class UNiagaraSystemWidget final : public UWidget
 {
 public:
 	class UNiagaraSystem*                         NiagaraSystemReference;                            // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class UMaterialInterface*, class UMaterialInterface*> MaterialRemapList;                                 // 0x01B8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class UMaterialInterface*, class UMaterialInterface*> MaterialRemapList;                    // 0x01B8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          AutoActivate;                                      // 0x0208(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          TickWhenPaused;                                    // 0x0209(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20A[0x6];                                      // 0x020A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])

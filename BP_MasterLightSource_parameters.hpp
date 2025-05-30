@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "AkAudio_structs.hpp"
 
 
 namespace SDK::Params
@@ -31,7 +30,7 @@ static_assert(offsetof(BP_MasterLightSource_C_DestroyAllLights, CallFunc_IsValid
 static_assert(offsetof(BP_MasterLightSource_C_DestroyAllLights, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_MasterLightSource_C_DestroyAllLights::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function BP_MasterLightSource.BP_MasterLightSource_C.ExecuteUbergraph_BP_MasterLightSource
-// 0x0020 (0x0020 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource final
 {
 public:
@@ -41,18 +40,16 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable; // 0x000C(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AddComponentToMultiPosEvent_ReturnValue;  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource) == 0x000004, "Wrong alignment on BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource");
-static_assert(sizeof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource) == 0x000020, "Wrong size on BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource");
+static_assert(sizeof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource) == 0x000010, "Wrong size on BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource");
 static_assert(offsetof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource, EntryPoint) == 0x000000, "Member 'BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource, K2Node_SwitchEnum_CmpSuccess) == 0x000008, "Member 'BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource, CallFunc_IsValid_ReturnValue) == 0x000009, "Member 'BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource, CallFunc_IsValid_ReturnValue_1) == 0x00000A, "Member 'BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource, Temp_delegate_Variable) == 0x00000C, "Member 'BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource::Temp_delegate_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource, CallFunc_PostAkEvent_ReturnValue) == 0x00001C, "Member 'BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource, CallFunc_AddComponentToMultiPosEvent_ReturnValue) == 0x00000C, "Member 'BP_MasterLightSource_C_ExecuteUbergraph_BP_MasterLightSource::CallFunc_AddComponentToMultiPosEvent_ReturnValue' has a wrong offset!");
 
 // Function BP_MasterLightSource.BP_MasterLightSource_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)

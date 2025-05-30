@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Guard_Simple_SwordAndShield_General_Template.Guard_Simple_SwordAndShield_General_Template_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class AGuard_Simple_SwordAndShield_General_Template_C final : public ANode_Guard_M_Stationary_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AGuard_Simple_SwordAndShield_General_Template_C) == 0x000010, "Wrong alignment on AGuard_Simple_SwordAndShield_General_Template_C");
-static_assert(sizeof(AGuard_Simple_SwordAndShield_General_Template_C) == 0x001DD0, "Wrong size on AGuard_Simple_SwordAndShield_General_Template_C");
+static_assert(sizeof(AGuard_Simple_SwordAndShield_General_Template_C) == 0x001D90, "Wrong size on AGuard_Simple_SwordAndShield_General_Template_C");
 
 }
 

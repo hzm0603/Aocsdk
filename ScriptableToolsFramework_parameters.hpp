@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ScriptableToolsFramework_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ScriptableToolsFramework_structs.hpp"
 #include "InteractiveToolsFramework_structs.hpp"
 
 
@@ -37,7 +37,7 @@ static_assert(offsetof(ScriptableInteractiveTool_AddLogMessage, bHighlighted) ==
 struct ScriptableInteractiveTool_AddPropertySetOfType final
 {
 public:
-	TSubclassOf<class UScriptableInteractiveToolPropertySet> PropertySetType;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UScriptableInteractiveToolPropertySet> PropertySetType;                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Identifier;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EToolsFrameworkOutcomePins                    Outcome;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -336,7 +336,7 @@ struct ScriptableInteractiveTool_WatchBoolProperty final
 public:
 	class UScriptableInteractiveToolPropertySet*  PropertySet;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PropertyName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, bool bNewValue)> OnModified;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, bool bNewValue)> OnModified; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UScriptableInteractiveToolPropertySet*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ScriptableInteractiveTool_WatchBoolProperty) == 0x000008, "Wrong alignment on ScriptableInteractiveTool_WatchBoolProperty");
@@ -353,7 +353,7 @@ struct ScriptableInteractiveTool_WatchEnumProperty final
 public:
 	class UScriptableInteractiveToolPropertySet*  PropertySet;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PropertyName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, uint8 NewValue)> OnModified;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, uint8 NewValue)> OnModified; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UScriptableInteractiveToolPropertySet*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ScriptableInteractiveTool_WatchEnumProperty) == 0x000008, "Wrong alignment on ScriptableInteractiveTool_WatchEnumProperty");
@@ -370,7 +370,7 @@ struct ScriptableInteractiveTool_WatchFloatProperty final
 public:
 	class UScriptableInteractiveToolPropertySet*  PropertySet;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PropertyName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, double NewValue)> OnModified;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, double NewValue)> OnModified; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UScriptableInteractiveToolPropertySet*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ScriptableInteractiveTool_WatchFloatProperty) == 0x000008, "Wrong alignment on ScriptableInteractiveTool_WatchFloatProperty");
@@ -387,7 +387,7 @@ struct ScriptableInteractiveTool_WatchIntProperty final
 public:
 	class UScriptableInteractiveToolPropertySet*  PropertySet;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PropertyName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, int32 NewValue)> OnModified;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, int32 NewValue)> OnModified; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UScriptableInteractiveToolPropertySet*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ScriptableInteractiveTool_WatchIntProperty) == 0x000008, "Wrong alignment on ScriptableInteractiveTool_WatchIntProperty");
@@ -404,7 +404,7 @@ struct ScriptableInteractiveTool_WatchNameProperty final
 public:
 	class UScriptableInteractiveToolPropertySet*  PropertySet;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PropertyName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, class FName NewValue)> OnModified;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, class FName NewValue)> OnModified; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UScriptableInteractiveToolPropertySet*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ScriptableInteractiveTool_WatchNameProperty) == 0x000008, "Wrong alignment on ScriptableInteractiveTool_WatchNameProperty");
@@ -421,7 +421,7 @@ struct ScriptableInteractiveTool_WatchObjectProperty final
 public:
 	class UScriptableInteractiveToolPropertySet*  PropertySet;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PropertyName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, class UObject* NewValue)> OnModified;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, class UObject* NewValue)> OnModified; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UScriptableInteractiveToolPropertySet*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ScriptableInteractiveTool_WatchObjectProperty) == 0x000008, "Wrong alignment on ScriptableInteractiveTool_WatchObjectProperty");
@@ -438,7 +438,7 @@ struct ScriptableInteractiveTool_WatchProperty final
 public:
 	class UScriptableInteractiveToolPropertySet*  PropertySet;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PropertyName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName)> OnModified;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName)> OnModified; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UScriptableInteractiveToolPropertySet*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ScriptableInteractiveTool_WatchProperty) == 0x000008, "Wrong alignment on ScriptableInteractiveTool_WatchProperty");
@@ -455,7 +455,7 @@ struct ScriptableInteractiveTool_WatchStringProperty final
 public:
 	class UScriptableInteractiveToolPropertySet*  PropertySet;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PropertyName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const class FString& NewValue)> OnModified;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UScriptableInteractiveToolPropertySet* PropertySet, const class FString& PropertyName, const class FString& NewValue)> OnModified; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UScriptableInteractiveToolPropertySet*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ScriptableInteractiveTool_WatchStringProperty) == 0x000008, "Wrong alignment on ScriptableInteractiveTool_WatchStringProperty");

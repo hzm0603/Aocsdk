@@ -32,7 +32,7 @@ void ABP_MasterLightActor_C::Add_Light_Components()
 
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.Add Mesh
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MasterLightActor_C::Add_Mesh()
 {
@@ -88,7 +88,7 @@ void ABP_MasterLightActor_C::Add_Sperical_Emissive()
 
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.Add Spot
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MasterLightActor_C::Add_Spot()
 {
@@ -102,7 +102,7 @@ void ABP_MasterLightActor_C::Add_Spot()
 
 
 // Function BP_MasterLightActor.BP_MasterLightActor_C.Add VFX Components
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MasterLightActor_C::Add_VFX_Components()
 {
@@ -115,17 +115,158 @@ void ABP_MasterLightActor_C::Add_VFX_Components()
 }
 
 
-// Function BP_MasterLightActor.BP_MasterLightActor_C.Add VFX Components at Sockets
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_MasterLightActor.BP_MasterLightActor_C.AdjustLightTransForWidgetOffset
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FTransform&                InTransform                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Z                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MasterLightActor_C::Add_VFX_Components_at_Sockets()
+struct FTransform ABP_MasterLightActor_C::AdjustLightTransForWidgetOffset(const struct FTransform& InTransform, double Z)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MasterLightActor_C", "Add VFX Components at Sockets");
+		Func = Class->GetFunction("BP_MasterLightActor_C", "AdjustLightTransForWidgetOffset");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_MasterLightActor_C_AdjustLightTransForWidgetOffset Parms{};
+
+	Parms.InTransform = std::move(InTransform);
+	Parms.Z = Z;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Check If AKEvent Is Overridden
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UAkAudioEvent*                    Instance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkAudioEvent*                    Default                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkAudioEvent**                   Color                                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MasterLightActor_C::Check_If_AKEvent_Is_Overridden(class UAkAudioEvent* Instance, class UAkAudioEvent* Default, class UAkAudioEvent** Color)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MasterLightActor_C", "Check If AKEvent Is Overridden");
+
+	Params::BP_MasterLightActor_C_Check_If_AKEvent_Is_Overridden Parms{};
+
+	Parms.Instance = Instance;
+	Parms.Default = Default;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Color != nullptr)
+		*Color = Parms.Color;
+}
+
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Check if AKSwitch Is Overriden
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UAkSwitchValue*                   Instance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkSwitchValue*                   Default                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkSwitchValue**                  Color                                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MasterLightActor_C::Check_if_AKSwitch_Is_Overriden(class UAkSwitchValue* Instance, class UAkSwitchValue* Default, class UAkSwitchValue** Color)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MasterLightActor_C", "Check if AKSwitch Is Overriden");
+
+	Params::BP_MasterLightActor_C_Check_if_AKSwitch_Is_Overriden Parms{};
+
+	Parms.Instance = Instance;
+	Parms.Default = Default;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Color != nullptr)
+		*Color = Parms.Color;
+}
+
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Check if Color Overridden
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FLinearColor&              Instance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              Default                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Color                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MasterLightActor_C::Check_if_Color_Overridden(const struct FLinearColor& Instance, const struct FLinearColor& Default, struct FLinearColor* Color)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MasterLightActor_C", "Check if Color Overridden");
+
+	Params::BP_MasterLightActor_C_Check_if_Color_Overridden Parms{};
+
+	Parms.Instance = std::move(Instance);
+	Parms.Default = std::move(Default);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Color != nullptr)
+		*Color = std::move(Parms.Color);
+}
+
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Check if Float Overridden
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  Instance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Default                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 float_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MasterLightActor_C::Check_if_Float_Overridden(double Instance, double Default, double* float_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MasterLightActor_C", "Check if Float Overridden");
+
+	Params::BP_MasterLightActor_C_Check_if_Float_Overridden Parms{};
+
+	Parms.Instance = Instance;
+	Parms.Default = Default;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (float_0 != nullptr)
+		*float_0 = Parms.float_0;
+}
+
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Check if VFX Is Overridden
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UNiagaraSystem*                   Instance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UNiagaraSystem*                   Default                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UNiagaraSystem**                  VFX                                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MasterLightActor_C::Check_if_VFX_Is_Overridden(class UNiagaraSystem* Instance, class UNiagaraSystem* Default, class UNiagaraSystem** VFX)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MasterLightActor_C", "Check if VFX Is Overridden");
+
+	Params::BP_MasterLightActor_C_Check_if_VFX_Is_Overridden Parms{};
+
+	Parms.Instance = Instance;
+	Parms.Default = Default;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (VFX != nullptr)
+		*VFX = Parms.VFX;
 }
 
 
@@ -163,15 +304,29 @@ void ABP_MasterLightActor_C::ExecuteUbergraph_BP_MasterLightActor(int32 EntryPoi
 }
 
 
-// Function BP_MasterLightActor.BP_MasterLightActor_C.Get Light Socket Transform
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Get Socket Transform
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MasterLightActor_C::Get_Light_Socket_Transform()
+void ABP_MasterLightActor_C::Get_Socket_Transform()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MasterLightActor_C", "Get Light Socket Transform");
+		Func = Class->GetFunction("BP_MasterLightActor_C", "Get Socket Transform");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.InitializeDefaults
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_MasterLightActor_C::InitializeDefaults()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MasterLightActor_C", "InitializeDefaults");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -253,15 +408,29 @@ void ABP_MasterLightActor_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function BP_MasterLightActor.BP_MasterLightActor_C.Resize Socketed VFX Array
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_MasterLightActor.BP_MasterLightActor_C.Refresh
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_MasterLightActor_C::Resize_Socketed_VFX_Array()
+void ABP_MasterLightActor_C::Refresh()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MasterLightActor_C", "Resize Socketed VFX Array");
+		Func = Class->GetFunction("BP_MasterLightActor_C", "Refresh");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MasterLightActor.BP_MasterLightActor_C.ResetDefaults
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MasterLightActor_C::ResetDefaults()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MasterLightActor_C", "ResetDefaults");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

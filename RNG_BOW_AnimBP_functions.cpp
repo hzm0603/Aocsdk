@@ -20,7 +20,7 @@ namespace SDK
 // Function RNG_BOW_AnimBP.RNG_BOW_AnimBP_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
 void URNG_BOW_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {

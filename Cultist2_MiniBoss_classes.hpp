@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Cultist2_MiniBoss.Cultist2_MiniBoss_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ACultist2_MiniBoss_C final : public ACultist2_C
 {
 public:
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ACultist2_MiniBoss_C) == 0x000010, "Wrong alignment on ACultist2_MiniBoss_C");
-static_assert(sizeof(ACultist2_MiniBoss_C) == 0x001DB0, "Wrong size on ACultist2_MiniBoss_C");
-static_assert(offsetof(ACultist2_MiniBoss_C, Blackboard) == 0x001DA8, "Member 'ACultist2_MiniBoss_C::Blackboard' has a wrong offset!");
+static_assert(sizeof(ACultist2_MiniBoss_C) == 0x001D70, "Wrong size on ACultist2_MiniBoss_C");
+static_assert(offsetof(ACultist2_MiniBoss_C, Blackboard) == 0x001D68, "Member 'ACultist2_MiniBoss_C::Blackboard' has a wrong offset!");
 
 }
 

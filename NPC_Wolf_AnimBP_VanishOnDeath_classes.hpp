@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "NPC_Wolf_AnimBP_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass NPC_Wolf_AnimBP_VanishOnDeath.NPC_Wolf_AnimBP_VanishOnDeath_C
-// 0x0010 (0x3FF0 - 0x3FE0)
+// 0x0000 (0x4260 - 0x4260)
 class UNPC_Wolf_AnimBP_VanishOnDeath_C final : public UNPC_Wolf_AnimBP_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_NPC_Wolf_AnimBP_VanishOnDeath_C;    // 0x3FE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_NPC_Wolf_AnimBP_VanishOnDeath_C;    // 0x4258(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void AnimNotify_TurnoffMesh();
@@ -39,8 +39,8 @@ public:
 	}
 };
 static_assert(alignof(UNPC_Wolf_AnimBP_VanishOnDeath_C) == 0x000010, "Wrong alignment on UNPC_Wolf_AnimBP_VanishOnDeath_C");
-static_assert(sizeof(UNPC_Wolf_AnimBP_VanishOnDeath_C) == 0x003FF0, "Wrong size on UNPC_Wolf_AnimBP_VanishOnDeath_C");
-static_assert(offsetof(UNPC_Wolf_AnimBP_VanishOnDeath_C, UberGraphFrame_NPC_Wolf_AnimBP_VanishOnDeath_C) == 0x003FE0, "Member 'UNPC_Wolf_AnimBP_VanishOnDeath_C::UberGraphFrame_NPC_Wolf_AnimBP_VanishOnDeath_C' has a wrong offset!");
+static_assert(sizeof(UNPC_Wolf_AnimBP_VanishOnDeath_C) == 0x004260, "Wrong size on UNPC_Wolf_AnimBP_VanishOnDeath_C");
+static_assert(offsetof(UNPC_Wolf_AnimBP_VanishOnDeath_C, UberGraphFrame_NPC_Wolf_AnimBP_VanishOnDeath_C) == 0x004258, "Member 'UNPC_Wolf_AnimBP_VanishOnDeath_C::UberGraphFrame_NPC_Wolf_AnimBP_VanishOnDeath_C' has a wrong offset!");
 
 }
 

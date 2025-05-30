@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // Class InterchangeImport.InterchangeAnimationPayloadInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterchangeAnimationPayloadInterface final : public IInterface
 {
 public:
@@ -35,8 +35,8 @@ public:
 		return GetDefaultObjImpl<IInterchangeAnimationPayloadInterface>();
 	}
 };
-static_assert(alignof(IInterchangeAnimationPayloadInterface) == 0x000008, "Wrong alignment on IInterchangeAnimationPayloadInterface");
-static_assert(sizeof(IInterchangeAnimationPayloadInterface) == 0x000048, "Wrong size on IInterchangeAnimationPayloadInterface");
+static_assert(alignof(IInterchangeAnimationPayloadInterface) == 0x000001, "Wrong alignment on IInterchangeAnimationPayloadInterface");
+static_assert(sizeof(IInterchangeAnimationPayloadInterface) == 0x000001, "Wrong size on IInterchangeAnimationPayloadInterface");
 
 // Class InterchangeImport.InterchangeAnimationTrackSetFactory
 // 0x0008 (0x0058 - 0x0050)
@@ -59,7 +59,7 @@ static_assert(alignof(UInterchangeAnimationTrackSetFactory) == 0x000008, "Wrong 
 static_assert(sizeof(UInterchangeAnimationTrackSetFactory) == 0x000058, "Wrong size on UInterchangeAnimationTrackSetFactory");
 
 // Class InterchangeImport.InterchangeBlockedTexturePayloadInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterchangeBlockedTexturePayloadInterface final : public IInterface
 {
 public:
@@ -72,8 +72,8 @@ public:
 		return GetDefaultObjImpl<IInterchangeBlockedTexturePayloadInterface>();
 	}
 };
-static_assert(alignof(IInterchangeBlockedTexturePayloadInterface) == 0x000008, "Wrong alignment on IInterchangeBlockedTexturePayloadInterface");
-static_assert(sizeof(IInterchangeBlockedTexturePayloadInterface) == 0x000048, "Wrong size on IInterchangeBlockedTexturePayloadInterface");
+static_assert(alignof(IInterchangeBlockedTexturePayloadInterface) == 0x000001, "Wrong alignment on IInterchangeBlockedTexturePayloadInterface");
+static_assert(sizeof(IInterchangeBlockedTexturePayloadInterface) == 0x000001, "Wrong size on IInterchangeBlockedTexturePayloadInterface");
 
 // Class InterchangeImport.InterchangeActorFactory
 // 0x0000 (0x0050 - 0x0050)
@@ -110,7 +110,7 @@ static_assert(alignof(UInterchangeLightActorFactory) == 0x000008, "Wrong alignme
 static_assert(sizeof(UInterchangeLightActorFactory) == 0x000050, "Wrong size on UInterchangeLightActorFactory");
 
 // Class InterchangeImport.InterchangeMeshPayloadInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterchangeMeshPayloadInterface final : public IInterface
 {
 public:
@@ -123,8 +123,8 @@ public:
 		return GetDefaultObjImpl<IInterchangeMeshPayloadInterface>();
 	}
 };
-static_assert(alignof(IInterchangeMeshPayloadInterface) == 0x000008, "Wrong alignment on IInterchangeMeshPayloadInterface");
-static_assert(sizeof(IInterchangeMeshPayloadInterface) == 0x000048, "Wrong size on IInterchangeMeshPayloadInterface");
+static_assert(alignof(IInterchangeMeshPayloadInterface) == 0x000001, "Wrong alignment on IInterchangeMeshPayloadInterface");
+static_assert(sizeof(IInterchangeMeshPayloadInterface) == 0x000001, "Wrong size on IInterchangeMeshPayloadInterface");
 
 // Class InterchangeImport.InterchangeSceneImportAssetFactory
 // 0x0000 (0x0050 - 0x0050)
@@ -164,7 +164,7 @@ static_assert(alignof(UInterchangeSceneVariantSetsFactory) == 0x000008, "Wrong a
 static_assert(sizeof(UInterchangeSceneVariantSetsFactory) == 0x000058, "Wrong size on UInterchangeSceneVariantSetsFactory");
 
 // Class InterchangeImport.InterchangeSlicedTexturePayloadInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterchangeSlicedTexturePayloadInterface final : public IInterface
 {
 public:
@@ -177,11 +177,11 @@ public:
 		return GetDefaultObjImpl<IInterchangeSlicedTexturePayloadInterface>();
 	}
 };
-static_assert(alignof(IInterchangeSlicedTexturePayloadInterface) == 0x000008, "Wrong alignment on IInterchangeSlicedTexturePayloadInterface");
-static_assert(sizeof(IInterchangeSlicedTexturePayloadInterface) == 0x000048, "Wrong size on IInterchangeSlicedTexturePayloadInterface");
+static_assert(alignof(IInterchangeSlicedTexturePayloadInterface) == 0x000001, "Wrong alignment on IInterchangeSlicedTexturePayloadInterface");
+static_assert(sizeof(IInterchangeSlicedTexturePayloadInterface) == 0x000001, "Wrong size on IInterchangeSlicedTexturePayloadInterface");
 
 // Class InterchangeImport.InterchangeTextureLightProfilePayloadInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterchangeTextureLightProfilePayloadInterface final : public IInterface
 {
 public:
@@ -194,11 +194,11 @@ public:
 		return GetDefaultObjImpl<IInterchangeTextureLightProfilePayloadInterface>();
 	}
 };
-static_assert(alignof(IInterchangeTextureLightProfilePayloadInterface) == 0x000008, "Wrong alignment on IInterchangeTextureLightProfilePayloadInterface");
-static_assert(sizeof(IInterchangeTextureLightProfilePayloadInterface) == 0x000048, "Wrong size on IInterchangeTextureLightProfilePayloadInterface");
+static_assert(alignof(IInterchangeTextureLightProfilePayloadInterface) == 0x000001, "Wrong alignment on IInterchangeTextureLightProfilePayloadInterface");
+static_assert(sizeof(IInterchangeTextureLightProfilePayloadInterface) == 0x000001, "Wrong size on IInterchangeTextureLightProfilePayloadInterface");
 
 // Class InterchangeImport.InterchangeTexturePayloadInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterchangeTexturePayloadInterface final : public IInterface
 {
 public:
@@ -211,11 +211,11 @@ public:
 		return GetDefaultObjImpl<IInterchangeTexturePayloadInterface>();
 	}
 };
-static_assert(alignof(IInterchangeTexturePayloadInterface) == 0x000008, "Wrong alignment on IInterchangeTexturePayloadInterface");
-static_assert(sizeof(IInterchangeTexturePayloadInterface) == 0x000048, "Wrong size on IInterchangeTexturePayloadInterface");
+static_assert(alignof(IInterchangeTexturePayloadInterface) == 0x000001, "Wrong alignment on IInterchangeTexturePayloadInterface");
+static_assert(sizeof(IInterchangeTexturePayloadInterface) == 0x000001, "Wrong size on IInterchangeTexturePayloadInterface");
 
 // Class InterchangeImport.InterchangeVariantSetPayloadInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IInterchangeVariantSetPayloadInterface final : public IInterface
 {
 public:
@@ -228,8 +228,8 @@ public:
 		return GetDefaultObjImpl<IInterchangeVariantSetPayloadInterface>();
 	}
 };
-static_assert(alignof(IInterchangeVariantSetPayloadInterface) == 0x000008, "Wrong alignment on IInterchangeVariantSetPayloadInterface");
-static_assert(sizeof(IInterchangeVariantSetPayloadInterface) == 0x000048, "Wrong size on IInterchangeVariantSetPayloadInterface");
+static_assert(alignof(IInterchangeVariantSetPayloadInterface) == 0x000001, "Wrong alignment on IInterchangeVariantSetPayloadInterface");
+static_assert(sizeof(IInterchangeVariantSetPayloadInterface) == 0x000001, "Wrong size on IInterchangeVariantSetPayloadInterface");
 
 // Class InterchangeImport.MaterialExpressionMaterialXRamp4
 // 0x00D0 (0x01A0 - 0x00D0)

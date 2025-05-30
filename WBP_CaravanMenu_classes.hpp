@@ -17,14 +17,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CaravanMenu.WBP_CaravanMenu_C
-// 0x0020 (0x05C0 - 0x05A0)
+// 0x0038 (0x08A8 - 0x0870)
 class UWBP_CaravanMenu_C final : public UCaravanMenu
 {
 public:
-	class UCommonIconButton_C*                    Filterbutton;                                      // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   LoadoutInventory;                                  // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_TextDropdown_C*                    SortByDropdown;                                    // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         TabsBox;                                           // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemFrontEnd_C*                    EquippableComponentsContainer;                     // 0x0870(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonIconButton_C*                    Filterbutton;                                      // 0x0878(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   LoadoutInventory;                                  // 0x0880(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TextDropdown_C*                    PackCrateDropdown;                                 // 0x0888(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextButton_C*                    PurchaseButton;                                    // 0x0890(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonIconButton_C*                    StorageButton_NEW;                                 // 0x0898(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         TabsBox;                                           // 0x08A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +40,14 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CaravanMenu_C) == 0x000008, "Wrong alignment on UWBP_CaravanMenu_C");
-static_assert(sizeof(UWBP_CaravanMenu_C) == 0x0005C0, "Wrong size on UWBP_CaravanMenu_C");
-static_assert(offsetof(UWBP_CaravanMenu_C, Filterbutton) == 0x0005A0, "Member 'UWBP_CaravanMenu_C::Filterbutton' has a wrong offset!");
-static_assert(offsetof(UWBP_CaravanMenu_C, LoadoutInventory) == 0x0005A8, "Member 'UWBP_CaravanMenu_C::LoadoutInventory' has a wrong offset!");
-static_assert(offsetof(UWBP_CaravanMenu_C, SortByDropdown) == 0x0005B0, "Member 'UWBP_CaravanMenu_C::SortByDropdown' has a wrong offset!");
-static_assert(offsetof(UWBP_CaravanMenu_C, TabsBox) == 0x0005B8, "Member 'UWBP_CaravanMenu_C::TabsBox' has a wrong offset!");
+static_assert(sizeof(UWBP_CaravanMenu_C) == 0x0008A8, "Wrong size on UWBP_CaravanMenu_C");
+static_assert(offsetof(UWBP_CaravanMenu_C, EquippableComponentsContainer) == 0x000870, "Member 'UWBP_CaravanMenu_C::EquippableComponentsContainer' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanMenu_C, Filterbutton) == 0x000878, "Member 'UWBP_CaravanMenu_C::Filterbutton' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanMenu_C, LoadoutInventory) == 0x000880, "Member 'UWBP_CaravanMenu_C::LoadoutInventory' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanMenu_C, PackCrateDropdown) == 0x000888, "Member 'UWBP_CaravanMenu_C::PackCrateDropdown' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanMenu_C, PurchaseButton) == 0x000890, "Member 'UWBP_CaravanMenu_C::PurchaseButton' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanMenu_C, StorageButton_NEW) == 0x000898, "Member 'UWBP_CaravanMenu_C::StorageButton_NEW' has a wrong offset!");
+static_assert(offsetof(UWBP_CaravanMenu_C, TabsBox) == 0x0008A0, "Member 'UWBP_CaravanMenu_C::TabsBox' has a wrong offset!");
 
 }
 

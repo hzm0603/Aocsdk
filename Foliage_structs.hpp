@@ -404,7 +404,7 @@ static_assert(offsetof(Fuint16FInstancedFoliageStateMapElement, Key) == 0x00000E
 struct FFMapuint16FInstancedFoliageState final : public FFastMapHelper
 {
 public:
-	TArray<struct Fuint16FInstancedFoliageStateMapElement> Items;                                             // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct Fuint16FInstancedFoliageStateMapElement> Items;                                    // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<uint16, struct FInstancedFoliageState>   LookUp;                                            // 0x0120(0x0050)(Transient, RepSkip, NativeAccessSpecifierPublic)
 	TMap<uint16, struct FInstancedFoliageState>   OldLookup;                                         // 0x0170(0x0050)(Transient, RepSkip, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C0[0x30];                                     // 0x01C0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -424,7 +424,7 @@ public:
 	class UFoliageType*                           TypeInstance;                                      // 0x0008(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bIsAsset;                                          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UFoliageType_InstancedStaticMesh> Type;                                              // 0x0018(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UFoliageType_InstancedStaticMesh> Type;                                        // 0x0018(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
 static_assert(alignof(FFoliageTypeObject) == 0x000008, "Wrong alignment on FFoliageTypeObject");
 static_assert(sizeof(FFoliageTypeObject) == 0x000020, "Wrong size on FFoliageTypeObject");

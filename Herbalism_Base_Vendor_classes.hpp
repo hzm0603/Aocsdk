@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Herbalism_Base_Vendor.Herbalism_Base_Vendor_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class AHerbalism_Base_Vendor_C final : public ANode_NPC_Master_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AHerbalism_Base_Vendor_C) == 0x000010, "Wrong alignment on AHerbalism_Base_Vendor_C");
-static_assert(sizeof(AHerbalism_Base_Vendor_C) == 0x001DD0, "Wrong size on AHerbalism_Base_Vendor_C");
+static_assert(sizeof(AHerbalism_Base_Vendor_C) == 0x001D90, "Wrong size on AHerbalism_Base_Vendor_C");
 
 }
 

@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "S_FenceSetDressData_structs.hpp"
-#include "S_RoadTerrainData_structs.hpp"
 #include "S_RoadGrassData_structs.hpp"
 
 
@@ -19,21 +18,19 @@ namespace SDK
 {
 
 // UserDefinedStruct S_RoadSetDressingData.S_RoadSetDressingData
-// 0x0138 (0x0138 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct FS_RoadSetDressingData final
 {
 public:
 	struct FS_FenceSetDressData                   LeftFenceData_11_AD366DD7472E40445BC346A94F293187; // 0x0000(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FS_FenceSetDressData                   RightFenceData_13_629BFBEF469BD478640FC1B9857CEAA9; // 0x0050(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FS_RoadTerrainData                     TerrainData_16_D17B93584A028D2FB95DA7939E817235;   // 0x00A0(0x0070)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FS_RoadGrassData                       GrassData_19_C07CDCEA4E2623076F2156B10BF8CC1F;     // 0x0110(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FS_RoadGrassData                       GrassData_19_C07CDCEA4E2623076F2156B10BF8CC1F;     // 0x00A0(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
 static_assert(alignof(FS_RoadSetDressingData) == 0x000008, "Wrong alignment on FS_RoadSetDressingData");
-static_assert(sizeof(FS_RoadSetDressingData) == 0x000138, "Wrong size on FS_RoadSetDressingData");
+static_assert(sizeof(FS_RoadSetDressingData) == 0x0000D8, "Wrong size on FS_RoadSetDressingData");
 static_assert(offsetof(FS_RoadSetDressingData, LeftFenceData_11_AD366DD7472E40445BC346A94F293187) == 0x000000, "Member 'FS_RoadSetDressingData::LeftFenceData_11_AD366DD7472E40445BC346A94F293187' has a wrong offset!");
 static_assert(offsetof(FS_RoadSetDressingData, RightFenceData_13_629BFBEF469BD478640FC1B9857CEAA9) == 0x000050, "Member 'FS_RoadSetDressingData::RightFenceData_13_629BFBEF469BD478640FC1B9857CEAA9' has a wrong offset!");
-static_assert(offsetof(FS_RoadSetDressingData, TerrainData_16_D17B93584A028D2FB95DA7939E817235) == 0x0000A0, "Member 'FS_RoadSetDressingData::TerrainData_16_D17B93584A028D2FB95DA7939E817235' has a wrong offset!");
-static_assert(offsetof(FS_RoadSetDressingData, GrassData_19_C07CDCEA4E2623076F2156B10BF8CC1F) == 0x000110, "Member 'FS_RoadSetDressingData::GrassData_19_C07CDCEA4E2623076F2156B10BF8CC1F' has a wrong offset!");
+static_assert(offsetof(FS_RoadSetDressingData, GrassData_19_C07CDCEA4E2623076F2156B10BF8CC1F) == 0x0000A0, "Member 'FS_RoadSetDressingData::GrassData_19_C07CDCEA4E2623076F2156B10BF8CC1F' has a wrong offset!");
 
 }
 

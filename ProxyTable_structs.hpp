@@ -36,19 +36,6 @@ static_assert(alignof(FProxyTableContextProperty) == 0x000008, "Wrong alignment 
 static_assert(sizeof(FProxyTableContextProperty) == 0x000020, "Wrong size on FProxyTableContextProperty");
 static_assert(offsetof(FProxyTableContextProperty, Binding) == 0x000008, "Member 'FProxyTableContextProperty::Binding' has a wrong offset!");
 
-// ScriptStruct ProxyTable.LookupProxy
-// 0x0018 (0x0020 - 0x0008)
-struct FLookupProxy final : public FObjectChooserBase
-{
-public:
-	class UProxyAsset*                            Proxy;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       ProxyTable;                                        // 0x0010(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FLookupProxy) == 0x000008, "Wrong alignment on FLookupProxy");
-static_assert(sizeof(FLookupProxy) == 0x000020, "Wrong size on FLookupProxy");
-static_assert(offsetof(FLookupProxy, Proxy) == 0x000008, "Member 'FLookupProxy::Proxy' has a wrong offset!");
-static_assert(offsetof(FLookupProxy, ProxyTable) == 0x000010, "Member 'FLookupProxy::ProxyTable' has a wrong offset!");
-
 // ScriptStruct ProxyTable.LookupProxyWithOverrideTable
 // 0x0010 (0x0018 - 0x0008)
 struct FLookupProxyWithOverrideTable final : public FObjectChooserBase
@@ -61,6 +48,19 @@ static_assert(alignof(FLookupProxyWithOverrideTable) == 0x000008, "Wrong alignme
 static_assert(sizeof(FLookupProxyWithOverrideTable) == 0x000018, "Wrong size on FLookupProxyWithOverrideTable");
 static_assert(offsetof(FLookupProxyWithOverrideTable, Proxy) == 0x000008, "Member 'FLookupProxyWithOverrideTable::Proxy' has a wrong offset!");
 static_assert(offsetof(FLookupProxyWithOverrideTable, OverrideProxyTable) == 0x000010, "Member 'FLookupProxyWithOverrideTable::OverrideProxyTable' has a wrong offset!");
+
+// ScriptStruct ProxyTable.LookupProxy
+// 0x0018 (0x0020 - 0x0008)
+struct FLookupProxy final : public FObjectChooserBase
+{
+public:
+	class UProxyAsset*                            Proxy;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ProxyTable;                                        // 0x0010(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FLookupProxy) == 0x000008, "Wrong alignment on FLookupProxy");
+static_assert(sizeof(FLookupProxy) == 0x000020, "Wrong size on FLookupProxy");
+static_assert(offsetof(FLookupProxy, Proxy) == 0x000008, "Member 'FLookupProxy::Proxy' has a wrong offset!");
+static_assert(offsetof(FLookupProxy, ProxyTable) == 0x000010, "Member 'FLookupProxy::ProxyTable' has a wrong offset!");
 
 // ScriptStruct ProxyTable.ProxyStructOutput
 // 0x0028 (0x0028 - 0x0000)

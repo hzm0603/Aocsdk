@@ -27,9 +27,9 @@ public:
 	TArray<class FText>                           CraftableItemsDesignTimeText;                      // 0x03A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void Add_Craftable_Items();
-	void ExecuteUbergraph_WBP_RecipeList(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_RecipeList(int32 EntryPoint);
+	void Add_Craftable_Items();
 
 public:
 	static class UClass* StaticClass()

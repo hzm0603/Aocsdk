@@ -26,9 +26,9 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ConstructSettings(class UTextBlock* Widget, bool IsVisible_0, const class FString& Text, bool HasPostfix);
-	void ExecuteUbergraph_WBP_TimerTextBlock(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_TimerTextBlock(int32 EntryPoint);
+	void ConstructSettings(class UTextBlock* Widget, bool IsVisible_0, const class FString& Text, bool HasPostfix);
 
 public:
 	static class UClass* StaticClass()

@@ -10,20 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "NPC_Raven_AnimBP_classes.hpp"
 #include "Engine_structs.hpp"
+#include "NPC_Raven_AnimBP_classes.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass NPC_Raven_AnimBP_VanishOnDeath.NPC_Raven_AnimBP_VanishOnDeath_C
-// 0x0000 (0x32C0 - 0x32C0)
+// 0x0010 (0x3400 - 0x33F0)
 class UNPC_Raven_AnimBP_VanishOnDeath_C final : public UNPC_Raven_AnimBP_C
 {
 public:
-	uint8                                         Pad_32B2[0x6];                                     // 0x32B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_NPC_Raven_AnimBP_VanishOnDeath_C;   // 0x32B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_NPC_Raven_AnimBP_VanishOnDeath_C;   // 0x33F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void AnimNotify_TurnoffMesh();
@@ -40,8 +39,8 @@ public:
 	}
 };
 static_assert(alignof(UNPC_Raven_AnimBP_VanishOnDeath_C) == 0x000010, "Wrong alignment on UNPC_Raven_AnimBP_VanishOnDeath_C");
-static_assert(sizeof(UNPC_Raven_AnimBP_VanishOnDeath_C) == 0x0032C0, "Wrong size on UNPC_Raven_AnimBP_VanishOnDeath_C");
-static_assert(offsetof(UNPC_Raven_AnimBP_VanishOnDeath_C, UberGraphFrame_NPC_Raven_AnimBP_VanishOnDeath_C) == 0x0032B8, "Member 'UNPC_Raven_AnimBP_VanishOnDeath_C::UberGraphFrame_NPC_Raven_AnimBP_VanishOnDeath_C' has a wrong offset!");
+static_assert(sizeof(UNPC_Raven_AnimBP_VanishOnDeath_C) == 0x003400, "Wrong size on UNPC_Raven_AnimBP_VanishOnDeath_C");
+static_assert(offsetof(UNPC_Raven_AnimBP_VanishOnDeath_C, UberGraphFrame_NPC_Raven_AnimBP_VanishOnDeath_C) == 0x0033F0, "Member 'UNPC_Raven_AnimBP_VanishOnDeath_C::UberGraphFrame_NPC_Raven_AnimBP_VanishOnDeath_C' has a wrong offset!");
 
 }
 

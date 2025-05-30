@@ -17,14 +17,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_StandardWindowFrameSm.WBP_StandardWindowFrameSm_C
-// 0x0020 (0x0720 - 0x0700)
+// 0x0020 (0x0728 - 0x0708)
 class UWBP_StandardWindowFrameSm_C final : public UAoCWindow
 {
 public:
-	class UWidgetAnimation*                       WindowOpenClose;                                   // 0x0700(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 HeaderPattern;                                     // 0x0708(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonIconButton_C*                    LootSettingsButton;                                // 0x0710(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       WindowOpenClose;                                   // 0x0708(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 HeaderPattern;                                     // 0x0710(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UOverlay*                               ModalContainer;                                    // 0x0718(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonIconButton_C*                    SettingsButton;                                    // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +37,11 @@ public:
 	}
 };
 static_assert(alignof(UWBP_StandardWindowFrameSm_C) == 0x000008, "Wrong alignment on UWBP_StandardWindowFrameSm_C");
-static_assert(sizeof(UWBP_StandardWindowFrameSm_C) == 0x000720, "Wrong size on UWBP_StandardWindowFrameSm_C");
-static_assert(offsetof(UWBP_StandardWindowFrameSm_C, WindowOpenClose) == 0x000700, "Member 'UWBP_StandardWindowFrameSm_C::WindowOpenClose' has a wrong offset!");
-static_assert(offsetof(UWBP_StandardWindowFrameSm_C, HeaderPattern) == 0x000708, "Member 'UWBP_StandardWindowFrameSm_C::HeaderPattern' has a wrong offset!");
-static_assert(offsetof(UWBP_StandardWindowFrameSm_C, LootSettingsButton) == 0x000710, "Member 'UWBP_StandardWindowFrameSm_C::LootSettingsButton' has a wrong offset!");
+static_assert(sizeof(UWBP_StandardWindowFrameSm_C) == 0x000728, "Wrong size on UWBP_StandardWindowFrameSm_C");
+static_assert(offsetof(UWBP_StandardWindowFrameSm_C, WindowOpenClose) == 0x000708, "Member 'UWBP_StandardWindowFrameSm_C::WindowOpenClose' has a wrong offset!");
+static_assert(offsetof(UWBP_StandardWindowFrameSm_C, HeaderPattern) == 0x000710, "Member 'UWBP_StandardWindowFrameSm_C::HeaderPattern' has a wrong offset!");
 static_assert(offsetof(UWBP_StandardWindowFrameSm_C, ModalContainer) == 0x000718, "Member 'UWBP_StandardWindowFrameSm_C::ModalContainer' has a wrong offset!");
+static_assert(offsetof(UWBP_StandardWindowFrameSm_C, SettingsButton) == 0x000720, "Member 'UWBP_StandardWindowFrameSm_C::SettingsButton' has a wrong offset!");
 
 }
 

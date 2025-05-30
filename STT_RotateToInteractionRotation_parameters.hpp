@@ -17,6 +17,28 @@
 namespace SDK::Params
 {
 
+// Function STT_RotateToInteractionRotation.STT_RotateToInteractionRotation_C.ReceiveLatentTick
+// 0x0004 (0x0004 - 0x0000)
+struct STT_RotateToInteractionRotation_C_ReceiveLatentTick final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(STT_RotateToInteractionRotation_C_ReceiveLatentTick) == 0x000004, "Wrong alignment on STT_RotateToInteractionRotation_C_ReceiveLatentTick");
+static_assert(sizeof(STT_RotateToInteractionRotation_C_ReceiveLatentTick) == 0x000004, "Wrong size on STT_RotateToInteractionRotation_C_ReceiveLatentTick");
+static_assert(offsetof(STT_RotateToInteractionRotation_C_ReceiveLatentTick, DeltaTime) == 0x000000, "Member 'STT_RotateToInteractionRotation_C_ReceiveLatentTick::DeltaTime' has a wrong offset!");
+
+// Function STT_RotateToInteractionRotation.STT_RotateToInteractionRotation_C.ReceiveLatentEnterState
+// 0x002E (0x002E - 0x0000)
+struct STT_RotateToInteractionRotation_C_ReceiveLatentEnterState final
+{
+public:
+	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+};
+static_assert(alignof(STT_RotateToInteractionRotation_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_RotateToInteractionRotation_C_ReceiveLatentEnterState");
+static_assert(sizeof(STT_RotateToInteractionRotation_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_RotateToInteractionRotation_C_ReceiveLatentEnterState");
+static_assert(offsetof(STT_RotateToInteractionRotation_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_RotateToInteractionRotation_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
+
 // Function STT_RotateToInteractionRotation.STT_RotateToInteractionRotation_C.ExecuteUbergraph_STT_RotateToInteractionRotation
 // 0x01C0 (0x01C0 - 0x0000)
 struct STT_RotateToInteractionRotation_C_ExecuteUbergraph_STT_RotateToInteractionRotation final
@@ -77,28 +99,6 @@ static_assert(offsetof(STT_RotateToInteractionRotation_C_ExecuteUbergraph_STT_Ro
 static_assert(offsetof(STT_RotateToInteractionRotation_C_ExecuteUbergraph_STT_RotateToInteractionRotation, CallFunc_BreakRotator_Yaw) == 0x000198, "Member 'STT_RotateToInteractionRotation_C_ExecuteUbergraph_STT_RotateToInteractionRotation::CallFunc_BreakRotator_Yaw' has a wrong offset!");
 static_assert(offsetof(STT_RotateToInteractionRotation_C_ExecuteUbergraph_STT_RotateToInteractionRotation, CallFunc_MakeRotator_ReturnValue) == 0x0001A0, "Member 'STT_RotateToInteractionRotation_C_ExecuteUbergraph_STT_RotateToInteractionRotation::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
 static_assert(offsetof(STT_RotateToInteractionRotation_C_ExecuteUbergraph_STT_RotateToInteractionRotation, CallFunc_RInterpTo_InterpSpeed_ImplicitCast) == 0x0001B8, "Member 'STT_RotateToInteractionRotation_C_ExecuteUbergraph_STT_RotateToInteractionRotation::CallFunc_RInterpTo_InterpSpeed_ImplicitCast' has a wrong offset!");
-
-// Function STT_RotateToInteractionRotation.STT_RotateToInteractionRotation_C.ReceiveLatentEnterState
-// 0x002E (0x002E - 0x0000)
-struct STT_RotateToInteractionRotation_C_ReceiveLatentEnterState final
-{
-public:
-	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-};
-static_assert(alignof(STT_RotateToInteractionRotation_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_RotateToInteractionRotation_C_ReceiveLatentEnterState");
-static_assert(sizeof(STT_RotateToInteractionRotation_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_RotateToInteractionRotation_C_ReceiveLatentEnterState");
-static_assert(offsetof(STT_RotateToInteractionRotation_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_RotateToInteractionRotation_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
-
-// Function STT_RotateToInteractionRotation.STT_RotateToInteractionRotation_C.ReceiveLatentTick
-// 0x0004 (0x0004 - 0x0000)
-struct STT_RotateToInteractionRotation_C_ReceiveLatentTick final
-{
-public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(STT_RotateToInteractionRotation_C_ReceiveLatentTick) == 0x000004, "Wrong alignment on STT_RotateToInteractionRotation_C_ReceiveLatentTick");
-static_assert(sizeof(STT_RotateToInteractionRotation_C_ReceiveLatentTick) == 0x000004, "Wrong size on STT_RotateToInteractionRotation_C_ReceiveLatentTick");
-static_assert(offsetof(STT_RotateToInteractionRotation_C_ReceiveLatentTick, DeltaTime) == 0x000000, "Member 'STT_RotateToInteractionRotation_C_ReceiveLatentTick::DeltaTime' has a wrong offset!");
 
 }
 

@@ -28,9 +28,9 @@ public:
 	class UAoCCommonTextBlock*                    ValueTextBlock;                                    // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_ServiceBuildingStatWidget(int32 EntryPoint);
-	class UCommonBorder* GetBorder();
 	void PreConstruct(bool IsDesignTime);
+	class UCommonBorder* GetBorder();
+	void ExecuteUbergraph_WBP_ServiceBuildingStatWidget(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

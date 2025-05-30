@@ -17,13 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MayoralCommissionObjective.WBP_MayoralCommissionObjective_C
-// 0x0018 (0x0320 - 0x0308)
+// 0x0010 (0x0390 - 0x0380)
 class UWBP_MayoralCommissionObjective_C final : public UMayoralCommissionObjective
 {
 public:
-	class UIntrepidCommonBorder*                  AlternatingBorder;                                 // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ExperienceBarFrame;                                // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           ProgressBar;                                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIntrepidCommonBorder*                  AlternatingBorder;                                 // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ExperienceBarFrame;                                // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UCommonBorder* GetBorder();
@@ -39,10 +38,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MayoralCommissionObjective_C) == 0x000008, "Wrong alignment on UWBP_MayoralCommissionObjective_C");
-static_assert(sizeof(UWBP_MayoralCommissionObjective_C) == 0x000320, "Wrong size on UWBP_MayoralCommissionObjective_C");
-static_assert(offsetof(UWBP_MayoralCommissionObjective_C, AlternatingBorder) == 0x000308, "Member 'UWBP_MayoralCommissionObjective_C::AlternatingBorder' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionObjective_C, ExperienceBarFrame) == 0x000310, "Member 'UWBP_MayoralCommissionObjective_C::ExperienceBarFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionObjective_C, ProgressBar) == 0x000318, "Member 'UWBP_MayoralCommissionObjective_C::ProgressBar' has a wrong offset!");
+static_assert(sizeof(UWBP_MayoralCommissionObjective_C) == 0x000390, "Wrong size on UWBP_MayoralCommissionObjective_C");
+static_assert(offsetof(UWBP_MayoralCommissionObjective_C, AlternatingBorder) == 0x000380, "Member 'UWBP_MayoralCommissionObjective_C::AlternatingBorder' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionObjective_C, ExperienceBarFrame) == 0x000388, "Member 'UWBP_MayoralCommissionObjective_C::ExperienceBarFrame' has a wrong offset!");
 
 }
 

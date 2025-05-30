@@ -18,15 +18,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_NodeMaster.WBP_NodeMaster_C
-// 0x0028 (0x0AC0 - 0x0A98)
+// 0x0018 (0x0B50 - 0x0B38)
 class UWBP_NodeMaster_C final : public UNodeMaster
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A98(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextButton_C*                    BackButton;                                        // 0x0AA0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         CurrencyBox;                                       // 0x0AA8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CurrencyTiersItem_C*               NodeCurrencyItem;                                  // 0x0AB0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextButton_C*                    PrimaryButton;                                     // 0x0AB8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B38(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalBox*                         CurrencyBox;                                       // 0x0B40(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CurrencyTiersItem_C*               NodeCurrencyItem;                                  // 0x0B48(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_NodeMaster(int32 EntryPoint);
@@ -42,12 +40,10 @@ public:
 	}
 };
 static_assert(alignof(UWBP_NodeMaster_C) == 0x000008, "Wrong alignment on UWBP_NodeMaster_C");
-static_assert(sizeof(UWBP_NodeMaster_C) == 0x000AC0, "Wrong size on UWBP_NodeMaster_C");
-static_assert(offsetof(UWBP_NodeMaster_C, UberGraphFrame) == 0x000A98, "Member 'UWBP_NodeMaster_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeMaster_C, BackButton) == 0x000AA0, "Member 'UWBP_NodeMaster_C::BackButton' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeMaster_C, CurrencyBox) == 0x000AA8, "Member 'UWBP_NodeMaster_C::CurrencyBox' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeMaster_C, NodeCurrencyItem) == 0x000AB0, "Member 'UWBP_NodeMaster_C::NodeCurrencyItem' has a wrong offset!");
-static_assert(offsetof(UWBP_NodeMaster_C, PrimaryButton) == 0x000AB8, "Member 'UWBP_NodeMaster_C::PrimaryButton' has a wrong offset!");
+static_assert(sizeof(UWBP_NodeMaster_C) == 0x000B50, "Wrong size on UWBP_NodeMaster_C");
+static_assert(offsetof(UWBP_NodeMaster_C, UberGraphFrame) == 0x000B38, "Member 'UWBP_NodeMaster_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_NodeMaster_C, CurrencyBox) == 0x000B40, "Member 'UWBP_NodeMaster_C::CurrencyBox' has a wrong offset!");
+static_assert(offsetof(UWBP_NodeMaster_C, NodeCurrencyItem) == 0x000B48, "Member 'UWBP_NodeMaster_C::NodeCurrencyItem' has a wrong offset!");
 
 }
 

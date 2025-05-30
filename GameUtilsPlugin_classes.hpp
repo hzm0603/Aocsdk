@@ -75,7 +75,7 @@ static_assert(sizeof(UGameBuildVersionInfo) == 0x0002D0, "Wrong size on UGameBui
 static_assert(offsetof(UGameBuildVersionInfo, BuildVersionIdentifier) == 0x0002C0, "Member 'UGameBuildVersionInfo::BuildVersionIdentifier' has a wrong offset!");
 
 // Class GameUtilsPlugin.GameBuildVersionInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IGameBuildVersionInterface final : public IInterface
 {
 public:
@@ -91,8 +91,8 @@ public:
 		return GetDefaultObjImpl<IGameBuildVersionInterface>();
 	}
 };
-static_assert(alignof(IGameBuildVersionInterface) == 0x000008, "Wrong alignment on IGameBuildVersionInterface");
-static_assert(sizeof(IGameBuildVersionInterface) == 0x000048, "Wrong size on IGameBuildVersionInterface");
+static_assert(alignof(IGameBuildVersionInterface) == 0x000001, "Wrong alignment on IGameBuildVersionInterface");
+static_assert(sizeof(IGameBuildVersionInterface) == 0x000001, "Wrong size on IGameBuildVersionInterface");
 
 // Class GameUtilsPlugin.GameUtils
 // 0x0000 (0x0048 - 0x0048)

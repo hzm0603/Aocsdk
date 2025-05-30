@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CommodityItem.WBP_CommodityItem_C
-// 0x0010 (0x16E0 - 0x16D0)
+// 0x0010 (0x16F0 - 0x16E0)
 class UWBP_CommodityItem_C final : public UCommodityItem
 {
 public:
-	class UAoCCommonTextBlock*                    TB_OwnedLabel;                                     // 0x16D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_OwnedLabel;                                     // 0x16E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UAoCCommonButtonBase* GetButton();
@@ -37,8 +37,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CommodityItem_C) == 0x000010, "Wrong alignment on UWBP_CommodityItem_C");
-static_assert(sizeof(UWBP_CommodityItem_C) == 0x0016E0, "Wrong size on UWBP_CommodityItem_C");
-static_assert(offsetof(UWBP_CommodityItem_C, TB_OwnedLabel) == 0x0016D0, "Member 'UWBP_CommodityItem_C::TB_OwnedLabel' has a wrong offset!");
+static_assert(sizeof(UWBP_CommodityItem_C) == 0x0016F0, "Wrong size on UWBP_CommodityItem_C");
+static_assert(offsetof(UWBP_CommodityItem_C, TB_OwnedLabel) == 0x0016E0, "Member 'UWBP_CommodityItem_C::TB_OwnedLabel' has a wrong offset!");
 
 }
 

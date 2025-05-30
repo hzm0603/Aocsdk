@@ -202,7 +202,7 @@ static_assert(offsetof(UAnimationSharingManager, PerSkeletonData) == 0x000058, "
 class UAnimationSharingSetup final : public UObject
 {
 public:
-	TArray<struct FPerSkeletonAnimationSharingSetup> SkeletonSetups;                                    // 0x0048(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FPerSkeletonAnimationSharingSetup> SkeletonSetups;                                 // 0x0048(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	struct FAnimationSharingScalability           ScalabilitySettings;                               // 0x0058(0x0010)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 
 public:

@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_QuestSecondaryObjective.WBP_QuestSecondaryObjective_C.ExecuteUbergraph_WBP_QuestSecondaryObjective
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_QuestSecondaryObjective_C::ExecuteUbergraph_WBP_QuestSecondaryObjective(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_QuestSecondaryObjective_C", "ExecuteUbergraph_WBP_QuestSecondaryObjective");
-
-	Params::WBP_QuestSecondaryObjective_C_ExecuteUbergraph_WBP_QuestSecondaryObjective Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_QuestSecondaryObjective.WBP_QuestSecondaryObjective_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_QuestSecondaryObjective_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_QuestSecondaryObjective_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_QuestSecondaryObjective.WBP_QuestSecondaryObjective_C.ExecuteUbergraph_WBP_QuestSecondaryObjective
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_QuestSecondaryObjective_C::ExecuteUbergraph_WBP_QuestSecondaryObjective(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_QuestSecondaryObjective_C", "ExecuteUbergraph_WBP_QuestSecondaryObjective");
+
+	Params::WBP_QuestSecondaryObjective_C_ExecuteUbergraph_WBP_QuestSecondaryObjective Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass 2nd_Sword_Guard_Longbow.2nd_Sword_Guard_Longbow_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ATwond_Sword_Guard_Longbow_C final : public ABandit_Longbow_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ATwond_Sword_Guard_Longbow_C) == 0x000010, "Wrong alignment on ATwond_Sword_Guard_Longbow_C");
-static_assert(sizeof(ATwond_Sword_Guard_Longbow_C) == 0x001DB0, "Wrong size on ATwond_Sword_Guard_Longbow_C");
+static_assert(sizeof(ATwond_Sword_Guard_Longbow_C) == 0x001D70, "Wrong size on ATwond_Sword_Guard_Longbow_C");
 
 }
 

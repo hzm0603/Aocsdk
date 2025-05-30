@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Crab.Crab_C
-// 0x0010 (0x1DA0 - 0x1D90)
+// 0x0010 (0x1D60 - 0x1D50)
 class ACrab_C : public ANPCPawn_C
 {
 public:
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1D90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ACrab_C) == 0x000010, "Wrong alignment on ACrab_C");
-static_assert(sizeof(ACrab_C) == 0x001DA0, "Wrong size on ACrab_C");
-static_assert(offsetof(ACrab_C, Blackboard) == 0x001D90, "Member 'ACrab_C::Blackboard' has a wrong offset!");
+static_assert(sizeof(ACrab_C) == 0x001D60, "Wrong size on ACrab_C");
+static_assert(offsetof(ACrab_C, Blackboard) == 0x001D50, "Member 'ACrab_C::Blackboard' has a wrong offset!");
 
 }
 

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SSplineMeshEntry_structs.hpp"
-#include "ERoadBrushEditMode_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ERoadBrushEditMode_structs.hpp"
 
 
 namespace SDK

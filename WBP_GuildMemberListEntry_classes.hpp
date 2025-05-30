@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_GuildMemberListEntry.WBP_GuildMemberListEntry_C
-// 0x0008 (0x0440 - 0x0438)
+// 0x0008 (0x0448 - 0x0440)
 class UWBP_GuildMemberListEntry_C final : public UGuildMemberListItem
 {
 public:
-	class UCommonBorder*                          B_AlternatingBG;                                   // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          B_AlternatingBG;                                   // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UCommonBorder* GetBorder();
@@ -37,8 +37,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_GuildMemberListEntry_C) == 0x000008, "Wrong alignment on UWBP_GuildMemberListEntry_C");
-static_assert(sizeof(UWBP_GuildMemberListEntry_C) == 0x000440, "Wrong size on UWBP_GuildMemberListEntry_C");
-static_assert(offsetof(UWBP_GuildMemberListEntry_C, B_AlternatingBG) == 0x000438, "Member 'UWBP_GuildMemberListEntry_C::B_AlternatingBG' has a wrong offset!");
+static_assert(sizeof(UWBP_GuildMemberListEntry_C) == 0x000448, "Wrong size on UWBP_GuildMemberListEntry_C");
+static_assert(offsetof(UWBP_GuildMemberListEntry_C, B_AlternatingBG) == 0x000440, "Member 'UWBP_GuildMemberListEntry_C::B_AlternatingBG' has a wrong offset!");
 
 }
 

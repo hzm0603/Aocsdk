@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Ballista_Projectile.BP_Ballista_Projectile_C
-// 0x0008 (0x0598 - 0x0590)
+// 0x0008 (0x05A0 - 0x0598)
 class ABP_Ballista_Projectile_C final : public AAoCAbilityProjectile
 {
 public:
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_Ballista_Projectile_C) == 0x000008, "Wrong alignment on ABP_Ballista_Projectile_C");
-static_assert(sizeof(ABP_Ballista_Projectile_C) == 0x000598, "Wrong size on ABP_Ballista_Projectile_C");
-static_assert(offsetof(ABP_Ballista_Projectile_C, StaticMesh) == 0x000590, "Member 'ABP_Ballista_Projectile_C::StaticMesh' has a wrong offset!");
+static_assert(sizeof(ABP_Ballista_Projectile_C) == 0x0005A0, "Wrong size on ABP_Ballista_Projectile_C");
+static_assert(offsetof(ABP_Ballista_Projectile_C, StaticMesh) == 0x000598, "Member 'ABP_Ballista_Projectile_C::StaticMesh' has a wrong offset!");
 
 }
 

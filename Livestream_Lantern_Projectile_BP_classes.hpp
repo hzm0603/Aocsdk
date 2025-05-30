@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Livestream_Lantern_Projectile_BP.Livestream_Lantern_Projectile_BP_C
-// 0x0008 (0x0598 - 0x0590)
+// 0x0008 (0x05A0 - 0x0598)
 class ALivestream_Lantern_Projectile_BP_C final : public AAoCAbilityProjectile
 {
 public:
-	class UChildActorComponent*                   BP_Lantern01_Carry;                                // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   BP_Lantern01_Carry;                                // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ALivestream_Lantern_Projectile_BP_C) == 0x000008, "Wrong alignment on ALivestream_Lantern_Projectile_BP_C");
-static_assert(sizeof(ALivestream_Lantern_Projectile_BP_C) == 0x000598, "Wrong size on ALivestream_Lantern_Projectile_BP_C");
-static_assert(offsetof(ALivestream_Lantern_Projectile_BP_C, BP_Lantern01_Carry) == 0x000590, "Member 'ALivestream_Lantern_Projectile_BP_C::BP_Lantern01_Carry' has a wrong offset!");
+static_assert(sizeof(ALivestream_Lantern_Projectile_BP_C) == 0x0005A0, "Wrong size on ALivestream_Lantern_Projectile_BP_C");
+static_assert(offsetof(ALivestream_Lantern_Projectile_BP_C, BP_Lantern01_Carry) == 0x000598, "Member 'ALivestream_Lantern_Projectile_BP_C::BP_Lantern01_Carry' has a wrong offset!");
 
 }
 

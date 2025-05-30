@@ -24,13 +24,13 @@ namespace SDK
 // float                                   Equator_Rotation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Time_Of_Game_Day_24h                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Time_Of_Game_Year_Hours_0                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator                         SunROTin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FRotator                         Moon1ROT                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FRotator                         Moon2ROT                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FRotator                         Moon3ROT                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FRotator                         ArbitSunROT                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FRotator&                  SunROTin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FRotator&                  Moon1ROT                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FRotator&                  Moon2ROT                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FRotator&                  Moon3ROT                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FRotator&                  ArbitSunROT                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator                         SunROT                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FRotator*                        SunROT                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 double ABP_GlobalAtmospherics_C::Directional_ROTs(double Time_of_Game_Year_Normalized_input, float Equator_Rotation, double Time_Of_Game_Day_24h, double Time_Of_Game_Year_Hours_0, const struct FRotator& SunROTin, const struct FRotator& Moon1ROT, const struct FRotator& Moon2ROT, const struct FRotator& Moon3ROT, const struct FRotator& ArbitSunROT, struct FRotator* SunROT)
 {
@@ -84,7 +84,7 @@ void ABP_GlobalAtmospherics_C::ExecuteUbergraph_BP_GlobalAtmospherics(int32 Entr
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  In_Time                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFogExp_Fog_Struct                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFog*Exp_Fog_Struct                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Exp_Height_Fog_Param_Config(double In_Time, struct FSTRUCT_GlobalAtmosphereOutput_ExponentialHeightFog* Exp_Fog_Struct)
 {
@@ -107,7 +107,7 @@ void ABP_GlobalAtmospherics_C::Exp_Height_Fog_Param_Config(double In_Time, struc
 // Function BP_GlobalAtmospherics.BP_GlobalAtmospherics_C.Get Sun Dot
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double                                  Sun_Dot_Up_0                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Sun_Dot_Up_0                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Get_Sun_Dot(double* Sun_Dot_Up_0)
 {
@@ -129,9 +129,9 @@ void ABP_GlobalAtmospherics_C::Get_Sun_Dot(double* Sun_Dot_Up_0)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UCurveLinearColor*                Color_Curve                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     Default_Color                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              Default_Color                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Time_Input                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     Return_Color                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Return_Color                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Is_Valid_Curve__Color_(class UCurveLinearColor* Color_Curve, const struct FLinearColor& Default_Color, double Time_Input, struct FLinearColor* Return_Color)
 {
@@ -159,7 +159,7 @@ void ABP_GlobalAtmospherics_C::Is_Valid_Curve__Color_(class UCurveLinearColor* C
 // class UCurveFloat*                      Float_Curve                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // double                                  Default_Float                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Time_Input                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Return_Float                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Return_Float                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Is_Valid_Curve__Float_(class UCurveFloat* Float_Curve, double Default_Float, double Time_Input, double* Return_Float)
 {
@@ -199,7 +199,7 @@ void ABP_GlobalAtmospherics_C::Manage_Directional_Light_Shadows()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   Time_Of_Game_Day_24h                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput_MoonMoon_Struct_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_GlobalAtmosphereOutput_Moon*Moon_Struct_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Moon_Param_Config(float Time_Of_Game_Day_24h, struct FSTRUCT_GlobalAtmosphereOutput_Moon* Moon_Struct_0)
 {
@@ -243,9 +243,9 @@ void ABP_GlobalAtmospherics_C::ReceiveTick(float DeltaSeconds)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Use_Override                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // double                                  Player_Position_Z                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Fog_Height                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Fog_Height                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Run_Expo_Height_Fog_Params(bool Use_Override, const struct FSTRUCT_GlobalAtmosphereOutput& STRUCT_GlobalAtmosphereOutput, double Player_Position_Z, double* Fog_Height)
 {
@@ -271,7 +271,7 @@ void ABP_GlobalAtmospherics_C::Run_Expo_Height_Fog_Params(bool Use_Override, con
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Use_Override                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Run_Moon_Params(bool Use_Override, const struct FSTRUCT_GlobalAtmosphereOutput& STRUCT_GlobalAtmosphereOutput)
 {
@@ -293,7 +293,7 @@ void ABP_GlobalAtmospherics_C::Run_Moon_Params(bool Use_Override, const struct F
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Use_Override                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Run_Sky_Atmosphere_Params(bool Use_Override, const struct FSTRUCT_GlobalAtmosphereOutput& STRUCT_GlobalAtmosphereOutput)
 {
@@ -315,7 +315,7 @@ void ABP_GlobalAtmospherics_C::Run_Sky_Atmosphere_Params(bool Use_Override, cons
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Use_Override                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Run_Skylight_Parameters(bool Use_Override, const struct FSTRUCT_GlobalAtmosphereOutput& STRUCT_GlobalAtmosphereOutput)
 {
@@ -337,7 +337,7 @@ void ABP_GlobalAtmospherics_C::Run_Skylight_Parameters(bool Use_Override, const 
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Use_Override                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput   STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&STRUCT_GlobalAtmosphereOutput                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Run_Sun_Params(bool Use_Override, const struct FSTRUCT_GlobalAtmosphereOutput& STRUCT_GlobalAtmosphereOutput)
 {
@@ -358,15 +358,15 @@ void ABP_GlobalAtmospherics_C::Run_Sun_Params(bool Use_Override, const struct FS
 // Function BP_GlobalAtmospherics.BP_GlobalAtmospherics_C.RunIt
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSTRUCT_GlobalAtmosphereOutput   Final_Struct_Input                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_GlobalAtmosphereOutput&Final_Struct_Input                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UBPDA_CloudPreset_C*              Cloud_DA_for_testing                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    Cloud_Testing                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bNewVisibility                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UBPDA_CloudPreset_C*              CloudInput                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_CloudParameters          Cloud_Stuct                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_CloudParameters&   Cloud_Stuct                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Player_Position_Z                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  TOD_24hr                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Fog_Height                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Fog_Height                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::RunIt(const struct FSTRUCT_GlobalAtmosphereOutput& Final_Struct_Input, class UBPDA_CloudPreset_C* Cloud_DA_for_testing, bool Cloud_Testing, bool bNewVisibility, class UBPDA_CloudPreset_C* CloudInput, const struct FSTRUCT_CloudParameters& Cloud_Stuct, double Player_Position_Z, double TOD_24hr, double* Fog_Height)
 {
@@ -397,7 +397,7 @@ void ABP_GlobalAtmospherics_C::RunIt(const struct FSTRUCT_GlobalAtmosphereOutput
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   Tine_of_Game_Day_24h                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphereStructOut                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphere*StructOut                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Sky_Atmosphere_Param_Config(float Tine_of_Game_Day_24h, struct FSTRUCT_GlobalAtmosphereOutput_SkyAtmosphere* StructOut)
 {
@@ -421,7 +421,7 @@ void ABP_GlobalAtmospherics_C::Sky_Atmosphere_Param_Config(float Tine_of_Game_Da
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  In_Time                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput_SkylightSkylight_Struct_0                                      (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_GlobalAtmosphereOutput_Skylight*Skylight_Struct_0                                      (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Skylight_Param_Config(double In_Time, struct FSTRUCT_GlobalAtmosphereOutput_Skylight* Skylight_Struct_0)
 {
@@ -445,7 +445,7 @@ void ABP_GlobalAtmospherics_C::Skylight_Param_Config(double In_Time, struct FSTR
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   Tine_of_Game_Day_24h                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSTRUCT_GlobalAtmosphereOutput_SunSun_Struct_0                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSTRUCT_GlobalAtmosphereOutput_Sun*Sun_Struct_0                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Sun_Param_Config(float Tine_of_Game_Day_24h, struct FSTRUCT_GlobalAtmosphereOutput_Sun* Sun_Struct_0)
 {
@@ -468,7 +468,7 @@ void ABP_GlobalAtmospherics_C::Sun_Param_Config(float Tine_of_Game_Day_24h, stru
 // Function BP_GlobalAtmospherics.BP_GlobalAtmospherics_C.Volumetric Cloud Config
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSTRUCT_CloudParameters          STRUCT_CloudParameters                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSTRUCT_CloudParameters&   STRUCT_CloudParameters                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_GlobalAtmospherics_C::Volumetric_Cloud_Config(const struct FSTRUCT_CloudParameters& STRUCT_CloudParameters)
 {

@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FlameElemental_TheUntendedFlame.FlameElemental_TheUntendedFlame_C
-// 0x0010 (0x1DD0 - 0x1DC0)
+// 0x0010 (0x1D90 - 0x1D80)
 class AFlameElemental_TheUntendedFlame_C final : public AFlameElemental_C
 {
 public:
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1DB8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class ABP_LingeringEffect_UnstableFlamePatch_C*> FlamePatches;                            // 0x1DC0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class ABP_LingeringEffect_UnstableFlamePatch_C*> FlamePatches;                            // 0x1D80(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(AFlameElemental_TheUntendedFlame_C) == 0x000010, "Wrong alignment on AFlameElemental_TheUntendedFlame_C");
-static_assert(sizeof(AFlameElemental_TheUntendedFlame_C) == 0x001DD0, "Wrong size on AFlameElemental_TheUntendedFlame_C");
-static_assert(offsetof(AFlameElemental_TheUntendedFlame_C, Blackboard) == 0x001DB8, "Member 'AFlameElemental_TheUntendedFlame_C::Blackboard' has a wrong offset!");
-static_assert(offsetof(AFlameElemental_TheUntendedFlame_C, FlamePatches) == 0x001DC0, "Member 'AFlameElemental_TheUntendedFlame_C::FlamePatches' has a wrong offset!");
+static_assert(sizeof(AFlameElemental_TheUntendedFlame_C) == 0x001D90, "Wrong size on AFlameElemental_TheUntendedFlame_C");
+static_assert(offsetof(AFlameElemental_TheUntendedFlame_C, Blackboard) == 0x001D78, "Member 'AFlameElemental_TheUntendedFlame_C::Blackboard' has a wrong offset!");
+static_assert(offsetof(AFlameElemental_TheUntendedFlame_C, FlamePatches) == 0x001D80, "Member 'AFlameElemental_TheUntendedFlame_C::FlamePatches' has a wrong offset!");
 
 }
 

@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Fighter.Bandit_Fighter_C
-// 0x0010 (0x1DC0 - 0x1DB0)
+// 0x0010 (0x1D80 - 0x1D70)
 #pragma pack(push, 0x1)
 class alignas(0x10) ABandit_Fighter_C : public ABandit_Melee_Base_C
 {
 public:
-	class USkeletalMeshComponent*                 WeaponR;                                           // 0x1DB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 WeaponR;                                           // 0x1D70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,8 +36,8 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(ABandit_Fighter_C) == 0x000010, "Wrong alignment on ABandit_Fighter_C");
-static_assert(sizeof(ABandit_Fighter_C) == 0x001DC0, "Wrong size on ABandit_Fighter_C");
-static_assert(offsetof(ABandit_Fighter_C, WeaponR) == 0x001DB0, "Member 'ABandit_Fighter_C::WeaponR' has a wrong offset!");
+static_assert(sizeof(ABandit_Fighter_C) == 0x001D80, "Wrong size on ABandit_Fighter_C");
+static_assert(offsetof(ABandit_Fighter_C, WeaponR) == 0x001D70, "Member 'ABandit_Fighter_C::WeaponR' has a wrong offset!");
 
 }
 

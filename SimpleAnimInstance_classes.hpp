@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "SimpleAnimInstance_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "SimpleAnimInstance_structs.hpp"
 
 
 namespace SDK
@@ -89,8 +89,8 @@ public:
 	uint8                                         Race;                                              // 0x1921(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void ExecuteUbergraph_SimpleAnimInstance(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()

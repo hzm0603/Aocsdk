@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_GeneralActionsUMG.WBP_GeneralActionsUMG_C
-// 0x0000 (0x39D0 - 0x39D0)
+// 0x0000 (0x3940 - 0x3940)
 class UWBP_GeneralActionsUMG_C final : public UGeneralActionsBarUMG
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_GeneralActionsUMG_C) == 0x000010, "Wrong alignment on UWBP_GeneralActionsUMG_C");
-static_assert(sizeof(UWBP_GeneralActionsUMG_C) == 0x0039D0, "Wrong size on UWBP_GeneralActionsUMG_C");
+static_assert(sizeof(UWBP_GeneralActionsUMG_C) == 0x003940, "Wrong size on UWBP_GeneralActionsUMG_C");
 
 }
 

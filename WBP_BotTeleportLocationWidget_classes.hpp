@@ -30,9 +30,9 @@ public:
 	struct FBotTeleportLocation                   LocationData;                                      // 0x0310(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void BndEvt__RemoveButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void ExecuteUbergraph_WBP_BotTeleportLocationWidget(int32 EntryPoint);
 	void SetData(const struct FBotTeleportLocation& InData);
+	void ExecuteUbergraph_WBP_BotTeleportLocationWidget(int32 EntryPoint);
+	void BndEvt__RemoveButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

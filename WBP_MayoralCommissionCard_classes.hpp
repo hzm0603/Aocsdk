@@ -17,31 +17,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MayoralCommissionCard.WBP_MayoralCommissionCard_C
-// 0x00A8 (0x0440 - 0x0398)
+// 0x0088 (0x0510 - 0x0488)
 class UWBP_MayoralCommissionCard_C final : public UMayoralCommissionCard
 {
 public:
-	class UImage*                                 BaseBackgroundImage;                               // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 CommissionImage;                                   // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIntrepidVerticalBox*                   CommissionInfo;                                    // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 CommissionTypeIcon;                                // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ConditionalIcon;                                   // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         CurrencyPanel;                                     // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 DifficultyIcon;                                    // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ExperienceBarFrame;                                // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         ExpPanel;                                          // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ExpTextBlock;                                      // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    LevelTextBlock;                                    // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 RarityBackgroundImage;                             // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 RarityBorder;                                      // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CurrencyTiersItem_C*               RewardCurrencies;                                  // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 StatusImage;                                       // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_SlotCooldownLabel;                              // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon;                           // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon_1;                         // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon_2;                         // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_RewardContainerIcon_C*             WBP_RewardContainerIcon_3;                         // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 xpIcon;                                            // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BaseBackgroundImage;                               // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button;                                            // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CommissionImage;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIntrepidVerticalBox*                   CommissionInfo;                                    // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    CommissionTitle;                                   // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TimerTextBlock_C*                  CompleteCooldownTextBlock;                         // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           CompletionSection;                                 // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ConditionalIcon;                                   // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         CurrencyPanel;                                     // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 DifficultyIcon;                                    // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ExperienceBarFrame;                                // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         ExpPanel;                                          // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ExpTextBlock;                                      // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 RarityBorder;                                      // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CurrencyTiersItem_C*               RewardCurrencies;                                  // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_SlotCooldownLabel;                              // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 xpIcon;                                            // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -54,28 +50,24 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MayoralCommissionCard_C) == 0x000008, "Wrong alignment on UWBP_MayoralCommissionCard_C");
-static_assert(sizeof(UWBP_MayoralCommissionCard_C) == 0x000440, "Wrong size on UWBP_MayoralCommissionCard_C");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, BaseBackgroundImage) == 0x000398, "Member 'UWBP_MayoralCommissionCard_C::BaseBackgroundImage' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, CommissionImage) == 0x0003A0, "Member 'UWBP_MayoralCommissionCard_C::CommissionImage' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, CommissionInfo) == 0x0003A8, "Member 'UWBP_MayoralCommissionCard_C::CommissionInfo' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, CommissionTypeIcon) == 0x0003B0, "Member 'UWBP_MayoralCommissionCard_C::CommissionTypeIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, ConditionalIcon) == 0x0003B8, "Member 'UWBP_MayoralCommissionCard_C::ConditionalIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, CurrencyPanel) == 0x0003C0, "Member 'UWBP_MayoralCommissionCard_C::CurrencyPanel' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, DifficultyIcon) == 0x0003C8, "Member 'UWBP_MayoralCommissionCard_C::DifficultyIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, ExperienceBarFrame) == 0x0003D0, "Member 'UWBP_MayoralCommissionCard_C::ExperienceBarFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, ExpPanel) == 0x0003D8, "Member 'UWBP_MayoralCommissionCard_C::ExpPanel' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, ExpTextBlock) == 0x0003E0, "Member 'UWBP_MayoralCommissionCard_C::ExpTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, LevelTextBlock) == 0x0003E8, "Member 'UWBP_MayoralCommissionCard_C::LevelTextBlock' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, RarityBackgroundImage) == 0x0003F0, "Member 'UWBP_MayoralCommissionCard_C::RarityBackgroundImage' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, RarityBorder) == 0x0003F8, "Member 'UWBP_MayoralCommissionCard_C::RarityBorder' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, RewardCurrencies) == 0x000400, "Member 'UWBP_MayoralCommissionCard_C::RewardCurrencies' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, StatusImage) == 0x000408, "Member 'UWBP_MayoralCommissionCard_C::StatusImage' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, TB_SlotCooldownLabel) == 0x000410, "Member 'UWBP_MayoralCommissionCard_C::TB_SlotCooldownLabel' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, WBP_RewardContainerIcon) == 0x000418, "Member 'UWBP_MayoralCommissionCard_C::WBP_RewardContainerIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, WBP_RewardContainerIcon_1) == 0x000420, "Member 'UWBP_MayoralCommissionCard_C::WBP_RewardContainerIcon_1' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, WBP_RewardContainerIcon_2) == 0x000428, "Member 'UWBP_MayoralCommissionCard_C::WBP_RewardContainerIcon_2' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, WBP_RewardContainerIcon_3) == 0x000430, "Member 'UWBP_MayoralCommissionCard_C::WBP_RewardContainerIcon_3' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionCard_C, xpIcon) == 0x000438, "Member 'UWBP_MayoralCommissionCard_C::xpIcon' has a wrong offset!");
+static_assert(sizeof(UWBP_MayoralCommissionCard_C) == 0x000510, "Wrong size on UWBP_MayoralCommissionCard_C");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, BaseBackgroundImage) == 0x000488, "Member 'UWBP_MayoralCommissionCard_C::BaseBackgroundImage' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, Button) == 0x000490, "Member 'UWBP_MayoralCommissionCard_C::Button' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, CommissionImage) == 0x000498, "Member 'UWBP_MayoralCommissionCard_C::CommissionImage' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, CommissionInfo) == 0x0004A0, "Member 'UWBP_MayoralCommissionCard_C::CommissionInfo' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, CommissionTitle) == 0x0004A8, "Member 'UWBP_MayoralCommissionCard_C::CommissionTitle' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, CompleteCooldownTextBlock) == 0x0004B0, "Member 'UWBP_MayoralCommissionCard_C::CompleteCooldownTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, CompletionSection) == 0x0004B8, "Member 'UWBP_MayoralCommissionCard_C::CompletionSection' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, ConditionalIcon) == 0x0004C0, "Member 'UWBP_MayoralCommissionCard_C::ConditionalIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, CurrencyPanel) == 0x0004C8, "Member 'UWBP_MayoralCommissionCard_C::CurrencyPanel' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, DifficultyIcon) == 0x0004D0, "Member 'UWBP_MayoralCommissionCard_C::DifficultyIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, ExperienceBarFrame) == 0x0004D8, "Member 'UWBP_MayoralCommissionCard_C::ExperienceBarFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, ExpPanel) == 0x0004E0, "Member 'UWBP_MayoralCommissionCard_C::ExpPanel' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, ExpTextBlock) == 0x0004E8, "Member 'UWBP_MayoralCommissionCard_C::ExpTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, RarityBorder) == 0x0004F0, "Member 'UWBP_MayoralCommissionCard_C::RarityBorder' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, RewardCurrencies) == 0x0004F8, "Member 'UWBP_MayoralCommissionCard_C::RewardCurrencies' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, TB_SlotCooldownLabel) == 0x000500, "Member 'UWBP_MayoralCommissionCard_C::TB_SlotCooldownLabel' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionCard_C, xpIcon) == 0x000508, "Member 'UWBP_MayoralCommissionCard_C::xpIcon' has a wrong offset!");
 
 }
 

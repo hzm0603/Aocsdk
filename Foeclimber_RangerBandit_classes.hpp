@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Foeclimber_RangerBandit.Foeclimber_RangerBandit_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class AFoeclimber_RangerBandit_C final : public ARangerBandit_Base_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AFoeclimber_RangerBandit_C) == 0x000010, "Wrong alignment on AFoeclimber_RangerBandit_C");
-static_assert(sizeof(AFoeclimber_RangerBandit_C) == 0x001DB0, "Wrong size on AFoeclimber_RangerBandit_C");
+static_assert(sizeof(AFoeclimber_RangerBandit_C) == 0x001D70, "Wrong size on AFoeclimber_RangerBandit_C");
 
 }
 

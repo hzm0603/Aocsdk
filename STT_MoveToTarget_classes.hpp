@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "STT_Base_classes.hpp"
 #include "Engine_structs.hpp"
-#include "EAIMovementOrientation_structs.hpp"
 #include "DesignDataPlugin_structs.hpp"
+#include "EAIMovementOrientation_structs.hpp"
+#include "STT_Base_classes.hpp"
 #include "AIModule_structs.hpp"
 
 

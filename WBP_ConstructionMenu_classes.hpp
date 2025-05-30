@@ -18,17 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ConstructionMenu.WBP_ConstructionMenu_C
-// 0x0018 (0x0420 - 0x0408)
+// 0x0028 (0x03A0 - 0x0378)
 class UWBP_ConstructionMenu_C final : public UConstructionMenu
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAoCCommonTextBlock*                    NPCFlavorText;                                     // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_ConstructionInProgress;                         // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAoCCommonTextBlock*                    NoActiveCommissionsTextBlock;                      // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    NPCFlavorText;                                     // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   ScW_RequiredMaterials;                             // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_ConstructionInProgress;                         // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_ConstructionMenu(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_ConstructionMenu(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,10 +43,12 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ConstructionMenu_C) == 0x000008, "Wrong alignment on UWBP_ConstructionMenu_C");
-static_assert(sizeof(UWBP_ConstructionMenu_C) == 0x000420, "Wrong size on UWBP_ConstructionMenu_C");
-static_assert(offsetof(UWBP_ConstructionMenu_C, UberGraphFrame) == 0x000408, "Member 'UWBP_ConstructionMenu_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_ConstructionMenu_C, NPCFlavorText) == 0x000410, "Member 'UWBP_ConstructionMenu_C::NPCFlavorText' has a wrong offset!");
-static_assert(offsetof(UWBP_ConstructionMenu_C, TB_ConstructionInProgress) == 0x000418, "Member 'UWBP_ConstructionMenu_C::TB_ConstructionInProgress' has a wrong offset!");
+static_assert(sizeof(UWBP_ConstructionMenu_C) == 0x0003A0, "Wrong size on UWBP_ConstructionMenu_C");
+static_assert(offsetof(UWBP_ConstructionMenu_C, UberGraphFrame) == 0x000378, "Member 'UWBP_ConstructionMenu_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_ConstructionMenu_C, NoActiveCommissionsTextBlock) == 0x000380, "Member 'UWBP_ConstructionMenu_C::NoActiveCommissionsTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_ConstructionMenu_C, NPCFlavorText) == 0x000388, "Member 'UWBP_ConstructionMenu_C::NPCFlavorText' has a wrong offset!");
+static_assert(offsetof(UWBP_ConstructionMenu_C, ScW_RequiredMaterials) == 0x000390, "Member 'UWBP_ConstructionMenu_C::ScW_RequiredMaterials' has a wrong offset!");
+static_assert(offsetof(UWBP_ConstructionMenu_C, TB_ConstructionInProgress) == 0x000398, "Member 'UWBP_ConstructionMenu_C::TB_ConstructionInProgress' has a wrong offset!");
 
 }
 

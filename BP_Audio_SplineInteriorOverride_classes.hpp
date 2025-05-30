@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "SStartStopAudioEvents_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -33,7 +33,7 @@ public:
 	bool                                          IsInsideSpline;                                    // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        DotValue;                                          // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                AKEmitterLocation;                                 // 0x0380(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                AkEmitterLocation;                                 // 0x0380(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        TimerLazy;                                         // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsLazy;                                            // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInitialized;                                     // 0x03A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -52,6 +52,7 @@ public:
 	void GetInsideSpline(bool* IsInsideSpine_, bool* IsInsideSplineChanged_);
 	void GetPlayerControllerCameraRotation(struct FRotator* PlayerControllerCameraRotation);
 	class USplineComponent* GetSplineComponent();
+	class USceneComponent* GetSplineEmitterComponent();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void Set_AK_State();
@@ -78,7 +79,7 @@ static_assert(offsetof(ABP_Audio_SplineInteriorOverride_C, HiddenInGame) == 0x00
 static_assert(offsetof(ABP_Audio_SplineInteriorOverride_C, MaxRangeFadeDistance) == 0x000368, "Member 'ABP_Audio_SplineInteriorOverride_C::MaxRangeFadeDistance' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineInteriorOverride_C, IsInsideSpline) == 0x000370, "Member 'ABP_Audio_SplineInteriorOverride_C::IsInsideSpline' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineInteriorOverride_C, DotValue) == 0x000378, "Member 'ABP_Audio_SplineInteriorOverride_C::DotValue' has a wrong offset!");
-static_assert(offsetof(ABP_Audio_SplineInteriorOverride_C, AKEmitterLocation) == 0x000380, "Member 'ABP_Audio_SplineInteriorOverride_C::AKEmitterLocation' has a wrong offset!");
+static_assert(offsetof(ABP_Audio_SplineInteriorOverride_C, AkEmitterLocation) == 0x000380, "Member 'ABP_Audio_SplineInteriorOverride_C::AkEmitterLocation' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineInteriorOverride_C, TimerLazy) == 0x000398, "Member 'ABP_Audio_SplineInteriorOverride_C::TimerLazy' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineInteriorOverride_C, IsLazy) == 0x0003A0, "Member 'ABP_Audio_SplineInteriorOverride_C::IsLazy' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineInteriorOverride_C, IsInitialized) == 0x0003A1, "Member 'ABP_Audio_SplineInteriorOverride_C::IsInitialized' has a wrong offset!");

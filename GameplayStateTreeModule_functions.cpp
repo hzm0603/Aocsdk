@@ -20,7 +20,7 @@ namespace SDK
 // Function GameplayStateTreeModule.StateTreeComponent.SendStateTreeEvent
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FStateTreeEvent                  Event                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FStateTreeEvent&           Event                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UStateTreeComponent::SendStateTreeEvent(const struct FStateTreeEvent& Event)
 {
@@ -45,7 +45,7 @@ void UStateTreeComponent::SendStateTreeEvent(const struct FStateTreeEvent& Event
 // Function GameplayStateTreeModule.StateTreeComponent.SetStartLogicAutomatically
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                                    bInStartLogicAutomatically                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bInStartLogicAutomatically                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UStateTreeComponent::SetStartLogicAutomatically(const bool bInStartLogicAutomatically)
 {

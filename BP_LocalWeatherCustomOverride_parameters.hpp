@@ -17,55 +17,70 @@
 namespace SDK::Params
 {
 
-// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0108 (0x0108 - 0x0000)
-struct BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature final
+// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.UserConstructionScript
+// 0x01F0 (0x01F0 - 0x0000)
+struct BP_LocalWeatherCustomOverride_C_UserConstructionScript final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Temp_struct_Variable;                              // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x00F0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1;   // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherBodyIndex) == 0x000018, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, bFromSweep) == 0x00001C, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::bFromSweep' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, SweepResult) == 0x000020, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::SweepResult' has a wrong offset!");
+static_assert(alignof(BP_LocalWeatherCustomOverride_C_UserConstructionScript) == 0x000010, "Wrong alignment on BP_LocalWeatherCustomOverride_C_UserConstructionScript");
+static_assert(sizeof(BP_LocalWeatherCustomOverride_C_UserConstructionScript) == 0x0001F0, "Wrong size on BP_LocalWeatherCustomOverride_C_UserConstructionScript");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue) == 0x000008, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_IsValid_ReturnValue) == 0x000009, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, Temp_struct_Variable) == 0x000010, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue) == 0x000070, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000078, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000080, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000098, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_GetComponentBounds_Origin) == 0x0000A0, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_GetComponentBounds_Origin' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_GetComponentBounds_BoxExtent) == 0x0000B8, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_GetComponentBounds_BoxExtent' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_GetComponentBounds_SphereRadius) == 0x0000D0, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_GetComponentBounds_SphereRadius' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Add_VectorVector_ReturnValue) == 0x0000D8, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x0000F0, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0001D8, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1) == 0x0001E0, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast) == 0x0001E8, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast' has a wrong offset!");
 
-// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
-struct BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature final
+// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_LocalWeatherCustomOverride_C_ReceiveTick final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
-static_assert(sizeof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature) == 0x000020, "Wrong size on BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherBodyIndex) == 0x000018, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherBodyIndex' has a wrong offset!");
+static_assert(alignof(BP_LocalWeatherCustomOverride_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_LocalWeatherCustomOverride_C_ReceiveTick");
+static_assert(sizeof(BP_LocalWeatherCustomOverride_C_ReceiveTick) == 0x000004, "Wrong size on BP_LocalWeatherCustomOverride_C_ReceiveTick");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
-// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.Catch Initial Overlaps
+// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.Initial Overlap
 // 0x0008 (0x0008 - 0x0000)
-struct BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps final
+struct BP_LocalWeatherCustomOverride_C_Initial_Overlap final
 {
 public:
-	class UPrimitiveComponent*                    Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Player_Pawn_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps) == 0x000008, "Wrong alignment on BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps");
-static_assert(sizeof(BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps) == 0x000008, "Wrong size on BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps, Component) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps::Component' has a wrong offset!");
+static_assert(alignof(BP_LocalWeatherCustomOverride_C_Initial_Overlap) == 0x000008, "Wrong alignment on BP_LocalWeatherCustomOverride_C_Initial_Overlap");
+static_assert(sizeof(BP_LocalWeatherCustomOverride_C_Initial_Overlap) == 0x000008, "Wrong size on BP_LocalWeatherCustomOverride_C_Initial_Overlap");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_Initial_Overlap, Player_Pawn_0) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_Initial_Overlap::Player_Pawn_0' has a wrong offset!");
 
 // Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.ExecuteUbergraph_BP_LocalWeatherCustomOverride
 // 0x0240 (0x0240 - 0x0000)
@@ -178,70 +193,55 @@ static_assert(offsetof(BP_LocalWeatherCustomOverride_C_ExecuteUbergraph_BP_Local
 static_assert(offsetof(BP_LocalWeatherCustomOverride_C_ExecuteUbergraph_BP_LocalWeatherCustomOverride, CallFunc_BooleanAND_ReturnValue_1) == 0x000232, "Member 'BP_LocalWeatherCustomOverride_C_ExecuteUbergraph_BP_LocalWeatherCustomOverride::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_LocalWeatherCustomOverride_C_ExecuteUbergraph_BP_LocalWeatherCustomOverride, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000238, "Member 'BP_LocalWeatherCustomOverride_C_ExecuteUbergraph_BP_LocalWeatherCustomOverride::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
-// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.Initial Overlap
+// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.Catch Initial Overlaps
 // 0x0008 (0x0008 - 0x0000)
-struct BP_LocalWeatherCustomOverride_C_Initial_Overlap final
+struct BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps final
 {
 public:
-	class AActor*                                 Player_Pawn_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LocalWeatherCustomOverride_C_Initial_Overlap) == 0x000008, "Wrong alignment on BP_LocalWeatherCustomOverride_C_Initial_Overlap");
-static_assert(sizeof(BP_LocalWeatherCustomOverride_C_Initial_Overlap) == 0x000008, "Wrong size on BP_LocalWeatherCustomOverride_C_Initial_Overlap");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_Initial_Overlap, Player_Pawn_0) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_Initial_Overlap::Player_Pawn_0' has a wrong offset!");
+static_assert(alignof(BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps) == 0x000008, "Wrong alignment on BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps");
+static_assert(sizeof(BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps) == 0x000008, "Wrong size on BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps, Component) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_Catch_Initial_Overlaps::Component' has a wrong offset!");
 
-// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_LocalWeatherCustomOverride_C_ReceiveTick final
+// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
+// 0x0020 (0x0020 - 0x0000)
+struct BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature final
 {
 public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LocalWeatherCustomOverride_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_LocalWeatherCustomOverride_C_ReceiveTick");
-static_assert(sizeof(BP_LocalWeatherCustomOverride_C_ReceiveTick) == 0x000004, "Wrong size on BP_LocalWeatherCustomOverride_C_ReceiveTick");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+static_assert(alignof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+static_assert(sizeof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature) == 0x000020, "Wrong size on BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherBodyIndex) == 0x000018, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherBodyIndex' has a wrong offset!");
 
-// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.UserConstructionScript
-// 0x01F0 (0x01F0 - 0x0000)
-struct BP_LocalWeatherCustomOverride_C_UserConstructionScript final
+// Function BP_LocalWeatherCustomOverride.BP_LocalWeatherCustomOverride_C.BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
+// 0x0108 (0x0108 - 0x0000)
+struct BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Temp_struct_Variable;                              // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x00F0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1;   // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_LocalWeatherCustomOverride_C_UserConstructionScript) == 0x000010, "Wrong alignment on BP_LocalWeatherCustomOverride_C_UserConstructionScript");
-static_assert(sizeof(BP_LocalWeatherCustomOverride_C_UserConstructionScript) == 0x0001F0, "Wrong size on BP_LocalWeatherCustomOverride_C_UserConstructionScript");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_GetGameState_ReturnValue) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue) == 0x000008, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_IsValid_ReturnValue) == 0x000009, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, Temp_struct_Variable) == 0x000010, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue) == 0x000070, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000078, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000080, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000098, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_GetComponentBounds_Origin) == 0x0000A0, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_GetComponentBounds_Origin' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_GetComponentBounds_BoxExtent) == 0x0000B8, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_GetComponentBounds_BoxExtent' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_GetComponentBounds_SphereRadius) == 0x0000D0, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_GetComponentBounds_SphereRadius' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Add_VectorVector_ReturnValue) == 0x0000D8, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x0000F0, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0001D8, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1) == 0x0001E0, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_LocalWeatherCustomOverride_C_UserConstructionScript, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast) == 0x0001E8, "Member 'BP_LocalWeatherCustomOverride_C_UserConstructionScript::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast' has a wrong offset!");
+static_assert(alignof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(sizeof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherBodyIndex) == 0x000018, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, bFromSweep) == 0x00001C, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::bFromSweep' has a wrong offset!");
+static_assert(offsetof(BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, SweepResult) == 0x000020, "Member 'BP_LocalWeatherCustomOverride_C_BndEvt__BP_LocalWeatherCustomOverride_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::SweepResult' has a wrong offset!");
 
 }
 

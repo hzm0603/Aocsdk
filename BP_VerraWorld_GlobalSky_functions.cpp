@@ -86,8 +86,8 @@ void ABP_VerraWorld_GlobalSky_C::Apply_Niagara_and_Material_Params()
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Apply Weather Override
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSingleDayClimate                StructRef                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FSingleDayClimate                Output_Get                                             (Parm, OutParm)
+// struct FSingleDayClimate&               StructRef                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FSingleDayClimate*               Output_Get                                             (Parm, OutParm)
 
 void ABP_VerraWorld_GlobalSky_C::Apply_Weather_Override(struct FSingleDayClimate& StructRef, struct FSingleDayClimate* Output_Get)
 {
@@ -140,8 +140,8 @@ void ABP_VerraWorld_GlobalSky_C::BiomePostProcessBlend()
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.BiomePPVValidChecks
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSTRUCT_PostProcessDefaultSettingsSTRUCT_PostProcessDefaultSettings                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// class FString                           Biome_Color                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FSTRUCT_PostProcessDefaultSettings&STRUCT_PostProcessDefaultSettings                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const class FString&                    Biome_Color                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // float                                   BiomeAmount                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_VerraWorld_GlobalSky_C::BiomePPVValidChecks(const struct FSTRUCT_PostProcessDefaultSettings& STRUCT_PostProcessDefaultSettings, const class FString& Biome_Color, float BiomeAmount)
@@ -189,6 +189,26 @@ void ABP_VerraWorld_GlobalSky_C::Blend_Current_Atmosphere_With_Overrides()
 }
 
 
+// Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.BlendCurrentAtmoAndWeather
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+double ABP_VerraWorld_GlobalSky_C::BlendCurrentAtmoAndWeather()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VerraWorld_GlobalSky_C", "BlendCurrentAtmoAndWeather");
+
+	Params::BP_VerraWorld_GlobalSky_C_BlendCurrentAtmoAndWeather Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Calculate WInd
 // (BlueprintCallable, BlueprintEvent)
 
@@ -206,7 +226,7 @@ void ABP_VerraWorld_GlobalSky_C::Calculate_WInd()
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Cast
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Cast_Is_Valid                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Cast_Is_Valid                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_VerraWorld_GlobalSky_C::Cast(bool* Cast_Is_Valid)
 {
@@ -269,7 +289,7 @@ void ABP_VerraWorld_GlobalSky_C::End_Adjust_Weather()
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Event - Add Blend Settings
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FAtmoBlendSettings               Blend_Settings                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FAtmoBlendSettings&        Blend_Settings                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // int32                                   Override_Volmume_Hash                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_VerraWorld_GlobalSky_C::Event___Add_Blend_Settings(const struct FAtmoBlendSettings& Blend_Settings, int32 Override_Volmume_Hash)
@@ -347,6 +367,46 @@ void ABP_VerraWorld_GlobalSky_C::Event_Set_Biome(bool Set_Biome, EBiomeType Biom
 
 	Parms.Set_Biome = Set_Biome;
 	Parms.Biome = Biome;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Event Set Fog
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Fog_Amount_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_VerraWorld_GlobalSky_C::Event_Set_Fog(double Fog_Amount_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VerraWorld_GlobalSky_C", "Event Set Fog");
+
+	Params::BP_VerraWorld_GlobalSky_C_Event_Set_Fog Parms{};
+
+	Parms.Fog_Amount_0 = Fog_Amount_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.EventSetWetness
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Wetness_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_VerraWorld_GlobalSky_C::EventSetWetness(double Wetness_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VerraWorld_GlobalSky_C", "EventSetWetness");
+
+	Params::BP_VerraWorld_GlobalSky_C_EventSetWetness Parms{};
+
+	Parms.Wetness_0 = Wetness_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -473,7 +533,7 @@ void ABP_VerraWorld_GlobalSky_C::ForceEditorTick()
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Get 0-1 TimeOfDay Normalized
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double                                  Zero_1_Time_of_Day_Normalized                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Zero_1_Time_of_Day_Normalized                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_VerraWorld_GlobalSky_C::Get_0_1_TimeOfDay_Normalized(double* Zero_1_Time_of_Day_Normalized)
 {
@@ -529,7 +589,7 @@ void ABP_VerraWorld_GlobalSky_C::Get_World_Sample_Locaiton_and_Biome_Update()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // EBiomeType                              Biome                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  MaxTemp                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 MaxTemp                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_VerraWorld_GlobalSky_C::GetMaxPrecip(EBiomeType Biome, double* MaxTemp)
 {
@@ -552,7 +612,7 @@ void ABP_VerraWorld_GlobalSky_C::GetMaxPrecip(EBiomeType Biome, double* MaxTemp)
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.GetWeatherType
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EWeatherType                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 EWeatherType ABP_VerraWorld_GlobalSky_C::GetWeatherType(const struct FVector& Location)
@@ -609,7 +669,7 @@ void ABP_VerraWorld_GlobalSky_C::Height_Based_Fog_Update()
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Initalize BiomeManager
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Returned_Correct_Biome                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Returned_Correct_Biome                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_VerraWorld_GlobalSky_C::Initalize_BiomeManager(bool* Returned_Correct_Biome)
 {
@@ -658,7 +718,7 @@ void ABP_VerraWorld_GlobalSky_C::Initalize_Player_LOC()
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Initialize Global Atmosphere
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Sun_is_in_the_RIght_Spot                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Sun_is_in_the_RIght_Spot                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_VerraWorld_GlobalSky_C::Initialize_Global_Atmosphere(bool* Sun_is_in_the_RIght_Spot)
 {
@@ -704,11 +764,25 @@ void ABP_VerraWorld_GlobalSky_C::Initialize_Weather()
 }
 
 
+// Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.LandscapeSamplerUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_VerraWorld_GlobalSky_C::LandscapeSamplerUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VerraWorld_GlobalSky_C", "LandscapeSamplerUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Lerp 4Vector
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FVector4                         in_Vector_A                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector4                         in_Vector_B                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector4&                  in_Vector_A                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector4&                  in_Vector_B                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  ALPHA                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -734,10 +808,10 @@ struct FVector4 ABP_VerraWorld_GlobalSky_C::Lerp_4Vector(const struct FVector4& 
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Lerp Color Grade Per Range
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FColorGradePerRangeSettings      ColorGradePerRangeSettings_A                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-// struct FColorGradePerRangeSettings      ColorGradePerRangeSettings_B                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FColorGradePerRangeSettings&ColorGradePerRangeSettings_A                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const struct FColorGradePerRangeSettings&ColorGradePerRangeSettings_B                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // double                                  ALPHA                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FColorGradePerRangeSettings      StructOut                                              (Parm, OutParm, NoDestructor)
+// struct FColorGradePerRangeSettings*     StructOut                                              (Parm, OutParm, NoDestructor)
 
 void ABP_VerraWorld_GlobalSky_C::Lerp_Color_Grade_Per_Range(const struct FColorGradePerRangeSettings& ColorGradePerRangeSettings_A, const struct FColorGradePerRangeSettings& ColorGradePerRangeSettings_B, double ALPHA, struct FColorGradePerRangeSettings* StructOut)
 {
@@ -831,7 +905,7 @@ void ABP_VerraWorld_GlobalSky_C::OnInteriorAmountUpdated_Event(double Value)
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  ALPHA                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Output_Get                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Output_Get                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_VerraWorld_GlobalSky_C::Post_Process_Blend_Day_Night(double ALPHA, double* Output_Get)
 {
@@ -888,6 +962,32 @@ void ABP_VerraWorld_GlobalSky_C::PreThrottleTick()
 }
 
 
+// Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Random Weather Flucuations - Test Deletemelater
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  In_Float                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  In_Time_of_Year_in_hours                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Post_Noise                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_VerraWorld_GlobalSky_C::Random_Weather_Flucuations___Test_Deletemelater(double In_Float, double In_Time_of_Year_in_hours, double* Post_Noise)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VerraWorld_GlobalSky_C", "Random Weather Flucuations - Test Deletemelater");
+
+	Params::BP_VerraWorld_GlobalSky_C_Random_Weather_Flucuations___Test_Deletemelater Parms{};
+
+	Parms.In_Float = In_Float;
+	Parms.In_Time_of_Year_in_hours = In_Time_of_Year_in_hours;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Post_Noise != nullptr)
+		*Post_Noise = Parms.Post_Noise;
+}
+
+
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -905,9 +1005,9 @@ void ABP_VerraWorld_GlobalSky_C::ReceiveBeginPlay()
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.ReceiveParticleData
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FBasicParticleData>       Data                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<struct FBasicParticleData>&Data                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class UNiagaraSystem*                   NiagaraSystem                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          SimulationPositionOffset                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   SimulationPositionOffset                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_VerraWorld_GlobalSky_C::ReceiveParticleData(const TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, const struct FVector& SimulationPositionOffset)
 {
@@ -977,6 +1077,29 @@ void ABP_VerraWorld_GlobalSky_C::Register_InfoWaterRender(class ABP_WaterInfoRen
 	Parms.Ref = Ref;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.S-Curve
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  In                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+double ABP_VerraWorld_GlobalSky_C::S_Curve(double In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VerraWorld_GlobalSky_C", "S-Curve");
+
+	Params::BP_VerraWorld_GlobalSky_C_S_Curve Parms{};
+
+	Parms.In = In;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -1274,15 +1397,15 @@ void ABP_VerraWorld_GlobalSky_C::Sun_Positions_Function()
 }
 
 
-// Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.TEST_LightningRT
+// Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.TEST_Lightning
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_VerraWorld_GlobalSky_C::TEST_LightningRT()
+void ABP_VerraWorld_GlobalSky_C::TEST_Lightning()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VerraWorld_GlobalSky_C", "TEST_LightningRT");
+		Func = Class->GetFunction("BP_VerraWorld_GlobalSky_C", "TEST_Lightning");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1316,6 +1439,20 @@ void ABP_VerraWorld_GlobalSky_C::ToggleVolumetricClouds()
 }
 
 
+// Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Update Atmo Based On Weather
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_VerraWorld_GlobalSky_C::Update_Atmo_Based_On_Weather()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VerraWorld_GlobalSky_C", "Update Atmo Based On Weather");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_VerraWorld_GlobalSky.BP_VerraWorld_GlobalSky_C.Update Audio
 // (BlueprintCallable, BlueprintEvent)
 
@@ -1335,7 +1472,7 @@ void ABP_VerraWorld_GlobalSky_C::Update_Audio()
 // Parameters:
 // float                                   ALPHA                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVerraGlobalSkyVolumetricCloudSettingsReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
-// double                                  ReturnValue1                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 ReturnValue1                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 struct FVerraGlobalSkyVolumetricCloudSettings ABP_VerraWorld_GlobalSky_C::Update_Cloud_Blend(float ALPHA, double* ReturnValue1)
 {
@@ -1493,7 +1630,7 @@ void ABP_VerraWorld_GlobalSky_C::WeatherTransition(double Transition)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // double                                  WindSpeedFromRT_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Output_Get                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Output_Get                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_VerraWorld_GlobalSky_C::Wind_Override(double WindSpeedFromRT_0, double* Output_Get)
 {

@@ -10,1633 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "ST_DamageMeterData_structs.hpp"
-#include "ST_DamageMeterHitInfo_structs.hpp"
-#include "ST_DamageMeterMapData_structs.hpp"
-#include "ST_DamageMeterTimeData_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ST_DamageMeterData_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ST_DamageMeterHitInfo_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
 #include "ST_DamageMeterBarData_structs.hpp"
+#include "ST_DamageMeterMapData_structs.hpp"
 #include "ST_DamageMeterHitData_structs.hpp"
+#include "ST_DamageMeterTimeData_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.AddDataToMap
-// 0x0198 (0x0198 - 0x0000)
-struct WBP_DamageMeter_C_AddDataToMap final
-{
-public:
-	struct FST_DamageMeterMapData                 Map;                                               // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-	double                                        Value;                                             // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectiveValue;                                    // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         HitGuid;                                           // 0x0070(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Flags_0;                                           // 0x0078(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_And_IntInt_ReturnValue;                   // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value;                           // 0x00A0(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value_1;                         // 0x00D8(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_109[0x3];                                      // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_3;           // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_4;           // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterHitData                 K2Node_MakeStruct_ST_DamageMeterHitData;           // 0x0130(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_5;           // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterHitData                 K2Node_MakeStruct_ST_DamageMeterHitData_1;         // 0x0168(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_AddDataToMap) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_AddDataToMap");
-static_assert(sizeof(WBP_DamageMeter_C_AddDataToMap) == 0x000198, "Wrong size on WBP_DamageMeter_C_AddDataToMap");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, Map) == 0x000000, "Member 'WBP_DamageMeter_C_AddDataToMap::Map' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, Value) == 0x000060, "Member 'WBP_DamageMeter_C_AddDataToMap::Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, EffectiveValue) == 0x000068, "Member 'WBP_DamageMeter_C_AddDataToMap::EffectiveValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, HitGuid) == 0x000070, "Member 'WBP_DamageMeter_C_AddDataToMap::HitGuid' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, Flags_0) == 0x000078, "Member 'WBP_DamageMeter_C_AddDataToMap::Flags_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_MakeLiteralByte_ReturnValue) == 0x000079, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00007C, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x000080, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000088, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_And_IntInt_ReturnValue) == 0x000090, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_And_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Conv_IntToBool_ReturnValue) == 0x000094, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000098, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Map_Find_Value) == 0x0000A0, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Map_Find_ReturnValue) == 0x0000D0, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Map_Find_Value_1) == 0x0000D8, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Map_Find_ReturnValue_1) == 0x000108, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_IntInt_ReturnValue) == 0x00010C, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_IntInt_ReturnValue_1) == 0x000110, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000118, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x000120, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue_4) == 0x000128, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, K2Node_MakeStruct_ST_DamageMeterHitData) == 0x000130, "Member 'WBP_DamageMeter_C_AddDataToMap::K2Node_MakeStruct_ST_DamageMeterHitData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue_5) == 0x000160, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, K2Node_MakeStruct_ST_DamageMeterHitData_1) == 0x000168, "Member 'WBP_DamageMeter_C_AddDataToMap::K2Node_MakeStruct_ST_DamageMeterHitData_1' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.AddDataToMaps
-// 0x00F0 (0x00F0 - 0x0000)
-struct WBP_DamageMeter_C_AddDataToMaps final
-{
-public:
-	struct FST_DamageMeterMapData                 Map;                                               // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-	TMap<struct FGuid, int32>                     indexMap;                                          // 0x0060(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<struct FST_DamageMeterMapData>         targetArary;                                       // 0x00B0(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGuid                                  Target;                                            // 0x00C0(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Value;                                             // 0x00D0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectiveValue;                                    // 0x00D8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         HitGuid;                                           // 0x00E0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Flags_0;                                           // 0x00E8(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_AddDataToMaps) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_AddDataToMaps");
-static_assert(sizeof(WBP_DamageMeter_C_AddDataToMaps) == 0x0000F0, "Wrong size on WBP_DamageMeter_C_AddDataToMaps");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, Map) == 0x000000, "Member 'WBP_DamageMeter_C_AddDataToMaps::Map' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, indexMap) == 0x000060, "Member 'WBP_DamageMeter_C_AddDataToMaps::indexMap' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, targetArary) == 0x0000B0, "Member 'WBP_DamageMeter_C_AddDataToMaps::targetArary' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, Target) == 0x0000C0, "Member 'WBP_DamageMeter_C_AddDataToMaps::Target' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, Value) == 0x0000D0, "Member 'WBP_DamageMeter_C_AddDataToMaps::Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, EffectiveValue) == 0x0000D8, "Member 'WBP_DamageMeter_C_AddDataToMaps::EffectiveValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, HitGuid) == 0x0000E0, "Member 'WBP_DamageMeter_C_AddDataToMaps::HitGuid' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, Flags_0) == 0x0000E8, "Member 'WBP_DamageMeter_C_AddDataToMaps::Flags_0' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.AddDataToTargetMap
-// 0x0100 (0x0100 - 0x0000)
-struct WBP_DamageMeter_C_AddDataToTargetMap final
-{
-public:
-	TMap<struct FGuid, int32>                     TargetIndexMap;                                    // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<struct FST_DamageMeterMapData>         TargetMap;                                         // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGuid                                  Target;                                            // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Value;                                             // 0x0070(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectiveValue;                                    // 0x0078(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         HitGuid;                                           // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Flags_0;                                           // 0x0088(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterMapData                 K2Node_MakeStruct_ST_DamageMeterMapData;           // 0x0090(0x0060)(HasGetValueTypeHash)
-	int32                                         CallFunc_Map_Find_Value;                           // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_AddDataToTargetMap) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_AddDataToTargetMap");
-static_assert(sizeof(WBP_DamageMeter_C_AddDataToTargetMap) == 0x000100, "Wrong size on WBP_DamageMeter_C_AddDataToTargetMap");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, TargetIndexMap) == 0x000000, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::TargetIndexMap' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, TargetMap) == 0x000050, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::TargetMap' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, Target) == 0x000060, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::Target' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, Value) == 0x000070, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, EffectiveValue) == 0x000078, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::EffectiveValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, HitGuid) == 0x000080, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::HitGuid' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, Flags_0) == 0x000088, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::Flags_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, K2Node_MakeStruct_ST_DamageMeterMapData) == 0x000090, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::K2Node_MakeStruct_ST_DamageMeterMapData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, CallFunc_Map_Find_Value) == 0x0000F0, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, CallFunc_Map_Find_ReturnValue) == 0x0000F4, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, CallFunc_Array_Add_ReturnValue) == 0x0000F8, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, CallFunc_Array_Length_ReturnValue) == 0x0000FC, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.AddMissToMap
-// 0x00D0 (0x00D0 - 0x0000)
-struct WBP_DamageMeter_C_AddMissToMap final
-{
-public:
-	struct FST_DamageMeterMapData                 Map;                                               // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-	int64                                         HitGuid;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value;                           // 0x0068(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterHitData                 K2Node_MakeStruct_ST_DamageMeterHitData;           // 0x00A0(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_AddMissToMap) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_AddMissToMap");
-static_assert(sizeof(WBP_DamageMeter_C_AddMissToMap) == 0x0000D0, "Wrong size on WBP_DamageMeter_C_AddMissToMap");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, Map) == 0x000000, "Member 'WBP_DamageMeter_C_AddMissToMap::Map' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, HitGuid) == 0x000060, "Member 'WBP_DamageMeter_C_AddMissToMap::HitGuid' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, CallFunc_Map_Find_Value) == 0x000068, "Member 'WBP_DamageMeter_C_AddMissToMap::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, CallFunc_Map_Find_ReturnValue) == 0x000098, "Member 'WBP_DamageMeter_C_AddMissToMap::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, CallFunc_Add_IntInt_ReturnValue) == 0x00009C, "Member 'WBP_DamageMeter_C_AddMissToMap::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, K2Node_MakeStruct_ST_DamageMeterHitData) == 0x0000A0, "Member 'WBP_DamageMeter_C_AddMissToMap::K2Node_MakeStruct_ST_DamageMeterHitData' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.AddMissToTargetMap
-// 0x0080 (0x0080 - 0x0000)
-struct WBP_DamageMeter_C_AddMissToTargetMap final
-{
-public:
-	TMap<struct FGuid, int32>                     TargetIndexMap;                                    // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<struct FST_DamageMeterMapData>         TargetMap;                                         // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGuid                                  Target;                                            // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         HitGuid;                                           // 0x0070(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Map_Find_Value;                           // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_AddMissToTargetMap) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_AddMissToTargetMap");
-static_assert(sizeof(WBP_DamageMeter_C_AddMissToTargetMap) == 0x000080, "Wrong size on WBP_DamageMeter_C_AddMissToTargetMap");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, TargetIndexMap) == 0x000000, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::TargetIndexMap' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, TargetMap) == 0x000050, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::TargetMap' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, Target) == 0x000060, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::Target' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, HitGuid) == 0x000070, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::HitGuid' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, CallFunc_Map_Find_Value) == 0x000078, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, CallFunc_Map_Find_ReturnValue) == 0x00007C, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.BarClicked
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_DamageMeter_C_BarClicked final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isMain;                                            // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          rightMouse;                                        // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FST_DamageMeterBarData>         K2Node_Select_Default;                             // 0x0008(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_Guid_ReturnValue_1;               // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_BarClicked) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_BarClicked");
-static_assert(sizeof(WBP_DamageMeter_C_BarClicked) == 0x000020, "Wrong size on WBP_DamageMeter_C_BarClicked");
-static_assert(offsetof(WBP_DamageMeter_C_BarClicked, Index_0) == 0x000000, "Member 'WBP_DamageMeter_C_BarClicked::Index_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_BarClicked, isMain) == 0x000004, "Member 'WBP_DamageMeter_C_BarClicked::isMain' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_BarClicked, rightMouse) == 0x000005, "Member 'WBP_DamageMeter_C_BarClicked::rightMouse' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_BarClicked, Temp_bool_Variable) == 0x000006, "Member 'WBP_DamageMeter_C_BarClicked::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_BarClicked, CallFunc_IsValid_Guid_ReturnValue) == 0x000007, "Member 'WBP_DamageMeter_C_BarClicked::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_BarClicked, K2Node_Select_Default) == 0x000008, "Member 'WBP_DamageMeter_C_BarClicked::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_BarClicked, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000018, "Member 'WBP_DamageMeter_C_BarClicked::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_BarClicked, CallFunc_IsValid_Guid_ReturnValue_1) == 0x000019, "Member 'WBP_DamageMeter_C_BarClicked::CallFunc_IsValid_Guid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_BarClicked, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x00001A, "Member 'WBP_DamageMeter_C_BarClicked::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature final
-{
-public:
-	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature");
-static_assert(sizeof(WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature) == 0x000018, "Wrong size on WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature");
-static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature, SelectedItem) == 0x000000, "Member 'WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature::SelectedItem' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature, SelectionType) == 0x000010, "Member 'WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature::SelectionType' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature final
-{
-public:
-	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong alignment on WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature");
-static_assert(sizeof(WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong size on WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature");
-static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature, bIsChecked) == 0x000000, "Member 'WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature::bIsChecked' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature final
-{
-public:
-	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature");
-static_assert(sizeof(WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature) == 0x000018, "Wrong size on WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature");
-static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature, SelectedItem) == 0x000000, "Member 'WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature::SelectedItem' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature, SelectionType) == 0x000010, "Member 'WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature::SelectionType' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature final
-{
-public:
-	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong alignment on WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
-static_assert(sizeof(WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong size on WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
-static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature, bIsChecked) == 0x000000, "Member 'WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature::bIsChecked' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.CalcCombatTime
-// 0x0068 (0x0068 - 0x0000)
-struct WBP_DamageMeter_C_CalcCombatTime final
-{
-public:
-	struct FGuid                                  PlayerGuid;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Time;                                              // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsActive;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value;                           // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_CalcCombatTime) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_CalcCombatTime");
-static_assert(sizeof(WBP_DamageMeter_C_CalcCombatTime) == 0x000068, "Wrong size on WBP_DamageMeter_C_CalcCombatTime");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, PlayerGuid) == 0x000000, "Member 'WBP_DamageMeter_C_CalcCombatTime::PlayerGuid' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, Time) == 0x000010, "Member 'WBP_DamageMeter_C_CalcCombatTime::Time' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, IsActive) == 0x000018, "Member 'WBP_DamageMeter_C_CalcCombatTime::IsActive' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Map_Find_Value) == 0x00001C, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Map_Find_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_GetTimeSeconds_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000030, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000038, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000040, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x000048, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000050, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_SelectFloat_ReturnValue) == 0x000058, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Not_PreBool_ReturnValue) == 0x000060, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.CalcHitColorName
-// 0x0038 (0x0038 - 0x0000)
-struct WBP_DamageMeter_C_CalcHitColorName final
-{
-public:
-	TArray<struct FGameplayTag>                   Tags;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class FName                                   hitName;                                           // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_MatchesTag_ReturnValue;                   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_MatchesTag_ReturnValue_1;                 // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_MatchesTag_ReturnValue_2;                 // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_CalcHitColorName) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_CalcHitColorName");
-static_assert(sizeof(WBP_DamageMeter_C_CalcHitColorName) == 0x000038, "Wrong size on WBP_DamageMeter_C_CalcHitColorName");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, Tags) == 0x000000, "Member 'WBP_DamageMeter_C_CalcHitColorName::Tags' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, hitName) == 0x000010, "Member 'WBP_DamageMeter_C_CalcHitColorName::hitName' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, Temp_int_Array_Index_Variable) == 0x000018, "Member 'WBP_DamageMeter_C_CalcHitColorName::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_Array_Length_ReturnValue) == 0x00001C, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_Array_Get_Item) == 0x000020, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_MatchesTag_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_MatchesTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_MatchesTag_ReturnValue_1) == 0x000029, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_MatchesTag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_MatchesTag_ReturnValue_2) == 0x00002A, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_MatchesTag_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, Temp_int_Loop_Counter_Variable) == 0x00002C, "Member 'WBP_DamageMeter_C_CalcHitColorName::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_Add_IntInt_ReturnValue) == 0x000034, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.EnsureCharacterData
-// 0x04F8 (0x04F8 - 0x0000)
-struct WBP_DamageMeter_C_EnsureCharacterData final
-{
-public:
-	class ABaseCharacter*                         instigatorChar;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Success;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue;             // 0x000C(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetCharacterName_ReturnValue;             // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetCharacterName_ReturnValue_1;           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue_1;           // 0x0050(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_GetInstigatorInfo_color;                  // 0x0064(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECharacterClass                               CallFunc_GetInstigatorInfo_class;                  // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_GetInstigatorInfo_color_1;                // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECharacterClass                               CallFunc_GetInstigatorInfo_class_1;                // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_MakeLiteralInt64_ReturnValue;             // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetGameStatFromGuid_ReturnValue;          // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Map_Find_Value;                           // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerCharacter*                       CallFunc_GetActualPlayer_ReturnValue;              // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEnemy_ReturnValue;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterData                    K2Node_MakeStruct_ST_DamageMeterData;              // 0x00D8(0x0410)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x04E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_MakeStruct_HealthBase_128_14812B854804E54BF28DE2A4B3D3D6C4_ImplicitCast; // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_EnsureCharacterData) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_EnsureCharacterData");
-static_assert(sizeof(WBP_DamageMeter_C_EnsureCharacterData) == 0x0004F8, "Wrong size on WBP_DamageMeter_C_EnsureCharacterData");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, instigatorChar) == 0x000000, "Member 'WBP_DamageMeter_C_EnsureCharacterData::instigatorChar' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, Success) == 0x000008, "Member 'WBP_DamageMeter_C_EnsureCharacterData::Success' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetCharacterGuid_ReturnValue) == 0x00000C, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetCharacterGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetCharacterName_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetCharacterName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetCharacterName_ReturnValue_1) == 0x000030, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetCharacterName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_IsEmpty_ReturnValue) == 0x000040, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_Conv_StringToName_ReturnValue) == 0x000044, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_Not_PreBool_ReturnValue) == 0x00004C, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetCharacterGuid_ReturnValue_1) == 0x000050, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetCharacterGuid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_IsValid_Guid_ReturnValue) == 0x000060, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetInstigatorInfo_color) == 0x000064, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetInstigatorInfo_color' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetInstigatorInfo_class) == 0x000074, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetInstigatorInfo_class' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_BooleanAND_ReturnValue) == 0x000075, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetInstigatorInfo_color_1) == 0x000078, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetInstigatorInfo_color_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetInstigatorInfo_class_1) == 0x000088, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetInstigatorInfo_class_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_MakeLiteralInt64_ReturnValue) == 0x000090, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_MakeLiteralInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetGameStatFromGuid_ReturnValue) == 0x000098, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetGameStatFromGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_Map_Find_Value) == 0x00009C, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetPlayerController_ReturnValue) == 0x0000A8, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x0000B0, "Member 'WBP_DamageMeter_C_EnsureCharacterData::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, K2Node_DynamicCast_bSuccess) == 0x0000B8, "Member 'WBP_DamageMeter_C_EnsureCharacterData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetTimeSeconds_ReturnValue) == 0x0000C0, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetActualPlayer_ReturnValue) == 0x0000C8, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetActualPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_IsEnemy_ReturnValue) == 0x0000D0, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_IsEnemy_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, K2Node_MakeStruct_ST_DamageMeterData) == 0x0000D8, "Member 'WBP_DamageMeter_C_EnsureCharacterData::K2Node_MakeStruct_ST_DamageMeterData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_Array_Add_ReturnValue) == 0x0004E8, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, K2Node_MakeStruct_HealthBase_128_14812B854804E54BF28DE2A4B3D3D6C4_ImplicitCast) == 0x0004F0, "Member 'WBP_DamageMeter_C_EnsureCharacterData::K2Node_MakeStruct_HealthBase_128_14812B854804E54BF28DE2A4B3D3D6C4_ImplicitCast' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.ExecuteUbergraph_WBP_DamageMeter
-// 0x01E0 (0x01E0 - 0x0000)
-struct WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAoCWindow*                             K2Node_CustomEvent_Window;                         // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetActiveContent_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_DamageMeterHealthLog_C*            K2Node_DynamicCast_AsWBP_Damage_Meter_Health_Log;  // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate;         // 0x002C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0040(0x0008)(NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate_1;       // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FHitInst& HitInst)> UniqueObjectNameForCooking_OutputDelegate_2;     // 0x0058(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UAoCWindow* Window)>     UniqueObjectNameForCooking_OutputDelegate_3;       // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAbilitySubsystem*                      CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0080(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsChecked_1;           // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x00BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x00BF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 K2Node_ComponentBoundEvent_SelectedItem_1;         // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType_1;        // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_ComponentBoundEvent_SelectedItem;           // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType;          // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FindMinMax_dataMax;                       // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FindMinMax_dataTotal;                     // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FindMinMax_dataMax_1;                     // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FindMinMax_dataTotal_1;                   // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FindMinMax_dataMax_2;                     // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FindMinMax_dataTotal_2;                   // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller_1;      // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AHUD*                                   CallFunc_GetHUD_ReturnValue;                       // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAoCHUDBase*                            K2Node_DynamicCast_AsAo_CHUDBase;                  // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller_2;      // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAoCHUDBase*                            CallFunc_GetAoCHUD_ReturnValue;                    // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x018B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitInst                               K2Node_CustomEvent_HitInst;                        // 0x0190(0x0050)(ConstParm, ContainsInstancedReference)
-};
-static_assert(alignof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter");
-static_assert(sizeof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter) == 0x0001E0, "Wrong size on WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, EntryPoint) == 0x000000, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_CustomEvent_Window) == 0x000008, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_CustomEvent_Window' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, Temp_byte_Variable) == 0x000010, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetActiveContent_ReturnValue) == 0x000018, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetActiveContent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_AsWBP_Damage_Meter_Health_Log) == 0x000020, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_AsWBP_Damage_Meter_Health_Log' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, UniqueObjectNameForCooking_OutputDelegate) == 0x00002C, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000040, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, UniqueObjectNameForCooking_OutputDelegate_1) == 0x000048, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::UniqueObjectNameForCooking_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, UniqueObjectNameForCooking_OutputDelegate_2) == 0x000058, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::UniqueObjectNameForCooking_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, UniqueObjectNameForCooking_OutputDelegate_3) == 0x000068, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::UniqueObjectNameForCooking_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000078, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_Event_MyGeometry) == 0x000080, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_Event_InDeltaTime) == 0x0000B8, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_IsValid_ReturnValue_1) == 0x0000BC, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_bIsChecked_1) == 0x0000BD, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_bIsChecked_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_IsValid_Guid_ReturnValue) == 0x0000BE, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, Temp_byte_Variable_1) == 0x0000BF, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_SelectedItem_1) == 0x0000C0, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_SelectedItem_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_SelectionType_1) == 0x0000D0, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_SelectionType_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_SwitchString_CmpSuccess) == 0x0000D1, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_SelectedItem) == 0x0000D8, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_SelectedItem' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_SelectionType) == 0x0000E8, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_SelectionType' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataMax) == 0x0000F0, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataMax' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataTotal) == 0x0000F8, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataTotal' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataMax_1) == 0x000100, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataMax_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataTotal_1) == 0x000108, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataTotal_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataMax_2) == 0x000110, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataMax_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataTotal_2) == 0x000118, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataTotal_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_bIsChecked) == 0x000120, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_bIsChecked' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetOwningPlayer_ReturnValue) == 0x000128, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000130, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_bSuccess_1) == 0x000138, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_AsAo_CPlayer_Controller_1) == 0x000140, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_AsAo_CPlayer_Controller_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_bSuccess_2) == 0x000148, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetHUD_ReturnValue) == 0x000150, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetHUD_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_AsAo_CHUDBase) == 0x000158, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_AsAo_CHUDBase' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_bSuccess_3) == 0x000160, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000168, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_AsAo_CPlayer_Controller_2) == 0x000170, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_AsAo_CPlayer_Controller_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_bSuccess_4) == 0x000178, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetAoCHUD_ReturnValue) == 0x000180, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetAoCHUD_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_IsValid_ReturnValue_2) == 0x000188, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_IsValid_ReturnValue_3) == 0x000189, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, Temp_bool_Variable) == 0x00018A, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_Select_Default) == 0x00018B, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_CustomEvent_HitInst) == 0x000190, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_CustomEvent_HitInst' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.FindMinMax
-// 0x00E0 (0x00E0 - 0x0000)
-struct WBP_DamageMeter_C_FindMinMax final
-{
-public:
-	TArray<struct FST_DamageMeterBarData>         BarData_0;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	double                                        dataMax;                                           // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        dataTotal;                                         // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Total;                                             // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Max;                                               // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterBarData                 CallFunc_Array_Get_Item;                           // 0x0040(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default;                             // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_FindMinMax) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_FindMinMax");
-static_assert(sizeof(WBP_DamageMeter_C_FindMinMax) == 0x0000E0, "Wrong size on WBP_DamageMeter_C_FindMinMax");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, BarData_0) == 0x000000, "Member 'WBP_DamageMeter_C_FindMinMax::BarData_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, dataMax) == 0x000010, "Member 'WBP_DamageMeter_C_FindMinMax::dataMax' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, dataTotal) == 0x000018, "Member 'WBP_DamageMeter_C_FindMinMax::dataTotal' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, Total) == 0x000020, "Member 'WBP_DamageMeter_C_FindMinMax::Total' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, Max) == 0x000028, "Member 'WBP_DamageMeter_C_FindMinMax::Max' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, Temp_int_Array_Index_Variable) == 0x000034, "Member 'WBP_DamageMeter_C_FindMinMax::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'WBP_DamageMeter_C_FindMinMax::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Array_Get_Item) == 0x000040, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Less_IntInt_ReturnValue) == 0x0000B8, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Add_IntInt_ReturnValue) == 0x0000BC, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_IsChecked_ReturnValue) == 0x0000C0, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, Temp_bool_Variable) == 0x0000C1, "Member 'WBP_DamageMeter_C_FindMinMax::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, K2Node_Select_Default) == 0x0000C8, "Member 'WBP_DamageMeter_C_FindMinMax::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000D0, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000D8, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.GetAbilityTotals
-// 0x00D0 (0x00D0 - 0x0000)
-struct WBP_DamageMeter_C_GetAbilityTotals final
-{
-public:
-	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value;                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FST_DamageMeterMapData>         K2Node_Select_Default;                             // 0x0018(0x0010)(ReferenceParm)
-	TMap<struct FGuid, int32>                     K2Node_Select_Default_1;                           // 0x0028(0x0050)()
-	int32                                         CallFunc_Map_Find_Value_1;                         // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int64, struct FST_DamageMeterHitData>    K2Node_Select_Default_2;                           // 0x0080(0x0050)()
-};
-static_assert(alignof(WBP_DamageMeter_C_GetAbilityTotals) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_GetAbilityTotals");
-static_assert(sizeof(WBP_DamageMeter_C_GetAbilityTotals) == 0x0000D0, "Wrong size on WBP_DamageMeter_C_GetAbilityTotals");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, Temp_int_Variable) == 0x000000, "Member 'WBP_DamageMeter_C_GetAbilityTotals::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, Temp_int_Variable_1) == 0x000004, "Member 'WBP_DamageMeter_C_GetAbilityTotals::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, Temp_int_Variable_2) == 0x000008, "Member 'WBP_DamageMeter_C_GetAbilityTotals::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, CallFunc_IsValid_Guid_ReturnValue) == 0x00000C, "Member 'WBP_DamageMeter_C_GetAbilityTotals::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, CallFunc_Map_Find_Value) == 0x000010, "Member 'WBP_DamageMeter_C_GetAbilityTotals::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, CallFunc_Map_Find_ReturnValue) == 0x000014, "Member 'WBP_DamageMeter_C_GetAbilityTotals::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, K2Node_Select_Default) == 0x000018, "Member 'WBP_DamageMeter_C_GetAbilityTotals::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, K2Node_Select_Default_1) == 0x000028, "Member 'WBP_DamageMeter_C_GetAbilityTotals::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, CallFunc_Map_Find_Value_1) == 0x000078, "Member 'WBP_DamageMeter_C_GetAbilityTotals::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, CallFunc_Map_Find_ReturnValue_1) == 0x00007C, "Member 'WBP_DamageMeter_C_GetAbilityTotals::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, K2Node_Select_Default_2) == 0x000080, "Member 'WBP_DamageMeter_C_GetAbilityTotals::K2Node_Select_Default_2' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.GetBarAtIndex
-// 0x0058 (0x0058 - 0x0000)
-struct WBP_DamageMeter_C_GetBarAtIndex final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWBP_DamageMeterBar_C*>          barList;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	class UVerticalBox*                           vertBox;                                           // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_DamageMeterBar_C*                  bar;                                               // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_DamageMeterBar_C*                  CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_DamageMeterBar_C*                  CallFunc_Create_ReturnValue;                       // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_GetBarAtIndex) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_GetBarAtIndex");
-static_assert(sizeof(WBP_DamageMeter_C_GetBarAtIndex) == 0x000058, "Wrong size on WBP_DamageMeter_C_GetBarAtIndex");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, Index_0) == 0x000000, "Member 'WBP_DamageMeter_C_GetBarAtIndex::Index_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, barList) == 0x000008, "Member 'WBP_DamageMeter_C_GetBarAtIndex::barList' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, vertBox) == 0x000018, "Member 'WBP_DamageMeter_C_GetBarAtIndex::vertBox' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, bar) == 0x000020, "Member 'WBP_DamageMeter_C_GetBarAtIndex::bar' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000030, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_Array_Length_ReturnValue) == 0x000034, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000038, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_Create_ReturnValue) == 0x000040, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_Array_Add_ReturnValue) == 0x000048, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_AddChild_ReturnValue) == 0x000050, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.GetInstigatorInfo
-// 0x0040 (0x0040 - 0x0000)
-struct WBP_DamageMeter_C_GetInstigatorInfo final
-{
-public:
-	class ABaseCharacter*                         Instigator;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Color;                                             // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECharacterClass                               Class_0;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerCharacter*                       CallFunc_GetActualPlayer_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECharacterClass                               CallFunc_GetPrimaryClass_ReturnValue;              // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_Map_Find_Value;                           // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_GetInstigatorInfo) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_GetInstigatorInfo");
-static_assert(sizeof(WBP_DamageMeter_C_GetInstigatorInfo) == 0x000040, "Wrong size on WBP_DamageMeter_C_GetInstigatorInfo");
-static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, Instigator) == 0x000000, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::Instigator' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, Color) == 0x000008, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::Color' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, Class_0) == 0x000018, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::Class_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_GetActualPlayer_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_GetActualPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_IsValid_ReturnValue_1) == 0x000029, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_GetPrimaryClass_ReturnValue) == 0x00002A, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_GetPrimaryClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_Map_Find_Value) == 0x00002C, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_Map_Find_ReturnValue) == 0x00003C, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.GetPlayerTotals
-// 0x0190 (0x0190 - 0x0000)
-struct WBP_DamageMeter_C_GetPlayerTotals final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAoCPlayerControllerBP_C*               K2Node_DynamicCast_AsAo_CPlayer_Controller_BP;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class APlayerCharacter*>               CallFunc_GetLocalPartyMembers_LocalPartyMembers;   // 0x0040(0x0010)(ReferenceParm)
-	class APlayerCharacter*                       CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue;             // 0x005C(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSelectedIndex_ReturnValue_1;           // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGuid>                          CallFunc_Map_Keys_Keys;                            // 0x0080(0x0010)(ReferenceParm)
-	struct FGuid                                  CallFunc_Array_Get_Item_1;                         // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_GuidGuid_ReturnValue;          // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A6[0x2];                                       // 0x00A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value;                           // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        CallFunc_Map_Find_Value_1;                         // 0x00B0(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D3[0x5];                                       // 0x00D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        K2Node_Select_Default;                             // 0x00D8(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FB[0x5];                                       // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_1;                           // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_2;                           // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData;           // 0x0110(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_InsertIntoBarData_index;                  // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_GetPlayerTotals) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_GetPlayerTotals");
-static_assert(sizeof(WBP_DamageMeter_C_GetPlayerTotals) == 0x000190, "Wrong size on WBP_DamageMeter_C_GetPlayerTotals");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Array_Index_Variable_1) == 0x00000C, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Variable) == 0x000010, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Loop_Counter_Variable_1) == 0x000014, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_bool_Variable) == 0x000018, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Add_IntInt_ReturnValue_1) == 0x00001C, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_GetPlayerController_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_GetSelectedIndex_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_GetSelectedIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_DynamicCast_AsAo_CPlayer_Controller_BP) == 0x000030, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_DynamicCast_AsAo_CPlayer_Controller_BP' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000039, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_GetLocalPartyMembers_LocalPartyMembers) == 0x000040, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_GetLocalPartyMembers_LocalPartyMembers' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Array_Get_Item) == 0x000050, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_GetCharacterGuid_ReturnValue) == 0x00005C, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_GetCharacterGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Less_IntInt_ReturnValue) == 0x00006C, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Variable_1) == 0x000070, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_GetSelectedIndex_ReturnValue_1) == 0x000074, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_GetSelectedIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000078, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000079, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x00007A, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Map_Keys_Keys) == 0x000080, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Array_Get_Item_1) == 0x000090, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Array_Length_ReturnValue_1) == 0x0000A0, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_EqualEqual_GuidGuid_ReturnValue) == 0x0000A4, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_EqualEqual_GuidGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000A5, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Map_Find_Value) == 0x0000A8, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Map_Find_ReturnValue) == 0x0000AC, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Map_Find_Value_1) == 0x0000B0, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Map_Find_ReturnValue_1) == 0x0000D0, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_BooleanAND_ReturnValue) == 0x0000D1, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Not_PreBool_ReturnValue) == 0x0000D2, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_Select_Default) == 0x0000D8, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_BooleanAND_ReturnValue_1) == 0x0000F8, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_BooleanOR_ReturnValue) == 0x0000F9, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_BooleanOR_ReturnValue_1) == 0x0000FA, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_Select_Default_1) == 0x000100, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_Select_Default_2) == 0x000108, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_MakeStruct_ST_DamageMeterBarData) == 0x000110, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_MakeStruct_ST_DamageMeterBarData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_InsertIntoBarData_index) == 0x000188, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_InsertIntoBarData_index' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.GetTargetTotals
-// 0x0240 (0x0240 - 0x0000)
-struct WBP_DamageMeter_C_GetTargetTotals final
-{
-public:
-	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value;                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FGuid, int32>                     K2Node_Select_Default;                             // 0x0020(0x0050)()
-	TArray<struct FST_DamageMeterMapData>         K2Node_Select_Default_1;                           // 0x0070(0x0010)(ReferenceParm)
-	TArray<struct FGuid>                          CallFunc_Map_Keys_Keys;                            // 0x0080(0x0010)(ReferenceParm)
-	struct FGuid                                  CallFunc_Array_Get_Item;                           // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Map_Find_Value_1;                         // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value_2;                         // 0x00A8(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        CallFunc_Map_Find_Value_3;                         // 0x00E0(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSoftObjectPath                        K2Node_Select_Default_2;                           // 0x0118(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData;           // 0x0140(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B9[0x3];                                      // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_InsertIntoBarData_index;                  // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_1;         // 0x01C0(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_InsertIntoBarData_index_1;                // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_GetTargetTotals) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_GetTargetTotals");
-static_assert(sizeof(WBP_DamageMeter_C_GetTargetTotals) == 0x000240, "Wrong size on WBP_DamageMeter_C_GetTargetTotals");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, Temp_int_Variable) == 0x000000, "Member 'WBP_DamageMeter_C_GetTargetTotals::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, Temp_int_Variable_1) == 0x000004, "Member 'WBP_DamageMeter_C_GetTargetTotals::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, Temp_int_Array_Index_Variable) == 0x000008, "Member 'WBP_DamageMeter_C_GetTargetTotals::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'WBP_DamageMeter_C_GetTargetTotals::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, Temp_bool_Variable) == 0x000014, "Member 'WBP_DamageMeter_C_GetTargetTotals::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x000015, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_Value) == 0x000018, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_ReturnValue) == 0x00001C, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, K2Node_Select_Default) == 0x000020, "Member 'WBP_DamageMeter_C_GetTargetTotals::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, K2Node_Select_Default_1) == 0x000070, "Member 'WBP_DamageMeter_C_GetTargetTotals::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Keys_Keys) == 0x000080, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Array_Get_Item) == 0x000090, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_Value_1) == 0x0000A0, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_ReturnValue_1) == 0x0000A4, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_Value_2) == 0x0000A8, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_Value_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_ReturnValue_2) == 0x0000D8, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_Value_3) == 0x0000E0, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_Value_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_ReturnValue_3) == 0x000100, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000108, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000110, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, K2Node_Select_Default_2) == 0x000118, "Member 'WBP_DamageMeter_C_GetTargetTotals::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Array_Length_ReturnValue) == 0x000138, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, K2Node_MakeStruct_ST_DamageMeterBarData) == 0x000140, "Member 'WBP_DamageMeter_C_GetTargetTotals::K2Node_MakeStruct_ST_DamageMeterBarData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Less_IntInt_ReturnValue) == 0x0001B8, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_InsertIntoBarData_index) == 0x0001BC, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_InsertIntoBarData_index' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, K2Node_MakeStruct_ST_DamageMeterBarData_1) == 0x0001C0, "Member 'WBP_DamageMeter_C_GetTargetTotals::K2Node_MakeStruct_ST_DamageMeterBarData_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_InsertIntoBarData_index_1) == 0x000238, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_InsertIntoBarData_index_1' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.Handle Window Content Loaded
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_DamageMeter_C_Handle_Window_Content_Loaded final
-{
-public:
-	class UAoCWindow*                             Window;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_Handle_Window_Content_Loaded) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_Handle_Window_Content_Loaded");
-static_assert(sizeof(WBP_DamageMeter_C_Handle_Window_Content_Loaded) == 0x000008, "Wrong size on WBP_DamageMeter_C_Handle_Window_Content_Loaded");
-static_assert(offsetof(WBP_DamageMeter_C_Handle_Window_Content_Loaded, Window) == 0x000000, "Member 'WBP_DamageMeter_C_Handle_Window_Content_Loaded::Window' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.InsertExtraBars
-// 0x0310 (0x0310 - 0x0000)
-struct WBP_DamageMeter_C_InsertExtraBars final
-{
-public:
-	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value;                           // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue_1;        // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FST_DamageMeterMapData>         K2Node_Select_Default;                             // 0x0028(0x0010)(ReferenceParm)
-	TMap<struct FGuid, int32>                     K2Node_Select_Default_1;                           // 0x0038(0x0050)()
-	struct FSoftObjectPath                        CallFunc_Map_Find_Value_1;                         // 0x0088(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value_2;                         // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        K2Node_Select_Default_2;                           // 0x00B8(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData;           // 0x00D8(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_1;         // 0x0158(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value_3;                         // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E2[0x6];                                      // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        CallFunc_Map_Find_Value_4;                         // 0x01E8(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterMapData                 K2Node_Select_Default_3;                           // 0x0210(0x0060)(HasGetValueTypeHash)
-	struct FSoftObjectPath                        K2Node_Select_Default_4;                           // 0x0270(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_2;         // 0x0290(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_InsertExtraBars) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_InsertExtraBars");
-static_assert(sizeof(WBP_DamageMeter_C_InsertExtraBars) == 0x000310, "Wrong size on WBP_DamageMeter_C_InsertExtraBars");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, Temp_int_Variable) == 0x000000, "Member 'WBP_DamageMeter_C_InsertExtraBars::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, Temp_int_Variable_1) == 0x000004, "Member 'WBP_DamageMeter_C_InsertExtraBars::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, Temp_int_Variable_2) == 0x000008, "Member 'WBP_DamageMeter_C_InsertExtraBars::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, Temp_bool_Variable) == 0x00000C, "Member 'WBP_DamageMeter_C_InsertExtraBars::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, Temp_bool_Variable_1) == 0x00000D, "Member 'WBP_DamageMeter_C_InsertExtraBars::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x000014, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000015, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Length_ReturnValue_1) == 0x000018, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x00001C, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_Value) == 0x000020, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_ReturnValue) == 0x000024, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_NotEqual_Int64Int64_ReturnValue_1) == 0x000025, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_NotEqual_Int64Int64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_Select_Default) == 0x000028, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_Select_Default_1) == 0x000038, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_Value_1) == 0x000088, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_ReturnValue_1) == 0x0000A8, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_Value_2) == 0x0000AC, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_Value_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_ReturnValue_2) == 0x0000B0, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0000B1, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_Select_Default_2) == 0x0000B8, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_MakeStruct_ST_DamageMeterBarData) == 0x0000D8, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_MakeStruct_ST_DamageMeterBarData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Add_ReturnValue) == 0x000150, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_MakeStruct_ST_DamageMeterBarData_1) == 0x000158, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_MakeStruct_ST_DamageMeterBarData_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Add_ReturnValue_1) == 0x0001D0, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Length_ReturnValue_2) == 0x0001D4, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x0001D8, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_Value_3) == 0x0001DC, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_Value_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_ReturnValue_3) == 0x0001E0, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_IsValid_Guid_ReturnValue) == 0x0001E1, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_Value_4) == 0x0001E8, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_Value_4' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_ReturnValue_4) == 0x000208, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_Select_Default_3) == 0x000210, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_Select_Default_4) == 0x000270, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_MakeStruct_ST_DamageMeterBarData_2) == 0x000290, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_MakeStruct_ST_DamageMeterBarData_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Add_ReturnValue_2) == 0x000308, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.InsertFlagBars
-// 0x0368 (0x0368 - 0x0000)
-struct WBP_DamageMeter_C_InsertFlagBars final
-{
-public:
-	TMap<int64, struct FST_DamageMeterHitData>    Map;                                               // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int32                                         insertIndex;                                       // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           insertBarColor;                                    // 0x0054(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterBarData                 CallFunc_Array_Get_Item;                           // 0x0080(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_R;                             // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_G;                             // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_B;                             // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_A;                             // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value;                           // 0x0128(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData;           // 0x0180(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_1;         // 0x01F8(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_2;         // 0x0278(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_3;         // 0x02F0(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_InsertFlagBars) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_InsertFlagBars");
-static_assert(sizeof(WBP_DamageMeter_C_InsertFlagBars) == 0x000368, "Wrong size on WBP_DamageMeter_C_InsertFlagBars");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, Map) == 0x000000, "Member 'WBP_DamageMeter_C_InsertFlagBars::Map' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, insertIndex) == 0x000050, "Member 'WBP_DamageMeter_C_InsertFlagBars::insertIndex' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, insertBarColor) == 0x000054, "Member 'WBP_DamageMeter_C_InsertFlagBars::insertBarColor' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, Temp_bool_True_if_break_was_hit_Variable) == 0x000064, "Member 'WBP_DamageMeter_C_InsertFlagBars::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, Temp_int_Array_Index_Variable) == 0x000068, "Member 'WBP_DamageMeter_C_InsertFlagBars::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_IntInt_ReturnValue) == 0x00006C, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Not_PreBool_ReturnValue) == 0x000070, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, Temp_int_Loop_Counter_Variable) == 0x000074, "Member 'WBP_DamageMeter_C_InsertFlagBars::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_IntInt_ReturnValue_1) == 0x000078, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Array_IsValidIndex_ReturnValue) == 0x00007C, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Array_Get_Item) == 0x000080, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Array_Length_ReturnValue) == 0x0000F8, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_BreakColor_R) == 0x0000FC, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_BreakColor_R' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_BreakColor_G) == 0x000100, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_BreakColor_G' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_BreakColor_B) == 0x000104, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_BreakColor_B' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_BreakColor_A) == 0x000108, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_BreakColor_A' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Less_IntInt_ReturnValue) == 0x00010C, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_MakeColor_ReturnValue) == 0x000110, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_BooleanAND_ReturnValue) == 0x000120, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_EqualEqual_Int64Int64_ReturnValue) == 0x000121, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_EqualEqual_Int64Int64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Map_Find_Value) == 0x000128, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Map_Find_ReturnValue) == 0x000158, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000160, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_IntInt_ReturnValue_2) == 0x000168, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000170, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_IntInt_ReturnValue_3) == 0x000178, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, K2Node_MakeStruct_ST_DamageMeterBarData) == 0x000180, "Member 'WBP_DamageMeter_C_InsertFlagBars::K2Node_MakeStruct_ST_DamageMeterBarData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, K2Node_MakeStruct_ST_DamageMeterBarData_1) == 0x0001F8, "Member 'WBP_DamageMeter_C_InsertFlagBars::K2Node_MakeStruct_ST_DamageMeterBarData_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Array_Add_ReturnValue) == 0x000270, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, K2Node_MakeStruct_ST_DamageMeterBarData_2) == 0x000278, "Member 'WBP_DamageMeter_C_InsertFlagBars::K2Node_MakeStruct_ST_DamageMeterBarData_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, K2Node_MakeStruct_ST_DamageMeterBarData_3) == 0x0002F0, "Member 'WBP_DamageMeter_C_InsertFlagBars::K2Node_MakeStruct_ST_DamageMeterBarData_3' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.InsertIntoBarData
-// 0x00C8 (0x00C8 - 0x0000)
-struct WBP_DamageMeter_C_InsertIntoBarData final
-{
-public:
-	struct FST_DamageMeterBarData                 Data;                                              // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
-	TArray<struct FST_DamageMeterBarData>         BarData_0;                                         // 0x0078(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int32                                         Index_0;                                           // 0x0088(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default;                             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_1;                           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_InsertIntoBarData) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_InsertIntoBarData");
-static_assert(sizeof(WBP_DamageMeter_C_InsertIntoBarData) == 0x0000C8, "Wrong size on WBP_DamageMeter_C_InsertIntoBarData");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, Data) == 0x000000, "Member 'WBP_DamageMeter_C_InsertIntoBarData::Data' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, BarData_0) == 0x000078, "Member 'WBP_DamageMeter_C_InsertIntoBarData::BarData_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, Index_0) == 0x000088, "Member 'WBP_DamageMeter_C_InsertIntoBarData::Index_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, Temp_bool_Variable) == 0x00008C, "Member 'WBP_DamageMeter_C_InsertIntoBarData::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_Array_Add_ReturnValue) == 0x000090, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_Array_Length_ReturnValue) == 0x000094, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_Subtract_IntInt_ReturnValue) == 0x000098, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, Temp_int_Variable) == 0x00009C, "Member 'WBP_DamageMeter_C_InsertIntoBarData::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000A0, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_Add_IntInt_ReturnValue) == 0x0000A4, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, Temp_bool_Variable_1) == 0x0000A8, "Member 'WBP_DamageMeter_C_InsertIntoBarData::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_IsChecked_ReturnValue) == 0x0000A9, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, K2Node_Select_Default) == 0x0000B0, "Member 'WBP_DamageMeter_C_InsertIntoBarData::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, K2Node_Select_Default_1) == 0x0000B8, "Member 'WBP_DamageMeter_C_InsertIntoBarData::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000C0, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.OnAbilityEventBP_Event
-// 0x0050 (0x0050 - 0x0000)
-struct WBP_DamageMeter_C_OnAbilityEventBP_Event final
-{
-public:
-	struct FHitInst                               HitInst;                                           // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-static_assert(alignof(WBP_DamageMeter_C_OnAbilityEventBP_Event) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_OnAbilityEventBP_Event");
-static_assert(sizeof(WBP_DamageMeter_C_OnAbilityEventBP_Event) == 0x000050, "Wrong size on WBP_DamageMeter_C_OnAbilityEventBP_Event");
-static_assert(offsetof(WBP_DamageMeter_C_OnAbilityEventBP_Event, HitInst) == 0x000000, "Member 'WBP_DamageMeter_C_OnAbilityEventBP_Event::HitInst' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.ProcessHit
-// 0x0EF8 (0x0EF8 - 0x0000)
-struct WBP_DamageMeter_C_ProcessHit final
-{
-public:
-	struct FHitInst                               HitInst;                                           // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-	int64                                         HitGuid;                                           // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        CallFunc_GetFloatingTextIcon_OutPath;              // 0x0068(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character;               // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAbilityHitRecord                      CallFunc_GetHitRecordByGuid_ReturnValue;           // 0x0098(0x0A28)(ConstParm)
-	float                                         CallFunc_GetGameStatFromGuid_ReturnValue;          // 0x0AC0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_CalcHitColorName_hitName;                 // 0x0AC4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue;             // 0x0ACC(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EnsureCharacterData_Success;              // 0x0ADC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EnsureCharacterData_Success_1;            // 0x0ADD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_ADE[0x2];                                      // 0x0ADE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0AE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AE4[0x4];                                      // 0x0AE4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitTargetInst                         CallFunc_Array_Get_Item;                           // 0x0AE8(0x00B8)(ContainsInstancedReference)
-	int64                                         CallFunc_MakeLiteralInt64_ReturnValue;             // 0x0BA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0BA8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0BAC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0BB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0BB1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BB2[0x6];                                      // 0x0BB2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0BB8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x0BC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character_1;             // 0x0BC8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0BD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BD1[0x3];                                      // 0x0BD1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue_1;           // 0x0BD4(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EnsureCharacterData_Success_2;            // 0x0BE4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BE5[0x3];                                      // 0x0BE5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetGameStatFromGuid_ReturnValue_1;        // 0x0BE8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0BEC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0BF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BF1[0x3];                                      // 0x0BF1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0BF4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0BF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BFC[0x4];                                      // 0x0BFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStatModInst                           CallFunc_Array_Get_Item_1;                         // 0x0C00(0x0028)(NoDestructor)
-	int32                                         CallFunc_Map_Find_Value;                           // 0x0C28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0C2C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C2D[0x3];                                      // 0x0C2D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x0C30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x0C38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0C40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0C41(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0C42(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C43[0x5];                                      // 0x0C43(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Abs_ReturnValue_2;                        // 0x0C48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStatModRecord                         CallFunc_GetStatModRecordByGuid_ReturnValue;       // 0x0C50(0x0110)(ConstParm)
-	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0D60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0D61(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue_1;      // 0x0D62(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0D63(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0D64(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0D65(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D66[0x2];                                      // 0x0D66(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value_1;                         // 0x0D68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0D6C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D6D[0x3];                                      // 0x0D6D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_Map_Find_Value_2;                         // 0x0D70(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0D80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D81[0x7];                                      // 0x0D81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterHitInfo                 K2Node_MakeStruct_ST_DamageMeterHitInfo;           // 0x0D88(0x0038)(ZeroConstructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0DC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0DC8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0DCC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DCD[0x3];                                      // 0x0DCD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value_3;                         // 0x0DD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0DD4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DD5[0x3];                                      // 0x0DD5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterHitInfo                 CallFunc_Map_Find_Value_4;                         // 0x0DD8(0x0038)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x0E10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E11[0x7];                                      // 0x0E11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterTimeData                K2Node_MakeStruct_ST_DamageMeterTimeData;          // 0x0E18(0x0040)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0E58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0E5C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E5D[0x3];                                      // 0x0E5D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0E60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_And_IntInt_ReturnValue;                   // 0x0E64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0E68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0E69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E6A[0x6];                                      // 0x0E6A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetTimeSeconds_ReturnValue_1;             // 0x0E70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetTimeSeconds_ReturnValue_2;             // 0x0E78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0E80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0E88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0E90(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0E98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0EA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EA1[0x7];                                      // 0x0EA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x0EA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0EB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_MakeStruct_maxHP_30_3DD85F804938E62B5968DBA6E019F714_ImplicitCast; // 0x0EB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_A_ImplicitCast;                       // 0x0EC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0EC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0ED0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_A_ImplicitCast_1;                     // 0x0ED8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_MakeStruct_delta_25_E23027C84A4F0C5F3C3F0098E0A658F5_ImplicitCast; // 0x0EE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_A_ImplicitCast_2;                     // 0x0EE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x0EF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_ProcessHit) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_ProcessHit");
-static_assert(sizeof(WBP_DamageMeter_C_ProcessHit) == 0x000EF8, "Wrong size on WBP_DamageMeter_C_ProcessHit");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, HitInst) == 0x000000, "Member 'WBP_DamageMeter_C_ProcessHit::HitInst' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, HitGuid) == 0x000050, "Member 'WBP_DamageMeter_C_ProcessHit::HitGuid' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, Temp_int_Loop_Counter_Variable) == 0x000058, "Member 'WBP_DamageMeter_C_ProcessHit::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Add_IntInt_ReturnValue) == 0x00005C, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Length_ReturnValue) == 0x000060, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetFloatingTextIcon_OutPath) == 0x000068, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetFloatingTextIcon_OutPath' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_DynamicCast_AsBase_Character) == 0x000088, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_DynamicCast_AsBase_Character' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetHitRecordByGuid_ReturnValue) == 0x000098, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetHitRecordByGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetGameStatFromGuid_ReturnValue) == 0x000AC0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetGameStatFromGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_CalcHitColorName_hitName) == 0x000AC4, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_CalcHitColorName_hitName' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetCharacterGuid_ReturnValue) == 0x000ACC, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetCharacterGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EnsureCharacterData_Success) == 0x000ADC, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EnsureCharacterData_Success' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EnsureCharacterData_Success_1) == 0x000ADD, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EnsureCharacterData_Success_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, Temp_int_Array_Index_Variable) == 0x000AE0, "Member 'WBP_DamageMeter_C_ProcessHit::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Get_Item) == 0x000AE8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_MakeLiteralInt64_ReturnValue) == 0x000BA0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_MakeLiteralInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000BA8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Length_ReturnValue_1) == 0x000BAC, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_IsValid_ReturnValue) == 0x000BB0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Less_IntInt_ReturnValue) == 0x000BB1, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetOwner_ReturnValue) == 0x000BB8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetTimeSeconds_ReturnValue) == 0x000BC0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_DynamicCast_AsBase_Character_1) == 0x000BC8, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_DynamicCast_AsBase_Character_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_DynamicCast_bSuccess_1) == 0x000BD0, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetCharacterGuid_ReturnValue_1) == 0x000BD4, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetCharacterGuid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EnsureCharacterData_Success_2) == 0x000BE4, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EnsureCharacterData_Success_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetGameStatFromGuid_ReturnValue_1) == 0x000BE8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetGameStatFromGuid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, Temp_int_Loop_Counter_Variable_1) == 0x000BEC, "Member 'WBP_DamageMeter_C_ProcessHit::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Less_IntInt_ReturnValue_1) == 0x000BF0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Add_IntInt_ReturnValue_1) == 0x000BF4, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, Temp_int_Array_Index_Variable_1) == 0x000BF8, "Member 'WBP_DamageMeter_C_ProcessHit::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Get_Item_1) == 0x000C00, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_Value) == 0x000C28, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_ReturnValue) == 0x000C2C, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_ReturnValue) == 0x000C30, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_ReturnValue_1) == 0x000C38, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000C40, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000C41, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000C42, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_ReturnValue_2) == 0x000C48, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetStatModRecordByGuid_ReturnValue) == 0x000C50, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetStatModRecordByGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EqualEqual_Int64Int64_ReturnValue) == 0x000D60, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EqualEqual_Int64Int64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_BooleanAND_ReturnValue) == 0x000D61, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EqualEqual_Int64Int64_ReturnValue_1) == 0x000D62, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EqualEqual_Int64Int64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_BooleanOR_ReturnValue) == 0x000D63, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_BooleanAND_ReturnValue_1) == 0x000D64, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_BooleanAND_ReturnValue_2) == 0x000D65, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_Value_1) == 0x000D68, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_ReturnValue_1) == 0x000D6C, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_Value_2) == 0x000D70, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_Value_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_ReturnValue_2) == 0x000D80, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_MakeStruct_ST_DamageMeterHitInfo) == 0x000D88, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_MakeStruct_ST_DamageMeterHitInfo' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000DC0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Length_ReturnValue_2) == 0x000DC8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Greater_IntInt_ReturnValue) == 0x000DCC, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_Value_3) == 0x000DD0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_Value_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_ReturnValue_3) == 0x000DD4, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_Value_4) == 0x000DD8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_Value_4' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_ReturnValue_4) == 0x000E10, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_MakeStruct_ST_DamageMeterTimeData) == 0x000E18, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_MakeStruct_ST_DamageMeterTimeData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Add_ReturnValue) == 0x000E58, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_MakeLiteralByte_ReturnValue) == 0x000E5C, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x000E60, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_And_IntInt_ReturnValue) == 0x000E64, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_And_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000E68, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Conv_IntToBool_ReturnValue) == 0x000E69, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetTimeSeconds_ReturnValue_1) == 0x000E70, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetTimeSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetTimeSeconds_ReturnValue_2) == 0x000E78, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetTimeSeconds_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000E80, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000E88, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000E90, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000E98, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000EA0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_FMax_ReturnValue) == 0x000EA8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000EB0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_MakeStruct_maxHP_30_3DD85F804938E62B5968DBA6E019F714_ImplicitCast) == 0x000EB8, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_MakeStruct_maxHP_30_3DD85F804938E62B5968DBA6E019F714_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_A_ImplicitCast) == 0x000EC0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000EC8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000ED0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_A_ImplicitCast_1) == 0x000ED8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_MakeStruct_delta_25_E23027C84A4F0C5F3C3F0098E0A658F5_ImplicitCast) == 0x000EE0, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_MakeStruct_delta_25_E23027C84A4F0C5F3C3F0098E0A658F5_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_A_ImplicitCast_2) == 0x000EE8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x000EF0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.SetAbilityData
-// 0x0180 (0x0180 - 0x0000)
-struct WBP_DamageMeter_C_SetAbilityData final
-{
-public:
-	TMap<int64, struct FST_DamageMeterHitData>    Map;                                               // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<int64>                                 CallFunc_Map_Keys_Keys;                            // 0x0050(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Array_Get_Item;                           // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value;                           // 0x0070(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterHitInfo                 CallFunc_Map_Find_Value_1;                         // 0x00C0(0x0038)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData;           // 0x0100(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_InsertIntoBarData_index;                  // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_SetAbilityData) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_SetAbilityData");
-static_assert(sizeof(WBP_DamageMeter_C_SetAbilityData) == 0x000180, "Wrong size on WBP_DamageMeter_C_SetAbilityData");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, Map) == 0x000000, "Member 'WBP_DamageMeter_C_SetAbilityData::Map' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Map_Keys_Keys) == 0x000050, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, Temp_int_Array_Index_Variable) == 0x000060, "Member 'WBP_DamageMeter_C_SetAbilityData::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Array_Length_ReturnValue) == 0x000064, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Array_Get_Item) == 0x000068, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Map_Find_Value) == 0x000070, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, Temp_int_Loop_Counter_Variable) == 0x0000A4, "Member 'WBP_DamageMeter_C_SetAbilityData::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000B0, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Less_IntInt_ReturnValue) == 0x0000B8, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Add_IntInt_ReturnValue) == 0x0000BC, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Map_Find_Value_1) == 0x0000C0, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Map_Find_ReturnValue_1) == 0x0000F8, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, K2Node_MakeStruct_ST_DamageMeterBarData) == 0x000100, "Member 'WBP_DamageMeter_C_SetAbilityData::K2Node_MakeStruct_ST_DamageMeterBarData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_InsertIntoBarData_index) == 0x000178, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_InsertIntoBarData_index' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_DamageMeter_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_Tick) == 0x000004, "Wrong alignment on WBP_DamageMeter_C_Tick");
-static_assert(sizeof(WBP_DamageMeter_C_Tick) == 0x00003C, "Wrong size on WBP_DamageMeter_C_Tick");
-static_assert(offsetof(WBP_DamageMeter_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_DamageMeter_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_DamageMeter_C_Tick::InDeltaTime' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.Trim Bars
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_DamageMeter_C_Trim_Bars final
-{
-public:
-	TArray<class UWBP_DamageMeterBar_C*>          Bars_0;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	int32                                         needed;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVerticalBox*                           vertBox;                                           // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RemoveChildAt_ReturnValue;                // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_Trim_Bars) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_Trim_Bars");
-static_assert(sizeof(WBP_DamageMeter_C_Trim_Bars) == 0x000030, "Wrong size on WBP_DamageMeter_C_Trim_Bars");
-static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, Bars_0) == 0x000000, "Member 'WBP_DamageMeter_C_Trim_Bars::Bars_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, needed) == 0x000010, "Member 'WBP_DamageMeter_C_Trim_Bars::needed' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, vertBox) == 0x000018, "Member 'WBP_DamageMeter_C_Trim_Bars::vertBox' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_Trim_Bars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, CallFunc_Array_Length_ReturnValue_1) == 0x000024, "Member 'WBP_DamageMeter_C_Trim_Bars::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, CallFunc_Subtract_IntInt_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_Trim_Bars::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, CallFunc_Greater_IntInt_ReturnValue) == 0x00002C, "Member 'WBP_DamageMeter_C_Trim_Bars::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, CallFunc_RemoveChildAt_ReturnValue) == 0x00002D, "Member 'WBP_DamageMeter_C_Trim_Bars::CallFunc_RemoveChildAt_ReturnValue' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.UpdateBars
-// 0x02D0 (0x02D0 - 0x0000)
-struct WBP_DamageMeter_C_UpdateBars final
-{
-public:
-	double                                        dataMax;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        dataTotal;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FST_DamageMeterBarData>         BarData_0;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<class UWBP_DamageMeterBar_C*>          barList;                                           // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	class UVerticalBox*                           VerticalBox;                                       // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_DamageMeterBarData                 CallFunc_Array_Get_Item;                           // 0x0050(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	class UWBP_DamageMeterBar_C*                  CallFunc_GetBarAtIndex_bar;                        // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UObject>                 CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue; // 0x00D0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakColor_R;                             // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_G;                             // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_B;                             // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_A;                             // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0110(0x0018)()
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMin_ReturnValue;                         // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0138(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x014D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14E[0x2];                                      // 0x014E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue;            // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_189[0x3];                                      // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x018C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x019D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19E[0x2];                                      // 0x019E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_2;               // 0x01A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChecked_ReturnValue_1;                  // 0x01B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B3[0x5];                                      // 0x01B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_1;                           // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FMin_ReturnValue_1;                       // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_3;               // 0x01E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x01F0(0x0018)()
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue_1;          // 0x0218(0x0018)()
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData;     // 0x0230(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array;                  // 0x0280(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0290(0x0018)()
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeColor_B_ImplicitCast;                 // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeColor_G_ImplicitCast;                 // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeColor_R_ImplicitCast;                 // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_UpdateBars) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_UpdateBars");
-static_assert(sizeof(WBP_DamageMeter_C_UpdateBars) == 0x0002D0, "Wrong size on WBP_DamageMeter_C_UpdateBars");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, dataMax) == 0x000000, "Member 'WBP_DamageMeter_C_UpdateBars::dataMax' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, dataTotal) == 0x000008, "Member 'WBP_DamageMeter_C_UpdateBars::dataTotal' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, BarData_0) == 0x000010, "Member 'WBP_DamageMeter_C_UpdateBars::BarData_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, barList) == 0x000020, "Member 'WBP_DamageMeter_C_UpdateBars::barList' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, VerticalBox) == 0x000030, "Member 'WBP_DamageMeter_C_UpdateBars::VerticalBox' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Array_Length_ReturnValue_1) == 0x00003C, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_FMax_ReturnValue) == 0x000040, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000048, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_int_Array_Index_Variable) == 0x00004C, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Array_Get_Item) == 0x000050, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_GetBarAtIndex_bar) == 0x0000C8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_GetBarAtIndex_bar' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue) == 0x0000D0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0000F8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_BreakColor_R) == 0x0000FC, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_BreakColor_R' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_BreakColor_G) == 0x000100, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_BreakColor_G' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_BreakColor_B) == 0x000104, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_BreakColor_B' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_BreakColor_A) == 0x000108, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_BreakColor_A' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Conv_NameToText_ReturnValue) == 0x000110, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000128, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_FMin_ReturnValue) == 0x000130, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_FMin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeVector2D_ReturnValue) == 0x000138, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_int_Loop_Counter_Variable) == 0x000148, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_IsChecked_ReturnValue) == 0x00014C, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Less_IntInt_ReturnValue) == 0x00014D, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Add_IntInt_ReturnValue) == 0x000150, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeLiteralDouble_ReturnValue) == 0x000158, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeLiteralDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeVector2D_ReturnValue_1) == 0x000160, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000170, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000178, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000180, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_byte_Variable) == 0x000188, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeColor_ReturnValue) == 0x00018C, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_byte_Variable_1) == 0x00019C, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_bool_Variable) == 0x00019D, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeVector2D_ReturnValue_2) == 0x0001A0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeVector2D_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, K2Node_Select_Default) == 0x0001B0, "Member 'WBP_DamageMeter_C_UpdateBars::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_bool_Variable_1) == 0x0001B1, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_IsChecked_ReturnValue_1) == 0x0001B2, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_IsChecked_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, K2Node_Select_Default_1) == 0x0001B8, "Member 'WBP_DamageMeter_C_UpdateBars::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0001C0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0001C8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_FMin_ReturnValue_1) == 0x0001D0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_FMin_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_SelectInt_ReturnValue) == 0x0001D8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeVector2D_ReturnValue_3) == 0x0001E0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeVector2D_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Conv_DoubleToText_ReturnValue) == 0x0001F0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000208, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000210, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Conv_DoubleToText_ReturnValue_1) == 0x000218, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Conv_DoubleToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, UniqueObjectNameForCooking_FormatArgumentData) == 0x000230, "Member 'WBP_DamageMeter_C_UpdateBars::UniqueObjectNameForCooking_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, UniqueObjectNameForCooking_Array) == 0x000280, "Member 'WBP_DamageMeter_C_UpdateBars::UniqueObjectNameForCooking_Array' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Format_ReturnValue) == 0x000290, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0002A8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0002B0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x0002B8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeColor_B_ImplicitCast) == 0x0002C0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeColor_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeColor_G_ImplicitCast) == 0x0002C4, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeColor_G_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeColor_R_ImplicitCast) == 0x0002C8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeColor_R_ImplicitCast' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.UpdateDPS
-// 0x0458 (0x0458 - 0x0000)
-struct WBP_DamageMeter_C_UpdateDPS final
-{
-public:
-	TArray<struct FST_DamageMeterBarData>         BarData_0;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<class UWBP_DamageMeterBar_C*>          Bars_0;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	class UVerticalBox*                           vertBox;                                           // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_DamageMeterBarData                 CallFunc_Array_Get_Item;                           // 0x0038(0x0078)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B3[0x5];                                       // 0x00B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_CalcCombatTime_time;                      // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CalcCombatTime_isActive;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x00C8(0x0018)()
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData;     // 0x00E8(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Max_ReturnValue;                          // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_1;   // 0x0150(0x0050)(HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_2;   // 0x01B8(0x0050)(HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Max_ReturnValue_1;                        // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue_1;          // 0x0218(0x0018)()
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_2;           // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_3;   // 0x0238(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_4;   // 0x0288(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array;                  // 0x02D8(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2EC[0x4];                                      // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02F0(0x0018)()
-	class UWBP_DamageMeterBar_C*                  CallFunc_GetBarAtIndex_bar;                        // 0x0308(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0311(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_312[0x6];                                      // 0x0312(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default;                             // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32A[0x2];                                      // 0x032A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue_2;          // 0x0338(0x0018)()
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue_3;          // 0x0350(0x0018)()
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_5;   // 0x0368(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_6;   // 0x03B8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array_1;                // 0x0408(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array_2;                // 0x0418(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0428(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0440(0x0018)()
-};
-static_assert(alignof(WBP_DamageMeter_C_UpdateDPS) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_UpdateDPS");
-static_assert(sizeof(WBP_DamageMeter_C_UpdateDPS) == 0x000458, "Wrong size on WBP_DamageMeter_C_UpdateDPS");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, BarData_0) == 0x000000, "Member 'WBP_DamageMeter_C_UpdateDPS::BarData_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, Bars_0) == 0x000010, "Member 'WBP_DamageMeter_C_UpdateDPS::Bars_0' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, vertBox) == 0x000020, "Member 'WBP_DamageMeter_C_UpdateDPS::vertBox' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, Temp_int_Array_Index_Variable) == 0x00002C, "Member 'WBP_DamageMeter_C_UpdateDPS::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, Temp_int_Loop_Counter_Variable) == 0x000030, "Member 'WBP_DamageMeter_C_UpdateDPS::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Array_Get_Item) == 0x000038, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Less_IntInt_ReturnValue) == 0x0000B0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x0000B1, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_IsValid_Guid_ReturnValue) == 0x0000B2, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_CalcCombatTime_time) == 0x0000B8, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_CalcCombatTime_time' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_CalcCombatTime_isActive) == 0x0000C0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_CalcCombatTime_isActive' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_DoubleToText_ReturnValue) == 0x0000C8, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_FMax_ReturnValue) == 0x0000E0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData) == 0x0000E8, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Max_ReturnValue) == 0x000138, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Max_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000140, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000148, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_1) == 0x000150, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0001A0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0001A8, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0001B0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_2) == 0x0001B8, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000208, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Max_ReturnValue_1) == 0x000210, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Max_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_DoubleToText_ReturnValue_1) == 0x000218, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_DoubleToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_IntToDouble_ReturnValue_2) == 0x000230, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_IntToDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_3) == 0x000238, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_4) == 0x000288, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_Array) == 0x0002D8, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_Array' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Add_IntInt_ReturnValue) == 0x0002E8, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Format_ReturnValue) == 0x0002F0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_GetBarAtIndex_bar) == 0x000308, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_GetBarAtIndex_bar' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_IsChecked_ReturnValue) == 0x000310, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, Temp_bool_Variable) == 0x000311, "Member 'WBP_DamageMeter_C_UpdateDPS::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, K2Node_Select_Default) == 0x000318, "Member 'WBP_DamageMeter_C_UpdateDPS::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000320, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000328, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000329, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_SelectInt_ReturnValue) == 0x00032C, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000330, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_DoubleToText_ReturnValue_2) == 0x000338, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_DoubleToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_DoubleToText_ReturnValue_3) == 0x000350, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_DoubleToText_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_5) == 0x000368, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_6) == 0x0003B8, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_Array_1) == 0x000408, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_Array_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_Array_2) == 0x000418, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_Array_2' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Format_ReturnValue_1) == 0x000428, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Format_ReturnValue_2) == 0x000440, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-
-// Function WBP_DamageMeter.WBP_DamageMeter_C.UpdateHoverText
-// 0x0040 (0x0040 - 0x0000)
-struct WBP_DamageMeter_C_UpdateHoverText final
-{
-public:
-	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FST_DamageMeterBarData>         K2Node_Select_Default;                             // 0x0008(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0020(0x0018)()
-	int32                                         CallFunc_Map_Find_Value;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_DamageMeter_C_UpdateHoverText) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_UpdateHoverText");
-static_assert(sizeof(WBP_DamageMeter_C_UpdateHoverText) == 0x000040, "Wrong size on WBP_DamageMeter_C_UpdateHoverText");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, Temp_bool_Variable) == 0x000000, "Member 'WBP_DamageMeter_C_UpdateHoverText::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, K2Node_Select_Default) == 0x000008, "Member 'WBP_DamageMeter_C_UpdateHoverText::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000018, "Member 'WBP_DamageMeter_C_UpdateHoverText::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, CallFunc_Conv_NameToText_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_UpdateHoverText::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, CallFunc_Map_Find_Value) == 0x000038, "Member 'WBP_DamageMeter_C_UpdateHoverText::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, CallFunc_Map_Find_ReturnValue) == 0x00003C, "Member 'WBP_DamageMeter_C_UpdateHoverText::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x00003D, "Member 'WBP_DamageMeter_C_UpdateHoverText::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
 
 // Function WBP_DamageMeter.WBP_DamageMeter_C.UpdateTitleText
 // 0x0848 (0x0848 - 0x0000)
@@ -1799,6 +188,1617 @@ static_assert(offsetof(WBP_DamageMeter_C_UpdateTitleText, CallFunc_Format_Return
 static_assert(offsetof(WBP_DamageMeter_C_UpdateTitleText, UniqueObjectNameForCooking_FormatArgumentData_13) == 0x0007D0, "Member 'WBP_DamageMeter_C_UpdateTitleText::UniqueObjectNameForCooking_FormatArgumentData_13' has a wrong offset!");
 static_assert(offsetof(WBP_DamageMeter_C_UpdateTitleText, UniqueObjectNameForCooking_Array_6) == 0x000820, "Member 'WBP_DamageMeter_C_UpdateTitleText::UniqueObjectNameForCooking_Array_6' has a wrong offset!");
 static_assert(offsetof(WBP_DamageMeter_C_UpdateTitleText, CallFunc_Format_ReturnValue_6) == 0x000830, "Member 'WBP_DamageMeter_C_UpdateTitleText::CallFunc_Format_ReturnValue_6' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.UpdateHoverText
+// 0x0040 (0x0040 - 0x0000)
+struct WBP_DamageMeter_C_UpdateHoverText final
+{
+public:
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FST_DamageMeterBarData>         K2Node_Select_Default;                             // 0x0008(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0020(0x0018)()
+	int32                                         CallFunc_Map_Find_Value;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_UpdateHoverText) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_UpdateHoverText");
+static_assert(sizeof(WBP_DamageMeter_C_UpdateHoverText) == 0x000040, "Wrong size on WBP_DamageMeter_C_UpdateHoverText");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, Temp_bool_Variable) == 0x000000, "Member 'WBP_DamageMeter_C_UpdateHoverText::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, K2Node_Select_Default) == 0x000008, "Member 'WBP_DamageMeter_C_UpdateHoverText::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000018, "Member 'WBP_DamageMeter_C_UpdateHoverText::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, CallFunc_Conv_NameToText_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_UpdateHoverText::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, CallFunc_Map_Find_Value) == 0x000038, "Member 'WBP_DamageMeter_C_UpdateHoverText::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, CallFunc_Map_Find_ReturnValue) == 0x00003C, "Member 'WBP_DamageMeter_C_UpdateHoverText::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateHoverText, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x00003D, "Member 'WBP_DamageMeter_C_UpdateHoverText::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.UpdateDPS
+// 0x0458 (0x0458 - 0x0000)
+struct WBP_DamageMeter_C_UpdateDPS final
+{
+public:
+	TArray<struct FST_DamageMeterBarData>         BarData_0;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class UWBP_DamageMeterBar_C*>          Bars_0;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	class UVerticalBox*                           vertBox;                                           // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterBarData                 CallFunc_Array_Get_Item;                           // 0x0038(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B3[0x5];                                       // 0x00B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_CalcCombatTime_time;                      // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CalcCombatTime_isActive;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x00C8(0x0018)()
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData;     // 0x00E8(0x0050)(HasGetValueTypeHash)
+	int32                                         CallFunc_Max_ReturnValue;                          // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_1;   // 0x0150(0x0050)(HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_2;   // 0x01B8(0x0050)(HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Max_ReturnValue_1;                        // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue_1;          // 0x0218(0x0018)()
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_2;           // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_3;   // 0x0238(0x0050)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_4;   // 0x0288(0x0050)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array;                  // 0x02D8(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2EC[0x4];                                      // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02F0(0x0018)()
+	class UWBP_DamageMeterBar_C*                  CallFunc_GetBarAtIndex_bar;                        // 0x0308(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0311(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_312[0x6];                                      // 0x0312(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default;                             // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32A[0x2];                                      // 0x032A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue_2;          // 0x0338(0x0018)()
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue_3;          // 0x0350(0x0018)()
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_5;   // 0x0368(0x0050)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData_6;   // 0x03B8(0x0050)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array_1;                // 0x0408(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array_2;                // 0x0418(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0428(0x0018)()
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0440(0x0018)()
+};
+static_assert(alignof(WBP_DamageMeter_C_UpdateDPS) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_UpdateDPS");
+static_assert(sizeof(WBP_DamageMeter_C_UpdateDPS) == 0x000458, "Wrong size on WBP_DamageMeter_C_UpdateDPS");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, BarData_0) == 0x000000, "Member 'WBP_DamageMeter_C_UpdateDPS::BarData_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, Bars_0) == 0x000010, "Member 'WBP_DamageMeter_C_UpdateDPS::Bars_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, vertBox) == 0x000020, "Member 'WBP_DamageMeter_C_UpdateDPS::vertBox' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, Temp_int_Array_Index_Variable) == 0x00002C, "Member 'WBP_DamageMeter_C_UpdateDPS::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, Temp_int_Loop_Counter_Variable) == 0x000030, "Member 'WBP_DamageMeter_C_UpdateDPS::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Array_Get_Item) == 0x000038, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Less_IntInt_ReturnValue) == 0x0000B0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x0000B1, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_IsValid_Guid_ReturnValue) == 0x0000B2, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_CalcCombatTime_time) == 0x0000B8, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_CalcCombatTime_time' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_CalcCombatTime_isActive) == 0x0000C0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_CalcCombatTime_isActive' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_DoubleToText_ReturnValue) == 0x0000C8, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_FMax_ReturnValue) == 0x0000E0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData) == 0x0000E8, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Max_ReturnValue) == 0x000138, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Max_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000140, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000148, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_1) == 0x000150, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0001A0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0001A8, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0001B0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_2) == 0x0001B8, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000208, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Max_ReturnValue_1) == 0x000210, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Max_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_DoubleToText_ReturnValue_1) == 0x000218, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_DoubleToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_IntToDouble_ReturnValue_2) == 0x000230, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_IntToDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_3) == 0x000238, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_4) == 0x000288, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_Array) == 0x0002D8, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_Array' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Add_IntInt_ReturnValue) == 0x0002E8, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Format_ReturnValue) == 0x0002F0, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_GetBarAtIndex_bar) == 0x000308, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_GetBarAtIndex_bar' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_IsChecked_ReturnValue) == 0x000310, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, Temp_bool_Variable) == 0x000311, "Member 'WBP_DamageMeter_C_UpdateDPS::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, K2Node_Select_Default) == 0x000318, "Member 'WBP_DamageMeter_C_UpdateDPS::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000320, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000328, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000329, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_SelectInt_ReturnValue) == 0x00032C, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000330, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_DoubleToText_ReturnValue_2) == 0x000338, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_DoubleToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Conv_DoubleToText_ReturnValue_3) == 0x000350, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Conv_DoubleToText_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_5) == 0x000368, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_FormatArgumentData_6) == 0x0003B8, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_FormatArgumentData_6' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_Array_1) == 0x000408, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_Array_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, UniqueObjectNameForCooking_Array_2) == 0x000418, "Member 'WBP_DamageMeter_C_UpdateDPS::UniqueObjectNameForCooking_Array_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Format_ReturnValue_1) == 0x000428, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateDPS, CallFunc_Format_ReturnValue_2) == 0x000440, "Member 'WBP_DamageMeter_C_UpdateDPS::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.UpdateBars
+// 0x02D0 (0x02D0 - 0x0000)
+struct WBP_DamageMeter_C_UpdateBars final
+{
+public:
+	double                                        dataMax;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        dataTotal;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FST_DamageMeterBarData>         BarData_0;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class UWBP_DamageMeterBar_C*>          barList;                                           // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	class UVerticalBox*                           VerticalBox;                                       // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterBarData                 CallFunc_Array_Get_Item;                           // 0x0050(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	class UWBP_DamageMeterBar_C*                  CallFunc_GetBarAtIndex_bar;                        // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue; // 0x00D0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakColor_R;                             // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_G;                             // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_B;                             // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_A;                             // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0110(0x0018)()
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMin_ReturnValue;                         // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0138(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x014D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14E[0x2];                                      // 0x014E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue;            // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_189[0x3];                                      // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x018C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x019D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19E[0x2];                                      // 0x019E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_2;               // 0x01A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue_1;                  // 0x01B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B3[0x5];                                      // 0x01B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default_1;                           // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FMin_ReturnValue_1;                       // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_3;               // 0x01E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x01F0(0x0018)()
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue_1;          // 0x0218(0x0018)()
+	struct FFormatArgumentData                    UniqueObjectNameForCooking_FormatArgumentData;     // 0x0230(0x0050)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            UniqueObjectNameForCooking_Array;                  // 0x0280(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0290(0x0018)()
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeColor_B_ImplicitCast;                 // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeColor_G_ImplicitCast;                 // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeColor_R_ImplicitCast;                 // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_UpdateBars) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_UpdateBars");
+static_assert(sizeof(WBP_DamageMeter_C_UpdateBars) == 0x0002D0, "Wrong size on WBP_DamageMeter_C_UpdateBars");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, dataMax) == 0x000000, "Member 'WBP_DamageMeter_C_UpdateBars::dataMax' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, dataTotal) == 0x000008, "Member 'WBP_DamageMeter_C_UpdateBars::dataTotal' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, BarData_0) == 0x000010, "Member 'WBP_DamageMeter_C_UpdateBars::BarData_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, barList) == 0x000020, "Member 'WBP_DamageMeter_C_UpdateBars::barList' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, VerticalBox) == 0x000030, "Member 'WBP_DamageMeter_C_UpdateBars::VerticalBox' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Array_Length_ReturnValue_1) == 0x00003C, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_FMax_ReturnValue) == 0x000040, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000048, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_int_Array_Index_Variable) == 0x00004C, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Array_Get_Item) == 0x000050, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_GetBarAtIndex_bar) == 0x0000C8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_GetBarAtIndex_bar' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue) == 0x0000D0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Conv_SoftObjPathToSoftObjRef_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0000F8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_BreakColor_R) == 0x0000FC, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_BreakColor_R' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_BreakColor_G) == 0x000100, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_BreakColor_G' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_BreakColor_B) == 0x000104, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_BreakColor_B' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_BreakColor_A) == 0x000108, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_BreakColor_A' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Conv_NameToText_ReturnValue) == 0x000110, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000128, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_FMin_ReturnValue) == 0x000130, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_FMin_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeVector2D_ReturnValue) == 0x000138, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_int_Loop_Counter_Variable) == 0x000148, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_IsChecked_ReturnValue) == 0x00014C, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Less_IntInt_ReturnValue) == 0x00014D, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Add_IntInt_ReturnValue) == 0x000150, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeLiteralDouble_ReturnValue) == 0x000158, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeLiteralDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeVector2D_ReturnValue_1) == 0x000160, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000170, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000178, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000180, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_byte_Variable) == 0x000188, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeColor_ReturnValue) == 0x00018C, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_byte_Variable_1) == 0x00019C, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_bool_Variable) == 0x00019D, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeVector2D_ReturnValue_2) == 0x0001A0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeVector2D_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, K2Node_Select_Default) == 0x0001B0, "Member 'WBP_DamageMeter_C_UpdateBars::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, Temp_bool_Variable_1) == 0x0001B1, "Member 'WBP_DamageMeter_C_UpdateBars::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_IsChecked_ReturnValue_1) == 0x0001B2, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_IsChecked_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, K2Node_Select_Default_1) == 0x0001B8, "Member 'WBP_DamageMeter_C_UpdateBars::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0001C0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0001C8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_FMin_ReturnValue_1) == 0x0001D0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_FMin_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_SelectInt_ReturnValue) == 0x0001D8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeVector2D_ReturnValue_3) == 0x0001E0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeVector2D_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Conv_DoubleToText_ReturnValue) == 0x0001F0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000208, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000210, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Conv_DoubleToText_ReturnValue_1) == 0x000218, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Conv_DoubleToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, UniqueObjectNameForCooking_FormatArgumentData) == 0x000230, "Member 'WBP_DamageMeter_C_UpdateBars::UniqueObjectNameForCooking_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, UniqueObjectNameForCooking_Array) == 0x000280, "Member 'WBP_DamageMeter_C_UpdateBars::UniqueObjectNameForCooking_Array' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Format_ReturnValue) == 0x000290, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0002A8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0002B0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x0002B8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeColor_B_ImplicitCast) == 0x0002C0, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeColor_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeColor_G_ImplicitCast) == 0x0002C4, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeColor_G_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_UpdateBars, CallFunc_MakeColor_R_ImplicitCast) == 0x0002C8, "Member 'WBP_DamageMeter_C_UpdateBars::CallFunc_MakeColor_R_ImplicitCast' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.Trim Bars
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_DamageMeter_C_Trim_Bars final
+{
+public:
+	TArray<class UWBP_DamageMeterBar_C*>          Bars_0;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	int32                                         needed;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVerticalBox*                           vertBox;                                           // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RemoveChildAt_ReturnValue;                // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_Trim_Bars) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_Trim_Bars");
+static_assert(sizeof(WBP_DamageMeter_C_Trim_Bars) == 0x000030, "Wrong size on WBP_DamageMeter_C_Trim_Bars");
+static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, Bars_0) == 0x000000, "Member 'WBP_DamageMeter_C_Trim_Bars::Bars_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, needed) == 0x000010, "Member 'WBP_DamageMeter_C_Trim_Bars::needed' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, vertBox) == 0x000018, "Member 'WBP_DamageMeter_C_Trim_Bars::vertBox' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_Trim_Bars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, CallFunc_Array_Length_ReturnValue_1) == 0x000024, "Member 'WBP_DamageMeter_C_Trim_Bars::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, CallFunc_Subtract_IntInt_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_Trim_Bars::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, CallFunc_Greater_IntInt_ReturnValue) == 0x00002C, "Member 'WBP_DamageMeter_C_Trim_Bars::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_Trim_Bars, CallFunc_RemoveChildAt_ReturnValue) == 0x00002D, "Member 'WBP_DamageMeter_C_Trim_Bars::CallFunc_RemoveChildAt_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_DamageMeter_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_Tick) == 0x000004, "Wrong alignment on WBP_DamageMeter_C_Tick");
+static_assert(sizeof(WBP_DamageMeter_C_Tick) == 0x00003C, "Wrong size on WBP_DamageMeter_C_Tick");
+static_assert(offsetof(WBP_DamageMeter_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_DamageMeter_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_DamageMeter_C_Tick::InDeltaTime' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.SetAbilityData
+// 0x0180 (0x0180 - 0x0000)
+struct WBP_DamageMeter_C_SetAbilityData final
+{
+public:
+	TMap<int64, struct FST_DamageMeterHitData>    Map;                                               // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<int64>                                 CallFunc_Map_Keys_Keys;                            // 0x0050(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Array_Get_Item;                           // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value;                           // 0x0070(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterHitInfo                 CallFunc_Map_Find_Value_1;                         // 0x00C0(0x0038)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData;           // 0x0100(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_InsertIntoBarData_index;                  // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_SetAbilityData) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_SetAbilityData");
+static_assert(sizeof(WBP_DamageMeter_C_SetAbilityData) == 0x000180, "Wrong size on WBP_DamageMeter_C_SetAbilityData");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, Map) == 0x000000, "Member 'WBP_DamageMeter_C_SetAbilityData::Map' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Map_Keys_Keys) == 0x000050, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, Temp_int_Array_Index_Variable) == 0x000060, "Member 'WBP_DamageMeter_C_SetAbilityData::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Array_Length_ReturnValue) == 0x000064, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Array_Get_Item) == 0x000068, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Map_Find_Value) == 0x000070, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, Temp_int_Loop_Counter_Variable) == 0x0000A4, "Member 'WBP_DamageMeter_C_SetAbilityData::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000B0, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Less_IntInt_ReturnValue) == 0x0000B8, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Add_IntInt_ReturnValue) == 0x0000BC, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Map_Find_Value_1) == 0x0000C0, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_Map_Find_ReturnValue_1) == 0x0000F8, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, K2Node_MakeStruct_ST_DamageMeterBarData) == 0x000100, "Member 'WBP_DamageMeter_C_SetAbilityData::K2Node_MakeStruct_ST_DamageMeterBarData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_SetAbilityData, CallFunc_InsertIntoBarData_index) == 0x000178, "Member 'WBP_DamageMeter_C_SetAbilityData::CallFunc_InsertIntoBarData_index' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.ProcessHit
+// 0x0F00 (0x0F00 - 0x0000)
+struct WBP_DamageMeter_C_ProcessHit final
+{
+public:
+	struct FHitInst                               HitInst;                                           // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+	int64                                         HitGuid;                                           // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        CallFunc_GetFloatingTextIcon_OutPath;              // 0x0068(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character;               // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAbilityHitRecord                      CallFunc_GetHitRecordByGuid_ReturnValue;           // 0x0098(0x0A30)(ConstParm)
+	float                                         CallFunc_GetGameStatFromGuid_ReturnValue;          // 0x0AC8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_CalcHitColorName_hitName;                 // 0x0ACC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue;             // 0x0AD4(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EnsureCharacterData_Success;              // 0x0AE4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EnsureCharacterData_Success_1;            // 0x0AE5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AE6[0x2];                                      // 0x0AE6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0AE8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AEC[0x4];                                      // 0x0AEC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitTargetInst                         CallFunc_Array_Get_Item;                           // 0x0AF0(0x00B8)(ContainsInstancedReference)
+	int64                                         CallFunc_MakeLiteralInt64_ReturnValue;             // 0x0BA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0BB0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0BB4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0BB8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0BB9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BBA[0x6];                                      // 0x0BBA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0BC0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x0BC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABaseCharacter*                         K2Node_DynamicCast_AsBase_Character_1;             // 0x0BD0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0BD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BD9[0x3];                                      // 0x0BD9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue_1;           // 0x0BDC(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EnsureCharacterData_Success_2;            // 0x0BEC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BED[0x3];                                      // 0x0BED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetGameStatFromGuid_ReturnValue_1;        // 0x0BF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0BF4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0BF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BF9[0x3];                                      // 0x0BF9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0BFC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0C00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C04[0x4];                                      // 0x0C04(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStatModInst                           CallFunc_Array_Get_Item_1;                         // 0x0C08(0x0028)(NoDestructor)
+	int32                                         CallFunc_Map_Find_Value;                           // 0x0C30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0C34(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C35[0x3];                                      // 0x0C35(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x0C38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x0C40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0C48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0C49(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0C4A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C4B[0x5];                                      // 0x0C4B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Abs_ReturnValue_2;                        // 0x0C50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStatModRecord                         CallFunc_GetStatModRecordByGuid_ReturnValue;       // 0x0C58(0x0110)(ConstParm)
+	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0D68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0D69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue_1;      // 0x0D6A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0D6B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0D6C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0D6D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D6E[0x2];                                      // 0x0D6E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value_1;                         // 0x0D70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0D74(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D75[0x3];                                      // 0x0D75(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_Map_Find_Value_2;                         // 0x0D78(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0D88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D89[0x7];                                      // 0x0D89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterHitInfo                 K2Node_MakeStruct_ST_DamageMeterHitInfo;           // 0x0D90(0x0038)(ZeroConstructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0DC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0DD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0DD4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DD5[0x3];                                      // 0x0DD5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value_3;                         // 0x0DD8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0DDC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DDD[0x3];                                      // 0x0DDD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterHitInfo                 CallFunc_Map_Find_Value_4;                         // 0x0DE0(0x0038)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x0E18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E19[0x7];                                      // 0x0E19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterTimeData                K2Node_MakeStruct_ST_DamageMeterTimeData;          // 0x0E20(0x0040)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0E60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0E64(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E65[0x3];                                      // 0x0E65(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0E68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_And_IntInt_ReturnValue;                   // 0x0E6C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0E70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0E71(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E72[0x6];                                      // 0x0E72(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetTimeSeconds_ReturnValue_1;             // 0x0E78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetTimeSeconds_ReturnValue_2;             // 0x0E80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0E88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0E90(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0E98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0EA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0EA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EA9[0x7];                                      // 0x0EA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x0EB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0EB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_MakeStruct_maxHP_30_3DD85F804938E62B5968DBA6E019F714_ImplicitCast; // 0x0EC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_A_ImplicitCast;                       // 0x0EC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0ED0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0ED8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_A_ImplicitCast_1;                     // 0x0EE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_MakeStruct_delta_25_E23027C84A4F0C5F3C3F0098E0A658F5_ImplicitCast; // 0x0EE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_A_ImplicitCast_2;                     // 0x0EF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x0EF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_ProcessHit) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_ProcessHit");
+static_assert(sizeof(WBP_DamageMeter_C_ProcessHit) == 0x000F00, "Wrong size on WBP_DamageMeter_C_ProcessHit");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, HitInst) == 0x000000, "Member 'WBP_DamageMeter_C_ProcessHit::HitInst' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, HitGuid) == 0x000050, "Member 'WBP_DamageMeter_C_ProcessHit::HitGuid' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, Temp_int_Loop_Counter_Variable) == 0x000058, "Member 'WBP_DamageMeter_C_ProcessHit::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Add_IntInt_ReturnValue) == 0x00005C, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Length_ReturnValue) == 0x000060, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetFloatingTextIcon_OutPath) == 0x000068, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetFloatingTextIcon_OutPath' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_DynamicCast_AsBase_Character) == 0x000088, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_DynamicCast_AsBase_Character' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetHitRecordByGuid_ReturnValue) == 0x000098, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetHitRecordByGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetGameStatFromGuid_ReturnValue) == 0x000AC8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetGameStatFromGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_CalcHitColorName_hitName) == 0x000ACC, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_CalcHitColorName_hitName' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetCharacterGuid_ReturnValue) == 0x000AD4, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetCharacterGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EnsureCharacterData_Success) == 0x000AE4, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EnsureCharacterData_Success' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EnsureCharacterData_Success_1) == 0x000AE5, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EnsureCharacterData_Success_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, Temp_int_Array_Index_Variable) == 0x000AE8, "Member 'WBP_DamageMeter_C_ProcessHit::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Get_Item) == 0x000AF0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_MakeLiteralInt64_ReturnValue) == 0x000BA8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_MakeLiteralInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000BB0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Length_ReturnValue_1) == 0x000BB4, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_IsValid_ReturnValue) == 0x000BB8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Less_IntInt_ReturnValue) == 0x000BB9, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetOwner_ReturnValue) == 0x000BC0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetTimeSeconds_ReturnValue) == 0x000BC8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_DynamicCast_AsBase_Character_1) == 0x000BD0, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_DynamicCast_AsBase_Character_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_DynamicCast_bSuccess_1) == 0x000BD8, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetCharacterGuid_ReturnValue_1) == 0x000BDC, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetCharacterGuid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EnsureCharacterData_Success_2) == 0x000BEC, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EnsureCharacterData_Success_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetGameStatFromGuid_ReturnValue_1) == 0x000BF0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetGameStatFromGuid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, Temp_int_Loop_Counter_Variable_1) == 0x000BF4, "Member 'WBP_DamageMeter_C_ProcessHit::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Less_IntInt_ReturnValue_1) == 0x000BF8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Add_IntInt_ReturnValue_1) == 0x000BFC, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, Temp_int_Array_Index_Variable_1) == 0x000C00, "Member 'WBP_DamageMeter_C_ProcessHit::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Get_Item_1) == 0x000C08, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_Value) == 0x000C30, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_ReturnValue) == 0x000C34, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_ReturnValue) == 0x000C38, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_ReturnValue_1) == 0x000C40, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000C48, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000C49, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000C4A, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_ReturnValue_2) == 0x000C50, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetStatModRecordByGuid_ReturnValue) == 0x000C58, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetStatModRecordByGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EqualEqual_Int64Int64_ReturnValue) == 0x000D68, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EqualEqual_Int64Int64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_BooleanAND_ReturnValue) == 0x000D69, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EqualEqual_Int64Int64_ReturnValue_1) == 0x000D6A, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EqualEqual_Int64Int64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_BooleanOR_ReturnValue) == 0x000D6B, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_BooleanAND_ReturnValue_1) == 0x000D6C, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_BooleanAND_ReturnValue_2) == 0x000D6D, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_Value_1) == 0x000D70, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_ReturnValue_1) == 0x000D74, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_Value_2) == 0x000D78, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_Value_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_ReturnValue_2) == 0x000D88, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_MakeStruct_ST_DamageMeterHitInfo) == 0x000D90, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_MakeStruct_ST_DamageMeterHitInfo' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000DC8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Length_ReturnValue_2) == 0x000DD0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Greater_IntInt_ReturnValue) == 0x000DD4, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_Value_3) == 0x000DD8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_Value_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_ReturnValue_3) == 0x000DDC, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_Value_4) == 0x000DE0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_Value_4' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Map_Find_ReturnValue_4) == 0x000E18, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_MakeStruct_ST_DamageMeterTimeData) == 0x000E20, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_MakeStruct_ST_DamageMeterTimeData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Array_Add_ReturnValue) == 0x000E60, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_MakeLiteralByte_ReturnValue) == 0x000E64, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x000E68, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_And_IntInt_ReturnValue) == 0x000E6C, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_And_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000E70, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Conv_IntToBool_ReturnValue) == 0x000E71, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetTimeSeconds_ReturnValue_1) == 0x000E78, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetTimeSeconds_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_GetTimeSeconds_ReturnValue_2) == 0x000E80, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_GetTimeSeconds_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000E88, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000E90, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000E98, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000EA0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000EA8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_FMax_ReturnValue) == 0x000EB0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000EB8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_MakeStruct_maxHP_30_3DD85F804938E62B5968DBA6E019F714_ImplicitCast) == 0x000EC0, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_MakeStruct_maxHP_30_3DD85F804938E62B5968DBA6E019F714_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_A_ImplicitCast) == 0x000EC8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000ED0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000ED8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_A_ImplicitCast_1) == 0x000EE0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, K2Node_MakeStruct_delta_25_E23027C84A4F0C5F3C3F0098E0A658F5_ImplicitCast) == 0x000EE8, "Member 'WBP_DamageMeter_C_ProcessHit::K2Node_MakeStruct_delta_25_E23027C84A4F0C5F3C3F0098E0A658F5_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Abs_A_ImplicitCast_2) == 0x000EF0, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Abs_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ProcessHit, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x000EF8, "Member 'WBP_DamageMeter_C_ProcessHit::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.OnAbilityEventBP_Event
+// 0x0050 (0x0050 - 0x0000)
+struct WBP_DamageMeter_C_OnAbilityEventBP_Event final
+{
+public:
+	struct FHitInst                               HitInst;                                           // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+};
+static_assert(alignof(WBP_DamageMeter_C_OnAbilityEventBP_Event) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_OnAbilityEventBP_Event");
+static_assert(sizeof(WBP_DamageMeter_C_OnAbilityEventBP_Event) == 0x000050, "Wrong size on WBP_DamageMeter_C_OnAbilityEventBP_Event");
+static_assert(offsetof(WBP_DamageMeter_C_OnAbilityEventBP_Event, HitInst) == 0x000000, "Member 'WBP_DamageMeter_C_OnAbilityEventBP_Event::HitInst' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.InsertIntoBarData
+// 0x00C8 (0x00C8 - 0x0000)
+struct WBP_DamageMeter_C_InsertIntoBarData final
+{
+public:
+	struct FST_DamageMeterBarData                 Data;                                              // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FST_DamageMeterBarData>         BarData_0;                                         // 0x0078(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int32                                         Index_0;                                           // 0x0088(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default;                             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default_1;                           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_InsertIntoBarData) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_InsertIntoBarData");
+static_assert(sizeof(WBP_DamageMeter_C_InsertIntoBarData) == 0x0000C8, "Wrong size on WBP_DamageMeter_C_InsertIntoBarData");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, Data) == 0x000000, "Member 'WBP_DamageMeter_C_InsertIntoBarData::Data' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, BarData_0) == 0x000078, "Member 'WBP_DamageMeter_C_InsertIntoBarData::BarData_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, Index_0) == 0x000088, "Member 'WBP_DamageMeter_C_InsertIntoBarData::Index_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, Temp_bool_Variable) == 0x00008C, "Member 'WBP_DamageMeter_C_InsertIntoBarData::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_Array_Add_ReturnValue) == 0x000090, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_Array_Length_ReturnValue) == 0x000094, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_Subtract_IntInt_ReturnValue) == 0x000098, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, Temp_int_Variable) == 0x00009C, "Member 'WBP_DamageMeter_C_InsertIntoBarData::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000A0, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_Add_IntInt_ReturnValue) == 0x0000A4, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, Temp_bool_Variable_1) == 0x0000A8, "Member 'WBP_DamageMeter_C_InsertIntoBarData::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_IsChecked_ReturnValue) == 0x0000A9, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, K2Node_Select_Default) == 0x0000B0, "Member 'WBP_DamageMeter_C_InsertIntoBarData::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, K2Node_Select_Default_1) == 0x0000B8, "Member 'WBP_DamageMeter_C_InsertIntoBarData::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertIntoBarData, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000C0, "Member 'WBP_DamageMeter_C_InsertIntoBarData::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.InsertFlagBars
+// 0x0368 (0x0368 - 0x0000)
+struct WBP_DamageMeter_C_InsertFlagBars final
+{
+public:
+	TMap<int64, struct FST_DamageMeterHitData>    Map;                                               // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int32                                         insertIndex;                                       // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           insertBarColor;                                    // 0x0054(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterBarData                 CallFunc_Array_Get_Item;                           // 0x0080(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_R;                             // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_G;                             // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_B;                             // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_A;                             // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value;                           // 0x0128(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData;           // 0x0180(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_1;         // 0x01F8(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_2;         // 0x0278(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_3;         // 0x02F0(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_InsertFlagBars) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_InsertFlagBars");
+static_assert(sizeof(WBP_DamageMeter_C_InsertFlagBars) == 0x000368, "Wrong size on WBP_DamageMeter_C_InsertFlagBars");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, Map) == 0x000000, "Member 'WBP_DamageMeter_C_InsertFlagBars::Map' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, insertIndex) == 0x000050, "Member 'WBP_DamageMeter_C_InsertFlagBars::insertIndex' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, insertBarColor) == 0x000054, "Member 'WBP_DamageMeter_C_InsertFlagBars::insertBarColor' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, Temp_bool_True_if_break_was_hit_Variable) == 0x000064, "Member 'WBP_DamageMeter_C_InsertFlagBars::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, Temp_int_Array_Index_Variable) == 0x000068, "Member 'WBP_DamageMeter_C_InsertFlagBars::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_IntInt_ReturnValue) == 0x00006C, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Not_PreBool_ReturnValue) == 0x000070, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, Temp_int_Loop_Counter_Variable) == 0x000074, "Member 'WBP_DamageMeter_C_InsertFlagBars::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_IntInt_ReturnValue_1) == 0x000078, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Array_IsValidIndex_ReturnValue) == 0x00007C, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Array_Get_Item) == 0x000080, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Array_Length_ReturnValue) == 0x0000F8, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_BreakColor_R) == 0x0000FC, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_BreakColor_R' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_BreakColor_G) == 0x000100, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_BreakColor_G' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_BreakColor_B) == 0x000104, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_BreakColor_B' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_BreakColor_A) == 0x000108, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_BreakColor_A' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Less_IntInt_ReturnValue) == 0x00010C, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_MakeColor_ReturnValue) == 0x000110, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_BooleanAND_ReturnValue) == 0x000120, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_EqualEqual_Int64Int64_ReturnValue) == 0x000121, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_EqualEqual_Int64Int64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Map_Find_Value) == 0x000128, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Map_Find_ReturnValue) == 0x000158, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000160, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_IntInt_ReturnValue_2) == 0x000168, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000170, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Add_IntInt_ReturnValue_3) == 0x000178, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, K2Node_MakeStruct_ST_DamageMeterBarData) == 0x000180, "Member 'WBP_DamageMeter_C_InsertFlagBars::K2Node_MakeStruct_ST_DamageMeterBarData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, K2Node_MakeStruct_ST_DamageMeterBarData_1) == 0x0001F8, "Member 'WBP_DamageMeter_C_InsertFlagBars::K2Node_MakeStruct_ST_DamageMeterBarData_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, CallFunc_Array_Add_ReturnValue) == 0x000270, "Member 'WBP_DamageMeter_C_InsertFlagBars::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, K2Node_MakeStruct_ST_DamageMeterBarData_2) == 0x000278, "Member 'WBP_DamageMeter_C_InsertFlagBars::K2Node_MakeStruct_ST_DamageMeterBarData_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertFlagBars, K2Node_MakeStruct_ST_DamageMeterBarData_3) == 0x0002F0, "Member 'WBP_DamageMeter_C_InsertFlagBars::K2Node_MakeStruct_ST_DamageMeterBarData_3' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.InsertExtraBars
+// 0x0310 (0x0310 - 0x0000)
+struct WBP_DamageMeter_C_InsertExtraBars final
+{
+public:
+	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value;                           // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue_1;        // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FST_DamageMeterMapData>         K2Node_Select_Default;                             // 0x0028(0x0010)(ReferenceParm)
+	TMap<struct FGuid, int32>                     K2Node_Select_Default_1;                           // 0x0038(0x0050)()
+	struct FSoftObjectPath                        CallFunc_Map_Find_Value_1;                         // 0x0088(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value_2;                         // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        K2Node_Select_Default_2;                           // 0x00B8(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData;           // 0x00D8(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_1;         // 0x0158(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value_3;                         // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E2[0x6];                                      // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        CallFunc_Map_Find_Value_4;                         // 0x01E8(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterMapData                 K2Node_Select_Default_3;                           // 0x0210(0x0060)(HasGetValueTypeHash)
+	struct FSoftObjectPath                        K2Node_Select_Default_4;                           // 0x0270(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_2;         // 0x0290(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_InsertExtraBars) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_InsertExtraBars");
+static_assert(sizeof(WBP_DamageMeter_C_InsertExtraBars) == 0x000310, "Wrong size on WBP_DamageMeter_C_InsertExtraBars");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, Temp_int_Variable) == 0x000000, "Member 'WBP_DamageMeter_C_InsertExtraBars::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, Temp_int_Variable_1) == 0x000004, "Member 'WBP_DamageMeter_C_InsertExtraBars::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, Temp_int_Variable_2) == 0x000008, "Member 'WBP_DamageMeter_C_InsertExtraBars::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, Temp_bool_Variable) == 0x00000C, "Member 'WBP_DamageMeter_C_InsertExtraBars::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, Temp_bool_Variable_1) == 0x00000D, "Member 'WBP_DamageMeter_C_InsertExtraBars::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x000014, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000015, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Length_ReturnValue_1) == 0x000018, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x00001C, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_Value) == 0x000020, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_ReturnValue) == 0x000024, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_NotEqual_Int64Int64_ReturnValue_1) == 0x000025, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_NotEqual_Int64Int64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_Select_Default) == 0x000028, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_Select_Default_1) == 0x000038, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_Value_1) == 0x000088, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_ReturnValue_1) == 0x0000A8, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_Value_2) == 0x0000AC, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_Value_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_ReturnValue_2) == 0x0000B0, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0000B1, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_Select_Default_2) == 0x0000B8, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_MakeStruct_ST_DamageMeterBarData) == 0x0000D8, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_MakeStruct_ST_DamageMeterBarData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Add_ReturnValue) == 0x000150, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_MakeStruct_ST_DamageMeterBarData_1) == 0x000158, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_MakeStruct_ST_DamageMeterBarData_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Add_ReturnValue_1) == 0x0001D0, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Length_ReturnValue_2) == 0x0001D4, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x0001D8, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_Value_3) == 0x0001DC, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_Value_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_ReturnValue_3) == 0x0001E0, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_IsValid_Guid_ReturnValue) == 0x0001E1, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_Value_4) == 0x0001E8, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_Value_4' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Map_Find_ReturnValue_4) == 0x000208, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_Select_Default_3) == 0x000210, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_Select_Default_4) == 0x000270, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_Select_Default_4' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, K2Node_MakeStruct_ST_DamageMeterBarData_2) == 0x000290, "Member 'WBP_DamageMeter_C_InsertExtraBars::K2Node_MakeStruct_ST_DamageMeterBarData_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_InsertExtraBars, CallFunc_Array_Add_ReturnValue_2) == 0x000308, "Member 'WBP_DamageMeter_C_InsertExtraBars::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.Handle Window Content Loaded
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_DamageMeter_C_Handle_Window_Content_Loaded final
+{
+public:
+	class UAoCWindow*                             Window;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_Handle_Window_Content_Loaded) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_Handle_Window_Content_Loaded");
+static_assert(sizeof(WBP_DamageMeter_C_Handle_Window_Content_Loaded) == 0x000008, "Wrong size on WBP_DamageMeter_C_Handle_Window_Content_Loaded");
+static_assert(offsetof(WBP_DamageMeter_C_Handle_Window_Content_Loaded, Window) == 0x000000, "Member 'WBP_DamageMeter_C_Handle_Window_Content_Loaded::Window' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.GetTargetTotals
+// 0x0240 (0x0240 - 0x0000)
+struct WBP_DamageMeter_C_GetTargetTotals final
+{
+public:
+	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value;                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FGuid, int32>                     K2Node_Select_Default;                             // 0x0020(0x0050)()
+	TArray<struct FST_DamageMeterMapData>         K2Node_Select_Default_1;                           // 0x0070(0x0010)(ReferenceParm)
+	TArray<struct FGuid>                          CallFunc_Map_Keys_Keys;                            // 0x0080(0x0010)(ReferenceParm)
+	struct FGuid                                  CallFunc_Array_Get_Item;                           // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Map_Find_Value_1;                         // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value_2;                         // 0x00A8(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        CallFunc_Map_Find_Value_3;                         // 0x00E0(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSoftObjectPath                        K2Node_Select_Default_2;                           // 0x0118(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData;           // 0x0140(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B9[0x3];                                      // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_InsertIntoBarData_index;                  // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData_1;         // 0x01C0(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_InsertIntoBarData_index_1;                // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_GetTargetTotals) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_GetTargetTotals");
+static_assert(sizeof(WBP_DamageMeter_C_GetTargetTotals) == 0x000240, "Wrong size on WBP_DamageMeter_C_GetTargetTotals");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, Temp_int_Variable) == 0x000000, "Member 'WBP_DamageMeter_C_GetTargetTotals::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, Temp_int_Variable_1) == 0x000004, "Member 'WBP_DamageMeter_C_GetTargetTotals::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, Temp_int_Array_Index_Variable) == 0x000008, "Member 'WBP_DamageMeter_C_GetTargetTotals::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'WBP_DamageMeter_C_GetTargetTotals::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, Temp_bool_Variable) == 0x000014, "Member 'WBP_DamageMeter_C_GetTargetTotals::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x000015, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_Value) == 0x000018, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_ReturnValue) == 0x00001C, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, K2Node_Select_Default) == 0x000020, "Member 'WBP_DamageMeter_C_GetTargetTotals::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, K2Node_Select_Default_1) == 0x000070, "Member 'WBP_DamageMeter_C_GetTargetTotals::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Keys_Keys) == 0x000080, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Array_Get_Item) == 0x000090, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_Value_1) == 0x0000A0, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_ReturnValue_1) == 0x0000A4, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_Value_2) == 0x0000A8, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_Value_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_ReturnValue_2) == 0x0000D8, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_Value_3) == 0x0000E0, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_Value_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Map_Find_ReturnValue_3) == 0x000100, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000108, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000110, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, K2Node_Select_Default_2) == 0x000118, "Member 'WBP_DamageMeter_C_GetTargetTotals::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Array_Length_ReturnValue) == 0x000138, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, K2Node_MakeStruct_ST_DamageMeterBarData) == 0x000140, "Member 'WBP_DamageMeter_C_GetTargetTotals::K2Node_MakeStruct_ST_DamageMeterBarData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_Less_IntInt_ReturnValue) == 0x0001B8, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_InsertIntoBarData_index) == 0x0001BC, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_InsertIntoBarData_index' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, K2Node_MakeStruct_ST_DamageMeterBarData_1) == 0x0001C0, "Member 'WBP_DamageMeter_C_GetTargetTotals::K2Node_MakeStruct_ST_DamageMeterBarData_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetTargetTotals, CallFunc_InsertIntoBarData_index_1) == 0x000238, "Member 'WBP_DamageMeter_C_GetTargetTotals::CallFunc_InsertIntoBarData_index_1' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.GetPlayerTotals
+// 0x0190 (0x0190 - 0x0000)
+struct WBP_DamageMeter_C_GetPlayerTotals final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AAoCPlayerControllerBP_C*               K2Node_DynamicCast_AsAo_CPlayer_Controller_BP;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class APlayerCharacter*>               CallFunc_GetLocalPartyMembers_LocalPartyMembers;   // 0x0040(0x0010)(ReferenceParm)
+	class APlayerCharacter*                       CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue;             // 0x005C(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_1;                               // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectedIndex_ReturnValue_1;           // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGuid>                          CallFunc_Map_Keys_Keys;                            // 0x0080(0x0010)(ReferenceParm)
+	struct FGuid                                  CallFunc_Array_Get_Item_1;                         // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GuidGuid_ReturnValue;          // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A6[0x2];                                       // 0x00A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value;                           // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        CallFunc_Map_Find_Value_1;                         // 0x00B0(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D3[0x5];                                       // 0x00D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        K2Node_Select_Default;                             // 0x00D8(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FB[0x5];                                       // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default_1;                           // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default_2;                           // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterBarData                 K2Node_MakeStruct_ST_DamageMeterBarData;           // 0x0110(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_InsertIntoBarData_index;                  // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_GetPlayerTotals) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_GetPlayerTotals");
+static_assert(sizeof(WBP_DamageMeter_C_GetPlayerTotals) == 0x000190, "Wrong size on WBP_DamageMeter_C_GetPlayerTotals");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Array_Index_Variable_1) == 0x00000C, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Variable) == 0x000010, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Loop_Counter_Variable_1) == 0x000014, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_bool_Variable) == 0x000018, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Add_IntInt_ReturnValue_1) == 0x00001C, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_GetPlayerController_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_GetSelectedIndex_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_GetSelectedIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_DynamicCast_AsAo_CPlayer_Controller_BP) == 0x000030, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_DynamicCast_AsAo_CPlayer_Controller_BP' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000039, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_GetLocalPartyMembers_LocalPartyMembers) == 0x000040, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_GetLocalPartyMembers_LocalPartyMembers' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Array_Get_Item) == 0x000050, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_GetCharacterGuid_ReturnValue) == 0x00005C, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_GetCharacterGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Less_IntInt_ReturnValue) == 0x00006C, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, Temp_int_Variable_1) == 0x000070, "Member 'WBP_DamageMeter_C_GetPlayerTotals::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_GetSelectedIndex_ReturnValue_1) == 0x000074, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_GetSelectedIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000078, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000079, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x00007A, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Map_Keys_Keys) == 0x000080, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Array_Get_Item_1) == 0x000090, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Array_Length_ReturnValue_1) == 0x0000A0, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_EqualEqual_GuidGuid_ReturnValue) == 0x0000A4, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_EqualEqual_GuidGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000A5, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Map_Find_Value) == 0x0000A8, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Map_Find_ReturnValue) == 0x0000AC, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Map_Find_Value_1) == 0x0000B0, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Map_Find_ReturnValue_1) == 0x0000D0, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_BooleanAND_ReturnValue) == 0x0000D1, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_Not_PreBool_ReturnValue) == 0x0000D2, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_Select_Default) == 0x0000D8, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_BooleanAND_ReturnValue_1) == 0x0000F8, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_BooleanOR_ReturnValue) == 0x0000F9, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_BooleanOR_ReturnValue_1) == 0x0000FA, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_Select_Default_1) == 0x000100, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_Select_Default_2) == 0x000108, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, K2Node_MakeStruct_ST_DamageMeterBarData) == 0x000110, "Member 'WBP_DamageMeter_C_GetPlayerTotals::K2Node_MakeStruct_ST_DamageMeterBarData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetPlayerTotals, CallFunc_InsertIntoBarData_index) == 0x000188, "Member 'WBP_DamageMeter_C_GetPlayerTotals::CallFunc_InsertIntoBarData_index' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.GetInstigatorInfo
+// 0x0040 (0x0040 - 0x0000)
+struct WBP_DamageMeter_C_GetInstigatorInfo final
+{
+public:
+	class ABaseCharacter*                         Instigator;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Color;                                             // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECharacterClass                               Class_0;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerCharacter*                       CallFunc_GetActualPlayer_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECharacterClass                               CallFunc_GetPrimaryClass_ReturnValue;              // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_Map_Find_Value;                           // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_GetInstigatorInfo) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_GetInstigatorInfo");
+static_assert(sizeof(WBP_DamageMeter_C_GetInstigatorInfo) == 0x000040, "Wrong size on WBP_DamageMeter_C_GetInstigatorInfo");
+static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, Instigator) == 0x000000, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::Instigator' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, Color) == 0x000008, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::Color' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, Class_0) == 0x000018, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::Class_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_GetActualPlayer_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_GetActualPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_IsValid_ReturnValue_1) == 0x000029, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_GetPrimaryClass_ReturnValue) == 0x00002A, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_GetPrimaryClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_Map_Find_Value) == 0x00002C, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetInstigatorInfo, CallFunc_Map_Find_ReturnValue) == 0x00003C, "Member 'WBP_DamageMeter_C_GetInstigatorInfo::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.GetBarAtIndex
+// 0x0058 (0x0058 - 0x0000)
+struct WBP_DamageMeter_C_GetBarAtIndex final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWBP_DamageMeterBar_C*>          barList;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	class UVerticalBox*                           vertBox;                                           // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_DamageMeterBar_C*                  bar;                                               // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_DamageMeterBar_C*                  CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_DamageMeterBar_C*                  CallFunc_Create_ReturnValue;                       // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_GetBarAtIndex) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_GetBarAtIndex");
+static_assert(sizeof(WBP_DamageMeter_C_GetBarAtIndex) == 0x000058, "Wrong size on WBP_DamageMeter_C_GetBarAtIndex");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, Index_0) == 0x000000, "Member 'WBP_DamageMeter_C_GetBarAtIndex::Index_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, barList) == 0x000008, "Member 'WBP_DamageMeter_C_GetBarAtIndex::barList' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, vertBox) == 0x000018, "Member 'WBP_DamageMeter_C_GetBarAtIndex::vertBox' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, bar) == 0x000020, "Member 'WBP_DamageMeter_C_GetBarAtIndex::bar' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000030, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_Array_Length_ReturnValue) == 0x000034, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000038, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_Create_ReturnValue) == 0x000040, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_Array_Add_ReturnValue) == 0x000048, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetBarAtIndex, CallFunc_AddChild_ReturnValue) == 0x000050, "Member 'WBP_DamageMeter_C_GetBarAtIndex::CallFunc_AddChild_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.GetAbilityTotals
+// 0x00D0 (0x00D0 - 0x0000)
+struct WBP_DamageMeter_C_GetAbilityTotals final
+{
+public:
+	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value;                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FST_DamageMeterMapData>         K2Node_Select_Default;                             // 0x0018(0x0010)(ReferenceParm)
+	TMap<struct FGuid, int32>                     K2Node_Select_Default_1;                           // 0x0028(0x0050)()
+	int32                                         CallFunc_Map_Find_Value_1;                         // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int64, struct FST_DamageMeterHitData>    K2Node_Select_Default_2;                           // 0x0080(0x0050)()
+};
+static_assert(alignof(WBP_DamageMeter_C_GetAbilityTotals) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_GetAbilityTotals");
+static_assert(sizeof(WBP_DamageMeter_C_GetAbilityTotals) == 0x0000D0, "Wrong size on WBP_DamageMeter_C_GetAbilityTotals");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, Temp_int_Variable) == 0x000000, "Member 'WBP_DamageMeter_C_GetAbilityTotals::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, Temp_int_Variable_1) == 0x000004, "Member 'WBP_DamageMeter_C_GetAbilityTotals::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, Temp_int_Variable_2) == 0x000008, "Member 'WBP_DamageMeter_C_GetAbilityTotals::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, CallFunc_IsValid_Guid_ReturnValue) == 0x00000C, "Member 'WBP_DamageMeter_C_GetAbilityTotals::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, CallFunc_Map_Find_Value) == 0x000010, "Member 'WBP_DamageMeter_C_GetAbilityTotals::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, CallFunc_Map_Find_ReturnValue) == 0x000014, "Member 'WBP_DamageMeter_C_GetAbilityTotals::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, K2Node_Select_Default) == 0x000018, "Member 'WBP_DamageMeter_C_GetAbilityTotals::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, K2Node_Select_Default_1) == 0x000028, "Member 'WBP_DamageMeter_C_GetAbilityTotals::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, CallFunc_Map_Find_Value_1) == 0x000078, "Member 'WBP_DamageMeter_C_GetAbilityTotals::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, CallFunc_Map_Find_ReturnValue_1) == 0x00007C, "Member 'WBP_DamageMeter_C_GetAbilityTotals::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_GetAbilityTotals, K2Node_Select_Default_2) == 0x000080, "Member 'WBP_DamageMeter_C_GetAbilityTotals::K2Node_Select_Default_2' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.FindMinMax
+// 0x00E0 (0x00E0 - 0x0000)
+struct WBP_DamageMeter_C_FindMinMax final
+{
+public:
+	TArray<struct FST_DamageMeterBarData>         BarData_0;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	double                                        dataMax;                                           // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        dataTotal;                                         // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Total;                                             // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Max;                                               // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterBarData                 CallFunc_Array_Get_Item;                           // 0x0040(0x0078)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default;                             // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_FindMinMax) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_FindMinMax");
+static_assert(sizeof(WBP_DamageMeter_C_FindMinMax) == 0x0000E0, "Wrong size on WBP_DamageMeter_C_FindMinMax");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, BarData_0) == 0x000000, "Member 'WBP_DamageMeter_C_FindMinMax::BarData_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, dataMax) == 0x000010, "Member 'WBP_DamageMeter_C_FindMinMax::dataMax' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, dataTotal) == 0x000018, "Member 'WBP_DamageMeter_C_FindMinMax::dataTotal' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, Total) == 0x000020, "Member 'WBP_DamageMeter_C_FindMinMax::Total' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, Max) == 0x000028, "Member 'WBP_DamageMeter_C_FindMinMax::Max' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, Temp_int_Array_Index_Variable) == 0x000034, "Member 'WBP_DamageMeter_C_FindMinMax::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'WBP_DamageMeter_C_FindMinMax::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Array_Get_Item) == 0x000040, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Less_IntInt_ReturnValue) == 0x0000B8, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Add_IntInt_ReturnValue) == 0x0000BC, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_IsChecked_ReturnValue) == 0x0000C0, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, Temp_bool_Variable) == 0x0000C1, "Member 'WBP_DamageMeter_C_FindMinMax::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, K2Node_Select_Default) == 0x0000C8, "Member 'WBP_DamageMeter_C_FindMinMax::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000D0, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_FindMinMax, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000D8, "Member 'WBP_DamageMeter_C_FindMinMax::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.ExecuteUbergraph_WBP_DamageMeter
+// 0x01E0 (0x01E0 - 0x0000)
+struct WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAoCWindow*                             K2Node_CustomEvent_Window;                         // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetActiveContent_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_DamageMeterHealthLog_C*            K2Node_DynamicCast_AsWBP_Damage_Meter_Health_Log;  // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate;         // 0x002C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0040(0x0008)(NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             UniqueObjectNameForCooking_OutputDelegate_1;       // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FHitInst& HitInst)> UniqueObjectNameForCooking_OutputDelegate_2;     // 0x0058(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UAoCWindow* Window)>     UniqueObjectNameForCooking_OutputDelegate_3;       // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAbilitySubsystem*                      CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0080(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsChecked_1;           // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x00BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x00BF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_ComponentBoundEvent_SelectedItem_1;         // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType_1;        // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_ComponentBoundEvent_SelectedItem;           // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType;          // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FindMinMax_dataMax;                       // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FindMinMax_dataTotal;                     // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FindMinMax_dataMax_1;                     // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FindMinMax_dataTotal_1;                   // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FindMinMax_dataMax_2;                     // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FindMinMax_dataTotal_2;                   // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller_1;      // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AHUD*                                   CallFunc_GetHUD_ReturnValue;                       // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAoCHUDBase*                            K2Node_DynamicCast_AsAo_CHUDBase;                  // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller_2;      // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AAoCHUDBase*                            CallFunc_GetAoCHUD_ReturnValue;                    // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x018B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitInst                               K2Node_CustomEvent_HitInst;                        // 0x0190(0x0050)(ConstParm, ContainsInstancedReference)
+};
+static_assert(alignof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter");
+static_assert(sizeof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter) == 0x0001E0, "Wrong size on WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, EntryPoint) == 0x000000, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_CustomEvent_Window) == 0x000008, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_CustomEvent_Window' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, Temp_byte_Variable) == 0x000010, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetActiveContent_ReturnValue) == 0x000018, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetActiveContent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_AsWBP_Damage_Meter_Health_Log) == 0x000020, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_AsWBP_Damage_Meter_Health_Log' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, UniqueObjectNameForCooking_OutputDelegate) == 0x00002C, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::UniqueObjectNameForCooking_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000040, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, UniqueObjectNameForCooking_OutputDelegate_1) == 0x000048, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::UniqueObjectNameForCooking_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, UniqueObjectNameForCooking_OutputDelegate_2) == 0x000058, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::UniqueObjectNameForCooking_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, UniqueObjectNameForCooking_OutputDelegate_3) == 0x000068, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::UniqueObjectNameForCooking_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000078, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_Event_MyGeometry) == 0x000080, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_Event_InDeltaTime) == 0x0000B8, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_IsValid_ReturnValue_1) == 0x0000BC, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_bIsChecked_1) == 0x0000BD, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_bIsChecked_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_IsValid_Guid_ReturnValue) == 0x0000BE, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, Temp_byte_Variable_1) == 0x0000BF, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_SelectedItem_1) == 0x0000C0, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_SelectedItem_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_SelectionType_1) == 0x0000D0, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_SelectionType_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_SwitchString_CmpSuccess) == 0x0000D1, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_SelectedItem) == 0x0000D8, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_SelectedItem' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_SelectionType) == 0x0000E8, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_SelectionType' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataMax) == 0x0000F0, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataMax' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataTotal) == 0x0000F8, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataTotal' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataMax_1) == 0x000100, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataMax_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataTotal_1) == 0x000108, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataTotal_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataMax_2) == 0x000110, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataMax_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_FindMinMax_dataTotal_2) == 0x000118, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_FindMinMax_dataTotal_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_ComponentBoundEvent_bIsChecked) == 0x000120, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_ComponentBoundEvent_bIsChecked' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetOwningPlayer_ReturnValue) == 0x000128, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000130, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_bSuccess_1) == 0x000138, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_AsAo_CPlayer_Controller_1) == 0x000140, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_AsAo_CPlayer_Controller_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_bSuccess_2) == 0x000148, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetHUD_ReturnValue) == 0x000150, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetHUD_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_AsAo_CHUDBase) == 0x000158, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_AsAo_CHUDBase' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_bSuccess_3) == 0x000160, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000168, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_AsAo_CPlayer_Controller_2) == 0x000170, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_AsAo_CPlayer_Controller_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_DynamicCast_bSuccess_4) == 0x000178, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_GetAoCHUD_ReturnValue) == 0x000180, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_GetAoCHUD_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_IsValid_ReturnValue_2) == 0x000188, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, CallFunc_IsValid_ReturnValue_3) == 0x000189, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, Temp_bool_Variable) == 0x00018A, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_Select_Default) == 0x00018B, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter, K2Node_CustomEvent_HitInst) == 0x000190, "Member 'WBP_DamageMeter_C_ExecuteUbergraph_WBP_DamageMeter::K2Node_CustomEvent_HitInst' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.EnsureCharacterData
+// 0x04F8 (0x04F8 - 0x0000)
+struct WBP_DamageMeter_C_EnsureCharacterData final
+{
+public:
+	class ABaseCharacter*                         instigatorChar;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Success;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue;             // 0x000C(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetCharacterName_ReturnValue;             // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetCharacterName_ReturnValue_1;           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  CallFunc_GetCharacterGuid_ReturnValue_1;           // 0x0050(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_GetInstigatorInfo_color;                  // 0x0064(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECharacterClass                               CallFunc_GetInstigatorInfo_class;                  // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_GetInstigatorInfo_color_1;                // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECharacterClass                               CallFunc_GetInstigatorInfo_class_1;                // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_MakeLiteralInt64_ReturnValue;             // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetGameStatFromGuid_ReturnValue;          // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Map_Find_Value;                           // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerCharacter*                       CallFunc_GetActualPlayer_ReturnValue;              // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEnemy_ReturnValue;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterData                    K2Node_MakeStruct_ST_DamageMeterData;              // 0x00D8(0x0410)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x04E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_MakeStruct_HealthBase_128_14812B854804E54BF28DE2A4B3D3D6C4_ImplicitCast; // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_EnsureCharacterData) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_EnsureCharacterData");
+static_assert(sizeof(WBP_DamageMeter_C_EnsureCharacterData) == 0x0004F8, "Wrong size on WBP_DamageMeter_C_EnsureCharacterData");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, instigatorChar) == 0x000000, "Member 'WBP_DamageMeter_C_EnsureCharacterData::instigatorChar' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, Success) == 0x000008, "Member 'WBP_DamageMeter_C_EnsureCharacterData::Success' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetCharacterGuid_ReturnValue) == 0x00000C, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetCharacterGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetCharacterName_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetCharacterName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetCharacterName_ReturnValue_1) == 0x000030, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetCharacterName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_IsEmpty_ReturnValue) == 0x000040, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_Conv_StringToName_ReturnValue) == 0x000044, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_Not_PreBool_ReturnValue) == 0x00004C, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetCharacterGuid_ReturnValue_1) == 0x000050, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetCharacterGuid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_IsValid_Guid_ReturnValue) == 0x000060, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetInstigatorInfo_color) == 0x000064, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetInstigatorInfo_color' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetInstigatorInfo_class) == 0x000074, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetInstigatorInfo_class' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_BooleanAND_ReturnValue) == 0x000075, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetInstigatorInfo_color_1) == 0x000078, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetInstigatorInfo_color_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetInstigatorInfo_class_1) == 0x000088, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetInstigatorInfo_class_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_MakeLiteralInt64_ReturnValue) == 0x000090, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_MakeLiteralInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetGameStatFromGuid_ReturnValue) == 0x000098, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetGameStatFromGuid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_Map_Find_Value) == 0x00009C, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetPlayerController_ReturnValue) == 0x0000A8, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x0000B0, "Member 'WBP_DamageMeter_C_EnsureCharacterData::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, K2Node_DynamicCast_bSuccess) == 0x0000B8, "Member 'WBP_DamageMeter_C_EnsureCharacterData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetTimeSeconds_ReturnValue) == 0x0000C0, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_GetActualPlayer_ReturnValue) == 0x0000C8, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_GetActualPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_IsEnemy_ReturnValue) == 0x0000D0, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_IsEnemy_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, K2Node_MakeStruct_ST_DamageMeterData) == 0x0000D8, "Member 'WBP_DamageMeter_C_EnsureCharacterData::K2Node_MakeStruct_ST_DamageMeterData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, CallFunc_Array_Add_ReturnValue) == 0x0004E8, "Member 'WBP_DamageMeter_C_EnsureCharacterData::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_EnsureCharacterData, K2Node_MakeStruct_HealthBase_128_14812B854804E54BF28DE2A4B3D3D6C4_ImplicitCast) == 0x0004F0, "Member 'WBP_DamageMeter_C_EnsureCharacterData::K2Node_MakeStruct_HealthBase_128_14812B854804E54BF28DE2A4B3D3D6C4_ImplicitCast' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.CalcHitColorName
+// 0x0038 (0x0038 - 0x0000)
+struct WBP_DamageMeter_C_CalcHitColorName final
+{
+public:
+	TArray<struct FGameplayTag>                   Tags;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FName                                   hitName;                                           // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesTag_ReturnValue;                   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesTag_ReturnValue_1;                 // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesTag_ReturnValue_2;                 // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_CalcHitColorName) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_CalcHitColorName");
+static_assert(sizeof(WBP_DamageMeter_C_CalcHitColorName) == 0x000038, "Wrong size on WBP_DamageMeter_C_CalcHitColorName");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, Tags) == 0x000000, "Member 'WBP_DamageMeter_C_CalcHitColorName::Tags' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, hitName) == 0x000010, "Member 'WBP_DamageMeter_C_CalcHitColorName::hitName' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, Temp_int_Array_Index_Variable) == 0x000018, "Member 'WBP_DamageMeter_C_CalcHitColorName::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_Array_Length_ReturnValue) == 0x00001C, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_Array_Get_Item) == 0x000020, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_MatchesTag_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_MatchesTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_MatchesTag_ReturnValue_1) == 0x000029, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_MatchesTag_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_MatchesTag_ReturnValue_2) == 0x00002A, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_MatchesTag_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, Temp_int_Loop_Counter_Variable) == 0x00002C, "Member 'WBP_DamageMeter_C_CalcHitColorName::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcHitColorName, CallFunc_Add_IntInt_ReturnValue) == 0x000034, "Member 'WBP_DamageMeter_C_CalcHitColorName::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.CalcCombatTime
+// 0x0068 (0x0068 - 0x0000)
+struct WBP_DamageMeter_C_CalcCombatTime final
+{
+public:
+	struct FGuid                                  PlayerGuid;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Time;                                              // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsActive;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value;                           // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_CalcCombatTime) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_CalcCombatTime");
+static_assert(sizeof(WBP_DamageMeter_C_CalcCombatTime) == 0x000068, "Wrong size on WBP_DamageMeter_C_CalcCombatTime");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, PlayerGuid) == 0x000000, "Member 'WBP_DamageMeter_C_CalcCombatTime::PlayerGuid' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, Time) == 0x000010, "Member 'WBP_DamageMeter_C_CalcCombatTime::Time' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, IsActive) == 0x000018, "Member 'WBP_DamageMeter_C_CalcCombatTime::IsActive' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Map_Find_Value) == 0x00001C, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Map_Find_ReturnValue) == 0x000020, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_GetTimeSeconds_ReturnValue) == 0x000028, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000030, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000038, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000040, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x000048, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000050, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_SelectFloat_ReturnValue) == 0x000058, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_CalcCombatTime, CallFunc_Not_PreBool_ReturnValue) == 0x000060, "Member 'WBP_DamageMeter_C_CalcCombatTime::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature final
+{
+public:
+	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong alignment on WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+static_assert(sizeof(WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong size on WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature, bIsChecked) == 0x000000, "Member 'WBP_DamageMeter_C_BndEvt__DesignDamageMeter_CheckBox_301_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature::bIsChecked' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature final
+{
+public:
+	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature");
+static_assert(sizeof(WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature) == 0x000018, "Wrong size on WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature");
+static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature, SelectedItem) == 0x000000, "Member 'WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature::SelectedItem' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature, SelectionType) == 0x000010, "Member 'WBP_DamageMeter_C_BndEvt__DamageMeter_InstigatorCBString_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature::SelectionType' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature final
+{
+public:
+	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong alignment on WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature");
+static_assert(sizeof(WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong size on WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature");
+static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature, bIsChecked) == 0x000000, "Member 'WBP_DamageMeter_C_BndEvt__DamageMeter_IconsCB_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature::bIsChecked' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature final
+{
+public:
+	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature");
+static_assert(sizeof(WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature) == 0x000018, "Wrong size on WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature");
+static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature, SelectedItem) == 0x000000, "Member 'WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature::SelectedItem' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature, SelectionType) == 0x000010, "Member 'WBP_DamageMeter_C_BndEvt__DamageMeter_DamageCBString_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature::SelectionType' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.BarClicked
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_DamageMeter_C_BarClicked final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isMain;                                            // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          rightMouse;                                        // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FST_DamageMeterBarData>         K2Node_Select_Default;                             // 0x0008(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_Guid_ReturnValue_1;               // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_BarClicked) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_BarClicked");
+static_assert(sizeof(WBP_DamageMeter_C_BarClicked) == 0x000020, "Wrong size on WBP_DamageMeter_C_BarClicked");
+static_assert(offsetof(WBP_DamageMeter_C_BarClicked, Index_0) == 0x000000, "Member 'WBP_DamageMeter_C_BarClicked::Index_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_BarClicked, isMain) == 0x000004, "Member 'WBP_DamageMeter_C_BarClicked::isMain' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_BarClicked, rightMouse) == 0x000005, "Member 'WBP_DamageMeter_C_BarClicked::rightMouse' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_BarClicked, Temp_bool_Variable) == 0x000006, "Member 'WBP_DamageMeter_C_BarClicked::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_BarClicked, CallFunc_IsValid_Guid_ReturnValue) == 0x000007, "Member 'WBP_DamageMeter_C_BarClicked::CallFunc_IsValid_Guid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_BarClicked, K2Node_Select_Default) == 0x000008, "Member 'WBP_DamageMeter_C_BarClicked::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_BarClicked, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000018, "Member 'WBP_DamageMeter_C_BarClicked::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_BarClicked, CallFunc_IsValid_Guid_ReturnValue_1) == 0x000019, "Member 'WBP_DamageMeter_C_BarClicked::CallFunc_IsValid_Guid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_BarClicked, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x00001A, "Member 'WBP_DamageMeter_C_BarClicked::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.AddMissToTargetMap
+// 0x0080 (0x0080 - 0x0000)
+struct WBP_DamageMeter_C_AddMissToTargetMap final
+{
+public:
+	TMap<struct FGuid, int32>                     TargetIndexMap;                                    // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<struct FST_DamageMeterMapData>         TargetMap;                                         // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGuid                                  Target;                                            // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         HitGuid;                                           // 0x0070(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Map_Find_Value;                           // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_AddMissToTargetMap) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_AddMissToTargetMap");
+static_assert(sizeof(WBP_DamageMeter_C_AddMissToTargetMap) == 0x000080, "Wrong size on WBP_DamageMeter_C_AddMissToTargetMap");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, TargetIndexMap) == 0x000000, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::TargetIndexMap' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, TargetMap) == 0x000050, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::TargetMap' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, Target) == 0x000060, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::Target' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, HitGuid) == 0x000070, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::HitGuid' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, CallFunc_Map_Find_Value) == 0x000078, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToTargetMap, CallFunc_Map_Find_ReturnValue) == 0x00007C, "Member 'WBP_DamageMeter_C_AddMissToTargetMap::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.AddMissToMap
+// 0x00D0 (0x00D0 - 0x0000)
+struct WBP_DamageMeter_C_AddMissToMap final
+{
+public:
+	struct FST_DamageMeterMapData                 Map;                                               // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	int64                                         HitGuid;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value;                           // 0x0068(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterHitData                 K2Node_MakeStruct_ST_DamageMeterHitData;           // 0x00A0(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_AddMissToMap) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_AddMissToMap");
+static_assert(sizeof(WBP_DamageMeter_C_AddMissToMap) == 0x0000D0, "Wrong size on WBP_DamageMeter_C_AddMissToMap");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, Map) == 0x000000, "Member 'WBP_DamageMeter_C_AddMissToMap::Map' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, HitGuid) == 0x000060, "Member 'WBP_DamageMeter_C_AddMissToMap::HitGuid' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, CallFunc_Map_Find_Value) == 0x000068, "Member 'WBP_DamageMeter_C_AddMissToMap::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, CallFunc_Map_Find_ReturnValue) == 0x000098, "Member 'WBP_DamageMeter_C_AddMissToMap::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, CallFunc_Add_IntInt_ReturnValue) == 0x00009C, "Member 'WBP_DamageMeter_C_AddMissToMap::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddMissToMap, K2Node_MakeStruct_ST_DamageMeterHitData) == 0x0000A0, "Member 'WBP_DamageMeter_C_AddMissToMap::K2Node_MakeStruct_ST_DamageMeterHitData' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.AddDataToTargetMap
+// 0x0100 (0x0100 - 0x0000)
+struct WBP_DamageMeter_C_AddDataToTargetMap final
+{
+public:
+	TMap<struct FGuid, int32>                     TargetIndexMap;                                    // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<struct FST_DamageMeterMapData>         TargetMap;                                         // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGuid                                  Target;                                            // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0070(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectiveValue;                                    // 0x0078(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         HitGuid;                                           // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Flags_0;                                           // 0x0088(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterMapData                 K2Node_MakeStruct_ST_DamageMeterMapData;           // 0x0090(0x0060)(HasGetValueTypeHash)
+	int32                                         CallFunc_Map_Find_Value;                           // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_AddDataToTargetMap) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_AddDataToTargetMap");
+static_assert(sizeof(WBP_DamageMeter_C_AddDataToTargetMap) == 0x000100, "Wrong size on WBP_DamageMeter_C_AddDataToTargetMap");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, TargetIndexMap) == 0x000000, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::TargetIndexMap' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, TargetMap) == 0x000050, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::TargetMap' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, Target) == 0x000060, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::Target' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, Value) == 0x000070, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, EffectiveValue) == 0x000078, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::EffectiveValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, HitGuid) == 0x000080, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::HitGuid' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, Flags_0) == 0x000088, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::Flags_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, K2Node_MakeStruct_ST_DamageMeterMapData) == 0x000090, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::K2Node_MakeStruct_ST_DamageMeterMapData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, CallFunc_Map_Find_Value) == 0x0000F0, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, CallFunc_Map_Find_ReturnValue) == 0x0000F4, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, CallFunc_Array_Add_ReturnValue) == 0x0000F8, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToTargetMap, CallFunc_Array_Length_ReturnValue) == 0x0000FC, "Member 'WBP_DamageMeter_C_AddDataToTargetMap::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.AddDataToMaps
+// 0x00F0 (0x00F0 - 0x0000)
+struct WBP_DamageMeter_C_AddDataToMaps final
+{
+public:
+	struct FST_DamageMeterMapData                 Map;                                               // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	TMap<struct FGuid, int32>                     indexMap;                                          // 0x0060(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<struct FST_DamageMeterMapData>         targetArary;                                       // 0x00B0(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGuid                                  Target;                                            // 0x00C0(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x00D0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectiveValue;                                    // 0x00D8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         HitGuid;                                           // 0x00E0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Flags_0;                                           // 0x00E8(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_AddDataToMaps) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_AddDataToMaps");
+static_assert(sizeof(WBP_DamageMeter_C_AddDataToMaps) == 0x0000F0, "Wrong size on WBP_DamageMeter_C_AddDataToMaps");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, Map) == 0x000000, "Member 'WBP_DamageMeter_C_AddDataToMaps::Map' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, indexMap) == 0x000060, "Member 'WBP_DamageMeter_C_AddDataToMaps::indexMap' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, targetArary) == 0x0000B0, "Member 'WBP_DamageMeter_C_AddDataToMaps::targetArary' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, Target) == 0x0000C0, "Member 'WBP_DamageMeter_C_AddDataToMaps::Target' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, Value) == 0x0000D0, "Member 'WBP_DamageMeter_C_AddDataToMaps::Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, EffectiveValue) == 0x0000D8, "Member 'WBP_DamageMeter_C_AddDataToMaps::EffectiveValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, HitGuid) == 0x0000E0, "Member 'WBP_DamageMeter_C_AddDataToMaps::HitGuid' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMaps, Flags_0) == 0x0000E8, "Member 'WBP_DamageMeter_C_AddDataToMaps::Flags_0' has a wrong offset!");
+
+// Function WBP_DamageMeter.WBP_DamageMeter_C.AddDataToMap
+// 0x0198 (0x0198 - 0x0000)
+struct WBP_DamageMeter_C_AddDataToMap final
+{
+public:
+	struct FST_DamageMeterMapData                 Map;                                               // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectiveValue;                                    // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         HitGuid;                                           // 0x0070(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Flags_0;                                           // 0x0078(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_And_IntInt_ReturnValue;                   // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value;                           // 0x00A0(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_DamageMeterHitData                 CallFunc_Map_Find_Value_1;                         // 0x00D8(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x3];                                      // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_3;           // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_4;           // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterHitData                 K2Node_MakeStruct_ST_DamageMeterHitData;           // 0x0130(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_5;           // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_DamageMeterHitData                 K2Node_MakeStruct_ST_DamageMeterHitData_1;         // 0x0168(0x0030)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_DamageMeter_C_AddDataToMap) == 0x000008, "Wrong alignment on WBP_DamageMeter_C_AddDataToMap");
+static_assert(sizeof(WBP_DamageMeter_C_AddDataToMap) == 0x000198, "Wrong size on WBP_DamageMeter_C_AddDataToMap");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, Map) == 0x000000, "Member 'WBP_DamageMeter_C_AddDataToMap::Map' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, Value) == 0x000060, "Member 'WBP_DamageMeter_C_AddDataToMap::Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, EffectiveValue) == 0x000068, "Member 'WBP_DamageMeter_C_AddDataToMap::EffectiveValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, HitGuid) == 0x000070, "Member 'WBP_DamageMeter_C_AddDataToMap::HitGuid' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, Flags_0) == 0x000078, "Member 'WBP_DamageMeter_C_AddDataToMap::Flags_0' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_MakeLiteralByte_ReturnValue) == 0x000079, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00007C, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x000080, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000088, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_And_IntInt_ReturnValue) == 0x000090, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_And_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Conv_IntToBool_ReturnValue) == 0x000094, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000098, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Map_Find_Value) == 0x0000A0, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Map_Find_ReturnValue) == 0x0000D0, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Map_Find_Value_1) == 0x0000D8, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Map_Find_ReturnValue_1) == 0x000108, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_IntInt_ReturnValue) == 0x00010C, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_IntInt_ReturnValue_1) == 0x000110, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000118, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x000120, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue_4) == 0x000128, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, K2Node_MakeStruct_ST_DamageMeterHitData) == 0x000130, "Member 'WBP_DamageMeter_C_AddDataToMap::K2Node_MakeStruct_ST_DamageMeterHitData' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, CallFunc_Add_DoubleDouble_ReturnValue_5) == 0x000160, "Member 'WBP_DamageMeter_C_AddDataToMap::CallFunc_Add_DoubleDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WBP_DamageMeter_C_AddDataToMap, K2Node_MakeStruct_ST_DamageMeterHitData_1) == 0x000168, "Member 'WBP_DamageMeter_C_AddDataToMap::K2Node_MakeStruct_ST_DamageMeterHitData_1' has a wrong offset!");
 
 }
 

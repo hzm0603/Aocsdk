@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // Class FieldNotification.NotifyFieldValueChanged
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class INotifyFieldValueChanged final : public IInterface
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<INotifyFieldValueChanged>();
 	}
 };
-static_assert(alignof(INotifyFieldValueChanged) == 0x000008, "Wrong alignment on INotifyFieldValueChanged");
-static_assert(sizeof(INotifyFieldValueChanged) == 0x000048, "Wrong size on INotifyFieldValueChanged");
+static_assert(alignof(INotifyFieldValueChanged) == 0x000001, "Wrong alignment on INotifyFieldValueChanged");
+static_assert(sizeof(INotifyFieldValueChanged) == 0x000001, "Wrong size on INotifyFieldValueChanged");
 
 }
 

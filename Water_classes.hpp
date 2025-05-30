@@ -63,8 +63,8 @@ class UBuoyancyComponent final : public UActorComponent
 {
 public:
 	TArray<struct FSphericalPontoon>              Pontoons;                                          // 0x00F8(0x0010)(ZeroConstructor, Deprecated, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FSphericalPontoon& Pontoon)> OnEnteredWaterDelegate;                            // 0x0108(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(struct FSphericalPontoon& Pontoon)> OnExitedWaterDelegate;                             // 0x0118(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FSphericalPontoon& Pontoon)> OnEnteredWaterDelegate;  // 0x0108(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FSphericalPontoon& Pontoon)> OnExitedWaterDelegate;   // 0x0118(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FBuoyancyData                          BuoyancyData;                                      // 0x0128(0x0090)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TArray<class UWaterBodyComponent*>            CurrentWaterBodyComponents;                        // 0x01B8(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	class UPrimitiveComponent*                    SimulatingComponent;                               // 0x01C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -530,8 +530,8 @@ public:
 	class UMaterialInstanceDynamic*               WaterStaticMeshMID;                                // 0x0DE0(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UMaterialInstanceDynamic*               UnderwaterPostProcessMID;                          // 0x0DE8(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UMaterialInstanceDynamic*               WaterInfoMID;                                      // 0x0DF0(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<TSoftObjectPtr<class AWaterBodyIsland>> WaterBodyIslands;                                  // 0x0DF8(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<TSoftObjectPtr<class AWaterBodyExclusionVolume>> WaterBodyExclusionVolumes;                         // 0x0E08(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<TSoftObjectPtr<class AWaterBodyIsland>> WaterBodyIslands;                                 // 0x0DF8(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<TSoftObjectPtr<class AWaterBodyExclusionVolume>> WaterBodyExclusionVolumes;               // 0x0E08(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TWeakObjectPtr<class ALandscapeProxy>         Landscape;                                         // 0x0E18(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSoftObjectPtr<class AWaterZone>              OwningWaterZone;                                   // 0x0E20(0x0028)(Edit, DisableEditOnTemplate, EditConst, AdvancedDisplay, Protected, TextExportTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSoftObjectPtr<class AWaterZone>              WaterZoneOverride;                                 // 0x0E48(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, AdvancedDisplay, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -956,7 +956,7 @@ static_assert(offsetof(UWaterBodyRiverComponent, OceanTransitionMaterial) == 0x0
 static_assert(offsetof(UWaterBodyRiverComponent, OceanTransitionMID) == 0x001588, "Member 'UWaterBodyRiverComponent::OceanTransitionMID' has a wrong offset!");
 
 // Class Water.WaterBrushActorInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IWaterBrushActorInterface final : public IInterface
 {
 public:
@@ -969,8 +969,8 @@ public:
 		return GetDefaultObjImpl<IWaterBrushActorInterface>();
 	}
 };
-static_assert(alignof(IWaterBrushActorInterface) == 0x000008, "Wrong alignment on IWaterBrushActorInterface");
-static_assert(sizeof(IWaterBrushActorInterface) == 0x000048, "Wrong size on IWaterBrushActorInterface");
+static_assert(alignof(IWaterBrushActorInterface) == 0x000001, "Wrong alignment on IWaterBrushActorInterface");
+static_assert(sizeof(IWaterBrushActorInterface) == 0x000001, "Wrong size on IWaterBrushActorInterface");
 
 // Class Water.WaterMeshComponent
 // 0x0120 (0x0720 - 0x0600)
@@ -1023,7 +1023,7 @@ class UWaterRuntimeSettings final : public UDeveloperSettings
 public:
 	ECollisionChannel                             CollisionChannelForWaterTraces;                    // 0x0058(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UMaterialParameterCollection> MaterialParameterCollection;                       // 0x0060(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UMaterialParameterCollection> MaterialParameterCollection;                  // 0x0060(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WaterBodyIconWorldZOffset;                         // 0x0088(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   DefaultWaterCollisionProfileName;                  // 0x008C(0x0008)(Edit, ZeroConstructor, Config, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -1120,7 +1120,7 @@ class UWaterSubsystem final : public UTickableWorldSubsystem
 public:
 	uint8                                         Pad_60[0x38];                                      // 0x0060(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABuoyancyManager*                       BuoyancyManager;                                   // 0x0098(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(bool bIsUnderWater, float DepthUnderwater)> OnCameraUnderwaterStateChanged;                    // 0x00A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool bIsUnderWater, float DepthUnderwater)> OnCameraUnderwaterStateChanged; // 0x00A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnWaterScalabilityChanged;                         // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UStaticMesh*                            DefaultRiverMesh;                                  // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UStaticMesh*                            DefaultLakeMesh;                                   // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1213,7 +1213,7 @@ class AWaterZone final : public AActor
 {
 public:
 	class UTextureRenderTarget2D*                 WaterInfoTexture;                                  // 0x0348(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, DuplicateTransient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<TWeakObjectPtr<class UWaterBodyComponent>> OwnedWaterBodies;                                  // 0x0350(0x0010)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<TWeakObjectPtr<class UWaterBodyComponent>> OwnedWaterBodies;                              // 0x0350(0x0010)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
 	struct FIntPoint                              RenderTargetResolution;                            // 0x0360(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UWaterMeshComponent*                    WaterMesh;                                         // 0x0368(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FVector2D                              ZoneExtent;                                        // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)

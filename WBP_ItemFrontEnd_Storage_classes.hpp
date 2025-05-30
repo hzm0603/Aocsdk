@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ItemFrontEnd_Storage.WBP_ItemFrontEnd_Storage_C
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x0590 - 0x0590)
 class UWBP_ItemFrontEnd_Storage_C final : public UItemFrontEnd
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ItemFrontEnd_Storage_C) == 0x000010, "Wrong alignment on UWBP_ItemFrontEnd_Storage_C");
-static_assert(sizeof(UWBP_ItemFrontEnd_Storage_C) == 0x000540, "Wrong size on UWBP_ItemFrontEnd_Storage_C");
+static_assert(sizeof(UWBP_ItemFrontEnd_Storage_C) == 0x000590, "Wrong size on UWBP_ItemFrontEnd_Storage_C");
 
 }
 

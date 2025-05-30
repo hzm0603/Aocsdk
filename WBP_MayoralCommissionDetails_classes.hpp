@@ -17,15 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MayoralCommissionDetails.WBP_MayoralCommissionDetails_C
-// 0x0028 (0x03C0 - 0x0398)
+// 0x0010 (0x0518 - 0x0508)
 class UWBP_MayoralCommissionDetails_C final : public UMayoralCommissionDetails
 {
 public:
-	class UWBP_ScrollWindow_NoFrameNoPadding_C*   CommissionInfoScrollArea;                          // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ExperienceBarFrame;                                // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 InProgressIndicator;                               // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_CommissionTypeLabel;                            // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAoCCommonTextBlock*                    TB_DurationLabel;                                  // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ScrollWindow_NoFrameNoPadding_C*   CommissionInfoScrollArea;                          // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    TB_CommissionTypeLabel;                            // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -38,12 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MayoralCommissionDetails_C) == 0x000008, "Wrong alignment on UWBP_MayoralCommissionDetails_C");
-static_assert(sizeof(UWBP_MayoralCommissionDetails_C) == 0x0003C0, "Wrong size on UWBP_MayoralCommissionDetails_C");
-static_assert(offsetof(UWBP_MayoralCommissionDetails_C, CommissionInfoScrollArea) == 0x000398, "Member 'UWBP_MayoralCommissionDetails_C::CommissionInfoScrollArea' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionDetails_C, ExperienceBarFrame) == 0x0003A0, "Member 'UWBP_MayoralCommissionDetails_C::ExperienceBarFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionDetails_C, InProgressIndicator) == 0x0003A8, "Member 'UWBP_MayoralCommissionDetails_C::InProgressIndicator' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionDetails_C, TB_CommissionTypeLabel) == 0x0003B0, "Member 'UWBP_MayoralCommissionDetails_C::TB_CommissionTypeLabel' has a wrong offset!");
-static_assert(offsetof(UWBP_MayoralCommissionDetails_C, TB_DurationLabel) == 0x0003B8, "Member 'UWBP_MayoralCommissionDetails_C::TB_DurationLabel' has a wrong offset!");
+static_assert(sizeof(UWBP_MayoralCommissionDetails_C) == 0x000518, "Wrong size on UWBP_MayoralCommissionDetails_C");
+static_assert(offsetof(UWBP_MayoralCommissionDetails_C, CommissionInfoScrollArea) == 0x000508, "Member 'UWBP_MayoralCommissionDetails_C::CommissionInfoScrollArea' has a wrong offset!");
+static_assert(offsetof(UWBP_MayoralCommissionDetails_C, TB_CommissionTypeLabel) == 0x000510, "Member 'UWBP_MayoralCommissionDetails_C::TB_CommissionTypeLabel' has a wrong offset!");
 
 }
 

@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "GameSystemsPlugin_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -19,41 +18,19 @@ namespace SDK::Params
 {
 
 // Function PlayerPawn.PlayerPawn_C.CreateAndShowDeathWidget
-// 0x0050 (0x0050 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct PlayerPawn_C_CreateAndShowDeathWidget final
 {
 public:
-	ESiegeTeamType                                CallFunc_GetSiegeTeamType_ReturnValue;             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAoCGameStateBase*                      K2Node_DynamicCast_AsAo_CGame_State_Base;          // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSiegeEnabled_ReturnValue;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAoCHUDBase*                            CallFunc_GetAoCHUD_ReturnValue;                    // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAoCPlayerController*                   K2Node_DynamicCast_AsAo_CPlayer_Controller;        // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(PlayerPawn_C_CreateAndShowDeathWidget) == 0x000008, "Wrong alignment on PlayerPawn_C_CreateAndShowDeathWidget");
-static_assert(sizeof(PlayerPawn_C_CreateAndShowDeathWidget) == 0x000050, "Wrong size on PlayerPawn_C_CreateAndShowDeathWidget");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, CallFunc_GetSiegeTeamType_ReturnValue) == 0x000000, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::CallFunc_GetSiegeTeamType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, CallFunc_GetGameState_ReturnValue) == 0x000008, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000010, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, K2Node_DynamicCast_AsAo_CGame_State_Base) == 0x000018, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::K2Node_DynamicCast_AsAo_CGame_State_Base' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, CallFunc_IsSiegeEnabled_ReturnValue) == 0x000021, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::CallFunc_IsSiegeEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, CallFunc_GetController_ReturnValue) == 0x000028, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000030, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, CallFunc_GetAoCHUD_ReturnValue) == 0x000040, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::CallFunc_GetAoCHUD_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, CallFunc_IsValid_ReturnValue_1) == 0x000049, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(sizeof(PlayerPawn_C_CreateAndShowDeathWidget) == 0x000018, "Wrong size on PlayerPawn_C_CreateAndShowDeathWidget");
+static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, CallFunc_GetController_ReturnValue) == 0x000000, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::CallFunc_GetController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, K2Node_DynamicCast_AsAo_CPlayer_Controller) == 0x000008, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::K2Node_DynamicCast_AsAo_CPlayer_Controller' has a wrong offset!");
+static_assert(offsetof(PlayerPawn_C_CreateAndShowDeathWidget, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'PlayerPawn_C_CreateAndShowDeathWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function PlayerPawn.PlayerPawn_C.DamageFlinchBP
 // 0x0008 (0x0008 - 0x0000)

@@ -26,8 +26,8 @@ public:
 	class UWBP_ScrollWindow_NoFrame_C*            ScrollWindow;                                      // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_GlobalWarLeaderboard(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_GlobalWarLeaderboard(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

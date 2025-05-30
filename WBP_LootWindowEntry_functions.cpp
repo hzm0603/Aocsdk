@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_LootWindowEntry.WBP_LootWindowEntry_C.GetBorder
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UCommonBorder*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UCommonBorder* UWBP_LootWindowEntry_C::GetBorder()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LootWindowEntry_C", "GetBorder");
-
-	Params::WBP_LootWindowEntry_C_GetBorder Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function WBP_LootWindowEntry.WBP_LootWindowEntry_C.GetButton
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -50,6 +30,26 @@ class UAoCCommonButtonBase* UWBP_LootWindowEntry_C::GetButton()
 		Func = Class->GetFunction("WBP_LootWindowEntry_C", "GetButton");
 
 	Params::WBP_LootWindowEntry_C_GetButton Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_LootWindowEntry.WBP_LootWindowEntry_C.GetBorder
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UCommonBorder*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UCommonBorder* UWBP_LootWindowEntry_C::GetBorder()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_LootWindowEntry_C", "GetBorder");
+
+	Params::WBP_LootWindowEntry_C_GetBorder Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

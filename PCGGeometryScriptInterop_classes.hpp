@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "PCGGeometryScriptInterop_structs.hpp"
-#include "PCG_classes.hpp"
 #include "GeometryScriptingCore_structs.hpp"
+#include "PCG_classes.hpp"
 
 
 namespace SDK
@@ -34,8 +34,8 @@ public:
 	EGeometryScriptLODType                        RequestedLODType;                                  // 0x01A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1AA[0x2];                                      // 0x01AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RequestedLODIndex;                                 // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshPointSamplingOptions SamplingOptions;                                   // 0x01B0(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FGeometryScriptNonUniformPointSamplingOptions NonUniformSamplingOptions;                         // 0x01C8(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshPointSamplingOptions SamplingOptions;                                  // 0x01B0(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptNonUniformPointSamplingOptions NonUniformSamplingOptions;                  // 0x01C8(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         PointSteepness;                                    // 0x01E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 

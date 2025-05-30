@@ -17,177 +17,73 @@
 namespace SDK::Params
 {
 
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.CheckInteractPointCooldowns
-// 0x0080 (0x0080 - 0x0000)
-struct NPCPropInteractionComponent_C_CheckInteractPointCooldowns final
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.StartInteraction
+// 0x0020 (0x0020 - 0x0000)
+struct NPCPropInteractionComponent_C_StartInteraction final
 {
 public:
-	TArray<int32>                                 KeysToRemove;                                      // 0x0000(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 CallFunc_Map_Keys_Keys;                            // 0x0030(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Map_IsNotEmpty_ReturnValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Get_Item;                           // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Map_Find_Value;                           // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Get_Item_1;                         // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns) == 0x000008, "Wrong alignment on NPCPropInteractionComponent_C_CheckInteractPointCooldowns");
-static_assert(sizeof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns) == 0x000080, "Wrong size on NPCPropInteractionComponent_C_CheckInteractPointCooldowns");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, KeysToRemove) == 0x000000, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::KeysToRemove' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, Temp_int_Array_Index_Variable) == 0x000018, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, Temp_int_Loop_Counter_Variable_1) == 0x00001C, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Add_IntInt_ReturnValue_1) == 0x000020, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_Length_ReturnValue) == 0x000024, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Less_IntInt_ReturnValue) == 0x000028, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Map_Keys_Keys) == 0x000030, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Map_IsNotEmpty_ReturnValue) == 0x000040, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Map_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_Get_Item) == 0x000044, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_Add_ReturnValue) == 0x000048, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Map_Find_Value) == 0x000050, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Map_Find_ReturnValue) == 0x000058, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_Length_ReturnValue_1) == 0x00005C, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, Temp_int_Array_Index_Variable_1) == 0x000060, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Less_IntInt_ReturnValue_1) == 0x000064, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_Get_Item_1) == 0x000068, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_RemoveItem_ReturnValue) == 0x00006C, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Map_Remove_ReturnValue) == 0x00006D, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_GetTimeSeconds_ReturnValue) == 0x000070, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000078, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_BooleanAND_ReturnValue) == 0x000079, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.ExecuteUbergraph_NPCPropInteractionComponent
-// 0x01C0 (0x01C0 - 0x0000)
-struct NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InteractIndex;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ActorIsAuthoritativeOnServer_ReturnValue; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USphereComponent*                       CallFunc_AddComponentByClass_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)> K2Node_CreateDelegate_OutputDelegate; // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_CustomEvent_OverlappedComponent_1;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_CustomEvent_OtherActor_1;                   // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_CustomEvent_OtherComp_1;                    // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_OtherBodyIndex_1;               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bFromSweep;                     // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_CustomEvent_SweepResult;                    // 0x0058(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class ANPCPawn_C*                             K2Node_DynamicCast_AsNPCPawn;                      // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)> K2Node_CreateDelegate_OutputDelegate_1; // 0x014C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    K2Node_CustomEvent_OverlappedComponent;            // 0x0160(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_CustomEvent_OtherActor;                     // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_CustomEvent_OtherComp;                      // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_OtherBodyIndex;                 // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ANPCPawn_C*                             K2Node_DynamicCast_AsNPCPawn_1;                    // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_2;                   // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_3;                   // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_4;                   // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ActorIsAuthoritativeOnServer_ReturnValue_1; // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B9[0x3];                                      // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InteractionLengtrh;                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent) == 0x000008, "Wrong alignment on NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent");
-static_assert(sizeof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent) == 0x0001C0, "Wrong size on NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, EntryPoint) == 0x000000, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::EntryPoint' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_GetOwner_ReturnValue_1) == 0x000010, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_ActorIsAuthoritativeOnServer_ReturnValue) == 0x000018, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_ActorIsAuthoritativeOnServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_AddComponentByClass_ReturnValue) == 0x000020, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OverlappedComponent_1) == 0x000038, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OverlappedComponent_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherActor_1) == 0x000040, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherActor_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherComp_1) == 0x000048, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherComp_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherBodyIndex_1) == 0x000050, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherBodyIndex_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_bFromSweep) == 0x000054, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_bFromSweep' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_SweepResult) == 0x000058, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_SweepResult' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_DynamicCast_AsNPCPawn) == 0x000140, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_DynamicCast_AsNPCPawn' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_DynamicCast_bSuccess) == 0x000148, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CreateDelegate_OutputDelegate_1) == 0x00014C, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OverlappedComponent) == 0x000160, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherActor) == 0x000168, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherActor' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherComp) == 0x000170, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherComp' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherBodyIndex) == 0x000178, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_DynamicCast_AsNPCPawn_1) == 0x000180, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_DynamicCast_AsNPCPawn_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_DynamicCast_bSuccess_1) == 0x000188, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_GetOwner_ReturnValue_2) == 0x000190, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_GetOwner_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_GetOwner_ReturnValue_3) == 0x000198, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_GetOwner_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_Array_AddUnique_ReturnValue) == 0x0001A0, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_Array_RemoveItem_ReturnValue) == 0x0001A4, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_Event_DeltaSeconds) == 0x0001A8, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_GetOwner_ReturnValue_4) == 0x0001B0, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_GetOwner_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_ActorIsAuthoritativeOnServer_ReturnValue_1) == 0x0001B8, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_ActorIsAuthoritativeOnServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast) == 0x0001BC, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast' has a wrong offset!");
+static_assert(alignof(NPCPropInteractionComponent_C_StartInteraction) == 0x000008, "Wrong alignment on NPCPropInteractionComponent_C_StartInteraction");
+static_assert(sizeof(NPCPropInteractionComponent_C_StartInteraction) == 0x000020, "Wrong size on NPCPropInteractionComponent_C_StartInteraction");
+static_assert(offsetof(NPCPropInteractionComponent_C_StartInteraction, InteractIndex) == 0x000000, "Member 'NPCPropInteractionComponent_C_StartInteraction::InteractIndex' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_StartInteraction, InteractionLengtrh) == 0x000008, "Member 'NPCPropInteractionComponent_C_StartInteraction::InteractionLengtrh' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_StartInteraction, CallFunc_GetTimeSeconds_ReturnValue) == 0x000010, "Member 'NPCPropInteractionComponent_C_StartInteraction::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_StartInteraction, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000018, "Member 'NPCPropInteractionComponent_C_StartInteraction::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.FinishInteraction
-// 0x0028 (0x0028 - 0x0000)
-struct NPCPropInteractionComponent_C_FinishInteraction final
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct NPCPropInteractionComponent_C_ReceiveTick final
 {
 public:
-	int32                                         TransformIndex;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Get_Item;                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NPCPropInteractionComponent_C_FinishInteraction) == 0x000004, "Wrong alignment on NPCPropInteractionComponent_C_FinishInteraction");
-static_assert(sizeof(NPCPropInteractionComponent_C_FinishInteraction) == 0x000028, "Wrong size on NPCPropInteractionComponent_C_FinishInteraction");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, TransformIndex) == 0x000000, "Member 'NPCPropInteractionComponent_C_FinishInteraction::TransformIndex' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, Temp_bool_True_if_break_was_hit_Variable) == 0x000004, "Member 'NPCPropInteractionComponent_C_FinishInteraction::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, Temp_int_Array_Index_Variable) == 0x000008, "Member 'NPCPropInteractionComponent_C_FinishInteraction::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_Not_PreBool_ReturnValue) == 0x00000C, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'NPCPropInteractionComponent_C_FinishInteraction::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_Array_Get_Item) == 0x000018, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00001C, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_Less_IntInt_ReturnValue) == 0x000024, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_BooleanAND_ReturnValue) == 0x000025, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(alignof(NPCPropInteractionComponent_C_ReceiveTick) == 0x000004, "Wrong alignment on NPCPropInteractionComponent_C_ReceiveTick");
+static_assert(sizeof(NPCPropInteractionComponent_C_ReceiveTick) == 0x000004, "Wrong size on NPCPropInteractionComponent_C_ReceiveTick");
+static_assert(offsetof(NPCPropInteractionComponent_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'NPCPropInteractionComponent_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.OnOverlapEnd
+// 0x0020 (0x0020 - 0x0000)
+struct NPCPropInteractionComponent_C_OnOverlapEnd final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NPCPropInteractionComponent_C_OnOverlapEnd) == 0x000008, "Wrong alignment on NPCPropInteractionComponent_C_OnOverlapEnd");
+static_assert(sizeof(NPCPropInteractionComponent_C_OnOverlapEnd) == 0x000020, "Wrong size on NPCPropInteractionComponent_C_OnOverlapEnd");
+static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapEnd, OverlappedComponent) == 0x000000, "Member 'NPCPropInteractionComponent_C_OnOverlapEnd::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapEnd, OtherActor) == 0x000008, "Member 'NPCPropInteractionComponent_C_OnOverlapEnd::OtherActor' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapEnd, OtherComp) == 0x000010, "Member 'NPCPropInteractionComponent_C_OnOverlapEnd::OtherComp' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapEnd, OtherBodyIndex) == 0x000018, "Member 'NPCPropInteractionComponent_C_OnOverlapEnd::OtherBodyIndex' has a wrong offset!");
+
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.OnOverlapBegin
+// 0x0108 (0x0108 - 0x0000)
+struct NPCPropInteractionComponent_C_OnOverlapBegin final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+static_assert(alignof(NPCPropInteractionComponent_C_OnOverlapBegin) == 0x000008, "Wrong alignment on NPCPropInteractionComponent_C_OnOverlapBegin");
+static_assert(sizeof(NPCPropInteractionComponent_C_OnOverlapBegin) == 0x000108, "Wrong size on NPCPropInteractionComponent_C_OnOverlapBegin");
+static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, OverlappedComponent) == 0x000000, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, OtherActor) == 0x000008, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::OtherActor' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, OtherComp) == 0x000010, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::OtherComp' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, OtherBodyIndex) == 0x000018, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, bFromSweep) == 0x00001C, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::bFromSweep' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, SweepResult) == 0x000020, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::SweepResult' has a wrong offset!");
 
 // Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.GetOpenInteractionPoint
 // 0x03E0 (0x03E0 - 0x0000)
@@ -275,73 +171,177 @@ static_assert(offsetof(NPCPropInteractionComponent_C_GetOpenInteractionPoint, Ca
 static_assert(offsetof(NPCPropInteractionComponent_C_GetOpenInteractionPoint, CallFunc_Less_IntInt_ReturnValue) == 0x0003C8, "Member 'NPCPropInteractionComponent_C_GetOpenInteractionPoint::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(NPCPropInteractionComponent_C_GetOpenInteractionPoint, CallFunc_Vector_Distance_ReturnValue) == 0x0003D0, "Member 'NPCPropInteractionComponent_C_GetOpenInteractionPoint::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
 
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.OnOverlapBegin
-// 0x0108 (0x0108 - 0x0000)
-struct NPCPropInteractionComponent_C_OnOverlapBegin final
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.FinishInteraction
+// 0x0028 (0x0028 - 0x0000)
+struct NPCPropInteractionComponent_C_FinishInteraction final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TransformIndex;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Get_Item;                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NPCPropInteractionComponent_C_OnOverlapBegin) == 0x000008, "Wrong alignment on NPCPropInteractionComponent_C_OnOverlapBegin");
-static_assert(sizeof(NPCPropInteractionComponent_C_OnOverlapBegin) == 0x000108, "Wrong size on NPCPropInteractionComponent_C_OnOverlapBegin");
-static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, OverlappedComponent) == 0x000000, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, OtherActor) == 0x000008, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::OtherActor' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, OtherComp) == 0x000010, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::OtherComp' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, OtherBodyIndex) == 0x000018, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, bFromSweep) == 0x00001C, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::bFromSweep' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapBegin, SweepResult) == 0x000020, "Member 'NPCPropInteractionComponent_C_OnOverlapBegin::SweepResult' has a wrong offset!");
+static_assert(alignof(NPCPropInteractionComponent_C_FinishInteraction) == 0x000004, "Wrong alignment on NPCPropInteractionComponent_C_FinishInteraction");
+static_assert(sizeof(NPCPropInteractionComponent_C_FinishInteraction) == 0x000028, "Wrong size on NPCPropInteractionComponent_C_FinishInteraction");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, TransformIndex) == 0x000000, "Member 'NPCPropInteractionComponent_C_FinishInteraction::TransformIndex' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, Temp_bool_True_if_break_was_hit_Variable) == 0x000004, "Member 'NPCPropInteractionComponent_C_FinishInteraction::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, Temp_int_Array_Index_Variable) == 0x000008, "Member 'NPCPropInteractionComponent_C_FinishInteraction::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_Not_PreBool_ReturnValue) == 0x00000C, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'NPCPropInteractionComponent_C_FinishInteraction::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_Array_Get_Item) == 0x000018, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00001C, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_Less_IntInt_ReturnValue) == 0x000024, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_FinishInteraction, CallFunc_BooleanAND_ReturnValue) == 0x000025, "Member 'NPCPropInteractionComponent_C_FinishInteraction::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.OnOverlapEnd
-// 0x0020 (0x0020 - 0x0000)
-struct NPCPropInteractionComponent_C_OnOverlapEnd final
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.ExecuteUbergraph_NPCPropInteractionComponent
+// 0x01C0 (0x01C0 - 0x0000)
+struct NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(NPCPropInteractionComponent_C_OnOverlapEnd) == 0x000008, "Wrong alignment on NPCPropInteractionComponent_C_OnOverlapEnd");
-static_assert(sizeof(NPCPropInteractionComponent_C_OnOverlapEnd) == 0x000020, "Wrong size on NPCPropInteractionComponent_C_OnOverlapEnd");
-static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapEnd, OverlappedComponent) == 0x000000, "Member 'NPCPropInteractionComponent_C_OnOverlapEnd::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapEnd, OtherActor) == 0x000008, "Member 'NPCPropInteractionComponent_C_OnOverlapEnd::OtherActor' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapEnd, OtherComp) == 0x000010, "Member 'NPCPropInteractionComponent_C_OnOverlapEnd::OtherComp' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_OnOverlapEnd, OtherBodyIndex) == 0x000018, "Member 'NPCPropInteractionComponent_C_OnOverlapEnd::OtherBodyIndex' has a wrong offset!");
-
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct NPCPropInteractionComponent_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(NPCPropInteractionComponent_C_ReceiveTick) == 0x000004, "Wrong alignment on NPCPropInteractionComponent_C_ReceiveTick");
-static_assert(sizeof(NPCPropInteractionComponent_C_ReceiveTick) == 0x000004, "Wrong size on NPCPropInteractionComponent_C_ReceiveTick");
-static_assert(offsetof(NPCPropInteractionComponent_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'NPCPropInteractionComponent_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.StartInteraction
-// 0x0020 (0x0020 - 0x0000)
-struct NPCPropInteractionComponent_C_StartInteraction final
-{
-public:
-	int32                                         InteractIndex;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        InteractionLengtrh;                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ActorIsAuthoritativeOnServer_ReturnValue; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USphereComponent*                       CallFunc_AddComponentByClass_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)> K2Node_CreateDelegate_OutputDelegate; // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_CustomEvent_OverlappedComponent_1;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_CustomEvent_OtherActor_1;                   // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_CustomEvent_OtherComp_1;                    // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_OtherBodyIndex_1;               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bFromSweep;                     // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_CustomEvent_SweepResult;                    // 0x0058(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class ANPCPawn_C*                             K2Node_DynamicCast_AsNPCPawn;                      // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)> K2Node_CreateDelegate_OutputDelegate_1; // 0x014C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    K2Node_CustomEvent_OverlappedComponent;            // 0x0160(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_CustomEvent_OtherActor;                     // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_CustomEvent_OtherComp;                      // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_OtherBodyIndex;                 // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ANPCPawn_C*                             K2Node_DynamicCast_AsNPCPawn_1;                    // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_2;                   // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_3;                   // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_4;                   // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ActorIsAuthoritativeOnServer_ReturnValue_1; // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B9[0x3];                                      // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NPCPropInteractionComponent_C_StartInteraction) == 0x000008, "Wrong alignment on NPCPropInteractionComponent_C_StartInteraction");
-static_assert(sizeof(NPCPropInteractionComponent_C_StartInteraction) == 0x000020, "Wrong size on NPCPropInteractionComponent_C_StartInteraction");
-static_assert(offsetof(NPCPropInteractionComponent_C_StartInteraction, InteractIndex) == 0x000000, "Member 'NPCPropInteractionComponent_C_StartInteraction::InteractIndex' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_StartInteraction, InteractionLengtrh) == 0x000008, "Member 'NPCPropInteractionComponent_C_StartInteraction::InteractionLengtrh' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_StartInteraction, CallFunc_GetTimeSeconds_ReturnValue) == 0x000010, "Member 'NPCPropInteractionComponent_C_StartInteraction::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NPCPropInteractionComponent_C_StartInteraction, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000018, "Member 'NPCPropInteractionComponent_C_StartInteraction::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(alignof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent) == 0x000008, "Wrong alignment on NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent");
+static_assert(sizeof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent) == 0x0001C0, "Wrong size on NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, EntryPoint) == 0x000000, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::EntryPoint' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_GetOwner_ReturnValue_1) == 0x000010, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_ActorIsAuthoritativeOnServer_ReturnValue) == 0x000018, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_ActorIsAuthoritativeOnServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_AddComponentByClass_ReturnValue) == 0x000020, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OverlappedComponent_1) == 0x000038, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OverlappedComponent_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherActor_1) == 0x000040, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherActor_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherComp_1) == 0x000048, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherComp_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherBodyIndex_1) == 0x000050, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherBodyIndex_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_bFromSweep) == 0x000054, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_bFromSweep' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_SweepResult) == 0x000058, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_SweepResult' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_DynamicCast_AsNPCPawn) == 0x000140, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_DynamicCast_AsNPCPawn' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_DynamicCast_bSuccess) == 0x000148, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CreateDelegate_OutputDelegate_1) == 0x00014C, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OverlappedComponent) == 0x000160, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherActor) == 0x000168, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherActor' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherComp) == 0x000170, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherComp' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_CustomEvent_OtherBodyIndex) == 0x000178, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_CustomEvent_OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_DynamicCast_AsNPCPawn_1) == 0x000180, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_DynamicCast_AsNPCPawn_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_DynamicCast_bSuccess_1) == 0x000188, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_GetOwner_ReturnValue_2) == 0x000190, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_GetOwner_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_GetOwner_ReturnValue_3) == 0x000198, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_GetOwner_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_Array_AddUnique_ReturnValue) == 0x0001A0, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_Array_RemoveItem_ReturnValue) == 0x0001A4, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, K2Node_Event_DeltaSeconds) == 0x0001A8, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_GetOwner_ReturnValue_4) == 0x0001B0, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_GetOwner_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_ActorIsAuthoritativeOnServer_ReturnValue_1) == 0x0001B8, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_ActorIsAuthoritativeOnServer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast) == 0x0001BC, "Member 'NPCPropInteractionComponent_C_ExecuteUbergraph_NPCPropInteractionComponent::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast' has a wrong offset!");
+
+// Function NPCPropInteractionComponent.NPCPropInteractionComponent_C.CheckInteractPointCooldowns
+// 0x0080 (0x0080 - 0x0000)
+struct NPCPropInteractionComponent_C_CheckInteractPointCooldowns final
+{
+public:
+	TArray<int32>                                 KeysToRemove;                                      // 0x0000(0x0010)(Edit, BlueprintVisible)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 CallFunc_Map_Keys_Keys;                            // 0x0030(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Map_IsNotEmpty_ReturnValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Get_Item;                           // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Map_Find_Value;                           // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Get_Item_1;                         // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetTimeSeconds_ReturnValue;               // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns) == 0x000008, "Wrong alignment on NPCPropInteractionComponent_C_CheckInteractPointCooldowns");
+static_assert(sizeof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns) == 0x000080, "Wrong size on NPCPropInteractionComponent_C_CheckInteractPointCooldowns");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, KeysToRemove) == 0x000000, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::KeysToRemove' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, Temp_int_Array_Index_Variable) == 0x000018, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, Temp_int_Loop_Counter_Variable_1) == 0x00001C, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Add_IntInt_ReturnValue_1) == 0x000020, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_Length_ReturnValue) == 0x000024, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Less_IntInt_ReturnValue) == 0x000028, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Map_Keys_Keys) == 0x000030, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Map_IsNotEmpty_ReturnValue) == 0x000040, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Map_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_Get_Item) == 0x000044, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_Add_ReturnValue) == 0x000048, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Map_Find_Value) == 0x000050, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Map_Find_ReturnValue) == 0x000058, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_Length_ReturnValue_1) == 0x00005C, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, Temp_int_Array_Index_Variable_1) == 0x000060, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Less_IntInt_ReturnValue_1) == 0x000064, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_Get_Item_1) == 0x000068, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Array_RemoveItem_ReturnValue) == 0x00006C, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Map_Remove_ReturnValue) == 0x00006D, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_GetTimeSeconds_ReturnValue) == 0x000070, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000078, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPCPropInteractionComponent_C_CheckInteractPointCooldowns, CallFunc_BooleanAND_ReturnValue) == 0x000079, "Member 'NPCPropInteractionComponent_C_CheckInteractPointCooldowns::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 }
 

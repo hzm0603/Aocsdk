@@ -17,27 +17,27 @@
 namespace SDK
 {
 
-// Function TurnInPlaceAnimNotify.TurnInPlaceAnimNotify_C.Received_NotifyBegin
+// Function TurnInPlaceAnimNotify.TurnInPlaceAnimNotify_C.Received_NotifyTick
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   FrameDeltaTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FAnimNotifyEventReference& EventReference                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UTurnInPlaceAnimNotify_C::Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const
+bool UTurnInPlaceAnimNotify_C::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TurnInPlaceAnimNotify_C", "Received_NotifyBegin");
+		Func = Class->GetFunction("TurnInPlaceAnimNotify_C", "Received_NotifyTick");
 
-	Params::TurnInPlaceAnimNotify_C_Received_NotifyBegin Parms{};
+	Params::TurnInPlaceAnimNotify_C_Received_NotifyTick Parms{};
 
 	Parms.MeshComp = MeshComp;
 	Parms.Animation = Animation;
-	Parms.TotalDuration = TotalDuration;
+	Parms.FrameDeltaTime = FrameDeltaTime;
 	Parms.EventReference = std::move(EventReference);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -73,27 +73,27 @@ bool UTurnInPlaceAnimNotify_C::Received_NotifyEnd(class USkeletalMeshComponent* 
 }
 
 
-// Function TurnInPlaceAnimNotify.TurnInPlaceAnimNotify_C.Received_NotifyTick
+// Function TurnInPlaceAnimNotify.TurnInPlaceAnimNotify_C.Received_NotifyBegin
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   FrameDeltaTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FAnimNotifyEventReference& EventReference                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UTurnInPlaceAnimNotify_C::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const
+bool UTurnInPlaceAnimNotify_C::Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TurnInPlaceAnimNotify_C", "Received_NotifyTick");
+		Func = Class->GetFunction("TurnInPlaceAnimNotify_C", "Received_NotifyBegin");
 
-	Params::TurnInPlaceAnimNotify_C_Received_NotifyTick Parms{};
+	Params::TurnInPlaceAnimNotify_C_Received_NotifyBegin Parms{};
 
 	Parms.MeshComp = MeshComp;
 	Parms.Animation = Animation;
-	Parms.FrameDeltaTime = FrameDeltaTime;
+	Parms.TotalDuration = TotalDuration;
 	Parms.EventReference = std::move(EventReference);
 
 	UObject::ProcessEvent(Func, &Parms);

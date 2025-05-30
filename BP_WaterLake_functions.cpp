@@ -36,8 +36,8 @@ void ABP_WaterLake_C::Add_Swim_Volumes()
 // Parameters:
 // class UDynamicMeshComponent*            Dynamic_Mesh                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UMaterialInterface*               Material                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FString                           Asset_Tag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class UStaticMesh*                      Out_SM                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Asset_Tag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UStaticMesh**                     Out_SM                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterLake_C::Bake_Mesh(class UDynamicMeshComponent* Dynamic_Mesh, class UMaterialInterface* Material, const class FString& Asset_Tag, class UStaticMesh** Out_SM)
 {
@@ -96,7 +96,7 @@ void ABP_WaterLake_C::Bake_Water_Meshes()
 // Function BP_WaterLake.BP_WaterLake_C.Build Display Mesh
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FVector2D>                PolygonVertices                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<struct FVector2D>&         PolygonVertices                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void ABP_WaterLake_C::Build_Display_Mesh(const TArray<struct FVector2D>& PolygonVertices)
 {
@@ -118,8 +118,8 @@ void ABP_WaterLake_C::Build_Display_Mesh(const TArray<struct FVector2D>& Polygon
 // Parameters:
 // double                                  Width                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Divisions                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FVector2D>                Positions                                              (Parm, OutParm)
-// TArray<double>                          UVs                                                    (Parm, OutParm)
+// TArray<struct FVector2D>*               Positions                                              (Parm, OutParm)
+// TArray<double>*                         UVs                                                    (Parm, OutParm)
 
 void ABP_WaterLake_C::Build_Profile_for_Spline(double Width, int32 Divisions, TArray<struct FVector2D>* Positions, TArray<double>* UVs)
 {
@@ -146,9 +146,9 @@ void ABP_WaterLake_C::Build_Profile_for_Spline(double Width, int32 Divisions, TA
 // Function BP_WaterLake.BP_WaterLake_C.Check if Mesh Asset Exists
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Asset_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    Exists_                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UStaticMesh*                      Return_Mesh                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Asset_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool*                                   Exists_                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UStaticMesh**                     Return_Mesh                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterLake_C::Check_if_Mesh_Asset_Exists(const class FString& Asset_Name, bool* Exists_, class UStaticMesh** Return_Mesh)
 {
@@ -174,7 +174,7 @@ void ABP_WaterLake_C::Check_if_Mesh_Asset_Exists(const class FString& Asset_Name
 // Function BP_WaterLake.BP_WaterLake_C.CheckInvalidateMeshes
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Invalidated                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Invalidated                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterLake_C::CheckInvalidateMeshes(bool* Invalidated)
 {
@@ -195,7 +195,7 @@ void ABP_WaterLake_C::CheckInvalidateMeshes(bool* Invalidated)
 // Function BP_WaterLake.BP_WaterLake_C.Decompose To Volume Transforms
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FTransform>               Transforms                                             (Parm, OutParm)
+// TArray<struct FTransform>*              Transforms                                             (Parm, OutParm)
 
 void ABP_WaterLake_C::Decompose_To_Volume_Transforms(TArray<struct FTransform>* Transforms)
 {
@@ -278,8 +278,8 @@ void ABP_WaterLake_C::Fix_Up_Meshes()
 // Function BP_WaterLake.BP_WaterLake_C.Get Current at Location
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          World_Location                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        Current_Velocity                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   World_Location                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D*                       Current_Velocity                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterLake_C::Get_Current_at_Location(const struct FVector& World_Location, struct FVector2D* Current_Velocity)
 {
@@ -302,10 +302,10 @@ void ABP_WaterLake_C::Get_Current_at_Location(const struct FVector& World_Locati
 // Function BP_WaterLake.BP_WaterLake_C.Get Samples From Spline
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USplineComponent*                 Spline_0                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const class USplineComponent*           Spline_0                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // double                                  Spacing                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FVector2D>                Frames_0                                               (Parm, OutParm)
-// TArray<double>                          FrameTimes                                             (Parm, OutParm)
+// TArray<struct FVector2D>*               Frames_0                                               (Parm, OutParm)
+// TArray<double>*                         FrameTimes                                             (Parm, OutParm)
 
 void ABP_WaterLake_C::Get_Samples_From_Spline(const class USplineComponent* Spline_0, double Spacing, TArray<struct FVector2D>* Frames_0, TArray<double>* FrameTimes)
 {
@@ -332,7 +332,7 @@ void ABP_WaterLake_C::Get_Samples_From_Spline(const class USplineComponent* Spli
 // Function BP_WaterLake.BP_WaterLake_C.GetControlledPawnLocation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FVector                          ControlledPawnLocation                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         ControlledPawnLocation                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterLake_C::GetControlledPawnLocation(struct FVector* ControlledPawnLocation)
 {
@@ -353,7 +353,7 @@ void ABP_WaterLake_C::GetControlledPawnLocation(struct FVector* ControlledPawnLo
 // Function BP_WaterLake.BP_WaterLake_C.GetPlayerControllerCameraRotation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FRotator                         PlayerControllerCameraRotation                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FRotator*                        PlayerControllerCameraRotation                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_WaterLake_C::GetPlayerControllerCameraRotation(struct FRotator* PlayerControllerCameraRotation)
 {
@@ -566,7 +566,7 @@ void ABP_WaterLake_C::Setup_Dynamic_Meshes()
 // Parameters:
 // class UStaticMesh*                      Mesh                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UStaticMeshComponent*             Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UStaticMesh*                      Var                                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class UStaticMesh*&                     Var                                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
 void ABP_WaterLake_C::Setup_StaticMesh(class UStaticMesh* Mesh, class UStaticMeshComponent* Component, class UStaticMesh*& Var)
 {

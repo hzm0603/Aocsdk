@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_SkillTree.WBP_SkillTree_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_SkillTree_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SkillTree_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_SkillTree_C_PreConstruct");
+static_assert(sizeof(WBP_SkillTree_C_PreConstruct) == 0x000001, "Wrong size on WBP_SkillTree_C_PreConstruct");
+static_assert(offsetof(WBP_SkillTree_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_SkillTree_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WBP_SkillTree.WBP_SkillTree_C.ExecuteUbergraph_WBP_SkillTree
 // 0x0038 (0x0038 - 0x0000)
 struct WBP_SkillTree_C_ExecuteUbergraph_WBP_SkillTree final
@@ -44,17 +55,6 @@ static_assert(offsetof(WBP_SkillTree_C_ExecuteUbergraph_WBP_SkillTree, Temp_int_
 static_assert(offsetof(WBP_SkillTree_C_ExecuteUbergraph_WBP_SkillTree, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000028, "Member 'WBP_SkillTree_C_ExecuteUbergraph_WBP_SkillTree::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_SkillTree_C_ExecuteUbergraph_WBP_SkillTree, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'WBP_SkillTree_C_ExecuteUbergraph_WBP_SkillTree::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_SkillTree_C_ExecuteUbergraph_WBP_SkillTree, K2Node_Event_IsDesignTime) == 0x000030, "Member 'WBP_SkillTree_C_ExecuteUbergraph_WBP_SkillTree::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WBP_SkillTree.WBP_SkillTree_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_SkillTree_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SkillTree_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_SkillTree_C_PreConstruct");
-static_assert(sizeof(WBP_SkillTree_C_PreConstruct) == 0x000001, "Wrong size on WBP_SkillTree_C_PreConstruct");
-static_assert(offsetof(WBP_SkillTree_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_SkillTree_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

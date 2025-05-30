@@ -17,11 +17,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MultiSelectButton.WBP_MultiSelectButton_C
-// 0x0010 (0x1880 - 0x1870)
+// 0x0020 (0x19A0 - 0x1980)
 class UWBP_MultiSelectButton_C final : public UMultiSelectButton
 {
 public:
-	class UImage*                                 OverflowIcon;                                      // 0x1870(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          AlternatingBG;                                     // 0x1980(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextButton_C*                    DeliverButton;                                     // 0x1988(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAoCCommonTextBlock*                    ItemQuantityTextBlock;                             // 0x1990(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 OverflowIcon;                                      // 0x1998(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	class UAoCCommonButtonBase* GetButton();
+	class UCommonBorder* GetBorder();
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +41,11 @@ public:
 	}
 };
 static_assert(alignof(UWBP_MultiSelectButton_C) == 0x000010, "Wrong alignment on UWBP_MultiSelectButton_C");
-static_assert(sizeof(UWBP_MultiSelectButton_C) == 0x001880, "Wrong size on UWBP_MultiSelectButton_C");
-static_assert(offsetof(UWBP_MultiSelectButton_C, OverflowIcon) == 0x001870, "Member 'UWBP_MultiSelectButton_C::OverflowIcon' has a wrong offset!");
+static_assert(sizeof(UWBP_MultiSelectButton_C) == 0x0019A0, "Wrong size on UWBP_MultiSelectButton_C");
+static_assert(offsetof(UWBP_MultiSelectButton_C, AlternatingBG) == 0x001980, "Member 'UWBP_MultiSelectButton_C::AlternatingBG' has a wrong offset!");
+static_assert(offsetof(UWBP_MultiSelectButton_C, DeliverButton) == 0x001988, "Member 'UWBP_MultiSelectButton_C::DeliverButton' has a wrong offset!");
+static_assert(offsetof(UWBP_MultiSelectButton_C, ItemQuantityTextBlock) == 0x001990, "Member 'UWBP_MultiSelectButton_C::ItemQuantityTextBlock' has a wrong offset!");
+static_assert(offsetof(UWBP_MultiSelectButton_C, OverflowIcon) == 0x001998, "Member 'UWBP_MultiSelectButton_C::OverflowIcon' has a wrong offset!");
 
 }
 

@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_TooltipStatChangeBlock.WBP_TooltipStatChangeBlock_C.ExecuteUbergraph_WBP_TooltipStatChangeBlock
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TooltipStatChangeBlock_C::ExecuteUbergraph_WBP_TooltipStatChangeBlock(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TooltipStatChangeBlock_C", "ExecuteUbergraph_WBP_TooltipStatChangeBlock");
-
-	Params::WBP_TooltipStatChangeBlock_C_ExecuteUbergraph_WBP_TooltipStatChangeBlock Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_TooltipStatChangeBlock.WBP_TooltipStatChangeBlock_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_TooltipStatChangeBlock_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_TooltipStatChangeBlock_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TooltipStatChangeBlock.WBP_TooltipStatChangeBlock_C.ExecuteUbergraph_WBP_TooltipStatChangeBlock
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TooltipStatChangeBlock_C::ExecuteUbergraph_WBP_TooltipStatChangeBlock(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TooltipStatChangeBlock_C", "ExecuteUbergraph_WBP_TooltipStatChangeBlock");
+
+	Params::WBP_TooltipStatChangeBlock_C_ExecuteUbergraph_WBP_TooltipStatChangeBlock Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

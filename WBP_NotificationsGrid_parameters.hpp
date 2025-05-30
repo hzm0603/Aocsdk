@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_NotificationsGrid.WBP_NotificationsGrid_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_NotificationsGrid_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_NotificationsGrid_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_NotificationsGrid_C_PreConstruct");
+static_assert(sizeof(WBP_NotificationsGrid_C_PreConstruct) == 0x000001, "Wrong size on WBP_NotificationsGrid_C_PreConstruct");
+static_assert(offsetof(WBP_NotificationsGrid_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_NotificationsGrid_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WBP_NotificationsGrid.WBP_NotificationsGrid_C.ExecuteUbergraph_WBP_NotificationsGrid
 // 0x0060 (0x0060 - 0x0000)
 struct WBP_NotificationsGrid_C_ExecuteUbergraph_WBP_NotificationsGrid final
@@ -59,17 +70,6 @@ static_assert(offsetof(WBP_NotificationsGrid_C_ExecuteUbergraph_WBP_Notification
 static_assert(offsetof(WBP_NotificationsGrid_C_ExecuteUbergraph_WBP_NotificationsGrid, CallFunc_AddChild_ReturnValue) == 0x000050, "Member 'WBP_NotificationsGrid_C_ExecuteUbergraph_WBP_NotificationsGrid::CallFunc_AddChild_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_NotificationsGrid_C_ExecuteUbergraph_WBP_NotificationsGrid, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'WBP_NotificationsGrid_C_ExecuteUbergraph_WBP_NotificationsGrid::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_NotificationsGrid_C_ExecuteUbergraph_WBP_NotificationsGrid, CallFunc_Less_IntInt_ReturnValue) == 0x00005C, "Member 'WBP_NotificationsGrid_C_ExecuteUbergraph_WBP_NotificationsGrid::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-
-// Function WBP_NotificationsGrid.WBP_NotificationsGrid_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_NotificationsGrid_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_NotificationsGrid_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_NotificationsGrid_C_PreConstruct");
-static_assert(sizeof(WBP_NotificationsGrid_C_PreConstruct) == 0x000001, "Wrong size on WBP_NotificationsGrid_C_PreConstruct");
-static_assert(offsetof(WBP_NotificationsGrid_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_NotificationsGrid_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

@@ -34,17 +34,17 @@ public:
 	int32                                         HovIndex;                                          // 0x0338(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
-	void ClearData();
-	void ExecuteUbergraph_WBP_DamageMeterHealthLog(int32 EntryPoint);
-	void GetBarAtIndex(int32 Index_0, TArray<class UWBP_DamageMeterHealthLogBar_C*>& Bars_0, class UVerticalBox* Layout, class UWBP_DamageMeterHealthLogBar_C** bar);
-	void Initialize(class UWBP_DamageMeter_C* DamageMeter_0);
-	void RebaseBars();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void TrimBars(int32 needed);
-	void UpdateBars();
-	void UpdateHoverText();
 	void UpdateInstigators();
+	void UpdateHoverText();
+	void UpdateBars();
+	void TrimBars(int32 needed);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void RebaseBars();
+	void Initialize(class UWBP_DamageMeter_C* DamageMeter_0);
+	void GetBarAtIndex(int32 Index_0, TArray<class UWBP_DamageMeterHealthLogBar_C*>& Bars_0, class UVerticalBox* Layout, class UWBP_DamageMeterHealthLogBar_C** bar);
+	void ExecuteUbergraph_WBP_DamageMeterHealthLog(int32 EntryPoint);
+	void ClearData();
+	void BndEvt__DamageMeterHealthLog_InstigatorsCB_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
 
 public:
 	static class UClass* StaticClass()

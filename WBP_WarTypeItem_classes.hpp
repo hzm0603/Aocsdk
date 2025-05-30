@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_WarTypeItem.WBP_WarTypeItem_C
-// 0x0000 (0x04A8 - 0x04A8)
+// 0x0000 (0x04D8 - 0x04D8)
 class UWBP_WarTypeItem_C final : public UWarTypeItem
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_WarTypeItem_C) == 0x000008, "Wrong alignment on UWBP_WarTypeItem_C");
-static_assert(sizeof(UWBP_WarTypeItem_C) == 0x0004A8, "Wrong size on UWBP_WarTypeItem_C");
+static_assert(sizeof(UWBP_WarTypeItem_C) == 0x0004D8, "Wrong size on UWBP_WarTypeItem_C");
 
 }
 

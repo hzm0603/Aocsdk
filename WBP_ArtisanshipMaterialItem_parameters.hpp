@@ -16,6 +16,28 @@
 namespace SDK::Params
 {
 
+// Function WBP_ArtisanshipMaterialItem.WBP_ArtisanshipMaterialItem_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_ArtisanshipMaterialItem_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_ArtisanshipMaterialItem_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_ArtisanshipMaterialItem_C_PreConstruct");
+static_assert(sizeof(WBP_ArtisanshipMaterialItem_C_PreConstruct) == 0x000001, "Wrong size on WBP_ArtisanshipMaterialItem_C_PreConstruct");
+static_assert(offsetof(WBP_ArtisanshipMaterialItem_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_ArtisanshipMaterialItem_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_ArtisanshipMaterialItem.WBP_ArtisanshipMaterialItem_C.GetBorder
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_ArtisanshipMaterialItem_C_GetBorder final
+{
+public:
+	class UCommonBorder*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_ArtisanshipMaterialItem_C_GetBorder) == 0x000008, "Wrong alignment on WBP_ArtisanshipMaterialItem_C_GetBorder");
+static_assert(sizeof(WBP_ArtisanshipMaterialItem_C_GetBorder) == 0x000008, "Wrong size on WBP_ArtisanshipMaterialItem_C_GetBorder");
+static_assert(offsetof(WBP_ArtisanshipMaterialItem_C_GetBorder, ReturnValue) == 0x000000, "Member 'WBP_ArtisanshipMaterialItem_C_GetBorder::ReturnValue' has a wrong offset!");
+
 // Function WBP_ArtisanshipMaterialItem.WBP_ArtisanshipMaterialItem_C.ExecuteUbergraph_WBP_ArtisanshipMaterialItem
 // 0x00F0 (0x00F0 - 0x0000)
 struct WBP_ArtisanshipMaterialItem_C_ExecuteUbergraph_WBP_ArtisanshipMaterialItem final
@@ -45,17 +67,6 @@ static_assert(offsetof(WBP_ArtisanshipMaterialItem_C_ExecuteUbergraph_WBP_Artisa
 static_assert(offsetof(WBP_ArtisanshipMaterialItem_C_ExecuteUbergraph_WBP_ArtisanshipMaterialItem, UniqueObjectNameForCooking_FormatArgumentData_1) == 0x000078, "Member 'WBP_ArtisanshipMaterialItem_C_ExecuteUbergraph_WBP_ArtisanshipMaterialItem::UniqueObjectNameForCooking_FormatArgumentData_1' has a wrong offset!");
 static_assert(offsetof(WBP_ArtisanshipMaterialItem_C_ExecuteUbergraph_WBP_ArtisanshipMaterialItem, UniqueObjectNameForCooking_Array) == 0x0000C8, "Member 'WBP_ArtisanshipMaterialItem_C_ExecuteUbergraph_WBP_ArtisanshipMaterialItem::UniqueObjectNameForCooking_Array' has a wrong offset!");
 static_assert(offsetof(WBP_ArtisanshipMaterialItem_C_ExecuteUbergraph_WBP_ArtisanshipMaterialItem, CallFunc_Format_ReturnValue) == 0x0000D8, "Member 'WBP_ArtisanshipMaterialItem_C_ExecuteUbergraph_WBP_ArtisanshipMaterialItem::CallFunc_Format_ReturnValue' has a wrong offset!");
-
-// Function WBP_ArtisanshipMaterialItem.WBP_ArtisanshipMaterialItem_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_ArtisanshipMaterialItem_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_ArtisanshipMaterialItem_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_ArtisanshipMaterialItem_C_PreConstruct");
-static_assert(sizeof(WBP_ArtisanshipMaterialItem_C_PreConstruct) == 0x000001, "Wrong size on WBP_ArtisanshipMaterialItem_C_PreConstruct");
-static_assert(offsetof(WBP_ArtisanshipMaterialItem_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_ArtisanshipMaterialItem_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

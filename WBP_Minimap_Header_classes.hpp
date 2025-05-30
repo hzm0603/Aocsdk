@@ -17,17 +17,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Minimap_Header.WBP_Minimap_Header_C
-// 0x0038 (0x0520 - 0x04E8)
+// 0x0040 (0x0550 - 0x0510)
 class UWBP_Minimap_Header_C final : public UMapHeader
 {
 public:
-	class UWidgetAnimation*                       MailNotificationReveal;                            // 0x04E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       MailCounterIncrease;                               // 0x04F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 HeaderBG;                                          // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvB_Buttons;                                      // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvB_Compass;                                      // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SeasonBG;                                          // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 TimeOfDayBG;                                       // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       MailNotificationReveal;                            // 0x0510(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       MailCounterIncrease;                               // 0x0518(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWBP_DurabilityIndicator_C*             DurabilityIndicator;                               // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HeaderBG;                                          // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvB_Buttons;                                      // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvB_Compass;                                      // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SeasonBG;                                          // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 TimeOfDayBG;                                       // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -40,14 +41,15 @@ public:
 	}
 };
 static_assert(alignof(UWBP_Minimap_Header_C) == 0x000008, "Wrong alignment on UWBP_Minimap_Header_C");
-static_assert(sizeof(UWBP_Minimap_Header_C) == 0x000520, "Wrong size on UWBP_Minimap_Header_C");
-static_assert(offsetof(UWBP_Minimap_Header_C, MailNotificationReveal) == 0x0004E8, "Member 'UWBP_Minimap_Header_C::MailNotificationReveal' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_Header_C, MailCounterIncrease) == 0x0004F0, "Member 'UWBP_Minimap_Header_C::MailCounterIncrease' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_Header_C, HeaderBG) == 0x0004F8, "Member 'UWBP_Minimap_Header_C::HeaderBG' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_Header_C, InvB_Buttons) == 0x000500, "Member 'UWBP_Minimap_Header_C::InvB_Buttons' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_Header_C, InvB_Compass) == 0x000508, "Member 'UWBP_Minimap_Header_C::InvB_Compass' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_Header_C, SeasonBG) == 0x000510, "Member 'UWBP_Minimap_Header_C::SeasonBG' has a wrong offset!");
-static_assert(offsetof(UWBP_Minimap_Header_C, TimeOfDayBG) == 0x000518, "Member 'UWBP_Minimap_Header_C::TimeOfDayBG' has a wrong offset!");
+static_assert(sizeof(UWBP_Minimap_Header_C) == 0x000550, "Wrong size on UWBP_Minimap_Header_C");
+static_assert(offsetof(UWBP_Minimap_Header_C, MailNotificationReveal) == 0x000510, "Member 'UWBP_Minimap_Header_C::MailNotificationReveal' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_Header_C, MailCounterIncrease) == 0x000518, "Member 'UWBP_Minimap_Header_C::MailCounterIncrease' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_Header_C, DurabilityIndicator) == 0x000520, "Member 'UWBP_Minimap_Header_C::DurabilityIndicator' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_Header_C, HeaderBG) == 0x000528, "Member 'UWBP_Minimap_Header_C::HeaderBG' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_Header_C, InvB_Buttons) == 0x000530, "Member 'UWBP_Minimap_Header_C::InvB_Buttons' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_Header_C, InvB_Compass) == 0x000538, "Member 'UWBP_Minimap_Header_C::InvB_Compass' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_Header_C, SeasonBG) == 0x000540, "Member 'UWBP_Minimap_Header_C::SeasonBG' has a wrong offset!");
+static_assert(offsetof(UWBP_Minimap_Header_C, TimeOfDayBG) == 0x000548, "Member 'UWBP_Minimap_Header_C::TimeOfDayBG' has a wrong offset!");
 
 }
 

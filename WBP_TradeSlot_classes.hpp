@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TradeSlot.WBP_TradeSlot_C
-// 0x0000 (0x03C8 - 0x03C8)
+// 0x0000 (0x0408 - 0x0408)
 class UWBP_TradeSlot_C final : public UTradeSlotBase
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TradeSlot_C) == 0x000008, "Wrong alignment on UWBP_TradeSlot_C");
-static_assert(sizeof(UWBP_TradeSlot_C) == 0x0003C8, "Wrong size on UWBP_TradeSlot_C");
+static_assert(sizeof(UWBP_TradeSlot_C) == 0x000408, "Wrong size on UWBP_TradeSlot_C");
 
 }
 

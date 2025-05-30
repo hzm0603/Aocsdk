@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Mercenary_Scout.Mercenary_Scout_C
-// 0x0000 (0x1DC0 - 0x1DC0)
+// 0x0000 (0x1D80 - 0x1D80)
 class AMercenary_Scout_C : public AMercenary_Base_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AMercenary_Scout_C) == 0x000010, "Wrong alignment on AMercenary_Scout_C");
-static_assert(sizeof(AMercenary_Scout_C) == 0x001DC0, "Wrong size on AMercenary_Scout_C");
+static_assert(sizeof(AMercenary_Scout_C) == 0x001D80, "Wrong size on AMercenary_Scout_C");
 
 }
 

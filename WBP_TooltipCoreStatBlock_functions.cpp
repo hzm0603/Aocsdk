@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function WBP_TooltipCoreStatBlock.WBP_TooltipCoreStatBlock_C.ExecuteUbergraph_WBP_TooltipCoreStatBlock
-// (Final, UbergraphFunction)
+// Function WBP_TooltipCoreStatBlock.WBP_TooltipCoreStatBlock_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TooltipCoreStatBlock_C::ExecuteUbergraph_WBP_TooltipCoreStatBlock(int32 EntryPoint)
+void UWBP_TooltipCoreStatBlock_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TooltipCoreStatBlock_C", "ExecuteUbergraph_WBP_TooltipCoreStatBlock");
+		Func = Class->GetFunction("WBP_TooltipCoreStatBlock_C", "PreConstruct");
 
-	Params::WBP_TooltipCoreStatBlock_C_ExecuteUbergraph_WBP_TooltipCoreStatBlock Parms{};
+	Params::WBP_TooltipCoreStatBlock_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -57,21 +57,21 @@ class UCommonBorder* UWBP_TooltipCoreStatBlock_C::GetBorder()
 }
 
 
-// Function WBP_TooltipCoreStatBlock.WBP_TooltipCoreStatBlock_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_TooltipCoreStatBlock.WBP_TooltipCoreStatBlock_C.ExecuteUbergraph_WBP_TooltipCoreStatBlock
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TooltipCoreStatBlock_C::PreConstruct(bool IsDesignTime)
+void UWBP_TooltipCoreStatBlock_C::ExecuteUbergraph_WBP_TooltipCoreStatBlock(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TooltipCoreStatBlock_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_TooltipCoreStatBlock_C", "ExecuteUbergraph_WBP_TooltipCoreStatBlock");
 
-	Params::WBP_TooltipCoreStatBlock_C_PreConstruct Parms{};
+	Params::WBP_TooltipCoreStatBlock_C_ExecuteUbergraph_WBP_TooltipCoreStatBlock Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

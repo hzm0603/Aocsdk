@@ -12,11 +12,11 @@
 
 #include "ControlRig_structs.hpp"
 #include "ControlRig_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "PBIK_structs.hpp"
 #include "RigVM_structs.hpp"
 #include "RigVM_classes.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "PBIK_structs.hpp"
 
 
 namespace SDK
@@ -750,11 +750,11 @@ public:
 	bool                                          RigVMModel___If_3_Condition;                       // 0x1339(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_133A[0x6];                                     // 0x133A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FRigUnit_ModifyTransforms_PerItem> RigVMModel___ModifyTransforms_1_1_ItemToModify__IO; // 0x1340(0x0010)(Edit, EditConst, NonTransactional)
-	TArray<struct FRigUnit_ModifyTransforms_WorkData> RigVMModel___ModifyTransforms_1_1_WorkData;        // 0x1350(0x0010)(Edit, EditConst, NonTransactional)
-	TArray<struct FRigUnit_ModifyTransforms_PerItem> RigVMModel___ModifyTransforms_1_ItemToModify__IO;  // 0x1360(0x0010)(Edit, EditConst, NonTransactional)
-	TArray<struct FRigUnit_ModifyTransforms_WorkData> RigVMModel___ModifyTransforms_1_WorkData;          // 0x1370(0x0010)(Edit, EditConst, NonTransactional)
-	TArray<struct FRigUnit_ModifyTransforms_PerItem> RigVMModel___ModifyTransforms_2_ItemToModify__IO;  // 0x1380(0x0010)(Edit, EditConst, NonTransactional)
-	TArray<struct FRigUnit_ModifyTransforms_WorkData> RigVMModel___ModifyTransforms_2_WorkData;          // 0x1390(0x0010)(Edit, EditConst, NonTransactional)
+	TArray<struct FRigUnit_ModifyTransforms_WorkData> RigVMModel___ModifyTransforms_1_1_WorkData;    // 0x1350(0x0010)(Edit, EditConst, NonTransactional)
+	TArray<struct FRigUnit_ModifyTransforms_PerItem> RigVMModel___ModifyTransforms_1_ItemToModify__IO; // 0x1360(0x0010)(Edit, EditConst, NonTransactional)
+	TArray<struct FRigUnit_ModifyTransforms_WorkData> RigVMModel___ModifyTransforms_1_WorkData;      // 0x1370(0x0010)(Edit, EditConst, NonTransactional)
+	TArray<struct FRigUnit_ModifyTransforms_PerItem> RigVMModel___ModifyTransforms_2_ItemToModify__IO; // 0x1380(0x0010)(Edit, EditConst, NonTransactional)
+	TArray<struct FRigUnit_ModifyTransforms_WorkData> RigVMModel___ModifyTransforms_2_WorkData;      // 0x1390(0x0010)(Edit, EditConst, NonTransactional)
 	class FName                                   RigVMModel___Branch_3_BlockToRun;                  // 0x13A0(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_13A8[0x8];                                     // 0x13A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             RigVMModel___GetTransform_Transform;               // 0x13B0(0x0060)(Edit, EditConst, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)

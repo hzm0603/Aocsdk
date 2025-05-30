@@ -17,19 +17,19 @@
 namespace SDK
 {
 
-// Function WBP_ProfessionProgressionMenu.WBP_ProfessionProgressionMenu_C.GetButtonContainer
+// Function WBP_ProfessionProgressionMenu.WBP_ProfessionProgressionMenu_C.GetOddButtonStyle
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// TSubclassOf<class UCommonButtonStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
-class UPanelWidget* UWBP_ProfessionProgressionMenu_C::GetButtonContainer()
+TSubclassOf<class UCommonButtonStyle> UWBP_ProfessionProgressionMenu_C::GetOddButtonStyle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ProfessionProgressionMenu_C", "GetButtonContainer");
+		Func = Class->GetFunction("WBP_ProfessionProgressionMenu_C", "GetOddButtonStyle");
 
-	Params::WBP_ProfessionProgressionMenu_C_GetButtonContainer Parms{};
+	Params::WBP_ProfessionProgressionMenu_C_GetOddButtonStyle Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -57,19 +57,19 @@ TSubclassOf<class UCommonButtonStyle> UWBP_ProfessionProgressionMenu_C::GetEvenB
 }
 
 
-// Function WBP_ProfessionProgressionMenu.WBP_ProfessionProgressionMenu_C.GetOddButtonStyle
+// Function WBP_ProfessionProgressionMenu.WBP_ProfessionProgressionMenu_C.GetButtonContainer
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TSubclassOf<class UCommonButtonStyle>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// class UPanelWidget*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-TSubclassOf<class UCommonButtonStyle> UWBP_ProfessionProgressionMenu_C::GetOddButtonStyle()
+class UPanelWidget* UWBP_ProfessionProgressionMenu_C::GetButtonContainer()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ProfessionProgressionMenu_C", "GetOddButtonStyle");
+		Func = Class->GetFunction("WBP_ProfessionProgressionMenu_C", "GetButtonContainer");
 
-	Params::WBP_ProfessionProgressionMenu_C_GetOddButtonStyle Parms{};
+	Params::WBP_ProfessionProgressionMenu_C_GetButtonContainer Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

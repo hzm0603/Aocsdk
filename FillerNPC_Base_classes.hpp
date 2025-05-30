@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FillerNPC_Base.FillerNPC_Base_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class AFillerNPC_Base_C : public AHumanoidNPCMaster_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AFillerNPC_Base_C) == 0x000010, "Wrong alignment on AFillerNPC_Base_C");
-static_assert(sizeof(AFillerNPC_Base_C) == 0x001DB0, "Wrong size on AFillerNPC_Base_C");
+static_assert(sizeof(AFillerNPC_Base_C) == 0x001D70, "Wrong size on AFillerNPC_Base_C");
 
 }
 

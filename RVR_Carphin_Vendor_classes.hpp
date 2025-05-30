@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass RVR_Carphin_Vendor.RVR_Carphin_Vendor_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ARVR_Carphin_Vendor_C final : public AHumanoidNPCMaster_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ARVR_Carphin_Vendor_C) == 0x000010, "Wrong alignment on ARVR_Carphin_Vendor_C");
-static_assert(sizeof(ARVR_Carphin_Vendor_C) == 0x001DB0, "Wrong size on ARVR_Carphin_Vendor_C");
+static_assert(sizeof(ARVR_Carphin_Vendor_C) == 0x001D70, "Wrong size on ARVR_Carphin_Vendor_C");
 
 }
 

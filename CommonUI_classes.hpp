@@ -26,7 +26,7 @@ namespace SDK
 {
 
 // Class CommonUI.CommonBoundActionButtonInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ICommonBoundActionButtonInterface final : public IInterface
 {
 public:
@@ -39,8 +39,8 @@ public:
 		return GetDefaultObjImpl<ICommonBoundActionButtonInterface>();
 	}
 };
-static_assert(alignof(ICommonBoundActionButtonInterface) == 0x000008, "Wrong alignment on ICommonBoundActionButtonInterface");
-static_assert(sizeof(ICommonBoundActionButtonInterface) == 0x000048, "Wrong size on ICommonBoundActionButtonInterface");
+static_assert(alignof(ICommonBoundActionButtonInterface) == 0x000001, "Wrong alignment on ICommonBoundActionButtonInterface");
+static_assert(sizeof(ICommonBoundActionButtonInterface) == 0x000001, "Wrong size on ICommonBoundActionButtonInterface");
 
 // Class CommonUI.AnalogSlider
 // 0x0020 (0x0780 - 0x0760)
@@ -65,7 +65,7 @@ static_assert(sizeof(UAnalogSlider) == 0x000780, "Wrong size on UAnalogSlider");
 static_assert(offsetof(UAnalogSlider, OnAnalogCapture) == 0x000760, "Member 'UAnalogSlider::OnAnalogCapture' has a wrong offset!");
 
 // Class CommonUI.CommonActionHandlerInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ICommonActionHandlerInterface final : public IInterface
 {
 public:
@@ -78,15 +78,15 @@ public:
 		return GetDefaultObjImpl<ICommonActionHandlerInterface>();
 	}
 };
-static_assert(alignof(ICommonActionHandlerInterface) == 0x000008, "Wrong alignment on ICommonActionHandlerInterface");
-static_assert(sizeof(ICommonActionHandlerInterface) == 0x000048, "Wrong size on ICommonActionHandlerInterface");
+static_assert(alignof(ICommonActionHandlerInterface) == 0x000001, "Wrong alignment on ICommonActionHandlerInterface");
+static_assert(sizeof(ICommonActionHandlerInterface) == 0x000001, "Wrong size on ICommonActionHandlerInterface");
 
 // Class CommonUI.CommonActionWidget
 // 0x0310 (0x04C0 - 0x01B0)
 class UCommonActionWidget final : public UWidget
 {
 public:
-	TMulticastInlineDelegate<void(bool bUsingGamepad)> OnInputMethodChanged;                              // 0x01B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool bUsingGamepad)> OnInputMethodChanged;                         // 0x01B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FSlateBrush                            ProgressMaterialBrush;                             // 0x01C0(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	class FName                                   ProgressMaterialParam;                             // 0x0290(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_298[0x8];                                      // 0x0298(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -170,12 +170,12 @@ public:
 	class UInputMappingContext*                   InputMapping;                                      // 0x0320(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         InputMappingPriority;                              // 0x0328(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_32C[0x4];                                      // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UCommonInputActionDomain> ActionDomainOverride;                              // 0x0330(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class UCommonInputActionDomain> ActionDomainOverride;                             // 0x0330(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TMulticastInlineDelegate<void()>              BP_OnWidgetActivated;                              // 0x0358(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	TMulticastInlineDelegate<void()>              BP_OnWidgetDeactivated;                            // 0x0368(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	bool                                          bIsActive;                                         // 0x0378(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TWeakObjectPtr<class UCommonActivatableWidget>> VisibilityBoundWidgets;                            // 0x0380(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<TWeakObjectPtr<class UCommonActivatableWidget>> VisibilityBoundWidgets;                   // 0x0380(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_390[0xA8];                                     // 0x0390(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bSetVisibilityOnActivated;                         // 0x0438(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ESlateVisibility                              ActivatedVisibility;                               // 0x0439(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -502,11 +502,11 @@ public:
 	struct FDataTableRowHandle                    TriggeringInputAction;                             // 0x0418(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
 	class UInputAction*                           TriggeringEnhancedInputAction;                     // 0x0428(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_430[0x10];                                     // 0x0430(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UCommonButtonBase* Button, bool Selected)> OnSelectedChangedBase;                             // 0x0440(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(class UCommonButtonBase* Button)> OnButtonBaseClicked;                               // 0x0450(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(class UCommonButtonBase* Button)> OnButtonBaseDoubleClicked;                         // 0x0460(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(class UCommonButtonBase* Button)> OnButtonBaseHovered;                               // 0x0470(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(class UCommonButtonBase* Button)> OnButtonBaseUnhovered;                             // 0x0480(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void(class UCommonButtonBase* Button, bool Selected)> OnSelectedChangedBase; // 0x0440(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void(class UCommonButtonBase* Button)> OnButtonBaseClicked;             // 0x0450(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void(class UCommonButtonBase* Button)> OnButtonBaseDoubleClicked;       // 0x0460(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void(class UCommonButtonBase* Button)> OnButtonBaseHovered;             // 0x0470(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void(class UCommonButtonBase* Button)> OnButtonBaseUnhovered;           // 0x0480(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_490[0x30];                                     // 0x0490(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bIsPersistentBinding;                              // 0x04C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	ECommonInputMode                              InputModeOverride;                                 // 0x04C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -832,7 +832,7 @@ class UCommonLazyImage final : public UImage
 public:
 	struct FSlateBrush                            LoadingBackgroundBrush;                            // 0x0310(0x00D0)(Edit, NativeAccessSpecifierPrivate)
 	class FName                                   MaterialTextureParamName;                          // 0x03E0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(bool bIsLoading)> BP_OnLoadingStateChanged;                          // 0x03E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(bool bIsLoading)> BP_OnLoadingStateChanged;                        // 0x03E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_3F8[0x28];                                     // 0x03F8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -867,7 +867,7 @@ public:
 	struct FSlateBrush                            LoadingBackgroundBrush;                            // 0x01B0(0x00D0)(Edit, NativeAccessSpecifierPrivate)
 	class UUserWidget*                            Content;                                           // 0x0280(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_288[0x30];                                     // 0x0288(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool bIsLoading)> BP_OnLoadingStateChanged;                          // 0x02B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(bool bIsLoading)> BP_OnLoadingStateChanged;                        // 0x02B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_2C8[0x48];                                     // 0x02C8(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -956,7 +956,7 @@ public:
 	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   LoadingText;                                       // 0x02B8(0x0018)(Edit, NativeAccessSpecifierPrivate)
 	TSubclassOf<class UCommonTextStyle>           TextStyle;                                         // 0x02D0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(bool bIsLoading)> BP_OnLoadingStateChanged;                          // 0x02D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(bool bIsLoading)> BP_OnLoadingStateChanged;                        // 0x02D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	struct FSoftObjectPath                        SpinnerMaterialPath;                               // 0x02E8(0x0020)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_308[0x28];                                     // 0x0308(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -992,10 +992,10 @@ static_assert(offsetof(UCommonLoadGuard, SpinnerMaterialPath) == 0x0002E8, "Memb
 class UCommonNumericTextBlock final : public UCommonTextBlock
 {
 public:
-	TMulticastInlineDelegate<void(class UCommonNumericTextBlock* NumericTextBlock)> OnInterpolationStartedEvent;                       // 0x03C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UCommonNumericTextBlock* NumericTextBlock, float LastValue, float NewValue)> OnInterpolationUpdatedEvent;                       // 0x03D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UCommonNumericTextBlock* NumericTextBlock)> OnOutroEvent;                                      // 0x03E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UCommonNumericTextBlock* NumericTextBlock, bool HadCompleted)> OnInterpolationEndedEvent;                         // 0x03F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UCommonNumericTextBlock* NumericTextBlock)> OnInterpolationStartedEvent; // 0x03C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UCommonNumericTextBlock* NumericTextBlock, float LastValue, float NewValue)> OnInterpolationUpdatedEvent; // 0x03D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UCommonNumericTextBlock* NumericTextBlock)> OnOutroEvent;    // 0x03E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UCommonNumericTextBlock* NumericTextBlock, const bool HadCompleted)> OnInterpolationEndedEvent; // 0x03F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	float                                         CurrentNumericValue;                               // 0x0408(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECommonNumericType                            NumericType;                                       // 0x040C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_40D[0x3];                                      // 0x040D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -1041,7 +1041,7 @@ static_assert(offsetof(UCommonNumericTextBlock, PerformSizeInterpolation) == 0x0
 static_assert(offsetof(UCommonNumericTextBlock, IsPercentage) == 0x000431, "Member 'UCommonNumericTextBlock::IsPercentage' has a wrong offset!");
 
 // Class CommonUI.CommonPoolableWidgetInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ICommonPoolableWidgetInterface final : public IInterface
 {
 public:
@@ -1058,8 +1058,8 @@ public:
 		return GetDefaultObjImpl<ICommonPoolableWidgetInterface>();
 	}
 };
-static_assert(alignof(ICommonPoolableWidgetInterface) == 0x000008, "Wrong alignment on ICommonPoolableWidgetInterface");
-static_assert(sizeof(ICommonPoolableWidgetInterface) == 0x000048, "Wrong size on ICommonPoolableWidgetInterface");
+static_assert(alignof(ICommonPoolableWidgetInterface) == 0x000001, "Wrong alignment on ICommonPoolableWidgetInterface");
+static_assert(sizeof(ICommonPoolableWidgetInterface) == 0x000001, "Wrong size on ICommonPoolableWidgetInterface");
 
 // Class CommonUI.CommonRichTextBlock
 // 0x0040 (0x0910 - 0x08D0)
@@ -1144,9 +1144,9 @@ static_assert(offsetof(UCommonRotator, MyText) == 0x001658, "Member 'UCommonRota
 class UCommonTabListWidgetBase final : public UCommonUserWidget
 {
 public:
-	TMulticastInlineDelegate<void(class FName TabId)> OnTabSelected;                                     // 0x0318(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName TabId, class UCommonButtonBase* TabButton)> OnTabButtonCreation;                               // 0x0328(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName TabId, class UCommonButtonBase* TabButton)> OnTabButtonRemoval;                                // 0x0338(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName TabId)> OnTabSelected;                                 // 0x0318(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName TabId, class UCommonButtonBase* TabButton)> OnTabButtonCreation; // 0x0328(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName TabId, class UCommonButtonBase* TabButton)> OnTabButtonRemoval; // 0x0338(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnTabListRebuilt;                                  // 0x0348(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FDataTableRowHandle                    NextTabInputActionData;                            // 0x0358(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
 	struct FDataTableRowHandle                    PreviousTabInputActionData;                        // 0x0368(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
@@ -1159,7 +1159,7 @@ public:
 	uint8                                         Pad_394[0x4];                                      // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonButtonGroupBase*                 TabButtonGroup;                                    // 0x0398(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_3A0[0x8];                                      // 0x03A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FCommonRegisteredTabInfo> RegisteredTabsByID;                                // 0x03A8(0x0050)(Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FCommonRegisteredTabInfo> RegisteredTabsByID;                           // 0x03A8(0x0050)(Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_3F8[0x18];                                     // 0x03F8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -1263,7 +1263,7 @@ static_assert(offsetof(UCommonTextStyle, LineHeightPercentage) == 0x0001C0, "Mem
 
 // Class CommonUI.CommonTextScrollStyle
 // 0x0018 (0x0060 - 0x0048)
-class UCommonTextScrollStyle final : public UObject
+class UCommonTextScrollStyle : public UObject
 {
 public:
 	float                                         Speed;                                             // 0x0048(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1481,7 +1481,7 @@ static_assert(offsetof(UCommonInputMetadata, NavBarPriority) == 0x000048, "Membe
 static_assert(offsetof(UCommonInputMetadata, bIsGenericInputAction) == 0x00004C, "Member 'UCommonInputMetadata::bIsGenericInputAction' has a wrong offset!");
 
 // Class CommonUI.CommonMappingContextMetadataInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class ICommonMappingContextMetadataInterface final : public IInterface
 {
 public:
@@ -1494,8 +1494,8 @@ public:
 		return GetDefaultObjImpl<ICommonMappingContextMetadataInterface>();
 	}
 };
-static_assert(alignof(ICommonMappingContextMetadataInterface) == 0x000008, "Wrong alignment on ICommonMappingContextMetadataInterface");
-static_assert(sizeof(ICommonMappingContextMetadataInterface) == 0x000048, "Wrong size on ICommonMappingContextMetadataInterface");
+static_assert(alignof(ICommonMappingContextMetadataInterface) == 0x000001, "Wrong alignment on ICommonMappingContextMetadataInterface");
+static_assert(sizeof(ICommonMappingContextMetadataInterface) == 0x000001, "Wrong size on ICommonMappingContextMetadataInterface");
 
 // Class CommonUI.CommonMappingContextMetadata
 // 0x0060 (0x00B0 - 0x0050)
@@ -1504,7 +1504,7 @@ class UCommonMappingContextMetadata final : public UDataAsset
 public:
 	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonInputMetadata*                   EnhancedInputMetadata;                             // 0x0058(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class UInputAction*, class UCommonInputMetadata*> PerActionEnhancedInputMetadata;                    // 0x0060(0x0050)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<class UInputAction*, class UCommonInputMetadata*> PerActionEnhancedInputMetadata;           // 0x0060(0x0050)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1698,7 +1698,7 @@ class UCommonWidgetCarousel final : public UPanelWidget
 public:
 	int32                                         ActiveWidgetIndex;                                 // 0x01C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UCommonWidgetCarousel* CarouselWidget, int32 CurrentPageIndex)> OnCurrentPageIndexChanged;                         // 0x01D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UCommonWidgetCarousel* CarouselWidget, int32 CurrentPageIndex)> OnCurrentPageIndexChanged; // 0x01D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1E0[0x30];                                     // 0x01E0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -1789,13 +1789,13 @@ static_assert(sizeof(UCommonWidgetGroupBase) == 0x000048, "Wrong size on UCommon
 class UCommonButtonGroupBase final : public UCommonWidgetGroupBase
 {
 public:
-	TMulticastInlineDelegate<void(class UCommonButtonBase* AssociatedButton, int32 ButtonIndex)> OnSelectedButtonBaseChanged;                       // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UCommonButtonBase* AssociatedButton, int32 ButtonIndex)> OnSelectedButtonBaseChanged; // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_58[0x18];                                      // 0x0058(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UCommonButtonBase* AssociatedButton, int32 ButtonIndex)> OnHoveredButtonBaseChanged;                        // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UCommonButtonBase* AssociatedButton, int32 ButtonIndex)> OnHoveredButtonBaseChanged; // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_80[0x18];                                      // 0x0080(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UCommonButtonBase* AssociatedButton, int32 ButtonIndex)> OnButtonBaseClicked;                               // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UCommonButtonBase* AssociatedButton, int32 ButtonIndex)> OnButtonBaseClicked; // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A8[0x18];                                      // 0x00A8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UCommonButtonBase* AssociatedButton, int32 ButtonIndex)> OnButtonBaseDoubleClicked;                         // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UCommonButtonBase* AssociatedButton, int32 ButtonIndex)> OnButtonBaseDoubleClicked; // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D0[0x18];                                      // 0x00D0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              OnSelectionCleared;                                // 0x00E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_F8[0x18];                                      // 0x00F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])

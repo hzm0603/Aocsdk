@@ -31,8 +31,8 @@ public:
 	class USceneComponent*                        SharedRoot;                                        // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_NodeTree_Blueprint(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_NodeTree_Blueprint(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

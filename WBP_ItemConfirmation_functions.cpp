@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_ItemConfirmation.WBP_ItemConfirmation_C.ExecuteUbergraph_WBP_ItemConfirmation
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ItemConfirmation_C::ExecuteUbergraph_WBP_ItemConfirmation(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemConfirmation_C", "ExecuteUbergraph_WBP_ItemConfirmation");
-
-	Params::WBP_ItemConfirmation_C_ExecuteUbergraph_WBP_ItemConfirmation Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ItemConfirmation.WBP_ItemConfirmation_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_ItemConfirmation_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_ItemConfirmation_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ItemConfirmation.WBP_ItemConfirmation_C.ExecuteUbergraph_WBP_ItemConfirmation
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ItemConfirmation_C::ExecuteUbergraph_WBP_ItemConfirmation(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ItemConfirmation_C", "ExecuteUbergraph_WBP_ItemConfirmation");
+
+	Params::WBP_ItemConfirmation_C_ExecuteUbergraph_WBP_ItemConfirmation Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

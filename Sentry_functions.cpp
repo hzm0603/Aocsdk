@@ -20,9 +20,9 @@ namespace SDK
 // Function Sentry.SentryAttachment.InitializeWithData
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<uint8>                           Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ContentType                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ContentType                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryAttachment::InitializeWithData(const TArray<uint8>& Data, const class FString& Filename, const class FString& ContentType)
 {
@@ -49,9 +49,9 @@ void USentryAttachment::InitializeWithData(const TArray<uint8>& Data, const clas
 // Function Sentry.SentryAttachment.InitializeWithPath
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ContentType                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ContentType                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryAttachment::InitializeWithPath(const class FString& Path, const class FString& Filename, const class FString& ContentType)
 {
@@ -208,7 +208,7 @@ class USentryEvent* USentryBeforeSendHandler::HandleBeforeSend(class USentryEven
 // Function Sentry.SentryBreadcrumb.SetCategory
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryBreadcrumb::SetCategory(const class FString& Category)
 {
@@ -233,7 +233,7 @@ void USentryBreadcrumb::SetCategory(const class FString& Category)
 // Function Sentry.SentryBreadcrumb.SetData
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TMap<class FString, class FString>      Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USentryBreadcrumb::SetData(const TMap<class FString, class FString>& Data)
 {
@@ -283,7 +283,7 @@ void USentryBreadcrumb::SetLevel(ESentryLevel Level)
 // Function Sentry.SentryBreadcrumb.SetMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryBreadcrumb::SetMessage(const class FString& Message)
 {
@@ -308,7 +308,7 @@ void USentryBreadcrumb::SetMessage(const class FString& Message)
 // Function Sentry.SentryBreadcrumb.SetType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Type                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Type                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryBreadcrumb::SetType(const class FString& Type)
 {
@@ -458,7 +458,7 @@ class FString USentryBreadcrumb::GetType() const
 // Function Sentry.SentryEvent.CreateEventWithMessageAndLevel
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESentryLevel                            Level                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryEvent*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -513,7 +513,7 @@ void USentryEvent::SetLevel(ESentryLevel Level)
 // Function Sentry.SentryEvent.SetMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryEvent::SetMessage(const class FString& Message)
 {
@@ -688,7 +688,7 @@ class FString USentryId::ToString() const
 // Function Sentry.SentryLibrary.ByteArrayToString
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<uint8>                           Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FString USentryLibrary::ByteArrayToString(const TArray<uint8>& Array)
@@ -716,9 +716,9 @@ class FString USentryLibrary::ByteArrayToString(const TArray<uint8>& Array)
 // Function Sentry.SentryLibrary.CreateSentryAttachmentWithData
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<uint8>                           Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ContentType                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ContentType                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryAttachment*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class USentryAttachment* USentryLibrary::CreateSentryAttachmentWithData(const TArray<uint8>& Data, const class FString& Filename, const class FString& ContentType)
@@ -748,9 +748,9 @@ class USentryAttachment* USentryLibrary::CreateSentryAttachmentWithData(const TA
 // Function Sentry.SentryLibrary.CreateSentryAttachmentWithPath
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ContentType                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ContentType                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryAttachment*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class USentryAttachment* USentryLibrary::CreateSentryAttachmentWithPath(const class FString& Path, const class FString& Filename, const class FString& ContentType)
@@ -780,10 +780,10 @@ class USentryAttachment* USentryLibrary::CreateSentryAttachmentWithPath(const cl
 // Function Sentry.SentryLibrary.CreateSentryBreadcrumb
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Type                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TMap<class FString, class FString>      Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Type                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // ESentryLevel                            Level                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryBreadcrumb*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -816,7 +816,7 @@ class USentryBreadcrumb* USentryLibrary::CreateSentryBreadcrumb(const class FStr
 // Function Sentry.SentryLibrary.CreateSentryEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESentryLevel                            Level                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryEvent*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -846,8 +846,8 @@ class USentryEvent* USentryLibrary::CreateSentryEvent(const class FString& Messa
 // Function Sentry.SentryLibrary.CreateSentryTransactionContext
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Operation                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Operation                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryTransactionContext*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class USentryTransactionContext* USentryLibrary::CreateSentryTransactionContext(const class FString& Name_0, const class FString& Operation)
@@ -876,11 +876,11 @@ class USentryTransactionContext* USentryLibrary::CreateSentryTransactionContext(
 // Function Sentry.SentryLibrary.CreateSentryUser
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ID                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           UserName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           IpAddress                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TMap<class FString, class FString>      Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    Email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ID                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    UserName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    IpAddress                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class USentryUser*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class USentryUser* USentryLibrary::CreateSentryUser(const class FString& Email, const class FString& ID, const class FString& UserName, const class FString& IpAddress, const TMap<class FString, class FString>& Data)
@@ -913,9 +913,9 @@ class USentryUser* USentryLibrary::CreateSentryUser(const class FString& Email, 
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class USentryId*                        EventId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Comments                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Comments                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryUserFeedback*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class USentryUserFeedback* USentryLibrary::CreateSentryUserFeedback(class USentryId* EventId, const class FString& Name_0, const class FString& Email, const class FString& Comments)
@@ -946,8 +946,8 @@ class USentryUserFeedback* USentryLibrary::CreateSentryUserFeedback(class USentr
 // Function Sentry.SentryLibrary.SaveStringToFile
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class FString                           InString                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InString                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FString USentryLibrary::SaveStringToFile(const class FString& InString, const class FString& Filename)
@@ -976,7 +976,7 @@ class FString USentryLibrary::SaveStringToFile(const class FString& InString, co
 // Function Sentry.SentryLibrary.StringToBytesArray
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class FString                           InString                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InString                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<uint8>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<uint8> USentryLibrary::StringToBytesArray(const class FString& InString)
@@ -1161,7 +1161,7 @@ void USentryScope::ClearBreadcrumbs()
 // Function Sentry.SentryScope.RemoveContext
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryScope::RemoveContext(const class FString& Key)
 {
@@ -1186,7 +1186,7 @@ void USentryScope::RemoveContext(const class FString& Key)
 // Function Sentry.SentryScope.RemoveExtra
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryScope::RemoveExtra(const class FString& Key)
 {
@@ -1211,7 +1211,7 @@ void USentryScope::RemoveExtra(const class FString& Key)
 // Function Sentry.SentryScope.RemoveTag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryScope::RemoveTag(const class FString& Key)
 {
@@ -1236,8 +1236,8 @@ void USentryScope::RemoveTag(const class FString& Key)
 // Function Sentry.SentryScope.SetContext
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TMap<class FString, class FString>      Values                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Values                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USentryScope::SetContext(const class FString& Key, const TMap<class FString, class FString>& Values)
 {
@@ -1263,7 +1263,7 @@ void USentryScope::SetContext(const class FString& Key, const TMap<class FString
 // Function Sentry.SentryScope.SetDist
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Dist                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Dist                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryScope::SetDist(const class FString& Dist)
 {
@@ -1288,7 +1288,7 @@ void USentryScope::SetDist(const class FString& Dist)
 // Function Sentry.SentryScope.SetEnvironment
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Environment                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Environment                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryScope::SetEnvironment(const class FString& Environment)
 {
@@ -1313,7 +1313,7 @@ void USentryScope::SetEnvironment(const class FString& Environment)
 // Function Sentry.SentryScope.SetExtras
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TMap<class FString, class FString>      Extras                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Extras                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USentryScope::SetExtras(const TMap<class FString, class FString>& Extras)
 {
@@ -1338,8 +1338,8 @@ void USentryScope::SetExtras(const TMap<class FString, class FString>& Extras)
 // Function Sentry.SentryScope.SetExtraValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryScope::SetExtraValue(const class FString& Key, const class FString& Value)
 {
@@ -1365,7 +1365,7 @@ void USentryScope::SetExtraValue(const class FString& Key, const class FString& 
 // Function Sentry.SentryScope.SetFingerprint
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<class FString>                   Fingerprint                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            Fingerprint                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USentryScope::SetFingerprint(const TArray<class FString>& Fingerprint)
 {
@@ -1415,7 +1415,7 @@ void USentryScope::SetLevel(ESentryLevel Level)
 // Function Sentry.SentryScope.SetTags
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TMap<class FString, class FString>      Tags                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Tags                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USentryScope::SetTags(const TMap<class FString, class FString>& Tags)
 {
@@ -1440,8 +1440,8 @@ void USentryScope::SetTags(const TMap<class FString, class FString>& Tags)
 // Function Sentry.SentryScope.SetTagValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryScope::SetTagValue(const class FString& Key, const class FString& Value)
 {
@@ -1542,7 +1542,7 @@ TMap<class FString, class FString> USentryScope::GetExtras() const
 // Function Sentry.SentryScope.GetExtraValue
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FString USentryScope::GetExtraValue(const class FString& Key) const
@@ -1645,7 +1645,7 @@ TMap<class FString, class FString> USentryScope::GetTags() const
 // Function Sentry.SentryScope.GetTagValue
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FString USentryScope::GetTagValue(const class FString& Key) const
@@ -1692,8 +1692,8 @@ void USentrySpan::Finish()
 // Function Sentry.SentrySpan.GetTrace
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Name_0                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString*                          Name_0                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString*                          Value                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentrySpan::GetTrace(class FString* Name_0, class FString* Value)
 {
@@ -1722,7 +1722,7 @@ void USentrySpan::GetTrace(class FString* Name_0, class FString* Value)
 // Function Sentry.SentrySpan.RemoveData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentrySpan::RemoveData(const class FString& Key)
 {
@@ -1747,7 +1747,7 @@ void USentrySpan::RemoveData(const class FString& Key)
 // Function Sentry.SentrySpan.RemoveTag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentrySpan::RemoveTag(const class FString& Key)
 {
@@ -1772,8 +1772,8 @@ void USentrySpan::RemoveTag(const class FString& Key)
 // Function Sentry.SentrySpan.SetData
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TMap<class FString, class FString>      Values                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Values                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USentrySpan::SetData(const class FString& Key, const TMap<class FString, class FString>& Values)
 {
@@ -1799,8 +1799,8 @@ void USentrySpan::SetData(const class FString& Key, const TMap<class FString, cl
 // Function Sentry.SentrySpan.SetTag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentrySpan::SetTag(const class FString& Key, const class FString& Value)
 {
@@ -1876,10 +1876,10 @@ void USentrySubsystem::AddBreadcrumb(class USentryBreadcrumb* Breadcrumb)
 // Function Sentry.SentrySubsystem.AddBreadcrumbWithParams
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Type                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TMap<class FString, class FString>      Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Type                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // ESentryLevel                            Level                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentrySubsystem::AddBreadcrumbWithParams(const class FString& Message, const class FString& Category, const class FString& Type, const TMap<class FString, class FString>& Data, ESentryLevel Level)
@@ -1938,7 +1938,7 @@ class USentryId* USentrySubsystem::CaptureEvent(class USentryEvent* Event)
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class USentryEvent*                     Event                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class USentryScope* Scope)>OnConfigureScope                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class USentryScope* Scope)>&OnConfigureScope                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryId*                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class USentryId* USentrySubsystem::CaptureEventWithScope(class USentryEvent* Event, const TDelegate<void(class USentryScope* Scope)>& OnConfigureScope)
@@ -1967,7 +1967,7 @@ class USentryId* USentrySubsystem::CaptureEventWithScope(class USentryEvent* Eve
 // Function Sentry.SentrySubsystem.CaptureMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESentryLevel                            Level                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryId*                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1997,8 +1997,8 @@ class USentryId* USentrySubsystem::CaptureMessage(const class FString& Message, 
 // Function Sentry.SentrySubsystem.CaptureMessageWithScope
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class USentryScope* Scope)>OnConfigureScope                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class USentryScope* Scope)>&OnConfigureScope                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESentryLevel                            Level                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryId*                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2055,9 +2055,9 @@ void USentrySubsystem::CaptureUserFeedback(class USentryUserFeedback* UserFeedba
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class USentryId*                        EventId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Comments                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Comments                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentrySubsystem::CaptureUserFeedbackWithParams(class USentryId* EventId, const class FString& Email, const class FString& Comments, const class FString& Name_0)
 {
@@ -2123,7 +2123,7 @@ void USentrySubsystem::Close()
 // Function Sentry.SentrySubsystem.ConfigureScope
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TDelegate<void(class USentryScope* Scope)>OnConfigureScope                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class USentryScope* Scope)>&OnConfigureScope                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentrySubsystem::ConfigureScope(const TDelegate<void(class USentryScope* Scope)>& OnConfigureScope)
 {
@@ -2148,8 +2148,8 @@ void USentrySubsystem::ConfigureScope(const TDelegate<void(class USentryScope* S
 // Function Sentry.SentrySubsystem.ContinueTrace
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           SentryTrace                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>                   BaggageHeaders                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    SentryTrace                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            BaggageHeaders                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // class USentryTransactionContext*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class USentryTransactionContext* USentrySubsystem::ContinueTrace(const class FString& SentryTrace, const TArray<class FString>& BaggageHeaders)
@@ -2216,7 +2216,7 @@ void USentrySubsystem::Initialize()
 // Function Sentry.SentrySubsystem.InitializeWithSettings
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TDelegate<void(class USentrySettings* Settings)>OnConfigureSettings                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class USentrySettings* Settings)>&OnConfigureSettings                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentrySubsystem::InitializeWithSettings(const TDelegate<void(class USentrySettings* Settings)>& OnConfigureSettings)
 {
@@ -2316,7 +2316,7 @@ bool USentrySubsystem::IsSupportedForCurrentSettings()
 // Function Sentry.SentrySubsystem.RemoveTag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentrySubsystem::RemoveTag(const class FString& Key)
 {
@@ -2360,8 +2360,8 @@ void USentrySubsystem::RemoveUser()
 // Function Sentry.SentrySubsystem.SetContext
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TMap<class FString, class FString>      Values                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Values                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USentrySubsystem::SetContext(const class FString& Key, const TMap<class FString, class FString>& Values)
 {
@@ -2412,8 +2412,8 @@ void USentrySubsystem::SetLevel(ESentryLevel Level)
 // Function Sentry.SentrySubsystem.SetTag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentrySubsystem::SetTag(const class FString& Key, const class FString& Value)
 {
@@ -2483,8 +2483,8 @@ void USentrySubsystem::StartSession()
 // Function Sentry.SentrySubsystem.StartTransaction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Operation                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Operation                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentryTransaction*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class USentryTransaction* USentrySubsystem::StartTransaction(const class FString& Name_0, const class FString& Operation)
@@ -2542,7 +2542,7 @@ class USentryTransaction* USentrySubsystem::StartTransactionWithContext(class US
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class USentryTransactionContext*        Context                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TMap<class FString, class FString>      Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class USentryTransaction*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class USentryTransaction* USentrySubsystem::StartTransactionWithContextAndOptions(class USentryTransactionContext* Context, const TMap<class FString, class FString>& Options)
@@ -2572,7 +2572,7 @@ class USentryTransaction* USentrySubsystem::StartTransactionWithContextAndOption
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // class USentrySamplingContext*           samplingContext                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   samplingValue                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  samplingValue                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool USentryTraceSampler::Sample(class USentrySamplingContext* samplingContext, float* samplingValue)
@@ -2622,8 +2622,8 @@ void USentryTransaction::Finish()
 // Function Sentry.SentryTransaction.GetTrace
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Name_0                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString*                          Name_0                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString*                          Value                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryTransaction::GetTrace(class FString* Name_0, class FString* Value)
 {
@@ -2652,7 +2652,7 @@ void USentryTransaction::GetTrace(class FString* Name_0, class FString* Value)
 // Function Sentry.SentryTransaction.RemoveData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryTransaction::RemoveData(const class FString& Key)
 {
@@ -2677,7 +2677,7 @@ void USentryTransaction::RemoveData(const class FString& Key)
 // Function Sentry.SentryTransaction.RemoveTag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryTransaction::RemoveTag(const class FString& Key)
 {
@@ -2702,8 +2702,8 @@ void USentryTransaction::RemoveTag(const class FString& Key)
 // Function Sentry.SentryTransaction.SetData
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TMap<class FString, class FString>      Values                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Values                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USentryTransaction::SetData(const class FString& Key, const TMap<class FString, class FString>& Values)
 {
@@ -2729,7 +2729,7 @@ void USentryTransaction::SetData(const class FString& Key, const TMap<class FStr
 // Function Sentry.SentryTransaction.SetName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryTransaction::SetName(const class FString& Name_0)
 {
@@ -2754,8 +2754,8 @@ void USentryTransaction::SetName(const class FString& Name_0)
 // Function Sentry.SentryTransaction.SetTag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryTransaction::SetTag(const class FString& Key, const class FString& Value)
 {
@@ -2781,8 +2781,8 @@ void USentryTransaction::SetTag(const class FString& Key, const class FString& V
 // Function Sentry.SentryTransaction.StartChild
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Operation                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Description                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Operation                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Description                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USentrySpan*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class USentrySpan* USentryTransaction::StartChild(const class FString& Operation, const class FString& Description)
@@ -2836,8 +2836,8 @@ bool USentryTransaction::IsFinished() const
 // Function Sentry.SentryTransactionContext.Initialize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Operation                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Operation                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryTransactionContext::Initialize(const class FString& Name_0, const class FString& Operation)
 {
@@ -2913,7 +2913,7 @@ class FString USentryTransactionContext::GetOperation() const
 // Function Sentry.SentryUser.SetData
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TMap<class FString, class FString>      Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USentryUser::SetData(const TMap<class FString, class FString>& Data)
 {
@@ -2938,7 +2938,7 @@ void USentryUser::SetData(const TMap<class FString, class FString>& Data)
 // Function Sentry.SentryUser.SetEmail
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryUser::SetEmail(const class FString& Email)
 {
@@ -2963,7 +2963,7 @@ void USentryUser::SetEmail(const class FString& Email)
 // Function Sentry.SentryUser.SetId
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           ID                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ID                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryUser::SetId(const class FString& ID)
 {
@@ -2988,7 +2988,7 @@ void USentryUser::SetId(const class FString& ID)
 // Function Sentry.SentryUser.SetIpAddress
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           IpAddress                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    IpAddress                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryUser::SetIpAddress(const class FString& IpAddress)
 {
@@ -3013,7 +3013,7 @@ void USentryUser::SetIpAddress(const class FString& IpAddress)
 // Function Sentry.SentryUser.SetUsername
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           UserName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    UserName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryUser::SetUsername(const class FString& UserName)
 {
@@ -3188,7 +3188,7 @@ void USentryUserFeedback::Initialize(class USentryId* EventId)
 // Function Sentry.SentryUserFeedback.SetComment
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Comments                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Comments                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryUserFeedback::SetComment(const class FString& Comments)
 {
@@ -3213,7 +3213,7 @@ void USentryUserFeedback::SetComment(const class FString& Comments)
 // Function Sentry.SentryUserFeedback.SetEmail
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryUserFeedback::SetEmail(const class FString& Email)
 {
@@ -3238,7 +3238,7 @@ void USentryUserFeedback::SetEmail(const class FString& Email)
 // Function Sentry.SentryUserFeedback.SetName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USentryUserFeedback::SetName(const class FString& Name_0)
 {

@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter.STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C.ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USTE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C::ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C", "ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter");
-
-	Params::STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter.STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void USTE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C::ReceiveTick(c
 	Params::STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ReceiveTick Parms{};
 
 	Parms.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter.STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C.ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USTE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C::ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C", "ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter");
+
+	Params::STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter_C_ExecuteUbergraph_STE_MagmaGolem_BellowSmasher_GetBellowAndForgeFireEmitter Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

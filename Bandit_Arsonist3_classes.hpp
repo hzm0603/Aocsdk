@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Arsonist3.Bandit_Arsonist3_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class ABandit_Arsonist3_C : public ABandit_Arsonist2_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Arsonist3_C) == 0x000010, "Wrong alignment on ABandit_Arsonist3_C");
-static_assert(sizeof(ABandit_Arsonist3_C) == 0x001DB0, "Wrong size on ABandit_Arsonist3_C");
+static_assert(sizeof(ABandit_Arsonist3_C) == 0x001D70, "Wrong size on ABandit_Arsonist3_C");
 
 }
 

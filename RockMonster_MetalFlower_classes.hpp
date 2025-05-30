@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass RockMonster_MetalFlower.RockMonster_MetalFlower_C
-// 0x0000 (0x1D90 - 0x1D90)
+// 0x0000 (0x1D50 - 0x1D50)
 class ARockMonster_MetalFlower_C final : public ANPCPawn_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ARockMonster_MetalFlower_C) == 0x000010, "Wrong alignment on ARockMonster_MetalFlower_C");
-static_assert(sizeof(ARockMonster_MetalFlower_C) == 0x001D90, "Wrong size on ARockMonster_MetalFlower_C");
+static_assert(sizeof(ARockMonster_MetalFlower_C) == 0x001D50, "Wrong size on ARockMonster_MetalFlower_C");
 
 }
 

@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass SpellStaff_Projectile.SpellStaff_Projectile_C
-// 0x0028 (0x05B8 - 0x0590)
+// 0x0028 (0x05C0 - 0x0598)
 class ASpellStaff_Projectile_C final : public AAoCAbilityProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               ParticleSystem2;                                   // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Audio;                                             // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               ParticleSystem1;                                   // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x05B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               ParticleSystem2;                                   // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Audio;                                             // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               ParticleSystem1;                                   // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x05B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_SpellStaff_Projectile(int32 EntryPoint);
@@ -43,12 +43,12 @@ public:
 	}
 };
 static_assert(alignof(ASpellStaff_Projectile_C) == 0x000008, "Wrong alignment on ASpellStaff_Projectile_C");
-static_assert(sizeof(ASpellStaff_Projectile_C) == 0x0005B8, "Wrong size on ASpellStaff_Projectile_C");
-static_assert(offsetof(ASpellStaff_Projectile_C, UberGraphFrame) == 0x000590, "Member 'ASpellStaff_Projectile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ASpellStaff_Projectile_C, ParticleSystem2) == 0x000598, "Member 'ASpellStaff_Projectile_C::ParticleSystem2' has a wrong offset!");
-static_assert(offsetof(ASpellStaff_Projectile_C, Audio) == 0x0005A0, "Member 'ASpellStaff_Projectile_C::Audio' has a wrong offset!");
-static_assert(offsetof(ASpellStaff_Projectile_C, ParticleSystem1) == 0x0005A8, "Member 'ASpellStaff_Projectile_C::ParticleSystem1' has a wrong offset!");
-static_assert(offsetof(ASpellStaff_Projectile_C, Scale) == 0x0005B0, "Member 'ASpellStaff_Projectile_C::Scale' has a wrong offset!");
+static_assert(sizeof(ASpellStaff_Projectile_C) == 0x0005C0, "Wrong size on ASpellStaff_Projectile_C");
+static_assert(offsetof(ASpellStaff_Projectile_C, UberGraphFrame) == 0x000598, "Member 'ASpellStaff_Projectile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ASpellStaff_Projectile_C, ParticleSystem2) == 0x0005A0, "Member 'ASpellStaff_Projectile_C::ParticleSystem2' has a wrong offset!");
+static_assert(offsetof(ASpellStaff_Projectile_C, Audio) == 0x0005A8, "Member 'ASpellStaff_Projectile_C::Audio' has a wrong offset!");
+static_assert(offsetof(ASpellStaff_Projectile_C, ParticleSystem1) == 0x0005B0, "Member 'ASpellStaff_Projectile_C::ParticleSystem1' has a wrong offset!");
+static_assert(offsetof(ASpellStaff_Projectile_C, Scale) == 0x0005B8, "Member 'ASpellStaff_Projectile_C::Scale' has a wrong offset!");
 
 }
 

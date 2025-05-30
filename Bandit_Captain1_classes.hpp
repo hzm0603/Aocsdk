@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Bandit_Captain1.Bandit_Captain1_C
-// 0x0020 (0x1DD0 - 0x1DB0)
+// 0x0020 (0x1D90 - 0x1D70)
 class ABandit_Captain1_C : public ABandit_Captain_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Bandit_Captain1_C;                  // 0x1DB0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1DB8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         Count;                                             // 0x1DC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Bandit_Captain1_C;                  // 0x1D70(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         Count;                                             // 0x1D80(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_Bandit_Captain1(int32 EntryPoint);
 	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_Bandit_Captain1(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,10 +41,10 @@ public:
 	}
 };
 static_assert(alignof(ABandit_Captain1_C) == 0x000010, "Wrong alignment on ABandit_Captain1_C");
-static_assert(sizeof(ABandit_Captain1_C) == 0x001DD0, "Wrong size on ABandit_Captain1_C");
-static_assert(offsetof(ABandit_Captain1_C, UberGraphFrame_Bandit_Captain1_C) == 0x001DB0, "Member 'ABandit_Captain1_C::UberGraphFrame_Bandit_Captain1_C' has a wrong offset!");
-static_assert(offsetof(ABandit_Captain1_C, Blackboard) == 0x001DB8, "Member 'ABandit_Captain1_C::Blackboard' has a wrong offset!");
-static_assert(offsetof(ABandit_Captain1_C, Count) == 0x001DC0, "Member 'ABandit_Captain1_C::Count' has a wrong offset!");
+static_assert(sizeof(ABandit_Captain1_C) == 0x001D90, "Wrong size on ABandit_Captain1_C");
+static_assert(offsetof(ABandit_Captain1_C, UberGraphFrame_Bandit_Captain1_C) == 0x001D70, "Member 'ABandit_Captain1_C::UberGraphFrame_Bandit_Captain1_C' has a wrong offset!");
+static_assert(offsetof(ABandit_Captain1_C, Blackboard) == 0x001D78, "Member 'ABandit_Captain1_C::Blackboard' has a wrong offset!");
+static_assert(offsetof(ABandit_Captain1_C, Count) == 0x001D80, "Member 'ABandit_Captain1_C::Count' has a wrong offset!");
 
 }
 

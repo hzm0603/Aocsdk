@@ -48,7 +48,7 @@ static_assert(offsetof(UMovieSceneMaterialTrack, Sections) == 0x0000B8, "Member 
 static_assert(offsetof(UMovieSceneMaterialTrack, SectionToKey) == 0x0000C8, "Member 'UMovieSceneMaterialTrack::SectionToKey' has a wrong offset!");
 
 // Class MovieSceneTracks.MovieSceneTransformOrigin
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IMovieSceneTransformOrigin final : public IInterface
 {
 public:
@@ -64,11 +64,11 @@ public:
 		return GetDefaultObjImpl<IMovieSceneTransformOrigin>();
 	}
 };
-static_assert(alignof(IMovieSceneTransformOrigin) == 0x000008, "Wrong alignment on IMovieSceneTransformOrigin");
-static_assert(sizeof(IMovieSceneTransformOrigin) == 0x000048, "Wrong size on IMovieSceneTransformOrigin");
+static_assert(alignof(IMovieSceneTransformOrigin) == 0x000001, "Wrong alignment on IMovieSceneTransformOrigin");
+static_assert(sizeof(IMovieSceneTransformOrigin) == 0x000001, "Wrong size on IMovieSceneTransformOrigin");
 
 // Class MovieSceneTracks.MovieSceneConsoleVariableTrackInterface
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IMovieSceneConsoleVariableTrackInterface final : public IInterface
 {
 public:
@@ -81,8 +81,8 @@ public:
 		return GetDefaultObjImpl<IMovieSceneConsoleVariableTrackInterface>();
 	}
 };
-static_assert(alignof(IMovieSceneConsoleVariableTrackInterface) == 0x000008, "Wrong alignment on IMovieSceneConsoleVariableTrackInterface");
-static_assert(sizeof(IMovieSceneConsoleVariableTrackInterface) == 0x000048, "Wrong size on IMovieSceneConsoleVariableTrackInterface");
+static_assert(alignof(IMovieSceneConsoleVariableTrackInterface) == 0x000001, "Wrong alignment on IMovieSceneConsoleVariableTrackInterface");
+static_assert(sizeof(IMovieSceneConsoleVariableTrackInterface) == 0x000001, "Wrong size on IMovieSceneConsoleVariableTrackInterface");
 
 // Class MovieSceneTracks.MovieSceneDecomposerTestObject
 // 0x0008 (0x0050 - 0x0048)
@@ -492,8 +492,8 @@ public:
 	struct FMovieSceneDoubleChannel               Rotation[0x3];                                     // 0x04A0(0x0118)(NativeAccessSpecifierPrivate)
 	struct FMovieSceneDoubleChannel               Scale[0x3];                                        // 0x07E8(0x0118)(NativeAccessSpecifierPrivate)
 	struct FMovieSceneFloatChannel                ManualWeight;                                      // 0x0B30(0x0110)(NativeAccessSpecifierPrivate)
-	class UMovieSceneSectionChannelOverrideRegistry* OverrideRegistry;                                  // 0x0C40(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMovieScene3DTransformSectionConstraints* Constraints;                                       // 0x0C48(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneSectionChannelOverrideRegistry* OverrideRegistry;                               // 0x0C40(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieScene3DTransformSectionConstraints* Constraints;                                     // 0x0C48(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bUseQuaternionInterpolation;                       // 0x0C50(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_C51[0x7];                                      // 0x0C51(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -617,20 +617,20 @@ public:
 	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneFloatChannel                SoundVolume;                                       // 0x0138(0x0110)(NativeAccessSpecifierPrivate)
 	struct FMovieSceneFloatChannel                PitchMultiplier;                                   // 0x0248(0x0110)(NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FMovieSceneFloatChannel> Inputs_Float;                                      // 0x0358(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FMovieSceneStringChannel> Inputs_String;                                     // 0x03A8(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FMovieSceneBoolChannel> Inputs_Bool;                                       // 0x03F8(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FMovieSceneIntegerChannel> Inputs_Int;                                        // 0x0448(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FMovieSceneAudioTriggerChannel> Inputs_Trigger;                                    // 0x0498(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FMovieSceneFloatChannel> Inputs_Float;                                  // 0x0358(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FMovieSceneStringChannel> Inputs_String;                                // 0x03A8(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FMovieSceneBoolChannel> Inputs_Bool;                                    // 0x03F8(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FMovieSceneIntegerChannel> Inputs_Int;                                  // 0x0448(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FMovieSceneAudioTriggerChannel> Inputs_Trigger;                         // 0x0498(0x0050)(NativeAccessSpecifierPrivate)
 	struct FMovieSceneActorReferenceData          AttachActorData;                                   // 0x04E8(0x0120)(NativeAccessSpecifierPrivate)
 	bool                                          bLooping;                                          // 0x0608(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bSuppressSubtitles;                                // 0x0609(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bOverrideAttenuation;                              // 0x060A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_60B[0x5];                                      // 0x060B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAttenuation*                      AttenuationSettings;                               // 0x0610(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TDelegate<void(TArray<struct FSubtitleCue>& Subtitles, float CueDuration)> OnQueueSubtitles;                                  // 0x0618(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TDelegate<void(const TArray<struct FSubtitleCue>& Subtitles, float CueDuration)> OnQueueSubtitles; // 0x0618(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMulticastInlineDelegate<void()>              OnAudioFinished;                                   // 0x0628(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class USoundWave* PlayingSoundWave, float PlaybackPercent)> OnAudioPlaybackPercent;                            // 0x0638(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(const class USoundWave* PlayingSoundWave, const float PlaybackPercent)> OnAudioPlaybackPercent; // 0x0638(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPrivate)
 
 public:
 	void SetAttenuationSettings(class USoundAttenuation* InAttenuationSettings);
@@ -908,7 +908,7 @@ static_assert(offsetof(UMovieSceneParticleParameterTrack, Sections) == 0x0000C0,
 class UMovieSceneCameraShakeSourceTriggerSection final : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneCameraShakeSourceTriggerChannel Channel;                                           // 0x0110(0x00F8)(NativeAccessSpecifierPrivate)
+	struct FMovieSceneCameraShakeSourceTriggerChannel Channel;                                       // 0x0110(0x00F8)(NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -1025,7 +1025,7 @@ static_assert(offsetof(UMovieSceneColorSection, BlueCurve) == 0x000338, "Member 
 static_assert(offsetof(UMovieSceneColorSection, AlphaCurve) == 0x000448, "Member 'UMovieSceneColorSection::AlphaCurve' has a wrong offset!");
 
 // Class MovieSceneTracks.MovieSceneConstrainedSection
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IMovieSceneConstrainedSection final : public IInterface
 {
 public:
@@ -1038,8 +1038,8 @@ public:
 		return GetDefaultObjImpl<IMovieSceneConstrainedSection>();
 	}
 };
-static_assert(alignof(IMovieSceneConstrainedSection) == 0x000008, "Wrong alignment on IMovieSceneConstrainedSection");
-static_assert(sizeof(IMovieSceneConstrainedSection) == 0x000048, "Wrong size on IMovieSceneConstrainedSection");
+static_assert(alignof(IMovieSceneConstrainedSection) == 0x000001, "Wrong alignment on IMovieSceneConstrainedSection");
+static_assert(sizeof(IMovieSceneConstrainedSection) == 0x000001, "Wrong size on IMovieSceneConstrainedSection");
 
 // Class MovieSceneTracks.MovieSceneCVarSection
 // 0x0068 (0x0178 - 0x0110)
@@ -1047,7 +1047,7 @@ class UMovieSceneCVarSection final : public UMovieSceneSection
 {
 public:
 	uint8                                         Pad_110[0x8];                                      // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FMovieSceneConsoleVariableCollection> ConsoleVariableCollections;                        // 0x0118(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FMovieSceneConsoleVariableCollection> ConsoleVariableCollections;                  // 0x0118(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FMovieSceneCVarOverrides               ConsoleVariables;                                  // 0x0128(0x0050)(Edit, NativeAccessSpecifierPublic)
 
 public:
@@ -1321,7 +1321,7 @@ class UMovieSceneFloatSection final : public UMovieSceneSection
 public:
 	uint8                                         Pad_110[0x10];                                     // 0x0110(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneFloatChannel                FloatCurve;                                        // 0x0120(0x0110)(Protected, NativeAccessSpecifierProtected)
-	class UMovieSceneSectionChannelOverrideRegistry* OverrideRegistry;                                  // 0x0230(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMovieSceneSectionChannelOverrideRegistry* OverrideRegistry;                               // 0x0230(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -1361,7 +1361,7 @@ static_assert(sizeof(UMovieSceneIntegerSection) == 0x000218, "Wrong size on UMov
 static_assert(offsetof(UMovieSceneIntegerSection, IntegerCurve) == 0x000118, "Member 'UMovieSceneIntegerSection::IntegerCurve' has a wrong offset!");
 
 // Class MovieSceneTracks.MovieSceneParameterSectionExtender
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0000 - 0x0000)
 class IMovieSceneParameterSectionExtender final : public IInterface
 {
 public:
@@ -1374,8 +1374,8 @@ public:
 		return GetDefaultObjImpl<IMovieSceneParameterSectionExtender>();
 	}
 };
-static_assert(alignof(IMovieSceneParameterSectionExtender) == 0x000008, "Wrong alignment on IMovieSceneParameterSectionExtender");
-static_assert(sizeof(IMovieSceneParameterSectionExtender) == 0x000048, "Wrong size on IMovieSceneParameterSectionExtender");
+static_assert(alignof(IMovieSceneParameterSectionExtender) == 0x000001, "Wrong alignment on IMovieSceneParameterSectionExtender");
+static_assert(sizeof(IMovieSceneParameterSectionExtender) == 0x000001, "Wrong size on IMovieSceneParameterSectionExtender");
 
 // Class MovieSceneTracks.MovieSceneParameterSection
 // 0x0068 (0x0178 - 0x0110)
@@ -1385,10 +1385,10 @@ public:
 	uint8                                         Pad_110[0x8];                                      // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBoolParameterNameAndCurve>     BoolParameterNamesAndCurves;                       // 0x0118(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FScalarParameterNameAndCurve>   ScalarParameterNamesAndCurves;                     // 0x0128(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FVector2DParameterNameAndCurves> Vector2DParameterNamesAndCurves;                   // 0x0138(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FVector2DParameterNameAndCurves> Vector2DParameterNamesAndCurves;                  // 0x0138(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FVectorParameterNameAndCurves>  VectorParameterNamesAndCurves;                     // 0x0148(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FColorParameterNameAndCurves>   ColorParameterNamesAndCurves;                      // 0x0158(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FTransformParameterNameAndCurves> TransformParameterNamesAndCurves;                  // 0x0168(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FTransformParameterNameAndCurves> TransformParameterNamesAndCurves;                // 0x0168(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 
 public:
 	void AddBoolParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, bool InValue);
@@ -2125,7 +2125,7 @@ class UMovieSceneMaterialParameterSystem final : public UMovieSceneEntitySystem
 {
 public:
 	uint8                                         Pad_60[0x300];                                     // 0x0060(0x0300)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieScenePiecewiseDoubleBlenderSystem* DoubleBlenderSystem;                               // 0x0360(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieScenePiecewiseDoubleBlenderSystem* DoubleBlenderSystem;                              // 0x0360(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -2266,7 +2266,7 @@ static_assert(sizeof(UMovieScenePiecewiseIntegerBlenderSystem) == 0x0000D0, "Wro
 class UMovieSceneAsyncAction_SequencePrediction final : public UBlueprintAsyncActionBase
 {
 public:
-	TMulticastInlineDelegate<void(const struct FTransform& PredictedTransform)> Result;                                            // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FTransform& PredictedTransform)> Result;              // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              Failure;                                           // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneSequencePlayer*              SequencePlayer;                                    // 0x0080(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -2302,8 +2302,8 @@ class UMovieScenePredictionSystem final : public UMovieSceneEntitySystem
 {
 public:
 	uint8                                         Pad_60[0x90];                                      // 0x0060(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneAsyncAction_SequencePrediction*> PendingPredictions;                                // 0x00F0(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<class UMovieSceneAsyncAction_SequencePrediction*> ProcessingPredictions;                             // 0x0100(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneAsyncAction_SequencePrediction*> PendingPredictions;                     // 0x00F0(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneAsyncAction_SequencePrediction*> ProcessingPredictions;                  // 0x0100(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -2487,7 +2487,7 @@ static_assert(sizeof(UStringChannelEvaluatorSystem) == 0x000060, "Wrong size on 
 class UMovieSceneHierarchicalEasingFinalizationSystem final : public UMovieSceneEntityInstantiatorSystem
 {
 public:
-	class UMovieSceneHierarchicalEasingInstantiatorSystem* InstantiatorSystem;                                // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneHierarchicalEasingInstantiatorSystem* InstantiatorSystem;                       // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -3133,7 +3133,7 @@ public:
 	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x00B8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	bool                                          bUseLegacySectionIndexBlend;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneSkeletalAnimRootMotionTrackParams RootMotionParams;                                  // 0x00D0(0x0080)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FMovieSceneSkeletalAnimRootMotionTrackParams RootMotionParams;                            // 0x00D0(0x0080)(NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bBlendFirstChildOfRoot;                            // 0x0150(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESwapRootBone                                 SwapRootBone;                                      // 0x0151(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_152[0xE];                                      // 0x0152(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])

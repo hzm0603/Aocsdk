@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "AkAudio_structs.hpp"
 
 
@@ -40,7 +40,7 @@ public:
 	bool                                          IsInsideSpline;                                    // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_399[0x7];                                      // 0x0399(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        DotValue;                                          // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                AKEmitterLocation;                                 // 0x03A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                AkEmitterLocation;                                 // 0x03A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        TimerLazy;                                         // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsLazy;                                            // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInitialized;                                     // 0x03C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -49,17 +49,18 @@ public:
 	class UAkRtpc*                                SplineDistanceFade;                                // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow(int32 EntryPoint);
-	void GetControlledPawnLocation(class APawn** ControlledPawnReference, struct FVector* ControlledPawnLocation);
-	void GetDistanceFromPlayerToClosestSplintPoint(double* DistanceToPlayerFromClosestSpawnPoint);
-	void GetInsideSpline(bool* IsInsideSpine_, bool* IsInsideSplineChanged_);
-	void GetPlayerControllerCameraRotation(struct FRotator* PlayerControllerCameraRotation);
-	class USplineComponent* GetSplineComponent();
-	void PostNodeInit();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void Update_Emitter_Slowly();
 	void UpdateEmitterLocationProxy();
+	void Update_Emitter_Slowly();
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void PostNodeInit();
+	class USceneComponent* GetSplineEmitterComponent();
+	class USplineComponent* GetSplineComponent();
+	void GetPlayerControllerCameraRotation(struct FRotator* PlayerControllerCameraRotation);
+	void GetInsideSpline(bool* IsInsideSpine_, bool* IsInsideSplineChanged_);
+	void GetDistanceFromPlayerToClosestSplintPoint(double* DistanceToPlayerFromClosestSpawnPoint);
+	void GetControlledPawnLocation(class APawn** ControlledPawnReference, struct FVector* ControlledPawnLocation);
+	void ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -87,7 +88,7 @@ static_assert(offsetof(ABP_Audio_SplineClosedLoopFollow_C, StateOutside) == 0x00
 static_assert(offsetof(ABP_Audio_SplineClosedLoopFollow_C, MaxRangeFadeDistance) == 0x000390, "Member 'ABP_Audio_SplineClosedLoopFollow_C::MaxRangeFadeDistance' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineClosedLoopFollow_C, IsInsideSpline) == 0x000398, "Member 'ABP_Audio_SplineClosedLoopFollow_C::IsInsideSpline' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineClosedLoopFollow_C, DotValue) == 0x0003A0, "Member 'ABP_Audio_SplineClosedLoopFollow_C::DotValue' has a wrong offset!");
-static_assert(offsetof(ABP_Audio_SplineClosedLoopFollow_C, AKEmitterLocation) == 0x0003A8, "Member 'ABP_Audio_SplineClosedLoopFollow_C::AKEmitterLocation' has a wrong offset!");
+static_assert(offsetof(ABP_Audio_SplineClosedLoopFollow_C, AkEmitterLocation) == 0x0003A8, "Member 'ABP_Audio_SplineClosedLoopFollow_C::AkEmitterLocation' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineClosedLoopFollow_C, TimerLazy) == 0x0003C0, "Member 'ABP_Audio_SplineClosedLoopFollow_C::TimerLazy' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineClosedLoopFollow_C, IsLazy) == 0x0003C8, "Member 'ABP_Audio_SplineClosedLoopFollow_C::IsLazy' has a wrong offset!");
 static_assert(offsetof(ABP_Audio_SplineClosedLoopFollow_C, IsInitialized) == 0x0003C9, "Member 'ABP_Audio_SplineClosedLoopFollow_C::IsInitialized' has a wrong offset!");

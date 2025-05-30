@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "GameSystemsPlugin_classes.hpp"
 #include "Caravan_Raft_AnimBP_structs.hpp"
+#include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "GameSystemsPlugin_classes.hpp"
 
 
 namespace SDK
@@ -25,7 +25,7 @@ class UCaravan_Raft_AnimBP_C final : public UAoCAnimInstance
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x10F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct Caravan_Raft_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x10F8(0x0018)(HasGetValueTypeHash)
+	struct Caravan_Raft_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;          // 0x10F8(0x0018)(HasGetValueTypeHash)
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x1110(0x0008)()
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1118(0x0008)()
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1120(0x0020)()

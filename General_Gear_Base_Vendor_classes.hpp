@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass General_Gear_Base_Vendor.General_Gear_Base_Vendor_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class AGeneral_Gear_Base_Vendor_C final : public ANode_NPC_Master_C
 {
 public:
-	class UAoCNodePlotComponent*                  AoCNodePlot;                                       // 0x1DC8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAoCNodePlotComponent*                  AoCNodePlot;                                       // 0x1D88(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(AGeneral_Gear_Base_Vendor_C) == 0x000010, "Wrong alignment on AGeneral_Gear_Base_Vendor_C");
-static_assert(sizeof(AGeneral_Gear_Base_Vendor_C) == 0x001DD0, "Wrong size on AGeneral_Gear_Base_Vendor_C");
-static_assert(offsetof(AGeneral_Gear_Base_Vendor_C, AoCNodePlot) == 0x001DC8, "Member 'AGeneral_Gear_Base_Vendor_C::AoCNodePlot' has a wrong offset!");
+static_assert(sizeof(AGeneral_Gear_Base_Vendor_C) == 0x001D90, "Wrong size on AGeneral_Gear_Base_Vendor_C");
+static_assert(offsetof(AGeneral_Gear_Base_Vendor_C, AoCNodePlot) == 0x001D88, "Member 'AGeneral_Gear_Base_Vendor_C::AoCNodePlot' has a wrong offset!");
 
 }
 

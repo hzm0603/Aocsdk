@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GoblinRaven.GoblinRaven_C
-// 0x0000 (0x1DA0 - 0x1DA0)
+// 0x0000 (0x1D60 - 0x1D60)
 class AGoblinRaven_C final : public ARaven_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AGoblinRaven_C) == 0x000010, "Wrong alignment on AGoblinRaven_C");
-static_assert(sizeof(AGoblinRaven_C) == 0x001DA0, "Wrong size on AGoblinRaven_C");
+static_assert(sizeof(AGoblinRaven_C) == 0x001D60, "Wrong size on AGoblinRaven_C");
 
 }
 

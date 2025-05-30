@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "MetasoundFrontend_structs.hpp"
 #include "AudioExtensions_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "MetasoundFrontend_structs.hpp"
 
 
 namespace SDK
@@ -131,7 +131,7 @@ public:
 	bool                                          bForceUniqueClassName;                             // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAddToRegistry;                                    // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IMetaSoundDocumentInterface> ExistingMetaSound;                                 // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class IMetaSoundDocumentInterface> ExistingMetaSound;                           // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetaSoundBuilderOptions) == 0x000008, "Wrong alignment on FMetaSoundBuilderOptions");
 static_assert(sizeof(FMetaSoundBuilderOptions) == 0x000020, "Wrong size on FMetaSoundBuilderOptions");

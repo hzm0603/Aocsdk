@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_Subaccordion_NodeRelationships.WBP_Subaccordion_NodeRelationships_C.GetBreadcrumbWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget) == 0x000008, "Wrong alignment on WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget");
-static_assert(sizeof(WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget) == 0x000008, "Wrong size on WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget");
-static_assert(offsetof(WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget, ReturnValue) == 0x000000, "Member 'WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget::ReturnValue' has a wrong offset!");
-
 // Function WBP_Subaccordion_NodeRelationships.WBP_Subaccordion_NodeRelationships_C.GetButton
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_Subaccordion_NodeRelationships_C_GetButton final
@@ -35,6 +24,17 @@ public:
 static_assert(alignof(WBP_Subaccordion_NodeRelationships_C_GetButton) == 0x000008, "Wrong alignment on WBP_Subaccordion_NodeRelationships_C_GetButton");
 static_assert(sizeof(WBP_Subaccordion_NodeRelationships_C_GetButton) == 0x000008, "Wrong size on WBP_Subaccordion_NodeRelationships_C_GetButton");
 static_assert(offsetof(WBP_Subaccordion_NodeRelationships_C_GetButton, ReturnValue) == 0x000000, "Member 'WBP_Subaccordion_NodeRelationships_C_GetButton::ReturnValue' has a wrong offset!");
+
+// Function WBP_Subaccordion_NodeRelationships.WBP_Subaccordion_NodeRelationships_C.GetBreadcrumbWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget) == 0x000008, "Wrong alignment on WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget");
+static_assert(sizeof(WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget) == 0x000008, "Wrong size on WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget");
+static_assert(offsetof(WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget, ReturnValue) == 0x000000, "Member 'WBP_Subaccordion_NodeRelationships_C_GetBreadcrumbWidget::ReturnValue' has a wrong offset!");
 
 }
 

@@ -17,13 +17,29 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_SkillTreeNode.WBP_SkillTreeNode_C
-// 0x0018 (0x07B0 - 0x0798)
+// 0x0098 (0x0738 - 0x06A0)
 class UWBP_SkillTreeNode_C final : public UPurchasableSkillTreeNode
 {
 public:
-	class UImage*                                 InvalidImage;                                      // 0x0798(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           PathsCanvas;                                       // 0x07A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 UnPurchasedImage;                                  // 0x07A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 InvalidImage;                                      // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathBottomLeftArrow;                               // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathBottomLeftImg;                                 // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathBottomRightArrow;                              // 0x06B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathBottomRightImg;                                // 0x06C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathDownArrow;                                     // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathDownImg;                                       // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathLeftArrow;                                     // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathLeftImg;                                       // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathRightArrow;                                    // 0x06E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathRightImg;                                      // 0x06F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           PathsCanvas;                                       // 0x06F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathTopLeftArrow;                                  // 0x0700(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathTopLeftImg;                                    // 0x0708(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathTopRightArrow;                                 // 0x0710(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathTopRightImg;                                   // 0x0718(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathUpArrow;                                       // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PathUpImg;                                         // 0x0728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 UnPurchasedImage;                                  // 0x0730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,10 +52,26 @@ public:
 	}
 };
 static_assert(alignof(UWBP_SkillTreeNode_C) == 0x000008, "Wrong alignment on UWBP_SkillTreeNode_C");
-static_assert(sizeof(UWBP_SkillTreeNode_C) == 0x0007B0, "Wrong size on UWBP_SkillTreeNode_C");
-static_assert(offsetof(UWBP_SkillTreeNode_C, InvalidImage) == 0x000798, "Member 'UWBP_SkillTreeNode_C::InvalidImage' has a wrong offset!");
-static_assert(offsetof(UWBP_SkillTreeNode_C, PathsCanvas) == 0x0007A0, "Member 'UWBP_SkillTreeNode_C::PathsCanvas' has a wrong offset!");
-static_assert(offsetof(UWBP_SkillTreeNode_C, UnPurchasedImage) == 0x0007A8, "Member 'UWBP_SkillTreeNode_C::UnPurchasedImage' has a wrong offset!");
+static_assert(sizeof(UWBP_SkillTreeNode_C) == 0x000738, "Wrong size on UWBP_SkillTreeNode_C");
+static_assert(offsetof(UWBP_SkillTreeNode_C, InvalidImage) == 0x0006A0, "Member 'UWBP_SkillTreeNode_C::InvalidImage' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathBottomLeftArrow) == 0x0006A8, "Member 'UWBP_SkillTreeNode_C::PathBottomLeftArrow' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathBottomLeftImg) == 0x0006B0, "Member 'UWBP_SkillTreeNode_C::PathBottomLeftImg' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathBottomRightArrow) == 0x0006B8, "Member 'UWBP_SkillTreeNode_C::PathBottomRightArrow' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathBottomRightImg) == 0x0006C0, "Member 'UWBP_SkillTreeNode_C::PathBottomRightImg' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathDownArrow) == 0x0006C8, "Member 'UWBP_SkillTreeNode_C::PathDownArrow' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathDownImg) == 0x0006D0, "Member 'UWBP_SkillTreeNode_C::PathDownImg' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathLeftArrow) == 0x0006D8, "Member 'UWBP_SkillTreeNode_C::PathLeftArrow' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathLeftImg) == 0x0006E0, "Member 'UWBP_SkillTreeNode_C::PathLeftImg' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathRightArrow) == 0x0006E8, "Member 'UWBP_SkillTreeNode_C::PathRightArrow' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathRightImg) == 0x0006F0, "Member 'UWBP_SkillTreeNode_C::PathRightImg' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathsCanvas) == 0x0006F8, "Member 'UWBP_SkillTreeNode_C::PathsCanvas' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathTopLeftArrow) == 0x000700, "Member 'UWBP_SkillTreeNode_C::PathTopLeftArrow' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathTopLeftImg) == 0x000708, "Member 'UWBP_SkillTreeNode_C::PathTopLeftImg' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathTopRightArrow) == 0x000710, "Member 'UWBP_SkillTreeNode_C::PathTopRightArrow' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathTopRightImg) == 0x000718, "Member 'UWBP_SkillTreeNode_C::PathTopRightImg' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathUpArrow) == 0x000720, "Member 'UWBP_SkillTreeNode_C::PathUpArrow' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, PathUpImg) == 0x000728, "Member 'UWBP_SkillTreeNode_C::PathUpImg' has a wrong offset!");
+static_assert(offsetof(UWBP_SkillTreeNode_C, UnPurchasedImage) == 0x000730, "Member 'UWBP_SkillTreeNode_C::UnPurchasedImage' has a wrong offset!");
 
 }
 

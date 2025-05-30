@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STT_Base_classes.hpp"
 #include "Engine_structs.hpp"
+#include "STT_Base_classes.hpp"
 
 
 namespace SDK
@@ -28,9 +28,9 @@ public:
 	class FName                                   PairedInteractionTag;                              // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_STT_FindPairedInteractNPC(int32 EntryPoint);
-	void FindInteractableCharacterWithTag();
 	void ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition);
+	void FindInteractableCharacterWithTag();
+	void ExecuteUbergraph_STT_FindPairedInteractNPC(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -17,21 +17,41 @@
 namespace SDK
 {
 
-// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.ExecuteUbergraph_WBP_WorldMapIconButton
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_WorldMapIconButton_C::ExecuteUbergraph_WBP_WorldMapIconButton(int32 EntryPoint)
+void UWBP_WorldMapIconButton_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_WorldMapIconButton_C", "ExecuteUbergraph_WBP_WorldMapIconButton");
+		Func = Class->GetFunction("WBP_WorldMapIconButton_C", "PreConstruct");
 
-	Params::WBP_WorldMapIconButton_C_ExecuteUbergraph_WBP_WorldMapIconButton Parms{};
+	Params::WBP_WorldMapIconButton_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.OnMouseLeave
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_WorldMapIconButton_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_WorldMapIconButton_C", "OnMouseLeave");
+
+	Params::WBP_WorldMapIconButton_C_OnMouseLeave Parms{};
+
+	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -59,41 +79,21 @@ void UWBP_WorldMapIconButton_C::OnMouseEnter(const struct FGeometry& MyGeometry,
 }
 
 
-// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.OnMouseLeave
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.ExecuteUbergraph_WBP_WorldMapIconButton
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_WorldMapIconButton_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
+void UWBP_WorldMapIconButton_C::ExecuteUbergraph_WBP_WorldMapIconButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_WorldMapIconButton_C", "OnMouseLeave");
+		Func = Class->GetFunction("WBP_WorldMapIconButton_C", "ExecuteUbergraph_WBP_WorldMapIconButton");
 
-	Params::WBP_WorldMapIconButton_C_OnMouseLeave Parms{};
+	Params::WBP_WorldMapIconButton_C_ExecuteUbergraph_WBP_WorldMapIconButton Parms{};
 
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_WorldMapIconButton.WBP_WorldMapIconButton_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_WorldMapIconButton_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_WorldMapIconButton_C", "PreConstruct");
-
-	Params::WBP_WorldMapIconButton_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

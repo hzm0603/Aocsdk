@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function BP_AncientLeader_LingeringEffect.BP_AncientLeader_LingeringEffect_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_AncientLeader_LingeringEffect_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AncientLeader_LingeringEffect_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_AncientLeader_LingeringEffect.BP_AncientLeader_LingeringEffect_C.ExecuteUbergraph_BP_AncientLeader_LingeringEffect
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -34,20 +48,6 @@ void ABP_AncientLeader_LingeringEffect_C::ExecuteUbergraph_BP_AncientLeader_Ling
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AncientLeader_LingeringEffect.BP_AncientLeader_LingeringEffect_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_AncientLeader_LingeringEffect_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AncientLeader_LingeringEffect_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

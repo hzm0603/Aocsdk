@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_QuestDetailsContent.WBP_QuestDetailsContent_C.ExecuteUbergraph_WBP_QuestDetailsContent
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_QuestDetailsContent_C::ExecuteUbergraph_WBP_QuestDetailsContent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_QuestDetailsContent_C", "ExecuteUbergraph_WBP_QuestDetailsContent");
-
-	Params::WBP_QuestDetailsContent_C_ExecuteUbergraph_WBP_QuestDetailsContent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_QuestDetailsContent.WBP_QuestDetailsContent_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_QuestDetailsContent_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_QuestDetailsContent_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_QuestDetailsContent.WBP_QuestDetailsContent_C.ExecuteUbergraph_WBP_QuestDetailsContent
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_QuestDetailsContent_C::ExecuteUbergraph_WBP_QuestDetailsContent(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_QuestDetailsContent_C", "ExecuteUbergraph_WBP_QuestDetailsContent");
+
+	Params::WBP_QuestDetailsContent_C_ExecuteUbergraph_WBP_QuestDetailsContent Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

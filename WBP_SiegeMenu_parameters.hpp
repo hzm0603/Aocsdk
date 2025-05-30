@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_SiegeMenu.WBP_SiegeMenu_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_SiegeMenu_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SiegeMenu_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_SiegeMenu_C_PreConstruct");
+static_assert(sizeof(WBP_SiegeMenu_C_PreConstruct) == 0x000001, "Wrong size on WBP_SiegeMenu_C_PreConstruct");
+static_assert(offsetof(WBP_SiegeMenu_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_SiegeMenu_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WBP_SiegeMenu.WBP_SiegeMenu_C.ExecuteUbergraph_WBP_SiegeMenu
 // 0x0030 (0x0030 - 0x0000)
 struct WBP_SiegeMenu_C_ExecuteUbergraph_WBP_SiegeMenu final
@@ -43,17 +54,6 @@ static_assert(offsetof(WBP_SiegeMenu_C_ExecuteUbergraph_WBP_SiegeMenu, CallFunc_
 static_assert(offsetof(WBP_SiegeMenu_C_ExecuteUbergraph_WBP_SiegeMenu, CallFunc_AddChild_ReturnValue) == 0x000020, "Member 'WBP_SiegeMenu_C_ExecuteUbergraph_WBP_SiegeMenu::CallFunc_AddChild_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_SiegeMenu_C_ExecuteUbergraph_WBP_SiegeMenu, CallFunc_HasAnyChildren_ReturnValue) == 0x000028, "Member 'WBP_SiegeMenu_C_ExecuteUbergraph_WBP_SiegeMenu::CallFunc_HasAnyChildren_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_SiegeMenu_C_ExecuteUbergraph_WBP_SiegeMenu, K2Node_Event_IsDesignTime) == 0x000029, "Member 'WBP_SiegeMenu_C_ExecuteUbergraph_WBP_SiegeMenu::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WBP_SiegeMenu.WBP_SiegeMenu_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_SiegeMenu_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SiegeMenu_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_SiegeMenu_C_PreConstruct");
-static_assert(sizeof(WBP_SiegeMenu_C_PreConstruct) == 0x000001, "Wrong size on WBP_SiegeMenu_C_PreConstruct");
-static_assert(offsetof(WBP_SiegeMenu_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_SiegeMenu_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

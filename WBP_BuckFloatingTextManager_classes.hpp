@@ -12,6 +12,7 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameSystemsPlugin_structs.hpp"
 #include "GameSystemsPlugin_classes.hpp"
 
 
@@ -19,27 +20,37 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_BuckFloatingTextManager.WBP_BuckFloatingTextManager_C
-// 0x0078 (0x03E8 - 0x0370)
+// 0x00A8 (0x0418 - 0x0370)
 class UWBP_BuckFloatingTextManager_C final : public UBuckFloatingTextManagerWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class ABaseCharacter*                         myCharBP;                                          // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bindedToEffects;                                   // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bindedToEvents;                                    // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<int64>                                   effectGuids;                                       // 0x0388(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FGuid                                  InstigatorGuid;                                    // 0x03D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Binded_to_Effect_Immune;                           // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E9[0x7];                                      // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 hitStr;                                            // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class ABaseCharacter*                         targetChar;                                        // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        RunningAverageHitting;                             // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RunningHittingCount;                               // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AbilitySystem_OnHit(const struct FHitInst& HitInst);
-	void AddFloaterToTarget(const struct FStatModInst& StatMod, class ABaseCharacter* Target, struct FHitTargetInst& HitTargetInst, struct FAbilityHitRecord& HitRecord, int64 SourceRecordType, bool hitting_OtherwiseGettingHit_, const class FString& hitStr);
+	void AddFloaterToTarget(const struct FStatModInst& StatMod, class ABaseCharacter* Target, struct FHitTargetInst& HitTargetInst, struct FAbilityHitRecord& HitRecord, int64 SourceRecordType, bool hitting_OtherwiseGettingHit_, const class FString& hitStr_0, bool resist, bool immune);
 	void CacheCharsBP();
+	void CheckHitTags(TArray<struct FGameplayTag>& hitTags, bool* weaponHit, bool* isPhysical, bool* isMagical);
 	void Construct();
 	void EnsureDataBP(class ABaseCharacter* BaseChar);
 	void ExecuteUbergraph_WBP_BuckFloatingTextManager(int32 EntryPoint);
 	void GetNextFloaterBP(class UWBP_BuckFloatingText_C** ret);
+	void GetShouldShowAndHitting(class ABaseCharacter* me, class ABaseCharacter* Target, const struct FGuid& InstigatorGuid_0, bool* shouldShow, bool* hitting);
+	void OnClientEffectImmune(const struct FEffectRecord& EffectRecord, const class AActor* Instigator, const class AActor* Target);
 	void OnClientEffectInstigated(class UAoCStatsComponent* AoCStatsComponent, const struct FEffectInst& EffectInst);
-	void UpdateRunningAvgBP(double Val);
+	void OnClientEffectResisted(const struct FEffectRecord& EffectRecord, const class AActor* Instigator, const class AActor* Target);
+	void UpdateRunningAvgBP(double Val, double& avg, int32& hitCount);
 
 public:
 	static class UClass* StaticClass()
@@ -52,12 +63,17 @@ public:
 	}
 };
 static_assert(alignof(UWBP_BuckFloatingTextManager_C) == 0x000008, "Wrong alignment on UWBP_BuckFloatingTextManager_C");
-static_assert(sizeof(UWBP_BuckFloatingTextManager_C) == 0x0003E8, "Wrong size on UWBP_BuckFloatingTextManager_C");
+static_assert(sizeof(UWBP_BuckFloatingTextManager_C) == 0x000418, "Wrong size on UWBP_BuckFloatingTextManager_C");
 static_assert(offsetof(UWBP_BuckFloatingTextManager_C, UberGraphFrame) == 0x000370, "Member 'UWBP_BuckFloatingTextManager_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_BuckFloatingTextManager_C, myCharBP) == 0x000378, "Member 'UWBP_BuckFloatingTextManager_C::myCharBP' has a wrong offset!");
-static_assert(offsetof(UWBP_BuckFloatingTextManager_C, bindedToEffects) == 0x000380, "Member 'UWBP_BuckFloatingTextManager_C::bindedToEffects' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingTextManager_C, bindedToEvents) == 0x000380, "Member 'UWBP_BuckFloatingTextManager_C::bindedToEvents' has a wrong offset!");
 static_assert(offsetof(UWBP_BuckFloatingTextManager_C, effectGuids) == 0x000388, "Member 'UWBP_BuckFloatingTextManager_C::effectGuids' has a wrong offset!");
 static_assert(offsetof(UWBP_BuckFloatingTextManager_C, InstigatorGuid) == 0x0003D8, "Member 'UWBP_BuckFloatingTextManager_C::InstigatorGuid' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingTextManager_C, Binded_to_Effect_Immune) == 0x0003E8, "Member 'UWBP_BuckFloatingTextManager_C::Binded_to_Effect_Immune' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingTextManager_C, hitStr) == 0x0003F0, "Member 'UWBP_BuckFloatingTextManager_C::hitStr' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingTextManager_C, targetChar) == 0x000400, "Member 'UWBP_BuckFloatingTextManager_C::targetChar' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingTextManager_C, RunningAverageHitting) == 0x000408, "Member 'UWBP_BuckFloatingTextManager_C::RunningAverageHitting' has a wrong offset!");
+static_assert(offsetof(UWBP_BuckFloatingTextManager_C, RunningHittingCount) == 0x000410, "Member 'UWBP_BuckFloatingTextManager_C::RunningHittingCount' has a wrong offset!");
 
 }
 

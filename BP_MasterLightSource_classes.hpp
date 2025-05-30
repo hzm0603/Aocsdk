@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "E_TimeOfDayOverrides_structs.hpp"
 #include "E_LightSourceLightType_structs.hpp"
-#include "AkAudio_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "E_TimeOfDayOverrides_structs.hpp"
 
 
 namespace SDK

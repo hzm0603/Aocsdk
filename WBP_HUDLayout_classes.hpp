@@ -19,33 +19,32 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_HUDLayout.WBP_HUDLayout_C
-// 0x00C0 (0x0578 - 0x04B8)
+// 0x00B8 (0x0580 - 0x04C8)
 class UWBP_HUDLayout_C final : public UAoCLayoutBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_ActionBar_C*                       AbilityBarRevampCPP;                               // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionBar_C*                       AbilityBarRevampCPP_1;                             // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionBar_C*                       AbilityBarRevampCPP_2;                             // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionCallout_C*                   ActionCallout;                                     // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBackgroundBlur*                        BackgroundBlur_489;                                // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 BackgroundColor;                                   // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BetaIDDisplay_C*                   BetaIDDisplay;                                     // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BreathWidget_C*                    BreathWidget;                                      // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ChatWindow_C*                      ChatWindow;                                        // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_DodgeRadial_C*                     DodgeRadial;                                       // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ExperienceBar_C*                   ExperienceBarFoo;                                  // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionBar_C*                       MountBar;                                          // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_MountWidget_C*                     MountWidget;                                       // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ObjectiveTracker_C*                ObjectiveTracker;                                  // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionBar_C*                       PetBar;                                            // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionBar_C*                       VehicleBar;                                        // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BuckFloatingTextManager_C*         WBP_BuckFloatingTextManager;                       // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InputViewer_C*                     WBP_InputViewer;                                   // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ItemFeed_C*                        WBP_ItemFeed;                                      // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_NineSliceTestingWidget_C*          WBP_NineSliceTestingWidget;                        // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UObject*                                AbilityTooltip;                                    // 0x0560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class UActionBar*>                     AllRevampCPPActionBars;                            // 0x0568(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_ActionBar_C*                       AbilityBarRevampCPP;                               // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionBar_C*                       AbilityBarRevampCPP_1;                             // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionBar_C*                       AbilityBarRevampCPP_2;                             // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionCallout_C*                   ActionCallout;                                     // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBackgroundBlur*                        BackgroundBlur_489;                                // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundColor;                                   // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BetaIDDisplay_C*                   BetaIDDisplay;                                     // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BreathWidget_C*                    BreathWidget;                                      // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_DodgeRadial_C*                     DodgeRadial;                                       // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ExperienceBar_C*                   ExperienceBarFoo;                                  // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionBar_C*                       MountBar;                                          // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_MountWidget_C*                     MountWidget;                                       // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ObjectiveTracker_C*                ObjectiveTracker;                                  // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionBar_C*                       PetBar;                                            // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionBar_C*                       VehicleBar;                                        // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BuckFloatingTextManager_C*         WBP_BuckFloatingTextManager;                       // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InputViewer_C*                     WBP_InputViewer;                                   // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ItemFeed_C*                        WBP_ItemFeed;                                      // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_NineSliceTestingWidget_C*          WBP_NineSliceTestingWidget;                        // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UObject*                                AbilityTooltip;                                    // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class UActionBar*>                     AllRevampCPPActionBars;                            // 0x0570(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void ExecuteUbergraph_WBP_HUDLayout(int32 EntryPoint);
@@ -64,30 +63,29 @@ public:
 	}
 };
 static_assert(alignof(UWBP_HUDLayout_C) == 0x000008, "Wrong alignment on UWBP_HUDLayout_C");
-static_assert(sizeof(UWBP_HUDLayout_C) == 0x000578, "Wrong size on UWBP_HUDLayout_C");
-static_assert(offsetof(UWBP_HUDLayout_C, UberGraphFrame) == 0x0004B8, "Member 'UWBP_HUDLayout_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, AbilityBarRevampCPP) == 0x0004C0, "Member 'UWBP_HUDLayout_C::AbilityBarRevampCPP' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, AbilityBarRevampCPP_1) == 0x0004C8, "Member 'UWBP_HUDLayout_C::AbilityBarRevampCPP_1' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, AbilityBarRevampCPP_2) == 0x0004D0, "Member 'UWBP_HUDLayout_C::AbilityBarRevampCPP_2' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, ActionCallout) == 0x0004D8, "Member 'UWBP_HUDLayout_C::ActionCallout' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, BackgroundBlur_489) == 0x0004E0, "Member 'UWBP_HUDLayout_C::BackgroundBlur_489' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, BackgroundColor) == 0x0004E8, "Member 'UWBP_HUDLayout_C::BackgroundColor' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, BetaIDDisplay) == 0x0004F0, "Member 'UWBP_HUDLayout_C::BetaIDDisplay' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, BreathWidget) == 0x0004F8, "Member 'UWBP_HUDLayout_C::BreathWidget' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, ChatWindow) == 0x000500, "Member 'UWBP_HUDLayout_C::ChatWindow' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, DodgeRadial) == 0x000508, "Member 'UWBP_HUDLayout_C::DodgeRadial' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, ExperienceBarFoo) == 0x000510, "Member 'UWBP_HUDLayout_C::ExperienceBarFoo' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, MountBar) == 0x000518, "Member 'UWBP_HUDLayout_C::MountBar' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, MountWidget) == 0x000520, "Member 'UWBP_HUDLayout_C::MountWidget' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, ObjectiveTracker) == 0x000528, "Member 'UWBP_HUDLayout_C::ObjectiveTracker' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, PetBar) == 0x000530, "Member 'UWBP_HUDLayout_C::PetBar' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, VehicleBar) == 0x000538, "Member 'UWBP_HUDLayout_C::VehicleBar' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, WBP_BuckFloatingTextManager) == 0x000540, "Member 'UWBP_HUDLayout_C::WBP_BuckFloatingTextManager' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, WBP_InputViewer) == 0x000548, "Member 'UWBP_HUDLayout_C::WBP_InputViewer' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, WBP_ItemFeed) == 0x000550, "Member 'UWBP_HUDLayout_C::WBP_ItemFeed' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, WBP_NineSliceTestingWidget) == 0x000558, "Member 'UWBP_HUDLayout_C::WBP_NineSliceTestingWidget' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, AbilityTooltip) == 0x000560, "Member 'UWBP_HUDLayout_C::AbilityTooltip' has a wrong offset!");
-static_assert(offsetof(UWBP_HUDLayout_C, AllRevampCPPActionBars) == 0x000568, "Member 'UWBP_HUDLayout_C::AllRevampCPPActionBars' has a wrong offset!");
+static_assert(sizeof(UWBP_HUDLayout_C) == 0x000580, "Wrong size on UWBP_HUDLayout_C");
+static_assert(offsetof(UWBP_HUDLayout_C, UberGraphFrame) == 0x0004C8, "Member 'UWBP_HUDLayout_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, AbilityBarRevampCPP) == 0x0004D0, "Member 'UWBP_HUDLayout_C::AbilityBarRevampCPP' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, AbilityBarRevampCPP_1) == 0x0004D8, "Member 'UWBP_HUDLayout_C::AbilityBarRevampCPP_1' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, AbilityBarRevampCPP_2) == 0x0004E0, "Member 'UWBP_HUDLayout_C::AbilityBarRevampCPP_2' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, ActionCallout) == 0x0004E8, "Member 'UWBP_HUDLayout_C::ActionCallout' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, BackgroundBlur_489) == 0x0004F0, "Member 'UWBP_HUDLayout_C::BackgroundBlur_489' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, BackgroundColor) == 0x0004F8, "Member 'UWBP_HUDLayout_C::BackgroundColor' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, BetaIDDisplay) == 0x000500, "Member 'UWBP_HUDLayout_C::BetaIDDisplay' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, BreathWidget) == 0x000508, "Member 'UWBP_HUDLayout_C::BreathWidget' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, DodgeRadial) == 0x000510, "Member 'UWBP_HUDLayout_C::DodgeRadial' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, ExperienceBarFoo) == 0x000518, "Member 'UWBP_HUDLayout_C::ExperienceBarFoo' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, MountBar) == 0x000520, "Member 'UWBP_HUDLayout_C::MountBar' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, MountWidget) == 0x000528, "Member 'UWBP_HUDLayout_C::MountWidget' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, ObjectiveTracker) == 0x000530, "Member 'UWBP_HUDLayout_C::ObjectiveTracker' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, PetBar) == 0x000538, "Member 'UWBP_HUDLayout_C::PetBar' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, VehicleBar) == 0x000540, "Member 'UWBP_HUDLayout_C::VehicleBar' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, WBP_BuckFloatingTextManager) == 0x000548, "Member 'UWBP_HUDLayout_C::WBP_BuckFloatingTextManager' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, WBP_InputViewer) == 0x000550, "Member 'UWBP_HUDLayout_C::WBP_InputViewer' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, WBP_ItemFeed) == 0x000558, "Member 'UWBP_HUDLayout_C::WBP_ItemFeed' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, WBP_NineSliceTestingWidget) == 0x000560, "Member 'UWBP_HUDLayout_C::WBP_NineSliceTestingWidget' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, AbilityTooltip) == 0x000568, "Member 'UWBP_HUDLayout_C::AbilityTooltip' has a wrong offset!");
+static_assert(offsetof(UWBP_HUDLayout_C, AllRevampCPPActionBars) == 0x000570, "Member 'UWBP_HUDLayout_C::AllRevampCPPActionBars' has a wrong offset!");
 
 }
 

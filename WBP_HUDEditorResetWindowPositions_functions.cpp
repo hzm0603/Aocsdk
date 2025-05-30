@@ -17,23 +17,23 @@
 namespace SDK
 {
 
-// Function WBP_HUDEditorResetWindowPositions.WBP_HUDEditorResetWindowPositions_C.BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_HUDEditorResetWindowPositions.WBP_HUDEditorResetWindowPositions_C.GetBorder
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonBorder*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUDEditorResetWindowPositions_C::BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+class UCommonBorder* UWBP_HUDEditorResetWindowPositions_C::GetBorder()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUDEditorResetWindowPositions_C", "BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("WBP_HUDEditorResetWindowPositions_C", "GetBorder");
 
-	Params::WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
+	Params::WBP_HUDEditorResetWindowPositions_C_GetBorder Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -57,23 +57,23 @@ void UWBP_HUDEditorResetWindowPositions_C::ExecuteUbergraph_WBP_HUDEditorResetWi
 }
 
 
-// Function WBP_HUDEditorResetWindowPositions.WBP_HUDEditorResetWindowPositions_C.GetBorder
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function WBP_HUDEditorResetWindowPositions.WBP_HUDEditorResetWindowPositions_C.BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// class UCommonBorder*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UCommonBorder* UWBP_HUDEditorResetWindowPositions_C::GetBorder()
+void UWBP_HUDEditorResetWindowPositions_C::BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUDEditorResetWindowPositions_C", "GetBorder");
+		Func = Class->GetFunction("WBP_HUDEditorResetWindowPositions_C", "BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::WBP_HUDEditorResetWindowPositions_C_GetBorder Parms{};
+	Params::WBP_HUDEditorResetWindowPositions_C_BndEvt__WBP_HUDEditorResetWindowPositions_ResetWindowsButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 }

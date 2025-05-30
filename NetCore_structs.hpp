@@ -161,35 +161,6 @@ enum class EFastArraySerializerDeltaFlags : uint8
 	EFastArraySerializerDeltaFlags_MAX       = 5,
 };
 
-// ScriptStruct NetCore.FastArraySerializerItem
-// 0x000C (0x000C - 0x0000)
-struct FFastArraySerializerItem
-{
-public:
-	int32                                         ReplicationID;                                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReplicationKey;                                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MostRecentArrayReplicationKey;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FFastArraySerializerItem) == 0x000004, "Wrong alignment on FFastArraySerializerItem");
-static_assert(sizeof(FFastArraySerializerItem) == 0x00000C, "Wrong size on FFastArraySerializerItem");
-static_assert(offsetof(FFastArraySerializerItem, ReplicationID) == 0x000000, "Member 'FFastArraySerializerItem::ReplicationID' has a wrong offset!");
-static_assert(offsetof(FFastArraySerializerItem, ReplicationKey) == 0x000004, "Member 'FFastArraySerializerItem::ReplicationKey' has a wrong offset!");
-static_assert(offsetof(FFastArraySerializerItem, MostRecentArrayReplicationKey) == 0x000008, "Member 'FFastArraySerializerItem::MostRecentArrayReplicationKey' has a wrong offset!");
-
-// ScriptStruct NetCore.int64int64MapElement
-// 0x0014 (0x0020 - 0x000C)
-struct Fint64int64MapElement final : public FFastArraySerializerItem
-{
-public:
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         Value;                                             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         Key;                                               // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(Fint64int64MapElement) == 0x000008, "Wrong alignment on Fint64int64MapElement");
-static_assert(sizeof(Fint64int64MapElement) == 0x000020, "Wrong size on Fint64int64MapElement");
-static_assert(offsetof(Fint64int64MapElement, Value) == 0x000010, "Member 'Fint64int64MapElement::Value' has a wrong offset!");
-static_assert(offsetof(Fint64int64MapElement, Key) == 0x000018, "Member 'Fint64int64MapElement::Key' has a wrong offset!");
-
 // ScriptStruct NetCore.FastArraySerializer
 // 0x0108 (0x0108 - 0x0000)
 struct alignas(0x08) FFastArraySerializer
@@ -216,21 +187,20 @@ public:
 static_assert(alignof(FFastMapHelper) == 0x000008, "Wrong alignment on FFastMapHelper");
 static_assert(sizeof(FFastMapHelper) == 0x000110, "Wrong size on FFastMapHelper");
 
-// ScriptStruct NetCore.FMapint64int64
-// 0x00E0 (0x01F0 - 0x0110)
-struct FFMapint64int64 final : public FFastMapHelper
+// ScriptStruct NetCore.FastArraySerializerItem
+// 0x000C (0x000C - 0x0000)
+struct FFastArraySerializerItem
 {
 public:
-	TArray<struct Fint64int64MapElement>          Items;                                             // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<int64, int64>                            LookUp;                                            // 0x0120(0x0050)(Transient, RepSkip, NativeAccessSpecifierPublic)
-	TMap<int64, int64>                            OldLookup;                                         // 0x0170(0x0050)(Transient, RepSkip, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C0[0x30];                                     // 0x01C0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ReplicationID;                                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReplicationKey;                                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MostRecentArrayReplicationKey;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FFMapint64int64) == 0x000008, "Wrong alignment on FFMapint64int64");
-static_assert(sizeof(FFMapint64int64) == 0x0001F0, "Wrong size on FFMapint64int64");
-static_assert(offsetof(FFMapint64int64, Items) == 0x000110, "Member 'FFMapint64int64::Items' has a wrong offset!");
-static_assert(offsetof(FFMapint64int64, LookUp) == 0x000120, "Member 'FFMapint64int64::LookUp' has a wrong offset!");
-static_assert(offsetof(FFMapint64int64, OldLookup) == 0x000170, "Member 'FFMapint64int64::OldLookup' has a wrong offset!");
+static_assert(alignof(FFastArraySerializerItem) == 0x000004, "Wrong alignment on FFastArraySerializerItem");
+static_assert(sizeof(FFastArraySerializerItem) == 0x00000C, "Wrong size on FFastArraySerializerItem");
+static_assert(offsetof(FFastArraySerializerItem, ReplicationID) == 0x000000, "Member 'FFastArraySerializerItem::ReplicationID' has a wrong offset!");
+static_assert(offsetof(FFastArraySerializerItem, ReplicationKey) == 0x000004, "Member 'FFastArraySerializerItem::ReplicationKey' has a wrong offset!");
+static_assert(offsetof(FFastArraySerializerItem, MostRecentArrayReplicationKey) == 0x000008, "Member 'FFastArraySerializerItem::MostRecentArrayReplicationKey' has a wrong offset!");
 
 // ScriptStruct NetCore.int64uint64MapElement
 // 0x0014 (0x0020 - 0x000C)
@@ -261,6 +231,36 @@ static_assert(sizeof(FFMapint64uint64) == 0x0001F0, "Wrong size on FFMapint64uin
 static_assert(offsetof(FFMapint64uint64, Items) == 0x000110, "Member 'FFMapint64uint64::Items' has a wrong offset!");
 static_assert(offsetof(FFMapint64uint64, LookUp) == 0x000120, "Member 'FFMapint64uint64::LookUp' has a wrong offset!");
 static_assert(offsetof(FFMapint64uint64, OldLookup) == 0x000170, "Member 'FFMapint64uint64::OldLookup' has a wrong offset!");
+
+// ScriptStruct NetCore.int64int64MapElement
+// 0x0014 (0x0020 - 0x000C)
+struct Fint64int64MapElement final : public FFastArraySerializerItem
+{
+public:
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         Value;                                             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         Key;                                               // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(Fint64int64MapElement) == 0x000008, "Wrong alignment on Fint64int64MapElement");
+static_assert(sizeof(Fint64int64MapElement) == 0x000020, "Wrong size on Fint64int64MapElement");
+static_assert(offsetof(Fint64int64MapElement, Value) == 0x000010, "Member 'Fint64int64MapElement::Value' has a wrong offset!");
+static_assert(offsetof(Fint64int64MapElement, Key) == 0x000018, "Member 'Fint64int64MapElement::Key' has a wrong offset!");
+
+// ScriptStruct NetCore.FMapint64int64
+// 0x00E0 (0x01F0 - 0x0110)
+struct FFMapint64int64 final : public FFastMapHelper
+{
+public:
+	TArray<struct Fint64int64MapElement>          Items;                                             // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<int64, int64>                            LookUp;                                            // 0x0120(0x0050)(Transient, RepSkip, NativeAccessSpecifierPublic)
+	TMap<int64, int64>                            OldLookup;                                         // 0x0170(0x0050)(Transient, RepSkip, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C0[0x30];                                     // 0x01C0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FFMapint64int64) == 0x000008, "Wrong alignment on FFMapint64int64");
+static_assert(sizeof(FFMapint64int64) == 0x0001F0, "Wrong size on FFMapint64int64");
+static_assert(offsetof(FFMapint64int64, Items) == 0x000110, "Member 'FFMapint64int64::Items' has a wrong offset!");
+static_assert(offsetof(FFMapint64int64, LookUp) == 0x000120, "Member 'FFMapint64int64::LookUp' has a wrong offset!");
+static_assert(offsetof(FFMapint64int64, OldLookup) == 0x000170, "Member 'FFMapint64int64::OldLookup' has a wrong offset!");
 
 // ScriptStruct NetCore.int64int32MapElement
 // 0x000C (0x0018 - 0x000C)

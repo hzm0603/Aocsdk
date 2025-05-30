@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Shiftless_Deserter.Shiftless_Deserter_C
-// 0x0000 (0x1DB0 - 0x1DB0)
+// 0x0000 (0x1D70 - 0x1D70)
 class AShiftless_Deserter_C final : public ABandit_Rogue_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AShiftless_Deserter_C) == 0x000010, "Wrong alignment on AShiftless_Deserter_C");
-static_assert(sizeof(AShiftless_Deserter_C) == 0x001DB0, "Wrong size on AShiftless_Deserter_C");
+static_assert(sizeof(AShiftless_Deserter_C) == 0x001D70, "Wrong size on AShiftless_Deserter_C");
 
 }
 

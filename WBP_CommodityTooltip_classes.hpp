@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CommodityTooltip.WBP_CommodityTooltip_C
-// 0x0010 (0x0340 - 0x0330)
+// 0x0010 (0x03F0 - 0x03E0)
 class UWBP_CommodityTooltip_C final : public UCommodityTooltip
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonBorder*                          SectionBG;                                         // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          SectionBG;                                         // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_CommodityTooltip(int32 EntryPoint);
-	class UCommonBorder* GetBorder();
 	void PreConstruct(bool IsDesignTime);
+	class UCommonBorder* GetBorder();
+	void ExecuteUbergraph_WBP_CommodityTooltip(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,9 +41,9 @@ public:
 	}
 };
 static_assert(alignof(UWBP_CommodityTooltip_C) == 0x000008, "Wrong alignment on UWBP_CommodityTooltip_C");
-static_assert(sizeof(UWBP_CommodityTooltip_C) == 0x000340, "Wrong size on UWBP_CommodityTooltip_C");
-static_assert(offsetof(UWBP_CommodityTooltip_C, UberGraphFrame) == 0x000330, "Member 'UWBP_CommodityTooltip_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_CommodityTooltip_C, SectionBG) == 0x000338, "Member 'UWBP_CommodityTooltip_C::SectionBG' has a wrong offset!");
+static_assert(sizeof(UWBP_CommodityTooltip_C) == 0x0003F0, "Wrong size on UWBP_CommodityTooltip_C");
+static_assert(offsetof(UWBP_CommodityTooltip_C, UberGraphFrame) == 0x0003E0, "Member 'UWBP_CommodityTooltip_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWBP_CommodityTooltip_C, SectionBG) == 0x0003E8, "Member 'UWBP_CommodityTooltip_C::SectionBG' has a wrong offset!");
 
 }
 

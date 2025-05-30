@@ -17,69 +17,140 @@
 namespace SDK
 {
 
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.UpdateEmitterLocationProxy
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Audio_SplineClosedLoopFollow_C::ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow(int32 EntryPoint)
+void ABP_Audio_SplineClosedLoopFollow_C::UpdateEmitterLocationProxy()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow");
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "UpdateEmitterLocationProxy");
 
-	Params::BP_Audio_SplineClosedLoopFollow_C_ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.Update Emitter Slowly
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Audio_SplineClosedLoopFollow_C::Update_Emitter_Slowly()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "Update Emitter Slowly");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Audio_SplineClosedLoopFollow_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "ReceiveTick");
+
+	Params::BP_Audio_SplineClosedLoopFollow_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetControlledPawnLocation
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class APawn**                           ControlledPawnReference                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         ControlledPawnLocation                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_Audio_SplineClosedLoopFollow_C::GetControlledPawnLocation(class APawn** ControlledPawnReference, struct FVector* ControlledPawnLocation)
+void ABP_Audio_SplineClosedLoopFollow_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "GetControlledPawnLocation");
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "ReceiveBeginPlay");
 
-	Params::BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ControlledPawnReference != nullptr)
-		*ControlledPawnReference = Parms.ControlledPawnReference;
-
-	if (ControlledPawnLocation != nullptr)
-		*ControlledPawnLocation = std::move(Parms.ControlledPawnLocation);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetDistanceFromPlayerToClosestSplintPoint
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// double*                                 DistanceToPlayerFromClosestSpawnPoint                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.PostNodeInit
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Audio_SplineClosedLoopFollow_C::GetDistanceFromPlayerToClosestSplintPoint(double* DistanceToPlayerFromClosestSpawnPoint)
+void ABP_Audio_SplineClosedLoopFollow_C::PostNodeInit()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "GetDistanceFromPlayerToClosestSplintPoint");
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "PostNodeInit");
 
-	Params::BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetSplineEmitterComponent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USceneComponent*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class USceneComponent* ABP_Audio_SplineClosedLoopFollow_C::GetSplineEmitterComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "GetSplineEmitterComponent");
+
+	Params::BP_Audio_SplineClosedLoopFollow_C_GetSplineEmitterComponent Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (DistanceToPlayerFromClosestSpawnPoint != nullptr)
-		*DistanceToPlayerFromClosestSpawnPoint = Parms.DistanceToPlayerFromClosestSpawnPoint;
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetSplineComponent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USplineComponent*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class USplineComponent* ABP_Audio_SplineClosedLoopFollow_C::GetSplineComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "GetSplineComponent");
+
+	Params::BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetPlayerControllerCameraRotation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FRotator*                        PlayerControllerCameraRotation                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_Audio_SplineClosedLoopFollow_C::GetPlayerControllerCameraRotation(struct FRotator* PlayerControllerCameraRotation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "GetPlayerControllerCameraRotation");
+
+	Params::BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PlayerControllerCameraRotation != nullptr)
+		*PlayerControllerCameraRotation = std::move(Parms.PlayerControllerCameraRotation);
 }
 
 
@@ -108,120 +179,69 @@ void ABP_Audio_SplineClosedLoopFollow_C::GetInsideSpline(bool* IsInsideSpine_, b
 }
 
 
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetPlayerControllerCameraRotation
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetDistanceFromPlayerToClosestSplintPoint
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FRotator*                        PlayerControllerCameraRotation                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// double*                                 DistanceToPlayerFromClosestSpawnPoint                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Audio_SplineClosedLoopFollow_C::GetPlayerControllerCameraRotation(struct FRotator* PlayerControllerCameraRotation)
+void ABP_Audio_SplineClosedLoopFollow_C::GetDistanceFromPlayerToClosestSplintPoint(double* DistanceToPlayerFromClosestSpawnPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "GetPlayerControllerCameraRotation");
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "GetDistanceFromPlayerToClosestSplintPoint");
 
-	Params::BP_Audio_SplineClosedLoopFollow_C_GetPlayerControllerCameraRotation Parms{};
+	Params::BP_Audio_SplineClosedLoopFollow_C_GetDistanceFromPlayerToClosestSplintPoint Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (PlayerControllerCameraRotation != nullptr)
-		*PlayerControllerCameraRotation = std::move(Parms.PlayerControllerCameraRotation);
+	if (DistanceToPlayerFromClosestSpawnPoint != nullptr)
+		*DistanceToPlayerFromClosestSpawnPoint = Parms.DistanceToPlayerFromClosestSpawnPoint;
 }
 
 
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetSplineComponent
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.GetControlledPawnLocation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class USplineComponent*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class APawn**                           ControlledPawnReference                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         ControlledPawnLocation                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class USplineComponent* ABP_Audio_SplineClosedLoopFollow_C::GetSplineComponent()
+void ABP_Audio_SplineClosedLoopFollow_C::GetControlledPawnLocation(class APawn** ControlledPawnReference, struct FVector* ControlledPawnLocation)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "GetSplineComponent");
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "GetControlledPawnLocation");
 
-	Params::BP_Audio_SplineClosedLoopFollow_C_GetSplineComponent Parms{};
+	Params::BP_Audio_SplineClosedLoopFollow_C_GetControlledPawnLocation Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
+	if (ControlledPawnReference != nullptr)
+		*ControlledPawnReference = Parms.ControlledPawnReference;
+
+	if (ControlledPawnLocation != nullptr)
+		*ControlledPawnLocation = std::move(Parms.ControlledPawnLocation);
 }
 
 
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.PostNodeInit
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Audio_SplineClosedLoopFollow_C::PostNodeInit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "PostNodeInit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_Audio_SplineClosedLoopFollow_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Audio_SplineClosedLoopFollow_C::ReceiveTick(float DeltaSeconds)
+void ABP_Audio_SplineClosedLoopFollow_C::ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow");
 
-	Params::BP_Audio_SplineClosedLoopFollow_C_ReceiveTick Parms{};
+	Params::BP_Audio_SplineClosedLoopFollow_C_ExecuteUbergraph_BP_Audio_SplineClosedLoopFollow Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.Update Emitter Slowly
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Audio_SplineClosedLoopFollow_C::Update_Emitter_Slowly()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "Update Emitter Slowly");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Audio_SplineClosedLoopFollow.BP_Audio_SplineClosedLoopFollow_C.UpdateEmitterLocationProxy
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Audio_SplineClosedLoopFollow_C::UpdateEmitterLocationProxy()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Audio_SplineClosedLoopFollow_C", "UpdateEmitterLocationProxy");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

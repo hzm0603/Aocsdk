@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "DragonIKPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "DragonIKPlugin_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
@@ -25,7 +25,7 @@ namespace SDK
 class alignas(0x10) UDragonIKFootStepsComponent final : public UActorComponent
 {
 public:
-	TMulticastInlineDelegate<void(class FName bone_name, const struct FTransform& foot_transform, float height_difference, const struct FHitResult& hit_info)> OnCharacterFootStep;                               // 0x00F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName bone_name, const struct FTransform& foot_transform, float height_difference, const struct FHitResult& hit_info)> OnCharacterFootStep; // 0x00F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_108[0x15C];                                    // 0x0108(0x015C)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   read_this;                                         // 0x0264(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -68,7 +68,7 @@ public:
 	TArray<class FName>                           individual_bone_selection;                         // 0x0128(0x0010)(Edit, Net, ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_138[0x20];                                     // 0x0138(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           Influence_Stopping_Bones;                          // 0x0158(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FDragonData_PhysicsHandleMultiplier> Override_Handle_Strength_Multiplier;               // 0x0168(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FDragonData_PhysicsHandleMultiplier> Override_Handle_Strength_Multiplier;          // 0x0168(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_178[0x30];                                     // 0x0178(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Linear_Strength;                                   // 0x01A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Angular_Strength;                                  // 0x01AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -195,7 +195,7 @@ public:
 	bool                                          bShow_Spine_Trace_Lines_InGame;                    // 0x0101(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShow_Foot_Trace_Lines_InGame;                     // 0x0102(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_103[0x3D];                                     // 0x0103(0x003D)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(TArray<struct FDragonIKTraceKeyValuePair>& hit_data_pair)> OnDragonikFootHitData;                             // 0x0140(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<struct FDragonIKTraceKeyValuePair>& hit_data_pair)> OnDragonikFootHitData; // 0x0140(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 
 public:
 	void SpineSolverTraceData(const TArray<struct FDragonIKTraceKeyValuePair>& hit_data_pair);

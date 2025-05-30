@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LandscapeBrushRoadNodeHelper.BP_LandscapeBrushRoadNodeHelper_C
-// 0x0008 (0x0980 - 0x0978)
+// 0x0008 (0x0938 - 0x0930)
 class ABP_LandscapeBrushRoadNodeHelper_C final : public ABP_LandscapeBrushRoad_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_LandscapeBrushRoadNodeHelper_C;  // 0x0978(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_LandscapeBrushRoadNodeHelper_C;  // 0x0930(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Build_Road();
@@ -46,8 +46,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_LandscapeBrushRoadNodeHelper_C) == 0x000008, "Wrong alignment on ABP_LandscapeBrushRoadNodeHelper_C");
-static_assert(sizeof(ABP_LandscapeBrushRoadNodeHelper_C) == 0x000980, "Wrong size on ABP_LandscapeBrushRoadNodeHelper_C");
-static_assert(offsetof(ABP_LandscapeBrushRoadNodeHelper_C, UberGraphFrame_BP_LandscapeBrushRoadNodeHelper_C) == 0x000978, "Member 'ABP_LandscapeBrushRoadNodeHelper_C::UberGraphFrame_BP_LandscapeBrushRoadNodeHelper_C' has a wrong offset!");
+static_assert(sizeof(ABP_LandscapeBrushRoadNodeHelper_C) == 0x000938, "Wrong size on ABP_LandscapeBrushRoadNodeHelper_C");
+static_assert(offsetof(ABP_LandscapeBrushRoadNodeHelper_C, UberGraphFrame_BP_LandscapeBrushRoadNodeHelper_C) == 0x000930, "Member 'ABP_LandscapeBrushRoadNodeHelper_C::UberGraphFrame_BP_LandscapeBrushRoadNodeHelper_C' has a wrong offset!");
 
 }
 

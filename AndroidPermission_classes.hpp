@@ -22,7 +22,7 @@ namespace SDK
 class UAndroidPermissionCallbackProxy final : public UObject
 {
 public:
-	TMulticastInlineDelegate<void(TArray<class FString>& Permissions, TArray<bool>& GrantResults)> OnPermissionsGrantedDynamicDelegate;               // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const TArray<class FString>& Permissions, const TArray<bool>& GrantResults)> OnPermissionsGrantedDynamicDelegate; // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_58[0x18];                                      // 0x0058(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

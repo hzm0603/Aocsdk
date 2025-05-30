@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "AkAudio_structs.hpp"
-#include "SStartStopAudioEvents_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
+#include "SStartStopAudioEvents_structs.hpp"
 #include "S_EnvironmentSettingsSwitches_structs.hpp"
 #include "EReverbSet_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -58,7 +58,7 @@ public:
 	double                                        Interior_Amount;                                   // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSStartStopAudioEvents                 Interior_Audio_Override;                           // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<class UAkRtpc*>                        InteriorAudioVolumeRTPCs;                          // 0x0478(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<EBiomeType, struct FSStartStopAudioEvents> Biome_Sound_Settings;                              // 0x0488(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<EBiomeType, struct FSStartStopAudioEvents> Biome_Sound_Settings;                            // 0x0488(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	EBiomeType                                    Red_Category_Name;                                 // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EBiomeType                                    Green_Category_Name;                               // 0x04D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EBiomeType                                    Blue_Category_Name;                                // 0x04DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -100,7 +100,7 @@ public:
 	TArray<class UAkRtpc*>                        IntensityRainRTPCs;                                // 0x0598(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	double                                        Wind_Speed_Intermediate;                           // 0x05A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<class UPhysicalMaterial*, EReverbSet>    Material_Reverbs;                                  // 0x05B0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<EReverbSet, struct FInteriorAudioSpatialReverbList> Reverb_Sets;                                       // 0x0600(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<EReverbSet, struct FInteriorAudioSpatialReverbList> Reverb_Sets;                            // 0x0600(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FMaterialReverb>                Material_Reverbs_Buffer;                           // 0x0650(0x0010)(Edit, BlueprintVisible, Transient, DisableEditOnInstance)
 	TMap<EBiomeType, struct FMusicAssetValues>    Biome_Music_Assets;                                // 0x0660(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	EBiomeType                                    Default_Music_Biome;                               // 0x06B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Node_War_Guard_Wizard.Node_War_Guard_Wizard_C
-// 0x0010 (0x1DB0 - 0x1DA0)
+// 0x0010 (0x1D70 - 0x1D60)
 class ANode_War_Guard_Wizard_C : public AHumanoidMonsterMaster_C
 {
 public:
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1DA0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ANode_War_Guard_Wizard_C) == 0x000010, "Wrong alignment on ANode_War_Guard_Wizard_C");
-static_assert(sizeof(ANode_War_Guard_Wizard_C) == 0x001DB0, "Wrong size on ANode_War_Guard_Wizard_C");
-static_assert(offsetof(ANode_War_Guard_Wizard_C, Blackboard) == 0x001DA0, "Member 'ANode_War_Guard_Wizard_C::Blackboard' has a wrong offset!");
+static_assert(sizeof(ANode_War_Guard_Wizard_C) == 0x001D70, "Wrong size on ANode_War_Guard_Wizard_C");
+static_assert(offsetof(ANode_War_Guard_Wizard_C, Blackboard) == 0x001D60, "Member 'ANode_War_Guard_Wizard_C::Blackboard' has a wrong offset!");
 
 }
 

@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function HumanoidNPCMaster.HumanoidNPCMaster_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AHumanoidNPCMaster_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HumanoidNPCMaster_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function HumanoidNPCMaster.HumanoidNPCMaster_C.ExecuteUbergraph_HumanoidNPCMaster
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void AHumanoidNPCMaster_C::ExecuteUbergraph_HumanoidNPCMaster(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function HumanoidNPCMaster.HumanoidNPCMaster_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AHumanoidNPCMaster_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HumanoidNPCMaster_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

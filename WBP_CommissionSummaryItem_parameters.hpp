@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_CommissionSummaryItem.WBP_CommissionSummaryItem_C.GetBorder
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_CommissionSummaryItem_C_GetBorder final
+{
+public:
+	class UCommonBorder*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_CommissionSummaryItem_C_GetBorder) == 0x000008, "Wrong alignment on WBP_CommissionSummaryItem_C_GetBorder");
+static_assert(sizeof(WBP_CommissionSummaryItem_C_GetBorder) == 0x000008, "Wrong size on WBP_CommissionSummaryItem_C_GetBorder");
+static_assert(offsetof(WBP_CommissionSummaryItem_C_GetBorder, ReturnValue) == 0x000000, "Member 'WBP_CommissionSummaryItem_C_GetBorder::ReturnValue' has a wrong offset!");
+
 // Function WBP_CommissionSummaryItem.WBP_CommissionSummaryItem_C.ExecuteUbergraph_WBP_CommissionSummaryItem
 // 0x0028 (0x0028 - 0x0000)
 struct WBP_CommissionSummaryItem_C_ExecuteUbergraph_WBP_CommissionSummaryItem final
@@ -29,17 +40,6 @@ static_assert(alignof(WBP_CommissionSummaryItem_C_ExecuteUbergraph_WBP_Commissio
 static_assert(sizeof(WBP_CommissionSummaryItem_C_ExecuteUbergraph_WBP_CommissionSummaryItem) == 0x000028, "Wrong size on WBP_CommissionSummaryItem_C_ExecuteUbergraph_WBP_CommissionSummaryItem");
 static_assert(offsetof(WBP_CommissionSummaryItem_C_ExecuteUbergraph_WBP_CommissionSummaryItem, EntryPoint) == 0x000000, "Member 'WBP_CommissionSummaryItem_C_ExecuteUbergraph_WBP_CommissionSummaryItem::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_CommissionSummaryItem_C_ExecuteUbergraph_WBP_CommissionSummaryItem, CallFunc_MakeSoftObjectPath_ReturnValue) == 0x000008, "Member 'WBP_CommissionSummaryItem_C_ExecuteUbergraph_WBP_CommissionSummaryItem::CallFunc_MakeSoftObjectPath_ReturnValue' has a wrong offset!");
-
-// Function WBP_CommissionSummaryItem.WBP_CommissionSummaryItem_C.GetBorder
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_CommissionSummaryItem_C_GetBorder final
-{
-public:
-	class UCommonBorder*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_CommissionSummaryItem_C_GetBorder) == 0x000008, "Wrong alignment on WBP_CommissionSummaryItem_C_GetBorder");
-static_assert(sizeof(WBP_CommissionSummaryItem_C_GetBorder) == 0x000008, "Wrong size on WBP_CommissionSummaryItem_C_GetBorder");
-static_assert(offsetof(WBP_CommissionSummaryItem_C_GetBorder, ReturnValue) == 0x000000, "Member 'WBP_CommissionSummaryItem_C_GetBorder::ReturnValue' has a wrong offset!");
 
 }
 

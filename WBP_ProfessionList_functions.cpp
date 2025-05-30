@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_ProfessionList.WBP_ProfessionList_C.ExecuteUbergraph_WBP_ProfessionList
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ProfessionList_C::ExecuteUbergraph_WBP_ProfessionList(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ProfessionList_C", "ExecuteUbergraph_WBP_ProfessionList");
-
-	Params::WBP_ProfessionList_C_ExecuteUbergraph_WBP_ProfessionList Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ProfessionList.WBP_ProfessionList_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_ProfessionList_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_ProfessionList_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ProfessionList.WBP_ProfessionList_C.ExecuteUbergraph_WBP_ProfessionList
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ProfessionList_C::ExecuteUbergraph_WBP_ProfessionList(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ProfessionList_C", "ExecuteUbergraph_WBP_ProfessionList");
+
+	Params::WBP_ProfessionList_C_ExecuteUbergraph_WBP_ProfessionList Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WBP_ResurrectAlertPrompt.WBP_ResurrectAlertPrompt_C.PlayResurrectSoundBP
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_ResurrectAlertPrompt_C::PlayResurrectSoundBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ResurrectAlertPrompt_C", "PlayResurrectSoundBP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_ResurrectAlertPrompt.WBP_ResurrectAlertPrompt_C.ExecuteUbergraph_WBP_ResurrectAlertPrompt
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void UWBP_ResurrectAlertPrompt_C::ExecuteUbergraph_WBP_ResurrectAlertPrompt(int3
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ResurrectAlertPrompt.WBP_ResurrectAlertPrompt_C.PlayResurrectSoundBP
-// (Event, Protected, BlueprintEvent)
-
-void UWBP_ResurrectAlertPrompt_C::PlayResurrectSoundBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResurrectAlertPrompt_C", "PlayResurrectSoundBP");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

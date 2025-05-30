@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function WBP_RecipeList.WBP_RecipeList_C.Add Craftable Items
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_RecipeList.WBP_RecipeList_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_RecipeList_C::Add_Craftable_Items()
+void UWBP_RecipeList_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RecipeList_C", "Add Craftable Items");
+		Func = Class->GetFunction("WBP_RecipeList_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_RecipeList_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void UWBP_RecipeList_C::ExecuteUbergraph_WBP_RecipeList(int32 EntryPoint)
 }
 
 
-// Function WBP_RecipeList.WBP_RecipeList_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_RecipeList.WBP_RecipeList_C.Add Craftable Items
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_RecipeList_C::PreConstruct(bool IsDesignTime)
+void UWBP_RecipeList_C::Add_Craftable_Items()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RecipeList_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_RecipeList_C", "Add Craftable Items");
 
-	Params::WBP_RecipeList_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

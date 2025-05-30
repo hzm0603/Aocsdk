@@ -22,7 +22,7 @@ namespace SDK
 // Parameters:
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          BackwardsVector                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         BackwardsVector                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAoCFunctionLibrary_C::GetActorBackwardsVector(class AActor* Actor, class UObject* __WorldContext, struct FVector* BackwardsVector)
 {
@@ -46,11 +46,11 @@ void UAoCFunctionLibrary_C::GetActorBackwardsVector(class AActor* Actor, class U
 // Function AoCFunctionLibrary.AoCFunctionLibrary_C.GetClosestAndFurthest
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AActor*                           Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// TArray<class AActor*>                   ArrayOfTargets                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AActor*&                          Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// TArray<class AActor*>&                  ArrayOfTargets                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Closest                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Furthest                                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor**                          Closest                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor**                          Furthest                                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 void UAoCFunctionLibrary_C::GetClosestAndFurthest(class AActor*& Source, TArray<class AActor*>& ArrayOfTargets, class UObject* __WorldContext, class AActor** Closest, class AActor** Furthest)
 {
@@ -81,11 +81,11 @@ void UAoCFunctionLibrary_C::GetClosestAndFurthest(class AActor*& Source, TArray<
 // Function AoCFunctionLibrary.AoCFunctionLibrary_C.GetGroupMembers
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABaseCharacter*                   BaseCharacter                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class ABaseCharacter*&                  BaseCharacter                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TArray<class FString>                   GroupNameArray                                         (Parm, OutParm)
-// TArray<class AAoCPlayerController*>     PlayerControllerArray                                  (Parm, OutParm)
-// TArray<class APlayerCharacter*>         CharacterReferences                                    (Parm, OutParm)
+// TArray<class FString>*                  GroupNameArray                                         (Parm, OutParm)
+// TArray<class AAoCPlayerController*>*    PlayerControllerArray                                  (Parm, OutParm)
+// TArray<class APlayerCharacter*>*        CharacterReferences                                    (Parm, OutParm)
 
 void UAoCFunctionLibrary_C::GetGroupMembers(class ABaseCharacter*& BaseCharacter, class UObject* __WorldContext, TArray<class FString>* GroupNameArray, TArray<class AAoCPlayerController*>* PlayerControllerArray, TArray<class APlayerCharacter*>* CharacterReferences)
 {
@@ -117,10 +117,10 @@ void UAoCFunctionLibrary_C::GetGroupMembers(class ABaseCharacter*& BaseCharacter
 // Function AoCFunctionLibrary.AoCFunctionLibrary_C.GetPlayerPrimaryWeaponMesh
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class APlayerCharacter*                 PlayerPawn                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class APlayerCharacter*&                PlayerPawn                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class USkeletalMesh*                    WeaponMesh                                             (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    HasPrimary                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMesh**                   WeaponMesh                                             (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   HasPrimary                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAoCFunctionLibrary_C::GetPlayerPrimaryWeaponMesh(class APlayerCharacter*& PlayerPawn, class UObject* __WorldContext, class USkeletalMesh** WeaponMesh, bool* HasPrimary)
 {
@@ -149,12 +149,12 @@ void UAoCFunctionLibrary_C::GetPlayerPrimaryWeaponMesh(class APlayerCharacter*& 
 // Function AoCFunctionLibrary.AoCFunctionLibrary_C.GetPlayersInRadiusUsingOctree
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FVector                          Center                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Center                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Radius                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          WorldContextObject                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TArray<class APlayerCharacter*>         Players                                                (Parm, OutParm)
-// bool                                    PlayersFound                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class APlayerCharacter*>*        Players                                                (Parm, OutParm)
+// bool*                                   PlayersFound                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAoCFunctionLibrary_C::GetPlayersInRadiusUsingOctree(const struct FVector& Center, double Radius, class UObject* WorldContextObject, class UObject* __WorldContext, TArray<class APlayerCharacter*>* Players, bool* PlayersFound)
 {
@@ -185,7 +185,7 @@ void UAoCFunctionLibrary_C::GetPlayersInRadiusUsingOctree(const struct FVector& 
 // Parameters:
 // class ABaseCharacter*                   Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Dead                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Dead                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAoCFunctionLibrary_C::IsDeadPure(class ABaseCharacter* Source, class UObject* __WorldContext, bool* Dead)
 {

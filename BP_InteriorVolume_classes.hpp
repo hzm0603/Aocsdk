@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "S_EnvironmentSettingsSwitches_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "S_EnvironmentSettings_structs.hpp"
-#include "S_EnvironmentSettingsSwitches_structs.hpp"
 #include "GameSystemsPlugin_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_InteriorVolume.BP_InteriorVolume_C
-// 0x1638 (0x1980 - 0x0348)
+// 0x16F8 (0x1A40 - 0x0348)
 class ABP_InteriorVolume_C final : public AActor
 {
 public:
@@ -47,7 +47,7 @@ public:
 	uint8                                         Pad_9BD[0x3];                                      // 0x09BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Entrance_Helper;                                   // 0x09C0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UBoxComponent*>                  Entrance_Box_Components;                           // 0x0A20(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, AdvancedDisplay)
-	bool                                          Show_Transition_Distances;                         // 0x0A30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Show_Entrance_Transition_Distances;                // 0x0A30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A31[0x7];                                      // 0x0A31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<double>                                Entrance_Transition_Distances;                     // 0x0A38(0x0010)(Edit, BlueprintVisible)
 	TArray<double>                                Entrance_Transition_Opacities;                     // 0x0A48(0x0010)(Edit, BlueprintVisible, AdvancedDisplay)
@@ -56,63 +56,74 @@ public:
 	bool                                          Is_Previewing;                                     // 0x0A70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	uint8                                         Pad_A71[0x7];                                      // 0x0A71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UTextRenderComponent*>           Entrance_Text_Components;                          // 0x0A78(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class USceneComponent*                        Temp_Entrance_Component;                           // 0x0A88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Interior_Box_Count;                                // 0x0A90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Interior_Box_To_Focus_Helpers_On;                  // 0x0A94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Interior_Box_To_Focus_Helpers_On_Prev;             // 0x0A98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	bool                                          Highlight_Focused_Interior_Box;                    // 0x0A9C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9D[0x3];                                      // 0x0A9D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Helper_Lower;                                      // 0x0AA0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Helper_Upper;                                      // 0x0AB8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Box_Overlap_Count;                                 // 0x0AD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AD4[0x4];                                      // 0x0AD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FTransform>                     Interior_Box_Transforms;                           // 0x0AD8(0x0010)(Edit, BlueprintVisible, AdvancedDisplay)
-	double                                        Master_Value;                                      // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	TArray<class UBoxComponent*>                  Interior_Box_Components;                           // 0x0AF0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	struct FRotator                               Helper_Rotation;                                   // 0x0B00(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	class ABP_AudioManager_C*                     Audio_Manager;                                     // 0x0B18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEnableNotification;                               // 0x0B20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECalloutType                                  CalloutType;                                       // 0x0B21(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          bIsTriggered;                                      // 0x0B22(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B23[0x5];                                      // 0x0B23(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Message;                                           // 0x0B28(0x0018)(Edit, BlueprintVisible)
-	int32                                         WaitTimeInSeconds;                                 // 0x0B40(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Actor_Hash_ID;                                     // 0x0B44(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FAtmoBlendSettings                     Blend_Data;                                        // 0x0B48(0x0010)(Edit, BlueprintVisible, NoDestructor)
-	class UAkSwitchValue*                         MusicSwitchOnEnter;                                // 0x0B58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMapTileSetId                          InteriorTilesetId;                                 // 0x0B60(0x0018)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B78[0x8];                                      // 0x0B78(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPostProcessSettings                   PPV_Settings;                                      // 0x0B80(0x06E0)(Edit, BlueprintVisible)
-	bool                                          Use_PPV_Settings_MedLow;                           // 0x1260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1261[0xF];                                     // 0x1261(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPostProcessSettings                   PPV_Settings_MedLow;                               // 0x1270(0x06E0)(Edit, BlueprintVisible)
-	class UTextRenderComponent*                   Preview_Text;                                      // 0x1950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           Repeating_Function_Timer;                          // 0x1958(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Transitoin_Sample_Position;                        // 0x1960(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       Player_Follow_Camera;                              // 0x1978(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Interior_Box_Count;                                // 0x0A88(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Interior_Box_To_Focus_Helpers_On;                  // 0x0A8C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Interior_Box_To_Focus_Helpers_On_Prev;             // 0x0A90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	bool                                          Highlight_Focused_Interior_Box;                    // 0x0A94(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A95[0x3];                                      // 0x0A95(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Box_Helper_Lower;                                  // 0x0A98(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Box_Helper_Upper;                                  // 0x0AB0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Box_Overlap_Count;                                 // 0x0AC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_ACC[0x4];                                      // 0x0ACC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTransform>                     Interior_Box_Transforms;                           // 0x0AD0(0x0010)(Edit, BlueprintVisible, AdvancedDisplay)
+	double                                        Master_Value;                                      // 0x0AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	TArray<class UBoxComponent*>                  Interior_Box_Components;                           // 0x0AE8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FRotator                               Helper_Rotation;                                   // 0x0AF8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class ABP_AudioManager_C*                     Audio_Manager;                                     // 0x0B10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnableNotification;                               // 0x0B18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECalloutType                                  CalloutType;                                       // 0x0B19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          bIsTriggered;                                      // 0x0B1A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1B[0x5];                                      // 0x0B1B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Message;                                           // 0x0B20(0x0018)(Edit, BlueprintVisible)
+	int32                                         WaitTimeInSeconds;                                 // 0x0B38(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Actor_Hash_ID;                                     // 0x0B3C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAtmoBlendSettings                     Blend_Data;                                        // 0x0B40(0x0010)(Edit, BlueprintVisible, NoDestructor)
+	class UAkSwitchValue*                         MusicSwitchOnEnter;                                // 0x0B50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FMapTileSetId                          InteriorTilesetId;                                 // 0x0B58(0x0018)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FPostProcessSettings                   PPV_Settings;                                      // 0x0B70(0x06E0)(Edit, BlueprintVisible)
+	bool                                          Use_PPV_Settings_MedLow;                           // 0x1250(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1251[0xF];                                     // 0x1251(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPostProcessSettings                   PPV_Settings_MedLow;                               // 0x1260(0x06E0)(Edit, BlueprintVisible)
+	class UTextRenderComponent*                   Preview_Text;                                      // 0x1940(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           Repeating_Function_Timer;                          // 0x1948(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Transitoin_Sample_Position;                        // 0x1950(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       Player_Follow_Camera;                              // 0x1968(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Window_Count;                                      // 0x1970(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Window_To_Focus_On;                                // 0x1974(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Window_To_Focus_On_Prev;                           // 0x1978(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	bool                                          Highlight_Focused_Window;                          // 0x197C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_197D[0x3];                                     // 0x197D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Window_Helper;                                     // 0x1980(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UStaticMeshComponent*>           Window_Plane_Components;                           // 0x19E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, AdvancedDisplay)
+	bool                                          Show_Window_Fade_Distances;                        // 0x19F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19F1[0x7];                                     // 0x19F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<double>                                Window_Fade_Distances;                             // 0x19F8(0x0010)(Edit, BlueprintVisible)
+	TArray<double>                                Window_Opacities;                                  // 0x1A08(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FTransform>                     Window_Transforms;                                 // 0x1A18(0x0010)(Edit, BlueprintVisible, AdvancedDisplay)
+	TArray<class UTextRenderComponent*>           Window_Text_Components;                            // 0x1A28(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
-	void AllowTrigger();
-	void Brush_Begin_Overlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void Brush_End_Overlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-	void Catch_Initial_Overlaps(class UPrimitiveComponent* Component);
-	void Editor_Compute_Blend();
-	void ExecuteUbergraph_BP_InteriorVolume(int32 EntryPoint);
-	void K2_OnReset();
-	void PPV_Blend(float Blend_Weight, bool Enabled);
-	void PreviewModifications();
-	void ReceiveBeginPlay();
-	void ReceiveDestroyed();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveTick(float DeltaSeconds);
-	void Refresh_Preview();
-	void RevertToWorldDefaults();
-	void Set_Master_Value(double Master_Value_0);
-	void Start_Previewing();
-	void Stop_Previewing();
-	void Toggle_Interior_Map(bool Show);
-	void Update_Blending_Editor_Time();
 	void UserConstructionScript();
+	void Update_Blending_Editor_Time();
+	void Toggle_Interior_Map(bool Show);
+	void Stop_Previewing();
+	void Start_Previewing();
+	void Set_Master_Value(double Master_Value_0);
+	void RevertToWorldDefaults();
+	void Refresh_Preview();
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveDestroyed();
+	void ReceiveBeginPlay();
+	void PreviewModifications();
+	void PPV_Blend(float Blend_Weight, bool Enabled);
+	void K2_OnReset();
+	void ExecuteUbergraph_BP_InteriorVolume(int32 EntryPoint);
+	void Editor_Compute_Blend();
+	void Catch_Initial_Overlaps(class UPrimitiveComponent* Component);
+	void Brush_End_Overlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void Brush_Begin_Overlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void AllowTrigger();
 
 public:
 	static class UClass* StaticClass()
@@ -125,7 +136,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_InteriorVolume_C) == 0x000010, "Wrong alignment on ABP_InteriorVolume_C");
-static_assert(sizeof(ABP_InteriorVolume_C) == 0x001980, "Wrong size on ABP_InteriorVolume_C");
+static_assert(sizeof(ABP_InteriorVolume_C) == 0x001A40, "Wrong size on ABP_InteriorVolume_C");
 static_assert(offsetof(ABP_InteriorVolume_C, UberGraphFrame) == 0x000348, "Member 'ABP_InteriorVolume_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(ABP_InteriorVolume_C, Blend_PPV) == 0x000350, "Member 'ABP_InteriorVolume_C::Blend_PPV' has a wrong offset!");
 static_assert(offsetof(ABP_InteriorVolume_C, Billboard) == 0x000358, "Member 'ABP_InteriorVolume_C::Billboard' has a wrong offset!");
@@ -144,42 +155,52 @@ static_assert(offsetof(ABP_InteriorVolume_C, Entrance_To_Focus_On_Prev) == 0x000
 static_assert(offsetof(ABP_InteriorVolume_C, Highlight_Focused_Entrance) == 0x0009BC, "Member 'ABP_InteriorVolume_C::Highlight_Focused_Entrance' has a wrong offset!");
 static_assert(offsetof(ABP_InteriorVolume_C, Entrance_Helper) == 0x0009C0, "Member 'ABP_InteriorVolume_C::Entrance_Helper' has a wrong offset!");
 static_assert(offsetof(ABP_InteriorVolume_C, Entrance_Box_Components) == 0x000A20, "Member 'ABP_InteriorVolume_C::Entrance_Box_Components' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Show_Transition_Distances) == 0x000A30, "Member 'ABP_InteriorVolume_C::Show_Transition_Distances' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Show_Entrance_Transition_Distances) == 0x000A30, "Member 'ABP_InteriorVolume_C::Show_Entrance_Transition_Distances' has a wrong offset!");
 static_assert(offsetof(ABP_InteriorVolume_C, Entrance_Transition_Distances) == 0x000A38, "Member 'ABP_InteriorVolume_C::Entrance_Transition_Distances' has a wrong offset!");
 static_assert(offsetof(ABP_InteriorVolume_C, Entrance_Transition_Opacities) == 0x000A48, "Member 'ABP_InteriorVolume_C::Entrance_Transition_Opacities' has a wrong offset!");
 static_assert(offsetof(ABP_InteriorVolume_C, Entrance_Transforms) == 0x000A58, "Member 'ABP_InteriorVolume_C::Entrance_Transforms' has a wrong offset!");
 static_assert(offsetof(ABP_InteriorVolume_C, Transition_Amount) == 0x000A68, "Member 'ABP_InteriorVolume_C::Transition_Amount' has a wrong offset!");
 static_assert(offsetof(ABP_InteriorVolume_C, Is_Previewing) == 0x000A70, "Member 'ABP_InteriorVolume_C::Is_Previewing' has a wrong offset!");
 static_assert(offsetof(ABP_InteriorVolume_C, Entrance_Text_Components) == 0x000A78, "Member 'ABP_InteriorVolume_C::Entrance_Text_Components' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Temp_Entrance_Component) == 0x000A88, "Member 'ABP_InteriorVolume_C::Temp_Entrance_Component' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Interior_Box_Count) == 0x000A90, "Member 'ABP_InteriorVolume_C::Interior_Box_Count' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Interior_Box_To_Focus_Helpers_On) == 0x000A94, "Member 'ABP_InteriorVolume_C::Interior_Box_To_Focus_Helpers_On' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Interior_Box_To_Focus_Helpers_On_Prev) == 0x000A98, "Member 'ABP_InteriorVolume_C::Interior_Box_To_Focus_Helpers_On_Prev' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Highlight_Focused_Interior_Box) == 0x000A9C, "Member 'ABP_InteriorVolume_C::Highlight_Focused_Interior_Box' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Helper_Lower) == 0x000AA0, "Member 'ABP_InteriorVolume_C::Helper_Lower' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Helper_Upper) == 0x000AB8, "Member 'ABP_InteriorVolume_C::Helper_Upper' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Box_Overlap_Count) == 0x000AD0, "Member 'ABP_InteriorVolume_C::Box_Overlap_Count' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Interior_Box_Transforms) == 0x000AD8, "Member 'ABP_InteriorVolume_C::Interior_Box_Transforms' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Master_Value) == 0x000AE8, "Member 'ABP_InteriorVolume_C::Master_Value' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Interior_Box_Components) == 0x000AF0, "Member 'ABP_InteriorVolume_C::Interior_Box_Components' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Helper_Rotation) == 0x000B00, "Member 'ABP_InteriorVolume_C::Helper_Rotation' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Audio_Manager) == 0x000B18, "Member 'ABP_InteriorVolume_C::Audio_Manager' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, bEnableNotification) == 0x000B20, "Member 'ABP_InteriorVolume_C::bEnableNotification' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, CalloutType) == 0x000B21, "Member 'ABP_InteriorVolume_C::CalloutType' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, bIsTriggered) == 0x000B22, "Member 'ABP_InteriorVolume_C::bIsTriggered' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Message) == 0x000B28, "Member 'ABP_InteriorVolume_C::Message' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, WaitTimeInSeconds) == 0x000B40, "Member 'ABP_InteriorVolume_C::WaitTimeInSeconds' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Actor_Hash_ID) == 0x000B44, "Member 'ABP_InteriorVolume_C::Actor_Hash_ID' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Blend_Data) == 0x000B48, "Member 'ABP_InteriorVolume_C::Blend_Data' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, MusicSwitchOnEnter) == 0x000B58, "Member 'ABP_InteriorVolume_C::MusicSwitchOnEnter' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, InteriorTilesetId) == 0x000B60, "Member 'ABP_InteriorVolume_C::InteriorTilesetId' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, PPV_Settings) == 0x000B80, "Member 'ABP_InteriorVolume_C::PPV_Settings' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Use_PPV_Settings_MedLow) == 0x001260, "Member 'ABP_InteriorVolume_C::Use_PPV_Settings_MedLow' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, PPV_Settings_MedLow) == 0x001270, "Member 'ABP_InteriorVolume_C::PPV_Settings_MedLow' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Preview_Text) == 0x001950, "Member 'ABP_InteriorVolume_C::Preview_Text' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Repeating_Function_Timer) == 0x001958, "Member 'ABP_InteriorVolume_C::Repeating_Function_Timer' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Transitoin_Sample_Position) == 0x001960, "Member 'ABP_InteriorVolume_C::Transitoin_Sample_Position' has a wrong offset!");
-static_assert(offsetof(ABP_InteriorVolume_C, Player_Follow_Camera) == 0x001978, "Member 'ABP_InteriorVolume_C::Player_Follow_Camera' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Interior_Box_Count) == 0x000A88, "Member 'ABP_InteriorVolume_C::Interior_Box_Count' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Interior_Box_To_Focus_Helpers_On) == 0x000A8C, "Member 'ABP_InteriorVolume_C::Interior_Box_To_Focus_Helpers_On' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Interior_Box_To_Focus_Helpers_On_Prev) == 0x000A90, "Member 'ABP_InteriorVolume_C::Interior_Box_To_Focus_Helpers_On_Prev' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Highlight_Focused_Interior_Box) == 0x000A94, "Member 'ABP_InteriorVolume_C::Highlight_Focused_Interior_Box' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Box_Helper_Lower) == 0x000A98, "Member 'ABP_InteriorVolume_C::Box_Helper_Lower' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Box_Helper_Upper) == 0x000AB0, "Member 'ABP_InteriorVolume_C::Box_Helper_Upper' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Box_Overlap_Count) == 0x000AC8, "Member 'ABP_InteriorVolume_C::Box_Overlap_Count' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Interior_Box_Transforms) == 0x000AD0, "Member 'ABP_InteriorVolume_C::Interior_Box_Transforms' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Master_Value) == 0x000AE0, "Member 'ABP_InteriorVolume_C::Master_Value' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Interior_Box_Components) == 0x000AE8, "Member 'ABP_InteriorVolume_C::Interior_Box_Components' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Helper_Rotation) == 0x000AF8, "Member 'ABP_InteriorVolume_C::Helper_Rotation' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Audio_Manager) == 0x000B10, "Member 'ABP_InteriorVolume_C::Audio_Manager' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, bEnableNotification) == 0x000B18, "Member 'ABP_InteriorVolume_C::bEnableNotification' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, CalloutType) == 0x000B19, "Member 'ABP_InteriorVolume_C::CalloutType' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, bIsTriggered) == 0x000B1A, "Member 'ABP_InteriorVolume_C::bIsTriggered' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Message) == 0x000B20, "Member 'ABP_InteriorVolume_C::Message' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, WaitTimeInSeconds) == 0x000B38, "Member 'ABP_InteriorVolume_C::WaitTimeInSeconds' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Actor_Hash_ID) == 0x000B3C, "Member 'ABP_InteriorVolume_C::Actor_Hash_ID' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Blend_Data) == 0x000B40, "Member 'ABP_InteriorVolume_C::Blend_Data' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, MusicSwitchOnEnter) == 0x000B50, "Member 'ABP_InteriorVolume_C::MusicSwitchOnEnter' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, InteriorTilesetId) == 0x000B58, "Member 'ABP_InteriorVolume_C::InteriorTilesetId' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, PPV_Settings) == 0x000B70, "Member 'ABP_InteriorVolume_C::PPV_Settings' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Use_PPV_Settings_MedLow) == 0x001250, "Member 'ABP_InteriorVolume_C::Use_PPV_Settings_MedLow' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, PPV_Settings_MedLow) == 0x001260, "Member 'ABP_InteriorVolume_C::PPV_Settings_MedLow' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Preview_Text) == 0x001940, "Member 'ABP_InteriorVolume_C::Preview_Text' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Repeating_Function_Timer) == 0x001948, "Member 'ABP_InteriorVolume_C::Repeating_Function_Timer' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Transitoin_Sample_Position) == 0x001950, "Member 'ABP_InteriorVolume_C::Transitoin_Sample_Position' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Player_Follow_Camera) == 0x001968, "Member 'ABP_InteriorVolume_C::Player_Follow_Camera' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Window_Count) == 0x001970, "Member 'ABP_InteriorVolume_C::Window_Count' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Window_To_Focus_On) == 0x001974, "Member 'ABP_InteriorVolume_C::Window_To_Focus_On' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Window_To_Focus_On_Prev) == 0x001978, "Member 'ABP_InteriorVolume_C::Window_To_Focus_On_Prev' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Highlight_Focused_Window) == 0x00197C, "Member 'ABP_InteriorVolume_C::Highlight_Focused_Window' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Window_Helper) == 0x001980, "Member 'ABP_InteriorVolume_C::Window_Helper' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Window_Plane_Components) == 0x0019E0, "Member 'ABP_InteriorVolume_C::Window_Plane_Components' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Show_Window_Fade_Distances) == 0x0019F0, "Member 'ABP_InteriorVolume_C::Show_Window_Fade_Distances' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Window_Fade_Distances) == 0x0019F8, "Member 'ABP_InteriorVolume_C::Window_Fade_Distances' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Window_Opacities) == 0x001A08, "Member 'ABP_InteriorVolume_C::Window_Opacities' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Window_Transforms) == 0x001A18, "Member 'ABP_InteriorVolume_C::Window_Transforms' has a wrong offset!");
+static_assert(offsetof(ABP_InteriorVolume_C, Window_Text_Components) == 0x001A28, "Member 'ABP_InteriorVolume_C::Window_Text_Components' has a wrong offset!");
 
 }
 

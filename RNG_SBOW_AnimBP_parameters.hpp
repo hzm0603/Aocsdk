@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function RNG_SBOW_AnimBP.RNG_SBOW_AnimBP_C.ExecuteUbergraph_RNG_SBOW_AnimBP
-// 0x0004 (0x0004 - 0x0000)
-struct RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP) == 0x000004, "Wrong alignment on RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP");
-static_assert(sizeof(RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP) == 0x000004, "Wrong size on RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP");
-static_assert(offsetof(RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP, EntryPoint) == 0x000000, "Member 'RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP::EntryPoint' has a wrong offset!");
-
 // Function RNG_SBOW_AnimBP.RNG_SBOW_AnimBP_C.AnimGraph
 // 0x0010 (0x0010 - 0x0000)
 struct RNG_SBOW_AnimBP_C_AnimGraph final
@@ -37,6 +26,17 @@ public:
 static_assert(alignof(RNG_SBOW_AnimBP_C_AnimGraph) == 0x000008, "Wrong alignment on RNG_SBOW_AnimBP_C_AnimGraph");
 static_assert(sizeof(RNG_SBOW_AnimBP_C_AnimGraph) == 0x000010, "Wrong size on RNG_SBOW_AnimBP_C_AnimGraph");
 static_assert(offsetof(RNG_SBOW_AnimBP_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'RNG_SBOW_AnimBP_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+
+// Function RNG_SBOW_AnimBP.RNG_SBOW_AnimBP_C.ExecuteUbergraph_RNG_SBOW_AnimBP
+// 0x0004 (0x0004 - 0x0000)
+struct RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP) == 0x000004, "Wrong alignment on RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP");
+static_assert(sizeof(RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP) == 0x000004, "Wrong size on RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP");
+static_assert(offsetof(RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP, EntryPoint) == 0x000000, "Member 'RNG_SBOW_AnimBP_C_ExecuteUbergraph_RNG_SBOW_AnimBP::EntryPoint' has a wrong offset!");
 
 }
 

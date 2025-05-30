@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Highwayman_Recruiter.Highwayman_Recruiter_C
-// 0x0000 (0x1DC0 - 0x1DC0)
+// 0x0000 (0x1D80 - 0x1D80)
 class AHighwayman_Recruiter_C final : public ABandit_Fighter_C
 {
 public:
-	class USkeletalMeshComponent*                 WeaponR_0;                                         // 0x1DB8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 WeaponR_0;                                         // 0x1D78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(AHighwayman_Recruiter_C) == 0x000010, "Wrong alignment on AHighwayman_Recruiter_C");
-static_assert(sizeof(AHighwayman_Recruiter_C) == 0x001DC0, "Wrong size on AHighwayman_Recruiter_C");
-static_assert(offsetof(AHighwayman_Recruiter_C, WeaponR_0) == 0x001DB8, "Member 'AHighwayman_Recruiter_C::WeaponR_0' has a wrong offset!");
+static_assert(sizeof(AHighwayman_Recruiter_C) == 0x001D80, "Wrong size on AHighwayman_Recruiter_C");
+static_assert(offsetof(AHighwayman_Recruiter_C, WeaponR_0) == 0x001D78, "Member 'AHighwayman_Recruiter_C::WeaponR_0' has a wrong offset!");
 
 }
 

@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // ScriptStruct AnimBP_AoC_VEK_M_Child.AnimBP_AoC_VEK_M_Child_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x0840 - 0x0840)
+// 0x0000 (0x0850 - 0x0850)
 struct AnimBP_AoC_VEK_M_Child::FAnimBlueprintGeneratedConstantData final : public ALS_AnimBP_AoC::FAnimBlueprintGeneratedConstantData
 {
 };
 static_assert(alignof(AnimBP_AoC_VEK_M_Child::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on AnimBP_AoC_VEK_M_Child::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(AnimBP_AoC_VEK_M_Child::FAnimBlueprintGeneratedConstantData) == 0x000840, "Wrong size on AnimBP_AoC_VEK_M_Child::FAnimBlueprintGeneratedConstantData");
+static_assert(sizeof(AnimBP_AoC_VEK_M_Child::FAnimBlueprintGeneratedConstantData) == 0x000850, "Wrong size on AnimBP_AoC_VEK_M_Child::FAnimBlueprintGeneratedConstantData");
 
 }
 

@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass PC_Female_Ballista_AnimBP_Child.PC_Female_Ballista_AnimBP_Child_C
-// 0x0000 (0x1CE0 - 0x1CE0)
+// 0x0000 (0x1CF0 - 0x1CF0)
 class UPC_Female_Ballista_AnimBP_Child_C final : public UPC_Ballista_AnimBP_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_PC_Female_Ballista_AnimBP_Child_C;  // 0x1CD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_PC_Female_Ballista_AnimBP_Child_C;  // 0x1CE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void BlueprintUpdateAnimation(float DeltaTimeX);
@@ -39,8 +39,8 @@ public:
 	}
 };
 static_assert(alignof(UPC_Female_Ballista_AnimBP_Child_C) == 0x000010, "Wrong alignment on UPC_Female_Ballista_AnimBP_Child_C");
-static_assert(sizeof(UPC_Female_Ballista_AnimBP_Child_C) == 0x001CE0, "Wrong size on UPC_Female_Ballista_AnimBP_Child_C");
-static_assert(offsetof(UPC_Female_Ballista_AnimBP_Child_C, UberGraphFrame_PC_Female_Ballista_AnimBP_Child_C) == 0x001CD8, "Member 'UPC_Female_Ballista_AnimBP_Child_C::UberGraphFrame_PC_Female_Ballista_AnimBP_Child_C' has a wrong offset!");
+static_assert(sizeof(UPC_Female_Ballista_AnimBP_Child_C) == 0x001CF0, "Wrong size on UPC_Female_Ballista_AnimBP_Child_C");
+static_assert(offsetof(UPC_Female_Ballista_AnimBP_Child_C, UberGraphFrame_PC_Female_Ballista_AnimBP_Child_C) == 0x001CE8, "Member 'UPC_Female_Ballista_AnimBP_Child_C::UberGraphFrame_PC_Female_Ballista_AnimBP_Child_C' has a wrong offset!");
 
 }
 

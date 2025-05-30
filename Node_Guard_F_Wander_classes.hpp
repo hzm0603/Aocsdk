@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Node_Guard_F_Wander.Node_Guard_F_Wander_C
-// 0x0000 (0x1DD0 - 0x1DD0)
+// 0x0000 (0x1D90 - 0x1D90)
 class ANode_Guard_F_Wander_C final : public ANode_Guard_F_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ANode_Guard_F_Wander_C) == 0x000010, "Wrong alignment on ANode_Guard_F_Wander_C");
-static_assert(sizeof(ANode_Guard_F_Wander_C) == 0x001DD0, "Wrong size on ANode_Guard_F_Wander_C");
+static_assert(sizeof(ANode_Guard_F_Wander_C) == 0x001D90, "Wrong size on ANode_Guard_F_Wander_C");
 
 }
 

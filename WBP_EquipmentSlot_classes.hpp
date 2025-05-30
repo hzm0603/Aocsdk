@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_EquipmentSlot.WBP_EquipmentSlot_C
-// 0x0000 (0x03A0 - 0x03A0)
+// 0x0000 (0x03B8 - 0x03B8)
 class UWBP_EquipmentSlot_C final : public UEquipmentSlot
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_EquipmentSlot_C) == 0x000008, "Wrong alignment on UWBP_EquipmentSlot_C");
-static_assert(sizeof(UWBP_EquipmentSlot_C) == 0x0003A0, "Wrong size on UWBP_EquipmentSlot_C");
+static_assert(sizeof(UWBP_EquipmentSlot_C) == 0x0003B8, "Wrong size on UWBP_EquipmentSlot_C");
 
 }
 

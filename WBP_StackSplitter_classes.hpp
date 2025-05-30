@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_StackSplitter.WBP_StackSplitter_C
-// 0x0008 (0x03F8 - 0x03F0)
+// 0x0008 (0x0420 - 0x0418)
 class UWBP_StackSplitter_C final : public UInventoryStackSplitter
 {
 public:
-	class UItemStorageComponent*                  Storage;                                           // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UItemStorageComponent*                  Storage;                                           // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_StackSplitter_C) == 0x000008, "Wrong alignment on UWBP_StackSplitter_C");
-static_assert(sizeof(UWBP_StackSplitter_C) == 0x0003F8, "Wrong size on UWBP_StackSplitter_C");
-static_assert(offsetof(UWBP_StackSplitter_C, Storage) == 0x0003F0, "Member 'UWBP_StackSplitter_C::Storage' has a wrong offset!");
+static_assert(sizeof(UWBP_StackSplitter_C) == 0x000420, "Wrong size on UWBP_StackSplitter_C");
+static_assert(offsetof(UWBP_StackSplitter_C, Storage) == 0x000418, "Member 'UWBP_StackSplitter_C::Storage' has a wrong offset!");
 
 }
 

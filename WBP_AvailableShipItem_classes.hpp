@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_AvailableShipItem.WBP_AvailableShipItem_C
-// 0x0000 (0x19C0 - 0x19C0)
+// 0x0000 (0x19F0 - 0x19F0)
 class UWBP_AvailableShipItem_C final : public UAvailableShipItem
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_AvailableShipItem_C) == 0x000010, "Wrong alignment on UWBP_AvailableShipItem_C");
-static_assert(sizeof(UWBP_AvailableShipItem_C) == 0x0019C0, "Wrong size on UWBP_AvailableShipItem_C");
+static_assert(sizeof(UWBP_AvailableShipItem_C) == 0x0019F0, "Wrong size on UWBP_AvailableShipItem_C");
 
 }
 

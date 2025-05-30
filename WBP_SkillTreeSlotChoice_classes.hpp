@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_SkillTreeSlotChoice.WBP_SkillTreeSlotChoice_C
-// 0x0000 (0x1740 - 0x1740)
+// 0x0000 (0x1760 - 0x1760)
 class UWBP_SkillTreeSlotChoice_C final : public USkillTreeSlotChoice
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_SkillTreeSlotChoice_C) == 0x000010, "Wrong alignment on UWBP_SkillTreeSlotChoice_C");
-static_assert(sizeof(UWBP_SkillTreeSlotChoice_C) == 0x001740, "Wrong size on UWBP_SkillTreeSlotChoice_C");
+static_assert(sizeof(UWBP_SkillTreeSlotChoice_C) == 0x001760, "Wrong size on UWBP_SkillTreeSlotChoice_C");
 
 }
 

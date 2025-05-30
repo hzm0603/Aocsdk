@@ -17,20 +17,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ReceivedMail.WBP_ReceivedMail_C
-// 0x0050 (0x0578 - 0x0528)
+// 0x0050 (0x0610 - 0x05C0)
 class UWBP_ReceivedMail_C final : public UReceivedMail
 {
 public:
-	class UWBP_InventorySlot_C*                   WBP_InventorySlot;                                 // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InventorySlot_C*                   WBP_InventorySlot_1;                               // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InventorySlot_C*                   WBP_InventorySlot_2;                               // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InventorySlot_C*                   WBP_InventorySlot_3;                               // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InventorySlot_C*                   WBP_InventorySlot_4;                               // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InventorySlot_C*                   WBP_InventorySlot_5;                               // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InventorySlot_C*                   WBP_InventorySlot_6;                               // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InventorySlot_C*                   WBP_InventorySlot_7;                               // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InventorySlot_C*                   WBP_InventorySlot_8;                               // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InventorySlot_C*                   WBP_InventorySlot_9;                               // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InventorySlot_C*                   WBP_InventorySlot;                                 // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InventorySlot_C*                   WBP_InventorySlot_1;                               // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InventorySlot_C*                   WBP_InventorySlot_2;                               // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InventorySlot_C*                   WBP_InventorySlot_3;                               // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InventorySlot_C*                   WBP_InventorySlot_4;                               // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InventorySlot_C*                   WBP_InventorySlot_5;                               // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InventorySlot_C*                   WBP_InventorySlot_6;                               // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InventorySlot_C*                   WBP_InventorySlot_7;                               // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InventorySlot_C*                   WBP_InventorySlot_8;                               // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InventorySlot_C*                   WBP_InventorySlot_9;                               // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -43,17 +43,17 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ReceivedMail_C) == 0x000008, "Wrong alignment on UWBP_ReceivedMail_C");
-static_assert(sizeof(UWBP_ReceivedMail_C) == 0x000578, "Wrong size on UWBP_ReceivedMail_C");
-static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot) == 0x000528, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot' has a wrong offset!");
-static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_1) == 0x000530, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_2) == 0x000538, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_2' has a wrong offset!");
-static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_3) == 0x000540, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_3' has a wrong offset!");
-static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_4) == 0x000548, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_4' has a wrong offset!");
-static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_5) == 0x000550, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_5' has a wrong offset!");
-static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_6) == 0x000558, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_6' has a wrong offset!");
-static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_7) == 0x000560, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_7' has a wrong offset!");
-static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_8) == 0x000568, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_8' has a wrong offset!");
-static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_9) == 0x000570, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_9' has a wrong offset!");
+static_assert(sizeof(UWBP_ReceivedMail_C) == 0x000610, "Wrong size on UWBP_ReceivedMail_C");
+static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot) == 0x0005C0, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot' has a wrong offset!");
+static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_1) == 0x0005C8, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_2) == 0x0005D0, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_2' has a wrong offset!");
+static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_3) == 0x0005D8, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_3' has a wrong offset!");
+static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_4) == 0x0005E0, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_4' has a wrong offset!");
+static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_5) == 0x0005E8, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_5' has a wrong offset!");
+static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_6) == 0x0005F0, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_6' has a wrong offset!");
+static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_7) == 0x0005F8, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_7' has a wrong offset!");
+static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_8) == 0x000600, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_8' has a wrong offset!");
+static_assert(offsetof(UWBP_ReceivedMail_C, WBP_InventorySlot_9) == 0x000608, "Member 'UWBP_ReceivedMail_C::WBP_InventorySlot_9' has a wrong offset!");
 
 }
 

@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function STT_SetCharacterInteracting.STT_SetCharacterInteracting_C.ReceiveLatentEnterState
+// 0x002E (0x002E - 0x0000)
+struct STT_SetCharacterInteracting_C_ReceiveLatentEnterState final
+{
+public:
+	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+};
+static_assert(alignof(STT_SetCharacterInteracting_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_SetCharacterInteracting_C_ReceiveLatentEnterState");
+static_assert(sizeof(STT_SetCharacterInteracting_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_SetCharacterInteracting_C_ReceiveLatentEnterState");
+static_assert(offsetof(STT_SetCharacterInteracting_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_SetCharacterInteracting_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
+
 // Function STT_SetCharacterInteracting.STT_SetCharacterInteracting_C.ExecuteUbergraph_STT_SetCharacterInteracting
 // 0x0040 (0x0040 - 0x0000)
 struct STT_SetCharacterInteracting_C_ExecuteUbergraph_STT_SetCharacterInteracting final
@@ -34,17 +45,6 @@ static_assert(offsetof(STT_SetCharacterInteracting_C_ExecuteUbergraph_STT_SetCha
 static_assert(offsetof(STT_SetCharacterInteracting_C_ExecuteUbergraph_STT_SetCharacterInteracting, K2Node_DynamicCast_AsNPCCharacter) == 0x000008, "Member 'STT_SetCharacterInteracting_C_ExecuteUbergraph_STT_SetCharacterInteracting::K2Node_DynamicCast_AsNPCCharacter' has a wrong offset!");
 static_assert(offsetof(STT_SetCharacterInteracting_C_ExecuteUbergraph_STT_SetCharacterInteracting, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'STT_SetCharacterInteracting_C_ExecuteUbergraph_STT_SetCharacterInteracting::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(STT_SetCharacterInteracting_C_ExecuteUbergraph_STT_SetCharacterInteracting, K2Node_Event_Transition) == 0x000012, "Member 'STT_SetCharacterInteracting_C_ExecuteUbergraph_STT_SetCharacterInteracting::K2Node_Event_Transition' has a wrong offset!");
-
-// Function STT_SetCharacterInteracting.STT_SetCharacterInteracting_C.ReceiveLatentEnterState
-// 0x002E (0x002E - 0x0000)
-struct STT_SetCharacterInteracting_C_ReceiveLatentEnterState final
-{
-public:
-	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x002E)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-};
-static_assert(alignof(STT_SetCharacterInteracting_C_ReceiveLatentEnterState) == 0x000002, "Wrong alignment on STT_SetCharacterInteracting_C_ReceiveLatentEnterState");
-static_assert(sizeof(STT_SetCharacterInteracting_C_ReceiveLatentEnterState) == 0x00002E, "Wrong size on STT_SetCharacterInteracting_C_ReceiveLatentEnterState");
-static_assert(offsetof(STT_SetCharacterInteracting_C_ReceiveLatentEnterState, Transition) == 0x000000, "Member 'STT_SetCharacterInteracting_C_ReceiveLatentEnterState::Transition' has a wrong offset!");
 
 }
 

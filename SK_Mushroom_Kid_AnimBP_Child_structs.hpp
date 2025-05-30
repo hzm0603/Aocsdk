@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // ScriptStruct SK_Mushroom_Kid_AnimBP_Child.SK_Mushroom_Kid_AnimBP_Child_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x01E0 - 0x01E0)
+// 0x0000 (0x01D0 - 0x01D0)
 struct SK_Mushroom_Kid_AnimBP_Child::FAnimBlueprintGeneratedConstantData final : public SK_Mushroom_AnimBP::FAnimBlueprintGeneratedConstantData
 {
 };
 static_assert(alignof(SK_Mushroom_Kid_AnimBP_Child::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on SK_Mushroom_Kid_AnimBP_Child::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(SK_Mushroom_Kid_AnimBP_Child::FAnimBlueprintGeneratedConstantData) == 0x0001E0, "Wrong size on SK_Mushroom_Kid_AnimBP_Child::FAnimBlueprintGeneratedConstantData");
+static_assert(sizeof(SK_Mushroom_Kid_AnimBP_Child::FAnimBlueprintGeneratedConstantData) == 0x0001D0, "Wrong size on SK_Mushroom_Kid_AnimBP_Child::FAnimBlueprintGeneratedConstantData");
 
 }
 

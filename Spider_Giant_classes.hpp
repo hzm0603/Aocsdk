@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Spider_Giant.Spider_Giant_C
-// 0x0010 (0x1DA0 - 0x1D90)
+// 0x0010 (0x1D60 - 0x1D50)
 class ASpider_Giant_C : public ANPCPawn_C
 {
 public:
-	class UBlackboardComponent*                   Blackboard;                                        // 0x1D90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   Blackboard;                                        // 0x1D50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ASpider_Giant_C) == 0x000010, "Wrong alignment on ASpider_Giant_C");
-static_assert(sizeof(ASpider_Giant_C) == 0x001DA0, "Wrong size on ASpider_Giant_C");
-static_assert(offsetof(ASpider_Giant_C, Blackboard) == 0x001D90, "Member 'ASpider_Giant_C::Blackboard' has a wrong offset!");
+static_assert(sizeof(ASpider_Giant_C) == 0x001D60, "Wrong size on ASpider_Giant_C");
+static_assert(offsetof(ASpider_Giant_C, Blackboard) == 0x001D50, "Member 'ASpider_Giant_C::Blackboard' has a wrong offset!");
 
 }
 

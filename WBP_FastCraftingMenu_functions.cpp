@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function WBP_FastCraftingMenu.WBP_FastCraftingMenu_C.Add Materials
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_FastCraftingMenu.WBP_FastCraftingMenu_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_FastCraftingMenu_C::Add_Materials()
+void UWBP_FastCraftingMenu_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FastCraftingMenu_C", "Add Materials");
+		Func = Class->GetFunction("WBP_FastCraftingMenu_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_FastCraftingMenu_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void UWBP_FastCraftingMenu_C::ExecuteUbergraph_WBP_FastCraftingMenu(int32 EntryP
 }
 
 
-// Function WBP_FastCraftingMenu.WBP_FastCraftingMenu_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_FastCraftingMenu.WBP_FastCraftingMenu_C.Add Materials
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_FastCraftingMenu_C::PreConstruct(bool IsDesignTime)
+void UWBP_FastCraftingMenu_C::Add_Materials()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FastCraftingMenu_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_FastCraftingMenu_C", "Add Materials");
 
-	Params::WBP_FastCraftingMenu_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }
